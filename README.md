@@ -1,0 +1,69 @@
+# Hindu.International — Website (Virtual Punya Snan service)
+
+HTML5 / CSS3 / JavaScript website with a small PHP admin panel for editing content and images. Built for Hostinger (PHP 8.0+).
+
+## Pages
+`index.html` · `about.html` · `how-it-works.html` (with FAQ) · `event.html` · `booking.html` · `contact.html` · `privacy.html` · `terms.html`
+
+## Project structure
+```
+index.html … contact.html   Pages (layout + default text)
+css/                        style.css (design tokens, components) · responsive.css
+js/components.js            Header, navigation, footer, icon set (shared by all pages)
+js/script.js                Fills pages from content, menu, uploads preview, forms
+content/content.json        ALL editable text, images, events, contact details (source of truth)
+content/content.js          Generated from content.json — loaded by the pages. Do not edit by hand.
+assets/                     Built-in images, icons, videos
+uploads/                    Files uploaded through the admin panel
+forms/                      submit.php (sends form emails) · config.php (recipient)
+admin/                      Admin panel (see below)
+```
+
+## Admin panel — `/admin/`
+Edit every page's text, the events, FAQ, contact details, social links, photos (JPG, PNG, WebP, SVG) and videos (MP4, WebM). Changes go live as soon as you click **Save changes**.
+
+**First-time setup (once per server)**
+1. Open `https://your-domain/admin/`. You are sent to the setup page.
+2. Enter the **setup key** from `admin/config.php`, choose a username and a password (10+ characters).
+3. Log in. Setup is switched off automatically after the login exists.
+
+Before going live, replace `setup_key` in `admin/config.php` with a new random value.
+
+**How it works**
+- `admin/includes/schema.php` defines every editable field. The editor form and the server validation are both generated from it, so to make a new piece of text editable: add the field to the schema, the default value to `content/content.json`, and `data-bind="path.to.field"` to the element in the HTML.
+- Binding attributes used in the pages: `data-bind` (text), `data-bind-paras` (paragraphs), `data-bind-src` / `data-bind-alt` (images), `data-bind-list` + `<template>` (repeating items such as the FAQ).
+- Each save keeps a backup of the previous content in `admin/data/backups/` (last 20).
+
+**Security**
+- Password stored only as a hash (`admin/data/credentials.php`); login locks for 15 minutes after 5 wrong attempts; session expires after 2 hours idle.
+- CSRF protection on every change, strict Content-Security-Policy, the admin cannot be framed, HTTPS enforced.
+- Uploads are checked by their real file type, saved with random names, and cannot be executed (`uploads/.htaccess`). SVG files are rebuilt from an allow-list, which removes scripts, event handlers and external links.
+- `admin/includes` and `admin/data` are blocked from the web (`.htaccess`).
+
+**Forgot the password?** Delete `admin/data/credentials.php` in Hostinger's File Manager and run the setup again.
+
+## Forms
+Both forms post to `forms/submit.php`, which validates the input and emails it to `VPS_RECIPIENT` (the booking form attaches the photograph; nothing is stored on the server). Before going live:
+1. Set `VPS_RECIPIENT` and `VPS_FROM` in `forms/config.php`. `VPS_FROM` must be a mailbox on your own domain (create it in Hostinger → Emails).
+2. Send a test request from the live site and check it arrives, including the photo.
+
+No payment or order system is included (not confirmed in the BRD).
+
+## Deploying to Hostinger
+1. Upload the whole folder (including all `.htaccess` files) to `public_html` with the File Manager or FTP.
+2. Make sure PHP 8.0 or newer is selected (hPanel → Advanced → PHP Configuration).
+3. The folders `content/`, `uploads/` and `admin/data/` must be writable by PHP (they are by default on Hostinger).
+4. For large videos, raise `upload_max_filesize` and `post_max_size` in PHP Configuration (the admin allows up to 60 MB; change `max_video_mb` in `admin/config.php`).
+5. Run the admin setup (above).
+
+## Running locally
+PHP is needed for the admin panel and forms:
+```
+php -S 127.0.0.1:8000
+```
+Then open http://127.0.0.1:8000 (site) and http://127.0.0.1:8000/admin/ (admin). The PHP built-in server ignores `.htaccess`, so the folder protections only apply on Hostinger/Apache. Forms cannot send email locally.
+
+## Before launch
+- Photos are cut from the design mockup and upscaled, so they are soft on large screens. Upload the original high-resolution images through the admin panel.
+- Fill in every `[placeholder]` (event, contact details, FAQ answers) through the admin panel.
+- Finalise `privacy.html` and `terms.html`, then remove their `noindex` tag.

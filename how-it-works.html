@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How It Works | Hindu.International</title>
+  <meta name="description" content="Four simple steps: submit your request and photograph, we perform the holy ritual at the sacred site, the complete ritual is recorded, and we share the video with you.">
+  <meta name="theme-color" content="#E85A0C">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="How It Works | Hindu.International">
+  <meta property="og:description" content="A simple process to connect you with divine blessings.">
+  <meta property="og:image" content="assets/images/hero-devotee.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <div id="site-header" data-page="how"></div>
+  <script src="js/components.js"></script>
+
+  <main id="main">
+
+    <section class="page-intro" aria-labelledby="page-title">
+      <div class="container">
+        <span class="eyebrow" data-bind="how.intro.label">Simple Process</span>
+        <h1 id="page-title" data-bind="how.intro.title">How It Works</h1>
+        <p data-bind="how.intro.subtitle">A simple process to connect you with divine blessings.</p>
+      </div>
+    </section>
+
+    <section class="section section--tight" aria-label="The four steps">
+      <div class="container">
+        <ol class="steps steps--lg">
+          <li class="step card">
+            <span class="badge"><svg class="icon" aria-hidden="true"><use href="#i-doc"/></svg></span>
+            <span class="step__num">01</span>
+            <h2 class="h3" data-bind="steps.0.title">Submit Request</h2>
+            <p data-bind="steps.0.text">Fill in your details and upload your photograph.</p>
+          </li>
+          <li class="step card">
+            <span class="badge"><svg class="icon" aria-hidden="true"><use href="#i-lotus"/></svg></span>
+            <span class="step__num">02</span>
+            <h2 class="h3" data-bind="steps.1.title">We Perform Ritual</h2>
+            <p data-bind="steps.1.text">Our team performs the holy ritual at the sacred site.</p>
+          </li>
+          <li class="step card">
+            <span class="badge"><svg class="icon" aria-hidden="true"><use href="#i-video"/></svg></span>
+            <span class="step__num">03</span>
+            <h2 class="h3" data-bind="steps.2.title">Video Recording</h2>
+            <p data-bind="steps.2.text">The complete ritual is recorded.</p>
+          </li>
+          <li class="step card">
+            <span class="badge"><svg class="icon" aria-hidden="true"><use href="#i-share"/></svg></span>
+            <span class="step__num">04</span>
+            <h2 class="h3" data-bind="steps.3.title">Receive Video</h2>
+            <p data-bind="steps.3.text">We share the video with you.</p>
+          </li>
+        </ol>
+
+        <div class="card provide" aria-labelledby="provide-title">
+          <h2 id="provide-title" data-bind="how.provide.title">What You Need to Provide</h2>
+          <ul class="provide__grid">
+            <li class="provide__item">
+              <span class="badge badge--sm"><svg class="icon" aria-hidden="true"><use href="#i-idcard"/></svg></span>
+              <p><span data-bind="how.provide.items.0.label">Your Name<br>and Details</span><small data-bind="how.provide.items.0.note" data-bind-optional hidden></small></p>
+            </li>
+            <li class="provide__item">
+              <span class="badge badge--sm"><svg class="icon" aria-hidden="true"><use href="#i-image"/></svg></span>
+              <p><span data-bind="how.provide.items.1.label">Your Photograph</span><small data-bind="how.provide.items.1.note" data-bind-optional hidden></small></p>
+            </li>
+            <li class="provide__item">
+              <span class="badge badge--sm"><svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg></span>
+              <p><span data-bind="how.provide.items.2.label">Preferred Event</span><small data-bind="how.provide.items.2.note" data-bind-optional hidden></small></p>
+            </li>
+            <li class="provide__item">
+              <span class="badge badge--sm"><svg class="icon" aria-hidden="true"><use href="#i-edit"/></svg></span>
+              <p><span data-bind="how.provide.items.3.label">Any Special Request</span><small data-bind="how.provide.items.3.note" data-bind-optional>(Optional)</small></p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="center-cta">
+          <a class="btn btn--primary" href="booking.html">Request Service <svg class="icon icon--arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ — items come from content/content.json (how.faq.items); the static items below are the no-JS fallback -->
+    <section class="section section--white" id="faq" aria-labelledby="faq-title">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow" data-bind="how.faq.label">FAQs</span>
+          <h2 id="faq-title" data-bind="how.faq.title">Frequently Asked Questions</h2>
+        </div>
+        <div class="faq" data-bind-list="how.faq.items">
+          <template>
+            <details>
+              <summary data-bind="@q"></summary>
+              <p data-bind="@a"></p>
+            </details>
+          </template>
+          <details>
+            <summary>What is Virtual Punya Snan?</summary>
+            <p>It is a service for devotees who cannot physically attend the sacred bathing event. You share your photograph, our team performs the ritual on your behalf using the photograph, and the ritual is recorded on video and shared with you.</p>
+          </details>
+          <details>
+            <summary>What details do I need to give?</summary>
+            <p>Your name and contact details, a clear photograph, your preferred event, and any special request (optional). You can submit everything on the <a href="booking.html">Service / Booking</a> page.</p>
+          </details>
+          <details>
+            <summary>What kind of photograph should I send?</summary>
+            <p>Please provide a clear photograph in JPG or PNG format (up to 5 MB).</p>
+          </details>
+          <details>
+            <summary>How will I receive the video?</summary>
+            <p>The complete ritual is recorded and the video is shared with you. [Final delivery method — for example WhatsApp or email — to be confirmed.]</p>
+          </details>
+          <details>
+            <summary>Is there a charge for the service?</summary>
+            <p>[Service price and payment details to be confirmed.] For now, please <a href="contact.html">contact us</a> for details.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="content/content.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

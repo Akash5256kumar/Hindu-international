@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact Us | Hindu.International</title>
+  <meta name="description" content="Get in touch with Hindu.International by phone, WhatsApp or email for any queries or assistance with your service request.">
+  <meta name="theme-color" content="#E85A0C">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Contact Us | Hindu.International">
+  <meta property="og:description" content="We are here to help you. Get in touch for any queries or assistance.">
+  <meta property="og:image" content="assets/images/contact-banner.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <div id="site-header" data-page="contact"></div>
+  <script src="js/components.js"></script>
+
+  <main id="main">
+
+    <section class="page-banner" aria-labelledby="page-title">
+      <div class="page-banner__bg" aria-hidden="true">
+        <img src="assets/images/contact-banner.jpg" data-bind-src="contactPage.banner.image" width="1920" height="264" alt="">
+      </div>
+      <div class="container">
+        <h1 id="page-title" data-bind="contactPage.banner.title">Contact Us</h1>
+        <p data-bind="contactPage.banner.text">We are here to help you. Get in touch for any queries or assistance.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="contact-grid">
+
+          <!-- Contact details come from content/content.json (contact) — edit them in the admin panel -->
+          <div class="card contact-info">
+            <h2 data-bind="contactPage.infoTitle">Get in Touch</h2>
+            <p data-bind="contactPage.infoText">Call, message us on WhatsApp or send an email — we will be glad to help.</p>
+            <ul class="contact-list">
+              <li>
+                <span class="badge badge--sm"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg></span>
+                <span>
+                  <span class="label">Phone / WhatsApp</span>
+                  <a class="value" href="#" data-link="tel" data-bind="contact.phoneDisplay">[+91 XXXXX XXXXX]</a>
+                </span>
+              </li>
+              <li>
+                <span class="badge badge--sm"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg></span>
+                <span>
+                  <span class="label">Email Address</span>
+                  <a class="value" href="#" data-link="mailto" data-bind="contact.email">[your-email@example.com]</a>
+                </span>
+              </li>
+              <li>
+                <span class="badge badge--sm"><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg></span>
+                <span>
+                  <span class="label">Working Hours</span>
+                  <span class="value"><span data-bind="contact.hours">[Working days]</span>, <span data-bind="contact.hoursTime">[Working hours]</span></span>
+                </span>
+              </li>
+            </ul>
+            <div class="whatsapp-cta">
+              <a class="btn btn--whatsapp btn--block" href="#" data-link="whatsapp"><svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg> Chat with us on WhatsApp</a>
+            </div>
+          </div>
+
+          <!-- ========== Contact form ========== -->
+          <div class="card form-card">
+            <h2 data-bind="contactPage.formTitle">Send Us a Message</h2>
+            <p class="lead form-card__intro" data-bind="contactPage.formText">Fill in the form and we will get back to you.</p>
+            <form class="form" data-form action="forms/submit.php" method="post" novalidate>
+              <input type="hidden" name="form_type" value="contact">
+              <div class="hp" aria-hidden="true">
+                <label for="website">Leave this field empty</label>
+                <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+              </div>
+
+              <div class="field">
+                <label for="c-name">Full Name <span class="req" aria-hidden="true">*</span></label>
+                <input class="input" type="text" id="c-name" name="name" placeholder="Enter your name" autocomplete="name" required aria-describedby="c-name-error">
+                <span class="field__error" id="c-name-error" aria-live="polite"></span>
+              </div>
+              <div class="field">
+                <label for="c-email">Email <span class="req" aria-hidden="true">*</span></label>
+                <input class="input" type="email" id="c-email" name="email" placeholder="Enter your email" autocomplete="email" required aria-describedby="c-email-error">
+                <span class="field__error" id="c-email-error" aria-live="polite"></span>
+              </div>
+              <div class="field">
+                <label for="c-message">Message <span class="req" aria-hidden="true">*</span></label>
+                <textarea class="input" id="c-message" name="message" rows="5" placeholder="Your message…" required aria-describedby="c-message-error"></textarea>
+                <span class="field__error" id="c-message-error" aria-live="polite"></span>
+              </div>
+
+              <button class="btn btn--primary btn--block" type="submit">Send Message <svg class="icon icon--arrow" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+              <p class="form__status" role="status" aria-live="polite"></p>
+            </form>
+
+            <div class="form__success" hidden tabindex="-1">
+              <span class="badge"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></span>
+              <h2>Thank you for reaching out</h2>
+              <p>Your message has been sent. We will get back to you soon.</p>
+              <a class="btn btn--secondary" href="index.html">Back to Home</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="content/content.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

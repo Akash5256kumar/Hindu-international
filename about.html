@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About Us | Hindu.International</title>
+  <meta name="description" content="Hindu.International offers Virtual Punya Snan for devotees who cannot personally attend the sacred event. Learn about our purpose, rooted in faith, service and devotion.">
+  <meta name="theme-color" content="#E85A0C">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="About Us | Hindu.International">
+  <meta property="og:description" content="Our journey is rooted in faith, service and devotion.">
+  <meta property="og:image" content="assets/images/about-banner.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <div id="site-header" data-page="about"></div>
+  <script src="js/components.js"></script>
+
+  <main id="main">
+
+    <section class="page-banner" aria-labelledby="page-title">
+      <div class="page-banner__bg" aria-hidden="true">
+        <img src="assets/images/about-banner.jpg" data-bind-src="about.banner.image" width="1920" height="597" alt="">
+      </div>
+      <div class="container">
+        <h1 id="page-title" data-bind="about.banner.title">About Us</h1>
+        <p data-bind="about.banner.text">Our journey is rooted in faith, service and devotion.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="purpose-title">
+      <div class="ornament" aria-hidden="true" style="right:-140px; top:40px;"></div>
+      <div class="container">
+        <div class="split">
+          <div class="purpose__body">
+            <span class="eyebrow" data-bind="about.purpose.label">Why We Exist</span>
+            <h2 id="purpose-title" data-bind="about.purpose.title">Our Purpose</h2>
+            <div data-bind-paras="about.purpose.text">
+            <p>We aim to help devotees who cannot personally attend the sacred event. Distance, age, health, work, family responsibilities or other personal reasons can keep a devotee away from the holy waters — but they should not keep anyone away from its blessings.</p>
+            <p>Through our service, we perform the holy ritual on your behalf using your photograph, and share the recorded video with you, so that you can still receive the divine blessings and be a part of this sacred moment.</p>
+            </div>
+            <a class="btn btn--primary" href="how-it-works.html">See How It Works <svg class="icon icon--arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </div>
+          <div class="media purpose__media">
+            <img src="assets/images/ritual-aarti.jpg" data-bind-src="about.purpose.image" data-bind-alt="about.purpose.imageAlt" width="900" height="548" loading="lazy"
+                 alt="Priest performing a puja with a lamp and offerings on the riverbank">
+          </div>
+        </div>
+
+        <ul class="values about-values" aria-label="Our values">
+          <li class="card value-card">
+            <span class="badge"><svg class="icon" aria-hidden="true"><use href="#i-lotus"/></svg></span>
+            <h3 data-bind="about.values.0.title">Faith and Tradition</h3>
+          </li>
+          <li class="card value-card">
+            <span class="badge"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg></span>
+            <h3 data-bind="about.values.1.title">Trusted Service</h3>
+          </li>
+          <li class="card value-card">
+            <span class="badge"><svg class="icon" aria-hidden="true"><use href="#i-heart"/></svg></span>
+            <h3 data-bind="about.values.2.title">Devotee First</h3>
+          </li>
+          <li class="card value-card">
+            <span class="badge"><svg class="icon" aria-hidden="true"><use href="#i-diya"/></svg></span>
+            <h3 data-bind="about.values.3.title">Spreading Divine Blessings</h3>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="content/content.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

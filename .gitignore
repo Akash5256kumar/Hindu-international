@@ -1,0 +1,16 @@
+# macOS
+.DS_Store
+
+# Created on the server by the admin panel — never commit
+admin/data/credentials.php
+admin/data/login-attempts.json
+admin/data/backups/*
+!admin/data/backups/.gitkeep
+
+# Files uploaded through the admin panel live on the server
+uploads/*
+!uploads/.htaccess
+!uploads/.gitkeep
+
+# Deployment archives
+*.zip

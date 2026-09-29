@@ -1,0 +1,7 @@
+# Content changes must show up immediately after saving in the admin panel
+<IfModule mod_expires.c>
+  ExpiresActive Off
+</IfModule>
+<IfModule mod_headers.c>
+  Header set Cache-Control "no-cache, must-revalidate"
+</IfModule>

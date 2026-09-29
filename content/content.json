@@ -1,0 +1,157 @@
+{
+  "contact": {
+    "phoneDisplay": "[+91 XXXXX XXXXX]",
+    "phoneLink": "",
+    "whatsappNumber": "",
+    "whatsappMessage": "Namaste, I would like to know more about Virtual Punya Snan.",
+    "email": "[your-email@example.com]",
+    "hours": "[Working days, e.g. Mon – Sat]",
+    "hoursTime": "[Working hours, e.g. 9:00 AM – 6:00 PM]"
+  },
+  "social": {
+    "facebook": "#",
+    "instagram": "#",
+    "youtube": "#",
+    "showWhatsapp": true
+  },
+  "media": {
+    "heroVideoMp4": "",
+    "heroVideoWebm": "",
+    "howItWorksVideo": ""
+  },
+  "events": [
+    {
+      "name": "[Upcoming Sacred Event]",
+      "location": "[Event Location]",
+      "dates": "[Event Dates]",
+      "shortDescription": "[A short description of the sacred event — one or two sentences that will appear on the Home page.]",
+      "significance": "[The spiritual significance of this event and of taking the holy dip (Punya Snan).]",
+      "about": "[Detailed information about the event: its history, the sacred site, important bathing dates and anything devotees should know. This text will be provided by the client.]",
+      "image": "assets/images/event-gathering.jpg",
+      "imageAlt": "Aerial view of a vast gathering of devotees at the river during a sacred bathing festival"
+    }
+  ],
+  "steps": [
+    { "title": "Submit Request", "text": "Fill in your details and upload your photograph." },
+    { "title": "We Perform Ritual", "text": "Our team performs the holy ritual at the sacred site." },
+    { "title": "Video Recording", "text": "The complete ritual is recorded." },
+    { "title": "Receive Video", "text": "We share the video with you." }
+  ],
+  "home": {
+    "hero": {
+      "eyebrow": "When You Cannot Be There,\nYour Devotion Still Reaches",
+      "title": "Virtual\nPunya Snan",
+      "text": "Experience the divine blessings of a sacred event from anywhere in the world. We perform the holy ritual on your behalf using your photograph and share the recorded video with you.",
+      "image": "assets/images/hero-devotee.jpg",
+      "imageAlt": "Devotee standing in the holy river at sunrise, pouring water as an offering, with temples on the ghats behind"
+    },
+    "trust": [
+      { "label": "Authentic Rituals" },
+      { "label": "Trusted Process" },
+      { "label": "Video Proof Shared" },
+      { "label": "Connecting Devotees Worldwide" }
+    ],
+    "service": {
+      "label": "Our Service",
+      "title": "Your Devotion,\nOur Responsibility",
+      "text": "For devotees who cannot travel to the sacred event, we perform the Punya Snan ritual on your behalf using your photograph and share the recorded video with you, so you can still be a part of this divine moment.",
+      "image": "assets/images/offering-hands.jpg",
+      "imageAlt": "Devotee's hands holding a leaf bowl of flower offerings above the holy river"
+    },
+    "how": {
+      "label": "Simple Process",
+      "title": "How It Works",
+      "subtitle": "A simple and transparent process to connect you with divine blessings."
+    },
+    "event": {
+      "label": "Event Information",
+      "title": "Upcoming Sacred Event",
+      "subtitle": "Be a part of the divine celebration, even from afar."
+    },
+    "cta": {
+      "quote": "“Distance cannot limit devotion.”",
+      "text": "Let your faith reach the holy waters.",
+      "button": "Request Virtual Punya Snan",
+      "image": "assets/images/cta-sunrise.jpg"
+    }
+  },
+  "about": {
+    "banner": {
+      "title": "About Us",
+      "text": "Our journey is rooted in faith, service and devotion.",
+      "image": "assets/images/about-banner.jpg"
+    },
+    "purpose": {
+      "label": "Why We Exist",
+      "title": "Our Purpose",
+      "text": "We aim to help devotees who cannot personally attend the sacred event. Distance, age, health, work, family responsibilities or other personal reasons can keep a devotee away from the holy waters — but they should not keep anyone away from its blessings.\n\nThrough our service, we perform the holy ritual on your behalf using your photograph, and share the recorded video with you, so that you can still receive the divine blessings and be a part of this sacred moment.",
+      "image": "assets/images/ritual-aarti.jpg",
+      "imageAlt": "Priest performing a puja with a lamp and offerings on the riverbank"
+    },
+    "values": [
+      { "title": "Faith and Tradition" },
+      { "title": "Trusted Service" },
+      { "title": "Devotee First" },
+      { "title": "Spreading Divine Blessings" }
+    ]
+  },
+  "how": {
+    "intro": {
+      "label": "Simple Process",
+      "title": "How It Works",
+      "subtitle": "A simple process to connect you with divine blessings."
+    },
+    "provide": {
+      "title": "What You Need to Provide",
+      "items": [
+        { "label": "Your Name\nand Details", "note": "" },
+        { "label": "Your Photograph", "note": "" },
+        { "label": "Preferred Event", "note": "" },
+        { "label": "Any Special Request", "note": "(Optional)" }
+      ]
+    },
+    "faq": {
+      "label": "FAQs",
+      "title": "Frequently Asked Questions",
+      "items": [
+        { "q": "What is Virtual Punya Snan?", "a": "It is a service for devotees who cannot physically attend the sacred bathing event. You share your photograph, our team performs the ritual on your behalf using the photograph, and the ritual is recorded on video and shared with you." },
+        { "q": "What details do I need to give?", "a": "Your name and contact details, a clear photograph, your preferred event, and any special request (optional). You can submit everything on the Service / Booking page." },
+        { "q": "What kind of photograph should I send?", "a": "Please provide a clear photograph in JPG or PNG format (up to 5 MB)." },
+        { "q": "How will I receive the video?", "a": "The complete ritual is recorded and the video is shared with you. [Final delivery method — for example WhatsApp or email — to be confirmed.]" },
+        { "q": "Is there a charge for the service?", "a": "[Service price and payment details to be confirmed.] For now, please contact us for details." }
+      ]
+    }
+  },
+  "eventPage": {
+    "banner": {
+      "title": "Event Information",
+      "text": "Know more about the sacred event, its significance, dates and location.",
+      "image": "assets/images/event-banner.jpg"
+    },
+    "label": "Upcoming Sacred Event"
+  },
+  "booking": {
+    "title": "Request Virtual Punya Snan",
+    "subtitle": "Fill in the details below to submit your service request.",
+    "infoTitle": "Important Information",
+    "info": [
+      { "text": "Please provide a clear photograph." },
+      { "text": "Our team will perform the ritual at the sacred event." },
+      { "text": "The complete ritual will be recorded and shared with you." },
+      { "text": "You will receive the video via the available delivery method." }
+    ],
+    "image": "assets/images/flower-offerings.jpg",
+    "imageAlt": "Brass puja thali with a diya, marigold flowers and incense beside the river"
+  },
+  "contactPage": {
+    "banner": {
+      "title": "Contact Us",
+      "text": "We are here to help you. Get in touch for any queries or assistance.",
+      "image": "assets/images/contact-banner.jpg"
+    },
+    "infoTitle": "Get in Touch",
+    "infoText": "Call, message us on WhatsApp or send an email — we will be glad to help.",
+    "formTitle": "Send Us a Message",
+    "formText": "Fill in the form and we will get back to you."
+  }
+}

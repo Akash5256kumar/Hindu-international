@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Event Information | Hindu.International</title>
+  <meta name="description" content="Know more about the sacred event — its significance, dates and location — and request Virtual Punya Snan to take part from anywhere.">
+  <meta name="theme-color" content="#E85A0C">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Event Information | Hindu.International">
+  <meta property="og:description" content="Know more about the sacred event, its significance, dates and location.">
+  <meta property="og:image" content="assets/images/event-banner.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <div id="site-header" data-page="event"></div>
+  <script src="js/components.js"></script>
+
+  <main id="main">
+
+    <section class="page-banner" aria-labelledby="page-title">
+      <div class="page-banner__bg" aria-hidden="true">
+        <img src="assets/images/event-banner.jpg" data-bind-src="eventPage.banner.image" width="1920" height="464" alt="">
+      </div>
+      <div class="container">
+        <h1 id="page-title" data-bind="eventPage.banner.title">Event Information</h1>
+        <p data-bind="eventPage.banner.text">Know more about the sacred event, its significance, dates and location.</p>
+      </div>
+    </section>
+
+    <!-- All event text below comes from content/content.json (first event) — edit it in the admin panel -->
+    <section class="section" aria-labelledby="event-name">
+      <div class="ornament" aria-hidden="true" style="left:-150px; bottom:20px;"></div>
+      <div class="container">
+        <article class="card event-detail">
+          <div class="event-detail__media">
+            <img src="assets/images/event-gathering.jpg" width="900" height="1147" loading="lazy"
+                 data-bind-src="event.image" data-bind-alt="event.imageAlt"
+                 alt="Aerial view of a vast gathering of devotees at the river during a sacred bathing festival">
+          </div>
+          <div class="event-detail__body">
+            <span class="eyebrow" data-bind="eventPage.label">Upcoming Sacred Event</span>
+            <h2 id="event-name" data-bind="event.name">[Upcoming Sacred Event]</h2>
+            <p class="lead" data-bind="event.shortDescription">[A short description of the sacred event.]</p>
+
+            <ul class="event-facts">
+              <li>
+                <span class="badge badge--sm"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg></span>
+                <span class="label">Location</span>
+                <span class="value" data-bind="event.location">[Event Location]</span>
+              </li>
+              <li>
+                <span class="badge badge--sm"><svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg></span>
+                <span class="label">Dates</span>
+                <span class="value" data-bind="event.dates">[Event Dates]</span>
+              </li>
+              <li>
+                <span class="badge badge--sm"><svg class="icon" aria-hidden="true"><use href="#i-diya"/></svg></span>
+                <span class="label">Significance</span>
+                <span class="value" data-bind="event.significance">[Significance of the event]</span>
+              </li>
+            </ul>
+
+            <a class="btn btn--primary" href="booking.html">Request Service for This Event <svg class="icon icon--arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+
+            <div class="event-about">
+              <h3>About the Event</h3>
+              <div data-bind-paras="event.about"><p>[Detailed information about the event.]</p></div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="content/content.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

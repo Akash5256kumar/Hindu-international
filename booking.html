@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Request Virtual Punya Snan | Hindu.International</title>
+  <meta name="description" content="Submit your details and photograph to request Virtual Punya Snan. Our team performs the ritual at the sacred event and shares the recorded video with you.">
+  <meta name="theme-color" content="#E85A0C">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Request Virtual Punya Snan">
+  <meta property="og:description" content="Fill in the details below to submit your service request.">
+  <meta property="og:image" content="assets/images/hero-devotee.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <div id="site-header" data-page="booking"></div>
+  <script src="js/components.js"></script>
+
+  <main id="main">
+
+    <section class="page-intro" aria-labelledby="page-title">
+      <div class="container">
+        <h1 id="page-title" data-bind="booking.title">Request Virtual Punya Snan</h1>
+        <p data-bind="booking.subtitle">Fill in the details below to submit your service request.</p>
+      </div>
+    </section>
+
+    <section class="section section--tight">
+      <div class="container">
+        <div class="booking-grid">
+
+          <!-- ========== Request form ========== -->
+          <div class="card form-card">
+            <form class="form" data-form action="forms/submit.php" method="post" enctype="multipart/form-data" novalidate>
+              <input type="hidden" name="form_type" value="request">
+              <div class="hp" aria-hidden="true">
+                <label for="website">Leave this field empty</label>
+                <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+              </div>
+
+              <div class="form-grid">
+                <div class="field field--full">
+                  <label for="name">Full Name <span class="req" aria-hidden="true">*</span></label>
+                  <input class="input" type="text" id="name" name="name" placeholder="Enter your name" autocomplete="name" required aria-describedby="name-error">
+                  <span class="field__error" id="name-error" aria-live="polite"></span>
+                </div>
+
+                <div class="field">
+                  <label for="email">Email Address <span class="req" aria-hidden="true">*</span></label>
+                  <input class="input" type="email" id="email" name="email" placeholder="Enter your email" autocomplete="email" required aria-describedby="email-error">
+                  <span class="field__error" id="email-error" aria-live="polite"></span>
+                </div>
+
+                <div class="field">
+                  <label for="phone">Phone / WhatsApp <span class="req" aria-hidden="true">*</span></label>
+                  <input class="input" type="tel" id="phone" name="phone" placeholder="Enter your number" autocomplete="tel" inputmode="tel" required aria-describedby="phone-error">
+                  <span class="field__error" id="phone-error" aria-live="polite"></span>
+                </div>
+
+                <div class="field field--full">
+                  <label for="event">Event Name</label>
+                  <!-- Options are added from content/content.json (events) -->
+                  <select class="input" id="event" name="event">
+                    <option value="">Select event</option>
+                  </select>
+                </div>
+
+                <div class="field field--full">
+                  <label for="message">Message / Special Request <span class="optional">(Optional)</span></label>
+                  <textarea class="input" id="message" name="message" rows="4" placeholder="Any special request…"></textarea>
+                </div>
+
+                <div class="field field--full">
+                  <span class="label" id="photo-label">Upload Your Photograph <span class="req" aria-hidden="true">*</span></span>
+                  <div class="upload" data-upload>
+                    <input type="file" id="photo" name="photo" accept="image/jpeg,image/png" required
+                           aria-labelledby="photo-label" aria-describedby="photo-hint photo-error">
+                    <div class="upload__zone">
+                      <div class="upload__prompt">
+                        <span class="badge" style="margin:0 auto 10px"><svg class="icon" aria-hidden="true"><use href="#i-upload"/></svg></span>
+                        <strong><span>Click to upload</span> or drag and drop</strong>
+                        <small id="photo-hint" style="display:block">JPG or PNG (max 5 MB)</small>
+                      </div>
+                      <div class="upload__preview">
+                        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="Preview of your selected photograph">
+                        <span>
+                          <span class="upload__name"></span>
+                          <span class="upload__change">Click to choose a different photo</span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <span class="field__error" id="photo-error" aria-live="polite"></span>
+                </div>
+              </div>
+
+              <button class="btn btn--primary btn--block" type="submit">Submit Request <svg class="icon icon--arrow" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+              <p class="form__status" role="status" aria-live="polite"></p>
+              <p class="form__note">Your details and photograph are used only to perform your ritual. See our <a href="privacy.html">Privacy Policy</a>.</p>
+            </form>
+
+            <div class="form__success" hidden tabindex="-1">
+              <span class="badge"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></span>
+              <h2>Thank you — your request has been received</h2>
+              <p>We will contact you using the details you provided. The complete ritual will be recorded and shared with you.</p>
+              <a class="btn btn--secondary" href="index.html">Back to Home</a>
+            </div>
+          </div>
+
+          <!-- ========== Important information ========== -->
+          <aside class="card info-card" aria-labelledby="info-title">
+            <h2 class="info-card__title" id="info-title"><svg class="icon" aria-hidden="true"><use href="#i-info"/></svg> <span data-bind="booking.infoTitle">Important Information</span></h2>
+            <ul class="icon-list">
+              <li><svg class="icon" aria-hidden="true"><use href="#i-camera"/></svg><span data-bind="booking.info.0.text">Please provide a clear photograph.</span></li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-lotus"/></svg><span data-bind="booking.info.1.text">Our team will perform the ritual at the sacred event.</span></li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-video"/></svg><span data-bind="booking.info.2.text">The complete ritual will be recorded and shared with you.</span></li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-share"/></svg><span data-bind="booking.info.3.text">You will receive the video via the available delivery method.</span></li>
+            </ul>
+            <div class="info-card__media">
+              <img src="assets/images/flower-offerings.jpg" data-bind-src="booking.image" data-bind-alt="booking.imageAlt" width="800" height="664" loading="lazy"
+                   alt="Brass puja thali with a diya, marigold flowers and incense beside the river">
+            </div>
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="content/content.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
