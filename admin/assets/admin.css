@@ -148,6 +148,12 @@ textarea.input { resize: vertical; min-height: 64px; }
 .card__help { margin: 4px 0 0; font-size: 13px; color: var(--muted); }
 .card__body { padding: 20px; }
 
+/* ---------- Colour field ---------- */
+.color { display: flex; align-items: center; gap: 10px; }
+.color__picker { width: 46px; height: 42px; padding: 3px; border: 1px solid var(--line-2); border-radius: 8px; background: #fff; cursor: pointer; }
+.color__hex { width: 120px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; text-transform: uppercase; }
+select.input { cursor: pointer; }
+
 /* ---------- Media picker ---------- */
 .media { display: flex; gap: 16px; align-items: flex-start; }
 .media__preview {

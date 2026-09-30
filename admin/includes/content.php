@@ -123,6 +123,23 @@ final class ContentValidator
             case 'toggle':
                 return (bool) $value;
 
+            case 'color':
+                $v = self::text($value, false, 7);
+                if (!preg_match('/^#[0-9a-fA-F]{6}$/', $v)) {
+                    $this->errors[$path] = "$label must be a colour like #E85A0C.";
+                    return (string) ($f['default'] ?? '#000000');
+                }
+                return strtoupper($v);
+
+            case 'select':
+                $v = self::text($value, false, 40);
+                $options = array_keys($f['options'] ?? []);
+                if (!in_array($v, $options, true)) {
+                    $this->errors[$path] = "$label: please choose an option from the list.";
+                    return (string) ($options[0] ?? '');
+                }
+                return $v;
+
             case 'image':
             case 'video':
                 $v = is_string($value) ? trim($value) : '';

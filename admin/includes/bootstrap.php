@@ -17,6 +17,7 @@ define('DATA_DIR', ADMIN_DIR . '/data');
 define('CONTENT_DIR', SITE_DIR . '/content');
 define('UPLOAD_DIR', SITE_DIR . '/uploads');
 
+require __DIR__ . '/polyfills.php';
 require __DIR__ . '/auth.php';
 require __DIR__ . '/content.php';
 require __DIR__ . '/upload.php';

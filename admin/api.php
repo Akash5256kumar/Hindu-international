@@ -9,6 +9,8 @@
    ===================================================================== */
 
 declare(strict_types=1);
+// JSON endpoint: never print PHP warnings into the response (they are still logged)
+ini_set('display_errors', '0');
 require __DIR__ . '/includes/bootstrap.php';
 
 Auth::requireApi();

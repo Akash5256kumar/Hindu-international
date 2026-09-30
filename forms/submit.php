@@ -6,7 +6,10 @@
    ===================================================================== */
 
 declare(strict_types=1);
+// JSON endpoint: never print PHP warnings into the response (they are still logged)
+ini_set('display_errors', '0');
 require __DIR__ . '/config.php';
+require __DIR__ . '/../admin/includes/polyfills.php';
 
 header('Content-Type: application/json; charset=utf-8');
 header('X-Content-Type-Options: nosniff');
@@ -50,7 +53,8 @@ if (isset($_SESSION['vps_last']) && ($now - (int) $_SESSION['vps_last']) < VPS_T
     respond(false, 'Please wait a few seconds before sending again.', 429);
 }
 
-$type    = clean_line('form_type', 20) === 'request' ? 'request' : 'contact';
+$type    = clean_line('form_type', 20);
+$type    = in_array($type, ['request', 'donation'], true) ? $type : 'contact';
 $name    = clean_line('name', 120);
 $email   = clean_line('email', 160);
 $phone   = clean_line('phone', 40);
@@ -62,6 +66,25 @@ if ($name === '' || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
 }
 if ($type === 'contact' && $message === '') {
     respond(false, 'Please enter your message.', 422);
+}
+
+/* Donation: amount + payment method (the payment itself happens via UPI / gateway) */
+$amount = 0.0;
+$methodLabels = ['upi' => 'UPI', 'card' => 'Card', 'netbanking' => 'Net Banking', 'wallet' => 'Wallet'];
+$method = clean_line('method', 20);
+if ($type === 'donation') {
+    $digits = preg_replace('/\D/', '', $phone) ?? '';
+    if (strlen($digits) < 7 || strlen($digits) > 15) {
+        respond(false, 'Please enter a valid phone number.', 422);
+    }
+    $rawAmount = str_replace([',', ' '], '', clean_line('amount', 20));
+    if (!preg_match('/^\d+(\.\d{1,2})?$/', $rawAmount) || (float) $rawAmount < 1 || (float) $rawAmount > 10000000) {
+        respond(false, 'Please enter a valid amount between ₹1 and ₹1,00,00,000.', 422);
+    }
+    $amount = (float) $rawAmount;
+    if (!isset($methodLabels[$method])) {
+        respond(false, 'Please choose a payment method.', 422);
+    }
 }
 
 $attachment = null;
@@ -91,16 +114,31 @@ if ($type === 'request') {
 }
 
 /* ---------- Compose email ---------- */
-$subject = $type === 'request'
-    ? 'New Virtual Punya Snan request — ' . $name
-    : 'New contact message — ' . $name;
+$amountText = '₹' . number_format($amount, 2);
+$subjects = [
+    'request'  => 'New Virtual Punya Snan request — ' . $name,
+    'donation' => 'New donation (' . $amountText . ', ' . ($methodLabels[$method] ?? '') . ') — ' . $name,
+    'contact'  => 'New contact message — ' . $name,
+];
+$intros = [
+    'request'  => 'A new service request was submitted on the website.',
+    'donation' => 'A donor submitted their details on the Donate page. Please confirm the payment was received'
+        . ($method === 'upi' ? ' (UPI).' : ' and send them a secure payment link for ' . ($methodLabels[$method] ?? 'the chosen method') . '.'),
+    'contact'  => 'A new message was sent from the contact form.',
+];
+$subject = $subjects[$type];
 
 $lines = [
-    $type === 'request' ? 'A new service request was submitted on the website.' : 'A new message was sent from the contact form.',
+    $intros[$type],
     '',
     'Name:    ' . $name,
     'Email:   ' . $email,
 ];
+if ($type === 'donation') {
+    $lines[] = 'Phone:   ' . $phone;
+    $lines[] = 'Amount:  ' . $amountText;
+    $lines[] = 'Method:  ' . $methodLabels[$method];
+}
 if ($type === 'request') {
     $lines[] = 'Phone / WhatsApp: ' . $phone;
     $lines[] = 'Event:   ' . ($event !== '' ? $event : '(not selected)');

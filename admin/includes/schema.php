@@ -8,10 +8,21 @@
    Group    → a card; 'path' is where its fields live in content.json
    Field    → key, label, type, optional: help, max, required, pattern, rows
    Types    : text · textarea · paragraphs · url · embed · digits · phone
-              toggle · image · video · list (with 'fields', min/max or fixed)
+              toggle · color · select (with 'options') · image · video
+              list (with 'fields', min/max or fixed)
    ===================================================================== */
 
 declare(strict_types=1);
+
+/** Icons available for cards (names match the icon set in js/components.js) */
+$icons = [
+    'book' => 'Book (education)', 'medical' => 'Medical cross', 'bowl' => 'Food bowl',
+    'sprout' => 'Leaves (livelihoods)', 'people' => 'People (community)', 'skill' => 'Person + gear (skills)',
+    'handshake' => 'Handshake', 'hearthand' => 'Heart in hand', 'heart' => 'Heart', 'shield' => 'Shield',
+    'eye' => 'Eye (vision)', 'lotus' => 'Lotus', 'diya' => 'Diya', 'check' => 'Tick',
+];
+$iconField  = ['key' => 'icon', 'label' => 'Icon', 'type' => 'select', 'options' => $icons];
+$colorField = ['key' => 'color', 'label' => 'Icon colour', 'type' => 'color', 'default' => '#E8590C'];
 
 return [
     [
@@ -51,6 +62,147 @@ return [
                 ['key' => 'text', 'label' => 'Line under the quote', 'type' => 'text', 'max' => 160],
                 ['key' => 'button', 'label' => 'Button text', 'type' => 'text', 'max' => 40, 'required' => true],
                 ['key' => 'image', 'label' => 'Background photo', 'type' => 'image', 'required' => true, 'help' => 'Very wide photo; the left side stays visible, the right side sits behind the text.'],
+            ]],
+        ],
+    ],
+    [
+        'id' => 'roots', 'title' => 'Preserve Our Roots', 'icon' => 'roots',
+        'groups' => [
+            ['path' => 'roots.hero', 'title' => 'Hero (top of the page)', 'fields' => [
+                ['key' => 'label', 'label' => 'Small label', 'type' => 'text', 'max' => 50],
+                ['key' => 'title', 'label' => 'Main heading', 'type' => 'textarea', 'rows' => 3, 'max' => 160, 'required' => true, 'help' => 'Press Enter to start a new line.'],
+                ['key' => 'subtitle', 'label' => 'Orange sub-heading', 'type' => 'textarea', 'rows' => 2, 'max' => 160],
+                ['key' => 'text', 'label' => 'Text', 'type' => 'paragraphs', 'rows' => 6, 'max' => 1500, 'help' => 'Leave an empty line between paragraphs.'],
+                ['key' => 'primaryButton', 'label' => 'Orange button text', 'type' => 'text', 'max' => 40, 'required' => true],
+                ['key' => 'secondaryButton', 'label' => 'White button text', 'type' => 'text', 'max' => 40, 'required' => true],
+                ['key' => 'image', 'label' => 'Background photo', 'type' => 'image', 'required' => true, 'help' => 'Wide landscape photo; keep the people on the right side.'],
+                ['key' => 'imageAlt', 'label' => 'Photo description', 'type' => 'text', 'max' => 200],
+            ]],
+            ['path' => 'roots.why', 'title' => '“Why This Matters”', 'fields' => [
+                ['key' => 'label', 'label' => 'Small label', 'type' => 'text', 'max' => 50],
+                ['key' => 'title', 'label' => 'Heading', 'type' => 'textarea', 'rows' => 2, 'max' => 100],
+                ['key' => 'text', 'label' => 'Text', 'type' => 'paragraphs', 'rows' => 7, 'max' => 2000, 'help' => 'Leave an empty line between paragraphs.'],
+                ['key' => 'callout', 'label' => 'Highlighted statement (orange box)', 'type' => 'textarea', 'rows' => 2, 'max' => 200],
+                ['key' => 'image', 'label' => 'Photo (portrait)', 'type' => 'image', 'required' => true],
+                ['key' => 'imageAlt', 'label' => 'Photo description', 'type' => 'text', 'max' => 200],
+            ]],
+            ['path' => 'roots.approach', 'title' => '“Our Approach” card', 'fields' => [
+                ['key' => 'title', 'label' => 'Heading', 'type' => 'text', 'max' => 60],
+                ['key' => 'lead', 'label' => 'Bold first line', 'type' => 'textarea', 'rows' => 2, 'max' => 160],
+                ['key' => 'text', 'label' => 'Text', 'type' => 'paragraphs', 'rows' => 5, 'max' => 1200],
+                ['key' => 'items', 'label' => 'Ticked list', 'type' => 'list', 'min' => 0, 'max' => 12, 'itemLabel' => 'Item', 'titleField' => 'text', 'fields' => [
+                    ['key' => 'text', 'label' => 'Text', 'type' => 'text', 'max' => 80, 'required' => true],
+                ]],
+                ['key' => 'closing', 'label' => 'Closing line', 'type' => 'text', 'max' => 200],
+            ]],
+            ['path' => 'roots.anti', 'title' => '“What Is Anti-Conversion?” (blue band)', 'fields' => [
+                ['key' => 'label', 'label' => 'Small label', 'type' => 'text', 'max' => 50],
+                ['key' => 'title', 'label' => 'Heading', 'type' => 'text', 'max' => 100],
+                ['key' => 'text', 'label' => 'Text', 'type' => 'paragraphs', 'rows' => 5, 'max' => 1500],
+                ['key' => 'image', 'label' => 'Photo', 'type' => 'image', 'required' => true],
+                ['key' => 'imageAlt', 'label' => 'Photo description', 'type' => 'text', 'max' => 200],
+            ]],
+            ['path' => 'roots.focus', 'title' => '“What We Focus On” cards', 'fields' => [
+                ['key' => 'label', 'label' => 'Small label', 'type' => 'text', 'max' => 50],
+                ['key' => 'items', 'label' => 'Cards', 'type' => 'list', 'min' => 1, 'max' => 10, 'itemLabel' => 'Card', 'titleField' => 'title', 'fields' => [
+                    $iconField, $colorField,
+                    ['key' => 'title', 'label' => 'Title', 'type' => 'text', 'max' => 50, 'required' => true],
+                    ['key' => 'text', 'label' => 'Text', 'type' => 'textarea', 'rows' => 2, 'max' => 200],
+                    ['key' => 'image', 'label' => 'Photo', 'type' => 'image', 'required' => true],
+                    ['key' => 'imageAlt', 'label' => 'Photo description', 'type' => 'text', 'max' => 200],
+                ]],
+            ]],
+            ['path' => 'roots.people', 'title' => '“Our Roots Are People”', 'fields' => [
+                ['key' => 'label', 'label' => 'Small label', 'type' => 'text', 'max' => 50],
+                ['key' => 'title', 'label' => 'Heading', 'type' => 'text', 'max' => 100],
+                ['key' => 'text', 'label' => 'Text', 'type' => 'textarea', 'rows' => 4, 'max' => 800],
+                ['key' => 'highlight', 'label' => 'Bold statement', 'type' => 'textarea', 'rows' => 2, 'max' => 300],
+                ['key' => 'image', 'label' => 'Photo', 'type' => 'image', 'required' => true],
+                ['key' => 'imageAlt', 'label' => 'Photo description', 'type' => 'text', 'max' => 200],
+            ]],
+            ['path' => 'roots.vision', 'title' => '“Our Vision” card', 'fields' => [
+                ['key' => 'title', 'label' => 'Heading', 'type' => 'text', 'max' => 60],
+                ['key' => 'text', 'label' => 'Text', 'type' => 'textarea', 'rows' => 4, 'max' => 800],
+                ['key' => 'highlight', 'label' => 'Orange statement', 'type' => 'textarea', 'rows' => 2, 'max' => 160],
+            ]],
+            ['path' => 'roots.change', 'title' => '“Real Change” section', 'fields' => [
+                ['key' => 'label', 'label' => 'Small label', 'type' => 'text', 'max' => 50],
+                ['key' => 'title', 'label' => 'Heading', 'type' => 'text', 'max' => 80],
+                ['key' => 'text', 'label' => 'Text', 'type' => 'textarea', 'rows' => 3, 'max' => 500],
+                ['key' => 'button', 'label' => 'Button text', 'type' => 'text', 'max' => 40, 'required' => true],
+                ['key' => 'link', 'label' => 'Link text', 'type' => 'text', 'max' => 60],
+                ['key' => 'image', 'label' => 'Photo (portrait)', 'type' => 'image', 'required' => true],
+                ['key' => 'imageAlt', 'label' => 'Photo description', 'type' => 'text', 'max' => 200],
+                ['key' => 'tiles', 'label' => 'Icon tiles', 'type' => 'list', 'min' => 1, 'max' => 6, 'itemLabel' => 'Tile', 'titleField' => 'label', 'fields' => [
+                    $iconField, $colorField,
+                    ['key' => 'label', 'label' => 'Label', 'type' => 'textarea', 'rows' => 2, 'max' => 50, 'required' => true],
+                ]],
+            ]],
+            ['path' => 'roots.choice', 'title' => '“Your Donation Creates Choice” (blue card)', 'fields' => [
+                ['key' => 'title', 'label' => 'Heading', 'type' => 'textarea', 'rows' => 2, 'max' => 120],
+                ['key' => 'text', 'label' => 'Text', 'type' => 'textarea', 'rows' => 3, 'max' => 500],
+                ['key' => 'button', 'label' => 'Button text', 'type' => 'text', 'max' => 40, 'required' => true],
+            ]],
+            ['path' => 'roots.cta', 'title' => 'Dark banner at the bottom', 'fields' => [
+                ['key' => 'label', 'label' => 'Small label', 'type' => 'text', 'max' => 50],
+                ['key' => 'title', 'label' => 'Heading', 'type' => 'textarea', 'rows' => 2, 'max' => 160],
+                ['key' => 'button', 'label' => 'Button text', 'type' => 'text', 'max' => 40, 'required' => true],
+                ['key' => 'image', 'label' => 'Background photo', 'type' => 'image', 'required' => true],
+            ]],
+        ],
+    ],
+    [
+        'id' => 'donate', 'title' => 'Donate', 'icon' => 'donate',
+        'groups' => [
+            ['path' => 'donate.hero', 'title' => 'Hero (top of the page)', 'fields' => [
+                ['key' => 'label', 'label' => 'Small label', 'type' => 'text', 'max' => 50],
+                ['key' => 'title', 'label' => 'Main heading', 'type' => 'textarea', 'rows' => 2, 'max' => 100, 'required' => true],
+                ['key' => 'text', 'label' => 'Text', 'type' => 'textarea', 'rows' => 3, 'max' => 500],
+                ['key' => 'image', 'label' => 'Background photo', 'type' => 'image', 'required' => true],
+                ['key' => 'imageAlt', 'label' => 'Photo description', 'type' => 'text', 'max' => 200],
+            ]],
+            ['path' => 'donate.impact', 'title' => '“How Your Donation Helps”', 'fields' => [
+                ['key' => 'label', 'label' => 'Small label', 'type' => 'text', 'max' => 50],
+                ['key' => 'title', 'label' => 'Heading', 'type' => 'textarea', 'rows' => 2, 'max' => 100],
+                ['key' => 'text', 'label' => 'Text', 'type' => 'textarea', 'rows' => 3, 'max' => 400],
+                ['key' => 'items', 'label' => 'Impact list', 'type' => 'list', 'min' => 1, 'max' => 10, 'itemLabel' => 'Item', 'titleField' => 'title', 'fields' => [
+                    $iconField, $colorField,
+                    ['key' => 'title', 'label' => 'Title', 'type' => 'text', 'max' => 50, 'required' => true],
+                    ['key' => 'text', 'label' => 'Text', 'type' => 'textarea', 'rows' => 2, 'max' => 200],
+                ]],
+                ['key' => 'script', 'label' => 'Handwritten line', 'type' => 'textarea', 'rows' => 2, 'max' => 100],
+            ]],
+            ['path' => 'donate.form', 'title' => 'Donation form', 'fields' => [
+                ['key' => 'label', 'label' => 'Small label', 'type' => 'text', 'max' => 50],
+                ['key' => 'title', 'label' => 'Heading', 'type' => 'text', 'max' => 80],
+                ['key' => 'text', 'label' => 'Text', 'type' => 'textarea', 'rows' => 4, 'max' => 600],
+                ['key' => 'amountsLabel', 'label' => '“Choose Amount” label', 'type' => 'text', 'max' => 40],
+                ['key' => 'amounts', 'label' => 'Suggested amounts (₹)', 'type' => 'list', 'min' => 1, 'max' => 8, 'itemLabel' => 'Amount', 'titleField' => 'value', 'fields' => [
+                    ['key' => 'value', 'label' => 'Amount in ₹ (digits only)', 'type' => 'digits', 'max' => 8, 'required' => true],
+                ]],
+                ['key' => 'otherLabel', 'label' => '“Other Amount” button', 'type' => 'text', 'max' => 30],
+                ['key' => 'methodsLabel', 'label' => '“Payment Method” label', 'type' => 'text', 'max' => 40],
+                ['key' => 'button', 'label' => 'Donate button text', 'type' => 'text', 'max' => 40, 'required' => true],
+                ['key' => 'secureNote', 'label' => 'Note under the button', 'type' => 'text', 'max' => 120],
+            ]],
+            ['path' => 'donate.form', 'title' => 'UPI payment details', 'help' => 'Donors pay directly to this UPI account. Upload the QR code from your bank / UPI app.', 'fields' => [
+                ['key' => 'upiId', 'label' => 'UPI ID', 'type' => 'text', 'max' => 80, 'help' => 'e.g. yourname@okaxis'],
+                ['key' => 'upiName', 'label' => 'Payee name (shown in the UPI app)', 'type' => 'text', 'max' => 80],
+                ['key' => 'upiQr', 'label' => 'UPI QR code image', 'type' => 'image'],
+                ['key' => 'upiTitle', 'label' => '“Scan & Pay” title', 'type' => 'text', 'max' => 40],
+                ['key' => 'upiText', 'label' => '“Scan & Pay” text', 'type' => 'text', 'max' => 100],
+                ['key' => 'otherMethodNote', 'label' => 'Message for Card / Net Banking / Wallet', 'type' => 'textarea', 'rows' => 3, 'max' => 400, 'help' => 'Shown until a payment gateway is connected.'],
+            ]],
+            ['path' => 'donate.form', 'title' => 'After the donor submits', 'fields' => [
+                ['key' => 'successTitle', 'label' => 'Heading', 'type' => 'text', 'max' => 80],
+                ['key' => 'successText', 'label' => 'Text', 'type' => 'textarea', 'rows' => 3, 'max' => 400],
+            ]],
+            ['path' => 'donate.thanks', 'title' => 'Thank-you banner', 'fields' => [
+                ['key' => 'label', 'label' => 'Small label', 'type' => 'text', 'max' => 40],
+                ['key' => 'title', 'label' => 'Heading', 'type' => 'textarea', 'rows' => 2, 'max' => 100],
+                ['key' => 'text', 'label' => 'Text', 'type' => 'textarea', 'rows' => 3, 'max' => 500],
+                ['key' => 'script', 'label' => 'Handwritten line', 'type' => 'text', 'max' => 100],
+                ['key' => 'image', 'label' => 'Background photo', 'type' => 'image', 'required' => true],
             ]],
         ],
     ],
@@ -185,6 +337,27 @@ return [
                 ['key' => 'heroVideoMp4', 'label' => 'Home hero background video (MP4)', 'type' => 'video', 'accept' => 'mp4', 'help' => 'Short (8–15 s), no sound needed, under ~10 MB. Replaces the hero photo when set.'],
                 ['key' => 'heroVideoWebm', 'label' => 'Same video as WebM (optional)', 'type' => 'video', 'accept' => 'webm'],
                 ['key' => 'howItWorksVideo', 'label' => '“Watch How It Works” video link', 'type' => 'embed', 'help' => 'YouTube embed link, e.g. https://www.youtube.com/embed/VIDEO_ID. Empty = button opens the How It Works page.'],
+            ]],
+        ],
+    ],
+    [
+        'id' => 'site', 'title' => 'Header, footer & colours', 'icon' => 'palette',
+        'groups' => [
+            ['path' => 'site', 'title' => 'Header & footer', 'fields' => [
+                ['key' => 'logoText', 'label' => 'Logo text', 'type' => 'text', 'max' => 40, 'required' => true, 'help' => 'The first “.” is shown in orange, e.g. Hindu.International'],
+                ['key' => 'headerCta', 'label' => 'Header button text', 'type' => 'text', 'max' => 30, 'required' => true],
+                ['key' => 'footerTagline', 'label' => 'Footer tagline', 'type' => 'textarea', 'rows' => 2, 'max' => 120],
+                ['key' => 'nav', 'label' => 'Menu labels', 'type' => 'list', 'fixed' => 7, 'itemLabel' => 'Menu item', 'titleField' => 'label', 'fields' => [
+                    ['key' => 'label', 'label' => 'Label', 'type' => 'text', 'max' => 30, 'required' => true],
+                ]],
+            ]],
+            ['path' => 'theme', 'title' => 'Colours', 'help' => 'Changes the colours across the whole website.', 'fields' => [
+                ['key' => 'primary', 'label' => 'Main colour (buttons, highlights)', 'type' => 'color', 'default' => '#E85A0C'],
+                ['key' => 'primaryDark', 'label' => 'Main colour — darker shade', 'type' => 'color', 'default' => '#C94708'],
+                ['key' => 'gold', 'label' => 'Gold accent', 'type' => 'color', 'default' => '#D99A35'],
+                ['key' => 'navy', 'label' => 'Navy (headings on Preserve Our Roots pages, logo)', 'type' => 'color', 'default' => '#16396B'],
+                ['key' => 'background', 'label' => 'Page background (cream)', 'type' => 'color', 'default' => '#FFF8ED'],
+                ['key' => 'footer', 'label' => 'Footer background', 'type' => 'color', 'default' => '#111C28'],
             ]],
         ],
     ],

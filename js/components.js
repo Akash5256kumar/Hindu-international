@@ -1,6 +1,8 @@
 /* =====================================================================
    SHARED COMPONENTS — icon set, header and footer.
    Edit the header / footer once here and every page updates.
+   Labels, logo text, tagline and theme colours come from content/content.js
+   (window.SITE_CONTENT, loaded in <head>), so they are editable in the admin panel.
    Each page contains:
      <div id="site-header" data-page="home"></div>   (page key for active link)
      <div id="site-footer"></div>
@@ -37,8 +39,19 @@
     facebook: '<path d="M14.5 8.5H17V5h-2.8C11.6 5 10.5 6.6 10.5 9v1.8H8v3.4h2.5V21h3.6v-6.8h2.6l.5-3.4h-3.1V9.3c0-.5.3-.8.9-.8z" fill="currentColor" stroke="none"/>',
     instagram: '<rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".8" fill="currentColor" stroke="none"/>',
     youtube: '<rect x="2.5" y="5.5" width="19" height="13" rx="4"/><path d="M10.2 9.2v5.6l4.6-2.8z" fill="currentColor"/>',
-    play: '<circle cx="12" cy="12" r="10" fill="currentColor" stroke="none"/><path d="M10 8.3v7.4l5.8-3.7z" fill="#fff" stroke="none"/>'
+    play: '<circle cx="12" cy="12" r="10" fill="currentColor" stroke="none"/><path d="M10 8.3v7.4l5.8-3.7z" fill="#fff" stroke="none"/>',
+    book: '<path d="M12 6.5C10 5 7 4.5 3.5 5v13c3.5-.5 6.5 0 8.5 1.5 2-1.5 5-2 8.5-1.5V5C17 4.5 14 5 12 6.5z"/><path d="M12 6.5v13M6 9h3M6 12h3M15 9h3M15 12h3"/>',
+    medical: '<path d="M9 3.5h6v5.5h5.5v6H15v5.5H9V15H3.5V9H9z"/>',
+    bowl: '<path d="M3 11.5h18c0 4.8-4 8.5-9 8.5s-9-3.7-9-8.5z"/><path d="M9 3.5c-1 1.2 1 2.3 0 3.5M12 3.5c-1 1.2 1 2.3 0 3.5M15 3.5c-1 1.2 1 2.3 0 3.5"/>',
+    sprout: '<path d="M12 21v-9"/><path d="M12 12c0-4 3-7 8-7 0 4.5-3 7-8 7z"/><path d="M12 14.5c0-3.5-2.5-6-7-6 0 4 2.5 6 7 6z"/>',
+    people: '<circle cx="12" cy="7.5" r="3"/><path d="M6.5 20v-1.5a5.5 5.5 0 0 1 11 0V20"/><circle cx="5" cy="9.5" r="2.2"/><path d="M1.8 19v-1a3.8 3.8 0 0 1 4.2-3.8"/><circle cx="19" cy="9.5" r="2.2"/><path d="M22.2 19v-1a3.8 3.8 0 0 0-4.2-3.8"/>',
+    skill: '<circle cx="9" cy="7" r="3.5"/><path d="M2.5 20v-1a6.5 6.5 0 0 1 9.6-5.7"/><circle cx="17.5" cy="17" r="2.2"/><path d="M17.5 12.8v1.6M17.5 19.6v1.6M13.3 17h1.6M20.1 17h1.6M14.6 14.1l1.1 1.1M19.3 18.8l1.1 1.1M14.6 19.9l1.1-1.1M19.3 15.2l1.1-1.1"/>',
+    handshake: '<path d="M2 11l3.5-3.5 4 1.2L12 7l3.5 1.5L22 12"/><path d="M5.5 7.5V14l5 5c.8.8 2 .8 2.8 0l5.7-5.7"/><path d="M10 9.5l-2.3 2.3a1.5 1.5 0 0 0 2.1 2.1l2.2-2.2 3.5 3.5"/>',
+    eye: '<path d="M2 12s3.6-6.5 10-6.5S22 12 22 12s-3.6 6.5-10 6.5S2 12 2 12z"/><circle cx="12" cy="12" r="3"/>',
+    hearthand: '<path d="M12 11.5s-3.5-2.1-3.5-4.6A2 2 0 0 1 12 5.7a2 2 0 0 1 3.5 1.2c0 2.5-3.5 4.6-3.5 4.6z"/><path d="M3 14.5h3.5l3.2 1.6h3.8a1.4 1.4 0 0 1 0 2.8H10"/><path d="M13.5 18.9l5.3-2.6a1.5 1.5 0 0 1 1.7 2.4L15 22H7l-4-2"/>',
+    lock: '<rect x="5" y="10.5" width="14" height="10" rx="2"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/>'
   };
+  window.vpsIconNames = Object.keys(ICONS);
 
   function injectSprite() {
     var symbols = Object.keys(ICONS).map(function (k) {
@@ -57,34 +70,68 @@
   }
   window.vpsIcon = icon;
 
+  /* ---------- Content (editable in the admin panel) ---------- */
+  var CONTENT = window.SITE_CONTENT || {};
+  var SITE = CONTENT.site || {};
+
+  function esc(str) {
+    return String(str).replace(/[&<>"']/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+  }
+  function escLines(str) { return esc(str).replace(/\n/g, '<br>'); }
+
+  /* Theme colours -> CSS custom properties (applied before the page paints) */
+  (function applyTheme() {
+    var theme = CONTENT.theme || {};
+    var vars = {
+      primary: '--saffron', primaryDark: '--saffron-deep', gold: '--gold',
+      navy: '--roots-ink', background: '--cream', footer: '--navy'
+    };
+    Object.keys(vars).forEach(function (key) {
+      if (/^#[0-9a-f]{3}([0-9a-f]{3})?$/i.test(theme[key] || '')) {
+        document.documentElement.style.setProperty(vars[key], theme[key]);
+      }
+    });
+  })();
+
   /* ---------- Navigation (single source for header + footer) ---------- */
   var NAV = [
-    { key: 'home',    label: 'Home',              href: 'index.html' },
-    { key: 'about',   label: 'About Us',          href: 'about.html' },
-    { key: 'how',     label: 'How It Works',      href: 'how-it-works.html' },
-    { key: 'event',   label: 'Event Information', href: 'event.html' },
-    { key: 'booking', label: 'Service / Booking', href: 'booking.html' },
-    { key: 'contact', label: 'Contact Us',        href: 'contact.html' }
+    { key: 'home',    label: 'Home',               href: 'index.html' },
+    { key: 'about',   label: 'About Us',           href: 'about.html' },
+    { key: 'how',     label: 'How It Works',       href: 'how-it-works.html' },
+    { key: 'roots',   label: 'Preserve Our Roots', href: 'preserve-our-roots.html' },
+    { key: 'event',   label: 'Event Information',  href: 'event.html' },
+    { key: 'booking', label: 'Service / Booking',  href: 'booking.html' },
+    { key: 'contact', label: 'Contact Us',         href: 'contact.html' }
   ];
+  (SITE.nav || []).forEach(function (item, i) {
+    if (NAV[i] && item && item.label) NAV[i].label = item.label;
+  });
 
+  /* Logo text: the first "." is highlighted, e.g. Hindu.International */
+  var logoText = SITE.logoText || 'Hindu.International';
+  var dot = logoText.indexOf('.');
   var LOGO =
     '<span class="logo__mark">' + icon('lotus') + '</span>' +
-    '<span class="logo__text">Hindu<span class="logo__dot">.</span>International</span>';
+    '<span class="logo__text">' + (dot > 0
+      ? esc(logoText.slice(0, dot)) + '<span class="logo__dot">.</span>' + esc(logoText.slice(dot + 1))
+      : esc(logoText)) + '</span>';
 
   function renderHeader(el) {
     var page = el.getAttribute('data-page');
     var links = NAV.map(function (n) {
       var current = n.key === page ? ' aria-current="page"' : '';
-      return '<li><a class="nav__link" href="' + n.href + '"' + current + '>' + n.label + '</a></li>';
+      return '<li><a class="nav__link" href="' + n.href + '"' + current + '>' + esc(n.label) + '</a></li>';
     }).join('');
 
     el.outerHTML =
       '<header class="site-header" id="top">' +
         '<div class="container header__inner">' +
-          '<a class="logo" href="index.html" aria-label="Hindu.International — Home">' + LOGO + '</a>' +
+          '<a class="logo" href="index.html" aria-label="' + esc(logoText) + ' — Home">' + LOGO + '</a>' +
           '<nav class="nav" id="site-nav" aria-label="Main">' +
             '<ul class="nav__list">' + links + '</ul>' +
-            '<a class="btn btn--primary btn--sm nav__cta" href="booking.html">Request Service</a>' +
+            '<a class="btn btn--primary btn--sm nav__cta" href="booking.html">' + esc(SITE.headerCta || 'Request Service') + '</a>' +
           '</nav>' +
           '<button class="nav-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Open menu">' +
             icon('menu', 'nav-toggle__open') + icon('close', 'nav-toggle__close') +
@@ -95,15 +142,15 @@
 
   function renderFooter(el) {
     var quick = NAV.map(function (n) {
-      return '<li><a href="' + n.href + '">' + n.label + '</a></li>';
+      return '<li><a href="' + n.href + '">' + esc(n.label) + '</a></li>';
     }).join('');
 
     el.outerHTML =
       '<footer class="site-footer">' +
         '<div class="container footer__grid">' +
           '<div class="footer__brand">' +
-            '<a class="logo logo--light" href="index.html" aria-label="Hindu.International — Home">' + LOGO + '</a>' +
-            '<p class="footer__tagline">Your Faith. Our Service.<br>Divine Blessings, Always.</p>' +
+            '<a class="logo logo--light" href="index.html" aria-label="' + esc(logoText) + ' — Home">' + LOGO + '</a>' +
+            '<p class="footer__tagline">' + escLines(SITE.footerTagline || 'Your Faith. Our Service.\nDivine Blessings, Always.') + '</p>' +
             '<ul class="footer__social" data-social></ul>' +
           '</div>' +
           '<div class="footer__col">' +
@@ -115,6 +162,7 @@
             '<ul class="footer__links">' +
               '<li><a href="booking.html">Virtual Punya Snan</a></li>' +
               '<li><a href="event.html">Event Details</a></li>' +
+              '<li><a href="donate.html">Donate</a></li>' +
               '<li><a href="how-it-works.html#faq">FAQs</a></li>' +
               '<li><a href="privacy.html">Privacy Policy</a></li>' +
               '<li><a href="terms.html">Terms &amp; Conditions</a></li>' +
@@ -122,7 +170,7 @@
           '</div>' +
         '</div>' +
         '<div class="container">' +
-          '<div class="footer__bottom"><p>&copy; <span data-year>2025</span> Hindu.International. All rights reserved.</p></div>' +
+          '<div class="footer__bottom"><p>&copy; <span data-year>2025</span> ' + esc(logoText) + '. All rights reserved.</p></div>' +
         '</div>' +
       '</footer>';
   }

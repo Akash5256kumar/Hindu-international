@@ -278,6 +278,12 @@
         ]);
         label = null;
         break;
+      case 'color':
+        control = renderColor(field, path, id);
+        break;
+      case 'select':
+        control = renderSelect(field, path, id);
+        break;
       default:
         control = renderText(field, path, id);
     }
@@ -318,6 +324,40 @@
     });
     update();
     return counter ? h('div', { class: 'field__control' }, [input, counter]) : input;
+  }
+
+  /** Colour picker + hex text box, kept in sync */
+  function renderColor(field, path, id) {
+    var value = /^#[0-9a-f]{6}$/i.test(getPath(state.content, path) || '') ? getPath(state.content, path) : (field.default || '#000000');
+    var picker = h('input', { type: 'color', class: 'color__picker', value: value, 'aria-label': field.label + ' (picker)' });
+    var hex = h('input', { type: 'text', class: 'input color__hex', id: id, value: value, maxlength: 7, spellcheck: null });
+    hex.spellcheck = false;
+    picker.addEventListener('input', function () {
+      hex.value = picker.value.toUpperCase();
+      setPath(state.content, path, hex.value);
+      changed();
+    });
+    hex.addEventListener('input', function () {
+      var v = hex.value.trim();
+      if (/^#[0-9a-f]{6}$/i.test(v)) picker.value = v;
+      setPath(state.content, path, v);
+      changed();
+    });
+    var reset = field.default ? h('button', {
+      type: 'button', class: 'btn btn--link btn--sm color__reset', text: 'Reset',
+      onclick: function () { picker.value = field.default; hex.value = field.default; setPath(state.content, path, field.default); changed(); }
+    }) : null;
+    return h('div', { class: 'color' }, [picker, hex, reset]);
+  }
+
+  function renderSelect(field, path, id) {
+    var current = getPath(state.content, path);
+    var select = h('select', { class: 'input', id: id });
+    Object.keys(field.options || {}).forEach(function (key) {
+      select.appendChild(h('option', { value: key, text: field.options[key], selected: key === current }));
+    });
+    select.addEventListener('change', function () { setPath(state.content, path, select.value); changed(); });
+    return select;
   }
 
   function renderMedia(field, path, id) {

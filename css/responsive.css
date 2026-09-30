@@ -1,22 +1,24 @@
 /* =====================================================================
    VIRTUAL PUNYA SNAN — RESPONSIVE STYLES
-   ≤1200 small desktop · ≤1024 tablet (hamburger) · ≤768 mobile · ≤480 small phones
+   ≤1280 compact nav · ≤1180 hamburger menu · ≤1024 tablet · ≤768 mobile · ≤480 small phones
    ===================================================================== */
 
-/* ---------- Small desktop ---------- */
-@media (max-width: 1200px) {
-  .nav { gap: 24px; }
-  .nav__list { gap: 20px; }
-  .nav__link { font-size: .86rem; }
-  .steps { gap: 36px; }
-  .step:not(:last-child)::after { right: -32px; width: 26px; }
+/* ---------- Large desktop: 7 menu items + button ---------- */
+@media (max-width: 1440px) {
+  .nav { gap: 26px; }
+  .nav__list { gap: 22px; }
+  .nav__link { font-size: .87rem; }
 }
 
-/* ---------- Tablet ---------- */
-@media (max-width: 1024px) {
-  :root { --header-h: 70px; --section-y: 76px; }
+/* ---------- Small desktop ---------- */
+@media (max-width: 1280px) {
+  .nav { gap: 22px; }
+  .nav__list { gap: 18px; }
+  .nav__link { font-size: .84rem; }
+}
 
-  /* Mobile menu */
+/* ---------- Hamburger menu (7 nav items no longer fit on one line) ---------- */
+@media (max-width: 1180px) {
   .nav-toggle { display: grid; }
   .nav {
     position: fixed; left: 0; right: 0; top: var(--header-h); bottom: 0;
@@ -34,6 +36,17 @@
   .nav__link::after { display: none; }
   .nav__link[aria-current="page"] { color: var(--saffron-deep); font-weight: 600; }
   .nav__cta { min-height: 54px; font-size: 1.02rem; }
+
+}
+
+@media (max-width: 1200px) {
+  .steps { gap: 36px; }
+  .step:not(:last-child)::after { right: -32px; width: 26px; }
+}
+
+/* ---------- Tablet ---------- */
+@media (max-width: 1024px) {
+  :root { --header-h: 70px; --section-y: 76px; }
 
   .split { gap: 44px; }
 

@@ -19,7 +19,8 @@
   --muted: #5B5650;
   --line: #F0E3D1;
   --line-strong: #E6D5BE;
-  --navy: #111C28;
+  --navy: #111C28;              /* footer */
+  --roots-ink: #16396B;         /* navy headings (Preserve Our Roots pages, logo) */
   --tint: #FDEEDD;              /* soft orange circle behind icons */
 
   --font-serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
@@ -144,7 +145,7 @@ h3 { font-size: 1.2rem; }
 .btn:active { transform: translateY(0); }
 
 .btn--primary {
-  background: linear-gradient(180deg, #E0560B 0%, var(--saffron-deep) 100%);
+  background: linear-gradient(180deg, var(--saffron) 0%, var(--saffron-deep) 100%);
   color: var(--white);
   box-shadow: 0 6px 16px rgba(201, 71, 8, .24);
 }
@@ -242,8 +243,8 @@ h3 { font-size: 1.2rem; }
 .site-header.is-scrolled { box-shadow: 0 6px 24px rgba(90, 50, 15, .08); }
 .header__inner { height: 100%; display: flex; align-items: center; gap: 24px; }
 
-.logo { display: inline-flex; align-items: center; gap: 10px; color: var(--ink); flex: none; }
-.logo:hover { color: var(--ink); }
+.logo { display: inline-flex; align-items: center; gap: 10px; color: var(--roots-ink); flex: none; }
+.logo:hover { color: var(--roots-ink); }
 .logo__mark { color: var(--saffron); display: grid; }
 .logo__mark .icon { width: 42px; height: 42px; stroke-width: 1.35; }
 .logo__text { font-family: var(--font-serif); font-weight: 600; font-size: 1.3rem; line-height: 1.1; letter-spacing: -.005em; white-space: nowrap; }
@@ -256,7 +257,7 @@ h3 { font-size: 1.2rem; }
 .nav { margin-left: auto; display: flex; align-items: center; gap: 36px; }
 .nav__list { display: flex; align-items: center; gap: 30px; }
 .nav__link {
-  position: relative; display: block; padding: 6px 0;
+  position: relative; display: block; padding: 6px 0; white-space: nowrap;
   font-size: .9rem; font-weight: 500; color: var(--ink-2);
 }
 .nav__link::after {
@@ -267,6 +268,7 @@ h3 { font-size: 1.2rem; }
 .nav__link:hover { color: var(--saffron-deep); }
 .nav__link:hover::after, .nav__link[aria-current="page"]::after { transform: scaleX(1); }
 .nav__link[aria-current="page"] { color: var(--saffron-deep); }
+.nav__cta { border-radius: 999px; padding: 0 22px; }
 
 .nav-toggle {
   display: none; margin-left: auto;

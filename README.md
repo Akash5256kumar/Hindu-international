@@ -3,14 +3,20 @@
 HTML5 / CSS3 / JavaScript website with a small PHP admin panel for editing content and images. Built for Hostinger (PHP 8.0+).
 
 ## Pages
-`index.html` · `about.html` · `how-it-works.html` (with FAQ) · `event.html` · `booking.html` · `contact.html` · `privacy.html` · `terms.html`
+`index.html` · `about.html` · `how-it-works.html` (with FAQ) · `preserve-our-roots.html` · `donate.html` · `event.html` · `booking.html` · `contact.html` · `privacy.html` · `terms.html`
+
+## Donations (`donate.html`)
+- **UPI works directly:** set the UPI ID, payee name and upload the UPI QR code in *Admin → Donate → UPI payment details*. Donors see the QR / UPI ID, and on phones a “Pay with a UPI app” button with the amount filled in.
+- **Card / Net Banking / Wallet** need a payment gateway (e.g. Razorpay) connected to the organisation's merchant account. Until then these donations are recorded and emailed to you, and the donor is told a secure payment link will follow.
+- Every donation (name, email, phone, amount, method) is emailed to `VPS_RECIPIENT` in `forms/config.php`.
 
 ## Project structure
 ```
 index.html … contact.html   Pages (layout + default text)
-css/                        style.css (design tokens, components) · responsive.css
+css/                        style.css (design tokens, components) · responsive.css · roots.css (Preserve Our Roots + Donate)
 js/components.js            Header, navigation, footer, icon set (shared by all pages)
 js/script.js                Fills pages from content, menu, uploads preview, forms
+js/donate.js                Donation form: amounts, payment method, UPI payment step
 content/content.json        ALL editable text, images, events, contact details (source of truth)
 content/content.js          Generated from content.json — loaded by the pages. Do not edit by hand.
 assets/                     Built-in images, icons, videos
@@ -20,7 +26,7 @@ admin/                      Admin panel (see below)
 ```
 
 ## Admin panel — `/admin/`
-Edit every page's text, the events, FAQ, contact details, social links, photos (JPG, PNG, WebP, SVG) and videos (MP4, WebM). Changes go live as soon as you click **Save changes**.
+Edit every page's text, the events, FAQ, contact details, social links, menu labels, logo text, site colours, card icons and icon colours, donation amounts and UPI details, photos (JPG, PNG, WebP, SVG) and videos (MP4, WebM). Changes go live as soon as you click **Save changes**.
 
 **First-time setup (once per server)**
 1. Open `https://your-domain/admin/`. You are sent to the setup page.
@@ -31,7 +37,8 @@ Before going live, replace `setup_key` in `admin/config.php` with a new random v
 
 **How it works**
 - `admin/includes/schema.php` defines every editable field. The editor form and the server validation are both generated from it, so to make a new piece of text editable: add the field to the schema, the default value to `content/content.json`, and `data-bind="path.to.field"` to the element in the HTML.
-- Binding attributes used in the pages: `data-bind` (text), `data-bind-paras` (paragraphs), `data-bind-src` / `data-bind-alt` (images), `data-bind-list` + `<template>` (repeating items such as the FAQ).
+- Binding attributes used in the pages: `data-bind` (text), `data-bind-paras` (paragraphs), `data-bind-src` / `data-bind-alt` (images), `data-bind-list` + `<template>` (repeating items such as the FAQ), `data-bind-icon` (icon name), `data-bind-color` (icon colour).
+- Theme colours are applied by `js/components.js` as CSS variables, so `content/content.js` is loaded in `<head>` on every page.
 - Each save keeps a backup of the previous content in `admin/data/backups/` (last 20).
 
 **Security**

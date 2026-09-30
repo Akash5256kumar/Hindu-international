@@ -94,6 +94,22 @@ document.addEventListener('DOMContentLoaded', function () {
       if (v != null && String(v).trim()) setParagraphs(el, v);
     });
 
+    /* data-bind-icon="path" on a <use>: picks one of the built-in icons */
+    $$('[data-bind-icon]', root).forEach(function (el) {
+      var name = resolve(el.getAttribute('data-bind-icon'), item);
+      if (typeof name === 'string' && (window.vpsIconNames || []).indexOf(name) !== -1) {
+        el.setAttribute('href', '#i-' + name);
+      }
+    });
+
+    /* data-bind-color="path": sets the --c colour used by .r-icon / .r-badge */
+    $$('[data-bind-color]', root).forEach(function (el) {
+      var color = resolve(el.getAttribute('data-bind-color'), item);
+      if (typeof color === 'string' && /^#[0-9a-f]{3}([0-9a-f]{3})?$/i.test(color)) {
+        el.style.setProperty('--c', color);
+      }
+    });
+
     $$('[data-bind-src]', root).forEach(function (el) {
       var src = resolve(el.getAttribute('data-bind-src'), item);
       if (typeof src === 'string' && isLocalMedia(src) && el.getAttribute('src') !== src) {
@@ -166,7 +182,7 @@ document.addEventListener('DOMContentLoaded', function () {
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape' && header.classList.contains('is-open')) { setMenu(false); toggle.focus(); }
     });
-    window.addEventListener('resize', function () { if (window.innerWidth > 1024) setMenu(false); });
+    window.addEventListener('resize', function () { if (window.innerWidth > 1180) setMenu(false); });
   }
   function onScroll() { if (header) header.classList.toggle('is-scrolled', window.scrollY > 8); }
   window.addEventListener('scroll', onScroll, { passive: true });
