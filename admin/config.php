@@ -6,7 +6,7 @@
 return [
     // Needed ONCE, on /admin/setup.php, to create the admin login.
     // Keep it private. Setup is disabled automatically after the first login is created.
-    'setup_key' => 'Bhanu@123',
+    'setup_key' => 'Rupesh@123',
 
     // Log out after this many seconds without activity.
     'session_timeout' => 2 * 60 * 60,

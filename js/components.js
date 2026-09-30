@@ -62,6 +62,7 @@
     { key: 'home',    label: 'Home',              href: 'index.html' },
     { key: 'about',   label: 'About Us',          href: 'about.html' },
     { key: 'how',     label: 'How It Works',      href: 'how-it-works.html' },
+    { key: 'roots',   label: 'Preserve Our Roots', href: 'preserve-our-roots.html' },
     { key: 'event',   label: 'Event Information', href: 'event.html' },
     { key: 'booking', label: 'Service / Booking', href: 'booking.html' },
     { key: 'contact', label: 'Contact Us',        href: 'contact.html' }

@@ -1,0 +1,74 @@
+﻿/* Preserve Our Roots and donation pages */
+.roots-hero{position:relative;isolation:isolate;min-height:420px;display:flex;align-items:center;overflow:hidden;background:#f5f2e8}
+.roots-hero__image{position:absolute;inset:0;z-index:-1;background:url('../assets/images/roots-hero.jpg') center 48%/cover no-repeat}
+.roots-hero__image:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(255,251,239,.98) 0%,rgba(255,251,239,.92) 39%,rgba(255,251,239,.25) 74%,rgba(255,251,239,.04))}
+.roots-hero__content{padding-top:55px;padding-bottom:55px;max-width:1200px}
+.roots-hero h1{max-width:680px;color:#123e5a;font-size:clamp(2.25rem,3.6vw,3.35rem);margin:.18em 0 .25em}
+.roots-hero h2{max-width:590px;font:600 1.35rem var(--font-serif);color:#bd481f;margin-bottom:12px}
+.roots-hero p{max-width:570px;color:#375568}
+.roots-kicker{text-transform:uppercase;letter-spacing:.11em;font-size:.78rem;font-weight:700;color:#527386;margin-bottom:12px}
+.roots-kicker:before{content:"";display:inline-block;width:24px;height:2px;background:var(--saffron);margin:0 10px 4px 0}
+.roots-actions{display:flex;gap:12px;margin-top:22px}
+.roots-split{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:56px}
+.roots-story-grid{display:grid;grid-template-columns:1fr .82fr 1fr;align-items:center;gap:22px}
+.roots-story-grid h2{font-size:clamp(1.6rem,2.6vw,2.3rem);color:#123e5a}
+.roots-story-grid .roots-photo{height:300px}
+.roots-approach-card{height:100%;padding:24px 20px;border:1px solid var(--line);border-radius:var(--radius);background:#fbfaf5;box-shadow:var(--shadow-sm)}
+.roots-approach-card h3{color:#164a62;font-size:1.15rem}
+.roots-approach-card ul{margin:14px 0;color:#426273;font-size:.9rem}
+.roots-approach-card li{margin:5px 0;padding-left:22px;position:relative}
+.roots-approach-card li:before{content:"✓";position:absolute;left:0;color:#e85a0c;font-weight:700}
+.roots-split h2,.donate-impact h2{color:#123e5a}
+.roots-photo{width:100%;height:340px;object-fit:cover;border-radius:var(--radius)}
+.roots-section blockquote{padding:18px 22px;margin:24px 0 0;border-left:4px solid var(--saffron);border-radius:0 10px 10px 0;background:#fff0df;color:#a84320;font-family:var(--font-serif);font-weight:600}
+.roots-issue{padding:64px 0;background:linear-gradient(110deg,#eaf3f3,#f8f7ed)}
+.roots-split--center img{height:280px;object-fit:cover;border-radius:var(--radius)}
+.roots-cards{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:26px}
+.roots-card{padding:22px 18px;overflow:hidden}.roots-card h3{color:#164a62}.roots-card p,.impact-item p{font-size:.9rem;margin:0;color:var(--muted)}
+.roots-card>img{width:calc(100% + 36px);max-width:none;height:92px;object-fit:cover;margin:16px -18px -22px}
+.roots-icon{display:grid;place-items:center;flex:none;width:48px;height:48px;border-radius:50%;background:#fff0dd;color:#dd5a14;font-size:1.45rem;font-weight:700;margin-bottom:14px}
+.roots-final{background:#f4f2e8}
+.roots-final .roots-photo{height:300px}
+.roots-roots-grid{display:grid;grid-template-columns:1.05fr 1fr 1fr;align-items:center;gap:28px}
+.roots-roots-grid h2{color:#123e5a}
+.roots-vision{padding:24px;background:#fbfaf5;border:1px solid var(--line);border-radius:var(--radius)}
+.roots-vision h3{font-size:1.1rem;color:#164a62}
+.roots-contribution{background:#fbfaf5}
+.roots-contribution-grid{display:grid;grid-template-columns:.7fr 1fr 1.25fr;gap:24px;align-items:center}
+.roots-contribution-grid>img{width:100%;height:170px;object-fit:cover;border-radius:var(--radius)}
+.roots-contribution-grid h2{font-size:1.7rem;color:#123e5a}
+.roots-support-list{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.roots-support-list span{padding:12px 8px;text-align:center;border:1px solid var(--line);border-radius:9px;background:#fff;color:#315b70;font-size:.82rem;font-weight:600}
+.donate-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:start}
+.donate-impact>p{max-width:460px}
+.impact-item{display:flex;gap:16px;align-items:center;margin-top:24px}
+.impact-item .roots-icon{margin:0;width:54px;height:54px}
+.impact-item h2{font:600 1.1rem/1.3 var(--font-serif);color:#164a62;margin:0 0 3px}
+.donate-card{padding:30px;box-shadow:var(--shadow);border:1px solid var(--line)}
+.donate-card h2{font-size:2rem;color:#123e5a}
+.donate-amount-label{font-weight:700;font-size:.9rem;margin:20px 0 9px}
+.donate-fieldset{min-width:0;border:0;padding:0;margin:12px 0 18px}
+.donate-fieldset legend,.donate-method-label{font-size:.88rem;font-weight:700;margin-bottom:8px}
+.donate-amounts{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;padding:10px;background:#edf5f7;border-radius:10px}
+.donate-amounts label{position:relative;margin:0}
+.donate-amounts input{position:absolute;opacity:0;inset:0}
+.donate-amounts span{display:block;text-align:center;background:white;border:1px solid transparent;border-radius:7px;padding:8px 3px;font-weight:700;color:#34586c;font-size:.9rem;cursor:pointer}
+.donate-amounts input:checked+span{border-color:#e85a0c;background:#fff8ed;color:#b8430a}
+.donate-amounts input:focus-visible+span{outline:3px solid var(--gold);outline-offset:2px}
+.donate-custom{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:10px;font-size:.84rem;font-weight:600}
+.donate-custom span{display:flex;align-items:center;gap:8px;padding:7px 10px;background:#edf5f7;border-radius:7px}
+.donate-custom input{width:140px;border:0;padding:5px;background:#fff;border-radius:5px}
+.donate-methods{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin:8px 0 18px}
+.donate-methods label{display:flex;align-items:center;gap:5px;font-size:.83rem}
+.donate-card .form>label{display:block;margin:10px 0;font-size:.84rem;font-weight:600}
+.donate-card .form input:not([type=radio]),.donate-card .form textarea{width:100%;display:block;margin-top:5px;padding:10px 12px;border:1px solid var(--line-strong);border-radius:7px;background:#fff;color:var(--ink-2);font:400 .9rem var(--font-sans)}
+.donate-card .form textarea{resize:vertical}
+.donate-card .form .donate-fieldset label{font-weight:400}
+.donate-card .form-status{margin-top:10px}
+.donate-signoff{margin:30px 0 0;text-align:center;font-family:var(--font-serif);font-style:italic;font-weight:600;color:#164a62}
+.donate-note{text-align:center;color:var(--muted);font-size:.78rem;margin:14px 0 0}
+.roots-thanks{text-align:center;padding:80px 20px;background:linear-gradient(90deg,rgba(255,249,235,.91),rgba(255,249,235,.78)),url('../assets/images/temple-side.jpg') center/cover}
+.roots-thanks h2{color:#123e5a}.roots-thanks p{max-width:620px;margin:0 auto 16px}
+@media(max-width:1024px){.roots-cards{grid-template-columns:repeat(3,1fr)}.donate-grid{gap:28px}.roots-split{gap:34px}.roots-story-grid{grid-template-columns:1fr 1fr}.roots-approach-card{grid-column:1/-1}.roots-roots-grid{grid-template-columns:1fr 1fr}.roots-roots-grid .roots-photo{grid-row:span 2}.roots-contribution-grid{grid-template-columns:.8fr 1.2fr}.roots-support-list{grid-column:1/-1}}
+@media(max-width:768px){.roots-hero{min-height:0}.roots-hero__image:after{background:linear-gradient(90deg,rgba(255,251,239,.97),rgba(255,251,239,.85))}.roots-hero__content{padding-top:44px;padding-bottom:44px}.roots-split,.donate-grid,.roots-story-grid,.roots-roots-grid,.roots-contribution-grid{grid-template-columns:1fr;gap:28px}.roots-split .roots-photo,.roots-story-grid .roots-photo{height:260px}.roots-cards{grid-template-columns:1fr 1fr}.roots-approach-card{grid-column:auto}.roots-roots-grid .roots-photo{grid-row:auto}.roots-contribution-grid>img{height:220px}.roots-support-list{grid-column:auto}.donate-card{padding:22px}.roots-actions{flex-direction:column}.roots-actions .btn{width:100%}}
+@media(max-width:480px){.roots-cards{grid-template-columns:1fr}.donate-amounts{grid-template-columns:repeat(2,1fr)}}

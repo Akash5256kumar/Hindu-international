@@ -18,12 +18,23 @@ function respond(bool $ok, string $message = '', int $code = 200): void
     exit;
 }
 
+function form_utf8_substr(string $value, int $start, int $length): string
+{
+    if (function_exists('mb_substr')) {
+        return mb_substr($value, $start, $length, 'UTF-8');
+    }
+    $matched = preg_match_all('/./us', $value, $characters);
+    return $matched === false
+        ? substr($value, $start, $length)
+        : implode('', array_slice($characters[0], $start, $length));
+}
+
 /* Single-line text: strip control characters (prevents header injection). */
 function clean_line(string $key, int $max = 200): string
 {
     $v = isset($_POST[$key]) ? (string) $_POST[$key] : '';
     $v = preg_replace('/[\x00-\x1F\x7F]+/u', ' ', $v) ?? '';
-    return mb_substr(trim($v), 0, $max);
+    return form_utf8_substr(trim($v), 0, $max);
 }
 
 /* Multi-line text: keep line breaks, drop other control characters. */
@@ -31,7 +42,7 @@ function clean_text(string $key, int $max = 3000): string
 {
     $v = isset($_POST[$key]) ? (string) $_POST[$key] : '';
     $v = preg_replace('/[\x00-\x09\x0B\x0C\x0E-\x1F\x7F]+/u', '', $v) ?? '';
-    return mb_substr(trim($v), 0, $max);
+    return form_utf8_substr(trim($v), 0, $max);
 }
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
@@ -56,6 +67,9 @@ $email   = clean_line('email', 160);
 $phone   = clean_line('phone', 40);
 $event   = clean_line('event', 200);
 $message = clean_text('message');
+$donationAmount = clean_line('other_amount', 20) ?: clean_line('donation_amount', 20);
+$paymentMethod = clean_line('payment_method', 30);
+$isDonation = clean_line('donation_interest', 10) === 'yes';
 
 if ($name === '' || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
     respond(false, 'Please enter your name and a valid email address.', 422);
@@ -78,8 +92,9 @@ if ($type === 'request') {
     if ($file['size'] > VPS_MAX_BYTES) {
         respond(false, 'The photograph must be smaller than 5 MB.', 422);
     }
-    $mime = (new finfo(FILEINFO_MIME_TYPE))->file($file['tmp_name']) ?: '';
-    if (!isset(VPS_ALLOWED_TYPES[$mime]) || @getimagesize($file['tmp_name']) === false) {
+    $image = @getimagesize($file['tmp_name']);
+    $mime = is_array($image) ? ([IMAGETYPE_JPEG => 'image/jpeg', IMAGETYPE_PNG => 'image/png'][$image[2]] ?? '') : '';
+    if (!isset(VPS_ALLOWED_TYPES[$mime])) {
         respond(false, 'Please upload a JPG or PNG image.', 422);
     }
     $safeName = preg_replace('/[^A-Za-z0-9]+/', '-', $name) ?: 'devotee';
@@ -93,7 +108,7 @@ if ($type === 'request') {
 /* ---------- Compose email ---------- */
 $subject = $type === 'request'
     ? 'New Virtual Punya Snan request — ' . $name
-    : 'New contact message — ' . $name;
+    : ($isDonation ? 'New donation inquiry — ' . $name : 'New contact message — ' . $name);
 
 $lines = [
     $type === 'request' ? 'A new service request was submitted on the website.' : 'A new message was sent from the contact form.',
@@ -101,6 +116,13 @@ $lines = [
     'Name:    ' . $name,
     'Email:   ' . $email,
 ];
+if ($type === 'contact' && $phone !== '') {
+    $lines[] = 'Phone:   ' . $phone;
+}
+if ($isDonation) {
+    $lines[] = 'Donation amount: ' . ($donationAmount !== '' ? $donationAmount : '(not selected)');
+    $lines[] = 'Preferred payment method: ' . ($paymentMethod !== '' ? $paymentMethod : '(not selected)');
+}
 if ($type === 'request') {
     $lines[] = 'Phone / WhatsApp: ' . $phone;
     $lines[] = 'Event:   ' . ($event !== '' ? $event : '(not selected)');

@@ -172,7 +172,7 @@ final class ContentValidator
                 $v = self::text($value, $multiline, $max * 2);
                 if (!empty($f['required']) && $v === '') {
                     $this->errors[$path] = "$label is required.";
-                } elseif (mb_strlen($v) > $max) {
+                } elseif (utf8_length($v) > $max) {
                     $this->errors[$path] = "$label is too long (max $max characters).";
                 }
                 return $v;
@@ -219,7 +219,7 @@ final class ContentValidator
         $v = str_replace(["\r\n", "\r"], "\n", (string) $value);
         $v = preg_replace($multiline ? '/[\x00-\x09\x0B-\x1F\x7F]/u' : '/[\x00-\x1F\x7F]/u', $multiline ? '' : ' ', $v) ?? '';
         $v = trim($v);
-        return mb_substr($v, 0, $hardLimit);
+        return utf8_substr($v, 0, $hardLimit);
     }
 
     private static function isHttpUrl(string $v): bool
