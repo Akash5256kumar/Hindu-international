@@ -133,7 +133,7 @@ final class Auth
         if (!preg_match('/^[A-Za-z0-9._@-]{3,40}$/', $username)) {
             return 'Username: 3–40 characters, letters, numbers and . _ @ - only.';
         }
-        if (mb_strlen($password) < self::MIN_PASSWORD_LENGTH) {
+        if (utf8_length($password) < self::MIN_PASSWORD_LENGTH) {
             return 'Password must be at least ' . self::MIN_PASSWORD_LENGTH . ' characters.';
         }
         if ($password !== $confirm) {

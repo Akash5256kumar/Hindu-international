@@ -101,8 +101,10 @@ if ($type === 'request') {
     if ($file['size'] > VPS_MAX_BYTES) {
         respond(false, 'The photograph must be smaller than 5 MB.', 422);
     }
-    $mime = (new finfo(FILEINFO_MIME_TYPE))->file($file['tmp_name']) ?: '';
-    if (!isset(VPS_ALLOWED_TYPES[$mime]) || @getimagesize($file['tmp_name']) === false) {
+    // Detect the type from the image itself (works even without PHP's fileinfo extension)
+    $image = @getimagesize($file['tmp_name']);
+    $mime = is_array($image) ? ([IMAGETYPE_JPEG => 'image/jpeg', IMAGETYPE_PNG => 'image/png'][$image[2]] ?? '') : '';
+    if (!isset(VPS_ALLOWED_TYPES[$mime])) {
         respond(false, 'Please upload a JPG or PNG image.', 422);
     }
     $safeName = preg_replace('/[^A-Za-z0-9]+/', '-', $name) ?: 'devotee';

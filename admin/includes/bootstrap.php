@@ -52,6 +52,27 @@ function e(?string $value): string
     return htmlspecialchars((string) $value, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
 }
 
+/** UTF-8 helpers for PHP installations without the optional mbstring extension. */
+function utf8_length(string $value): int
+{
+    if (function_exists('mb_strlen')) {
+        return mb_strlen($value, 'UTF-8');
+    }
+    $count = preg_match_all('/./us', $value);
+    return $count === false ? strlen($value) : $count;
+}
+
+function utf8_substr(string $value, int $start, int $length): string
+{
+    if (function_exists('mb_substr')) {
+        return mb_substr($value, $start, $length, 'UTF-8');
+    }
+    $matched = preg_match_all('/./us', $value, $characters);
+    return $matched === false
+        ? substr($value, $start, $length)
+        : implode('', array_slice($characters[0], $start, $length));
+}
+
 function redirect(string $to): void
 {
     header('Location: ' . $to, true, 303);

@@ -54,7 +54,7 @@ final class Uploads
         if (!isset($allowed[$ext])) {
             throw new UploadException('Allowed file types: ' . strtoupper(implode(', ', array_keys($allowed))) . '.');
         }
-        $mime = (string) (new finfo(FILEINFO_MIME_TYPE))->file($file['tmp_name']);
+        $mime = self::detectMime((string) $file['tmp_name'], $ext);
         if (!in_array($mime, $allowed[$ext], true)) {
             throw new UploadException('This file does not look like a real .' . $ext . ' file.');
         }
@@ -106,6 +106,40 @@ final class Uploads
     {
         $slug = strtolower(trim((string) preg_replace('/[^A-Za-z0-9]+/', '-', $name), '-'));
         return substr($slug !== '' ? $slug : 'file', 0, 40);
+    }
+
+    /** Detect supported formats even when PHP's optional fileinfo extension is absent. */
+    private static function detectMime(string $path, string $ext): string
+    {
+        if (class_exists('finfo')) {
+            return (string) (new finfo(FILEINFO_MIME_TYPE))->file($path);
+        }
+
+        if (in_array($ext, ['jpg', 'jpeg', 'png', 'webp'], true)) {
+            $image = @getimagesize($path);
+            $mimes = [IMAGETYPE_JPEG => 'image/jpeg', IMAGETYPE_PNG => 'image/png'];
+            if (defined('IMAGETYPE_WEBP')) {
+                $mimes[IMAGETYPE_WEBP] = 'image/webp';
+            }
+            return is_array($image) ? ($mimes[$image[2]] ?? '') : '';
+        }
+
+        if ($ext === 'svg') {
+            $head = file_get_contents($path, false, null, 0, 4096);
+            return is_string($head) && preg_match('/<svg\b/i', $head) ? 'image/svg+xml' : '';
+        }
+
+        $head = file_get_contents($path, false, null, 0, 12);
+        if (!is_string($head)) {
+            return '';
+        }
+        if ($ext === 'mp4' && strlen($head) >= 8 && substr($head, 4, 4) === 'ftyp') {
+            return 'video/mp4';
+        }
+        if ($ext === 'webm' && substr($head, 0, 4) === "\x1A\x45\xDF\xA3") {
+            return 'video/webm';
+        }
+        return '';
     }
 
     private static function uploadErrorMessage(int $code, string $kind): string
