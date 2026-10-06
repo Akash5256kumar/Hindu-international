@@ -270,7 +270,8 @@
       case 'toggle':
         control = h('label', { class: 'switch' }, [
           h('input', {
-            type: 'checkbox', id: id, checked: !!getPath(state.content, path),
+            type: 'checkbox', id: id,
+            checked: getPath(state.content, path) === undefined ? !!field.default : !!getPath(state.content, path),
             onchange: function (e) { setPath(state.content, path, e.target.checked); changed(); }
           }),
           h('span', { class: 'switch__track', 'aria-hidden': 'true' }),
@@ -304,9 +305,9 @@
       rows: multiline ? (field.rows || 3) : null,
       type: multiline ? null : ({ url: 'url', embed: 'url', digits: 'text', phone: 'tel' }[field.type] || 'text'),
       inputmode: field.type === 'digits' ? 'numeric' : null,
-      placeholder: field.type === 'url' ? 'https://' : (field.type === 'embed' ? 'https://www.youtube.com/embed/…' : null)
+      placeholder: { url: 'https://', embed: 'https://www.youtube.com/embed/…', link: 'e.g. donate.html, #section or https://…' }[field.type] || null
     });
-    if (field.type === 'url' || field.type === 'embed') input.spellcheck = false;
+    if (field.type === 'url' || field.type === 'embed' || field.type === 'link') input.spellcheck = false;
     input.value = value == null ? '' : String(value);
 
     var counter = field.max ? h('span', { class: 'field__count' }) : null;
@@ -352,6 +353,11 @@
 
   function renderSelect(field, path, id) {
     var current = getPath(state.content, path);
+    var keys = Object.keys(field.options || {});
+    if (keys.length && keys.indexOf(current) === -1) {     // new item / missing value: start on the first option
+      current = keys[0];
+      setPath(state.content, path, current);
+    }
     var select = h('select', { class: 'input', id: id });
     Object.keys(field.options || {}).forEach(function (key) {
       select.appendChild(h('option', { value: key, text: field.options[key], selected: key === current }));
@@ -444,8 +450,28 @@
 
     function blank() {
       var item = {};
-      field.fields.forEach(function (f) { item[f.key] = f.type === 'toggle' ? false : ''; });
+      field.fields.forEach(function (f) {
+        item[f.key] = f.type === 'toggle' ? !!f.default
+          : (f.type === 'select' ? Object.keys(f.options || {})[0] || '' : '');
+      });
       return item;
+    }
+
+    /** Summary title of an item: the title field (option name for a select), "hidden" when switched off */
+    function itemTitle(item) {
+      var tf = field.fields.filter(function (f) { return f.key === field.titleField; })[0];
+      var v = item[field.titleField];
+      var title = tf && tf.type === 'select' && tf.options ? (tf.options[v] || '') : (v ? String(v).split('\n')[0] : '');
+      if (item.block === 'custom' && item.title) title += ' — ' + String(item.title).split('\n')[0];
+      return title + (item.show === false ? '  (hidden)' : '');
+    }
+
+    /** Sub-fields with showIf: [siblingKey, value] are only shown when the sibling matches */
+    function applyShowIf(body, item) {
+      Array.prototype.forEach.call(body.querySelectorAll('[data-show-if]'), function (row) {
+        var rule = row.getAttribute('data-show-if').split('=');
+        row.hidden = String(item[rule[0]]) !== rule[1];
+      });
     }
 
     function draw(openIndex) {
@@ -466,9 +492,14 @@
       arr.forEach(function (item, i) {
         var itemPath = joinPath(path, i);
         var hasError = Object.keys(state.errors).some(function (p) { return p.indexOf(itemPath + '.') === 0; });
-        var title = (field.titleField && item[field.titleField]) ? String(item[field.titleField]).split('\n')[0] : '';
+        var title = itemTitle(item);
         var body = h('div', { class: 'list__body' });
-        field.fields.forEach(function (sub) { body.appendChild(renderField(sub, joinPath(itemPath, sub.key))); });
+        field.fields.forEach(function (sub) {
+          var row = renderField(sub, joinPath(itemPath, sub.key));
+          if (sub.showIf) row.setAttribute('data-show-if', sub.showIf[0] + '=' + sub.showIf[1]);
+          body.appendChild(row);
+        });
+        applyShowIf(body, item);
 
         var tools = fixed ? null : h('div', { class: 'list__tools' }, [
           h('button', { type: 'button', class: 'icon-btn', title: 'Move up', 'aria-label': 'Move up', text: '↑', disabled: i === 0,
@@ -479,10 +510,19 @@
             onclick: function (e) { e.preventDefault(); remove(i, title); } })
         ]);
 
-        wrap.appendChild(h('details', { class: 'list__item' + (hasError ? ' has-error' : ''), open: fixed || hasError || i === openIndex || arr.length === 1 }, [
+        var titleEl = h('span', { class: 'list__title', text: title });
+        var details;
+        var refresh = function () {
+          applyShowIf(body, item);
+          titleEl.textContent = itemTitle(item);
+          details.classList.toggle('is-off', item.show === false);
+        };
+        body.addEventListener('change', refresh);
+        body.addEventListener('input', refresh);
+        wrap.appendChild(details = h('details', { class: 'list__item' + (hasError ? ' has-error' : '') + (item.show === false ? ' is-off' : ''), open: fixed || hasError || i === openIndex || arr.length === 1 }, [
           h('summary', { class: 'list__summary' }, [
             h('span', { class: 'list__label', text: field.itemLabel + ' ' + (i + 1) }),
-            h('span', { class: 'list__title', text: title }),
+            titleEl,
             tools
           ]),
           body

@@ -1,6 +1,6 @@
 /* =====================================================================
    VIRTUAL PUNYA SNAN — RESPONSIVE STYLES
-   ≤1280 compact nav · ≤1180 hamburger menu · ≤1024 tablet · ≤768 mobile · ≤480 small phones
+   ≤1280 compact nav · ≤1240 hamburger menu · ≤1024 tablet · ≤768 mobile · ≤480 small phones
    ===================================================================== */
 
 /* ---------- Large desktop: 7 menu items + button ---------- */
@@ -17,14 +17,22 @@
   .nav__link { font-size: .84rem; }
 }
 
-/* ---------- Hamburger menu (7 nav items no longer fit on one line) ---------- */
-@media (max-width: 1180px) {
+/* Larger logo: tighten the menu a little more on small laptops */
+@media (max-width: 1320px) {
+  .header__inner { gap: 16px; }
+  .nav { gap: 18px; }
+  .nav__list { gap: 15px; }
+  .nav__cta { padding: 0 16px; }
+}
+
+/* ---------- Hamburger menu (logo + 7 nav items + button no longer fit on one line) ---------- */
+@media (max-width: 1240px) {
   .nav-toggle { display: grid; }
   .nav {
     position: fixed; left: 0; right: 0; top: var(--header-h); bottom: 0;
     margin: 0; padding: 20px var(--gutter) 32px;
     flex-direction: column; align-items: stretch; gap: 20px;
-    background: var(--white);
+    background: #FEFDF8;
     overflow-y: auto;
     visibility: hidden; opacity: 0; transform: translateY(-8px);
     transition: opacity .25s, transform .25s var(--ease), visibility 0s .25s;
@@ -46,7 +54,7 @@
 
 /* ---------- Tablet ---------- */
 @media (max-width: 1024px) {
-  :root { --header-h: 70px; --section-y: 76px; }
+  :root { --header-h: 84px; --section-y: 76px; }
 
   .split { gap: 44px; }
 
@@ -83,11 +91,11 @@
 
 /* ---------- Mobile ---------- */
 @media (max-width: 768px) {
-  :root { --gutter: 16px; --section-y: 60px; --header-h: 66px; }
+  :root { --gutter: 16px; --section-y: 60px; --header-h: 72px; }
 
   body { font-size: 16px; }
-  .logo__mark .icon { width: 36px; height: 36px; }
-  .logo__text { font-size: 1.15rem; }
+  .logo, .logo--md, .logo--lg, .logo--xl { --logo-mark: 42px; --logo-text: 1.24rem; --logo-img: 58px; gap: 9px; }
+  .logo--xl { --logo-mark: 46px; --logo-text: 1.34rem; --logo-img: 62px; }
   .section-head { margin-bottom: 32px; }
   .ornament { width: 240px; opacity: .16; }
 
@@ -185,6 +193,7 @@
 
 /* ---------- Small phones ---------- */
 @media (max-width: 480px) {
+  .logo, .logo--md, .logo--lg, .logo--xl { --logo-mark: 38px; --logo-text: 1.12rem; --logo-img: 52px; }
   .values { grid-template-columns: 1fr 1fr; }
   .provide__grid { grid-template-columns: 1fr 1fr; }
   .trust span { font-size: .7rem; }

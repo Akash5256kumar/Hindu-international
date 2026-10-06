@@ -121,7 +121,21 @@ final class ContentValidator
                 return $this->listField($f, $value, $path);
 
             case 'toggle':
-                return (bool) $value;
+                return $value === null ? (bool) ($f['default'] ?? false) : (bool) $value;
+
+            case 'link':
+                $v = self::text($value, false, 500);
+                if ($v === '') {
+                    if (!empty($f['required'])) {
+                        $this->errors[$path] = "$label is required.";
+                    }
+                    return '';
+                }
+                if (!self::isSiteLink($v)) {
+                    $this->errors[$path] = "$label: use a page of this site (e.g. donate.html or donate.html#donate-form), "
+                        . 'a section (#name), or a full link starting with https://';
+                }
+                return $v;
 
             case 'color':
                 $v = self::text($value, false, 7);
@@ -242,6 +256,15 @@ final class ContentValidator
     private static function isHttpUrl(string $v): bool
     {
         return (bool) filter_var($v, FILTER_VALIDATE_URL) && preg_match('#^https?://#i', $v);
+    }
+
+    /** Same rule as safeLink() in js/components.js */
+    private static function isSiteLink(string $v): bool
+    {
+        if (preg_match('#^https?://#i', $v)) {
+            return self::isHttpUrl($v) && !preg_match('/[\s"\'<>]/', $v);
+        }
+        return (bool) preg_match('/^(mailto:[^\s"\'<>]+|tel:\+?[\d\s()-]{3,20}|#[\w-]*|[\w-]+\.html(#[\w-]*)?)$/i', $v);
     }
 
     private static function get(array $data, string $path)

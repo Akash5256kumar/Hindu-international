@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
   var EVENTS = Array.isArray(C.events) ? C.events : [];
   var FORM_ENDPOINT = 'forms/submit.php';
   var icon = window.vpsIcon;
+  var safeLink = window.vpsSafeLink || function (v, f) { return f || '#'; };
 
   /* ---------- Helpers ---------- */
   function $(sel, ctx) { return (ctx || document).querySelector(sel); }
@@ -59,12 +60,50 @@ document.addEventListener('DOMContentLoaded', function () {
       (CONTACT.whatsappMessage ? '?text=' + encodeURIComponent(CONTACT.whatsappMessage) : '');
   }
 
+  /* ---------- 0. Page layout: section order + on/off ----------
+     <main data-layout="faith.layout"> holds one element per section, each marked
+     data-block="name". The layout list from the admin panel decides which sections
+     are shown and in what order; "custom" entries are built from
+     <template data-block-template="custom"> with the entry's own fields.
+     [data-block-num] inside a shown section gets its position: 01, 02, …           */
+  function applyLayout(main) {
+    var layout = resolve(main.getAttribute('data-layout'));
+    if (!Array.isArray(layout) || !layout.length) return;
+    var blocks = {};
+    $$('[data-block]', main).forEach(function (el) {
+      if (el.parentNode !== main) return;
+      blocks[el.getAttribute('data-block')] = el;
+      el.remove();
+    });
+    var custom = $('template[data-block-template="custom"]', main);
+    var used = {};
+    layout.forEach(function (entry) {
+      if (!entry || entry.show === false) return;
+      var el;
+      if (entry.block === 'custom' && custom) {
+        el = custom.content.firstElementChild.cloneNode(true);
+        el.classList.add(entry.style === 'tinted' ? 'is-tinted' : 'is-plain');
+        if (entry.imageSide === 'left') el.classList.add('is-image-left');
+        bindScope(el, entry);
+      } else if (blocks[entry.block]) {
+        el = used[entry.block] ? blocks[entry.block].cloneNode(true) : blocks[entry.block];
+        if (used[entry.block]) $$('[id]', el).concat([el]).forEach(function (n) { n.removeAttribute('id'); });
+        used[entry.block] = true;
+      }
+      if (el) main.appendChild(el);
+    });
+  }
+  $$('[data-layout]').forEach(applyLayout);
+
   /* ---------- 1. Fill the page from content ----------
      data-bind="path"          text (line breaks kept)
      data-bind-optional        hide the element when the value is empty
      data-bind-paras="path"    paragraphs
      data-bind-src / -alt      image source + alt text
-     data-bind-list="path"     repeat the <template> inside for each item ("@field")
+     data-bind-href="path"     link (page.html, #part, https://, mailto:, tel:)
+     data-show-if="path"       hide the element when the value is empty / off
+     data-bind-list="path"     repeat the <template> inside for each item ("@field");
+                               items with show: false are skipped
      data-link="tel|mailto|whatsapp"                                          */
   function bindScope(root, item) {
     $$('[data-bind-list]', root).forEach(function (list) {
@@ -73,6 +112,7 @@ document.addEventListener('DOMContentLoaded', function () {
       if (!tpl || !Array.isArray(items) || !items.length) return;
       Array.prototype.slice.call(list.children).forEach(function (child) { if (child !== tpl) child.remove(); });
       items.forEach(function (entry) {
+        if (entry && entry.show === false) return;
         var frag = tpl.content.cloneNode(true);
         bindScope(frag, entry);
         list.appendChild(frag);
@@ -87,6 +127,21 @@ document.addEventListener('DOMContentLoaded', function () {
         if (el.hidden) return;
       }
       setText(el, v);
+    });
+
+    $$('[data-show-if]', root).forEach(function (el) {
+      var v = resolve(el.getAttribute('data-show-if'), item);
+      if (v === undefined) return;          // not in the content yet: keep the page default
+      el.hidden = v === false || v === null || !String(v).trim();
+    });
+
+    $$('[data-bind-href]', root).forEach(function (el) {
+      var v = resolve(el.getAttribute('data-bind-href'), item);
+      if (v == null || !String(v).trim()) return;
+      var href = safeLink(v, el.getAttribute('href'));
+      el.setAttribute('href', href);
+      if (/^https?:/i.test(href)) { el.target = '_blank'; el.rel = 'noopener'; }
+      else { el.removeAttribute('target'); el.removeAttribute('rel'); }
     });
 
     $$('[data-bind-paras]', root).forEach(function (el) {
@@ -123,6 +178,22 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
   bindScope(document);
+
+  /* Section numbers follow the shown order (hidden labels are skipped) */
+  $$('[data-layout]').forEach(function (main) {
+    $$('[data-block-num]', main)
+      .filter(function (el) { return !el.closest('[hidden]'); })
+      .forEach(function (el, i) { el.textContent = (i < 9 ? '0' : '') + (i + 1); });
+  });
+
+  /* Browser tab title + description: <body data-page-meta="faith.page"> */
+  var metaPath = document.body.getAttribute('data-page-meta');
+  var meta = metaPath ? resolve(metaPath) : null;
+  if (meta && meta.title) document.title = meta.title;
+  if (meta && meta.description) {
+    var desc = $('meta[name="description"]');
+    if (desc) desc.setAttribute('content', meta.description);
+  }
 
   $$('[data-link]').forEach(function (el) {
     var type = el.getAttribute('data-link');
@@ -181,7 +252,7 @@ document.addEventListener('DOMContentLoaded', function () {
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape' && header.classList.contains('is-open')) { setMenu(false); toggle.focus(); }
     });
-    window.addEventListener('resize', function () { if (window.innerWidth > 1180) setMenu(false); });
+    window.addEventListener('resize', function () { if (window.innerWidth > 1240) setMenu(false); });
   }
   function onScroll() { if (header) header.classList.toggle('is-scrolled', window.scrollY > 8); }
   window.addEventListener('scroll', onScroll, { passive: true });

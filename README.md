@@ -3,7 +3,7 @@
 HTML5 / CSS3 / JavaScript website with a small PHP admin panel for editing content and images. Built for Hostinger (PHP 8.0+).
 
 ## Pages
-`index.html` · `about.html` · `how-it-works.html` (with FAQ) · `preserve-our-roots.html` · `donate.html` · `event.html` · `booking.html` · `contact.html` · `privacy.html` · `terms.html`
+`index.html` · `about.html` · `how-it-works.html` (with FAQ) · `protect-our-faith.html` · `donate.html` · `event.html` · `booking.html` · `contact.html` · `privacy.html` · `terms.html`
 
 ## Donations (`donate.html`)
 - **UPI works directly:** set the UPI ID, payee name and upload the UPI QR code in *Admin → Donate → UPI payment details*. Donors see the QR / UPI ID, and on phones a “Pay with a UPI app” button with the amount filled in.
@@ -13,7 +13,7 @@ HTML5 / CSS3 / JavaScript website with a small PHP admin panel for editing conte
 ## Project structure
 ```
 index.html … contact.html   Pages (layout + default text)
-css/                        style.css (design tokens, components) · responsive.css · roots.css (Preserve Our Roots + Donate)
+css/                        style.css (design tokens, components) · responsive.css · faith.css (Protect Our Faith) · roots.css (Donate)
 js/components.js            Header, navigation, footer, icon set (shared by all pages)
 js/script.js                Fills pages from content, menu, uploads preview, forms
 js/donate.js                Donation form: amounts, payment method, UPI payment step
@@ -26,7 +26,13 @@ admin/                      Admin panel (see below)
 ```
 
 ## Admin panel — `/admin/`
-Edit every page's text, the events, FAQ, contact details, social links, menu labels, logo text, site colours, card icons and icon colours, donation amounts and UPI details, photos (JPG, PNG, WebP, SVG) and videos (MP4, WebM). Changes go live as soon as you click **Save changes**.
+Edit every page's text, the events, FAQ, contact details, social links, site colours, card icons and icon colours, donation amounts and UPI details, photos (JPG, PNG, WebP, SVG) and videos (MP4, WebM). Changes go live as soon as you click **Save changes**.
+
+Also editable without a developer:
+- **Header, footer & colours:** logo text, tagline and size, an optional logo image (plus a light version for the footer), menu items (label, link, order, show/hide, add/remove), the header button text and link, footer headings, footer links and the copyright line.
+- **Button text and links** on the Home and Protect Our Faith pages. A link can be a page (`donate.html`, `donate.html#donate-form`), a section (`#anti-conversion`), a full `https://` link, `mailto:` or `tel:`. An empty button text hides the button.
+- **Page layout** (Home, Protect Our Faith): show or hide each section and change the order. On Protect Our Faith you can also add **custom sections** (label, heading, text, button, photo); the section numbers 01, 02 … follow the order automatically.
+- **Cards and list items** can be added, removed, reordered and switched off individually.
 
 **First-time setup (once per server)**
 1. Open `https://your-domain/admin/`. You are sent to the setup page.
@@ -37,7 +43,8 @@ Before going live, replace `setup_key` in `admin/config.php` with a new random v
 
 **How it works**
 - `admin/includes/schema.php` defines every editable field. The editor form and the server validation are both generated from it, so to make a new piece of text editable: add the field to the schema, the default value to `content/content.json`, and `data-bind="path.to.field"` to the element in the HTML.
-- Binding attributes used in the pages: `data-bind` (text), `data-bind-paras` (paragraphs), `data-bind-src` / `data-bind-alt` (images), `data-bind-list` + `<template>` (repeating items such as the FAQ), `data-bind-icon` (icon name), `data-bind-color` (icon colour).
+- Binding attributes used in the pages: `data-bind` (text), `data-bind-paras` (paragraphs), `data-bind-src` / `data-bind-alt` (images), `data-bind-href` (button links, validated), `data-show-if` (hide when the value is empty / off), `data-bind-list` + `<template>` (repeating items such as the FAQ; items with `show: false` are skipped), `data-bind-icon` (icon name), `data-bind-color` (icon colour).
+- Section layout: `<main data-layout="faith.layout">` holds one element per section with `data-block="name"`; the `layout` list in the content decides which are shown and their order. `[data-block-num]` is filled with the section's position. To add a new kind of section to a page: add the markup with a new `data-block` name, add the name to that page's `$layout([...])` options in `schema.php`, and add its fields as a new group.
 - Theme colours are applied by `js/components.js` as CSS variables, so `content/content.js` is loaded in `<head>` on every page.
 - Each save keeps a backup of the previous content in `admin/data/backups/` (last 20).
 
@@ -71,6 +78,8 @@ php -S 127.0.0.1:8000
 Then open http://127.0.0.1:8000 (site) and http://127.0.0.1:8000/admin/ (admin). The PHP built-in server ignores `.htaccess`, so the folder protections only apply on Hostinger/Apache. Forms cannot send email locally.
 
 ## Before launch
+- The content/ folder holds the live content. When you upload this update, upload `content/content.json` and `content/content.js` **once**: they contain the new Protect Our Faith page, menu and footer settings, and remove the old Preserve Our Roots content. Make any changes made on the live admin since the last sync again afterwards, or merge them in first. After that, edit content only in the admin.
+- `preserve-our-roots.html` now redirects to `protect-our-faith.html` (`.htaccess` 301), so old links keep working.
 - Photos are cut from the design mockup and upscaled, so they are soft on large screens. Upload the original high-resolution images through the admin panel.
 - Fill in every `[placeholder]` (event, contact details, FAQ answers) through the admin panel.
 - Finalise `privacy.html` and `terms.html`, then remove their `noindex` tag.

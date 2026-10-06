@@ -174,6 +174,7 @@ select.input { cursor: pointer; }
 .list__item { border: 1px solid var(--line); border-radius: 10px; background: #FFFCF8; }
 .list__item + .list__item { margin-top: 10px; }
 .list__item.has-error { border-color: var(--danger); }
+.list__item.is-off > .list__summary .list__title { color: #9A928A; font-style: italic; }
 .list__summary { display: flex; align-items: center; gap: 10px; padding: 10px 12px; cursor: pointer; list-style: none; }
 .list__summary::-webkit-details-marker { display: none; }
 .list__summary::before { content: '▸'; color: var(--muted); transition: transform .15s; }

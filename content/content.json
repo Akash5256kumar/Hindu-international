@@ -4,6 +4,10 @@
             "eyebrow": "When You Cannot Be There,\nYour Devotion Still Reaches",
             "title": "Virtual\nPunya Snan",
             "text": "Experience the divine blessings of a sacred event from anywhere in the world. We perform the holy ritual on your behalf using your photograph and share the recorded video with you.",
+            "primaryText": "Request Service",
+            "primaryLink": "booking.html",
+            "secondaryText": "Watch How It Works",
+            "secondaryLink": "how-it-works.html",
             "image": "uploads/2026/09/whatsapp-image-2026-09-29-at-3-02-29-pm-9eb9be1f.jpg",
             "imageAlt": "Devotee standing in the holy river at sunrise, pouring water as an offering, with temples on the ghats behind"
         },
@@ -25,6 +29,8 @@
             "label": "Our Service",
             "title": "Your Devotion,\nOur Responsibility",
             "text": "For devotees who cannot travel to the sacred event, we perform the Punya Snan ritual on your behalf using your photograph and share the recorded video with you, so you can still be a part of this divine moment.",
+            "buttonText": "Learn More",
+            "buttonLink": "about.html",
             "image": "uploads/2026/09/whatsapp-image-2026-09-29-at-3-13-10-pm-52afc588.jpg",
             "imageAlt": "Devotee's hands holding a leaf bowl of flower offerings above the holy river"
         },
@@ -36,171 +42,297 @@
         "event": {
             "label": "Event Information",
             "title": "Upcoming Sacred Event",
-            "subtitle": "Be a part of the divine celebration, even from afar."
+            "subtitle": "Be a part of the divine celebration, even from afar.",
+            "buttonText": "View Event Details",
+            "buttonLink": "event.html"
         },
         "cta": {
             "quote": "“Distance cannot limit devotion.”",
             "text": "Let your faith reach the holy waters.",
             "button": "Request Virtual Punya Snan",
+            "buttonLink": "booking.html",
             "image": "uploads/2026/09/whatsapp-image-2026-09-29-at-3-19-59-pm-cb37365b.jpg"
-        }
+        },
+        "layout": [
+            {
+                "block": "hero",
+                "show": true
+            },
+            {
+                "block": "service",
+                "show": true
+            },
+            {
+                "block": "how",
+                "show": true
+            },
+            {
+                "block": "event",
+                "show": true
+            },
+            {
+                "block": "cta",
+                "show": true
+            }
+        ]
     },
-    "roots": {
+    "faith": {
+        "layout": [
+            {
+                "block": "hero",
+                "show": true,
+                "label": "",
+                "title": "",
+                "text": "",
+                "buttonText": "",
+                "buttonLink": "",
+                "image": "",
+                "imageAlt": "",
+                "imageSide": "right",
+                "style": "plain"
+            },
+            {
+                "block": "heritage",
+                "show": true,
+                "label": "",
+                "title": "",
+                "text": "",
+                "buttonText": "",
+                "buttonLink": "",
+                "image": "",
+                "imageAlt": "",
+                "imageSide": "right",
+                "style": "plain"
+            },
+            {
+                "block": "issue",
+                "show": true,
+                "label": "",
+                "title": "",
+                "text": "",
+                "buttonText": "",
+                "buttonLink": "",
+                "image": "",
+                "imageAlt": "",
+                "imageSide": "right",
+                "style": "plain"
+            },
+            {
+                "block": "vulnerability",
+                "show": true,
+                "label": "",
+                "title": "",
+                "text": "",
+                "buttonText": "",
+                "buttonLink": "",
+                "image": "",
+                "imageAlt": "",
+                "imageSide": "right",
+                "style": "plain"
+            },
+            {
+                "block": "response",
+                "show": true,
+                "label": "",
+                "title": "",
+                "text": "",
+                "buttonText": "",
+                "buttonLink": "",
+                "image": "",
+                "imageAlt": "",
+                "imageSide": "right",
+                "style": "plain"
+            },
+            {
+                "block": "support",
+                "show": true,
+                "label": "",
+                "title": "",
+                "text": "",
+                "buttonText": "",
+                "buttonLink": "",
+                "image": "",
+                "imageAlt": "",
+                "imageSide": "right",
+                "style": "plain"
+            },
+            {
+                "block": "respect",
+                "show": true,
+                "label": "",
+                "title": "",
+                "text": "",
+                "buttonText": "",
+                "buttonLink": "",
+                "image": "",
+                "imageAlt": "",
+                "imageSide": "right",
+                "style": "plain"
+            },
+            {
+                "block": "cta",
+                "show": true,
+                "label": "",
+                "title": "",
+                "text": "",
+                "buttonText": "",
+                "buttonLink": "",
+                "image": "",
+                "imageAlt": "",
+                "imageSide": "right",
+                "style": "plain"
+            }
+        ],
+        "page": {
+            "title": "Protect Our Faith | Hindu.International",
+            "description": "Hinduism is our heritage. No Hindu should be pressured, deceived or coerced into leaving their faith. Learn about anti-conversion, vulnerability and how you can help."
+        },
         "hero": {
-            "label": "Preserve Our Roots",
-            "title": "Strengthening Communities.\nProtecting Choice.\nPreserving Our Roots.",
-            "subtitle": "No One Should Have to Choose a Faith\nfor Food, Healthcare or Education.",
-            "text": "Strong communities are built when people have access to the basic foundations of a secure and dignified life — education, healthcare, food, livelihoods and opportunities for their future.\n\nPreserve Our Roots is an initiative focused on empowering vulnerable communities, particularly in rural and underserved areas, by helping them meet their basic needs while respecting their personal, cultural and religious identity.",
-            "primaryButton": "Support the Mission",
-            "secondaryButton": "Learn More",
-            "image": "uploads/2026/09/whatsapp-image-2026-09-30-at-3-09-49-pm--83676af4.jpg",
-            "imageAlt": "A mother and children looking out over a rural village at sunrise"
+            "eyebrow": "Hinduism · Sanatan Dharma · Freedom of Faith",
+            "title": "Hinduism Is Our Heritage.\nOur Faith",
+            "titleAccent": "Deserves Protection.",
+            "subtitle": "No Hindu Should Be Pressured, Deceived, or Coerced\nInto Leaving Their Faith.",
+            "text": "Hinduism is a living civilisation of spiritual wisdom, sacred traditions, philosophy, and diverse paths to the divine. We stand for preserving Hindu heritage and protecting every person’s freedom to make religious choices without force, fraud, exploitation, or pressure.",
+            "primaryText": "Understand Anti-Conversion",
+            "primaryLink": "#anti-conversion",
+            "secondaryText": "Support Our Mission",
+            "secondaryLink": "donate.html",
+            "image": "assets/images/faith/hero-family.jpg",
+            "imageAlt": "A Hindu family watching the evening aarti on the river ghats at sunset"
         },
-        "why": {
-            "label": "Why This Matters",
-            "title": "When Basic Needs\nBecome a Pressure",
-            "text": "In many vulnerable communities, access to basic necessities can be limited. Food, healthcare, education and financial opportunities may sometimes depend on outside assistance.\n\nWhen people are struggling simply to meet their everyday needs, they can become vulnerable to different forms of influence or dependency.\n\nReligious belief should always come from personal choice and conviction — not from poverty, dependency or pressure.",
-            "callout": "We believe support should empower people, not influence their faith.",
-            "image": "uploads/2026/09/whatsapp-image-2026-09-30-at-3-09-50-pm-866884ca.jpg",
-            "imageAlt": "A mother holding her young child in a village"
+        "heritage": {
+            "label": "Why Our Roots Matter",
+            "title": "Hinduism Is More Than a Religion.\nIt Is a Living Heritage.",
+            "text": "Hinduism connects generations through Dharma, spiritual knowledge, festivals, sacred texts, temples, family traditions, and a rich philosophical heritage. Preserving Hindu identity means passing this knowledge forward and ensuring that people can practise their faith with dignity and freedom.",
+            "callout": "Protect Hindu heritage through\nknowledge, opportunity, dignity, and freedom of choice.",
+            "calloutIcon": "lotus",
+            "image": "assets/images/faith/heritage-aarti.jpg",
+            "imageAlt": "Hands holding an aarti plate with a lit diya and flowers beside a temple on the river"
         },
-        "approach": {
-            "title": "Our Approach",
-            "lead": "We focus on empowerment rather than exploitation.",
-            "text": "We do not believe that protecting cultural identity requires restricting anyone else's freedom of belief.\n\nInstead, we aim to address the conditions that can make vulnerable communities dependent — by working toward better access to:",
-            "items": [
-                {
-                    "text": "Education"
-                },
-                {
-                    "text": "Healthcare"
-                },
-                {
-                    "text": "Food and essential support"
-                },
-                {
-                    "text": "Skills and livelihoods"
-                },
-                {
-                    "text": "Community development"
-                },
-                {
-                    "text": "Opportunities for a more secure future"
-                }
-            ],
-            "closing": "Our goal is to help communities stand stronger on their own."
-        },
-        "anti": {
+        "issue": {
             "label": "Understanding the Issue",
             "title": "What Is Anti-Conversion?",
-            "text": "Anti-conversion generally refers to efforts aimed at preventing or reducing religious conversion that occurs through coercion, fraud, undue influence or material inducement.\n\nPersonal religious choice, when made freely and voluntarily, is a separate matter.",
-            "image": "uploads/2026/09/whatsapp-image-2026-09-30-at-3-09-49-pm-245555c1.jpg",
-            "imageAlt": "A schoolboy with a backpack looking towards a village temple at sunset"
+            "text": "Anti-conversion efforts seek to prevent or address religious conversion through force, coercion, fraud, deception, or unlawful inducement. The focus should be on protecting people from exploitation—not preventing anyone from freely choosing or changing their religion.",
+            "cardIcon": "shield",
+            "cardTitle": "Why does it matter?",
+            "cardText": "When religious decisions are influenced by threats, misleading promises, or exploitation of vulnerability, genuine freedom of conscience can be undermined. This can also cause emotional distress, family conflict, and concerns about cultural continuity."
         },
-        "focus": {
-            "label": "What We Focus On",
+        "vulnerability": {
+            "label": "Understanding Vulnerability",
+            "title": "Why Might People Become Vulnerable to Conversion Pressure?",
+            "text": "These situations do not mean that every person who converts is pressured. They are circumstances in which exploitation may occur and where appropriate support can make a difference.",
             "items": [
                 {
-                    "icon": "book",
-                    "color": "#E8590C",
-                    "title": "Education",
-                    "text": "Creating better educational opportunities for children and young people.",
-                    "image": "assets/images/roots/focus-education.jpg",
-                    "imageAlt": "Children studying in a classroom"
+                    "show": true,
+                    "icon": "coins",
+                    "title": "Financial hardship",
+                    "text": "Families facing poverty or debt may be especially vulnerable to promises of money or material assistance tied to religious expectations.",
+                    "image": "assets/images/faith/vulnerable-hardship.jpg",
+                    "imageAlt": "Worn hands holding a few coins"
                 },
                 {
-                    "icon": "medical",
-                    "color": "#1E8A4C",
-                    "title": "Healthcare",
-                    "text": "Supporting access to essential healthcare and medical assistance for families.",
-                    "image": "assets/images/roots/focus-healthcare.jpg",
-                    "imageAlt": "A health worker attending to a mother and child"
+                    "show": true,
+                    "icon": "school",
+                    "title": "Education and healthcare needs",
+                    "text": "People seeking schooling, medical care, food, or essential assistance may be told that help is conditional on changing their beliefs.",
+                    "image": "assets/images/faith/vulnerable-education.jpg",
+                    "imageAlt": "Students in a classroom"
                 },
                 {
-                    "icon": "bowl",
-                    "color": "#E8590C",
-                    "title": "Food & Basic Needs",
-                    "text": "Helping families meet essential needs so that poverty does not become a barrier to dignity.",
-                    "image": "assets/images/roots/focus-food.jpg",
-                    "imageAlt": "A family sharing a meal"
+                    "show": true,
+                    "icon": "lotus",
+                    "title": "Emotional distress and social isolation",
+                    "text": "During personal crises, loneliness, or family difficulties, people may seek acceptance, security, and a sense of belonging.",
+                    "image": "assets/images/faith/vulnerable-distress.jpg",
+                    "imageAlt": "A man praying alone at sunset"
                 },
                 {
-                    "icon": "sprout",
-                    "color": "#1E8A4C",
-                    "title": "Livelihoods",
-                    "text": "Supporting skills, employment and sustainable income opportunities.",
-                    "image": "assets/images/roots/focus-livelihoods.jpg",
-                    "imageAlt": "A young man standing in a green field"
-                },
-                {
-                    "icon": "people",
-                    "color": "#E8590C",
-                    "title": "Community Development",
-                    "text": "Strengthening rural communities through awareness and support.",
-                    "image": "assets/images/roots/focus-community.jpg",
-                    "imageAlt": "Village homes and a temple"
+                    "show": true,
+                    "icon": "alert",
+                    "title": "Deception, coercion, or misinformation",
+                    "text": "Threats, fraudulent claims, or misleading promises can undermine someone’s ability to make a genuinely informed decision.",
+                    "image": "assets/images/faith/vulnerable-deception.jpg",
+                    "imageAlt": "A hooded figure typing in the dark"
                 }
             ]
         },
-        "people": {
-            "label": "Preserving More Than a Tradition",
-            "title": "Our Roots Are People",
-            "text": "Our roots are not only about the past. They are about the people who carry traditions, values, knowledge and culture into the future. When a community becomes stronger, its children have greater opportunities to learn, grow and understand their heritage.",
-            "highlight": "Preserving our roots means creating the conditions in which communities can thrive while individuals remain free to make their own choices.",
-            "image": "assets/images/roots/temple.jpg",
-            "imageAlt": "An ancient temple beside a river at sunrise"
-        },
-        "vision": {
-            "title": "Our Vision",
-            "text": "We envision communities where poverty does not determine a person's opportunities, where children can access education, families can access healthcare, people can build sustainable livelihoods, and individuals can make personal and religious choices freely.",
-            "highlight": "A stronger community is a\ncommunity with greater freedom."
-        },
-        "change": {
-            "label": "Your Contribution Creates",
-            "title": "Real Change.",
-            "text": "Your donation helps provide education, healthcare, food assistance and livelihood support to vulnerable families in underserved rural communities.",
-            "button": "Donate Now",
-            "link": "See How Your Donation Helps",
-            "image": "assets/images/roots/child-portrait.jpg",
-            "imageAlt": "A smiling schoolgirl with a backpack",
-            "tiles": [
+        "response": {
+            "label": "Our Response",
+            "title": "How Can We Address Coercive Conversion?",
+            "text": "",
+            "items": [
                 {
-                    "icon": "book",
-                    "color": "#E8590C",
-                    "label": "Education\nSupport"
+                    "show": true,
+                    "icon": "bookopen",
+                    "title": "Education and awareness",
+                    "text": "Teach Hindu philosophy, traditions, cultural heritage, and religious rights."
                 },
                 {
-                    "icon": "medical",
-                    "color": "#1E8A4C",
-                    "label": "Medical\nAssistance"
+                    "show": true,
+                    "icon": "heartpulse",
+                    "title": "Healthcare and essentials",
+                    "text": "Help families access healthcare, food, and essential services without religious conditions."
                 },
                 {
-                    "icon": "bowl",
-                    "color": "#E8590C",
-                    "label": "Food &\nEssentials"
-                },
-                {
-                    "icon": "skill",
-                    "color": "#16396B",
-                    "label": "Skill\nDevelopment"
-                },
-                {
+                    "show": true,
                     "icon": "people",
-                    "color": "#E8590C",
-                    "label": "Rural Community\nPrograms"
+                    "title": "Education and livelihoods",
+                    "text": "Expand learning opportunities, practical skills, and financial independence."
+                },
+                {
+                    "show": true,
+                    "icon": "scale",
+                    "title": "Legal guidance",
+                    "text": "Help people facing credible coercion or fraud understand their rights and seek appropriate assistance."
                 }
-            ]
+            ],
+            "decorLeft": "assets/images/faith/temple-left.jpg",
+            "decorRight": "assets/images/faith/temple-right.jpg"
         },
-        "choice": {
-            "title": "Your Donation Creates Choice,\nNot Pressure.",
-            "text": "When people have access to education, healthcare, food and economic opportunities, they are better positioned to make important personal decisions freely — including matters of faith.",
-            "button": "Donate Now"
+        "support": {
+            "label": "Be Part of the Change",
+            "title": "Your Support Can Make a Real Difference.",
+            "text": "No family should have to choose between meeting basic needs and practising their religion. Your contribution can help support education, healthcare, food assistance, skills training, cultural awareness, and community development.",
+            "buttonText": "Become a Donor",
+            "buttonLink": "donate.html",
+            "note": "All assistance should be offered with dignity and without making help conditional on religious belief.",
+            "listTitle": "Your donation can support:",
+            "list": [
+                {
+                    "show": true,
+                    "text": "School supplies and educational opportunities for children."
+                },
+                {
+                    "show": true,
+                    "text": "Healthcare access and essential support for vulnerable families."
+                },
+                {
+                    "show": true,
+                    "text": "Skills training and livelihood development."
+                },
+                {
+                    "show": true,
+                    "text": "Hindu heritage education and cultural preservation."
+                }
+            ],
+            "image": "assets/images/faith/donation-bowl.jpg",
+            "imageAlt": "A hand placing a coin in a brass offering bowl among marigolds and diyas"
+        },
+        "respect": {
+            "label": "Freedom, Dignity and Respect",
+            "title": "Protect Our Faith. Respect Every Person.",
+            "text": "We believe Hindu heritage deserves to be understood, preserved, and respected. We encourage people to learn about Hinduism, understand their roots, and make informed choices without fear or pressure.\n\nIf a Hindu freely chooses to follow another religion, that personal choice deserves respect. We also ask everyone to discuss Hinduism and Hindu communities honestly and respectfully, without spreading false claims, insults, or hatred. Differences in belief should never become a reason to demean a community.",
+            "image": "assets/images/faith/respect-prayer.jpg",
+            "imageAlt": "A woman praying beside the river as the sun sets behind temples"
         },
         "cta": {
-            "label": "Preserve Our Roots",
-            "title": "Help us build stronger communities\nand preserve the roots that connect generations.",
-            "button": "Support the Mission",
-            "image": "uploads/2026/09/whatsapp-image-2026-09-30-at-3-09-48-pm--8a0b9a7d.jpg"
+            "title": "Preserve Our Roots.",
+            "titleAccent": "Protect Freedom of Faith.",
+            "text": "Join HINDU.INTERNATIONAL in preserving Hindu heritage, helping vulnerable families,\nand standing against religious coercion through awareness, compassion, and lawful action.",
+            "buttonText": "",
+            "buttonLink": "donate.html",
+            "tagline": "Faith · Culture · Community · Worldwide",
+            "image": "assets/images/faith/cta-temples.jpg"
         }
     },
     "donate": {
@@ -462,32 +594,85 @@
     },
     "site": {
         "logoText": "Hindu.International",
-        "logoImage": "uploads/2026/10/whatsapp-image-2026-10-05-at-1-30-56-pm-af714e07.jpg",
-        "headerCta": "Request Service",
-        "footerTagline": "Your Faith. Our Service.\nDivine Blessings, Always.",
+        "logoTagline": "Faith · Culture · Community · Worldwide",
+        "logoSize": "lg",
+        "logoImage": "assets/images/brand/logo.png",
+        "footerLogoImage": "",
         "nav": [
             {
-                "label": "Home"
+                "show": true,
+                "label": "Home",
+                "link": "index.html"
             },
             {
-                "label": "About Us"
+                "show": true,
+                "label": "About Us",
+                "link": "about.html"
             },
             {
-                "label": "How It Works"
+                "show": true,
+                "label": "How It Works",
+                "link": "how-it-works.html"
             },
             {
-                "label": "Preserve Our Roots"
+                "show": true,
+                "label": "Protect Our Faith",
+                "link": "protect-our-faith.html"
             },
             {
-                "label": "Event Information"
+                "show": true,
+                "label": "Event Information",
+                "link": "event.html"
             },
             {
-                "label": "Service / Booking"
+                "show": true,
+                "label": "Service / Booking",
+                "link": "booking.html"
             },
             {
-                "label": "Contact Us"
+                "show": true,
+                "label": "Contact Us",
+                "link": "contact.html"
             }
-        ]
+        ],
+        "headerCta": "Request Service",
+        "headerCtaLink": "booking.html",
+        "footerTagline": "Your Faith. Our Service.\nDivine Blessings, Always.",
+        "footerQuickTitle": "Quick Links",
+        "footerLinksTitle": "Our Service",
+        "footerLinks": [
+            {
+                "show": true,
+                "label": "Virtual Punya Snan",
+                "link": "booking.html"
+            },
+            {
+                "show": true,
+                "label": "Event Details",
+                "link": "event.html"
+            },
+            {
+                "show": true,
+                "label": "Donate",
+                "link": "donate.html"
+            },
+            {
+                "show": true,
+                "label": "FAQs",
+                "link": "how-it-works.html#faq"
+            },
+            {
+                "show": true,
+                "label": "Privacy Policy",
+                "link": "privacy.html"
+            },
+            {
+                "show": true,
+                "label": "Terms & Conditions",
+                "link": "terms.html"
+            }
+        ],
+        "copyright": "All rights reserved."
     },
     "theme": {
         "primary": "#E85A0C",

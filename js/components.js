@@ -50,7 +50,15 @@
     handshake: '<path d="M2 11l3.5-3.5 4 1.2L12 7l3.5 1.5L22 12"/><path d="M5.5 7.5V14l5 5c.8.8 2 .8 2.8 0l5.7-5.7"/><path d="M10 9.5l-2.3 2.3a1.5 1.5 0 0 0 2.1 2.1l2.2-2.2 3.5 3.5"/>',
     eye: '<path d="M2 12s3.6-6.5 10-6.5S22 12 22 12s-3.6 6.5-10 6.5S2 12 2 12z"/><circle cx="12" cy="12" r="3"/>',
     hearthand: '<path d="M12 11.5s-3.5-2.1-3.5-4.6A2 2 0 0 1 12 5.7a2 2 0 0 1 3.5 1.2c0 2.5-3.5 4.6-3.5 4.6z"/><path d="M3 14.5h3.5l3.2 1.6h3.8a1.4 1.4 0 0 1 0 2.8H10"/><path d="M13.5 18.9l5.3-2.6a1.5 1.5 0 0 1 1.7 2.4L15 22H7l-4-2"/>',
-    lock: '<rect x="5" y="10.5" width="14" height="10" rx="2"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/>'
+    lock: '<rect x="5" y="10.5" width="14" height="10" rx="2"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/>',
+    coins: '<ellipse cx="9" cy="7" rx="6" ry="2.6"/><path d="M3 7v4c0 1.4 2.7 2.6 6 2.6s6-1.2 6-2.6V7"/><path d="M9 13.6v4c0 1.4 2.7 2.6 6 2.6s6-1.2 6-2.6v-4c0-1.4-2.7-2.6-6-2.6"/><path d="M9 17.6c0 1.4 2.7 2.6 6 2.6"/>',
+    school: '<path d="M3 21h18M5 21V10.5l7-4.5 7 4.5V21"/><path d="M12 6V2.8h3.5V4.6H12"/><path d="M9.5 21v-4.5h5V21"/><path d="M8 12h2M14 12h2"/>',
+    alert: '<path d="M12 3.5L21.5 20h-19z"/><path d="M12 10v4.5M12 17.2v.1"/>',
+    scale: '<path d="M12 3.5v17M7.5 20.5h9M5 6.5h14M12 5.2a1.3 1.3 0 1 0 0-.1"/><path d="M5 6.5L2.5 13a2.5 2.5 0 0 0 5 0z"/><path d="M19 6.5L16.5 13a2.5 2.5 0 0 0 5 0z"/>',
+    heartpulse: '<path d="M12 20s-7.2-4.4-9-9.2A4.8 4.8 0 0 1 12 7.6a4.8 4.8 0 0 1 9 3.2C19.2 15.6 12 20 12 20z"/><path d="M5.5 12.5h3.2l1.5-2.6 2.2 4.6 1.6-3h4.5"/>',
+    bookopen: '<path d="M12 7c-2-1.6-5-2.2-9-1.8v13c4-.4 7 .2 9 1.8 2-1.6 5-2.2 9-1.8v-13c-4-.4-7 .2-9 1.8z"/><path d="M12 7v13"/>',
+    temple: '<path d="M12 2.5v2M8.5 9.5C8.5 6.5 10 5 12 4.5c2 .5 3.5 2 3.5 5"/><path d="M6.5 9.5h11M7.5 9.5V20M16.5 9.5V20M4 20.5h16M10.5 20v-4.5a1.5 1.5 0 0 1 3 0V20"/>',
+    globe: '<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.7 5.6 3.7 9s-1.2 6.4-3.7 9c-2.5-2.6-3.7-5.6-3.7-9S9.5 5.6 12 3z"/>'
   };
   window.vpsIconNames = Object.keys(ICONS);
 
@@ -96,44 +104,89 @@
     });
   })();
 
-  /* ---------- Navigation (single source for header + footer) ---------- */
-  var NAV = [
-    { key: 'home',    label: 'Home',               href: 'index.html' },
-    { key: 'about',   label: 'About Us',           href: 'about.html' },
-    { key: 'how',     label: 'How It Works',       href: 'how-it-works.html' },
-    { key: 'roots',   label: 'Preserve Our Roots', href: 'preserve-our-roots.html' },
-    { key: 'event',   label: 'Event Information',  href: 'event.html' },
-    { key: 'booking', label: 'Service / Booking',  href: 'booking.html' },
-    { key: 'contact', label: 'Contact Us',         href: 'contact.html' }
-  ];
-  (SITE.nav || []).forEach(function (item, i) {
-    if (NAV[i] && item && item.label) NAV[i].label = item.label;
-  });
+  /* Safe link: page on this site (page.html, page.html#part, #part), https://, mailto: or tel:
+     (the admin panel validates the same rule; anything else falls back) */
+  var LINK_RE = /^(https?:\/\/[^\s"'<>]+|mailto:[^\s"'<>]+|tel:\+?[\d\s()-]{3,20}|#[\w-]*|[\w-]+\.html(#[\w-]*)?)$/i;
+  function safeLink(value, fallback) {
+    value = String(value || '').trim();
+    return LINK_RE.test(value) ? value : (fallback || '#');
+  }
+  window.vpsSafeLink = safeLink;
+  function linkAttrs(href) {
+    return 'href="' + esc(href) + '"' + (/^https?:/i.test(href) ? ' target="_blank" rel="noopener"' : '');
+  }
 
-  /* Logo text: the first "." is highlighted, e.g. Hindu.International */
+  /* ---------- Navigation (single source for header + footer) ----------
+     Comes from Admin → Header, footer & colours → Menu. The defaults below are only
+     used when the content has no menu yet (or an older menu without links). */
+  var NAV_DEFAULT = [
+    { label: 'Home',              link: 'index.html' },
+    { label: 'About Us',          link: 'about.html' },
+    { label: 'How It Works',      link: 'how-it-works.html' },
+    { label: 'Protect Our Faith', link: 'protect-our-faith.html' },
+    { label: 'Event Information', link: 'event.html' },
+    { label: 'Service / Booking', link: 'booking.html' },
+    { label: 'Contact Us',        link: 'contact.html' }
+  ];
+  var NAV = (Array.isArray(SITE.nav) && SITE.nav.length ? SITE.nav : NAV_DEFAULT)
+    .map(function (item, i) {
+      item = item || {};
+      var def = NAV_DEFAULT[i] || {};
+      return {
+        label: item.label || def.label || '',
+        href: safeLink(item.link || def.link, def.link || '#'),
+        show: item.show !== false
+      };
+    })
+    .filter(function (n) { return n.show && n.label; });
+
+  /* Current page: "protect-our-faith.html" etc. ("" → index.html) */
+  var currentFile = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
+  function isCurrent(href, fallbackFile) {
+    var file = href.split('#')[0].toLowerCase();
+    return !!file && (file === currentFile || file === fallbackFile);
+  }
+
+  /* Logo: uploaded image, or the lotus mark + text (the first "." is highlighted)
+     with the tagline underneath. Size is set in the admin panel. */
   var logoText = SITE.logoText || 'Hindu.International';
-  var dot = logoText.indexOf('.');
-  var LOGO = SITE.logoImage
-    ? '<img class="logo__image" src="' + esc(SITE.logoImage) + '" alt="">'
-    : '<span class="logo__mark">' + icon('lotus') + '</span>' +
-      '<span class="logo__text">' + (dot > 0
-      ? esc(logoText.slice(0, dot)) + '<span class="logo__dot">.</span>' + esc(logoText.slice(dot + 1))
-      : esc(logoText)) + '</span>';
+  var logoTagline = SITE.logoTagline == null ? 'Faith · Culture · Community · Worldwide' : SITE.logoTagline;
+  var logoSize = /^(md|lg|xl)$/.test(SITE.logoSize || '') ? SITE.logoSize : 'lg';
+  function isMedia(path) { return /^(assets|uploads)\/[\w\-./]+$/.test(path || '') && path.indexOf('..') === -1; }
+
+  function logoMarkup(imagePath) {
+    if (isMedia(imagePath)) {
+      return '<img class="logo__img" src="' + esc(imagePath) + '" alt="' + esc(logoText) + '">';
+    }
+    var dot = logoText.indexOf('.');
+    return '<span class="logo__mark">' + icon('lotus') + '</span>' +
+      '<span class="logo__words">' +
+        '<span class="logo__text">' + (dot > 0
+          ? esc(logoText.slice(0, dot)) + '<span class="logo__dot">.</span>' + esc(logoText.slice(dot + 1))
+          : esc(logoText)) + '</span>' +
+        (logoTagline ? '<span class="logo__tagline">' + esc(logoTagline) + '</span>' : '') +
+      '</span>';
+  }
 
   function renderHeader(el) {
-    var page = el.getAttribute('data-page');
+    var fallback = (el.getAttribute('data-nav') || '').toLowerCase();
+    var anyCurrent = NAV.some(function (n) { return isCurrent(n.href); });
     var links = NAV.map(function (n) {
-      var current = n.key === page ? ' aria-current="page"' : '';
-      return '<li><a class="nav__link" href="' + n.href + '"' + current + '>' + esc(n.label) + '</a></li>';
+      var current = isCurrent(n.href, anyCurrent ? '' : fallback) ? ' aria-current="page"' : '';
+      return '<li><a class="nav__link" ' + linkAttrs(n.href) + current + '>' + esc(n.label) + '</a></li>';
     }).join('');
+    var ctaText = SITE.headerCta == null ? 'Request Service' : SITE.headerCta;
+    var cta = ctaText
+      ? '<a class="btn btn--primary btn--sm nav__cta" ' + linkAttrs(safeLink(SITE.headerCtaLink, 'booking.html')) + '>' +
+          esc(ctaText) + icon('arrow', 'icon--arrow') + '</a>'
+      : '';
 
     el.outerHTML =
       '<header class="site-header" id="top">' +
         '<div class="container header__inner">' +
-          '<a class="logo" href="index.html" aria-label="' + esc(logoText) + ' — Home">' + LOGO + '</a>' +
+          '<a class="logo logo--' + logoSize + '" href="index.html" aria-label="' + esc(logoText) + ' — Home">' + logoMarkup(SITE.logoImage) + '</a>' +
           '<nav class="nav" id="site-nav" aria-label="Main">' +
-            '<ul class="nav__list">' + links + '</ul>' +
-            '<a class="btn btn--primary btn--sm nav__cta" href="booking.html">' + esc(SITE.headerCta || 'Request Service') + '</a>' +
+            '<ul class="nav__list">' + links + '</ul>' + cta +
           '</nav>' +
           '<button class="nav-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Open menu">' +
             icon('menu', 'nav-toggle__open') + icon('close', 'nav-toggle__close') +
@@ -142,37 +195,44 @@
       '</header>';
   }
 
-  function renderFooter(el) {
-    var quick = NAV.map(function (n) {
-      return '<li><a href="' + n.href + '">' + esc(n.label) + '</a></li>';
-    }).join('');
+  var FOOTER_LINKS_DEFAULT = [
+    { label: 'Virtual Punya Snan', link: 'booking.html' },
+    { label: 'Event Details', link: 'event.html' },
+    { label: 'Donate', link: 'donate.html' },
+    { label: 'FAQs', link: 'how-it-works.html#faq' },
+    { label: 'Privacy Policy', link: 'privacy.html' },
+    { label: 'Terms & Conditions', link: 'terms.html' }
+  ];
 
+  function linkList(items) {
+    return items.filter(function (n) { return n && n.show !== false && n.label; }).map(function (n) {
+      return '<li><a ' + linkAttrs(n.href || safeLink(n.link)) + '>' + esc(n.label) + '</a></li>';
+    }).join('');
+  }
+
+  function renderFooter(el) {
+    var extra = Array.isArray(SITE.footerLinks) && SITE.footerLinks.length ? SITE.footerLinks : FOOTER_LINKS_DEFAULT;
+    var footerLogo = isMedia(SITE.footerLogoImage) ? SITE.footerLogoImage : SITE.logoImage;   // header logo when no footer version
     el.outerHTML =
       '<footer class="site-footer">' +
         '<div class="container footer__grid">' +
           '<div class="footer__brand">' +
-            '<a class="logo logo--light" href="index.html" aria-label="' + esc(logoText) + ' — Home">' + LOGO + '</a>' +
+            '<a class="logo logo--light logo--' + logoSize + '" href="index.html" aria-label="' + esc(logoText) + ' — Home">' + logoMarkup(footerLogo) + '</a>' +
             '<p class="footer__tagline">' + escLines(SITE.footerTagline || 'Your Faith. Our Service.\nDivine Blessings, Always.') + '</p>' +
             '<ul class="footer__social" data-social></ul>' +
           '</div>' +
           '<div class="footer__col">' +
-            '<h2 class="footer__title">Quick Links</h2>' +
-            '<ul class="footer__links">' + quick + '</ul>' +
+            '<h2 class="footer__title">' + esc(SITE.footerQuickTitle || 'Quick Links') + '</h2>' +
+            '<ul class="footer__links">' + linkList(NAV) + '</ul>' +
           '</div>' +
           '<div class="footer__col">' +
-            '<h2 class="footer__title">Our Service</h2>' +
-            '<ul class="footer__links">' +
-              '<li><a href="booking.html">Virtual Punya Snan</a></li>' +
-              '<li><a href="event.html">Event Details</a></li>' +
-              '<li><a href="donate.html">Donate</a></li>' +
-              '<li><a href="how-it-works.html#faq">FAQs</a></li>' +
-              '<li><a href="privacy.html">Privacy Policy</a></li>' +
-              '<li><a href="terms.html">Terms &amp; Conditions</a></li>' +
-            '</ul>' +
+            '<h2 class="footer__title">' + esc(SITE.footerLinksTitle || 'Our Service') + '</h2>' +
+            '<ul class="footer__links">' + linkList(extra) + '</ul>' +
           '</div>' +
         '</div>' +
         '<div class="container">' +
-          '<div class="footer__bottom"><p>&copy; <span data-year>2025</span> ' + esc(logoText) + '. All rights reserved.</p></div>' +
+          '<div class="footer__bottom"><p>&copy; <span data-year>2025</span> ' + esc(logoText) + '. ' +
+            esc(SITE.copyright == null ? 'All rights reserved.' : SITE.copyright) + '</p></div>' +
         '</div>' +
       '</footer>';
   }

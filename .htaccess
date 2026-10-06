@@ -19,3 +19,9 @@ DirectoryIndex index.html
 <Files "config.php">
   Require all denied
 </Files>
+
+# "Preserve Our Roots" was renamed to "Protect Our Faith": send old links to the new page
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteRule ^preserve-our-roots\.html$ protect-our-faith.html [R=301,L]
+</IfModule>

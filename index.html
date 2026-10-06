@@ -22,21 +22,22 @@
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
-  <div id="site-header" data-page="home"></div>
+  <div id="site-header"></div>
   <script src="js/components.js"></script>
 
-  <main id="main">
+  <!-- Section order and on/off: Admin → Home page → Page layout -->
+  <main id="main" data-layout="home.layout">
 
     <!-- ================= HERO ================= -->
-    <section class="hero" aria-labelledby="hero-title">
+    <section class="hero" data-block="hero" aria-labelledby="hero-title">
       <div class="container hero__inner">
         <div class="hero__content">
           <p class="hero__eyebrow" data-bind="home.hero.eyebrow">When You Cannot Be There,<br>Your Devotion Still Reaches</p>
           <h1 class="hero__title" id="hero-title" data-bind="home.hero.title">Virtual<br>Punya Snan</h1>
           <p class="hero__text" data-bind="home.hero.text">Experience the divine blessings of a sacred event from anywhere in the world. We perform the holy ritual on your behalf using your photograph and share the recorded video with you.</p>
           <div class="hero__actions">
-            <a class="btn btn--primary" href="booking.html">Request Service <svg class="icon icon--arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-            <a class="btn btn--secondary" href="how-it-works.html" data-video><svg class="icon icon--play" aria-hidden="true"><use href="#i-play"/></svg> Watch How It Works</a>
+            <a class="btn btn--primary" href="booking.html" data-bind-href="home.hero.primaryLink" data-show-if="home.hero.primaryText"><span data-bind="home.hero.primaryText">Request Service</span> <svg class="icon icon--arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <a class="btn btn--secondary" href="how-it-works.html" data-bind-href="home.hero.secondaryLink" data-show-if="home.hero.secondaryText" data-video><svg class="icon icon--play" aria-hidden="true"><use href="#i-play"/></svg> <span data-bind="home.hero.secondaryText">Watch How It Works</span></a>
           </div>
         </div>
 
@@ -62,7 +63,7 @@
     </section>
 
     <!-- ================= OUR SERVICE ================= -->
-    <section class="section service" aria-labelledby="service-title">
+    <section class="section service" data-block="service" aria-labelledby="service-title">
       <div class="ornament" aria-hidden="true"></div>
       <div class="container split">
         <div class="media service__media">
@@ -73,13 +74,13 @@
           <span class="eyebrow" data-bind="home.service.label">Our Service</span>
           <h2 id="service-title" data-bind="home.service.title">Your Devotion,<br>Our Responsibility</h2>
           <p data-bind="home.service.text">For devotees who cannot travel to the sacred event, we perform the Punya Snan ritual on your behalf using your photograph and share the recorded video with you, so you can still be a part of this divine moment.</p>
-          <a class="btn btn--primary" href="about.html">Learn More <svg class="icon icon--arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <a class="btn btn--primary" href="about.html" data-bind-href="home.service.buttonLink" data-show-if="home.service.buttonText"><span data-bind="home.service.buttonText">Learn More</span> <svg class="icon icon--arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
         </div>
       </div>
     </section>
 
     <!-- ================= HOW IT WORKS ================= -->
-    <section class="section section--tight" aria-labelledby="how-title">
+    <section class="section section--tight" data-block="how" aria-labelledby="how-title">
       <div class="container">
         <div class="section-head">
           <span class="eyebrow" data-bind="home.how.label">Simple Process</span>
@@ -117,7 +118,7 @@
 
     <!-- ================= EVENT PREVIEW =================
          Event details come from content/content.json (first event) — edit them in the admin panel -->
-    <section class="section section--tight event-preview" aria-labelledby="event-title">
+    <section class="section section--tight event-preview" data-block="event" aria-labelledby="event-title">
       <div class="event-preview__bg" aria-hidden="true"></div>
       <div class="ornament" aria-hidden="true"></div>
       <div class="container">
@@ -142,7 +143,7 @@
               <li><svg class="icon" aria-hidden="true"><use href="#i-diya"/></svg><span><strong>Significance:</strong> <span data-bind="event.significance">[Significance of the event]</span></span></li>
             </ul>
             <div class="event-card__cta">
-              <a class="btn btn--primary btn--sm" href="event.html">View Event Details <svg class="icon icon--arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+              <a class="btn btn--primary btn--sm" href="event.html" data-bind-href="home.event.buttonLink" data-show-if="home.event.buttonText"><span data-bind="home.event.buttonText">View Event Details</span> <svg class="icon icon--arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
             </div>
           </div>
         </article>
@@ -150,7 +151,7 @@
     </section>
 
     <!-- ================= EMOTIONAL CTA ================= -->
-    <section class="cta-banner" aria-labelledby="cta-title">
+    <section class="cta-banner" data-block="cta" aria-labelledby="cta-title">
       <div class="cta-banner__bg" aria-hidden="true">
         <img src="assets/images/cta-sunrise.jpg" data-bind-src="home.cta.image" width="1920" height="288" loading="lazy" alt="">
       </div>
@@ -158,7 +159,7 @@
         <div class="cta-banner__content">
           <h2 id="cta-title" data-bind="home.cta.quote">&ldquo;Distance cannot limit devotion.&rdquo;</h2>
           <p data-bind="home.cta.text">Let your faith reach the holy waters.</p>
-          <a class="btn btn--light" href="booking.html"><span data-bind="home.cta.button">Request Virtual Punya Snan</span> <svg class="icon icon--arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <a class="btn btn--light" href="booking.html" data-bind-href="home.cta.buttonLink" data-show-if="home.cta.button"><span data-bind="home.cta.button">Request Virtual Punya Snan</span> <svg class="icon icon--arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
         </div>
       </div>
     </section>

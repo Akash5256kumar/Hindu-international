@@ -20,7 +20,7 @@
   --line: #F0E3D1;
   --line-strong: #E6D5BE;
   --navy: #111C28;              /* footer */
-  --roots-ink: #16396B;         /* navy headings (Preserve Our Roots pages, logo) */
+  --roots-ink: #16396B;         /* navy headings (Protect Our Faith + Donate pages, logo) */
   --tint: #FDEEDD;              /* soft orange circle behind icons */
 
   --font-serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
@@ -33,7 +33,7 @@
   --shadow: 0 10px 30px rgba(122, 72, 24, .09);
   --shadow-lg: 0 18px 48px rgba(90, 48, 12, .14);
 
-  --header-h: 76px;
+  --header-h: 92px;
   --container: 1200px;
   --gutter: 24px;
   --section-y: 96px;
@@ -234,26 +234,34 @@ h3 { font-size: 1.2rem; }
 .site-header {
   position: sticky; top: 0; z-index: 100;
   height: var(--header-h);
-  background: rgba(255, 255, 255, .96);
-  -webkit-backdrop-filter: saturate(1.4) blur(10px);
-  backdrop-filter: saturate(1.4) blur(10px);
+  background: #FEFDF8;            /* same warm white as the logo image, so the logo has no visible box */
   border-bottom: 1px solid var(--line);
   transition: box-shadow .3s;
 }
 .site-header.is-scrolled { box-shadow: 0 6px 24px rgba(90, 50, 15, .08); }
 .header__inner { height: 100%; display: flex; align-items: center; gap: 24px; }
 
-.logo { display: inline-flex; align-items: center; gap: 10px; color: var(--roots-ink); flex: none; }
+.logo { display: inline-flex; align-items: center; gap: 12px; color: var(--roots-ink); flex: none; line-height: 1; }
 .logo:hover { color: var(--roots-ink); }
 .logo__mark { color: var(--saffron); display: grid; }
-.logo__mark .icon { width: 42px; height: 42px; stroke-width: 1.35; }
-.logo__text { font-family: var(--font-serif); font-weight: 600; font-size: 1.3rem; line-height: 1.1; letter-spacing: -.005em; white-space: nowrap; }
-.logo__image { display: block; width: auto; max-width: 250px; height: auto; max-height: calc(var(--header-h) - 8px); object-fit: contain; }
+.logo__mark .icon { width: var(--logo-mark); height: var(--logo-mark); stroke-width: 1.3; }
+.logo__words { display: flex; flex-direction: column; gap: 5px; }
+.logo__text { font-family: var(--font-serif); font-weight: 700; font-size: var(--logo-text); line-height: 1.05; letter-spacing: -.005em; white-space: nowrap; }
+.logo__tagline { font-family: var(--font-sans); font-size: calc(var(--logo-text) * .43); font-weight: 500; letter-spacing: .02em; color: var(--ink-2); white-space: nowrap; }
 .logo__dot { color: var(--saffron); }
+/* Uploaded logo: fixed height, natural width — never stretched */
+.logo__img { height: var(--logo-img); width: auto; max-width: min(320px, 64vw); object-fit: contain; }
+/* Logo images usually have a light background: give it a soft light plate on the dark footer */
+.logo--light .logo__img { background: #FEFDF8; border-radius: 10px; padding: 6px 12px; box-sizing: content-box; }
+/* Logo sizes (Admin → Header, footer & colours → Logo size) */
+.logo, .logo--lg { --logo-mark: 54px; --logo-text: 1.62rem; --logo-img: 78px; }
+.logo--md { --logo-mark: 44px; --logo-text: 1.36rem; --logo-img: 64px; }
+.logo--xl { --logo-mark: 62px; --logo-text: 1.86rem; --logo-img: 86px; }
 .logo--light .logo__dot { color: var(--gold); }
 .logo--light { color: #fff; }
 .logo--light:hover { color: #fff; }
 .logo--light .logo__mark { color: var(--gold); }
+.logo--light .logo__tagline { color: rgba(255, 255, 255, .72); }
 
 .nav { margin-left: auto; display: flex; align-items: center; gap: 36px; }
 .nav__list { display: flex; align-items: center; gap: 30px; }
@@ -269,7 +277,8 @@ h3 { font-size: 1.2rem; }
 .nav__link:hover { color: var(--saffron-deep); }
 .nav__link:hover::after, .nav__link[aria-current="page"]::after { transform: scaleX(1); }
 .nav__link[aria-current="page"] { color: var(--saffron-deep); }
-.nav__cta { border-radius: 999px; padding: 0 22px; }
+.nav__cta { border-radius: var(--radius-sm); padding: 0 22px; }
+.nav__cta .icon { width: 18px; height: 18px; }
 
 .nav-toggle {
   display: none; margin-left: auto;
