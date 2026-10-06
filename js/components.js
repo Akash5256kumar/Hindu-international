@@ -38,6 +38,7 @@
     whatsapp: '<path d="M4 20l1.2-3.9A8.5 8.5 0 1 1 8.1 19z"/><path d="M9.2 8.3c.3-.5.8-.5 1-.1l.8 1.8c.1.3 0 .6-.2.8l-.5.5c.6 1.3 1.6 2.3 2.9 2.9l.5-.5c.2-.2.5-.3.8-.2l1.8.8c.4.2.4.7-.1 1-.9.7-2 .9-3.1.4a8.4 8.4 0 0 1-4.3-4.3c-.5-1.1-.3-2.2.4-3.1z"/>',
     facebook: '<path d="M14.5 8.5H17V5h-2.8C11.6 5 10.5 6.6 10.5 9v1.8H8v3.4h2.5V21h3.6v-6.8h2.6l.5-3.4h-3.1V9.3c0-.5.3-.8.9-.8z" fill="currentColor" stroke="none"/>',
     instagram: '<rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".8" fill="currentColor" stroke="none"/>',
+    x: '<path d="M18.9 3h2.8l-6.1 7 7.2 11h-5.6l-4.4-6.7L7 21H4.2l6.5-7.5L3.8 3h5.8l4 6.1L18.9 3zm-1 16h1.5L8.5 4.9H6.9L17.9 19z" fill="currentColor" stroke="none"/>',
     youtube: '<rect x="2.5" y="5.5" width="19" height="13" rx="4"/><path d="M10.2 9.2v5.6l4.6-2.8z" fill="currentColor"/>',
     play: '<circle cx="12" cy="12" r="10" fill="currentColor" stroke="none"/><path d="M10 8.3v7.4l5.8-3.7z" fill="#fff" stroke="none"/>',
     book: '<path d="M12 6.5C10 5 7 4.5 3.5 5v13c3.5-.5 6.5 0 8.5 1.5 2-1.5 5-2 8.5-1.5V5C17 4.5 14 5 12 6.5z"/><path d="M12 6.5v13M6 9h3M6 12h3M15 9h3M15 12h3"/>',
@@ -112,9 +113,10 @@
   /* Logo text: the first "." is highlighted, e.g. Hindu.International */
   var logoText = SITE.logoText || 'Hindu.International';
   var dot = logoText.indexOf('.');
-  var LOGO =
-    '<span class="logo__mark">' + icon('lotus') + '</span>' +
-    '<span class="logo__text">' + (dot > 0
+  var LOGO = SITE.logoImage
+    ? '<img class="logo__image" src="' + esc(SITE.logoImage) + '" alt="">'
+    : '<span class="logo__mark">' + icon('lotus') + '</span>' +
+      '<span class="logo__text">' + (dot > 0
       ? esc(logoText.slice(0, dot)) + '<span class="logo__dot">.</span>' + esc(logoText.slice(dot + 1))
       : esc(logoText)) + '</span>';
 

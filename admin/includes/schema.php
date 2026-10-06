@@ -329,9 +329,8 @@ return [
         'groups' => [
             ['path' => 'social', 'title' => 'Social media links', 'help' => 'Full link starting with https://. Leave empty to hide the icon.', 'fields' => [
                 ['key' => 'facebook', 'label' => 'Facebook', 'type' => 'url'],
-                ['key' => 'instagram', 'label' => 'Instagram', 'type' => 'url'],
+                ['key' => 'x', 'label' => 'X', 'type' => 'url'],
                 ['key' => 'youtube', 'label' => 'YouTube', 'type' => 'url'],
-                ['key' => 'showWhatsapp', 'label' => 'Show WhatsApp icon in the footer', 'type' => 'toggle'],
             ]],
             ['path' => 'media', 'title' => 'Videos', 'fields' => [
                 ['key' => 'heroVideoMp4', 'label' => 'Home hero background video (MP4)', 'type' => 'video', 'accept' => 'mp4', 'help' => 'Short (8–15 s), no sound needed, under ~10 MB. Replaces the hero photo when set.'],
@@ -345,6 +344,7 @@ return [
         'groups' => [
             ['path' => 'site', 'title' => 'Header & footer', 'fields' => [
                 ['key' => 'logoText', 'label' => 'Logo text', 'type' => 'text', 'max' => 40, 'required' => true, 'help' => 'The first “.” is shown in orange, e.g. Hindu.International'],
+                ['key' => 'logoImage', 'label' => 'Logo image', 'type' => 'image', 'help' => 'Upload a JPG, PNG, WebP or SVG logo. Leave empty to use the lotus icon and logo text.'],
                 ['key' => 'headerCta', 'label' => 'Header button text', 'type' => 'text', 'max' => 30, 'required' => true],
                 ['key' => 'footerTagline', 'label' => 'Footer tagline', 'type' => 'textarea', 'rows' => 2, 'max' => 120],
                 ['key' => 'nav', 'label' => 'Menu labels', 'type' => 'list', 'fixed' => 7, 'itemLabel' => 'Menu item', 'titleField' => 'label', 'fields' => [

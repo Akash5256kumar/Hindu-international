@@ -142,9 +142,8 @@ document.addEventListener('DOMContentLoaded', function () {
     var S = C.social || {};
     [
       ['facebook', S.facebook, 'Facebook'],
-      ['instagram', S.instagram, 'Instagram'],
+      ['x', S.x, 'X'],
       ['youtube', S.youtube, 'YouTube'],
-      ['whatsapp', S.showWhatsapp ? (whatsappUrl() || 'contact.html') : '', 'WhatsApp']
     ].forEach(function (i) {
       var url = i[1];
       if (!url || !/^(https?:\/\/|#$|contact\.html$)/.test(url)) return;
