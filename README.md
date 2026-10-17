@@ -72,6 +72,22 @@ No payment or order system is included (not confirmed in the BRD).
 4. For large videos, raise `upload_max_filesize` and `post_max_size` in PHP Configuration (the admin allows up to 60 MB; change `max_video_mb` in `admin/config.php`).
 5. Run the admin setup (above).
 
+## Automatic deploy (GitHub Actions)
+Every push to `main` runs `.github/workflows/deploy.yml`:
+1. Checks every PHP file for syntax errors and checks that `content/content.json` is valid. If anything fails, nothing is deployed.
+2. Copies the files to the VPS over SSH with rsync. Nothing on the server is deleted, so `uploads/` and `admin/data/` stay as they are.
+3. Never uploads `README.md`, the BRD PDF, `.github/`, `.vscode/`, `admin/config.php` or `forms/config.php`. The live configuration lives in `/etc/hindu.international/` on the server.
+4. Uploads `content/content.json` and `content/content.js` only when they are missing on the server, so admin panel edits are never overwritten. To push the repo's content live on purpose: GitHub → Actions → "Deploy to server" → Run workflow → tick `overwrite_content`. The live files are first copied to `~/hindu-content-backups/<date>/` on the server.
+
+One-time setup:
+1. Create a deploy key on your computer: `ssh-keygen -t ed25519 -f hindu_deploy -N "" -C github-deploy`
+2. Add the contents of `hindu_deploy.pub` to `~/.ssh/authorized_keys` of the deploy user on the VPS (or hPanel → VPS → Settings → SSH keys).
+3. In GitHub → Settings → Secrets and variables → Actions, add `SSH_HOST` (VPS IP), `SSH_USER` (e.g. `root`) and `SSH_PRIVATE_KEY` (the whole `hindu_deploy` file). Optional: `SSH_PORT` (default 22) and `DEPLOY_PATH` (default `/var/www/html/hindu.international/public`).
+4. Make sure rsync is installed on the VPS: `apt install -y rsync`
+5. Remove the old webhook (GitHub → Settings → Webhooks) and delete `deploy.php` from the server.
+
+New files get the same owner as the server's `content/` folder, so PHP can keep writing to it. After the first deploy, save something in the admin panel to confirm it still works.
+
 ## Running locally
 PHP is needed for the admin panel and forms:
 ```

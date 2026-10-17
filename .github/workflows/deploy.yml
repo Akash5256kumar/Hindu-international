@@ -1,0 +1,117 @@
+# Deploys the site to the VPS on every push to main.
+#
+# Safe by design:
+# - Nothing is deployed if a PHP file has a syntax error or content.json is invalid.
+# - Nothing on the server is ever deleted (no rsync --delete), so admin uploads
+#   (uploads/) and admin data (admin/data/) stay untouched.
+# - content/content.json and content/content.js are only uploaded when they are
+#   missing on the server, so edits made in the admin panel are never overwritten.
+#   To push the repo's content live on purpose: Actions → "Deploy to server" →
+#   Run workflow → tick "overwrite_content" (the live files are backed up first).
+#
+# Required secrets (Settings → Secrets and variables → Actions):
+#   SSH_HOST, SSH_USER, SSH_PRIVATE_KEY
+# Optional: SSH_PORT (default 22), DEPLOY_PATH (default below)
+
+name: Deploy to server
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      overwrite_content:
+        description: "Replace the live content.json/content.js with the repo version (live files are backed up first)"
+        type: boolean
+        default: false
+
+concurrency:
+  group: deploy-production
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: PHP syntax check
+        run: |
+          php -v | head -n 1
+          find . -name '*.php' -not -path './.git/*' -print0 | xargs -0 -n1 php -l > /dev/null
+
+      - name: Content JSON check
+        run: jq empty content/content.json
+
+  deploy:
+    needs: check
+    runs-on: ubuntu-24.04
+    env:
+      SSH_HOST: ${{ secrets.SSH_HOST }}
+      SSH_USER: ${{ secrets.SSH_USER }}
+      SSH_PORT: ${{ secrets.SSH_PORT || '22' }}
+      DEPLOY_PATH: ${{ secrets.DEPLOY_PATH || '/var/www/html/hindu.international/public' }}
+      OVERWRITE_CONTENT: ${{ github.event_name == 'workflow_dispatch' && inputs.overwrite_content }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up SSH
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+        run: |
+          if [ -z "$SSH_HOST" ] || [ -z "$SSH_USER" ] || [ -z "$SSH_PRIVATE_KEY" ]; then
+            echo "::error::Add SSH_HOST, SSH_USER and SSH_PRIVATE_KEY in Settings → Secrets and variables → Actions."
+            exit 1
+          fi
+          mkdir -p ~/.ssh && chmod 700 ~/.ssh
+          printf '%s\n' "$SSH_PRIVATE_KEY" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          ssh-keyscan -p "$SSH_PORT" -H "$SSH_HOST" >> ~/.ssh/known_hosts 2>/dev/null
+          cat > ~/.ssh/config <<EOF
+          Host server
+            HostName $SSH_HOST
+            User $SSH_USER
+            Port $SSH_PORT
+            IdentityFile ~/.ssh/deploy_key
+            IdentitiesOnly yes
+          EOF
+
+      - name: Check server
+        run: |
+          ssh server "test -d '$DEPLOY_PATH/content' || { echo 'Folder $DEPLOY_PATH/content not found on the server. Set the DEPLOY_PATH secret.'; exit 1; }
+                      command -v rsync > /dev/null || { echo 'rsync is missing on the server. Run: apt install -y rsync'; exit 1; }"
+          # New files get the same owner as content/, which PHP must be able to write to.
+          OWNER=$(ssh server "stat -c '%U:%G' '$DEPLOY_PATH/content'")
+          echo "Files will be owned by $OWNER"
+          echo "OWNER=$OWNER" >> "$GITHUB_ENV"
+
+      - name: Upload site files
+        run: |
+          rsync -rltz -og --chown="$OWNER" --itemize-changes \
+            --exclude='/.git/' \
+            --exclude='/.github/' \
+            --exclude='/.vscode/' \
+            --exclude='/.gitignore' \
+            --exclude='/README.md' \
+            --exclude='/Simple_Virtual_Punya_Snan_BRD.pdf' \
+            --exclude='/deploy.php' \
+            --exclude='/admin/config.php' \
+            --exclude='/forms/config.php' \
+            --exclude='/content/content.json' \
+            --exclude='/content/content.js' \
+            ./ server:"$DEPLOY_PATH/"
+
+      - name: Upload content (only if missing, or when asked)
+        run: |
+          if [ "$OVERWRITE_CONTENT" = "true" ]; then
+            STAMP=$(date -u +%Y%m%d-%H%M%S)
+            ssh server "set -e
+                        mkdir -p ~/hindu-content-backups/$STAMP
+                        for f in content.json content.js; do
+                          if [ -f '$DEPLOY_PATH'/content/\$f ]; then cp -p '$DEPLOY_PATH'/content/\$f ~/hindu-content-backups/$STAMP/; fi
+                        done"
+            rsync -rltz -og --chown="$OWNER" --itemize-changes content/content.json content/content.js server:"$DEPLOY_PATH/content/"
+            echo "Live content replaced. Previous version saved on the server in ~/hindu-content-backups/$STAMP"
+          else
+            rsync -rltz -og --chown="$OWNER" --itemize-changes --ignore-existing content/content.json content/content.js server:"$DEPLOY_PATH/content/"
+          fi
