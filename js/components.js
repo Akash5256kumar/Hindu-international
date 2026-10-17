@@ -104,12 +104,15 @@
     });
   })();
 
-  /* Safe link: page on this site (page.html, page.html#part, #part), https://, mailto: or tel:
+  /* Safe link: page on this site (page, page#part, #part), https://, mailto: or tel:
      (the admin panel validates the same rule; anything else falls back) */
-  var LINK_RE = /^(https?:\/\/[^\s"'<>]+|mailto:[^\s"'<>]+|tel:\+?[\d\s()-]{3,20}|#[\w-]*|[\w-]+\.html(#[\w-]*)?)$/i;
+  var LINK_RE = /^(https?:\/\/[^\s"'<>]+|mailto:[^\s"'<>]+|tel:\+?[\d\s()-]{3,20}|#[\w-]*|\/|[\w-]+(?:\.html)?(#[\w-]*)?)$/i;
   function safeLink(value, fallback) {
     value = String(value || '').trim();
-    return LINK_RE.test(value) ? value : (fallback || '#');
+    if (!LINK_RE.test(value)) return fallback || '#';
+    value = value.replace(/\.html(?=#|$)/i, '');
+    if (/^index(?:#|$)/i.test(value)) return '/' + value.slice(5);
+    return value || '/';
   }
   window.vpsSafeLink = safeLink;
   function linkAttrs(href) {
@@ -120,13 +123,13 @@
      Comes from Admin → Header, footer & colours → Menu. The defaults below are only
      used when the content has no menu yet (or an older menu without links). */
   var NAV_DEFAULT = [
-    { label: 'Home',              link: 'index.html' },
-    { label: 'About Us',          link: 'about.html' },
-    { label: 'How It Works',      link: 'how-it-works.html' },
-    { label: 'Protect Our Faith', link: 'protect-our-faith.html' },
-    { label: 'Event Information', link: 'event.html' },
-    { label: 'Service / Booking', link: 'booking.html' },
-    { label: 'Contact Us',        link: 'contact.html' }
+    { label: 'Home',              link: '/' },
+    { label: 'About Us',          link: 'about' },
+    { label: 'How It Works',      link: 'how-it-works' },
+    { label: 'Protect Our Faith', link: 'protect-our-faith' },
+    { label: 'Event Information', link: 'event' },
+    { label: 'Service / Booking', link: 'booking' },
+    { label: 'Contact Us',        link: 'contact' }
   ];
   var NAV = (Array.isArray(SITE.nav) && SITE.nav.length ? SITE.nav : NAV_DEFAULT)
     .map(function (item, i) {
@@ -140,10 +143,11 @@
     })
     .filter(function (n) { return n.show && n.label; });
 
-  /* Current page: "protect-our-faith.html" etc. ("" → index.html) */
-  var currentFile = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
+  /* Current page: "protect-our-faith" etc. ("/" → home) */
+  var currentFile = (location.pathname.split('/').pop() || 'index').replace(/\.html$/i, '').toLowerCase();
   function isCurrent(href, fallbackFile) {
-    var file = href.split('#')[0].toLowerCase();
+    var file = href.split('#')[0].replace(/\.html$/i, '').toLowerCase();
+    if (file === '/') file = 'index';
     return !!file && (file === currentFile || file === fallbackFile);
   }
 
@@ -152,16 +156,19 @@
   var logoText = SITE.logoText || 'Hindu.International';
   var logoTagline = SITE.logoTagline == null ? 'Faith · Culture · Community · Worldwide' : SITE.logoTagline;
   var logoSize = /^(md|lg|xl)$/.test(SITE.logoSize || '') ? SITE.logoSize : 'lg';
+  var logoFontFamily = SITE.logoFontFamily === 'sans' ? 'sans' : 'serif';
+  var logoFontSize = /^(20|22|24|26|28|30)$/.test(String(SITE.logoFontSize || '')) ? String(SITE.logoFontSize) : '26';
+  var logoFontWeight = SITE.logoBold === false ? 'regular' : 'bold';
+  var logoTextClass = 'logo__text--' + logoFontFamily + ' logo__text--' + logoFontSize + ' logo__text--' + logoFontWeight;
   function isMedia(path) { return /^(assets|uploads)\/[\w\-./]+$/.test(path || '') && path.indexOf('..') === -1; }
 
   function logoMarkup(imagePath) {
-    if (isMedia(imagePath)) {
-      return '<img class="logo__img" src="' + esc(imagePath) + '" alt="' + esc(logoText) + '">';
-    }
     var dot = logoText.indexOf('.');
-    return '<span class="logo__mark">' + icon('lotus') + '</span>' +
-      '<span class="logo__words">' +
-        '<span class="logo__text">' + (dot > 0
+    var mark = isMedia(imagePath)
+      ? '<img class="logo__img" src="' + esc(imagePath) + '" alt="">'
+      : '<span class="logo__mark">' + icon('lotus') + '</span>';
+    return mark + '<span class="logo__words">' +
+        '<span class="logo__text ' + logoTextClass + '">' + (dot > 0
           ? esc(logoText.slice(0, dot)) + '<span class="logo__dot">.</span>' + esc(logoText.slice(dot + 1))
           : esc(logoText)) + '</span>' +
         (logoTagline ? '<span class="logo__tagline">' + esc(logoTagline) + '</span>' : '') +
@@ -175,16 +182,16 @@
       var current = isCurrent(n.href, anyCurrent ? '' : fallback) ? ' aria-current="page"' : '';
       return '<li><a class="nav__link" ' + linkAttrs(n.href) + current + '>' + esc(n.label) + '</a></li>';
     }).join('');
-    var ctaText = SITE.headerCta == null ? 'Request Service' : SITE.headerCta;
+    var ctaText = SITE.headerCta == null ? 'Donate Us' : SITE.headerCta;
     var cta = ctaText
-      ? '<a class="btn btn--primary btn--sm nav__cta" ' + linkAttrs(safeLink(SITE.headerCtaLink, 'booking.html')) + '>' +
+      ? '<a class="btn btn--primary btn--sm nav__cta" ' + linkAttrs(safeLink(SITE.headerCtaLink, 'donate')) + '>' +
           esc(ctaText) + icon('arrow', 'icon--arrow') + '</a>'
       : '';
 
     el.outerHTML =
       '<header class="site-header" id="top">' +
         '<div class="container header__inner">' +
-          '<a class="logo logo--' + logoSize + '" href="index.html" aria-label="' + esc(logoText) + ' — Home">' + logoMarkup(SITE.logoImage) + '</a>' +
+          '<a class="logo logo--' + logoSize + '" href="/" aria-label="' + esc(logoText) + ' — Home">' + logoMarkup(SITE.logoImage) + '</a>' +
           '<nav class="nav" id="site-nav" aria-label="Main">' +
             '<ul class="nav__list">' + links + '</ul>' + cta +
           '</nav>' +
@@ -196,12 +203,12 @@
   }
 
   var FOOTER_LINKS_DEFAULT = [
-    { label: 'Virtual Punya Snan', link: 'booking.html' },
-    { label: 'Event Details', link: 'event.html' },
-    { label: 'Donate', link: 'donate.html' },
-    { label: 'FAQs', link: 'how-it-works.html#faq' },
-    { label: 'Privacy Policy', link: 'privacy.html' },
-    { label: 'Terms & Conditions', link: 'terms.html' }
+    { label: 'Virtual Punya Snan', link: 'booking' },
+    { label: 'Event Details', link: 'event' },
+    { label: 'Donate', link: 'donate' },
+    { label: 'FAQs', link: 'how-it-works#faq' },
+    { label: 'Privacy Policy', link: 'privacy' },
+    { label: 'Terms & Conditions', link: 'terms' }
   ];
 
   function linkList(items) {
@@ -217,7 +224,7 @@
       '<footer class="site-footer">' +
         '<div class="container footer__grid">' +
           '<div class="footer__brand">' +
-            '<a class="logo logo--light logo--' + logoSize + '" href="index.html" aria-label="' + esc(logoText) + ' — Home">' + logoMarkup(footerLogo) + '</a>' +
+            '<a class="logo logo--light logo--' + logoSize + '" href="/" aria-label="' + esc(logoText) + ' — Home">' + logoMarkup(footerLogo) + '</a>' +
             '<p class="footer__tagline">' + escLines(SITE.footerTagline || 'Your Faith. Our Service.\nDivine Blessings, Always.') + '</p>' +
             '<ul class="footer__social" data-social></ul>' +
           '</div>' +

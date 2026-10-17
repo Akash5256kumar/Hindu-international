@@ -1,5 +1,5 @@
 <?php
-/* First-time setup: create the admin login. Needs the setup key from admin/config.php.
+/* First-time setup: create the admin login. Needs the private setup key.
    Disabled automatically once a login exists. */
 declare(strict_types=1);
 require __DIR__ . '/includes/bootstrap.php';
@@ -31,7 +31,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
 auth_page_start('Create admin login');
 ?>
     <h1>Create admin login</h1>
-    <p class="muted">This is done once. You need the <strong>setup key</strong> from <code>admin/config.php</code>.</p>
+    <p class="muted">This is done once. You need the private <strong>setup key</strong> provided by the site administrator.</p>
     <?php auth_error($error); ?>
     <form method="post" class="stack" novalidate>
       <input type="hidden" name="csrf" value="<?= e(csrf_token()) ?>">

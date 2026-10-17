@@ -247,6 +247,16 @@ h3 { font-size: 1.2rem; }
 .logo__mark .icon { width: var(--logo-mark); height: var(--logo-mark); stroke-width: 1.3; }
 .logo__words { display: flex; flex-direction: column; gap: 5px; }
 .logo__text { font-family: var(--font-serif); font-weight: 700; font-size: var(--logo-text); line-height: 1.05; letter-spacing: -.005em; white-space: nowrap; }
+.logo__text--serif { font-family: var(--font-serif); }
+.logo__text--sans { font-family: var(--font-sans); }
+.logo__text--regular { font-weight: 400; }
+.logo__text--bold { font-weight: 700; }
+.logo__text--20 { font-size: 20px; }
+.logo__text--22 { font-size: 22px; }
+.logo__text--24 { font-size: 24px; }
+.logo__text--26 { font-size: 26px; }
+.logo__text--28 { font-size: 28px; }
+.logo__text--30 { font-size: 30px; }
 .logo__tagline { font-family: var(--font-sans); font-size: calc(var(--logo-text) * .43); font-weight: 500; letter-spacing: .02em; color: var(--ink-2); white-space: nowrap; }
 .logo__dot { color: var(--saffron); }
 /* Uploaded logo: fixed height, natural width — never stretched */

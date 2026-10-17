@@ -16,8 +16,9 @@ index.html … contact.html   Pages (layout + default text)
 css/                        style.css (design tokens, components) · responsive.css · faith.css (Protect Our Faith) · roots.css (Donate)
 js/components.js            Header, navigation, footer, icon set (shared by all pages)
 js/script.js                Fills pages from content, menu, uploads preview, forms
+js/seo.js                   Applies admin-managed page titles, descriptions, canonical and social metadata
 js/donate.js                Donation form: amounts, payment method, UPI payment step
-content/content.json        ALL editable text, images, events, contact details (source of truth)
+content/content.json        Editable text, images, events, SEO metadata and contact details (source of truth)
 content/content.js          Generated from content.json — loaded by the pages. Do not edit by hand.
 assets/                     Built-in images, icons, videos
 uploads/                    Files uploaded through the admin panel
@@ -32,14 +33,15 @@ Also editable without a developer:
 - **Header, footer & colours:** logo text, tagline and size, an optional logo image (plus a light version for the footer), menu items (label, link, order, show/hide, add/remove), the header button text and link, footer headings, footer links and the copyright line.
 - **Button text and links** on the Home and Protect Our Faith pages. A link can be a page (`donate.html`, `donate.html#donate-form`), a section (`#anti-conversion`), a full `https://` link, `mailto:` or `tel:`. An empty button text hides the button.
 - **Page layout** (Home, Protect Our Faith): show or hide each section and change the order. On Protect Our Faith you can also add **custom sections** (label, heading, text, button, photo); the section numbers 01, 02 … follow the order automatically.
+- **On-page SEO** for every public page: browser/search title, publisher metadata, meta description, focus-keyword notes, canonical URL, index/follow controls, an `X-Robots-Tag` response header and social-sharing title, description and image. Privacy and Terms pages remain noindex by default. Search engines do not use meta keywords or the publisher meta tag as ranking signals.
 - **Cards and list items** can be added, removed, reordered and switched off individually.
 
 **First-time setup (once per server)**
 1. Open `https://your-domain/admin/`. You are sent to the setup page.
-2. Enter the **setup key** from `admin/config.php`, choose a username and a password (10+ characters).
+2. Enter the **setup key** from the private server configuration, choose a username and a password (10+ characters).
 3. Log in. Setup is switched off automatically after the login exists.
 
-Before going live, replace `setup_key` in `admin/config.php` with a new random value.
+On the VPS, keep the production settings in `/etc/hindu.international/admin.php` and `/etc/hindu.international/forms.php`, outside the web root. Never upload these settings or `admin/config.php` / `forms/config.php` to the public web root.
 
 **How it works**
 - `admin/includes/schema.php` defines every editable field. The editor form and the server validation are both generated from it, so to make a new piece of text editable: add the field to the schema, the default value to `content/content.json`, and `data-bind="path.to.field"` to the element in the HTML.
@@ -49,22 +51,22 @@ Before going live, replace `setup_key` in `admin/config.php` with a new random v
 - Each save keeps a backup of the previous content in `admin/data/backups/` (last 20).
 
 **Security**
-- Password stored only as a hash (`admin/data/credentials.php`); login locks for 15 minutes after 5 wrong attempts; session expires after 2 hours idle.
+- Production admin credentials, login attempts and content backups are stored outside the web root in `/var/lib/hindu.international/admin-data/`. Passwords are stored only as hashes; login locks for 15 minutes after 5 wrong attempts; session expires after 2 hours idle.
 - CSRF protection on every change, strict Content-Security-Policy, the admin cannot be framed, HTTPS enforced.
 - Uploads are checked by their real file type, saved with random names, and cannot be executed (`uploads/.htaccess`). SVG files are rebuilt from an allow-list, which removes scripts, event handlers and external links.
 - `admin/includes` and `admin/data` are blocked from the web (`.htaccess`).
 
-**Forgot the password?** Delete `admin/data/credentials.php` in Hostinger's File Manager and run the setup again.
+**Forgot the password?** On the VPS, remove `/var/lib/hindu.international/admin-data/credentials.php` and run the setup again.
 
 ## Forms
 Both forms post to `forms/submit.php`, which validates the input and emails it to `VPS_RECIPIENT` (the booking form attaches the photograph; nothing is stored on the server). Before going live:
-1. Set `VPS_RECIPIENT` and `VPS_FROM` in `forms/config.php`. `VPS_FROM` must be a mailbox on your own domain (create it in Hostinger → Emails).
+1. Set `VPS_RECIPIENT` and `VPS_FROM` in the private production config at `/etc/hindu.international/forms.php`. `VPS_FROM` must be a mailbox configured to send mail for your domain.
 2. Send a test request from the live site and check it arrives, including the photo.
 
 No payment or order system is included (not confirmed in the BRD).
 
 ## Deploying to Hostinger
-1. Upload the whole folder (including all `.htaccess` files) to `public_html` with the File Manager or FTP.
+1. Upload the public site and application code (including all `.htaccess` files) to the web root. Keep admin/form configuration and admin runtime data outside the web root as described above.
 2. Make sure PHP 8.0 or newer is selected (hPanel → Advanced → PHP Configuration).
 3. The folders `content/`, `uploads/` and `admin/data/` must be writable by PHP (they are by default on Hostinger).
 4. For large videos, raise `upload_max_filesize` and `post_max_size` in PHP Configuration (the admin allows up to 60 MB; change `max_video_mb` in `admin/config.php`).

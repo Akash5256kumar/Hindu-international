@@ -305,7 +305,7 @@
       rows: multiline ? (field.rows || 3) : null,
       type: multiline ? null : ({ url: 'url', embed: 'url', digits: 'text', phone: 'tel' }[field.type] || 'text'),
       inputmode: field.type === 'digits' ? 'numeric' : null,
-      placeholder: { url: 'https://', embed: 'https://www.youtube.com/embed/…', link: 'e.g. donate.html, #section or https://…' }[field.type] || null
+      placeholder: { url: 'https://', embed: 'https://www.youtube.com/embed/…', link: 'e.g. donate, #section or https://…' }[field.type] || null
     });
     if (field.type === 'url' || field.type === 'embed' || field.type === 'link') input.spellcheck = false;
     input.value = value == null ? '' : String(value);

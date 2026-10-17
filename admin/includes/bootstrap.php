@@ -13,7 +13,12 @@ if (PHP_VERSION_ID < 80000) {
 
 define('ADMIN_DIR', dirname(__DIR__));
 define('SITE_DIR', dirname(__DIR__, 2));
-define('DATA_DIR', ADMIN_DIR . '/data');
+define(
+    'DATA_DIR',
+    is_dir('/var/lib/hindu.international/admin-data')
+        ? '/var/lib/hindu.international/admin-data'
+        : (in_array(PHP_SAPI, ['cli', 'cli-server'], true) ? ADMIN_DIR . '/data' : '/var/lib/hindu.international/admin-data')
+);
 define('CONTENT_DIR', SITE_DIR . '/content');
 define('UPLOAD_DIR', SITE_DIR . '/uploads');
 
@@ -23,12 +28,22 @@ require __DIR__ . '/content.php';
 require __DIR__ . '/upload.php';
 require __DIR__ . '/svg-sanitizer.php';
 
-/** Read a value from admin/config.php */
+/** Read private server settings, with the project config reserved for local development. */
 function config(string $key)
 {
     static $config = null;
     if ($config === null) {
-        $config = require ADMIN_DIR . '/config.php';
+        $configPath = '/etc/hindu.international/admin.php';
+        if (!is_file($configPath) && in_array(PHP_SAPI, ['cli', 'cli-server'], true)) {
+            $configPath = ADMIN_DIR . '/config.php';
+        }
+        if (!is_file($configPath)) {
+            throw new RuntimeException('Private admin configuration is unavailable.');
+        }
+        $config = require $configPath;
+        if (!is_array($config)) {
+            throw new UnexpectedValueException('Private admin configuration must return an array.');
+        }
     }
     return $config[$key] ?? null;
 }
