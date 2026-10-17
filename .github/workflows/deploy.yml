@@ -1,0 +1,83 @@
+name: Deploy to server
+
+# Every push to main is copied to the VPS over SSH (rsync).
+# Admin-managed data on the server is never overwritten:
+#   - content/content.json + content.js are only uploaded if missing,
+#     unless the workflow is run manually with "overwrite_content".
+#   - uploads/ and admin data are left alone (nothing is ever deleted on the server).
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      overwrite_content:
+        description: "Replace the live content.json/content.js with the repo version (live admin edits are backed up, then lost)"
+        type: boolean
+        default: false
+
+concurrency:
+  group: deploy-production
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: production
+    env:
+      SSH_HOST: ${{ secrets.SSH_HOST }}
+      SSH_USER: ${{ secrets.SSH_USER }}
+      SSH_PORT: ${{ secrets.SSH_PORT || '22' }}
+      DEPLOY_PATH: ${{ secrets.DEPLOY_PATH || '/var/www/html/hindu.international/public' }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check PHP syntax
+        run: |
+          find . -name '*.php' -not -path './.git/*' -print0 | xargs -0 -n1 php -l > /dev/null
+
+      - name: Set up SSH key
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          SSH_KNOWN_HOSTS: ${{ secrets.SSH_KNOWN_HOSTS }}
+        run: |
+          test -n "$SSH_HOST" && test -n "$SSH_USER" && test -n "$SSH_PRIVATE_KEY" \
+            || { echo "::error::Set the SSH_HOST, SSH_USER and SSH_PRIVATE_KEY secrets"; exit 1; }
+          install -m 700 -d ~/.ssh
+          printf '%s\n' "$SSH_PRIVATE_KEY" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          if [ -n "$SSH_KNOWN_HOSTS" ]; then
+            printf '%s\n' "$SSH_KNOWN_HOSTS" > ~/.ssh/known_hosts
+          else
+            ssh-keyscan -p "$SSH_PORT" "$SSH_HOST" > ~/.ssh/known_hosts 2>/dev/null
+          fi
+          echo "RSH=ssh -i $HOME/.ssh/deploy_key -p $SSH_PORT -o StrictHostKeyChecking=yes" >> "$GITHUB_ENV"
+
+      - name: Upload site files
+        run: |
+          rsync -rltvz --rsh="$RSH" \
+            --exclude='.git/' --exclude='.github/' --exclude='.vscode/' \
+            --exclude='.gitignore' --exclude='.DS_Store' \
+            --exclude='README.md' --exclude='*.pdf' --exclude='*.zip' \
+            --exclude='deploy.php' \
+            --exclude='/admin/config.php' --exclude='/forms/config.php' \
+            --exclude='/content/content.json' --exclude='/content/content.js' \
+            ./ "$SSH_USER@$SSH_HOST:$DEPLOY_PATH/"
+
+      - name: Upload content (only if missing on the server)
+        if: ${{ !inputs.overwrite_content }}
+        run: |
+          rsync -rltvz --ignore-existing --rsh="$RSH" \
+            content/content.json content/content.js "$SSH_USER@$SSH_HOST:$DEPLOY_PATH/content/"
+
+      - name: Back up and replace live content
+        if: ${{ inputs.overwrite_content }}
+        run: |
+          $RSH "$SSH_USER@$SSH_HOST" "set -e; d=\$HOME/hindu-content-backups/$(date +%Y%m%d-%H%M%S); mkdir -p \$d; cp -p '$DEPLOY_PATH'/content/content.json '$DEPLOY_PATH'/content/content.js \$d/ 2>/dev/null || true; echo Backup: \$d"
+          rsync -rltvz --rsh="$RSH" \
+            content/content.json content/content.js "$SSH_USER@$SSH_HOST:$DEPLOY_PATH/content/"
+          # Keep the files writable by the admin panel (PHP user owns the content folder).
+          $RSH "$SSH_USER@$SSH_HOST" "chown --reference='$DEPLOY_PATH/content' '$DEPLOY_PATH'/content/content.json '$DEPLOY_PATH'/content/content.js 2>/dev/null || true"
+
+      - name: Clean up key
+        if: always()
+        run: rm -f ~/.ssh/deploy_key

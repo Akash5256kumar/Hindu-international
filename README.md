@@ -65,6 +65,12 @@ Both forms post to `forms/submit.php`, which validates the input and emails it t
 
 No payment or order system is included (not confirmed in the BRD).
 
+## Automatic deploy (GitHub Actions)
+Every push to `main` runs `.github/workflows/deploy.yml`, which checks the PHP syntax and copies the site to the VPS with rsync over SSH.
+- Repository secrets (GitHub → Settings → Secrets and variables → Actions): `SSH_HOST`, `SSH_USER`, `SSH_PRIVATE_KEY` (required); `SSH_PORT` (default 22), `DEPLOY_PATH` (default `/var/www/html/hindu.international/public`), `SSH_KNOWN_HOSTS` (optional, output of `ssh-keyscan`).
+- Never deployed: `.git`, `README.md`, the BRD PDF, `deploy.php`, `admin/config.php`, `forms/config.php`. Nothing on the server is deleted, so `uploads/` and admin data are safe.
+- `content/content.json` and `content.js` are uploaded only if they are missing, so live admin edits are kept. To push the repo's content over the live content, run the workflow manually (Actions → Deploy to server → Run workflow) with **overwrite_content** ticked; the live files are first copied to `~/hindu-content-backups/` on the server.
+
 ## Deploying to Hostinger
 1. Upload the public site and application code (including all `.htaccess` files) to the web root. Keep admin/form configuration and admin runtime data outside the web root as described above.
 2. Make sure PHP 8.0 or newer is selected (hPanel → Advanced → PHP Configuration).
