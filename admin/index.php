@@ -11,14 +11,14 @@ Auth::requirePage();
   <meta name="robots" content="noindex, nofollow">
   <meta name="csrf-token" content="<?= e(csrf_token()) ?>">
   <title>Content editor · Hindu.International Admin</title>
-  <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/admin.css">
+  <link rel="icon" href="../assets/images/brand/logo-mark.png?v=brand-favicon-20261008" type="image/png">
+  <link rel="stylesheet" href="assets/admin.css?v=brand-logo-20261008">
 </head>
 <body class="app">
   <header class="topbar">
     <a class="topbar__brand" href="index.php">
-      <img src="../assets/icons/favicon.svg" alt="" width="30" height="30">
-      <span><strong>Hindu.International</strong> Admin</span>
+      <img src="../assets/images/brand/logo.png" alt="Hindu.International" width="220" height="61">
+      <span>Admin</span>
     </a>
     <div class="topbar__actions">
       <span class="save-status" id="save-status" role="status" aria-live="polite"></span>
@@ -63,6 +63,6 @@ Auth::requirePage();
 
   <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
 
-  <script src="assets/admin.js"></script>
+  <script src="assets/admin.js?v=clean-url-inputs-20261008"></script>
 </body>
 </html>

@@ -15,6 +15,23 @@ DirectoryIndex index.html
   ExpiresByType application/javascript "access plus 7 days"
 </IfModule>
 
+# Tell crawlers whether each public page can be indexed. Privacy and Terms remain noindex.
+<IfModule mod_setenvif.c>
+  SetEnvIf Request_URI "^/$|^/(?:about|how-it-works|protect-our-faith|donate|event|booking|contact)(?:\.html)?/?$" seo_public_page
+  SetEnvIf Request_URI "^/(?:privacy|terms)(?:\.html)?/?$" seo_noindex_page
+</IfModule>
+<IfModule mod_headers.c>
+  Header always set X-Robots-Tag "index, follow" env=seo_public_page
+  Header always set X-Robots-Tag "noindex, follow" env=seo_noindex_page
+</IfModule>
+
+# The admin rewrites this file in place, so browsers must revalidate it to see new content and image paths.
+<Files "content.js">
+  <IfModule mod_headers.c>
+    Header set Cache-Control "no-cache, must-revalidate, max-age=0"
+  </IfModule>
+</Files>
+
 # Never serve the form settings file directly
 <Files "config.php">
   Require all denied
@@ -23,5 +40,20 @@ DirectoryIndex index.html
 # "Preserve Our Roots" was renamed to "Protect Our Faith": send old links to the new page
 <IfModule mod_rewrite.c>
   RewriteEngine On
-  RewriteRule ^preserve-our-roots\.html$ protect-our-faith.html [R=301,L]
+
+  # Preserve the old page name while using the canonical clean URL.
+  RewriteRule ^preserve-our-roots(?:\.html)?/?$ /protect-our-faith [R=301,L,NE]
+
+  # The home page canonical URL is the site root.
+  RewriteRule ^index\.html$ / [R=301,L,NE]
+
+  # Keep legacy .html links working, but send visitors to the extensionless URL.
+  RewriteCond %{THE_REQUEST} \s/+([^\s?]+)\.html(?:[?\s]) [NC]
+  RewriteRule ^(.+)\.html$ /$1 [R=301,L,NE]
+
+  # Serve existing root-level .html pages at clean extensionless URLs.
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+  RewriteRule ^([A-Za-z0-9-]+)/?$ $1.html [END]
 </IfModule>

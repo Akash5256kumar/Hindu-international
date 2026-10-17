@@ -1,11 +1,125 @@
 {
+    "seo": {
+        "pages": {
+            "home": {
+                "title": "Virtual Punya Snan | Hindu.International",
+                "description": "Cannot attend the sacred event? Hindu.International performs the holy ritual on your behalf using your photograph and shares the recorded video with you.",
+                "keywords": "Virtual Punya Snan, sacred ritual, Hindu pilgrimage, holy dip, online puja",
+                "canonical": "https://hindu.international/",
+                "index": true,
+                "follow": true,
+                "ogTitle": "Virtual Punya Snan by Hindu.International",
+                "ogDescription": "Your devotion can reach the sacred event from anywhere. We perform the holy ritual on your behalf and share the recorded video.",
+                "ogImage": "assets/images/hero-devotee.jpg"
+            },
+            "about": {
+                "title": "About Us | Hindu.International",
+                "description": "Learn about Hindu.International and our Virtual Punya Snan service for devotees who cannot personally attend the sacred event.",
+                "keywords": "about Hindu.International, Virtual Punya Snan, Hindu devotional service",
+                "canonical": "https://hindu.international/about",
+                "index": true,
+                "follow": true,
+                "ogTitle": "About Hindu.International",
+                "ogDescription": "Our journey is rooted in faith, service and devotion.",
+                "ogImage": "assets/images/about-banner.jpg"
+            },
+            "how": {
+                "title": "How It Works | Hindu.International",
+                "description": "See how to request Virtual Punya Snan: submit your details and photograph, our team performs and records the sacred ritual, then shares your video.",
+                "keywords": "how Virtual Punya Snan works, sacred ritual video, online Hindu service",
+                "canonical": "https://hindu.international/how-it-works",
+                "index": true,
+                "follow": true,
+                "ogTitle": "How Virtual Punya Snan Works",
+                "ogDescription": "A simple process to connect you with divine blessings.",
+                "ogImage": "assets/images/hero-devotee.jpg"
+            },
+            "faith": {
+                "title": "Protect Our Faith | Hindu.International",
+                "description": "Hinduism is our heritage. Learn about anti-conversion, vulnerability and how to support freedom of faith through awareness, compassion and lawful action.",
+                "keywords": "protect Hindu faith, Hindu heritage, freedom of faith, anti-conversion awareness",
+                "canonical": "https://hindu.international/protect-our-faith",
+                "index": true,
+                "follow": true,
+                "ogTitle": "Protect Our Faith | Hindu.International",
+                "ogDescription": "Hinduism Is Our Heritage. Our Faith Deserves Protection.",
+                "ogImage": "assets/images/faith/hero-family.jpg"
+            },
+            "donate": {
+                "title": "Donate Us | Support Our Mission | Hindu.International",
+                "description": "Support education, healthcare, food, livelihoods and community development for vulnerable Hindu communities in rural and underserved areas.",
+                "keywords": "donate Hindu charity, support Hindu communities, Hindu heritage, community development",
+                "canonical": "https://hindu.international/donate",
+                "index": true,
+                "follow": true,
+                "ogTitle": "Donate Us | Be a Part of the Change | Hindu.International",
+                "ogDescription": "Support our mission to preserve Hindu heritage and help vulnerable communities.",
+                "ogImage": "assets/images/faith/donation-bowl.jpg"
+            },
+            "event": {
+                "title": "Event Information | Hindu.International",
+                "description": "Learn about the sacred event, its spiritual significance, dates and location, and request Virtual Punya Snan to participate from anywhere.",
+                "keywords": "Hindu sacred event, event information, Virtual Punya Snan dates",
+                "canonical": "https://hindu.international/event",
+                "index": true,
+                "follow": true,
+                "ogTitle": "Event Information | Hindu.International",
+                "ogDescription": "Know more about the sacred event, its significance, dates and location.",
+                "ogImage": "assets/images/event-banner.jpg"
+            },
+            "booking": {
+                "title": "Request Virtual Punya Snan | Hindu.International",
+                "description": "Submit your details and photograph to request Virtual Punya Snan. Our team performs the ritual at the sacred event and shares the recorded video.",
+                "keywords": "request Virtual Punya Snan, book Hindu ritual, sacred ritual booking",
+                "canonical": "https://hindu.international/booking",
+                "index": true,
+                "follow": true,
+                "ogTitle": "Request Virtual Punya Snan",
+                "ogDescription": "Fill in the details below to submit your service request.",
+                "ogImage": "assets/images/hero-devotee.jpg"
+            },
+            "contact": {
+                "title": "Contact Us | Hindu.International",
+                "description": "Contact Hindu.International by phone, WhatsApp or email for questions or help with your Virtual Punya Snan service request.",
+                "keywords": "contact Hindu.International, Virtual Punya Snan help, Hindu service support",
+                "canonical": "https://hindu.international/contact",
+                "index": true,
+                "follow": true,
+                "ogTitle": "Contact Us | Hindu.International",
+                "ogDescription": "We are here to help you. Get in touch for any queries or assistance.",
+                "ogImage": "assets/images/contact-banner.jpg"
+            },
+            "privacy": {
+                "title": "Privacy Policy | Hindu.International",
+                "description": "Read how Hindu.International collects, uses and protects your personal details and photograph when you use our services.",
+                "keywords": "Hindu.International privacy policy, personal data, photo privacy",
+                "canonical": "https://hindu.international/privacy",
+                "index": false,
+                "follow": true,
+                "ogTitle": "Privacy Policy | Hindu.International",
+                "ogDescription": "How Hindu.International collects and uses your details and photograph.",
+                "ogImage": "assets/images/brand/logo.png"
+            },
+            "terms": {
+                "title": "Terms & Conditions | Hindu.International",
+                "description": "Read the terms and conditions for using the Hindu.International Virtual Punya Snan service.",
+                "keywords": "Hindu.International terms and conditions, Virtual Punya Snan terms",
+                "canonical": "https://hindu.international/terms",
+                "index": false,
+                "follow": true,
+                "ogTitle": "Terms & Conditions | Hindu.International",
+                "ogDescription": "Terms and conditions for the Virtual Punya Snan service.",
+                "ogImage": "assets/images/brand/logo.png"
+            }
+        }
+    },
     "home": {
         "hero": {
-            "eyebrow": "When You Cannot Be There,\nYour Devotion Still Reaches",
+            "eyebrow": "When You Cannot Be There,\nYour Devotion Still Reachesss",
             "title": "Virtual\nPunya Snan",
             "text": "Experience the divine blessings of a sacred event from anywhere in the world. We perform the holy ritual on your behalf using your photograph and share the recorded video with you.",
-            "primaryText": "Request Service",
-            "primaryLink": "booking.html",
+            "primaryText": "Donate Us",
+            "primaryLink": "donate.html",
             "secondaryText": "Watch How It Works",
             "secondaryLink": "how-it-works.html",
             "image": "uploads/2026/09/whatsapp-image-2026-09-29-at-3-02-29-pm-9eb9be1f.jpg",
@@ -183,21 +297,17 @@
                 "style": "plain"
             }
         ],
-        "page": {
-            "title": "Protect Our Faith | Hindu.International",
-            "description": "Hinduism is our heritage. No Hindu should be pressured, deceived or coerced into leaving their faith. Learn about anti-conversion, vulnerability and how you can help."
-        },
         "hero": {
             "eyebrow": "Hinduism · Sanatan Dharma · Freedom of Faith",
             "title": "Hinduism Is Our Heritage.\nOur Faith",
             "titleAccent": "Deserves Protection.",
-            "subtitle": "No Hindu Should Be Pressured, Deceived, or Coerced\nInto Leaving Their Faith.",
+            "subtitle": "Help Us In Keeping Them Hindus | Protect their faith, preserve their culture and heritage.",
             "text": "Hinduism is a living civilisation of spiritual wisdom, sacred traditions, philosophy, and diverse paths to the divine. We stand for preserving Hindu heritage and protecting every person’s freedom to make religious choices without force, fraud, exploitation, or pressure.",
             "primaryText": "Understand Anti-Conversion",
             "primaryLink": "#anti-conversion",
             "secondaryText": "Support Our Mission",
             "secondaryLink": "donate.html",
-            "image": "assets/images/faith/hero-family.jpg",
+            "image": "uploads/2026/10/whatsapp-image-2026-10-08-at-9-33-14-am-2fbdff61.jpg",
             "imageAlt": "A Hindu family watching the evening aarti on the river ghats at sunset"
         },
         "heritage": {
@@ -206,7 +316,7 @@
             "text": "Hinduism connects generations through Dharma, spiritual knowledge, festivals, sacred texts, temples, family traditions, and a rich philosophical heritage. Preserving Hindu identity means passing this knowledge forward and ensuring that people can practise their faith with dignity and freedom.",
             "callout": "Protect Hindu heritage through\nknowledge, opportunity, dignity, and freedom of choice.",
             "calloutIcon": "lotus",
-            "image": "assets/images/faith/heritage-aarti.jpg",
+            "image": "uploads/2026/10/whatsapp-image-2026-10-08-at-9-33-16-am--67823b26.jpg",
             "imageAlt": "Hands holding an aarti plate with a lit diya and flowers beside a temple on the river"
         },
         "issue": {
@@ -286,8 +396,8 @@
                     "text": "Help people facing credible coercion or fraud understand their rights and seek appropriate assistance."
                 }
             ],
-            "decorLeft": "assets/images/faith/temple-left.jpg",
-            "decorRight": "assets/images/faith/temple-right.jpg"
+            "decorLeft": "uploads/2026/10/whatsapp-image-2026-10-08-at-9-50-14-am-8880d64d.jpg",
+            "decorRight": "uploads/2026/10/whatsapp-image-2026-10-08-at-9-50-13-am-645d4c2f.jpg"
         },
         "support": {
             "label": "Be Part of the Change",
@@ -315,14 +425,14 @@
                     "text": "Hindu heritage education and cultural preservation."
                 }
             ],
-            "image": "assets/images/faith/donation-bowl.jpg",
+            "image": "uploads/2026/10/whatsapp-image-2026-10-08-at-9-33-16-am-c95b0ba3.jpg",
             "imageAlt": "A hand placing a coin in a brass offering bowl among marigolds and diyas"
         },
         "respect": {
             "label": "Freedom, Dignity and Respect",
             "title": "Protect Our Faith. Respect Every Person.",
             "text": "We believe Hindu heritage deserves to be understood, preserved, and respected. We encourage people to learn about Hinduism, understand their roots, and make informed choices without fear or pressure.\n\nIf a Hindu freely chooses to follow another religion, that personal choice deserves respect. We also ask everyone to discuss Hinduism and Hindu communities honestly and respectfully, without spreading false claims, insults, or hatred. Differences in belief should never become a reason to demean a community.",
-            "image": "assets/images/faith/respect-prayer.jpg",
+            "image": "uploads/2026/10/whatsapp-image-2026-10-08-at-9-33-17-am-85f064e5.jpg",
             "imageAlt": "A woman praying beside the river as the sun sets behind temples"
         },
         "cta": {
@@ -332,21 +442,169 @@
             "buttonText": "",
             "buttonLink": "donate.html",
             "tagline": "Faith · Culture · Community · Worldwide",
-            "image": "assets/images/faith/cta-temples.jpg"
+            "image": "uploads/2026/10/whatsapp-image-2026-10-08-at-9-37-40-am-9e45390e.jpg"
+        }
+    },
+    "seo": {
+        "pages": {
+            "home": {
+                "title": "Virtual Punya Snan | Hindu.International",
+                "description": "Cannot attend the sacred event? Hindu.International performs the holy ritual on your behalf using your photograph and shares the recorded video with you.",
+                "keywords": "Virtual Punya Snan, sacred ritual, Hindu pilgrimage, holy dip, online puja",
+                "canonical": "https://hindu.international/",
+                "index": true,
+                "follow": true,
+                "ogTitle": "Virtual Punya Snan by Hindu.International",
+                "ogDescription": "Your devotion can reach the sacred event from anywhere. We perform the holy ritual on your behalf and share the recorded video.",
+                "ogImage": "assets/images/hero-devotee.jpg"
+            },
+            "about": {
+                "title": "About Us | Hindu.International",
+                "description": "Learn about Hindu.International and our Virtual Punya Snan service for devotees who cannot personally attend the sacred event.",
+                "keywords": "about Hindu.International, Virtual Punya Snan, Hindu devotional service",
+                "canonical": "https://hindu.international/about",
+                "index": true,
+                "follow": true,
+                "ogTitle": "About Hindu.International",
+                "ogDescription": "Our journey is rooted in faith, service and devotion.",
+                "ogImage": "assets/images/about-banner.jpg"
+            },
+            "how": {
+                "title": "How It Works | Hindu.International",
+                "description": "See how to request Virtual Punya Snan: submit your details and photograph, our team performs and records the sacred ritual, then shares your video.",
+                "keywords": "how Virtual Punya Snan works, sacred ritual video, online Hindu service",
+                "canonical": "https://hindu.international/how-it-works",
+                "index": true,
+                "follow": true,
+                "ogTitle": "How Virtual Punya Snan Works",
+                "ogDescription": "A simple process to connect you with divine blessings.",
+                "ogImage": "assets/images/hero-devotee.jpg"
+            },
+            "faith": {
+                "title": "Protect Our Faith | Hindu.International",
+                "description": "Hinduism is our heritage. Learn about anti-conversion, vulnerability and how to support freedom of faith through awareness, compassion and lawful action.",
+                "keywords": "protect Hindu faith, Hindu heritage, freedom of faith, anti-conversion awareness",
+                "canonical": "https://hindu.international/protect-our-faith",
+                "index": true,
+                "follow": true,
+                "ogTitle": "Protect Our Faith | Hindu.International",
+                "ogDescription": "Hinduism Is Our Heritage. Our Faith Deserves Protection.",
+                "ogImage": "assets/images/faith/hero-family.jpg"
+            },
+            "donate": {
+                "title": "Donate Us | Support Our Mission | Hindu.International",
+                "description": "Support education, healthcare, food, livelihoods and community development for vulnerable Hindu communities in rural and underserved areas.",
+                "keywords": "donate Hindu charity, support Hindu communities, Hindu heritage, community development",
+                "canonical": "https://hindu.international/donate",
+                "index": true,
+                "follow": true,
+                "ogTitle": "Donate Us | Be a Part of the Change | Hindu.International",
+                "ogDescription": "Support our mission to preserve Hindu heritage and help vulnerable communities.",
+                "ogImage": "assets/images/faith/donation-bowl.jpg"
+            },
+            "event": {
+                "title": "Event Information | Hindu.International",
+                "description": "Learn about the sacred event, its spiritual significance, dates and location, and request Virtual Punya Snan to participate from anywhere.",
+                "keywords": "Hindu sacred event, event information, Virtual Punya Snan dates",
+                "canonical": "https://hindu.international/event",
+                "index": true,
+                "follow": true,
+                "ogTitle": "Event Information | Hindu.International",
+                "ogDescription": "Know more about the sacred event, its significance, dates and location.",
+                "ogImage": "assets/images/event-banner.jpg"
+            },
+            "booking": {
+                "title": "Request Virtual Punya Snan | Hindu.International",
+                "description": "Submit your details and photograph to request Virtual Punya Snan. Our team performs the ritual at the sacred event and shares the recorded video.",
+                "keywords": "request Virtual Punya Snan, book Hindu ritual, sacred ritual booking",
+                "canonical": "https://hindu.international/booking",
+                "index": true,
+                "follow": true,
+                "ogTitle": "Request Virtual Punya Snan",
+                "ogDescription": "Fill in the details below to submit your service request.",
+                "ogImage": "assets/images/hero-devotee.jpg"
+            },
+            "contact": {
+                "title": "Contact Us | Hindu.International",
+                "description": "Contact Hindu.International by phone, WhatsApp or email for questions or help with your Virtual Punya Snan service request.",
+                "keywords": "contact Hindu.International, Virtual Punya Snan help, Hindu service support",
+                "canonical": "https://hindu.international/contact",
+                "index": true,
+                "follow": true,
+                "ogTitle": "Contact Us | Hindu.International",
+                "ogDescription": "We are here to help you. Get in touch for any queries or assistance.",
+                "ogImage": "assets/images/contact-banner.jpg"
+            },
+            "privacy": {
+                "title": "Privacy Policy | Hindu.International",
+                "description": "Read how Hindu.International collects, uses and protects your personal details and photograph when you use our services.",
+                "keywords": "Hindu.International privacy policy, personal data, photo privacy",
+                "canonical": "https://hindu.international/privacy",
+                "index": false,
+                "follow": true,
+                "ogTitle": "Privacy Policy | Hindu.International",
+                "ogDescription": "How Hindu.International collects and uses your details and photograph.",
+                "ogImage": "assets/images/brand/logo.png"
+            },
+            "terms": {
+                "title": "Terms & Conditions | Hindu.International",
+                "description": "Read the terms and conditions for using the Hindu.International Virtual Punya Snan service.",
+                "keywords": "Hindu.International terms and conditions, Virtual Punya Snan terms",
+                "canonical": "https://hindu.international/terms",
+                "index": false,
+                "follow": true,
+                "ogTitle": "Terms & Conditions | Hindu.International",
+                "ogDescription": "Terms and conditions for the Virtual Punya Snan service.",
+                "ogImage": "assets/images/brand/logo.png"
+            },
+            "rootsAlias": {
+                "title": "Protect Our Faith | Hindu.International",
+                "description": "The former Protect Our Roots page now lives at Protect Our Faith.",
+                "keywords": "",
+                "canonical": "https://hindu.international/protect-our-faith",
+                "index": false,
+                "follow": true,
+                "ogTitle": "Protect Our Faith | Hindu.International",
+                "ogDescription": "Hinduism Is Our Heritage. Our Faith Deserves Protection.",
+                "ogImage": "assets/images/faith/hero-family.jpg"
+            }
         }
     },
     "donate": {
         "hero": {
-            "label": "Your Support Creates Impact",
-            "title": "How Your Donation\nCan Help.",
-            "text": "Your contribution helps support education, healthcare, food assistance, livelihood opportunities and community development for vulnerable Hindu communities in rural and underserved areas.",
-            "image": "assets/images/roots/donate-hero.jpg",
-            "imageAlt": "Green hills and a village home in the morning light"
+            "label": "Support Our Mission",
+            "title": "Donate",
+            "titleAccent": "Us",
+            "subtitle": "Be a Part of the Change.",
+            "text": "Your support helps preserve Hindu heritage, support vulnerable families, and protect freedom of faith through awareness, compassion, and lawful action.",
+            "backgroundImage": "assets/images/faith/cta-temples.jpg",
+            "offeringImage": "assets/images/faith/donation-bowl.jpg",
+            "offeringAlt": "A hand making an offering among flowers and lamps",
+            "promises": [
+                {
+                    "icon": "shield",
+                    "text": "Transparent Use"
+                },
+                {
+                    "icon": "heart",
+                    "text": "Meaningful Impact"
+                },
+                {
+                    "icon": "people",
+                    "text": "Community Support"
+                },
+                {
+                    "icon": "sprout",
+                    "text": "Stronger Futures"
+                }
+            ]
         },
         "impact": {
-            "label": "How Your Donation Helps",
-            "title": "Small Support.\nBig Impact.",
-            "text": "Your donation directly supports essential needs and creates opportunities for a better, more dignified future.",
+            "label": "Your Support Creates Impact",
+            "title": "A Small Act",
+            "titlePrefix": "Makes a",
+            "titleAccent": "Big Difference.",
+            "text": "Your contribution helps support education, healthcare, food assistance, livelihood opportunities, and community development in rural and underserved areas.",
             "items": [
                 {
                     "icon": "book",
@@ -595,8 +853,11 @@
     "site": {
         "logoText": "Hindu.International",
         "logoTagline": "Faith · Culture · Community · Worldwide",
+        "logoFontFamily": "serif",
+        "logoFontSize": "26",
+        "logoBold": true,
         "logoSize": "lg",
-        "logoImage": "assets/images/brand/logo.png",
+        "logoImage": "assets/images/brand/logo-mark.png",
         "footerLogoImage": "",
         "nav": [
             {
@@ -635,8 +896,8 @@
                 "link": "contact.html"
             }
         ],
-        "headerCta": "Request Service",
-        "headerCtaLink": "booking.html",
+        "headerCta": "Donate Us",
+        "headerCtaLink": "donate.html",
         "footerTagline": "Your Faith. Our Service.\nDivine Blessings, Always.",
         "footerQuickTitle": "Quick Links",
         "footerLinksTitle": "Our Service",

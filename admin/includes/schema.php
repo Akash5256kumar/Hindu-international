@@ -8,7 +8,7 @@
    Group    → a card; 'path' is where its fields live in content.json
    Field    → key, label, type, optional: help, max, required, pattern, rows
    Types    : text · textarea · paragraphs · url · embed · digits · phone
-              link (page.html, page.html#part, #part, https://, mailto:, tel:)
+              link (page, page#part, #part, https://, mailto:, tel:)
               toggle (optional 'default') · color · select (with 'options')
               image · video · list (with 'fields', min/max or fixed)
    List sub-fields may have 'showIf' => [siblingKey, value]: the admin only
@@ -33,9 +33,32 @@ $icons = [
 $iconField  = ['key' => 'icon', 'label' => 'Icon', 'type' => 'select', 'options' => $icons];
 $colorField = ['key' => 'color', 'label' => 'Icon colour', 'type' => 'color', 'default' => '#E8590C'];
 $showField  = ['key' => 'show', 'label' => 'Show on the website', 'type' => 'toggle', 'default' => true];
-$linkHelp   = 'A page of this website (e.g. donate.html or donate.html#donate-form), a section of the same page (e.g. #anti-conversion), or a full link starting with https://';
+$linkHelp   = 'A page of this website (e.g. donate or donate#donate-form), a section of the same page (e.g. #anti-conversion), or a full link starting with https://';
 $link = static fn (string $key, string $label, bool $required = false): array =>
     ['key' => $key, 'label' => $label, 'type' => 'link', 'max' => 300, 'required' => $required, 'help' => $linkHelp];
+$seoFields = [
+    ['key' => 'title', 'label' => 'SEO title', 'type' => 'text', 'max' => 90, 'required' => true, 'help' => 'Shown in browser tabs and search results. Aim for about 50–60 characters.'],
+    ['key' => 'description', 'label' => 'Meta description', 'type' => 'textarea', 'rows' => 3, 'max' => 300, 'required' => true, 'help' => 'Short search-result summary. Aim for about 150–160 characters.'],
+    ['key' => 'keywords', 'label' => 'Focus keywords (your notes)', 'type' => 'text', 'max' => 250, 'help' => 'Comma-separated phrases to guide page copy. Search engines do not use meta keywords for ranking.'],
+    ['key' => 'canonical', 'label' => 'Canonical URL', 'type' => 'url', 'max' => 500, 'required' => true, 'help' => 'The preferred clean URL for this page. Keep the site URL and avoid .html.'],
+    ['key' => 'index', 'label' => 'Allow search engines to index this page', 'type' => 'toggle', 'default' => true],
+    ['key' => 'follow', 'label' => 'Allow search engines to follow links', 'type' => 'toggle', 'default' => true],
+    ['key' => 'ogTitle', 'label' => 'Social sharing title', 'type' => 'text', 'max' => 90, 'help' => 'Optional; leave empty to use the SEO title.'],
+    ['key' => 'ogDescription', 'label' => 'Social sharing description', 'type' => 'textarea', 'rows' => 2, 'max' => 300, 'help' => 'Optional; leave empty to use the meta description.'],
+    ['key' => 'ogImage', 'label' => 'Social sharing image', 'type' => 'image', 'help' => 'Optional image shown when this page is shared. Use a wide image where possible.'],
+];
+$seoPages = [
+    'home' => 'Home page',
+    'about' => 'About Us',
+    'how' => 'How It Works',
+    'faith' => 'Protect Our Faith',
+    'donate' => 'Donate',
+    'event' => 'Event Information',
+    'booking' => 'Service / Booking',
+    'contact' => 'Contact Us',
+    'privacy' => 'Privacy Policy',
+    'terms' => 'Terms & Conditions',
+];
 
 /** "Page layout" list: which sections a page shows, in which order */
 $layout = static fn (array $blocks, array $extra = []): array =>
@@ -118,10 +141,6 @@ return [
                     ['key' => 'imageSide', 'label' => 'Photo position', 'type' => 'select', 'options' => ['right' => 'Right of the text', 'left' => 'Left of the text'], 'showIf' => ['block', 'custom']],
                     ['key' => 'style', 'label' => 'Background', 'type' => 'select', 'options' => ['plain' => 'Light (cream)', 'tinted' => 'Soft blue-grey band'], 'showIf' => ['block', 'custom']],
                 ]),
-            ]],
-            ['path' => 'faith.page', 'title' => 'Browser tab & search engines', 'fields' => [
-                ['key' => 'title', 'label' => 'Page title (browser tab)', 'type' => 'text', 'max' => 90, 'required' => true],
-                ['key' => 'description', 'label' => 'Short description (Google / sharing)', 'type' => 'textarea', 'rows' => 2, 'max' => 300],
             ]],
             ['path' => 'faith.hero', 'title' => 'Hero (top of the page)', 'fields' => [
                 ['key' => 'eyebrow', 'label' => 'Small orange line above the heading', 'type' => 'text', 'max' => 90],
@@ -213,17 +232,26 @@ return [
     [
         'id' => 'donate', 'title' => 'Donate', 'icon' => 'donate',
         'groups' => [
-            ['path' => 'donate.hero', 'title' => 'Hero (top of the page)', 'fields' => [
+            ['path' => 'donate.hero', 'title' => 'Donation hero', 'fields' => [
                 ['key' => 'label', 'label' => 'Small label', 'type' => 'text', 'max' => 50],
-                ['key' => 'title', 'label' => 'Main heading', 'type' => 'textarea', 'rows' => 2, 'max' => 100, 'required' => true],
-                ['key' => 'text', 'label' => 'Text', 'type' => 'textarea', 'rows' => 3, 'max' => 500],
-                ['key' => 'image', 'label' => 'Background photo', 'type' => 'image', 'required' => true],
-                ['key' => 'imageAlt', 'label' => 'Photo description', 'type' => 'text', 'max' => 200],
+                ['key' => 'title', 'label' => 'Main heading', 'type' => 'text', 'max' => 60, 'required' => true],
+                ['key' => 'titleAccent', 'label' => 'Heading accent', 'type' => 'text', 'max' => 40],
+                ['key' => 'subtitle', 'label' => 'Subheading', 'type' => 'text', 'max' => 100],
+                ['key' => 'text', 'label' => 'Intro text', 'type' => 'textarea', 'rows' => 3, 'max' => 500],
+                ['key' => 'backgroundImage', 'label' => 'Temple background photo', 'type' => 'image', 'required' => true],
+                ['key' => 'offeringImage', 'label' => 'Offering photo', 'type' => 'image', 'required' => true],
+                ['key' => 'offeringAlt', 'label' => 'Offering photo description', 'type' => 'text', 'max' => 200],
+                ['key' => 'promises', 'label' => 'Commitment points', 'type' => 'list', 'min' => 1, 'max' => 6, 'itemLabel' => 'Commitment', 'titleField' => 'text', 'fields' => [
+                    $iconField,
+                    ['key' => 'text', 'label' => 'Text', 'type' => 'text', 'max' => 40, 'required' => true],
+                ]],
             ]],
-            ['path' => 'donate.impact', 'title' => '“How Your Donation Helps”', 'fields' => [
+            ['path' => 'donate.impact', 'title' => 'Impact section', 'fields' => [
                 ['key' => 'label', 'label' => 'Small label', 'type' => 'text', 'max' => 50],
-                ['key' => 'title', 'label' => 'Heading', 'type' => 'textarea', 'rows' => 2, 'max' => 100],
-                ['key' => 'text', 'label' => 'Text', 'type' => 'textarea', 'rows' => 3, 'max' => 400],
+                ['key' => 'title', 'label' => 'Heading first line', 'type' => 'text', 'max' => 60],
+                ['key' => 'titlePrefix', 'label' => 'Heading second-line start', 'type' => 'text', 'max' => 40],
+                ['key' => 'titleAccent', 'label' => 'Heading highlighted ending', 'type' => 'text', 'max' => 50],
+                ['key' => 'text', 'label' => 'Intro text', 'type' => 'textarea', 'rows' => 3, 'max' => 400],
                 ['key' => 'items', 'label' => 'Impact list', 'type' => 'list', 'min' => 1, 'max' => 10, 'itemLabel' => 'Item', 'titleField' => 'title', 'fields' => [
                     $iconField, $colorField,
                     ['key' => 'title', 'label' => 'Title', 'type' => 'text', 'max' => 50, 'required' => true],
@@ -404,8 +432,11 @@ return [
             ['path' => 'site', 'title' => 'Logo', 'fields' => [
                 ['key' => 'logoText', 'label' => 'Logo text', 'type' => 'text', 'max' => 40, 'required' => true, 'help' => 'The first “.” is shown in orange, e.g. Hindu.International'],
                 ['key' => 'logoTagline', 'label' => 'Small line under the logo text', 'type' => 'text', 'max' => 60, 'help' => 'Leave empty to hide it.'],
+                ['key' => 'logoFontFamily', 'label' => 'Brand name font style', 'type' => 'select', 'options' => ['serif' => 'Classic serif', 'sans' => 'Clean sans-serif']],
+                ['key' => 'logoFontSize', 'label' => 'Brand name font size', 'type' => 'select', 'options' => ['20' => 'Small (20 px)', '22' => '22 px', '24' => '24 px', '26' => '26 px', '28' => '28 px', '30' => 'Large (30 px)']],
+                ['key' => 'logoBold', 'label' => 'Bold brand name', 'type' => 'toggle', 'default' => true],
                 ['key' => 'logoSize', 'label' => 'Logo size', 'type' => 'select', 'options' => ['md' => 'Medium', 'lg' => 'Large (recommended)', 'xl' => 'Extra large']],
-                ['key' => 'logoImage', 'label' => 'Logo image (optional)', 'type' => 'image', 'help' => 'Replaces the lotus + text in the header. Use a PNG/SVG with a transparent background; it keeps its own proportions.'],
+                ['key' => 'logoImage', 'label' => 'Logo mark image (optional)', 'type' => 'image', 'help' => 'Use a symbol-only PNG/SVG with a transparent background. The brand name and tagline are shown as editable text beside it.'],
                 ['key' => 'footerLogoImage', 'label' => 'Logo image for the dark footer (optional)', 'type' => 'image', 'help' => 'A light/white version of the logo for the dark footer. Without it the footer uses the header logo image (or the lotus + text).'],
             ]],
             ['path' => 'site', 'title' => 'Header menu', 'help' => 'Shown in the header and in the footer “Quick Links”. Use ↑ ↓ to reorder, the switch to hide an item.', 'fields' => [
@@ -437,5 +468,18 @@ return [
                 ['key' => 'footer', 'label' => 'Footer background', 'type' => 'color', 'default' => '#111C28'],
             ]],
         ],
+    ],
+    [
+        'id' => 'seo', 'title' => 'On-page SEO', 'icon' => 'search',
+        'groups' => array_map(
+            static fn (string $page, string $title): array => [
+                'path' => 'seo.pages.' . $page,
+                'title' => $title,
+                'help' => 'Edit search-result metadata, social sharing preview, canonical URL and indexing for this page.',
+                'fields' => $seoFields,
+            ],
+            array_keys($seoPages),
+            array_values($seoPages)
+        ),
     ],
 ];

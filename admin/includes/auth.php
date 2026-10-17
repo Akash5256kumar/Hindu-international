@@ -100,7 +100,7 @@ final class Auth
         }
         if (!hash_equals((string) config('setup_key'), $key)) {
             self::recordFailure();
-            return 'The setup key is not correct. You can find it in admin/config.php.';
+            return 'The setup key is not correct. Contact the site administrator.';
         }
         $error = self::validateNew($username, $password, $confirm);
         if ($error) {

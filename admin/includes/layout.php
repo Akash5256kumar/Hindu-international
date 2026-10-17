@@ -14,14 +14,14 @@ function auth_page_start(string $title): void
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow">
   <title><?= e($title) ?> · Hindu.International Admin</title>
-  <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/admin.css">
+  <link rel="icon" href="../assets/images/brand/logo-mark.png?v=brand-favicon-20261008" type="image/png">
+  <link rel="stylesheet" href="assets/admin.css?v=brand-logo-20261008">
 </head>
 <body class="auth">
   <main class="auth__card">
     <div class="auth__brand">
-      <img src="../assets/icons/favicon.svg" alt="" width="40" height="40">
-      <div><strong>Hindu.International</strong><span>Admin panel</span></div>
+      <img src="../assets/images/brand/logo.png" alt="Hindu.International" width="340" height="94">
+      <div><span>Admin panel</span></div>
     </div>
 <?php
 }

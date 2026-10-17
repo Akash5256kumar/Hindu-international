@@ -99,7 +99,8 @@ textarea.input { resize: vertical; min-height: 64px; }
 .auth { min-height: 100vh; display: grid; place-items: center; padding: 24px 16px; background: radial-gradient(120% 80% at 50% 0%, #FFF1DF, var(--bg) 70%); }
 .auth__card { width: 100%; max-width: 400px; background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 32px 28px; box-shadow: var(--shadow); }
 .auth__card h1 { font-size: 22px; margin-bottom: 16px; }
-.auth__brand { display: flex; align-items: center; gap: 12px; margin-bottom: 24px; }
+.auth__brand { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; margin-bottom: 24px; }
+.auth__brand > img { display: block; width: min(100%, 340px); height: auto; }
 .auth__brand div { display: flex; flex-direction: column; line-height: 1.2; }
 .auth__brand span { font-size: 13px; color: var(--muted); }
 .auth__foot { margin: 20px 0 0; font-size: 14px; text-align: center; }
@@ -111,6 +112,7 @@ textarea.input { resize: vertical; min-height: 64px; }
   padding: 0 20px; background: var(--panel); border-bottom: 1px solid var(--line);
 }
 .topbar__brand { display: flex; align-items: center; gap: 10px; color: var(--ink); text-decoration: none; font-size: 15px; }
+.topbar__brand img { display: block; width: min(190px, 35vw); height: auto; }
 .topbar__actions { display: flex; align-items: center; gap: 10px; }
 .save-status { font-size: 13px; color: var(--muted); }
 .save-status.is-dirty { color: var(--brand); font-weight: 600; }
@@ -220,5 +222,6 @@ select.input { cursor: pointer; }
 @media (max-width: 560px) {
   .media { flex-direction: column; }
   .media__preview { width: 100%; }
+  .topbar__brand img { width: min(145px, 34vw); }
   .topbar__actions .btn--ghost[href] { display: none; }
 }
