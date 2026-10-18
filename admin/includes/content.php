@@ -27,6 +27,8 @@ final class ContentStore
     private const JSON = CONTENT_DIR . '/content.json';
     private const JS   = CONTENT_DIR . '/content.js';
     private const BACKUPS = DATA_DIR . '/backups';
+    /** Starting content for the Services pages, used until the admin saves its own */
+    private const SERVICES_DEFAULT = CONTENT_DIR . '/services.default.json';
 
     public static function schema(): array
     {
@@ -38,7 +40,14 @@ final class ContentStore
     {
         $raw = is_file(self::JSON) ? file_get_contents(self::JSON) : '';
         $data = $raw ? json_decode($raw, true) : null;
-        return is_array($data) ? $data : [];
+        $data = is_array($data) ? $data : [];
+        if (!isset($data['services']) && is_file(self::SERVICES_DEFAULT)) {
+            $services = json_decode((string) file_get_contents(self::SERVICES_DEFAULT), true);
+            if (is_array($services)) {
+                $data['services'] = $services;
+            }
+        }
+        return $data;
     }
 
     /**
@@ -213,6 +222,9 @@ final class ContentValidator
     /** @var array<string,string> */
     public array $errors = [];
 
+    /** @var array<string,bool> slugs seen so far, so each one is used only once */
+    private array $slugs = [];
+
     public function clean(array $schema, array $input): array
     {
         $out = [];
@@ -306,6 +318,18 @@ final class ContentValidator
                 if (strlen($v) > ($f['max'] ?? 15)) {
                     $this->errors[$path] = "$label is too long.";
                 }
+                return $v;
+
+            case 'slug':
+                $v = strtolower(self::text($value, false, 200));
+                $v = trim(preg_replace('/[^a-z0-9]+/', '-', $v) ?? '', '-');
+                $v = substr($v, 0, (int) ($f['max'] ?? 80));
+                if ($v === '') {
+                    $this->errors[$path] = "$label is required.";
+                } elseif (isset($this->slugs[$v])) {
+                    $this->errors[$path] = "$label “{$v}” is already used by another item. Please choose a different one.";
+                }
+                $this->slugs[$v] = true;
                 return $v;
 
             case 'phone':

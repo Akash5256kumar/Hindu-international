@@ -22,24 +22,14 @@
   <meta name="seo-page" content="services">
   <script src="js/seo.js?v=seo-admin-20261008"></script>
 </head>
-<body>
+<body data-services="list">
   <a class="skip-link" href="#main">Skip to main content</a>
   <div id="site-header"></div>
   <script src="js/components.js?v=clean-urls-20261008"></script>
 
-  <!-- Icons used only on this page (same style as the shared icon set) -->
-  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
-    <symbol id="i-snan" viewBox="0 0 24 24"><path d="M12 3c1.6 1.8 2.3 3.1 2.3 4.4a2.3 2.3 0 0 1-4.6 0C9.7 6.1 10.4 4.8 12 3z"/><path d="M3 14c1.5 0 1.5-1.2 3-1.2s1.5 1.2 3 1.2 1.5-1.2 3-1.2 1.5 1.2 3 1.2 1.5-1.2 3-1.2 1.5 1.2 3 1.2"/><path d="M3 18.5c1.5 0 1.5-1.2 3-1.2s1.5 1.2 3 1.2 1.5-1.2 3-1.2 1.5 1.2 3 1.2 1.5-1.2 3-1.2 1.5 1.2 3 1.2"/></symbol>
-    <symbol id="i-cart" viewBox="0 0 24 24"><path d="M2.5 4h2.6l2.3 10.5h10.3l2.1-7.5H6.3"/><circle cx="9" cy="19" r="1.6"/><circle cx="16.5" cy="19" r="1.6"/><path d="M10 10.5h6"/></symbol>
-    <symbol id="i-flame" viewBox="0 0 24 24"><path d="M12 21c-3.9 0-6.5-2.6-6.5-6.2 0-3.4 2.4-5.6 3.6-8.3.9 1.5 1.5 2.7 1.5 4.1 1.4-1.2 2.4-3.6 2.2-6.6 3.4 2.4 5.7 6.2 5.7 10.6 0 3.7-2.6 6.4-6.5 6.4z"/><path d="M12 21c-1.6 0-2.8-1.2-2.8-2.8 0-1.7 1.3-2.6 2.8-4.4 1.5 1.8 2.8 2.7 2.8 4.4 0 1.6-1.2 2.8-2.8 2.8z"/></symbol>
-    <symbol id="i-pandit" viewBox="0 0 24 24"><circle cx="12" cy="7.5" r="3.5"/><path d="M12 2.6v1.4"/><path d="M4.5 21v-1.5a7.5 7.5 0 0 1 15 0V21"/><path d="M9 13.3l3 4.2 3-4.2"/></symbol>
-  </svg>
-  <script>if (window.vpsIconNames) window.vpsIconNames.push('snan', 'cart', 'flame', 'pandit');</script>
 
-  <!-- Page content can come from content/content.json → "services" (banner + items list).
-       Until that exists, the text and images written below are shown.
-       services.items: [{ number, icon, title, text, image, imageAlt, link, show }]
-       — the list order is the display order. -->
+  <!-- Content comes from Admin → Services (content/content.json → "services"); js/services.js
+       rebuilds the cards from it. The cards written below are shown until it loads. -->
   <main id="main" class="svc-page">
 
     <!-- ================= BANNER ================= -->
@@ -68,21 +58,7 @@
 
     <!-- ================= SERVICE CARDS ================= -->
     <section aria-label="Our services">
-      <div class="container svc-grid" data-bind-list="services.items">
-        <template>
-          <article class="svc-card">
-            <div class="svc-card__media"><img src="assets/images/hero-devotee.jpg" data-bind-src="@image" data-bind-alt="@imageAlt" alt="" loading="lazy"></div>
-            <div class="svc-card__body">
-              <div class="svc-card__head">
-                <span class="svc-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-lotus" data-bind-icon="@icon"/></svg></span>
-                <span class="svc-card__num">Service <span data-bind="@number">01</span></span>
-              </div>
-              <h2 data-bind="@title">Service</h2>
-              <p data-bind="@text" data-bind-optional></p>
-              <a class="svc-card__btn" href="booking" data-bind-href="@link">View Details <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-            </div>
-          </article>
-        </template>
+      <div class="container svc-grid" data-services-grid>
 
         <article class="svc-card">
           <div class="svc-card__media"><img src="assets/images/services/punya-snan.jpg" alt="Holy water poured from cupped hands at the river ghat at sunrise" loading="lazy"></div>
@@ -93,7 +69,7 @@
             </div>
             <h2>Virtual Punya Snan Service</h2>
             <p>Arrange Punya Snan in your name at sacred destinations like Ganga.</p>
-            <a class="svc-card__btn" href="booking">View Details <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <a class="svc-card__btn" href="service?name=virtual-punya-snan">View Details <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
           </div>
         </article>
 
@@ -258,6 +234,7 @@
   </main>
 
   <div id="site-footer"></div>
+  <script src="js/services.js?v=service-detail-20261018"></script>
   <script src="js/script.js"></script>
 </body>
 </html>

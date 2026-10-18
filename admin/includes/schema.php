@@ -60,6 +60,14 @@ $seoPages = [
     'terms' => 'Terms & Conditions',
 ];
 
+/** Icons for the Services pages: the common set plus the extra ones drawn by js/services.js */
+$serviceIcons = $icons + [
+    'snan' => 'Water + drop (snan)', 'cart' => 'Cart (store)', 'flame' => 'Fire (havan)', 'pandit' => 'Pandit',
+    'namaste' => 'Folded hands', 'video' => 'Video', 'camera' => 'Camera', 'edit' => 'Pen (sankalp)',
+];
+$serviceIconField = ['key' => 'icon', 'label' => 'Icon', 'type' => 'select', 'options' => $serviceIcons];
+$accentHelp = 'Shown in orange straight after the heading. Leave empty for a one-colour heading.';
+
 /** "Page layout" list: which sections a page shows, in which order */
 $layout = static fn (array $blocks, array $extra = []): array =>
     ['key' => 'layout', 'label' => 'Sections (top to bottom)', 'type' => 'list', 'min' => 1, 'max' => 20,
@@ -367,6 +375,104 @@ return [
                 ['key' => 'items', 'label' => 'Questions', 'type' => 'list', 'min' => 0, 'max' => 30, 'itemLabel' => 'Question', 'titleField' => 'q', 'fields' => [
                     ['key' => 'q', 'label' => 'Question', 'type' => 'text', 'max' => 200, 'required' => true],
                     ['key' => 'a', 'label' => 'Answer', 'type' => 'textarea', 'rows' => 3, 'max' => 2000, 'required' => true],
+                ]],
+            ]],
+        ],
+    ],
+    [
+        'id' => 'services', 'title' => 'Services', 'icon' => 'steps',
+        'groups' => [
+            ['path' => 'services.banner', 'title' => 'Services page banner', 'help' => 'The banner at the top of the Services page (the page with all service cards).', 'fields' => [
+                ['key' => 'title', 'label' => 'Heading (navy part)', 'type' => 'text', 'max' => 60],
+                ['key' => 'titleAccent', 'label' => 'Heading (orange part)', 'type' => 'text', 'max' => 60, 'help' => $accentHelp],
+                ['key' => 'text', 'label' => 'Description', 'type' => 'textarea', 'rows' => 2, 'max' => 300],
+                ['key' => 'image', 'label' => 'Banner photo', 'type' => 'image', 'help' => 'Wide landscape photo; the left side fades into the cream background behind the text.'],
+                ['key' => 'quote', 'label' => 'Words in the small box on the right', 'type' => 'textarea', 'rows' => 4, 'max' => 120, 'help' => 'One word per line. Leave empty to hide the box.'],
+            ]],
+            ['path' => 'services.process', 'title' => 'Process heading on every service page', 'help' => 'The four process steps themselves are shared with the Home page and are edited under “How It Works”.', 'fields' => [
+                ['key' => 'title', 'label' => 'Heading (navy part)', 'type' => 'text', 'max' => 60],
+                ['key' => 'titleAccent', 'label' => 'Heading (orange part)', 'type' => 'text', 'max' => 60, 'help' => $accentHelp],
+                ['key' => 'subtitle', 'label' => 'Line under the heading', 'type' => 'text', 'max' => 200, 'help' => 'Write {service} where the name of the service should appear.'],
+            ]],
+            ['path' => 'services', 'title' => 'Services', 'help' => 'Each service has a card on the Services page and its own detail page. The list order is the order of the cards. Sections you leave empty are not shown on the detail page.', 'fields' => [
+                ['key' => 'items', 'label' => 'Services', 'type' => 'list', 'min' => 0, 'max' => 40, 'itemLabel' => 'Service', 'titleField' => 'title', 'fields' => [
+                    $showField,
+                    ['key' => 'status', 'label' => 'Detail page status', 'type' => 'select', 'options' => ['draft' => 'Draft (detail page not ready yet)', 'published' => 'Published'], 'help' => 'While a service is a draft, its “View Details” button opens the link below instead of the detail page.'],
+                    ['key' => 'slug', 'label' => 'Page address (slug)', 'type' => 'slug', 'max' => 80, 'required' => true, 'help' => 'Small letters, numbers and dashes, e.g. virtual-punya-snan. The page opens at /service?name=virtual-punya-snan. Must be different for every service.'],
+                    ['key' => 'number', 'label' => 'Service number', 'type' => 'text', 'max' => 6, 'help' => 'Shown on the card, e.g. 01.'],
+                    $serviceIconField,
+                    ['key' => 'title', 'label' => 'Service name', 'type' => 'text', 'max' => 90, 'required' => true],
+                    ['key' => 'text', 'label' => 'Short description (card)', 'type' => 'textarea', 'rows' => 2, 'max' => 200],
+                    ['key' => 'image', 'label' => 'Card photo', 'type' => 'image'],
+                    ['key' => 'imageAlt', 'label' => 'Card photo description', 'type' => 'text', 'max' => 200],
+                    $link('link', '“View Details” link while the page is a draft'),
+
+                    ['key' => 'bannerTitle', 'label' => 'Detail page — banner heading', 'type' => 'textarea', 'rows' => 2, 'max' => 120, 'help' => 'Press Enter to start a new line. Empty = the service name.'],
+                    ['key' => 'bannerAccent', 'label' => 'Banner — words shown in orange', 'type' => 'text', 'max' => 80, 'help' => 'Must be written exactly as in the heading, e.g. Punya Snan.'],
+                    ['key' => 'bannerImage', 'label' => 'Banner photo', 'type' => 'image', 'help' => 'Very wide photo (about 3.5 : 1). The left side fades behind the heading.'],
+                    ['key' => 'bannerImageAlt', 'label' => 'Banner photo description', 'type' => 'text', 'max' => 200],
+
+                    ['key' => 'aboutLabel', 'label' => 'About — small orange label', 'type' => 'text', 'max' => 60],
+                    ['key' => 'aboutTitle', 'label' => 'About — heading', 'type' => 'text', 'max' => 120],
+                    ['key' => 'aboutText1', 'label' => 'About — paragraph 1', 'type' => 'textarea', 'rows' => 4, 'max' => 1200],
+                    ['key' => 'aboutText2', 'label' => 'About — paragraph 2', 'type' => 'textarea', 'rows' => 4, 'max' => 1200],
+                    ['key' => 'aboutImage', 'label' => 'About — photo (right side)', 'type' => 'image'],
+                    ['key' => 'aboutImageAlt', 'label' => 'About — photo description', 'type' => 'text', 'max' => 200],
+                    ['key' => 'showShloka', 'label' => 'Show the Sanskrit shloka', 'type' => 'toggle', 'default' => false],
+                    ['key' => 'shloka', 'label' => 'Sanskrit shloka', 'type' => 'textarea', 'rows' => 3, 'max' => 600, 'help' => 'Press Enter between the lines.'],
+
+                    ['key' => 'receiveTitle', 'label' => 'What You Receive — heading', 'type' => 'text', 'max' => 60],
+                    ['key' => 'receiveAccent', 'label' => 'What You Receive — orange part', 'type' => 'text', 'max' => 60, 'help' => $accentHelp],
+                    ['key' => 'receiveSubtitle', 'label' => 'What You Receive — line under the heading', 'type' => 'text', 'max' => 160],
+                    ['key' => 'receive', 'label' => 'What You Receive — cards', 'type' => 'list', 'min' => 0, 'max' => 8, 'itemLabel' => 'Card', 'titleField' => 'title', 'fields' => [
+                        $serviceIconField,
+                        ['key' => 'title', 'label' => 'Title', 'type' => 'text', 'max' => 60, 'required' => true],
+                        ['key' => 'text', 'label' => 'Description', 'type' => 'textarea', 'rows' => 2, 'max' => 200],
+                        ['key' => 'image', 'label' => 'Photo', 'type' => 'image', 'help' => 'Wide photo (about 2.5 : 1).'],
+                        ['key' => 'imageAlt', 'label' => 'Photo description', 'type' => 'text', 'max' => 200],
+                    ]],
+
+                    ['key' => 'whyTitle', 'label' => 'Why Choose — heading', 'type' => 'text', 'max' => 80],
+                    ['key' => 'whyAccent', 'label' => 'Why Choose — orange part', 'type' => 'text', 'max' => 80, 'help' => $accentHelp],
+                    ['key' => 'why', 'label' => 'Why Choose — benefits', 'type' => 'list', 'min' => 0, 'max' => 8, 'itemLabel' => 'Benefit', 'titleField' => 'title', 'fields' => [
+                        $serviceIconField,
+                        ['key' => 'title', 'label' => 'Title', 'type' => 'text', 'max' => 80, 'required' => true],
+                        ['key' => 'text', 'label' => 'Description', 'type' => 'textarea', 'rows' => 3, 'max' => 400],
+                    ]],
+
+                    ['key' => 'whoTitle', 'label' => 'Who Can Use — heading', 'type' => 'text', 'max' => 60],
+                    ['key' => 'whoAccent', 'label' => 'Who Can Use — orange part', 'type' => 'text', 'max' => 60, 'help' => $accentHelp],
+                    ['key' => 'whoIntro', 'label' => 'Who Can Use — intro line', 'type' => 'text', 'max' => 200],
+                    ['key' => 'whoList', 'label' => 'Who Can Use — list', 'type' => 'list', 'min' => 0, 'max' => 12, 'itemLabel' => 'Point', 'titleField' => 'text', 'fields' => [
+                        ['key' => 'text', 'label' => 'Text', 'type' => 'text', 'max' => 200, 'required' => true],
+                    ]],
+                    ['key' => 'whoClosing', 'label' => 'Who Can Use — closing text', 'type' => 'textarea', 'rows' => 3, 'max' => 500],
+
+                    ['key' => 'showPlaces', 'label' => 'Show the Sacred Places section', 'type' => 'toggle', 'default' => false],
+                    ['key' => 'placesTitle', 'label' => 'Sacred Places — heading', 'type' => 'text', 'max' => 60],
+                    ['key' => 'placesSubtitle', 'label' => 'Sacred Places — line under the heading', 'type' => 'text', 'max' => 120],
+                    ['key' => 'places', 'label' => 'Sacred Places — cards', 'type' => 'list', 'min' => 0, 'max' => 20, 'itemLabel' => 'Place', 'titleField' => 'name', 'fields' => [
+                        ['key' => 'name', 'label' => 'Place name', 'type' => 'text', 'max' => 80, 'required' => true],
+                        ['key' => 'location', 'label' => 'City · river', 'type' => 'text', 'max' => 120],
+                        ['key' => 'image', 'label' => 'Photo', 'type' => 'image', 'help' => 'Landscape photo (about 3 : 2).'],
+                        ['key' => 'imageAlt', 'label' => 'Photo description', 'type' => 'text', 'max' => 200],
+                    ]],
+
+                    ['key' => 'faqTitle', 'label' => 'FAQ — heading', 'type' => 'text', 'max' => 80],
+                    ['key' => 'faqAccent', 'label' => 'FAQ — orange part', 'type' => 'text', 'max' => 40, 'help' => $accentHelp],
+                    ['key' => 'faqs', 'label' => 'FAQ — questions', 'type' => 'list', 'min' => 0, 'max' => 30, 'itemLabel' => 'Question', 'titleField' => 'q', 'fields' => [
+                        ['key' => 'q', 'label' => 'Question', 'type' => 'text', 'max' => 200, 'required' => true],
+                        ['key' => 'a', 'label' => 'Answer', 'type' => 'textarea', 'rows' => 3, 'max' => 2000, 'required' => true],
+                    ]],
+
+                    ['key' => 'ctaTitle', 'label' => 'Bottom banner — heading', 'type' => 'text', 'max' => 100, 'help' => 'Leave empty to hide the bottom banner.'],
+                    ['key' => 'ctaText', 'label' => 'Bottom banner — text', 'type' => 'text', 'max' => 200],
+                    ['key' => 'ctaButton', 'label' => 'Bottom banner — button text', 'type' => 'text', 'max' => 40, 'help' => 'Leave empty to hide the button.'],
+                    $link('ctaLink', 'Bottom banner — button link'),
+                    ['key' => 'ctaImage', 'label' => 'Bottom banner — photo', 'type' => 'image', 'help' => 'Very wide photo; the left side fades behind the text.'],
+
+                    ['key' => 'seoTitle', 'label' => 'SEO title (browser tab, Google)', 'type' => 'text', 'max' => 90, 'help' => 'Empty = “service name | Hindu.International”.'],
+                    ['key' => 'seoDescription', 'label' => 'SEO description', 'type' => 'textarea', 'rows' => 2, 'max' => 300],
                 ]],
             ]],
         ],
