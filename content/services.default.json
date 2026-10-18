@@ -523,7 +523,7 @@
     },
     {
       "show": true,
-      "status": "draft",
+      "status": "published",
       "slug": "pind-daan-shraddh",
       "number": "04",
       "icon": "sprout",
@@ -532,48 +532,156 @@
       "image": "assets/images/offering-hands.jpg",
       "imageAlt": "Hands offering flowers on a leaf over the holy river",
       "link": "booking",
-      "bannerTitle": "Pind Daan & Shraddh Service",
-      "bannerAccent": "",
-      "bannerImage": "",
-      "bannerImageAlt": "",
-      "aboutLabel": "",
-      "aboutTitle": "",
-      "aboutText1": "",
-      "aboutText2": "",
-      "aboutImage": "",
-      "aboutImageAlt": "",
+      "bannerTitle": "Pind Daan &\nShraddh Service",
+      "bannerAccent": "Shraddh",
+      "bannerImage": "assets/images/offering-hands.jpg",
+      "bannerImageAlt": "Hands offering flowers on a leaf over the holy river",
+      "aboutLabel": "About this service",
+      "aboutTitle": "What Is Pind Daan & Shraddh?",
+      "aboutText1": "Pind Daan and Shraddh are important Hindu religious rituals performed in remembrance of departed family members and ancestors. These traditions hold a special place in Hindu beliefs and are observed by families to express respect, gratitude, and devotion towards their ancestors. Many families perform these rituals according to their customs and religious traditions.",
+      "aboutText2": "However, arranging Pind Daan or Shraddh rituals can be difficult when family members live far away, have work commitments, or cannot travel to the required location. Our Pind Daan & Shraddh Service helps devotees explore and arrange available ritual services remotely. You can enquire about the appropriate arrangements, provide the required details, and receive booking confirmation according to the selected service.",
+      "aboutImage": "assets/images/faith/respect-prayer.jpg",
+      "aboutImageAlt": "A devotee praying with folded hands by the river at sunset",
       "showShloka": false,
       "shloka": "",
-      "processSubtitle": "",
-      "processSteps": [],
-      "receiveTitle": "",
-      "receiveAccent": "",
-      "receiveSubtitle": "",
-      "receive": [],
-      "whyTitle": "",
-      "whyAccent": "",
-      "why": [],
-      "whoTitle": "",
-      "whoAccent": "",
-      "whoIntro": "",
-      "whoList": [],
-      "whoClosing": "",
+      "processSubtitle": "A simple way to arrange Pind Daan and Shraddh rituals.",
+      "processSteps": [
+        {
+          "icon": "sprout",
+          "title": "Choose Your Ritual",
+          "text": "Explore the available Pind Daan and Shraddh services and select the ritual arrangement that suits your family's religious customs and requirements."
+        },
+        {
+          "icon": "edit",
+          "title": "Share Your Details",
+          "text": "Provide the required details, such as your name and relevant information about the ancestor, according to the selected ritual."
+        },
+        {
+          "icon": "check",
+          "title": "Confirm Your Booking",
+          "text": "Review the ritual details, understand the available arrangements, and complete your booking according to the instructions."
+        },
+        {
+          "icon": "diya",
+          "title": "Ritual Arrangements",
+          "text": "Our team coordinates the arrangements included in your confirmed booking and shares the relevant details with you."
+        }
+      ],
+      "receiveTitle": "What You",
+      "receiveAccent": "Receive",
+      "receiveSubtitle": "Thoughtful Arrangements for Ancestral Rituals",
+      "receive": [
+        {
+          "icon": "sprout",
+          "title": "Ritual Arrangements as Selected",
+          "text": "Explore the available Pind Daan and Shraddh arrangements according to your family's religious customs and requirements.",
+          "image": "assets/images/flower-offerings.jpg",
+          "imageAlt": "A brass plate with flowers and offerings for a ritual"
+        },
+        {
+          "icon": "bookopen",
+          "title": "Guidance for Required Details",
+          "text": "Receive information about the details needed to arrange the selected ritual.",
+          "image": "assets/images/services/pandit-booking.jpg",
+          "imageAlt": "A pandit reading a sacred text"
+        },
+        {
+          "icon": "diya",
+          "title": "Coordinated Ritual Service",
+          "text": "The team coordinates the arrangements included in your confirmed booking.",
+          "image": "assets/images/ritual-aarti.jpg",
+          "imageAlt": "A priest performing a ritual with lamps at the ghat"
+        },
+        {
+          "icon": "check",
+          "title": "Booking Confirmation",
+          "text": "Receive confirmation and relevant instructions for your selected Pind Daan or Shraddh service.",
+          "image": "assets/images/services/punya-snan/receive-sankalp.jpg",
+          "imageAlt": "A priest holding a puja thali with a lit diya"
+        }
+      ],
+      "whyTitle": "Why Choose Our",
+      "whyAccent": "Pind Daan & Shraddh Service?",
+      "why": [
+        {
+          "icon": "namaste",
+          "title": "Honour Your Ancestral Traditions",
+          "text": "Pind Daan and Shraddh are meaningful traditions for many Hindu families. Our service helps you explore arrangements for observing these rituals with respect."
+        },
+        {
+          "icon": "globe",
+          "title": "Convenient for Families Everywhere",
+          "text": "When distance or personal responsibilities make travel difficult, you can enquire about available arrangements remotely."
+        },
+        {
+          "icon": "edit",
+          "title": "A Simple Booking Process",
+          "text": "Understand the available options, share the necessary details, and confirm the arrangements through a straightforward booking process."
+        },
+        {
+          "icon": "people",
+          "title": "Support for Important Family Rituals",
+          "text": "Whether you are planning a ritual in remembrance of an ancestor or observing a family tradition, you can explore the available services according to your needs."
+        }
+      ],
+      "whoTitle": "Who Can Use",
+      "whoAccent": "This Service?",
+      "whoIntro": "The Pind Daan & Shraddh Service may be suitable for:",
+      "whoList": [
+        {
+          "text": "Families who wish to observe ancestral rituals according to their religious traditions."
+        },
+        {
+          "text": "Devotees who cannot travel to arrange the rituals in person."
+        },
+        {
+          "text": "People living away from their hometowns or family locations."
+        },
+        {
+          "text": "Individuals with work, health, or family responsibilities that make travel difficult."
+        },
+        {
+          "text": "Families living outside India who wish to enquire about available ritual arrangements."
+        }
+      ],
+      "whoClosing": "Every family follows its own customs and traditions. This service offers a convenient way to explore and arrange available Pind Daan and Shraddh services remotely.",
       "showPlaces": false,
       "placesTitle": "",
       "placesSubtitle": "",
       "placesIntro": "",
       "places": [],
       "placesNote": "",
-      "faqTitle": "",
-      "faqAccent": "",
-      "faqs": [],
-      "ctaTitle": "",
-      "ctaText": "",
-      "ctaButton": "",
-      "ctaLink": "",
-      "ctaImage": "",
-      "seoTitle": "",
-      "seoDescription": ""
+      "faqTitle": "Frequently Asked Questions",
+      "faqAccent": "(FAQs)",
+      "faqs": [
+        {
+          "q": "What are Pind Daan and Shraddh?",
+          "a": "Pind Daan and Shraddh are Hindu ancestral rituals performed in remembrance of departed family members. Families observe these traditions according to their religious beliefs and customs."
+        },
+        {
+          "q": "Can I arrange Pind Daan or Shraddh remotely?",
+          "a": "You can enquire about the available arrangements and booking options remotely. The exact ritual arrangements depend on the selected service."
+        },
+        {
+          "q": "What details are required for booking?",
+          "a": "The required information depends on the selected ritual. You may be asked to provide your name and relevant details about the ancestor. The service team can guide you regarding the information needed."
+        },
+        {
+          "q": "Can I book this service if I live outside India?",
+          "a": "You can enquire about booking from outside India. Availability, payment options, and the arrangements for your selected ritual should be confirmed before booking."
+        },
+        {
+          "q": "How will I receive confirmation of my booking?",
+          "a": "After completing the booking process, follow the confirmation instructions provided by the service team. Any further information about your selected ritual will be shared according to the confirmed arrangements."
+        }
+      ],
+      "ctaTitle": "Honour Your Ancestors Through Sacred Traditions",
+      "ctaText": "Explore our available Pind Daan and Shraddh services and arrange a ritual in remembrance of your ancestors.",
+      "ctaButton": "Book Pind Daan & Shraddh",
+      "ctaLink": "booking",
+      "ctaImage": "assets/images/about-banner.jpg",
+      "seoTitle": "Pind Daan & Shraddh Service | Hindu.International",
+      "seoDescription": "Explore and arrange available Pind Daan and Shraddh ritual services remotely, in remembrance of your ancestors and according to your family customs."
     },
     {
       "show": true,
