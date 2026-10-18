@@ -887,8 +887,8 @@
             },
             {
                 "show": true,
-                "label": "Service / Booking",
-                "link": "booking.html"
+                "label": "Services",
+                "link": "services.html"
             },
             {
                 "show": true,

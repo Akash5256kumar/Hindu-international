@@ -128,7 +128,7 @@
     { label: 'How It Works',      link: 'how-it-works' },
     { label: 'Protect Our Faith', link: 'protect-our-faith' },
     { label: 'Event Information', link: 'event' },
-    { label: 'Service / Booking', link: 'booking' },
+    { label: 'Services',          link: 'services' },
     { label: 'Contact Us',        link: 'contact' }
   ];
   var NAV = (Array.isArray(SITE.nav) && SITE.nav.length ? SITE.nav : NAV_DEFAULT)
