@@ -421,6 +421,13 @@ return [
                     ['key' => 'showShloka', 'label' => 'Show the Sanskrit shloka', 'type' => 'toggle', 'default' => false],
                     ['key' => 'shloka', 'label' => 'Sanskrit shloka', 'type' => 'textarea', 'rows' => 3, 'max' => 600, 'help' => 'Press Enter between the lines.'],
 
+                    ['key' => 'processSubtitle', 'label' => 'Process — line under the heading (this service only)', 'type' => 'text', 'max' => 200, 'help' => 'Empty = the shared line set above.'],
+                    ['key' => 'processSteps', 'label' => 'Process — steps for this service only', 'type' => 'list', 'min' => 0, 'max' => 4, 'itemLabel' => 'Step', 'titleField' => 'title', 'help' => 'Leave empty to show the shared four steps (edited under “How It Works”).', 'fields' => [
+                        $serviceIconField,
+                        ['key' => 'title', 'label' => 'Title', 'type' => 'text', 'max' => 60, 'required' => true],
+                        ['key' => 'text', 'label' => 'Description', 'type' => 'textarea', 'rows' => 2, 'max' => 240],
+                    ]],
+
                     ['key' => 'receiveTitle', 'label' => 'What You Receive — heading', 'type' => 'text', 'max' => 60],
                     ['key' => 'receiveAccent', 'label' => 'What You Receive — orange part', 'type' => 'text', 'max' => 60, 'help' => $accentHelp],
                     ['key' => 'receiveSubtitle', 'label' => 'What You Receive — line under the heading', 'type' => 'text', 'max' => 160],
@@ -448,15 +455,18 @@ return [
                     ]],
                     ['key' => 'whoClosing', 'label' => 'Who Can Use — closing text', 'type' => 'textarea', 'rows' => 3, 'max' => 500],
 
-                    ['key' => 'showPlaces', 'label' => 'Show the Sacred Places section', 'type' => 'toggle', 'default' => false],
-                    ['key' => 'placesTitle', 'label' => 'Sacred Places — heading', 'type' => 'text', 'max' => 60],
-                    ['key' => 'placesSubtitle', 'label' => 'Sacred Places — line under the heading', 'type' => 'text', 'max' => 120],
-                    ['key' => 'places', 'label' => 'Sacred Places — cards', 'type' => 'list', 'min' => 0, 'max' => 20, 'itemLabel' => 'Place', 'titleField' => 'name', 'fields' => [
-                        ['key' => 'name', 'label' => 'Place name', 'type' => 'text', 'max' => 80, 'required' => true],
-                        ['key' => 'location', 'label' => 'City · river', 'type' => 'text', 'max' => 120],
+                    ['key' => 'showPlaces', 'label' => 'Show the places / festivals section (scrolling cards)', 'type' => 'toggle', 'default' => false],
+                    ['key' => 'placesTitle', 'label' => 'Places section — heading', 'type' => 'text', 'max' => 60, 'help' => 'e.g. Sacred Places or Major Indian Festivals.'],
+                    ['key' => 'placesSubtitle', 'label' => 'Places section — line under the heading', 'type' => 'text', 'max' => 120],
+                    ['key' => 'placesIntro', 'label' => 'Places section — intro text (optional)', 'type' => 'textarea', 'rows' => 3, 'max' => 500],
+                    ['key' => 'places', 'label' => 'Places section — cards', 'type' => 'list', 'min' => 0, 'max' => 20, 'itemLabel' => 'Card', 'titleField' => 'name', 'fields' => [
+                        ['key' => 'name', 'label' => 'Name', 'type' => 'text', 'max' => 80, 'required' => true],
+                        ['key' => 'location', 'label' => 'Location (city · river, or city, state)', 'type' => 'text', 'max' => 120],
+                        ['key' => 'text', 'label' => 'Short description (optional)', 'type' => 'textarea', 'rows' => 3, 'max' => 300],
                         ['key' => 'image', 'label' => 'Photo', 'type' => 'image', 'help' => 'Landscape photo (about 3 : 2).'],
                         ['key' => 'imageAlt', 'label' => 'Photo description', 'type' => 'text', 'max' => 200],
                     ]],
+                    ['key' => 'placesNote', 'label' => 'Places section — small note under the cards (optional)', 'type' => 'text', 'max' => 160],
 
                     ['key' => 'faqTitle', 'label' => 'FAQ — heading', 'type' => 'text', 'max' => 80],
                     ['key' => 'faqAccent', 'label' => 'FAQ — orange part', 'type' => 'text', 'max' => 40, 'help' => $accentHelp],

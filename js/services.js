@@ -229,8 +229,24 @@
     if (!head) return;
     head.textContent = '';
     head.appendChild(heading('h2', str(p.title) || 'Our', p.title || p.titleAccent ? p.titleAccent : 'Process', 'sd-title'));
-    var sub = str(p.subtitle);
+    var sub = str(s.processSubtitle) || str(p.subtitle);
     if (sub) head.appendChild(el('p', 'sd-sub', sub.replace(/\{service\}/g, str(s.title))));
+
+    /* Steps of this service only; otherwise the shared steps written in the page stay */
+    var steps = list(s.processSteps).filter(function (x) { return str(x.title); });
+    var ol = document.querySelector('#sd-process .steps');
+    if (!steps.length || !ol) return;
+    ol.textContent = '';
+    steps.forEach(function (x, i) {
+      var li = el('li', 'step card');
+      var badge = el('span', 'badge');
+      badge.appendChild(icon(x.icon));
+      li.appendChild(badge);
+      li.appendChild(el('span', 'step__num', (i < 9 ? '0' : '') + (i + 1)));
+      li.appendChild(el('h3', null, str(x.title)));
+      if (str(x.text)) li.appendChild(el('p', null, str(x.text)));
+      ol.appendChild(li);
+    });
   }
 
   function renderReceive(s) {
@@ -326,6 +342,7 @@
     });
     head.appendChild(nav);
     col.appendChild(head);
+    if (str(s.placesIntro)) col.appendChild(el('p', 'sd-places__intro', str(s.placesIntro)));
 
     var track = el('ul', 'sd-places__track');
     track.setAttribute('tabindex', '0');
@@ -338,11 +355,13 @@
       li.appendChild(media);
       var body = el('div', 'sd-place__body');
       body.appendChild(el('h3', null, str(p.name)));
-      if (str(p.location)) body.appendChild(el('p', null, str(p.location)));
+      if (str(p.location)) body.appendChild(el('p', 'sd-place__loc', str(p.location)));
+      if (str(p.text)) body.appendChild(el('p', 'sd-place__text', str(p.text)));
       li.appendChild(body);
       track.appendChild(li);
     });
     col.appendChild(track);
+    if (str(s.placesNote)) col.appendChild(el('p', 'sd-places__note', str(s.placesNote)));
 
     function step() {
       var card = track.querySelector('.sd-place');

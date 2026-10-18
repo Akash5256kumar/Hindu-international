@@ -35,6 +35,8 @@
       "aboutImageAlt": "A hand offering flowers on a leaf as holy water falls into the river at sunrise",
       "showShloka": true,
       "shloka": "गङ्गे च यमुने चैव गोदावरि सरस्वति।\nनर्मदे सिन्धु कावेरि जलेऽस्मिन् सन्निधिं कुरु॥",
+      "processSubtitle": "",
+      "processSteps": [],
       "receiveTitle": "What You",
       "receiveAccent": "Receive",
       "receiveSubtitle": "Everything done with full Vedic process",
@@ -116,26 +118,31 @@
       "showPlaces": true,
       "placesTitle": "Sacred Places",
       "placesSubtitle": "Explore the Sacred Ghats",
+      "placesIntro": "",
       "places": [
         {
           "name": "Har Ki Pauri",
           "location": "Haridwar · Ganga",
+          "text": "",
           "image": "assets/images/faith/hero-family.jpg",
           "imageAlt": "A family at the ghats with lamps at sunset"
         },
         {
           "name": "Triveni Sangam",
           "location": "Prayagraj · Ganga, Yamuna, Saraswati",
+          "text": "",
           "image": "assets/images/event-gathering.jpg",
           "imageAlt": "Devotees gathered at the sangam"
         },
         {
           "name": "Dashashwamedh Ghat",
           "location": "Varanasi · Ganga",
+          "text": "",
           "image": "assets/images/services/temple-darshan.jpg",
           "imageAlt": "Temples with saffron flags on the river ghat"
         }
       ],
+      "placesNote": "",
       "faqTitle": "Frequently Asked Questions",
       "faqAccent": "(FAQs)",
       "faqs": [
@@ -170,7 +177,7 @@
     },
     {
       "show": true,
-      "status": "draft",
+      "status": "published",
       "slug": "virtual-festival-darshan",
       "number": "02",
       "icon": "temple",
@@ -179,44 +186,178 @@
       "image": "assets/images/faith/respect-prayer.jpg",
       "imageAlt": "Temples and ghats lit up at sunset during a festival",
       "link": "booking",
-      "bannerTitle": "Virtual Festival Darshan Service",
-      "bannerAccent": "",
-      "bannerImage": "",
-      "bannerImageAlt": "",
-      "aboutLabel": "",
-      "aboutTitle": "",
-      "aboutText1": "",
-      "aboutText2": "",
-      "aboutImage": "",
-      "aboutImageAlt": "",
+      "bannerTitle": "Virtual Festival\nDarshan Service",
+      "bannerAccent": "Festival",
+      "bannerImage": "assets/images/faith/respect-prayer.jpg",
+      "bannerImageAlt": "Temples and lit ghats on the river at sunset",
+      "aboutLabel": "About this service",
+      "aboutTitle": "What Is Virtual Festival Darshan?",
+      "aboutText1": "Festivals hold a special place in Hindu traditions. During these occasions, devotees visit temples, attend religious celebrations, and seek blessings from their deities. Festival darshan gives people an opportunity to feel connected to their faith and take part in important religious traditions.",
+      "aboutText2": "However, not everyone can visit a temple during a festival. Distance, work, family responsibilities, health concerns, and large crowds can make travel difficult. Our Virtual Festival Darshan Service is designed for devotees who wish to stay connected to festival celebrations even when they cannot attend in person. It offers a convenient way to experience live darshan remotely and remain connected to the traditions that matter to them.",
+      "aboutImage": "assets/images/faith/heritage-aarti.jpg",
+      "aboutImageAlt": "Hands holding a puja thali with a lit diya and flowers before temples",
       "showShloka": false,
       "shloka": "",
-      "receiveTitle": "",
-      "receiveAccent": "",
-      "receiveSubtitle": "",
-      "receive": [],
-      "whyTitle": "",
-      "whyAccent": "",
-      "why": [],
-      "whoTitle": "",
-      "whoAccent": "",
-      "whoIntro": "",
-      "whoList": [],
-      "whoClosing": "",
-      "showPlaces": false,
-      "placesTitle": "",
-      "placesSubtitle": "",
-      "places": [],
-      "faqTitle": "",
-      "faqAccent": "",
-      "faqs": [],
-      "ctaTitle": "",
-      "ctaText": "",
-      "ctaButton": "",
-      "ctaLink": "",
-      "ctaImage": "",
-      "seoTitle": "",
-      "seoDescription": ""
+      "processSubtitle": "A simple way to experience festival darshan remotely.",
+      "processSteps": [
+        {
+          "icon": "calendar",
+          "title": "Choose Your Festival",
+          "text": "Explore the available Hindu festivals and select the festival darshan you wish to experience."
+        },
+        {
+          "icon": "edit",
+          "title": "Share Your Details",
+          "text": "Provide the required details and complete your booking according to the instructions."
+        },
+        {
+          "icon": "temple",
+          "title": "Festival Darshan Arrangements",
+          "text": "Our team coordinates the arrangements for your selected festival and confirms the live darshan details."
+        },
+        {
+          "icon": "video",
+          "title": "Experience Live Darshan",
+          "text": "Join the live darshan of your selected festival and experience the sacred celebrations remotely."
+        }
+      ],
+      "receiveTitle": "What You",
+      "receiveAccent": "Receive",
+      "receiveSubtitle": "Experience Festival Darshan with Ease",
+      "receive": [
+        {
+          "icon": "video",
+          "title": "Live Festival Darshan",
+          "text": "Experience the live darshan of your selected festival remotely without travelling to the celebration yourself.",
+          "image": "assets/images/ritual-aarti.jpg",
+          "imageAlt": "A priest performing aarti with lamps at the ghat"
+        },
+        {
+          "icon": "temple",
+          "title": "Access to Sacred Celebrations",
+          "text": "Connect with important religious celebrations through the live darshan arrangements available for your selected festival.",
+          "image": "assets/images/event-gathering.jpg",
+          "imageAlt": "Devotees gathered at a large religious celebration"
+        },
+        {
+          "icon": "lotus",
+          "title": "A Connected Spiritual Experience",
+          "text": "Feel closer to the traditions and celebrations that hold a special place in your faith.",
+          "image": "assets/images/flower-offerings.jpg",
+          "imageAlt": "A brass puja plate with flowers and offerings"
+        },
+        {
+          "icon": "globe",
+          "title": "Darshan from Wherever You Are",
+          "text": "Experience festival darshan from your home or wherever you are, subject to the available service arrangements.",
+          "image": "assets/images/services/punya-snan/receive-video.jpg",
+          "imageAlt": "A camera recording a ritual at the river ghat"
+        }
+      ],
+      "whyTitle": "Why Choose Our",
+      "whyAccent": "Virtual Festival Darshan Service?",
+      "why": [
+        {
+          "icon": "namaste",
+          "title": "Stay Connected to Your Faith",
+          "text": "Festivals are an important part of Hindu religious life. Our service offers a convenient way to remain connected to these celebrations when visiting in person is difficult."
+        },
+        {
+          "icon": "globe",
+          "title": "Convenient for Devotees Everywhere",
+          "text": "Whether you live in another city or outside India, you can enquire about available live darshan arrangements without planning a long journey."
+        },
+        {
+          "icon": "video",
+          "title": "Experience Festivals Live",
+          "text": "Stay connected to important Hindu festivals through live darshan arrangements and experience the celebrations remotely."
+        },
+        {
+          "icon": "people",
+          "title": "A Simple Way to Participate Remotely",
+          "text": "Explore the service, check the available arrangements, and follow the booking instructions without needing to attend the festival in person."
+        }
+      ],
+      "whoTitle": "Who Can Use",
+      "whoAccent": "This Service?",
+      "whoIntro": "The Virtual Festival Darshan Service may be suitable for:",
+      "whoList": [
+        {
+          "text": "Devotees who cannot visit temples or festival celebrations in person."
+        },
+        {
+          "text": "Families who wish to stay connected to Hindu religious celebrations."
+        },
+        {
+          "text": "Senior citizens who find travelling or standing in long queues difficult."
+        },
+        {
+          "text": "People living outside India who wish to remain connected to their religious traditions."
+        },
+        {
+          "text": "Individuals who cannot attend festival celebrations because of work or family responsibilities."
+        }
+      ],
+      "whoClosing": "Every devotee has different circumstances. This service offers an option for those who wish to experience festival darshan remotely.",
+      "showPlaces": true,
+      "placesTitle": "Major Indian Festivals",
+      "placesSubtitle": "Experience the Celebrations That Bring Devotees Together",
+      "placesIntro": "India celebrates many festivals that hold deep religious and cultural importance. Explore some of the country's well-known celebrations and discover the traditions associated with them.",
+      "places": [
+        {
+          "name": "Kolkata Durga Puja",
+          "location": "Kolkata, West Bengal",
+          "text": "Durga Puja celebrates Goddess Durga and is known for its beautifully decorated pandals, traditional rituals, cultural activities, and vibrant community celebrations.",
+          "image": "assets/images/services/puja-booking.jpg",
+          "imageAlt": "Brass diyas and bowls of flowers (sample photo)"
+        },
+        {
+          "name": "Mumbai Ganesh Chaturthi",
+          "location": "Mumbai, Maharashtra",
+          "text": "Ganesh Chaturthi celebrates Lord Ganesha with devotional prayers, beautifully decorated idols, festive gatherings, and traditional celebrations across the city.",
+          "image": "assets/images/services/religious-ceremony.jpg",
+          "imageAlt": "Flowers being placed in bowls for a puja (sample photo)"
+        },
+        {
+          "name": "Puri Rath Yatra",
+          "location": "Puri, Odisha",
+          "text": "Puri Rath Yatra is a major religious festival dedicated to Lord Jagannath. Devotees gather to witness the grand chariot procession and participate in the sacred celebrations.",
+          "image": "assets/images/services/temple-darshan.jpg",
+          "imageAlt": "Temples with saffron flags (sample photo)"
+        }
+      ],
+      "placesNote": "Explore more festivals as they become available.",
+      "faqTitle": "Frequently Asked Questions",
+      "faqAccent": "(FAQs)",
+      "faqs": [
+        {
+          "q": "What is a Virtual Festival Darshan Service?",
+          "a": "A Virtual Festival Darshan Service allows devotees to experience live darshan remotely when they cannot attend a festival or visit a temple in person."
+        },
+        {
+          "q": "Can I use this service if I cannot visit the festival location?",
+          "a": "Yes. The service is intended for devotees who cannot attend in person because of distance, health, work, family responsibilities, or other personal reasons. Live darshan availability should be confirmed before booking."
+        },
+        {
+          "q": "Which festivals are covered by this service?",
+          "a": "Festival availability depends on the arrangements offered by the service provider. Please check the service details or contact the team to confirm which festivals are currently available."
+        },
+        {
+          "q": "Will I be able to watch the festival darshan live?",
+          "a": "Yes. The main purpose of this service is to provide live festival darshan for the selected festival. The live schedule, access method, and availability will be confirmed as part of the booking arrangements."
+        },
+        {
+          "q": "Can devotees living outside India book this service?",
+          "a": "Devotees living outside India can enquire about availability, booking procedures, time differences, and payment options before placing a booking."
+        }
+      ],
+      "ctaTitle": "Stay Connected to the Joy of Festival Darshan",
+      "ctaText": "Experience the sacred celebrations of Hindu festivals through live darshan, wherever you are.",
+      "ctaButton": "Book Festival Darshan",
+      "ctaLink": "booking",
+      "ctaImage": "assets/images/faith/hero-family.jpg",
+      "seoTitle": "Virtual Festival Darshan Service | Hindu.International",
+      "seoDescription": "Experience the live darshan of major Hindu festivals remotely when you cannot attend in person, from your home or wherever you are."
     },
     {
       "show": true,
@@ -241,6 +382,8 @@
       "aboutImageAlt": "",
       "showShloka": false,
       "shloka": "",
+      "processSubtitle": "",
+      "processSteps": [],
       "receiveTitle": "",
       "receiveAccent": "",
       "receiveSubtitle": "",
@@ -256,7 +399,9 @@
       "showPlaces": false,
       "placesTitle": "",
       "placesSubtitle": "",
+      "placesIntro": "",
       "places": [],
+      "placesNote": "",
       "faqTitle": "",
       "faqAccent": "",
       "faqs": [],
@@ -291,6 +436,8 @@
       "aboutImageAlt": "",
       "showShloka": false,
       "shloka": "",
+      "processSubtitle": "",
+      "processSteps": [],
       "receiveTitle": "",
       "receiveAccent": "",
       "receiveSubtitle": "",
@@ -306,7 +453,9 @@
       "showPlaces": false,
       "placesTitle": "",
       "placesSubtitle": "",
+      "placesIntro": "",
       "places": [],
+      "placesNote": "",
       "faqTitle": "",
       "faqAccent": "",
       "faqs": [],
@@ -341,6 +490,8 @@
       "aboutImageAlt": "",
       "showShloka": false,
       "shloka": "",
+      "processSubtitle": "",
+      "processSteps": [],
       "receiveTitle": "",
       "receiveAccent": "",
       "receiveSubtitle": "",
@@ -356,7 +507,9 @@
       "showPlaces": false,
       "placesTitle": "",
       "placesSubtitle": "",
+      "placesIntro": "",
       "places": [],
+      "placesNote": "",
       "faqTitle": "",
       "faqAccent": "",
       "faqs": [],
@@ -391,6 +544,8 @@
       "aboutImageAlt": "",
       "showShloka": false,
       "shloka": "",
+      "processSubtitle": "",
+      "processSteps": [],
       "receiveTitle": "",
       "receiveAccent": "",
       "receiveSubtitle": "",
@@ -406,7 +561,9 @@
       "showPlaces": false,
       "placesTitle": "",
       "placesSubtitle": "",
+      "placesIntro": "",
       "places": [],
+      "placesNote": "",
       "faqTitle": "",
       "faqAccent": "",
       "faqs": [],
@@ -441,6 +598,8 @@
       "aboutImageAlt": "",
       "showShloka": false,
       "shloka": "",
+      "processSubtitle": "",
+      "processSteps": [],
       "receiveTitle": "",
       "receiveAccent": "",
       "receiveSubtitle": "",
@@ -456,7 +615,9 @@
       "showPlaces": false,
       "placesTitle": "",
       "placesSubtitle": "",
+      "placesIntro": "",
       "places": [],
+      "placesNote": "",
       "faqTitle": "",
       "faqAccent": "",
       "faqs": [],
@@ -491,6 +652,8 @@
       "aboutImageAlt": "",
       "showShloka": false,
       "shloka": "",
+      "processSubtitle": "",
+      "processSteps": [],
       "receiveTitle": "",
       "receiveAccent": "",
       "receiveSubtitle": "",
@@ -506,7 +669,9 @@
       "showPlaces": false,
       "placesTitle": "",
       "placesSubtitle": "",
+      "placesIntro": "",
       "places": [],
+      "placesNote": "",
       "faqTitle": "",
       "faqAccent": "",
       "faqs": [],
@@ -541,6 +706,8 @@
       "aboutImageAlt": "",
       "showShloka": false,
       "shloka": "",
+      "processSubtitle": "",
+      "processSteps": [],
       "receiveTitle": "",
       "receiveAccent": "",
       "receiveSubtitle": "",
@@ -556,7 +723,9 @@
       "showPlaces": false,
       "placesTitle": "",
       "placesSubtitle": "",
+      "placesIntro": "",
       "places": [],
+      "placesNote": "",
       "faqTitle": "",
       "faqAccent": "",
       "faqs": [],
@@ -591,6 +760,8 @@
       "aboutImageAlt": "",
       "showShloka": false,
       "shloka": "",
+      "processSubtitle": "",
+      "processSteps": [],
       "receiveTitle": "",
       "receiveAccent": "",
       "receiveSubtitle": "",
@@ -606,7 +777,9 @@
       "showPlaces": false,
       "placesTitle": "",
       "placesSubtitle": "",
+      "placesIntro": "",
       "places": [],
+      "placesNote": "",
       "faqTitle": "",
       "faqAccent": "",
       "faqs": [],
@@ -641,6 +814,8 @@
       "aboutImageAlt": "",
       "showShloka": false,
       "shloka": "",
+      "processSubtitle": "",
+      "processSteps": [],
       "receiveTitle": "",
       "receiveAccent": "",
       "receiveSubtitle": "",
@@ -656,7 +831,9 @@
       "showPlaces": false,
       "placesTitle": "",
       "placesSubtitle": "",
+      "placesIntro": "",
       "places": [],
+      "placesNote": "",
       "faqTitle": "",
       "faqAccent": "",
       "faqs": [],
@@ -691,6 +868,8 @@
       "aboutImageAlt": "",
       "showShloka": false,
       "shloka": "",
+      "processSubtitle": "",
+      "processSteps": [],
       "receiveTitle": "",
       "receiveAccent": "",
       "receiveSubtitle": "",
@@ -706,7 +885,9 @@
       "showPlaces": false,
       "placesTitle": "",
       "placesSubtitle": "",
+      "placesIntro": "",
       "places": [],
+      "placesNote": "",
       "faqTitle": "",
       "faqAccent": "",
       "faqs": [],
@@ -741,6 +922,8 @@
       "aboutImageAlt": "",
       "showShloka": false,
       "shloka": "",
+      "processSubtitle": "",
+      "processSteps": [],
       "receiveTitle": "",
       "receiveAccent": "",
       "receiveSubtitle": "",
@@ -756,7 +939,9 @@
       "showPlaces": false,
       "placesTitle": "",
       "placesSubtitle": "",
+      "placesIntro": "",
       "places": [],
+      "placesNote": "",
       "faqTitle": "",
       "faqAccent": "",
       "faqs": [],
