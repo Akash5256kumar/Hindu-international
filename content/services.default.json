@@ -361,7 +361,7 @@
     },
     {
       "show": true,
-      "status": "draft",
+      "status": "published",
       "slug": "virtual-puja-booking",
       "number": "03",
       "icon": "lotus",
@@ -370,48 +370,156 @@
       "image": "assets/images/services/puja-booking.jpg",
       "imageAlt": "Brass diyas and bowls of flowers arranged for a puja",
       "link": "booking",
-      "bannerTitle": "Virtual Puja Booking Service",
-      "bannerAccent": "",
-      "bannerImage": "",
-      "bannerImageAlt": "",
-      "aboutLabel": "",
-      "aboutTitle": "",
-      "aboutText1": "",
-      "aboutText2": "",
-      "aboutImage": "",
-      "aboutImageAlt": "",
+      "bannerTitle": "Virtual Puja\nBooking Service",
+      "bannerAccent": "Puja",
+      "bannerImage": "assets/images/faith/heritage-aarti.jpg",
+      "bannerImageAlt": "Hands holding a puja thali with a lit diya and flowers",
+      "aboutLabel": "About this service",
+      "aboutTitle": "What Is Virtual Puja Booking?",
+      "aboutText1": "Puja is an important part of Hindu religious traditions. Devotees perform puja to express their devotion, offer prayers, and seek the blessings of their chosen deities. From daily worship to special occasions, puja helps families stay connected to their faith and religious customs.",
+      "aboutText2": "However, arranging a puja is not always easy when you are busy with work, living away from home, or unable to visit a temple or arrange the rituals in person. Our Virtual Puja Booking Service helps devotees explore and book available puja arrangements remotely. You can select the puja according to your needs, share the required details, and receive confirmation about the arrangements without having to manage every step yourself.",
+      "aboutImage": "assets/images/flower-offerings.jpg",
+      "aboutImageAlt": "A brass puja plate with flowers and offerings",
       "showShloka": false,
       "shloka": "",
-      "processSubtitle": "",
-      "processSteps": [],
-      "receiveTitle": "",
-      "receiveAccent": "",
-      "receiveSubtitle": "",
-      "receive": [],
-      "whyTitle": "",
-      "whyAccent": "",
-      "why": [],
-      "whoTitle": "",
-      "whoAccent": "",
-      "whoIntro": "",
-      "whoList": [],
-      "whoClosing": "",
+      "processSubtitle": "A simple way to arrange your puja remotely.",
+      "processSteps": [
+        {
+          "icon": "lotus",
+          "title": "Choose Your Puja",
+          "text": "Explore the available puja services and select the ritual that matches your religious needs or occasion."
+        },
+        {
+          "icon": "edit",
+          "title": "Share Your Details",
+          "text": "Provide the required details, such as your name and puja-related information, according to the selected service."
+        },
+        {
+          "icon": "check",
+          "title": "Confirm Your Booking",
+          "text": "Review the puja details, check the available arrangements, and complete your booking as instructed."
+        },
+        {
+          "icon": "diya",
+          "title": "Puja Arrangements",
+          "text": "Our team coordinates the confirmed puja arrangements and shares the relevant details with you."
+        }
+      ],
+      "receiveTitle": "What You",
+      "receiveAccent": "Receive",
+      "receiveSubtitle": "Puja Arrangements Made Simple",
+      "receive": [
+        {
+          "icon": "lotus",
+          "title": "Puja as Per Your Requirements",
+          "text": "Choose from the available puja services according to your religious needs, occasion, or personal preferences.",
+          "image": "assets/images/services/puja-booking.jpg",
+          "imageAlt": "Brass diyas and bowls of flowers arranged for a puja"
+        },
+        {
+          "icon": "bookopen",
+          "title": "Guidance for Your Booking",
+          "text": "Receive information about the selected puja and the details required to arrange the ritual.",
+          "image": "assets/images/services/pandit-booking.jpg",
+          "imageAlt": "A pandit reading a sacred text"
+        },
+        {
+          "icon": "diya",
+          "title": "Coordinated Ritual Arrangements",
+          "text": "The team coordinates the arrangements included in your confirmed booking.",
+          "image": "assets/images/services/samagri-store.jpg",
+          "imageAlt": "Brass kalash, bowls and flowers arranged for a ritual"
+        },
+        {
+          "icon": "check",
+          "title": "Booking Confirmation",
+          "text": "Receive confirmation and relevant instructions for your selected puja service.",
+          "image": "assets/images/services/religious-ceremony.jpg",
+          "imageAlt": "A hand placing flowers into bowls for a puja"
+        }
+      ],
+      "whyTitle": "Why Choose Our",
+      "whyAccent": "Virtual Puja Booking Service?",
+      "why": [
+        {
+          "icon": "globe",
+          "title": "Convenient from Anywhere",
+          "text": "You can explore and book available puja services without needing to visit a physical location to make your enquiry."
+        },
+        {
+          "icon": "calendar",
+          "title": "Suitable for Different Occasions",
+          "text": "Whether you are arranging a puja for a personal occasion or a religious observance, you can explore the available services and choose accordingly."
+        },
+        {
+          "icon": "edit",
+          "title": "Simple Booking Process",
+          "text": "The booking process helps you understand the available options, provide the necessary details, and confirm the arrangements."
+        },
+        {
+          "icon": "namaste",
+          "title": "Stay Connected to Your Faith",
+          "text": "Even when daily responsibilities make religious arrangements difficult, you can continue to explore ways to observe the traditions that matter to you."
+        }
+      ],
+      "whoTitle": "Who Can Use",
+      "whoAccent": "This Service?",
+      "whoIntro": "The Virtual Puja Booking Service may be suitable for:",
+      "whoList": [
+        {
+          "text": "Devotees who wish to arrange puja remotely."
+        },
+        {
+          "text": "Families planning religious rituals for special occasions."
+        },
+        {
+          "text": "People living away from their hometowns."
+        },
+        {
+          "text": "Working professionals with limited time to arrange rituals in person."
+        },
+        {
+          "text": "Devotees living outside India who wish to enquire about available puja arrangements."
+        }
+      ],
+      "whoClosing": "Every devotee has different needs and circumstances. This service offers a convenient way to explore and arrange available puja services remotely.",
       "showPlaces": false,
       "placesTitle": "",
       "placesSubtitle": "",
       "placesIntro": "",
       "places": [],
       "placesNote": "",
-      "faqTitle": "",
-      "faqAccent": "",
-      "faqs": [],
-      "ctaTitle": "",
-      "ctaText": "",
-      "ctaButton": "",
-      "ctaLink": "",
-      "ctaImage": "",
-      "seoTitle": "",
-      "seoDescription": ""
+      "faqTitle": "Frequently Asked Questions",
+      "faqAccent": "(FAQs)",
+      "faqs": [
+        {
+          "q": "What is a Virtual Puja Booking Service?",
+          "a": "A Virtual Puja Booking Service allows devotees to enquire about and book available puja arrangements remotely without having to manage the entire booking process in person."
+        },
+        {
+          "q": "Which types of puja can I book?",
+          "a": "The available puja options depend on the services offered by the trust. Please explore the service listings or contact the team to confirm the puja you wish to arrange."
+        },
+        {
+          "q": "What details are required to book a puja?",
+          "a": "The required details depend on the selected puja. You may be asked to provide your name and other information necessary for the arrangements. Follow the instructions provided during booking."
+        },
+        {
+          "q": "Can I book a puja if I live outside India?",
+          "a": "You can enquire about booking from outside India. Availability, payment methods, time differences, and the arrangements for your selected puja should be confirmed before booking."
+        },
+        {
+          "q": "How will I know that my puja booking is confirmed?",
+          "a": "After completing the booking process, follow the confirmation instructions provided by the service team. Any further details about the puja arrangements will be shared according to the selected service."
+        }
+      ],
+      "ctaTitle": "Make Your Puja Arrangements with Ease",
+      "ctaText": "Explore our available puja services and take the next step in arranging a ritual that matters to you.",
+      "ctaButton": "Book Your Puja",
+      "ctaLink": "booking",
+      "ctaImage": "assets/images/roots/thanks.jpg",
+      "seoTitle": "Virtual Puja Booking Service | Hindu.International",
+      "seoDescription": "Explore and book available puja arrangements remotely: choose your puja, share your details and receive confirmation of the arrangements."
     },
     {
       "show": true,
