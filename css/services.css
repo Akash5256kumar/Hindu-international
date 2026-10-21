@@ -49,17 +49,6 @@
 .svc-divider::before, .svc-divider::after { content: ""; flex: 1; height: 1px; background: currentColor; opacity: .55; }
 .svc-divider .icon { width: 30px; height: 30px; stroke-width: 1.3; }
 
-.svc-quote {
-  flex: none; align-self: flex-start;
-  width: 128px; margin-top: 10px; padding: 16px 12px 18px;
-  text-align: center;
-  background: rgba(255, 250, 243, .9);
-  border-radius: 10px;
-  box-shadow: 0 8px 24px rgba(90, 48, 12, .12);
-}
-.svc-quote__mark { display: block; text-align: left; font-family: var(--font-serif); font-weight: 700; font-size: 2.6rem; line-height: .7; color: var(--saffron); }
-.svc-quote p { margin: 10px 0 0; font-size: .86rem; line-height: 1.55; color: var(--ink-2); }
-.svc-quote::after { content: ""; display: block; width: 36px; height: 2px; margin: 12px auto 0; background: var(--saffron); border-radius: 2px; }
 
 /* ---------- Service cards: white cards, photo left + text right, 2 columns ---------- */
 .svc-grid {
@@ -173,7 +162,6 @@
     -webkit-mask-image: linear-gradient(180deg, transparent 0%, #000 45%);
             mask-image: linear-gradient(180deg, transparent 0%, #000 45%);
   }
-  .svc-quote { display: none; }
 }
 
 @media (max-width: 560px) {

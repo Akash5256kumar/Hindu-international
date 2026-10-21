@@ -387,7 +387,6 @@ return [
                 ['key' => 'titleAccent', 'label' => 'Heading (orange part)', 'type' => 'text', 'max' => 60, 'help' => $accentHelp],
                 ['key' => 'text', 'label' => 'Description', 'type' => 'textarea', 'rows' => 2, 'max' => 300],
                 ['key' => 'image', 'label' => 'Banner photo', 'type' => 'image', 'help' => 'Wide landscape photo; the left side fades into the cream background behind the text.'],
-                ['key' => 'quote', 'label' => 'Words in the small box on the right', 'type' => 'textarea', 'rows' => 4, 'max' => 120, 'help' => 'One word per line. Leave empty to hide the box.'],
             ]],
             ['path' => 'services.process', 'title' => 'Process heading on every service page', 'help' => 'The four process steps themselves are shared with the Home page and are edited under “How It Works”.', 'fields' => [
                 ['key' => 'title', 'label' => 'Heading (navy part)', 'type' => 'text', 'max' => 60],
