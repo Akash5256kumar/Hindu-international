@@ -107,11 +107,15 @@
   function renderList(data) {
     var grid = document.querySelector('[data-services-grid]');
     if (!grid || !data) return;
-    var items = list(data.items).filter(function (s) { return s.show !== false && str(s.title); });
+    /* The card number is the service's position in the admin list, so hidden services leave a gap
+       instead of shifting the numbers of the services after them */
+    var items = list(data.items).map(function (s, i) { return { s: s, n: i + 1 }; })
+      .filter(function (x) { return x.s.show !== false && str(x.s.title); });
     if (!items.length) return;
 
     var frag = document.createDocumentFragment();
-    items.forEach(function (s, i) {
+    items.forEach(function (x) {
+      var s = x.s;
       var card = el('article', 'svc-card');
       var media = el('div', 'svc-card__media');
       var img = image(s.image, s.imageAlt || s.title);
@@ -123,7 +127,7 @@
       var ic = el('span', 'svc-card__icon');
       ic.appendChild(icon(s.icon));
       head.appendChild(ic);
-      head.appendChild(el('span', 'svc-card__num', 'Service ' + (i < 9 ? '0' : '') + (i + 1)));
+      head.appendChild(el('span', 'svc-card__num', 'Service ' + (x.n < 10 ? '0' : '') + x.n));
       body.appendChild(head);
       body.appendChild(el('h2', null, str(s.title)));
       if (str(s.text)) body.appendChild(el('p', null, str(s.text)));
