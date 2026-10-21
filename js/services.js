@@ -238,21 +238,64 @@
       if (img) { img.loading = 'eager'; img.setAttribute('fetchpriority', 'high'); media.appendChild(img); }
       box.appendChild(media);
       var inner = el('div', 'container sd-banner__inner');
-      var h1 = el('h1', 'sd-banner__title');
-      h1.id = 'page-title';
-      var accent = str(s.bannerAccent);
-      (str(s.bannerTitle) || str(s.title)).split('\n').forEach(function (line, i) {
-        if (i) h1.appendChild(el('br'));
-        var at = accent ? line.indexOf(accent) : -1;
-        if (at < 0) { h1.appendChild(document.createTextNode(line)); return; }
-        h1.appendChild(document.createTextNode(line.slice(0, at)));
-        h1.appendChild(el('span', 'sd-accent', accent));
-        h1.appendChild(document.createTextNode(line.slice(at + accent.length)));
+
+      /* Up to 3 sliding texts on the same photo; without them, just the heading */
+      var slides = list(s.bannerSlides).filter(function (x) { return str(x.title); });
+      if (!slides.length) slides = [{ title: str(s.bannerTitle) || str(s.title), accent: s.bannerAccent }];
+
+      var stack = el('div', 'sd-slides');
+      slides.forEach(function (x, i) {
+        var slide = el('div', 'sd-slide' + (i === 0 ? ' is-on' : ''));
+        if (i) slide.setAttribute('aria-hidden', 'true');
+        if (str(x.label)) slide.appendChild(el('p', 'sd-slide__label', str(x.label)));
+        var h = el(i === 0 ? 'h1' : 'p', 'sd-banner__title');
+        if (i === 0) h.id = 'page-title';
+        titleLines(h, str(x.title), str(x.accent));
+        slide.appendChild(h);
+        if (str(x.text)) slide.appendChild(el('p', 'sd-slide__text', str(x.text)));
+        if (str(x.buttonText)) {
+          var a = el('a', 'btn btn--primary sd-slide__btn', str(x.buttonText) + ' ');
+          a.href = safeLink(x.buttonLink, 'booking');
+          if (/^https?:/i.test(a.getAttribute('href'))) { a.target = '_blank'; a.rel = 'noopener'; }
+          a.appendChild(icon('arrow'));
+          slide.appendChild(a);
+        }
+        stack.appendChild(slide);
       });
-      inner.appendChild(h1);
+      inner.appendChild(stack);
       inner.appendChild(lotusRule());
       box.appendChild(inner);
+      if (slides.length > 1) rotateSlides(stack);
     });
+  }
+
+  /* Heading text with the orange words; Enter in the admin starts a new line */
+  function titleLines(h, title, accent) {
+    title.split('\n').forEach(function (line, i) {
+      if (i) h.appendChild(el('br'));
+      var at = accent ? line.indexOf(accent) : -1;
+      if (at < 0) { h.appendChild(document.createTextNode(line)); return; }
+      h.appendChild(document.createTextNode(line.slice(0, at)));
+      h.appendChild(el('span', 'sd-accent', accent));
+      h.appendChild(document.createTextNode(line.slice(at + accent.length)));
+    });
+  }
+
+  /* Every 4 seconds the next banner text rises in; after the last it starts again */
+  var SLIDE_DELAY = 4000;
+  function rotateSlides(stack) {
+    var slides = stack.children, idx = 0;
+    setInterval(function () {
+      if (document.hidden) return;
+      var old = slides[idx];
+      idx = (idx + 1) % slides.length;
+      Array.prototype.forEach.call(slides, function (sl) { sl.classList.remove('is-out'); });
+      old.classList.remove('is-on');
+      old.classList.add('is-out');
+      old.setAttribute('aria-hidden', 'true');
+      slides[idx].classList.add('is-on');
+      slides[idx].removeAttribute('aria-hidden');
+    }, SLIDE_DELAY);
   }
 
   function renderAbout(s) {

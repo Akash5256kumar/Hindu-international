@@ -405,9 +405,17 @@ return [
                     ['key' => 'imageAlt', 'label' => 'Card photo description', 'type' => 'text', 'max' => 200],
                     $link('link', '“View Details” link while the page is a draft'),
 
-                    ['key' => 'bannerTitle', 'label' => 'Detail page — banner heading', 'type' => 'textarea', 'rows' => 2, 'max' => 120, 'help' => 'Press Enter to start a new line. Empty = the service name.'],
+                    ['key' => 'bannerTitle', 'label' => 'Detail page — banner heading', 'type' => 'textarea', 'rows' => 2, 'max' => 120, 'help' => 'Press Enter to start a new line. Empty = the service name. Used when no banner slides are added below.'],
                     ['key' => 'bannerAccent', 'label' => 'Banner — words shown in orange', 'type' => 'text', 'max' => 80, 'help' => 'Must be written exactly as in the heading, e.g. Punya Snan.'],
-                    ['key' => 'bannerImage', 'label' => 'Banner photo', 'type' => 'image', 'help' => 'Very wide photo (about 3.5 : 1). The left side fades behind the heading.'],
+                    ['key' => 'bannerSlides', 'label' => 'Banner — sliding text (up to 3)', 'type' => 'list', 'min' => 0, 'max' => 3, 'itemLabel' => 'Slide', 'titleField' => 'title', 'help' => 'The banner photo stays the same; these texts change by themselves every 4 seconds. Slide 1 is the main page heading. Leave empty to show only the heading above.', 'fields' => [
+                        ['key' => 'label', 'label' => 'Small orange label (optional)', 'type' => 'text', 'max' => 50, 'help' => 'e.g. Our Service'],
+                        ['key' => 'title', 'label' => 'Heading', 'type' => 'textarea', 'rows' => 2, 'max' => 120, 'required' => true, 'help' => 'Press Enter to start a new line.'],
+                        ['key' => 'accent', 'label' => 'Words shown in orange (optional)', 'type' => 'text', 'max' => 80, 'help' => 'Must be written exactly as in the heading.'],
+                        ['key' => 'text', 'label' => 'Line under the heading (optional)', 'type' => 'textarea', 'rows' => 2, 'max' => 220],
+                        ['key' => 'buttonText', 'label' => 'Button text (optional)', 'type' => 'text', 'max' => 40, 'help' => 'Leave empty for no button.'],
+                        $link('buttonLink', 'Button link'),
+                    ]],
+                    ['key' => 'bannerImage', 'label' => 'Banner photo', 'type' => 'image', 'help' => 'Best size 2400 × 900 px. Keep the main subject on the right half; the left side fades behind the text.'],
                     ['key' => 'bannerImageAlt', 'label' => 'Banner photo description', 'type' => 'text', 'max' => 200],
 
                     ['key' => 'aboutLabel', 'label' => 'About — small orange label', 'type' => 'text', 'max' => 60],

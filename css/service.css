@@ -47,7 +47,7 @@
   -webkit-mask-image: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, .7) 18%, #000 34%);
           mask-image: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, .7) 18%, #000 34%);
 }
-.sd-banner__inner { position: relative; z-index: 1; min-height: 260px; display: flex; flex-direction: column; justify-content: center; padding-top: 30px; padding-bottom: 30px; }
+.sd-banner__inner { position: relative; z-index: 1; min-height: 460px; display: flex; flex-direction: column; justify-content: center; padding-top: 40px; padding-bottom: 40px; }
 .sd-banner__title {
   margin: 0; max-width: 560px;
   font-family: var(--font-serif); font-weight: 700;
@@ -55,6 +55,27 @@
   color: var(--roots-ink);
 }
 .sd-banner .sd-lotus { margin-bottom: 0; }
+
+/* Sliding banner texts: stacked in one spot (the tallest sets the height); the next one rises from below */
+.sd-slides { display: grid; max-width: 580px; }
+.sd-slide {
+  grid-area: 1 / 1; min-width: 0;
+  opacity: 0; visibility: hidden; transform: translateY(40px);
+  transition: opacity .7s ease, transform .7s var(--ease), visibility .7s;
+}
+.sd-slide.is-on { opacity: 1; visibility: visible; transform: none; }
+.sd-slide.is-out { transform: translateY(-30px); }
+.sd-slide__label {
+  margin: 0 0 12px;
+  font-size: .8rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
+  color: var(--saffron-deep);
+}
+.sd-slide__text { margin: 14px 0 0; max-width: 46ch; font-size: 1.06rem; line-height: 1.55; color: var(--ink-2); }
+.sd-slide__btn { margin-top: 22px; min-height: 48px; padding: 0 24px; }
+.sd-slide__btn .icon { width: 18px; height: 18px; }
+@media (prefers-reduced-motion: reduce) {
+  .sd-slide, .sd-slide.is-out { transform: none; transition: opacity .3s, visibility .3s; }
+}
 
 /* ---------- 2. About this service ---------- */
 .sd-section--about { border-top: 0; }
@@ -183,12 +204,12 @@
 @media (max-width: 640px) {
   .sd-section { padding: 40px 0; }
   /* photo below the heading, fading in from the top */
-  .sd-banner__media { width: 100%; top: auto; height: 170px; }
+  .sd-banner__media { width: 100%; top: auto; height: 200px; }
   .sd-banner__media img {
     -webkit-mask-image: linear-gradient(180deg, transparent 0%, #000 50%);
             mask-image: linear-gradient(180deg, transparent 0%, #000 50%);
   }
-  .sd-banner__inner { min-height: 0; padding-top: 28px; padding-bottom: 160px; }
+  .sd-banner__inner { min-height: 0; padding-top: 28px; padding-bottom: 190px; }
   .sd-receive, .sd-why__grid { grid-template-columns: minmax(0, 1fr); }
   .sd-places__track { grid-auto-columns: 82%; }
   .sd-cta__media { width: 100%; top: auto; height: 150px; }
