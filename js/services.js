@@ -113,8 +113,7 @@
       .filter(function (x) { return x.s.show !== false && str(x.s.title); });
     if (!items.length) return;
 
-    var frag = document.createDocumentFragment();
-    items.forEach(function (x) {
+    var cards = items.map(function (x) {
       var s = x.s;
       var card = el('article', 'svc-card');
       var media = el('div', 'svc-card__media');
@@ -137,10 +136,68 @@
       a.appendChild(icon('arrow'));
       body.appendChild(a);
       card.appendChild(body);
-      frag.appendChild(card);
+      return card;
     });
-    grid.textContent = '';
-    grid.appendChild(frag);
+    paginate(grid, cards);
+  }
+
+  /* ---------- Pages of 6 cards with a Previous / Next bar; the page is kept in ?page=N ---------- */
+  var PER_PAGE = 6;
+  function paginate(grid, cards) {
+    var pages = Math.ceil(cards.length / PER_PAGE);
+    var page = Math.min(pages, Math.max(1, parseInt(new URLSearchParams(location.search).get('page'), 10) || 1));
+    var bar = null, count, prev, next;
+
+    if (pages > 1) {
+      bar = el('nav', 'container svc-pager');
+      bar.setAttribute('aria-label', 'Service pages');
+      count = el('p', 'svc-pager__count');
+      count.setAttribute('aria-live', 'polite');
+      prev = el('button', 'svc-pager__btn svc-pager__btn--prev');
+      prev.type = 'button';
+      prev.appendChild(icon('arrow'));
+      prev.appendChild(document.createTextNode('Previous'));
+      next = el('button', 'svc-pager__btn svc-pager__btn--next', 'Next');
+      next.type = 'button';
+      next.appendChild(icon('arrow'));
+      var btns = el('div', 'svc-pager__btns');
+      btns.appendChild(prev);
+      btns.appendChild(next);
+      bar.appendChild(count);
+      bar.appendChild(btns);
+      prev.addEventListener('click', function () { go(page - 1); });
+      next.addEventListener('click', function () { go(page + 1); });
+      grid.parentNode.insertBefore(bar, grid.nextSibling);
+    }
+
+    function draw() {
+      var first = (page - 1) * PER_PAGE;
+      var shown = cards.slice(first, first + PER_PAGE);
+      grid.textContent = '';
+      shown.forEach(function (c) { grid.appendChild(c); });
+      if (!bar) return;
+      count.textContent = '';
+      count.appendChild(document.createTextNode('Showing '));
+      count.appendChild(el('b', null, shown.length > 1 ? (first + 1) + '–' + (first + shown.length) : String(first + 1)));
+      count.appendChild(document.createTextNode(' of '));
+      count.appendChild(el('b', null, String(cards.length)));
+      count.appendChild(document.createTextNode(' services · Page ' + page + ' of ' + pages));
+      prev.disabled = page === 1;
+      next.disabled = page === pages;
+    }
+
+    function go(n) {
+      if (n < 1 || n > pages || n === page) return;
+      page = n;
+      draw();
+      var url = new URL(location.href);
+      if (page === 1) url.searchParams.delete('page'); else url.searchParams.set('page', page);
+      history.replaceState(null, '', url);
+      var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+      grid.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
+    }
+
+    draw();
   }
 
   /* =================================================================

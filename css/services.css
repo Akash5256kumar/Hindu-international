@@ -121,6 +121,36 @@
   width: calc(50% - 10px);
 }
 
+/* ---------- Pages of 6 cards: count on the left, Previous / Next on the right ---------- */
+.svc-grid { scroll-margin-top: calc(var(--header-h) + 16px); }
+.svc-pager {
+  position: relative; z-index: 1;
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px;
+  margin-top: 34px;
+}
+.svc-pager__count {
+  flex: 1 1 auto; margin: 0; padding: 14px 18px;
+  background: var(--white); border: 1px solid var(--line); border-radius: 14px;
+  font-size: .9rem; color: var(--muted); font-variant-numeric: tabular-nums;
+}
+.svc-pager__count b { color: var(--roots-ink); }
+.svc-pager__btns { display: flex; gap: 10px; }
+.svc-pager__btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  height: 46px; padding: 0 22px; border-radius: 8px;
+  font: 600 .9rem/1 var(--font-sans); cursor: pointer;
+  border: 1.5px solid var(--saffron);
+  transition: background-color .2s, color .2s, box-shadow .2s;
+}
+.svc-pager__btn .icon { width: 16px; height: 16px; stroke-width: 2; }
+.svc-pager__btn--prev { background: var(--white); color: var(--saffron-deep); }
+.svc-pager__btn--prev .icon { transform: rotate(180deg); }
+.svc-pager__btn--prev:hover:not(:disabled) { background: var(--tint); }
+.svc-pager__btn--next { background: var(--saffron); color: var(--white); }
+.svc-pager__btn--next:hover:not(:disabled) { background: var(--saffron-deep); border-color: var(--saffron-deep); }
+.svc-pager__btn:disabled { opacity: .4; cursor: not-allowed; }
+.svc-pager__btn:focus-visible { outline: 2px solid var(--roots-ink); outline-offset: 2px; }
+
 /* ---------- Responsive ---------- */
 @media (max-width: 1024px) {
   .svc-card { grid-template-columns: 40% minmax(0, 1fr); }
@@ -151,4 +181,8 @@
   .svc-card { grid-template-columns: 1fr; }
   .svc-card__media { min-height: 0; aspect-ratio: 16 / 9; }
   .svc-card__body { padding: 18px; }
+  .svc-pager { justify-content: center; }
+  .svc-pager__count { flex-basis: 100%; text-align: center; }
+  .svc-pager__btns { width: 100%; }
+  .svc-pager__btn { flex: 1; justify-content: center; padding: 0 14px; }
 }
