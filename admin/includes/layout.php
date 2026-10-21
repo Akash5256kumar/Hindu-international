@@ -15,7 +15,7 @@ function auth_page_start(string $title): void
   <meta name="robots" content="noindex, nofollow">
   <title><?= e($title) ?> · Hindu.International Admin</title>
   <link rel="icon" href="../assets/images/brand/logo-mark.png?v=brand-favicon-20261008" type="image/png">
-  <link rel="stylesheet" href="assets/admin.css?v=brand-logo-20261008">
+  <link rel="stylesheet" href="assets/admin.css?v=list-order-20261021">
 </head>
 <body class="auth">
   <main class="auth__card">

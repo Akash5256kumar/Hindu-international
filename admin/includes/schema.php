@@ -394,12 +394,11 @@ return [
                 ['key' => 'titleAccent', 'label' => 'Heading (orange part)', 'type' => 'text', 'max' => 60, 'help' => $accentHelp],
                 ['key' => 'subtitle', 'label' => 'Line under the heading', 'type' => 'text', 'max' => 200, 'help' => 'Write {service} where the name of the service should appear.'],
             ]],
-            ['path' => 'services', 'title' => 'Services', 'help' => 'Each service has a card on the Services page and its own detail page. The list order is the order of the cards. Sections you leave empty are not shown on the detail page.', 'fields' => [
+            ['path' => 'services', 'title' => 'Services', 'help' => 'Each service has a card on the Services page and its own detail page. The list order is the order of the cards, and the card number (Service 01, 02 …) follows it. To change the order, type a new position in the number box next to a service and press Enter, or drag the service by its header. Sections you leave empty are not shown on the detail page.', 'fields' => [
                 ['key' => 'items', 'label' => 'Services', 'type' => 'list', 'min' => 0, 'max' => 40, 'itemLabel' => 'Service', 'titleField' => 'title', 'fields' => [
                     $showField,
                     ['key' => 'status', 'label' => 'Detail page status', 'type' => 'select', 'options' => ['draft' => 'Draft (detail page not ready yet)', 'published' => 'Published'], 'help' => 'While a service is a draft, its “View Details” button opens the link below instead of the detail page.'],
                     ['key' => 'slug', 'label' => 'Page address (slug)', 'type' => 'slug', 'max' => 80, 'required' => true, 'help' => 'Small letters, numbers and dashes, e.g. virtual-punya-snan. The page opens at /service?name=virtual-punya-snan. Must be different for every service.'],
-                    ['key' => 'number', 'label' => 'Service number', 'type' => 'text', 'max' => 6, 'help' => 'Shown on the card, e.g. 01.'],
                     $serviceIconField,
                     ['key' => 'title', 'label' => 'Service name', 'type' => 'text', 'max' => 90, 'required' => true],
                     ['key' => 'text', 'label' => 'Short description (card)', 'type' => 'textarea', 'rows' => 2, 'max' => 200],

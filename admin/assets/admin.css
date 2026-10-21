@@ -184,6 +184,15 @@ select.input { cursor: pointer; }
 .list__label { font-weight: 600; font-size: 13px; color: var(--brand); white-space: nowrap; }
 .list__title { flex: 1; min-width: 0; font-size: 14px; color: var(--ink-2); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .list__tools { display: flex; gap: 6px; }
+.list__grip { color: var(--muted); cursor: grab; font-size: 15px; line-height: 1; user-select: none; }
+.list__pos {
+  width: 52px; height: 30px; padding: 0 4px; text-align: center;
+  border: 1px solid var(--line); border-radius: 6px; background: var(--panel);
+  font: 600 13px/1 var(--font); color: var(--brand);
+}
+.list__pos:focus { outline: none; border-color: var(--brand); }
+.list__item.is-dragging { opacity: .45; }
+.list__item.is-drop { border-color: var(--brand); box-shadow: 0 0 0 2px var(--brand) inset; }
 .list__body { padding: 4px 14px 16px; border-top: 1px solid var(--line); }
 .list__body > .field:first-child { margin-top: 12px; }
 .list__add { margin-top: 12px; }

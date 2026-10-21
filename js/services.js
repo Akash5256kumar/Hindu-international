@@ -123,7 +123,7 @@
       var ic = el('span', 'svc-card__icon');
       ic.appendChild(icon(s.icon));
       head.appendChild(ic);
-      head.appendChild(el('span', 'svc-card__num', 'Service ' + (str(s.number) || ((i < 9 ? '0' : '') + (i + 1)))));
+      head.appendChild(el('span', 'svc-card__num', 'Service ' + (i < 9 ? '0' : '') + (i + 1)));
       body.appendChild(head);
       body.appendChild(el('h2', null, str(s.title)));
       if (str(s.text)) body.appendChild(el('p', null, str(s.text)));

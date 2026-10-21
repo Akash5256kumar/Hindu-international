@@ -12,7 +12,7 @@ Auth::requirePage();
   <meta name="csrf-token" content="<?= e(csrf_token()) ?>">
   <title>Content editor · Hindu.International Admin</title>
   <link rel="icon" href="../assets/images/brand/logo-mark.png?v=brand-favicon-20261008" type="image/png">
-  <link rel="stylesheet" href="assets/admin.css?v=brand-logo-20261008">
+  <link rel="stylesheet" href="assets/admin.css?v=list-order-20261021">
 </head>
 <body class="app">
   <header class="topbar">
@@ -63,6 +63,6 @@ Auth::requirePage();
 
   <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
 
-  <script src="assets/admin.js?v=clean-url-inputs-20261008"></script>
+  <script src="assets/admin.js?v=list-order-20261021"></script>
 </body>
 </html>

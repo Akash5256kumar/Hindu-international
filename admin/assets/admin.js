@@ -510,6 +510,19 @@
             onclick: function (e) { e.preventDefault(); remove(i, title); } })
         ]);
 
+        /* Position box: type a new number (e.g. 1) and press Enter to move the item there */
+        var pos = fixed ? null : h('input', {
+          type: 'number', class: 'list__pos', min: 1, max: arr.length, value: i + 1,
+          title: 'Position — type a number and press Enter', 'aria-label': 'Position of ' + field.itemLabel.toLowerCase() + ' ' + (i + 1),
+          onclick: function (e) { e.stopPropagation(); },
+          onkeydown: function (e) {
+            e.stopPropagation();
+            if (e.key === 'Enter') { e.preventDefault(); pos.blur(); }
+          },
+          onkeyup: function (e) { e.preventDefault(); },
+          onchange: function () { moveTo(i, parseInt(pos.value, 10) - 1); }
+        });
+
         var titleEl = h('span', { class: 'list__title', text: title });
         var details;
         var refresh = function () {
@@ -521,12 +534,15 @@
         body.addEventListener('input', refresh);
         wrap.appendChild(details = h('details', { class: 'list__item' + (hasError ? ' has-error' : '') + (item.show === false ? ' is-off' : ''), open: fixed || hasError || i === openIndex || arr.length === 1 }, [
           h('summary', { class: 'list__summary' }, [
-            h('span', { class: 'list__label', text: field.itemLabel + ' ' + (i + 1) }),
+            fixed ? null : h('span', { class: 'list__grip', title: 'Drag to move', 'aria-hidden': 'true', text: '⠿' }),
+            h('span', { class: 'list__label', text: field.itemLabel + (fixed ? ' ' + (i + 1) : '') }),
+            pos,
             titleEl,
             tools
           ]),
           body
         ]));
+        if (!fixed) dragHandlers(details, i);
       });
 
       if (!fixed) {
@@ -546,6 +562,51 @@
       state.errors = {};       // positions changed; errors will be re-checked on save
       draw(j);
       changed();
+    }
+
+    /** Move item i to position j, shifting the others (used by the position box and drag-and-drop) */
+    function moveTo(i, j) {
+      var arr = items();
+      if (isNaN(j)) { draw(i); return; }
+      j = Math.max(0, Math.min(arr.length - 1, j));
+      if (j === i) { draw(i); return; }
+      arr.splice(j, 0, arr.splice(i, 1)[0]);
+      state.errors = {};
+      draw(j);
+      changed();
+    }
+
+    /** Drag an item by its header and drop it on another item to take that item's place */
+    var dragFrom = null;
+    function dragHandlers(details, i) {
+      var summary = details.firstChild;
+      summary.setAttribute('draggable', 'true');
+      summary.addEventListener('dragstart', function (e) {
+        dragFrom = i;
+        e.dataTransfer.effectAllowed = 'move';
+        try { e.dataTransfer.setData('text/plain', String(i)); } catch (err) {}
+        details.classList.add('is-dragging');
+      });
+      summary.addEventListener('dragend', function () {
+        dragFrom = null;
+        Array.prototype.forEach.call(wrap.querySelectorAll('.is-dragging, .is-drop'), function (n) { n.classList.remove('is-dragging', 'is-drop'); });
+      });
+      details.addEventListener('dragover', function (e) {
+        if (dragFrom === null || dragFrom === i) return;
+        e.preventDefault();
+        e.dataTransfer.dropEffect = 'move';
+        details.classList.add('is-drop');
+      });
+      details.addEventListener('dragleave', function (e) {
+        if (!details.contains(e.relatedTarget)) details.classList.remove('is-drop');
+      });
+      details.addEventListener('drop', function (e) {
+        if (dragFrom === null) return;
+        e.preventDefault();
+        var from = dragFrom;
+        dragFrom = null;
+        moveTo(from, i);
+      });
     }
 
     function remove(i, title) {
