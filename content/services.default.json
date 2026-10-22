@@ -2073,8 +2073,8 @@
     },
     {
       "show": true,
-      "status": "draft",
-      "design": "standard",
+      "status": "published",
+      "design": "v2",
       "slug": "online-priest-consultation",
       "number": "13",
       "icon": "video",
@@ -2083,48 +2083,166 @@
       "image": "assets/images/ritual-aarti.jpg",
       "imageAlt": "A priest performing aarti with lamps at the ghat",
       "link": "contact",
-      "bannerTitle": "Online Priest Consultation & Ritual Guidance",
-      "bannerAccent": "",
-      "bannerImage": "",
-      "bannerImageAlt": "",
+      "bannerTitle": "Online Priest\nConsultation & Ritual Guidance",
+      "bannerAccent": "Consultation & Ritual Guidance",
+      "bannerImage": "assets/images/ritual-aarti.jpg",
+      "bannerImageAlt": "A priest performing a ritual with lamps and offerings",
       "aboutLabel": "",
-      "aboutTitle": "",
-      "aboutText1": "",
-      "aboutText2": "",
-      "aboutImage": "",
-      "aboutImageAlt": "",
+      "aboutTitle": "What Is Online Priest Consultation & Ritual Guidance?",
+      "aboutText1": "Hindu religious traditions include various rituals, pujas, ceremonies, and customs that may require proper guidance and preparation. People often have questions about the significance of a ritual, the samagri required, the appropriate way to prepare, or the traditional practices associated with a particular occasion. Guidance from a knowledgeable priest can help them understand these requirements more clearly.",
+      "aboutText2": "Our Online Priest Consultation & Ritual Guidance Service helps people explore available consultation options for their religious questions and ritual-related needs. You can review the available services, share your questions or requirements, and follow the provided instructions to arrange a consultation. This offers a convenient way to seek guidance even when visiting a priest in person is difficult.",
+      "aboutImage": "assets/images/services/religious-awareness.jpg",
+      "aboutImageAlt": "An open scripture with a rudraksha mala beside it",
       "showShloka": false,
       "shloka": "",
-      "processSubtitle": "",
-      "processSteps": [],
-      "receiveTitle": "",
-      "receiveAccent": "",
-      "receiveSubtitle": "",
-      "receive": [],
-      "whyTitle": "",
+      "processSubtitle": "A simple way to arrange an online priest consultation.",
+      "processSteps": [
+        {
+          "icon": "calendar",
+          "title": "Choose Your Consultation",
+          "text": "Explore the available consultation options and select the type of religious or ritual guidance you need."
+        },
+        {
+          "icon": "edit",
+          "title": "Share Your Questions",
+          "text": "Provide the relevant details about your ritual, occasion, or religious questions so the consultation can be arranged according to your requirements."
+        },
+        {
+          "icon": "check",
+          "title": "Confirm Your Consultation",
+          "text": "Review the available consultation details, check the arrangements, and complete the booking confirmation process."
+        },
+        {
+          "icon": "people",
+          "title": "Receive Ritual Guidance",
+          "text": "Connect through the available consultation method and discuss your questions or requirements according to the confirmed arrangements."
+        }
+      ],
+      "receiveTitle": "What You",
+      "receiveAccent": "Receive",
+      "receiveSubtitle": "Helpful Guidance for Your Religious Needs",
+      "receive": [
+        {
+          "icon": "lotus",
+          "title": "Guidance on Rituals and Puja",
+          "text": "Explore consultation options for understanding religious rituals, pujas, and traditional practices.",
+          "image": "assets/images/services/pandit-booking.jpg",
+          "imageAlt": "A pandit reading a sacred text at a wooden desk"
+        },
+        {
+          "icon": "bookopen",
+          "title": "Information on Ritual Requirements",
+          "text": "Get guidance on the details and preparations associated with your selected ritual, according to the consultation available.",
+          "image": "assets/images/services/samagri-store.jpg",
+          "imageAlt": "Brass kalash, bowls and flowers arranged for a ritual"
+        },
+        {
+          "icon": "people",
+          "title": "Support for Religious Questions",
+          "text": "Discuss your questions about customs, ceremonies, and religious observances during your arranged consultation.",
+          "image": "assets/images/services/puja-booking.jpg",
+          "imageAlt": "Brass diyas and bowls of flowers"
+        },
+        {
+          "icon": "check",
+          "title": "Consultation Confirmation",
+          "text": "Receive confirmation and relevant instructions for your selected consultation according to the available booking process.",
+          "image": "assets/images/services/punya-snan/receive-sankalp.jpg",
+          "imageAlt": "A priest holding a puja thali with a lit diya"
+        }
+      ],
+      "whyTitle": "Why Choose Our Online Priest Consultation Service?",
       "whyAccent": "",
-      "why": [],
-      "whoTitle": "",
-      "whoAccent": "",
-      "whoIntro": "",
-      "whoList": [],
-      "whoClosing": "",
+      "why": [
+        {
+          "icon": "globe",
+          "title": "Convenient Access to Guidance",
+          "text": "Explore available consultation options without needing to visit a priest in person."
+        },
+        {
+          "icon": "bookopen",
+          "title": "Understand Ritual Requirements",
+          "text": "Get a clearer understanding of the preparations, customs, and practices associated with your religious needs."
+        },
+        {
+          "icon": "calendar",
+          "title": "Suitable for Different Occasions",
+          "text": "Enquire about guidance for pujas, family ceremonies, religious observances, and other ritual-related questions."
+        },
+        {
+          "icon": "lotus",
+          "title": "Stay Connected to Your Traditions",
+          "text": "Learn more about Hindu religious practices and make informed preparations for the traditions that matter to you."
+        }
+      ],
+      "whoTitle": "Who Can Use",
+      "whoAccent": "This Service?",
+      "whoIntro": "The Online Priest Consultation & Ritual Guidance Service may be suitable for:",
+      "whoList": [
+        {
+          "text": "Devotees who have questions about Hindu rituals and pujas."
+        },
+        {
+          "text": "Families preparing for religious ceremonies or special occasions."
+        },
+        {
+          "text": "Individuals who need guidance about ritual preparations and samagri."
+        },
+        {
+          "text": "People living away from their hometowns who cannot easily consult a priest in person."
+        },
+        {
+          "text": "Devotees who prefer to explore consultation options remotely."
+        }
+      ],
+      "whoClosing": "Every person may have different questions and requirements. You can explore the available consultation options and select one that suits your needs.",
       "showPlaces": false,
       "placesTitle": "",
       "placesSubtitle": "",
       "placesIntro": "",
       "places": [],
       "placesNote": "",
-      "faqTitle": "",
-      "faqAccent": "",
-      "faqs": [],
-      "ctaTitle": "",
-      "ctaText": "",
-      "ctaButton": "",
-      "ctaLink": "",
-      "ctaImage": "",
-      "seoTitle": "",
-      "seoDescription": ""
+      "faqTitle": "Frequently Asked Questions",
+      "faqAccent": "(FAQs)",
+      "faqs": [
+        {
+          "q": "What is Online Priest Consultation & Ritual Guidance?",
+          "a": "It helps people explore available consultation options for questions about Hindu rituals, pujas, religious customs, and traditional practices."
+        },
+        {
+          "q": "What questions can I ask during a consultation?",
+          "a": "You can enquire about ritual preparations, puja requirements, religious customs, and other topics supported by the selected consultation service."
+        },
+        {
+          "q": "Can I consult a priest online from another city?",
+          "a": "You can explore the available online consultation options and confirm whether the service supports your location and preferred consultation method."
+        },
+        {
+          "q": "What details should I provide before the consultation?",
+          "a": "You may need to share your questions, the type of ritual, the occasion, and any other information requested during the booking process."
+        },
+        {
+          "q": "How will I know when my consultation is confirmed?",
+          "a": "Follow the booking instructions provided for your selected service. Confirmation and relevant consultation details will be shared through the available communication process."
+        }
+      ],
+      "ctaTitle": "Get Guidance for Your Religious Needs",
+      "ctaText": "Explore our available priest consultation services and take the next step toward understanding your rituals and religious traditions.",
+      "ctaButton": "Consult a Priest",
+      "ctaLink": "contact",
+      "ctaImage": "assets/images/faith/heritage-aarti.jpg",
+      "seoTitle": "Online Priest Consultation & Ritual Guidance | Hindu.International",
+      "seoDescription": "Get guidance on Hindu rituals, religious customs and puja arrangements from the comfort of your home through an online priest consultation.",
+      "bannerSlides": [
+        {
+          "label": "",
+          "title": "Online Priest\nConsultation & Ritual Guidance",
+          "accent": "Consultation & Ritual Guidance",
+          "text": "Get guidance on Hindu rituals, religious customs, and puja arrangements from the comfort of your home.",
+          "buttonText": "Consult a Priest",
+          "buttonLink": "contact"
+        }
+      ]
     }
   ]
 }
