@@ -1381,8 +1381,8 @@
     },
     {
       "show": true,
-      "status": "draft",
-      "design": "standard",
+      "status": "published",
+      "design": "v2",
       "slug": "religious-ceremony-booking",
       "number": "09",
       "icon": "people",
@@ -1391,48 +1391,166 @@
       "image": "assets/images/services/religious-ceremony.jpg",
       "imageAlt": "A hand placing flowers into bowls for a religious ceremony",
       "link": "booking",
-      "bannerTitle": "Religious Ceremony Booking Service",
-      "bannerAccent": "",
-      "bannerImage": "",
-      "bannerImageAlt": "",
+      "bannerTitle": "Religious Ceremony\nBooking Service",
+      "bannerAccent": "Booking Service",
+      "bannerImage": "assets/images/ritual-aarti.jpg",
+      "bannerImageAlt": "A priest performing a ritual with lamps and offerings",
       "aboutLabel": "",
-      "aboutTitle": "",
-      "aboutText1": "",
-      "aboutText2": "",
-      "aboutImage": "",
-      "aboutImageAlt": "",
+      "aboutTitle": "What Is Religious Ceremony Booking Service?",
+      "aboutText1": "Hindu religious ceremonies are an important part of our traditions. These ceremonies are performed for various life events, family occasions, and spiritual purposes. They help devotees seek blessings, follow religious customs, and stay connected to their faith.",
+      "aboutText2": "Our Religious Ceremony Booking Service helps you explore and arrange different Hindu religious ceremonies according to your needs. You can select the ceremony you wish to arrange, share the required details, and confirm your booking through a simple process. This service offers a convenient way to make the necessary arrangements without having to manage every detail yourself.",
+      "aboutImage": "assets/images/offering-hands.jpg",
+      "aboutImageAlt": "Hands offering flowers on a leaf over the holy river",
       "showShloka": false,
       "shloka": "",
-      "processSubtitle": "",
-      "processSteps": [],
-      "receiveTitle": "",
-      "receiveAccent": "",
-      "receiveSubtitle": "",
-      "receive": [],
-      "whyTitle": "",
+      "processSubtitle": "A simple way to arrange your religious ceremony.",
+      "processSteps": [
+        {
+          "icon": "calendar",
+          "title": "Choose Your Ceremony",
+          "text": "Explore the available religious ceremonies and select the one that suits your needs."
+        },
+        {
+          "icon": "edit",
+          "title": "Share Your Details",
+          "text": "Provide your name, occasion, preferred date, and other required details to help arrange your selected ceremony."
+        },
+        {
+          "icon": "check",
+          "title": "Confirm Your Booking",
+          "text": "Review the available arrangements, verify your booking details, and complete the confirmation process."
+        },
+        {
+          "icon": "people",
+          "title": "Ceremony Arrangements",
+          "text": "Our team coordinates the arrangements included in your confirmed booking and shares the relevant details with you."
+        }
+      ],
+      "receiveTitle": "What You",
+      "receiveAccent": "Receive",
+      "receiveSubtitle": "Meaningful Arrangements for Your Special Occasions",
+      "receive": [
+        {
+          "icon": "temple",
+          "title": "Ceremony Arrangements as Selected",
+          "text": "Explore available religious ceremonies and choose the arrangement that suits your requirements.",
+          "image": "assets/images/services/religious-ceremony.jpg",
+          "imageAlt": "Flowers being placed in bowls for a puja"
+        },
+        {
+          "icon": "bookopen",
+          "title": "Guidance for Required Details",
+          "text": "Receive information about the details needed to arrange your selected ceremony.",
+          "image": "assets/images/services/pandit-booking.jpg",
+          "imageAlt": "A pandit reading a sacred text at a wooden desk"
+        },
+        {
+          "icon": "lotus",
+          "title": "Coordinated Service Arrangements",
+          "text": "The team coordinates the arrangements included in your confirmed booking according to the selected ceremony.",
+          "image": "assets/images/services/havan-yagya.jpg",
+          "imageAlt": "Sacred fire of a havan with an offering being made"
+        },
+        {
+          "icon": "check",
+          "title": "Booking Confirmation",
+          "text": "Receive confirmation and relevant instructions for your selected religious ceremony.",
+          "image": "assets/images/services/punya-snan/receive-sankalp.jpg",
+          "imageAlt": "A priest holding a puja thali with a lit diya"
+        }
+      ],
+      "whyTitle": "Why Choose Our Religious Ceremony Booking Service?",
       "whyAccent": "",
-      "why": [],
-      "whoTitle": "",
-      "whoAccent": "",
-      "whoIntro": "",
-      "whoList": [],
-      "whoClosing": "",
+      "why": [
+        {
+          "icon": "handshake",
+          "title": "Convenient Booking Process",
+          "text": "Explore available ceremonies and make arrangements through a simple and straightforward booking process."
+        },
+        {
+          "icon": "lotus",
+          "title": "Suitable for Different Occasions",
+          "text": "Arrange religious ceremonies for family events, personal milestones, and other spiritual requirements."
+        },
+        {
+          "icon": "info",
+          "title": "Clear Booking Information",
+          "text": "Understand the available arrangements, share the required details, and confirm your booking with greater clarity."
+        },
+        {
+          "icon": "people",
+          "title": "Support for Your Spiritual Needs",
+          "text": "Make arrangements for important religious ceremonies while staying connected to your family's traditions and faith."
+        }
+      ],
+      "whoTitle": "Who Can Use",
+      "whoAccent": "This Service?",
+      "whoIntro": "The Religious Ceremony Booking Service may be suitable for:",
+      "whoList": [
+        {
+          "text": "Families planning religious ceremonies for special occasions."
+        },
+        {
+          "text": "Individuals arranging ceremonies for personal or family milestones."
+        },
+        {
+          "text": "Devotees who need assistance with religious ceremony arrangements."
+        },
+        {
+          "text": "People living away from their hometowns who wish to follow their traditions."
+        },
+        {
+          "text": "Families and working professionals who need a convenient way to arrange religious ceremonies."
+        }
+      ],
+      "whoClosing": "Every family has different needs and traditions. You can explore the available services and choose an arrangement that suits your occasion.",
       "showPlaces": false,
       "placesTitle": "",
       "placesSubtitle": "",
       "placesIntro": "",
       "places": [],
       "placesNote": "",
-      "faqTitle": "",
-      "faqAccent": "",
-      "faqs": [],
-      "ctaTitle": "",
-      "ctaText": "",
-      "ctaButton": "",
-      "ctaLink": "",
-      "ctaImage": "",
-      "seoTitle": "",
-      "seoDescription": ""
+      "faqTitle": "Frequently Asked Questions",
+      "faqAccent": "(FAQs)",
+      "faqs": [
+        {
+          "q": "What is a Religious Ceremony Booking Service?",
+          "a": "It helps devotees explore available Hindu religious ceremonies and arrange the selected service through a convenient booking process."
+        },
+        {
+          "q": "Which types of religious ceremonies can I book?",
+          "a": "Available ceremonies depend on the services offered on the website. Explore the available options to find one that suits your requirements."
+        },
+        {
+          "q": "What details are required to book a ceremony?",
+          "a": "You may need to provide your name, occasion, preferred date, and other information requested during the booking process."
+        },
+        {
+          "q": "Can I book a ceremony if I live outside India?",
+          "a": "You can enquire about the available arrangements and confirm whether the selected service can accommodate your location and requirements."
+        },
+        {
+          "q": "How will I receive my booking confirmation?",
+          "a": "Follow the confirmation instructions provided during booking. The relevant details will be shared through the communication process supported by the service."
+        }
+      ],
+      "ctaTitle": "Make Your Religious Ceremony Arrangements with Ease",
+      "ctaText": "Explore our available religious ceremony services and take the next step in arranging a meaningful experience.",
+      "ctaButton": "Book a Ceremony",
+      "ctaLink": "booking",
+      "ctaImage": "assets/images/flower-offerings.jpg",
+      "seoTitle": "Religious Ceremony Booking Service | Hindu.International",
+      "seoDescription": "Arrange Hindu religious ceremonies for family occasions, life events and spiritual needs through a simple booking process.",
+      "bannerSlides": [
+        {
+          "label": "",
+          "title": "Religious Ceremony\nBooking Service",
+          "accent": "Booking Service",
+          "text": "Arrange Hindu religious ceremonies with ease for your spiritual and family needs.",
+          "buttonText": "Book a Ceremony",
+          "buttonLink": "booking"
+        }
+      ]
     },
     {
       "show": true,
