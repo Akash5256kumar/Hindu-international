@@ -847,7 +847,7 @@
     },
     {
       "show": true,
-      "status": "draft",
+      "status": "published",
       "slug": "pandit-booking",
       "number": "08",
       "icon": "pandit",
@@ -856,48 +856,156 @@
       "image": "assets/images/services/pandit-booking.jpg",
       "imageAlt": "A pandit reading a sacred text at a wooden desk",
       "link": "booking",
-      "bannerTitle": "Pandit Booking Service",
-      "bannerAccent": "",
-      "bannerImage": "",
-      "bannerImageAlt": "",
-      "aboutLabel": "",
-      "aboutTitle": "",
-      "aboutText1": "",
-      "aboutText2": "",
-      "aboutImage": "",
-      "aboutImageAlt": "",
+      "bannerTitle": "Pandit Booking\nService",
+      "bannerAccent": "Pandit",
+      "bannerImage": "assets/images/ritual-aarti.jpg",
+      "bannerImageAlt": "A priest performing aarti with lamps at the ghat",
+      "aboutLabel": "About this service",
+      "aboutTitle": "What Is Pandit Booking Service?",
+      "aboutText1": "Pandits play an important role in Hindu religious traditions by performing pujas, havans, and other rituals according to established customs. Families often seek a knowledgeable pandit for religious occasions, festivals, ceremonies, and important moments in their lives. Having the right guidance can help them understand the rituals and prepare for the occasion.",
+      "aboutText2": "However, finding a suitable pandit and coordinating the arrangements can sometimes be difficult, especially when you have a busy schedule or live away from your family location. Our Pandit Booking Service helps you explore available booking options according to your religious needs and occasion. You can share your requirements, check the available arrangements, and confirm your booking through a simple process.",
+      "aboutImage": "assets/images/faith/heritage-aarti.jpg",
+      "aboutImageAlt": "Hands holding a puja thali with a lit diya and flowers before temples",
       "showShloka": false,
       "shloka": "",
-      "processSubtitle": "",
-      "processSteps": [],
-      "receiveTitle": "",
-      "receiveAccent": "",
-      "receiveSubtitle": "",
-      "receive": [],
-      "whyTitle": "",
-      "whyAccent": "",
-      "why": [],
-      "whoTitle": "",
-      "whoAccent": "",
-      "whoIntro": "",
-      "whoList": [],
-      "whoClosing": "",
+      "processSubtitle": "A simple way to book a pandit for your religious needs.",
+      "processSteps": [
+        {
+          "icon": "diya",
+          "title": "Choose Your Ritual",
+          "text": "Select the puja, havan, ceremony, or religious occasion for which you need a pandit."
+        },
+        {
+          "icon": "edit",
+          "title": "Share Your Requirements",
+          "text": "Provide the required details, including the occasion, preferred date, location, and other information requested during booking."
+        },
+        {
+          "icon": "check",
+          "title": "Confirm Your Booking",
+          "text": "Review the available arrangements, confirm the details, and complete your booking according to the instructions."
+        },
+        {
+          "icon": "pandit",
+          "title": "Pandit Arrangements",
+          "text": "Our team coordinates the arrangements for your selected service and shares the relevant booking details with you."
+        }
+      ],
+      "receiveTitle": "What You",
+      "receiveAccent": "Receive",
+      "receiveSubtitle": "Support for Your Religious Ceremonies",
+      "receive": [
+        {
+          "icon": "pandit",
+          "title": "Pandit for Your Selected Ritual",
+          "text": "Explore available pandit booking options according to the puja, havan, or ceremony you wish to arrange.",
+          "image": "assets/images/services/pandit-booking.jpg",
+          "imageAlt": "A pandit reading a sacred text at a wooden desk"
+        },
+        {
+          "icon": "bookopen",
+          "title": "Guidance on Ritual Requirements",
+          "text": "Receive information about the details needed for your selected ceremony and its arrangements.",
+          "image": "assets/images/services/religious-awareness.jpg",
+          "imageAlt": "An open scripture with a rudraksha mala beside it"
+        },
+        {
+          "icon": "handshake",
+          "title": "Coordinated Booking Arrangements",
+          "text": "The team coordinates the arrangements included in your confirmed booking.",
+          "image": "assets/images/services/samagri-store.jpg",
+          "imageAlt": "Brass kalash, bowls and flowers arranged for a ritual"
+        },
+        {
+          "icon": "check",
+          "title": "Booking Confirmation",
+          "text": "Receive confirmation and relevant instructions for your selected pandit service.",
+          "image": "assets/images/services/punya-snan/receive-sankalp.jpg",
+          "imageAlt": "A priest holding a puja thali with a lit diya"
+        }
+      ],
+      "whyTitle": "Why Choose Our",
+      "whyAccent": "Pandit Booking Service?",
+      "why": [
+        {
+          "icon": "edit",
+          "title": "Convenient Booking Process",
+          "text": "Explore available pandit services and make your booking enquiry without having to search for every arrangement yourself."
+        },
+        {
+          "icon": "calendar",
+          "title": "Suitable for Different Occasions",
+          "text": "Whether you need a pandit for a puja, havan, family ceremony, or another religious occasion, you can explore the available options."
+        },
+        {
+          "icon": "info",
+          "title": "Clear Booking Information",
+          "text": "Understand the available arrangements, share your requirements, and confirm the booking details before proceeding."
+        },
+        {
+          "icon": "namaste",
+          "title": "Support for Your Religious Traditions",
+          "text": "Our service helps you explore pandit booking options for observing the religious customs and ceremonies that matter to you."
+        }
+      ],
+      "whoTitle": "Who Can Use",
+      "whoAccent": "This Service?",
+      "whoIntro": "The Pandit Booking Service may be suitable for:",
+      "whoList": [
+        {
+          "text": "Families arranging pujas or religious ceremonies."
+        },
+        {
+          "text": "Devotees looking for a pandit for a specific ritual."
+        },
+        {
+          "text": "People planning havans or special religious occasions."
+        },
+        {
+          "text": "Individuals who need help coordinating pandit arrangements."
+        },
+        {
+          "text": "Families living away from their usual location who wish to enquire about available services."
+        }
+      ],
+      "whoClosing": "Every occasion has different requirements. You can explore the available options and confirm the arrangements that suit your needs.",
       "showPlaces": false,
       "placesTitle": "",
       "placesSubtitle": "",
       "placesIntro": "",
       "places": [],
       "placesNote": "",
-      "faqTitle": "",
-      "faqAccent": "",
-      "faqs": [],
-      "ctaTitle": "",
-      "ctaText": "",
-      "ctaButton": "",
-      "ctaLink": "",
-      "ctaImage": "",
-      "seoTitle": "",
-      "seoDescription": ""
+      "faqTitle": "Frequently Asked Questions",
+      "faqAccent": "(FAQs)",
+      "faqs": [
+        {
+          "q": "What is a Pandit Booking Service?",
+          "a": "A Pandit Booking Service helps people enquire about and arrange a pandit for available pujas, havans, ceremonies, and other religious occasions."
+        },
+        {
+          "q": "Which rituals can I book a pandit for?",
+          "a": "The available options depend on the services offered. You can check the service listings or contact the team to confirm whether a pandit is available for your selected ritual."
+        },
+        {
+          "q": "What details are required to book a pandit?",
+          "a": "You may be asked to provide the ritual or occasion, preferred date, location, and other relevant details. The exact requirements depend on the selected service."
+        },
+        {
+          "q": "Can I request a pandit for a specific date?",
+          "a": "You can share your preferred date during the booking process. Availability should be confirmed by the service team before your booking is finalised."
+        },
+        {
+          "q": "Can I book a pandit if I live outside India?",
+          "a": "You can enquire about the available booking options from outside India. The location of the ceremony, availability, payment methods, and other arrangements should be confirmed before booking."
+        }
+      ],
+      "ctaTitle": "Find the Right Pandit for Your Religious Occasion",
+      "ctaText": "Explore our available pandit booking services and make arrangements for the rituals that matter to you.",
+      "ctaButton": "Book a Pandit",
+      "ctaLink": "booking",
+      "ctaImage": "assets/images/roots/thanks.jpg",
+      "seoTitle": "Pandit Booking Service | Hindu.International",
+      "seoDescription": "Book a pandit for pujas, havans, ceremonies and other religious occasions. Share your requirements and confirm your booking through a simple process."
     },
     {
       "show": true,
