@@ -58,10 +58,31 @@ final class ContentStore
     /**
      * A saved service whose detail page is still empty takes the detail page from the default
      * file (matched by slug), so new service pages written there appear without retyping.
-     * Same rule as fillFromDefaults() in js/services.js.
+     * A service that is only in the default file is added at the end, once: knownDefaults
+     * remembers which default services the admin has seen, so one deleted there stays deleted.
+     * Same rules as fillFromDefaults() in js/services.js.
      */
     private static function fillServiceDetails(array $saved, array $defaults): array
     {
+        $savedSlugs = [];
+        foreach ($saved['items'] ?? [] as $s) {
+            if (is_array($s) && !empty($s['slug'])) {
+                $savedSlugs[$s['slug']] = true;
+            }
+        }
+        $known = is_array($saved['knownDefaults'] ?? null) ? $saved['knownDefaults'] : null;
+        $defaultSlugs = [];
+        foreach ($defaults['items'] ?? [] as $d) {
+            if (!is_array($d) || empty($d['slug'])) {
+                continue;
+            }
+            $defaultSlugs[] = $d['slug'];
+            if (!isset($savedSlugs[$d['slug']]) && ($known === null || !in_array($d['slug'], $known, true))) {
+                $saved['items'][] = $d;
+            }
+        }
+        $saved['knownDefaults'] = $defaultSlugs;
+
         $empty = static fn (array $s): bool => trim((string) ($s['aboutTitle'] ?? '')) === ''
             && trim((string) ($s['aboutText1'] ?? '')) === ''
             && empty($s['processSteps']) && empty($s['receive']) && empty($s['faqs']);
@@ -311,6 +332,11 @@ final class ContentValidator
                     return (string) ($f['default'] ?? '#000000');
                 }
                 return strtoupper($v);
+
+            case 'hidden': // a list of short strings kept for the system, not shown in the admin
+                return is_array($value)
+                    ? array_slice(array_values(array_filter(array_map(static fn ($v) => self::text($v, false, 120), $value), 'strlen')), 0, 200)
+                    : [];
 
             case 'select':
                 $v = self::text($value, false, 40);

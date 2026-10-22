@@ -394,6 +394,7 @@ return [
                 ['key' => 'subtitle', 'label' => 'Line under the heading', 'type' => 'text', 'max' => 200, 'help' => 'Write {service} where the name of the service should appear.'],
             ]],
             ['path' => 'services', 'title' => 'Services', 'help' => 'Each service has a card on the Services page and its own detail page. The list order is the order of the cards, and the card number (Service 01, 02 …) follows it. To change the order, type a new position in the number box next to a service and press Enter, or drag the service by its header. Sections you leave empty are not shown on the detail page.', 'fields' => [
+                ['key' => 'knownDefaults', 'label' => 'Default services already seen', 'type' => 'hidden'],
                 ['key' => 'items', 'label' => 'Services', 'type' => 'list', 'min' => 0, 'max' => 40, 'itemLabel' => 'Service', 'titleField' => 'title', 'fields' => [
                     $showField,
                     ['key' => 'status', 'label' => 'Detail page status', 'type' => 'select', 'options' => ['draft' => 'Draft (detail page not ready yet)', 'published' => 'Published'], 'help' => 'While a service is a draft, its “View Details” button opens the link below instead of the detail page.'],
@@ -462,18 +463,18 @@ return [
                     ]],
                     ['key' => 'whoClosing', 'label' => 'Who Can Use — closing text', 'type' => 'textarea', 'rows' => 3, 'max' => 500],
 
-                    ['key' => 'showPlaces', 'label' => 'Show the places / festivals section (scrolling cards)', 'type' => 'toggle', 'default' => false],
-                    ['key' => 'placesTitle', 'label' => 'Places section — heading', 'type' => 'text', 'max' => 60, 'help' => 'e.g. Sacred Places or Major Indian Festivals.'],
-                    ['key' => 'placesSubtitle', 'label' => 'Places section — line under the heading', 'type' => 'text', 'max' => 120],
-                    ['key' => 'placesIntro', 'label' => 'Places section — intro text (optional)', 'type' => 'textarea', 'rows' => 3, 'max' => 500],
-                    ['key' => 'places', 'label' => 'Places section — cards', 'type' => 'list', 'min' => 0, 'max' => 20, 'itemLabel' => 'Card', 'titleField' => 'name', 'fields' => [
+                    ['key' => 'showPlaces', 'label' => 'Show the scrolling cards section (places, festivals, pujas …)', 'type' => 'toggle', 'default' => false],
+                    ['key' => 'placesTitle', 'label' => 'Scrolling cards — heading', 'type' => 'text', 'max' => 60, 'help' => 'e.g. Sacred Places or Major Indian Festivals.'],
+                    ['key' => 'placesSubtitle', 'label' => 'Scrolling cards — line under the heading', 'type' => 'text', 'max' => 120],
+                    ['key' => 'placesIntro', 'label' => 'Scrolling cards — intro text (optional)', 'type' => 'textarea', 'rows' => 3, 'max' => 500],
+                    ['key' => 'places', 'label' => 'Scrolling cards', 'type' => 'list', 'min' => 0, 'max' => 20, 'itemLabel' => 'Card', 'titleField' => 'name', 'fields' => [
                         ['key' => 'name', 'label' => 'Name', 'type' => 'text', 'max' => 80, 'required' => true],
                         ['key' => 'location', 'label' => 'Location (city · river, or city, state)', 'type' => 'text', 'max' => 120],
                         ['key' => 'text', 'label' => 'Short description (optional)', 'type' => 'textarea', 'rows' => 3, 'max' => 300],
                         ['key' => 'image', 'label' => 'Photo', 'type' => 'image', 'help' => 'Landscape photo (about 3 : 2).'],
                         ['key' => 'imageAlt', 'label' => 'Photo description', 'type' => 'text', 'max' => 200],
                     ]],
-                    ['key' => 'placesNote', 'label' => 'Places section — small note under the cards (optional)', 'type' => 'text', 'max' => 160],
+                    ['key' => 'placesNote', 'label' => 'Scrolling cards — small note under the cards (optional)', 'type' => 'text', 'max' => 160],
 
                     ['key' => 'faqTitle', 'label' => 'FAQ — heading', 'type' => 'text', 'max' => 80],
                     ['key' => 'faqAccent', 'label' => 'FAQ — orange part', 'type' => 'text', 'max' => 40, 'help' => $accentHelp],

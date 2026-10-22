@@ -63,6 +63,6 @@ Auth::requirePage();
 
   <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
 
-  <script src="assets/admin.js?v=list-order-20261021"></script>
+  <script src="assets/admin.js?v=hidden-field-20261022"></script>
 </body>
 </html>

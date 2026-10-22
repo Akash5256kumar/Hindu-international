@@ -254,6 +254,7 @@
 
   function renderField(field, path) {
     if (field.type === 'list') return renderList(field, path);
+    if (field.type === 'hidden') return h('div', { hidden: true });   // kept in the content, never edited
 
     var id = 'f-' + path.replace(/\./g, '-');
     var error = state.errors[path];

@@ -100,12 +100,20 @@
   /* A service whose detail page the admin has not filled in yet takes it from the default file
      (same rule as ContentStore::load in the admin, so both show the same page) */
   function fillFromDefaults(c, d) {
-    var defaults = {};
+    var defaults = {}, saved = {};
+    var known = Array.isArray(c.knownDefaults) ? c.knownDefaults : null;
     list(d && d.items).forEach(function (x) { if (str(x.slug) && !emptyDetail(x)) defaults[str(x.slug)] = x; });
     list(c.items).forEach(function (s) {
+      saved[str(s.slug)] = true;
       var def = defaults[str(s.slug)];
       if (!def || !emptyDetail(s)) return;
       Object.keys(def).forEach(function (k) { if (!CARD_KEYS[k]) s[k] = def[k]; });
+    });
+    /* a service only in the default file is added at the end, unless the admin has already
+       seen it (knownDefaults) and so it was deleted on purpose */
+    list(d && d.items).forEach(function (x) {
+      var slug = str(x.slug);
+      if (slug && !saved[slug] && (!known || known.indexOf(slug) < 0)) c.items.push(x);
     });
     return c;
   }
@@ -114,8 +122,7 @@
   function loadServices(done) {
     var c = (window.SITE_CONTENT || {}).services;
     if (c && Array.isArray(c.items) && c.items.length) {
-      var needs = list(c.items).some(function (s) { return str(s.slug) && emptyDetail(s); });
-      if (!needs || !window.fetch) return done(c);
+      if (!window.fetch) return done(c);
       return fetch('content/services.default.json', { cache: 'no-cache' })
         .then(function (r) { return r.ok ? r.json() : null; })
         .then(function (d) { done(fillFromDefaults(c, d)); }, function () { done(c); });
@@ -488,7 +495,16 @@
       li.appendChild(body);
       track.appendChild(li);
     });
-    col.appendChild(track);
+    if (isV2(s)) {
+      /* new design: arrows at both ends of the row */
+      var row = el('div', 'sd-places__row');
+      row.appendChild(prev);
+      row.appendChild(track);
+      row.appendChild(next);
+      col.appendChild(row);
+    } else {
+      col.appendChild(track);
+    }
     if (str(s.placesNote)) col.appendChild(el('p', 'sd-places__note', str(s.placesNote)));
 
     function step() {
@@ -611,8 +627,10 @@
     renderAbout(s);
     renderReceive(s);
     if (isV2(s)) {
-      /* new design: Why Choose across the full width, then Who Can Use beside the FAQs */
-      pair('sd-why-who', whyBlock(s), placesBlock(s));
+      /* new design: the scrolling cards right after the process, Why Choose across the full
+         width, then Who Can Use beside the FAQs */
+      pair('sd-places', placesBlock(s), null);
+      pair('sd-why-who', whyBlock(s), null);
       pair('sd-places-faq', whoBlock(s), faqBlock(s));
     } else {
       pair('sd-why-who', whyBlock(s), whoBlock(s));

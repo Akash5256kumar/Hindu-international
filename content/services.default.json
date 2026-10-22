@@ -2243,6 +2243,236 @@
           "buttonLink": "contact"
         }
       ]
+    },
+    {
+      "show": true,
+      "status": "published",
+      "design": "v2",
+      "slug": "graha-shanti-dosh-nivaran",
+      "number": "14",
+      "icon": "flame",
+      "title": "Graha Shanti & Dosh Nivaran Puja",
+      "text": "Kaal Sarp, Mangal Dosh, Pitru Dosh, Navgraha Shanti and other pujas in your name and gotra, with live video.",
+      "image": "assets/images/services/havan-yagya.jpg",
+      "imageAlt": "Sacred fire of a havan with an offering being made",
+      "link": "booking",
+      "bannerTitle": "Graha Shanti &\nDosh Nivaran Puja",
+      "bannerAccent": "Dosh Nivaran Puja",
+      "bannerImage": "assets/images/ritual-aarti.jpg",
+      "bannerImageAlt": "A priest performing a ritual with lamps and offerings",
+      "aboutLabel": "",
+      "aboutTitle": "What Is Graha Shanti & Dosh Nivaran Puja?",
+      "aboutText1": "Graha Shanti and Dosh Nivaran Pujas are performed to seek peace, balance, and positive energy in life. According to Hindu traditions, certain planetary positions and doshas such as Kaal Sarp Dosh, Mangal Dosh, Pitru Dosh or an afflicted Navgraha can create challenges in different areas of life.",
+      "aboutText2": "This service helps you explore and book suitable Graha Shanti and Dosh Nivaran Pujas according to your name and gotra. The puja is performed by experienced priests with proper Vedic procedures and you can also join the puja through live video. It offers a convenient way to seek blessings and perform these important rituals even from your home.",
+      "aboutImage": "assets/images/services/havan-yagya.jpg",
+      "aboutImageAlt": "Sacred fire of a havan with an offering being made",
+      "showShloka": false,
+      "shloka": "",
+      "processSubtitle": "A simple way to book your Graha Shanti or Dosh Nivaran Puja.",
+      "processSteps": [
+        {
+          "icon": "calendar",
+          "title": "Choose Your Puja",
+          "text": "Explore the available Graha Shanti and Dosh Nivaran Pujas and select the one you need."
+        },
+        {
+          "icon": "edit",
+          "title": "Share Your Details",
+          "text": "Provide your name, gotra, birth details (if required) and other information to arrange the puja according to your needs."
+        },
+        {
+          "icon": "check",
+          "title": "Confirm Your Booking",
+          "text": "Review the puja details, check the arrangements and complete the booking confirmation process."
+        },
+        {
+          "icon": "people",
+          "title": "Attend the Puja Live",
+          "text": "Join the puja through the provided live video link and receive the blessings from the performed rituals."
+        }
+      ],
+      "receiveTitle": "What You",
+      "receiveAccent": "Receive",
+      "receiveSubtitle": "Complete Ritual Support for Your Peace and Well-being",
+      "receive": [
+        {
+          "icon": "lotus",
+          "title": "Vedic Rituals by Experienced Priests",
+          "text": "Puja is performed by knowledgeable priests with proper Vedic procedures.",
+          "image": "assets/images/services/pandit-booking.jpg",
+          "imageAlt": "A pandit reading a sacred text at a wooden desk"
+        },
+        {
+          "icon": "bookopen",
+          "title": "Rituals as per Your Details",
+          "text": "Puja is performed using your name, gotra and other details as required for the selected ritual.",
+          "image": "assets/images/services/samagri-store.jpg",
+          "imageAlt": "Brass kalash, bowls and flowers arranged for a ritual"
+        },
+        {
+          "icon": "video",
+          "title": "Live Video Access",
+          "text": "You can join the puja through a live video link and be part of the ritual from your location.",
+          "image": "assets/images/services/punya-snan/receive-video.jpg",
+          "imageAlt": "A camera recording a ritual"
+        },
+        {
+          "icon": "check",
+          "title": "Puja Completion and Prasad",
+          "text": "After the puja, you will receive completion details and prasad as per the available process.",
+          "image": "assets/images/services/puja-booking.jpg",
+          "imageAlt": "Brass diyas and bowls of flowers"
+        }
+      ],
+      "whyTitle": "Why Choose Our Graha Shanti & Dosh Nivaran Puja?",
+      "whyAccent": "",
+      "why": [
+        {
+          "icon": "lotus",
+          "title": "Traditional Vedic Procedures",
+          "text": "Pujas are performed following traditional Vedic methods and ritual practices."
+        },
+        {
+          "icon": "people",
+          "title": "Personalized Rituals",
+          "text": "Puja is performed with your name, gotra and relevant details for the selected dosh or graha-related puja."
+        },
+        {
+          "icon": "globe",
+          "title": "Convenient Online Access",
+          "text": "Join the puja live from your home without the need to travel."
+        },
+        {
+          "icon": "info",
+          "title": "Guidance for Your Needs",
+          "text": "Explore suitable pujas for different doshas and graha-related concerns and seek blessings for peace and well-being."
+        }
+      ],
+      "whoTitle": "Who Can Use",
+      "whoAccent": "This Service?",
+      "whoIntro": "The Graha Shanti & Dosh Nivaran Puja service may be suitable for:",
+      "whoList": [
+        {
+          "text": "Individuals enquiring about planetary doshas such as Kaal Sarp, Mangal Dosh or Pitru Dosh."
+        },
+        {
+          "text": "Families seeking Navgraha Shanti or other graha-related pujas."
+        },
+        {
+          "text": "People who want to perform specific pujas for peace and well-being."
+        },
+        {
+          "text": "Individuals living away from their hometowns who prefer online puja options."
+        },
+        {
+          "text": "Devotees who wish to seek guidance from experienced priests."
+        }
+      ],
+      "whoClosing": "Every person may have different requirements. You can explore the available pujas and select one that suits your needs.",
+      "showPlaces": true,
+      "placesTitle": "Explore Our Graha Shanti & Dosh Nivaran Pujas",
+      "placesSubtitle": "Discover traditional Vedic rituals for different graha doshas and astrological concerns.",
+      "placesIntro": "",
+      "places": [
+        {
+          "name": "Kaal Sarp Dosh Puja",
+          "location": "",
+          "text": "Explore the available puja arrangements for Kaal Sarp Dosh and enquire about the ritual according to your requirements.",
+          "image": "assets/images/services/havan-yagya.jpg",
+          "imageAlt": "Sacred fire of a havan"
+        },
+        {
+          "name": "Mangal Dosh Puja",
+          "location": "",
+          "text": "Learn about the available Mangal Dosh puja arrangements and select an option according to your needs.",
+          "image": "assets/images/services/puja-booking.jpg",
+          "imageAlt": "Brass diyas and bowls of flowers"
+        },
+        {
+          "name": "Pitru Dosh Nivaran Puja",
+          "location": "",
+          "text": "Explore traditional Pitru Dosh Nivaran puja arrangements for those seeking to follow ancestral religious traditions.",
+          "image": "assets/images/offering-hands.jpg",
+          "imageAlt": "Hands offering flowers on a leaf over the holy river"
+        },
+        {
+          "name": "Navgraha Shanti Puja",
+          "location": "",
+          "text": "Discover available Navgraha Shanti puja arrangements performed according to traditional Vedic practices.",
+          "image": "assets/images/faith/heritage-aarti.jpg",
+          "imageAlt": "Hands holding a puja thali with a lit diya"
+        },
+        {
+          "name": "Shani Sade Sati / Dhaiya Puja",
+          "location": "",
+          "text": "Explore available puja options associated with Shani Sade Sati and Dhaiya according to your requirements.",
+          "image": "assets/images/services/samagri-store.jpg",
+          "imageAlt": "Brass kalash, bowls and flowers arranged for a ritual"
+        },
+        {
+          "name": "Rahu-Ketu Shanti Puja",
+          "location": "",
+          "text": "Learn about available Rahu-Ketu Shanti puja arrangements and enquire about the selected ritual.",
+          "image": "assets/images/services/punya-snan/receive-aarti.jpg",
+          "imageAlt": "A priest performing aarti with lamps"
+        },
+        {
+          "name": "Gandmool Nakshatra Shanti Puja",
+          "location": "",
+          "text": "Explore available Gandmool Nakshatra Shanti puja options and their ritual arrangements.",
+          "image": "assets/images/flower-offerings.jpg",
+          "imageAlt": "A brass puja plate with flowers and offerings"
+        },
+        {
+          "name": "Guru Chandal Dosh Nivaran Puja",
+          "location": "",
+          "text": "Discover available Guru Chandal Dosh Nivaran puja arrangements and review the details before booking.",
+          "image": "assets/images/services/punya-snan/receive-sankalp.jpg",
+          "imageAlt": "A priest holding a puja thali with a lit diya"
+        }
+      ],
+      "placesNote": "",
+      "faqTitle": "Frequently Asked Questions",
+      "faqAccent": "(FAQs)",
+      "faqs": [
+        {
+          "q": "What is Graha Shanti & Dosh Nivaran Puja?",
+          "a": "These are traditional Hindu rituals performed to seek peace, balance and blessings in relation to planetary doshas and graha-related concerns."
+        },
+        {
+          "q": "Which dosh-related pujas are available?",
+          "a": "Available options may include Kaal Sarp Dosh, Mangal Dosh, Pitru Dosh, Navgraha Shanti, Shani Sade Sati / Dhaiya, Rahu-Ketu Shanti, Gandmool Nakshatra Shanti and Guru Chandal Dosh Nivaran Puja."
+        },
+        {
+          "q": "What details are required for the puja?",
+          "a": "You may need to provide your name, gotra, and other birth or ritual-related details if required for the selected puja."
+        },
+        {
+          "q": "Can I join the puja online from another city?",
+          "a": "You can enquire about the available live video arrangements and join remotely if the selected service supports them."
+        },
+        {
+          "q": "How will I receive the puja prasad?",
+          "a": "Prasad arrangements depend on the selected service. Please check the booking details to confirm the available process."
+        }
+      ],
+      "ctaTitle": "Seek Peace and Positive Energy Through Vedic Rituals",
+      "ctaText": "Explore our Graha Shanti and Dosh Nivaran Puja services and take the next step toward a more balanced and harmonious life.",
+      "ctaButton": "Book Graha Shanti Puja",
+      "ctaLink": "booking",
+      "ctaImage": "assets/images/faith/heritage-aarti.jpg",
+      "seoTitle": "Graha Shanti & Dosh Nivaran Puja | Hindu.International",
+      "seoDescription": "Book Kaal Sarp, Mangal Dosh, Pitru Dosh, Navgraha Shanti and other Graha Shanti pujas in your name and gotra, performed with Vedic rituals and live video.",
+      "bannerSlides": [
+        {
+          "label": "",
+          "title": "Graha Shanti &\nDosh Nivaran Puja",
+          "accent": "Dosh Nivaran Puja",
+          "text": "Kaal Sarp, Mangal Dosh, Pitru Dosh, Navgraha Shanti jaisi pujayen, aapke naam aur gotra se, live video ke saath.",
+          "buttonText": "Book Graha Shanti Puja",
+          "buttonLink": "booking"
+        }
+      ]
     }
   ]
 }
