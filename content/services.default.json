@@ -689,8 +689,8 @@
     },
     {
       "show": true,
-      "status": "draft",
-      "design": "standard",
+      "status": "published",
+      "design": "v2",
       "slug": "puja-samagri-store",
       "number": "05",
       "icon": "cart",
@@ -699,48 +699,166 @@
       "image": "assets/images/services/samagri-store.jpg",
       "imageAlt": "Brass kalash, bowls and flowers used as puja samagri",
       "link": "booking",
-      "bannerTitle": "Puja Samagri & Ritual Essentials Store",
-      "bannerAccent": "",
-      "bannerImage": "",
-      "bannerImageAlt": "",
+      "bannerTitle": "Puja Samagri &\nRitual Essentials Store",
+      "bannerAccent": "Ritual Essentials Store",
+      "bannerImage": "assets/images/flower-offerings.jpg",
+      "bannerImageAlt": "A brass puja plate with flowers and offerings",
       "aboutLabel": "",
-      "aboutTitle": "",
-      "aboutText1": "",
-      "aboutText2": "",
-      "aboutImage": "",
-      "aboutImageAlt": "",
+      "aboutTitle": "What Is Puja Samagri & Ritual Essentials Store?",
+      "aboutText1": "Puja samagri plays an important role in Hindu religious traditions. These essentials are used in daily worship, special pujas, havans, and other religious ceremonies. Having the right puja items helps devotees perform rituals properly and stay connected to their faith.",
+      "aboutText2": "Our Puja Samagri & Ritual Essentials Store offers a convenient way to explore and purchase a range of puja items for your spiritual needs. You can browse available products, select the items you need, and place your order through a simple process.",
+      "aboutImage": "assets/images/faith/heritage-aarti.jpg",
+      "aboutImageAlt": "Hands holding a puja thali with a lit diya and flowers",
       "showShloka": false,
       "shloka": "",
-      "processSubtitle": "",
-      "processSteps": [],
-      "receiveTitle": "",
-      "receiveAccent": "",
-      "receiveSubtitle": "",
-      "receive": [],
-      "whyTitle": "",
+      "processSubtitle": "A simple way to shop for puja samagri and ritual essentials.",
+      "processSteps": [
+        {
+          "icon": "eye",
+          "title": "Browse Products",
+          "text": "Explore the available puja samagri and ritual essentials and select the items you need."
+        },
+        {
+          "icon": "cart",
+          "title": "Add to Cart",
+          "text": "Add your selected products to the cart and review your order."
+        },
+        {
+          "icon": "edit",
+          "title": "Place Your Order",
+          "text": "Provide the required details and complete the ordering process as instructed."
+        },
+        {
+          "icon": "pin",
+          "title": "Order Processing & Delivery",
+          "text": "Your order is processed and delivered according to the available shipping arrangements."
+        }
+      ],
+      "receiveTitle": "What You",
+      "receiveAccent": "Receive",
+      "receiveSubtitle": "Essential Items for Your Religious Needs",
+      "receive": [
+        {
+          "icon": "lotus",
+          "title": "Wide Range of Puja Samagri",
+          "text": "Explore essential items commonly used in daily worship, pujas, havans, and other religious ceremonies.",
+          "image": "assets/images/services/samagri-store.jpg",
+          "imageAlt": "Brass kalash, bowls and flowers arranged for a ritual"
+        },
+        {
+          "icon": "check",
+          "title": "Quality and Authentic Items",
+          "text": "Explore carefully selected puja items suitable for your religious needs.",
+          "image": "assets/images/services/puja-booking.jpg",
+          "imageAlt": "Brass diyas and bowls of flowers"
+        },
+        {
+          "icon": "bowl",
+          "title": "Combos and Kits",
+          "text": "Choose from available puja kits and combinations for different rituals and occasions.",
+          "image": "assets/images/services/religious-ceremony.jpg",
+          "imageAlt": "Flowers being placed in bowls for a puja"
+        },
+        {
+          "icon": "shield",
+          "title": "Safe Packaging and Delivery",
+          "text": "Your selected items are packed securely and delivered according to the available shipping options.",
+          "image": "assets/images/offering-hands.jpg",
+          "imageAlt": "Hands holding flower offerings on a leaf"
+        }
+      ],
+      "whyTitle": "Why Choose Our Puja Samagri Store?",
       "whyAccent": "",
-      "why": [],
-      "whoTitle": "",
-      "whoAccent": "",
-      "whoIntro": "",
-      "whoList": [],
-      "whoClosing": "",
+      "why": [
+        {
+          "icon": "globe",
+          "title": "Convenient Shopping Experience",
+          "text": "Browse and order puja samagri from wherever you are, without needing to visit a physical store."
+        },
+        {
+          "icon": "lotus",
+          "title": "Suitable for Different Rituals",
+          "text": "Find items for daily worship, special pujas, havans, and other religious ceremonies in one place."
+        },
+        {
+          "icon": "check",
+          "title": "Trusted and Authentic Items",
+          "text": "Explore carefully selected puja samagri suitable for your spiritual needs."
+        },
+        {
+          "icon": "hearthand",
+          "title": "Saves Time and Effort",
+          "text": "Get the essential items delivered to your location, making it easier to prepare for your religious observances."
+        }
+      ],
+      "whoTitle": "Who Can Use",
+      "whoAccent": "This Service?",
+      "whoIntro": "The Puja Samagri & Ritual Essentials Store may be suitable for:",
+      "whoList": [
+        {
+          "text": "Devotees who need puja samagri for daily worship."
+        },
+        {
+          "text": "Families planning religious ceremonies or special pujas."
+        },
+        {
+          "text": "Individuals looking for puja items and essentials."
+        },
+        {
+          "text": "People living away from their hometowns who wish to order puja items."
+        },
+        {
+          "text": "Anyone looking for a convenient way to purchase puja samagri for their spiritual needs."
+        }
+      ],
+      "whoClosing": "Whether you need items for regular worship or a special occasion, you can explore the available products and place an order according to your needs.",
       "showPlaces": false,
       "placesTitle": "",
       "placesSubtitle": "",
       "placesIntro": "",
       "places": [],
       "placesNote": "",
-      "faqTitle": "",
-      "faqAccent": "",
-      "faqs": [],
-      "ctaTitle": "",
-      "ctaText": "",
-      "ctaButton": "",
-      "ctaLink": "",
-      "ctaImage": "",
-      "seoTitle": "",
-      "seoDescription": ""
+      "faqTitle": "Frequently Asked Questions",
+      "faqAccent": "(FAQs)",
+      "faqs": [
+        {
+          "q": "What is the Puja Samagri & Ritual Essentials Store?",
+          "a": "It is a convenient place to explore and order puja samagri and ritual essentials for daily worship and religious ceremonies."
+        },
+        {
+          "q": "What types of products are available?",
+          "a": "Available products may include puja essentials, worship items, ritual kits, and other items listed in the store."
+        },
+        {
+          "q": "How can I place an order?",
+          "a": "Browse the available products, select the items you need, and follow the ordering instructions provided on the website."
+        },
+        {
+          "q": "Do you deliver to locations outside India?",
+          "a": "Delivery availability depends on the shipping locations and options offered by the store. Please check the available delivery information before placing an order."
+        },
+        {
+          "q": "How will I know if my order has been confirmed?",
+          "a": "Follow the confirmation instructions provided during the ordering process. Any available order confirmation details will be shared through the store's supported process."
+        }
+      ],
+      "ctaTitle": "Get Your Puja Samagri with Ease",
+      "ctaText": "Explore our range of puja samagri and ritual essentials and place your order for your spiritual needs.",
+      "ctaButton": "Shop Puja Samagri",
+      "ctaLink": "contact",
+      "ctaImage": "assets/images/services/samagri-store.jpg",
+      "seoTitle": "Puja Samagri & Ritual Essentials Store | Hindu.International",
+      "seoDescription": "Explore and order puja samagri and ritual essentials for daily worship, special pujas, havans and other religious ceremonies.",
+      "bannerSlides": [
+        {
+          "label": "",
+          "title": "Puja Samagri &\nRitual Essentials Store",
+          "accent": "Ritual Essentials Store",
+          "text": "Get authentic puja samagri and ritual essentials for your spiritual needs.",
+          "buttonText": "Shop Puja Samagri",
+          "buttonLink": "contact"
+        }
+      ]
     },
     {
       "show": true,
