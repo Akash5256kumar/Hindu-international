@@ -2717,6 +2717,179 @@
           "buttonLink": "booking"
         }
       ]
+    },
+    {
+      "show": true,
+      "status": "published",
+      "design": "v2",
+      "slug": "deep-daan-ganga-aarti",
+      "number": "16",
+      "icon": "diya",
+      "title": "Deep Daan & Ganga Aarti Sankalp",
+      "text": "Deep daan and a Ganga Aarti sankalp in your name at the Ganga ghat, with live video where available.",
+      "image": "assets/images/faith/heritage-aarti.jpg",
+      "imageAlt": "Hands holding a puja thali with a lit diya before temples on the river",
+      "link": "booking",
+      "bannerTitle": "Deep Daan &\nGanga Aarti Sankalp",
+      "bannerAccent": "Ganga Aarti Sankalp",
+      "bannerImage": "assets/images/faith/respect-prayer.jpg",
+      "bannerImageAlt": "Temples and ghats lit up at sunset on the river",
+      "aboutLabel": "",
+      "aboutTitle": "What Is Deep Daan & Ganga Aarti Sankalp?",
+      "aboutText1": "Deep Daan is a traditional Hindu practice in which a lit diya is offered as a symbol of devotion, prayer, and hope. Ganga Aarti is a sacred devotional ceremony performed on the banks of the holy River Ganga, where devotees gather to offer prayers and express their faith. Both practices hold a special place in the spiritual traditions associated with the river.",
+      "aboutText2": "Our Deep Daan & Ganga Aarti Sankalp service allows devotees to arrange a deep daan and participate in the sankalp process according to the available service. You can share the required details, including your name, and follow the ceremony through live video where available. It offers a convenient way to stay connected with these sacred traditions even when you cannot visit the Ganga ghat in person.",
+      "aboutImage": "assets/images/services/punya-snan/about.jpg",
+      "aboutImageAlt": "A hand offering flowers on a leaf into the river at sunrise",
+      "showShloka": false,
+      "shloka": "",
+      "processSubtitle": "A simple way to arrange your Deep Daan and Ganga Aarti Sankalp.",
+      "processSteps": [
+        {
+          "icon": "calendar",
+          "title": "Choose Your Service",
+          "text": "Explore the available Deep Daan and Ganga Aarti Sankalp service and select the arrangement you wish to book."
+        },
+        {
+          "icon": "edit",
+          "title": "Share Your Sankalp Details",
+          "text": "Provide your name and other required details so the sankalp can be arranged according to the selected service."
+        },
+        {
+          "icon": "check",
+          "title": "Confirm Your Booking",
+          "text": "Review the service details, check the available arrangements, and complete the booking confirmation process."
+        },
+        {
+          "icon": "people",
+          "title": "Witness the Ritual Live",
+          "text": "Watch the deep daan and Ganga Aarti through the available live video arrangement and remain connected with the ceremony remotely."
+        }
+      ],
+      "receiveTitle": "What You",
+      "receiveAccent": "Receive",
+      "receiveSubtitle": "A Meaningful Connection with Sacred Ganga Traditions",
+      "receive": [
+        {
+          "icon": "lotus",
+          "title": "Deep Daan Ritual",
+          "text": "Arrange a traditional deep daan as part of your selected service and devotional observance.",
+          "image": "assets/images/faith/heritage-aarti.jpg",
+          "imageAlt": "Hands holding a puja thali with a lit diya"
+        },
+        {
+          "icon": "bookopen",
+          "title": "Sankalp in Your Name",
+          "text": "Share your name and required details for the sankalp according to the selected ritual arrangements.",
+          "image": "assets/images/services/punya-snan/receive-sankalp.jpg",
+          "imageAlt": "A priest holding a puja thali with a lit diya"
+        },
+        {
+          "icon": "video",
+          "title": "Live Aarti Viewing",
+          "text": "Witness the Ganga Aarti through the available live video arrangement from wherever you are.",
+          "image": "assets/images/services/punya-snan/receive-video.jpg",
+          "imageAlt": "A camera recording a ritual at the river ghat"
+        },
+        {
+          "icon": "check",
+          "title": "Ritual Completion Details",
+          "text": "Receive relevant completion details according to the arrangements included in your confirmed booking.",
+          "image": "assets/images/services/puja-booking.jpg",
+          "imageAlt": "Brass diyas and bowls of flowers"
+        }
+      ],
+      "whyTitle": "Why Choose Our Deep Daan & Ganga Aarti Sankalp?",
+      "whyAccent": "",
+      "why": [
+        {
+          "icon": "lotus",
+          "title": "Stay Connected to Sacred Traditions",
+          "text": "Participate in a meaningful devotional practice associated with the holy River Ganga."
+        },
+        {
+          "icon": "people",
+          "title": "Sankalp According to Your Details",
+          "text": "Share the required details so your sankalp can be arranged according to the selected service."
+        },
+        {
+          "icon": "globe",
+          "title": "Convenient Online Participation",
+          "text": "Follow the ceremony remotely through live video where this option is available."
+        },
+        {
+          "icon": "check",
+          "title": "Simple Booking Process",
+          "text": "Explore the service, provide the required information, and confirm your booking through a straightforward process."
+        }
+      ],
+      "whoTitle": "Who Can Use",
+      "whoAccent": "This Service?",
+      "whoIntro": "The Deep Daan & Ganga Aarti Sankalp service may be suitable for:",
+      "whoList": [
+        {
+          "text": "Devotees who wish to offer a diya as part of their religious traditions."
+        },
+        {
+          "text": "Individuals who want to participate in Ganga Aarti from a distance."
+        },
+        {
+          "text": "Families who wish to include their names in a sankalp according to the available arrangements."
+        },
+        {
+          "text": "People who cannot easily travel to a Ganga ghat."
+        },
+        {
+          "text": "Devotees who wish to stay connected with Ganga-related rituals during religious occasions."
+        }
+      ],
+      "whoClosing": "Every devotee may have different needs. You can review the available service details and choose an arrangement that suits your requirements.",
+      "showPlaces": false,
+      "placesTitle": "",
+      "placesSubtitle": "",
+      "placesIntro": "",
+      "places": [],
+      "placesNote": "",
+      "faqTitle": "Frequently Asked Questions",
+      "faqAccent": "(FAQs)",
+      "faqs": [
+        {
+          "q": "What is Deep Daan & Ganga Aarti Sankalp?",
+          "a": "It is a devotional service that allows devotees to arrange deep daan and a sankalp associated with Ganga Aarti according to the available arrangements."
+        },
+        {
+          "q": "Can the sankalp be performed in my name?",
+          "a": "You can provide your name and the required details for the sankalp according to the selected service's arrangements."
+        },
+        {
+          "q": "Can I watch the Ganga Aarti live?",
+          "a": "Live video access is available where supported by the selected service. Please check the booking details before confirming."
+        },
+        {
+          "q": "Do I need to visit the Ganga ghat in person?",
+          "a": "The service is intended to provide a remote participation option where available, so you can enquire about the arrangements without travelling to the ghat yourself."
+        },
+        {
+          "q": "When is Deep Daan commonly performed?",
+          "a": "Devotees may offer deep daan on different religious occasions and during observances such as Kartik Maas, according to their family traditions and personal faith."
+        }
+      ],
+      "ctaTitle": "Be Part of the Sacred Ganga Aarti",
+      "ctaText": "Arrange Deep Daan and Ganga Aarti Sankalp in your name and stay connected with this sacred tradition through the available live viewing service.",
+      "ctaButton": "Book Deep Daan",
+      "ctaLink": "booking",
+      "ctaImage": "assets/images/services/punya-snan/banner.jpg",
+      "seoTitle": "Deep Daan & Ganga Aarti Sankalp | Hindu.International",
+      "seoDescription": "Offer a sacred deep daan and take part in Ganga Aarti through a sankalp in your name, with live video access where available.",
+      "bannerSlides": [
+        {
+          "label": "",
+          "title": "Deep Daan &\nGanga Aarti Sankalp",
+          "accent": "Ganga Aarti Sankalp",
+          "text": "Offer a sacred deep daan and participate in Ganga Aarti through a sankalp in your name, with live video access where available.",
+          "buttonText": "Book Deep Daan",
+          "buttonLink": "booking"
+        }
+      ]
     }
   ]
 }
