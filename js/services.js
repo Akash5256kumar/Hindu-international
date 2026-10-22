@@ -507,9 +507,11 @@
     }
     if (str(s.placesNote)) col.appendChild(el('p', 'sd-places__note', str(s.placesNote)));
 
+    /* one card at a time; in the new design a whole screen of cards (the next 4) */
     function step() {
       var card = track.querySelector('.sd-place');
       var gap = parseFloat(getComputedStyle(track).columnGap || getComputedStyle(track).gap) || 0;
+      if (isV2(s)) return track.clientWidth + gap;
       return card ? card.getBoundingClientRect().width + gap : track.clientWidth;
     }
     function update() {
