@@ -14,7 +14,7 @@ function auth_page_start(string $title): void
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow">
   <title><?= e($title) ?> · Hindu.International Admin</title>
-  <link rel="icon" href="../assets/images/brand/logo-mark.png?v=brand-favicon-20261008" type="image/png">
+  <link rel="icon" href="../assets/images/brand/logo-mark.png" type="image/png">
   <link rel="stylesheet" href="assets/admin.css?v=list-order-20261021">
 </head>
 <body class="auth">

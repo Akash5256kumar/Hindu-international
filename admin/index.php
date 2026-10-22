@@ -11,7 +11,7 @@ Auth::requirePage();
   <meta name="robots" content="noindex, nofollow">
   <meta name="csrf-token" content="<?= e(csrf_token()) ?>">
   <title>Content editor · Hindu.International Admin</title>
-  <link rel="icon" href="../assets/images/brand/logo-mark.png?v=brand-favicon-20261008" type="image/png">
+  <link rel="icon" href="../assets/images/brand/logo-mark.png" type="image/png">
   <link rel="stylesheet" href="assets/admin.css?v=list-order-20261021">
 </head>
 <body class="app">

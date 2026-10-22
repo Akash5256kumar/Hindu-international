@@ -170,6 +170,13 @@ document.addEventListener('DOMContentLoaded', function () {
       if (typeof src === 'string' && isLocalMedia(src) && el.getAttribute('src') !== src) {
         el.removeAttribute('width');     // uploaded images may have a different shape
         el.removeAttribute('height');
+        /* phones get a smaller copy made by media.php; wider screens keep the original */
+        if (el.tagName === 'IMG' && /\.(jpe?g|png|webp)$/i.test(src)) {
+          el.sizes = '(max-width: 768px) 100vw, 1600px';
+          el.srcset = [480, 828].map(function (w) {
+            return 'media.php?src=' + encodeURIComponent(src) + '&w=' + w + ' ' + w + 'w';
+          }).concat(src + ' 1600w').join(', ');
+        }
         el.src = src;
       }
       var altPath = el.getAttribute('data-bind-alt');
