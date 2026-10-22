@@ -1554,8 +1554,8 @@
     },
     {
       "show": true,
-      "status": "draft",
-      "design": "standard",
+      "status": "published",
+      "design": "v2",
       "slug": "religious-awareness",
       "number": "10",
       "icon": "bookopen",
@@ -1564,48 +1564,166 @@
       "image": "assets/images/services/religious-awareness.jpg",
       "imageAlt": "An open scripture with a rudraksha mala beside it",
       "link": "how-it-works",
-      "bannerTitle": "Religious Awareness Service",
-      "bannerAccent": "",
-      "bannerImage": "",
-      "bannerImageAlt": "",
+      "bannerTitle": "Religious Awareness\nService",
+      "bannerAccent": "Service",
+      "bannerImage": "assets/images/roots/thanks.jpg",
+      "bannerImageAlt": "A temple on a hill at sunrise",
       "aboutLabel": "",
-      "aboutTitle": "",
-      "aboutText1": "",
-      "aboutText2": "",
-      "aboutImage": "",
-      "aboutImageAlt": "",
+      "aboutTitle": "What Is Religious Awareness Service?",
+      "aboutText1": "Religious awareness helps people understand the traditions, beliefs, customs, and practices that are an important part of Hindu culture. Learning about religious observances, sacred rituals, festivals, and spiritual values can help individuals and families understand the meaning behind different traditions and pass this knowledge on to future generations.",
+      "aboutText2": "Our Religious Awareness Service aims to make information about Hindu traditions and religious practices easier to explore and understand. Whether you want to learn about everyday customs, the significance of rituals, or the values associated with religious observances, this service provides an accessible way to build your understanding of Hindu traditions.",
+      "aboutImage": "assets/images/services/religious-awareness.jpg",
+      "aboutImageAlt": "An open scripture with a rudraksha mala beside it",
       "showShloka": false,
       "shloka": "",
-      "processSubtitle": "",
-      "processSteps": [],
-      "receiveTitle": "",
-      "receiveAccent": "",
-      "receiveSubtitle": "",
-      "receive": [],
-      "whyTitle": "",
+      "processSubtitle": "A simple way to explore and understand Hindu religious traditions.",
+      "processSteps": [
+        {
+          "icon": "bookopen",
+          "title": "Choose a Topic",
+          "text": "Explore the available religious awareness topics and select the subject you would like to understand."
+        },
+        {
+          "icon": "eye",
+          "title": "Explore the Information",
+          "text": "Read the available information about the selected tradition, ritual, custom, or spiritual practice."
+        },
+        {
+          "icon": "info",
+          "title": "Understand the Significance",
+          "text": "Learn about the meaning, cultural background, and traditional importance of the selected topic through the available content."
+        },
+        {
+          "icon": "people",
+          "title": "Continue Your Learning",
+          "text": "Explore other available topics to expand your understanding of Hindu traditions and religious practices."
+        }
+      ],
+      "receiveTitle": "What You",
+      "receiveAccent": "Receive",
+      "receiveSubtitle": "Helpful Insights into Hindu Traditions",
+      "receive": [
+        {
+          "icon": "sprout",
+          "title": "Understanding Religious Traditions",
+          "text": "Explore information about Hindu customs, beliefs, and traditions that have been followed across generations.",
+          "image": "assets/images/services/puja-booking.jpg",
+          "imageAlt": "Brass diyas and bowls of flowers"
+        },
+        {
+          "icon": "lotus",
+          "title": "Knowledge of Rituals and Practices",
+          "text": "Learn about the purpose and significance of different religious rituals and spiritual practices.",
+          "image": "assets/images/ritual-aarti.jpg",
+          "imageAlt": "A priest performing a ritual with lamps and offerings"
+        },
+        {
+          "icon": "temple",
+          "title": "Cultural and Spiritual Insights",
+          "text": "Discover how religious traditions connect with cultural values, family customs, and everyday spiritual life.",
+          "image": "assets/images/services/temple-darshan.jpg",
+          "imageAlt": "Temples with saffron flags"
+        },
+        {
+          "icon": "bookopen",
+          "title": "Accessible Learning Resources",
+          "text": "Explore available information at your own pace and revisit topics whenever you want to learn more.",
+          "image": "assets/images/services/pandit-booking.jpg",
+          "imageAlt": "A pandit reading a sacred text at a wooden desk"
+        }
+      ],
+      "whyTitle": "Why Choose Our Religious Awareness Service?",
       "whyAccent": "",
-      "why": [],
-      "whoTitle": "",
-      "whoAccent": "",
-      "whoIntro": "",
-      "whoList": [],
-      "whoClosing": "",
+      "why": [
+        {
+          "icon": "check",
+          "title": "Simple and Accessible Information",
+          "text": "Explore religious topics through clear, easy-to-understand content without unnecessary complexity."
+        },
+        {
+          "icon": "bookopen",
+          "title": "Learn at Your Own Pace",
+          "text": "Read about the topics that interest you and take your time understanding their significance."
+        },
+        {
+          "icon": "lotus",
+          "title": "Understand Traditional Values",
+          "text": "Gain a better understanding of the customs, beliefs, and values associated with Hindu traditions."
+        },
+        {
+          "icon": "people",
+          "title": "Keep Cultural Knowledge Alive",
+          "text": "Explore religious knowledge that can help families share traditions and cultural understanding with younger generations."
+        }
+      ],
+      "whoTitle": "Who Can Use",
+      "whoAccent": "This Service?",
+      "whoIntro": "The Religious Awareness Service may be useful for:",
+      "whoList": [
+        {
+          "text": "Individuals who want to learn more about Hindu traditions and beliefs."
+        },
+        {
+          "text": "Young people interested in understanding their cultural and religious heritage."
+        },
+        {
+          "text": "Families who want to share traditional knowledge with children."
+        },
+        {
+          "text": "Devotees who want to understand the significance of rituals and religious practices."
+        },
+        {
+          "text": "Anyone interested in learning about Hindu customs, observances, and spiritual values."
+        }
+      ],
+      "whoClosing": "Every person may have different questions and interests. You can explore the available topics according to your learning needs and interests.",
       "showPlaces": false,
       "placesTitle": "",
       "placesSubtitle": "",
       "placesIntro": "",
       "places": [],
       "placesNote": "",
-      "faqTitle": "",
-      "faqAccent": "",
-      "faqs": [],
-      "ctaTitle": "",
-      "ctaText": "",
-      "ctaButton": "",
-      "ctaLink": "",
-      "ctaImage": "",
-      "seoTitle": "",
-      "seoDescription": ""
+      "faqTitle": "Frequently Asked Questions",
+      "faqAccent": "(FAQs)",
+      "faqs": [
+        {
+          "q": "What is the Religious Awareness Service?",
+          "a": "It provides accessible information about Hindu traditions, customs, religious practices, and spiritual values."
+        },
+        {
+          "q": "What can I learn through this service?",
+          "a": "You can explore available topics related to religious traditions, rituals, customs, cultural practices, and their significance."
+        },
+        {
+          "q": "Is this service suitable for beginners?",
+          "a": "Yes. The content is intended to help people explore religious topics in a simple and accessible way."
+        },
+        {
+          "q": "Can families use this service to learn about Hindu traditions?",
+          "a": "Yes. Individuals and families can explore available topics to improve their understanding of religious customs and cultural traditions."
+        },
+        {
+          "q": "How can I explore different religious awareness topics?",
+          "a": "Browse the available topics on the website and select the subjects you want to learn about. You can continue exploring other available content at your own pace."
+        }
+      ],
+      "ctaTitle": "Explore the Meaning Behind Hindu Traditions",
+      "ctaText": "Discover more about Hindu customs, religious practices, and spiritual values through our religious awareness resources.",
+      "ctaButton": "Explore Religious Awareness",
+      "ctaLink": "protect-our-faith",
+      "ctaImage": "assets/images/hero-devotee.jpg",
+      "seoTitle": "Religious Awareness Service | Hindu.International",
+      "seoDescription": "Learn about Hindu traditions, religious practices, rituals and spiritual values in a simple and accessible way.",
+      "bannerSlides": [
+        {
+          "label": "",
+          "title": "Religious Awareness\nService",
+          "accent": "Service",
+          "text": "Learn about Hindu traditions, religious practices, and spiritual values in a simple and accessible way.",
+          "buttonText": "Explore Religious Awareness",
+          "buttonLink": "protect-our-faith"
+        }
+      ]
     },
     {
       "show": true,
