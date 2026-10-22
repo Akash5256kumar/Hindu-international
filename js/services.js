@@ -92,9 +92,32 @@
   }
 
   /* ---------- Content: admin content first, otherwise the default file ---------- */
+  /* Card fields stay as the admin saved them; everything else is the detail page */
+  var CARD_KEYS = { show: 1, slug: 1, number: 1, icon: 1, title: 1, text: 1, image: 1, imageAlt: 1, link: 1 };
+  function emptyDetail(s) {
+    return !str(s.aboutTitle) && !str(s.aboutText1) && !list(s.processSteps).length && !list(s.receive).length && !list(s.faqs).length;
+  }
+  /* A service whose detail page the admin has not filled in yet takes it from the default file
+     (same rule as ContentStore::load in the admin, so both show the same page) */
+  function fillFromDefaults(c, d) {
+    var defaults = {};
+    list(d && d.items).forEach(function (x) { if (str(x.slug) && !emptyDetail(x)) defaults[str(x.slug)] = x; });
+    list(c.items).forEach(function (s) {
+      var def = defaults[str(s.slug)];
+      if (!def || !emptyDetail(s)) return;
+      Object.keys(def).forEach(function (k) { if (!CARD_KEYS[k]) s[k] = def[k]; });
+    });
+    return c;
+  }
   function loadServices(done) {
     var c = (window.SITE_CONTENT || {}).services;
-    if (c && Array.isArray(c.items) && c.items.length) return done(c);
+    if (c && Array.isArray(c.items) && c.items.length) {
+      var needs = list(c.items).some(function (s) { return str(s.slug) && emptyDetail(s); });
+      if (!needs || !window.fetch) return done(c);
+      return fetch('content/services.default.json', { cache: 'no-cache' })
+        .then(function (r) { return r.ok ? r.json() : null; })
+        .then(function (d) { done(fillFromDefaults(c, d)); }, function () { done(c); });
+    }
     if (!window.fetch) return done(null);
     fetch('content/services.default.json', { cache: 'no-cache' })
       .then(function (r) { return r.ok ? r.json() : null; })
@@ -346,7 +369,7 @@
       var badge = el('span', 'badge');
       badge.appendChild(icon(x.icon));
       li.appendChild(badge);
-      li.appendChild(el('span', 'step__num', (i < 9 ? '0' : '') + (i + 1)));
+      li.appendChild(el('span', 'step__num', isV2(s) ? String(i + 1) : (i < 9 ? '0' : '') + (i + 1)));
       li.appendChild(el('h3', null, str(x.title)));
       if (str(x.text)) li.appendChild(el('p', null, str(x.text)));
       ol.appendChild(li);
@@ -495,7 +518,7 @@
     faqs.forEach(function (f, i) {
       var d = el('details');
       var sum = el('summary');
-      sum.appendChild(el('span', 'sd-faq__num', (i < 9 ? '0' : '') + (i + 1)));
+      sum.appendChild(el('span', 'sd-faq__num', isV2(s) ? (i + 1) + '.' : (i < 9 ? '0' : '') + (i + 1)));
       sum.appendChild(el('span', 'sd-faq__q', str(f.q)));
       d.appendChild(sum);
       d.appendChild(lines(el('p'), f.a));
@@ -519,12 +542,20 @@
   function renderCta(s) {
     fill('sd-cta', function (box) {
       if (!str(s.ctaTitle)) return false;
+      /* new design: the banner is a rounded card inside the page width */
+      if (isV2(s)) {
+        var outer = el('div', 'container');
+        var card = el('div', 'sd-cta__card');
+        outer.appendChild(card);
+        box.appendChild(outer);
+        box = card;
+      }
       var media = el('div', 'sd-cta__media');
       media.setAttribute('aria-hidden', 'true');
       var img = image(s.ctaImage, '');
       if (img) media.appendChild(img);
       box.appendChild(media);
-      var inner = el('div', 'container sd-cta__inner');
+      var inner = el('div', (isV2(s) ? '' : 'container ') + 'sd-cta__inner');
       inner.appendChild(el('h2', 'sd-cta__title', str(s.ctaTitle)));
       if (str(s.ctaText)) inner.appendChild(el('p', 'sd-cta__text', str(s.ctaText)));
       if (str(s.ctaButton)) {
@@ -568,6 +599,7 @@
     }
 
     applySeo(s);
+    document.body.classList.toggle('sd-v2', isV2(s));
     renderBanner(s, fallbackImage);
     renderProcess(s, data);
 
@@ -577,10 +609,19 @@
     }
     renderAbout(s);
     renderReceive(s);
-    pair('sd-why-who', whyBlock(s), whoBlock(s));
-    pair('sd-places-faq', placesBlock(s), faqBlock(s));
+    if (isV2(s)) {
+      /* new design: Why Choose across the full width, then Who Can Use beside the FAQs */
+      pair('sd-why-who', whyBlock(s), placesBlock(s));
+      pair('sd-places-faq', whoBlock(s), faqBlock(s));
+    } else {
+      pair('sd-why-who', whyBlock(s), whoBlock(s));
+      pair('sd-places-faq', placesBlock(s), faqBlock(s));
+    }
     renderCta(s);
   }
+
+  /* Admin → Services → “Page design”: the newer layout, chosen per service */
+  function isV2(s) { return s && s.design === 'v2'; }
 
   function start() {
     var mode = document.body.getAttribute('data-services');

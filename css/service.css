@@ -185,6 +185,98 @@
 .sd-cta__text { margin: 0 0 20px; max-width: 520px; color: var(--ink-2); font-size: 1.05rem; }
 .sd-cta__btn { border-radius: 999px; }
 
+/* =====================================================================
+   NEW DESIGN (Admin → Services → Detail page design: New) — body.sd-v2
+   Banner with text + button, centred section headings, numbered process
+   cards, Why Choose in 4 columns, Who Can Use beside the FAQs, and the
+   bottom banner as a rounded card.
+   ===================================================================== */
+.sd-v2 .sd-banner .sd-lotus { display: none; }
+.sd-v2 .sd-section .sd-title .sd-accent { color: inherit; }
+.sd-v2 .sd-section { border-top: 0; }
+.sd-v2 .sd-section--about { background: #FFFCF7; }
+
+/* centred headings */
+.sd-v2 #sd-process-head, .sd-v2 .sd-section--receive .sd-head, .sd-v2 .sd-why > .sd-title { text-align: center; }
+.sd-v2 .sd-section--receive .sd-sub { color: var(--saffron-deep); font-size: 1.05rem; }
+
+/* process: white cards with an orange number in the corner */
+.sd-v2 .sd-section--process { background: #FBF3E8; }
+.sd-v2 .steps { gap: 40px; }
+.sd-v2 .step {
+  background: var(--white); border: 1px solid var(--line); border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(90, 48, 12, .06);
+  padding: 30px 20px 26px;
+}
+.sd-v2 .step__num {
+  position: absolute; top: 14px; left: 14px;
+  display: grid; place-items: center; width: 32px; height: 32px; margin: 0; border-radius: 50%;
+  background: var(--saffron); color: var(--white); font-size: .95rem; letter-spacing: 0;
+}
+.sd-v2 .step .badge { width: auto; height: auto; margin: 0 auto 14px; background: none; box-shadow: none; color: var(--saffron); }
+.sd-v2 .step .badge .icon { width: 46px; height: 46px; stroke-width: 1.4; }
+.sd-v2 .step :is(h2, h3) { font-family: var(--font-serif); font-weight: 700; color: var(--roots-ink); }
+.sd-v2 .step:not(:last-child)::after { top: 50%; }
+
+/* what you receive: square icon box over the photo, serif titles */
+.sd-v2 .sd-receive__card { border-radius: 10px; }
+.sd-v2 .sd-receive__media { aspect-ratio: 2.1 / 1; }
+.sd-v2 .sd-receive__body { display: block; padding: 0 18px 20px; }
+.sd-v2 .sd-receive__icon {
+  width: 46px; height: 46px; margin-top: -23px; border-radius: 10px;
+  border: 1px solid var(--line-strong); box-shadow: 0 4px 10px rgba(90, 48, 12, .1);
+}
+.sd-v2 .sd-receive__body h3 { margin: 14px 0 8px; font-family: var(--font-serif); font-size: 1.12rem; font-weight: 700; }
+.sd-v2 .sd-receive__body p { font-size: .9rem; }
+
+/* why choose: four columns with thin dividers */
+.sd-v2 #sd-why-who { background: #FFFCF7; }
+.sd-v2 .sd-why__grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; margin-top: 28px; }
+.sd-v2 .sd-why__item { display: block; padding: 0 24px; }
+.sd-v2 .sd-why__item + .sd-why__item { border-left: 1px solid var(--line-strong); }
+.sd-v2 .sd-why__icon { display: block; margin-bottom: 12px; }
+.sd-v2 .sd-why__icon .icon { width: 42px; height: 42px; }
+.sd-v2 .sd-why__item h3 { font-family: var(--font-serif); font-size: 1.1rem; font-weight: 700; line-height: 1.3; }
+
+/* who can use + FAQs side by side, with a divider */
+.sd-v2 #sd-places-faq { background: #FBF3E8; }
+.sd-v2 #sd-places-faq .sd-pair { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 0; }
+.sd-v2 #sd-places-faq .sd-pair > * { padding: 0 36px; }
+.sd-v2 #sd-places-faq .sd-pair > :first-child { padding-left: 0; }
+.sd-v2 #sd-places-faq .sd-pair > :last-child { padding-right: 0; border-left: 1px solid var(--line-strong); }
+.sd-v2 #sd-places-faq .sd-pair--single > * { padding: 0; border: 0; }
+.sd-v2 .sd-who__list { padding: 0; background: none; }
+.sd-v2 .sd-faq__list summary { font-family: var(--font-serif); font-weight: 600; color: var(--roots-ink); }
+.sd-v2 .sd-faq__num { min-width: 0; font-size: inherit; color: inherit; }
+.sd-v2 .sd-faq__list summary::after { background: none; color: var(--saffron); }
+.sd-v2 .sd-faq__list details p { padding-left: 16px; }
+
+/* bottom banner as a rounded card */
+.sd-v2 .sd-cta { padding: 28px 0 56px; background: #FBF3E8; border-top: 0; }
+.sd-v2 .sd-cta::before { display: none; }
+.sd-v2 .sd-cta__card {
+  position: relative; overflow: hidden; border-radius: 16px;
+  background: linear-gradient(90deg, #FCE9D2 0%, #FBF3E8 45%);
+  box-shadow: 0 12px 30px rgba(90, 48, 12, .1);
+}
+.sd-v2 .sd-cta__inner { padding: 40px 48px; min-height: 250px; }
+.sd-v2 .sd-cta__btn { border-radius: var(--radius-sm); }
+
+@media (max-width: 1100px) {
+  .sd-v2 .sd-why__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 28px; }
+  .sd-v2 .sd-why__item:nth-child(odd) { border-left: 0; padding-left: 0; }
+}
+@media (max-width: 960px) {
+  .sd-v2 #sd-places-faq .sd-pair { grid-template-columns: minmax(0, 1fr); gap: 36px; }
+  .sd-v2 #sd-places-faq .sd-pair > * { padding: 0; border: 0; }
+}
+@media (max-width: 640px) {
+  .sd-v2 .sd-why__grid { grid-template-columns: minmax(0, 1fr); }
+  .sd-v2 .sd-why__item { padding: 0; border-left: 0 !important; }
+  .sd-v2 .sd-cta { padding-bottom: 40px; }
+  .sd-v2 .sd-cta__inner { padding: 28px 22px 170px; }
+}
+
 /* ---------- Draft / not-found notice ---------- */
 .sd-notice { max-width: 760px; text-align: center; }
 .sd-notice p { color: var(--ink-2); margin: 8px 0 22px; }

@@ -397,6 +397,7 @@ return [
                 ['key' => 'items', 'label' => 'Services', 'type' => 'list', 'min' => 0, 'max' => 40, 'itemLabel' => 'Service', 'titleField' => 'title', 'fields' => [
                     $showField,
                     ['key' => 'status', 'label' => 'Detail page status', 'type' => 'select', 'options' => ['draft' => 'Draft (detail page not ready yet)', 'published' => 'Published'], 'help' => 'While a service is a draft, its “View Details” button opens the link below instead of the detail page.'],
+                    ['key' => 'design', 'label' => 'Detail page design', 'type' => 'select', 'options' => ['standard' => 'Standard', 'v2' => 'New (banner text + button, Why Choose in 4 columns, Who Can Use beside FAQs, rounded bottom banner)']],
                     ['key' => 'slug', 'label' => 'Page address (slug)', 'type' => 'slug', 'max' => 80, 'required' => true, 'help' => 'Small letters, numbers and dashes, e.g. virtual-punya-snan. The page opens at /service?name=virtual-punya-snan. Must be different for every service.'],
                     $serviceIconField,
                     ['key' => 'title', 'label' => 'Service name', 'type' => 'text', 'max' => 90, 'required' => true],

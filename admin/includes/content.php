@@ -41,13 +41,50 @@ final class ContentStore
         $raw = is_file(self::JSON) ? file_get_contents(self::JSON) : '';
         $data = $raw ? json_decode($raw, true) : null;
         $data = is_array($data) ? $data : [];
-        if (!isset($data['services']) && is_file(self::SERVICES_DEFAULT)) {
+        if (is_file(self::SERVICES_DEFAULT)) {
             $services = json_decode((string) file_get_contents(self::SERVICES_DEFAULT), true);
             if (is_array($services)) {
-                $data['services'] = $services;
+                $data['services'] = isset($data['services']) && is_array($data['services'])
+                    ? self::fillServiceDetails($data['services'], $services)
+                    : $services;
             }
         }
         return $data;
+    }
+
+    /** Card fields of a service; everything else belongs to its detail page */
+    private const SERVICE_CARD_KEYS = ['show', 'slug', 'number', 'icon', 'title', 'text', 'image', 'imageAlt', 'link'];
+
+    /**
+     * A saved service whose detail page is still empty takes the detail page from the default
+     * file (matched by slug), so new service pages written there appear without retyping.
+     * Same rule as fillFromDefaults() in js/services.js.
+     */
+    private static function fillServiceDetails(array $saved, array $defaults): array
+    {
+        $empty = static fn (array $s): bool => trim((string) ($s['aboutTitle'] ?? '')) === ''
+            && trim((string) ($s['aboutText1'] ?? '')) === ''
+            && empty($s['processSteps']) && empty($s['receive']) && empty($s['faqs']);
+        $bySlug = [];
+        foreach ($defaults['items'] ?? [] as $d) {
+            if (is_array($d) && !empty($d['slug']) && !$empty($d)) {
+                $bySlug[$d['slug']] = $d;
+            }
+        }
+        foreach ($saved['items'] ?? [] as $i => $s) {
+            if (is_array($s) && !isset($s['design'])) {
+                $saved['items'][$i]['design'] = 'standard';   // saved before the design choice existed
+            }
+            if (!is_array($s) || empty($s['slug']) || !isset($bySlug[$s['slug']]) || !$empty($s)) {
+                continue;
+            }
+            foreach ($bySlug[$s['slug']] as $key => $value) {
+                if (!in_array($key, self::SERVICE_CARD_KEYS, true)) {
+                    $saved['items'][$i][$key] = $value;
+                }
+            }
+        }
+        return $saved;
     }
 
     /**

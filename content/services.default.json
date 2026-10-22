@@ -15,6 +15,7 @@
     {
       "show": true,
       "status": "published",
+      "design": "standard",
       "slug": "virtual-punya-snan",
       "number": "01",
       "icon": "snan",
@@ -178,6 +179,7 @@
     {
       "show": true,
       "status": "published",
+      "design": "standard",
       "slug": "virtual-festival-darshan",
       "number": "02",
       "icon": "temple",
@@ -362,6 +364,7 @@
     {
       "show": true,
       "status": "published",
+      "design": "standard",
       "slug": "virtual-puja-booking",
       "number": "03",
       "icon": "lotus",
@@ -524,6 +527,7 @@
     {
       "show": true,
       "status": "published",
+      "design": "standard",
       "slug": "pind-daan-shraddh",
       "number": "04",
       "icon": "sprout",
@@ -686,6 +690,7 @@
     {
       "show": true,
       "status": "draft",
+      "design": "standard",
       "slug": "puja-samagri-store",
       "number": "05",
       "icon": "cart",
@@ -740,6 +745,7 @@
     {
       "show": true,
       "status": "draft",
+      "design": "standard",
       "slug": "havan-yagya-booking",
       "number": "06",
       "icon": "flame",
@@ -794,6 +800,7 @@
     {
       "show": true,
       "status": "draft",
+      "design": "standard",
       "slug": "temple-darshan-offerings",
       "number": "07",
       "icon": "temple",
@@ -848,6 +855,7 @@
     {
       "show": true,
       "status": "published",
+      "design": "v2",
       "slug": "pandit-booking",
       "number": "08",
       "icon": "pandit",
@@ -857,10 +865,10 @@
       "imageAlt": "A pandit reading a sacred text at a wooden desk",
       "link": "booking",
       "bannerTitle": "Pandit Booking\nService",
-      "bannerAccent": "Pandit",
+      "bannerAccent": "Service",
       "bannerImage": "assets/images/ritual-aarti.jpg",
       "bannerImageAlt": "A priest performing aarti with lamps at the ghat",
-      "aboutLabel": "About this service",
+      "aboutLabel": "",
       "aboutTitle": "What Is Pandit Booking Service?",
       "aboutText1": "Pandits play an important role in Hindu religious traditions by performing pujas, havans, and other rituals according to established customs. Families often seek a knowledgeable pandit for religious occasions, festivals, ceremonies, and important moments in their lives. Having the right guidance can help them understand the rituals and prepare for the occasion.",
       "aboutText2": "However, finding a suitable pandit and coordinating the arrangements can sometimes be difficult, especially when you have a busy schedule or live away from your family location. Our Pandit Booking Service helps you explore available booking options according to your religious needs and occasion. You can share your requirements, check the available arrangements, and confirm your booking through a simple process.",
@@ -924,8 +932,8 @@
           "imageAlt": "A priest holding a puja thali with a lit diya"
         }
       ],
-      "whyTitle": "Why Choose Our",
-      "whyAccent": "Pandit Booking Service?",
+      "whyTitle": "Why Choose Our Pandit Booking Service?",
+      "whyAccent": "",
       "why": [
         {
           "icon": "edit",
@@ -1005,11 +1013,22 @@
       "ctaLink": "booking",
       "ctaImage": "assets/images/roots/thanks.jpg",
       "seoTitle": "Pandit Booking Service | Hindu.International",
-      "seoDescription": "Book a pandit for pujas, havans, ceremonies and other religious occasions. Share your requirements and confirm your booking through a simple process."
+      "seoDescription": "Book a pandit for pujas, havans, ceremonies and other religious occasions. Share your requirements and confirm your booking through a simple process.",
+      "bannerSlides": [
+        {
+          "label": "",
+          "title": "Pandit Booking\nService",
+          "accent": "Service",
+          "text": "Find the right pandit for your religious occasion and make your arrangements with ease.",
+          "buttonText": "Book a Pandit",
+          "buttonLink": "booking"
+        }
+      ]
     },
     {
       "show": true,
       "status": "draft",
+      "design": "standard",
       "slug": "religious-ceremony-booking",
       "number": "09",
       "icon": "people",
@@ -1064,6 +1083,7 @@
     {
       "show": true,
       "status": "draft",
+      "design": "standard",
       "slug": "religious-awareness",
       "number": "10",
       "icon": "bookopen",
@@ -1118,6 +1138,7 @@
     {
       "show": true,
       "status": "draft",
+      "design": "standard",
       "slug": "donate-social-welfare",
       "number": "11",
       "icon": "heart",
@@ -1172,6 +1193,7 @@
     {
       "show": true,
       "status": "draft",
+      "design": "standard",
       "slug": "volunteer-community-service",
       "number": "12",
       "icon": "people",
@@ -1226,6 +1248,7 @@
     {
       "show": true,
       "status": "draft",
+      "design": "standard",
       "slug": "online-priest-consultation",
       "number": "13",
       "icon": "video",
