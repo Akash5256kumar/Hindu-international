@@ -1035,8 +1035,8 @@
     },
     {
       "show": true,
-      "status": "draft",
-      "design": "standard",
+      "status": "published",
+      "design": "v2",
       "slug": "temple-darshan-offerings",
       "number": "07",
       "icon": "temple",
@@ -1045,48 +1045,166 @@
       "image": "assets/images/services/temple-darshan.jpg",
       "imageAlt": "Temples with saffron flags on the river ghats at sunset",
       "link": "booking",
-      "bannerTitle": "Temple Darshan & Offerings Service",
-      "bannerAccent": "",
-      "bannerImage": "",
-      "bannerImageAlt": "",
+      "bannerTitle": "Temple Darshan &\nOfferings Service",
+      "bannerAccent": "Offerings Service",
+      "bannerImage": "assets/images/faith/hero-family.jpg",
+      "bannerImageAlt": "A family looking at temples lit up at sunset",
       "aboutLabel": "",
-      "aboutTitle": "",
-      "aboutText1": "",
-      "aboutText2": "",
-      "aboutImage": "",
-      "aboutImageAlt": "",
+      "aboutTitle": "What Is Temple Darshan & Offerings Service?",
+      "aboutText1": "Temple darshan is an important part of Hindu religious traditions. Devotees visit temples to offer prayers, seek blessings, and feel connected to their faith. Making offerings is also a meaningful way to express devotion and participate in religious customs associated with different temples and deities.",
+      "aboutText2": "Our Temple Darshan & Offerings Service helps devotees explore available darshan and offering arrangements without managing every detail themselves. You can select the available service, share your requirements, and confirm your booking through a simple process. It offers a convenient option for people who cannot easily travel to a temple but wish to remain connected to their religious traditions.",
+      "aboutImage": "assets/images/faith/heritage-aarti.jpg",
+      "aboutImageAlt": "Hands holding a puja thali with a lit diya and flowers before temples",
       "showShloka": false,
       "shloka": "",
-      "processSubtitle": "",
-      "processSteps": [],
-      "receiveTitle": "",
-      "receiveAccent": "",
-      "receiveSubtitle": "",
-      "receive": [],
-      "whyTitle": "",
+      "processSubtitle": "A simple way to arrange temple darshan and religious offerings.",
+      "processSteps": [
+        {
+          "icon": "calendar",
+          "title": "Choose Your Service",
+          "text": "Explore the available temple darshan and offering services and select the option that suits your spiritual requirements."
+        },
+        {
+          "icon": "edit",
+          "title": "Share Your Details",
+          "text": "Provide your name and the required information for your selected darshan or offering arrangement."
+        },
+        {
+          "icon": "check",
+          "title": "Confirm Your Booking",
+          "text": "Review the available service details, verify your requirements, and complete the booking confirmation process."
+        },
+        {
+          "icon": "people",
+          "title": "Darshan & Offering Arrangements",
+          "text": "Our team coordinates the arrangements included in your confirmed booking and shares the relevant details with you."
+        }
+      ],
+      "receiveTitle": "What You",
+      "receiveAccent": "Receive",
+      "receiveSubtitle": "Thoughtful Arrangements for Your Spiritual Needs",
+      "receive": [
+        {
+          "icon": "temple",
+          "title": "Temple Darshan Arrangements",
+          "text": "Explore the available temple darshan services and select an arrangement according to your requirements.",
+          "image": "assets/images/services/temple-darshan.jpg",
+          "imageAlt": "Temples with saffron flags"
+        },
+        {
+          "icon": "sprout",
+          "title": "Religious Offering Options",
+          "text": "Enquire about available offerings and select the option offered for your chosen service.",
+          "image": "assets/images/flower-offerings.jpg",
+          "imageAlt": "A brass puja plate with flowers and offerings"
+        },
+        {
+          "icon": "lotus",
+          "title": "Coordinated Service Arrangements",
+          "text": "The team coordinates the arrangements included in your confirmed booking according to the selected service.",
+          "image": "assets/images/services/puja-booking.jpg",
+          "imageAlt": "Brass diyas and bowls of flowers"
+        },
+        {
+          "icon": "check",
+          "title": "Booking Confirmation",
+          "text": "Receive confirmation and relevant instructions for your selected temple darshan or offering service.",
+          "image": "assets/images/services/punya-snan/receive-sankalp.jpg",
+          "imageAlt": "A priest holding a puja thali with a lit diya"
+        }
+      ],
+      "whyTitle": "Why Choose Our Temple Darshan & Offerings Service?",
       "whyAccent": "",
-      "why": [],
-      "whoTitle": "",
-      "whoAccent": "",
-      "whoIntro": "",
-      "whoList": [],
-      "whoClosing": "",
+      "why": [
+        {
+          "icon": "handshake",
+          "title": "Convenient Booking Process",
+          "text": "Explore available services and arrange temple darshan or offerings through a straightforward booking process."
+        },
+        {
+          "icon": "lotus",
+          "title": "Stay Connected to Your Faith",
+          "text": "Maintain a connection with your religious traditions even when visiting a temple in person is difficult."
+        },
+        {
+          "icon": "info",
+          "title": "Clear Booking Information",
+          "text": "Understand the available arrangements, provide the required details, and confirm your booking with greater clarity."
+        },
+        {
+          "icon": "people",
+          "title": "Suitable for Different Devotees",
+          "text": "Explore available arrangements according to your personal needs, family traditions, and spiritual preferences."
+        }
+      ],
+      "whoTitle": "Who Can Use",
+      "whoAccent": "This Service?",
+      "whoIntro": "The Temple Darshan & Offerings Service may be suitable for:",
+      "whoList": [
+        {
+          "text": "Devotees who wish to arrange temple darshan or religious offerings."
+        },
+        {
+          "text": "Families who want to participate in temple traditions together."
+        },
+        {
+          "text": "Senior citizens and individuals who find temple travel difficult."
+        },
+        {
+          "text": "People living away from their hometowns who wish to stay connected to their faith."
+        },
+        {
+          "text": "Devotees living outside India who want to enquire about available arrangements."
+        }
+      ],
+      "whoClosing": "Every devotee has different needs and circumstances. You can explore the available services and choose an arrangement that suits your requirements.",
       "showPlaces": false,
       "placesTitle": "",
       "placesSubtitle": "",
       "placesIntro": "",
       "places": [],
       "placesNote": "",
-      "faqTitle": "",
-      "faqAccent": "",
-      "faqs": [],
-      "ctaTitle": "",
-      "ctaText": "",
-      "ctaButton": "",
-      "ctaLink": "",
-      "ctaImage": "",
-      "seoTitle": "",
-      "seoDescription": ""
+      "faqTitle": "Frequently Asked Questions",
+      "faqAccent": "(FAQs)",
+      "faqs": [
+        {
+          "q": "What is the Temple Darshan & Offerings Service?",
+          "a": "It helps devotees explore available temple darshan and religious offering arrangements through a convenient booking process."
+        },
+        {
+          "q": "What types of offerings can I arrange?",
+          "a": "Available offerings depend on the selected temple and service. Please check the service details to understand the options offered."
+        },
+        {
+          "q": "What details are required for booking?",
+          "a": "You may need to provide your name and other information requested for your selected darshan or offering arrangement."
+        },
+        {
+          "q": "Can I enquire about this service if I live outside India?",
+          "a": "You can enquire about the available arrangements and confirm whether the selected service can accommodate your location and requirements."
+        },
+        {
+          "q": "How will I receive my booking confirmation?",
+          "a": "Follow the confirmation instructions provided during booking. The relevant details will be shared through the communication process supported by the service."
+        }
+      ],
+      "ctaTitle": "Stay Connected Through Temple Darshan",
+      "ctaText": "Explore our available temple darshan and offering services and arrange a meaningful spiritual experience with ease.",
+      "ctaButton": "Book Temple Darshan",
+      "ctaLink": "booking",
+      "ctaImage": "assets/images/faith/respect-prayer.jpg",
+      "seoTitle": "Temple Darshan & Offerings Service | Hindu.International",
+      "seoDescription": "Experience sacred temple darshan and arrange religious offerings with ease, wherever you are, through a simple booking process.",
+      "bannerSlides": [
+        {
+          "label": "",
+          "title": "Temple Darshan &\nOfferings Service",
+          "accent": "Offerings Service",
+          "text": "Experience sacred temple darshan and arrange religious offerings with ease, wherever you are.",
+          "buttonText": "Book Temple Darshan",
+          "buttonLink": "booking"
+        }
+      ]
     },
     {
       "show": true,
