@@ -107,7 +107,9 @@
   .hero__content { order: 1; padding: 36px var(--gutter) 28px; max-width: none; }
   .hero__media { position: relative; order: 2; inset: auto; aspect-ratio: 4 / 3.4; }
   .hero__media img, .hero__video { object-position: 90% 50%; }
-  .hero__waterfall { left: 41%; top: 36%; width: 4%; height: 39%; }
+  /* phones: the blurred, masked water layers repaint on every frame and slow the page down;
+     the glow and embers (transform/opacity only) stay */
+  .hero__waterfall, .hero__shimmer { display: none; }
   .hero__media::after { background: linear-gradient(180deg, var(--cream) 0%, rgba(255, 248, 237, 0) 16%); }
   .hero__glow { left: 5%; width: 95%; }
   .hero__embers i { left: calc(var(--x) - 45%); }
