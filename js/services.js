@@ -109,6 +109,8 @@
     });
     return c;
   }
+  /* While the default file loads, the cards written in services.html stay on screen,
+     so their links must match the published service pages */
   function loadServices(done) {
     var c = (window.SITE_CONTENT || {}).services;
     if (c && Array.isArray(c.items) && c.items.length) {
@@ -170,7 +172,6 @@
     var pages = Math.ceil(cards.length / PER_PAGE);
     var page = Math.min(pages, Math.max(1, parseInt(new URLSearchParams(location.search).get('page'), 10) || 1));
     var bar = null, count, prev, next;
-
     if (pages > 1) {
       bar = el('nav', 'container svc-pager');
       bar.setAttribute('aria-label', 'Service pages');
