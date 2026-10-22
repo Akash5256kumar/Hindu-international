@@ -1727,8 +1727,8 @@
     },
     {
       "show": true,
-      "status": "draft",
-      "design": "standard",
+      "status": "published",
+      "design": "v2",
       "slug": "donate-social-welfare",
       "number": "11",
       "icon": "heart",
@@ -1737,48 +1737,166 @@
       "image": "assets/images/faith/donation-bowl.jpg",
       "imageAlt": "A coin being offered into a brass donation bowl",
       "link": "donate",
-      "bannerTitle": "Donate & Social Welfare",
-      "bannerAccent": "",
-      "bannerImage": "",
-      "bannerImageAlt": "",
+      "bannerTitle": "Donate &\nSocial Welfare",
+      "bannerAccent": "Social Welfare",
+      "bannerImage": "assets/images/roots/donate-hero.jpg",
+      "bannerImageAlt": "Green hills and village homes at sunrise",
       "aboutLabel": "",
-      "aboutTitle": "",
-      "aboutText1": "",
-      "aboutText2": "",
-      "aboutImage": "",
-      "aboutImageAlt": "",
+      "aboutTitle": "What Is Donate & Social Welfare?",
+      "aboutText1": "Social welfare focuses on supporting people, strengthening communities, and helping individuals who may need assistance. Donations can contribute to initiatives that address community needs, provide essential support, and encourage compassion and social responsibility. Every initiative has its own purpose, and understanding how contributions are used is an important part of responsible giving.",
+      "aboutText2": "Our Donate & Social Welfare Service aims to help people explore available donation opportunities and social welfare initiatives associated with our platform. You can review the available information, understand the purpose of an initiative, and follow the provided instructions to enquire about or participate in a suitable opportunity. Our goal is to make it easier for people to learn about meaningful causes and explore ways to contribute.",
+      "aboutImage": "assets/images/faith/donation-bowl.jpg",
+      "aboutImageAlt": "A coin being offered into a brass donation bowl",
       "showShloka": false,
       "shloka": "",
-      "processSubtitle": "",
-      "processSteps": [],
-      "receiveTitle": "",
-      "receiveAccent": "",
-      "receiveSubtitle": "",
-      "receive": [],
-      "whyTitle": "",
+      "processSubtitle": "A simple way to explore donation opportunities and social welfare initiatives.",
+      "processSteps": [
+        {
+          "icon": "bookopen",
+          "title": "Explore Available Initiatives",
+          "text": "Browse the available donation opportunities and social welfare initiatives to understand their purpose."
+        },
+        {
+          "icon": "check",
+          "title": "Choose Your Initiative",
+          "text": "Select an available initiative that aligns with your interests and the type of support you wish to explore."
+        },
+        {
+          "icon": "eye",
+          "title": "Review the Details",
+          "text": "Read the available information about the initiative, its purpose, and the instructions for participation or donation."
+        },
+        {
+          "icon": "info",
+          "title": "Follow the Provided Instructions",
+          "text": "Use the contact, enquiry, or donation instructions provided for the selected initiative to proceed."
+        }
+      ],
+      "receiveTitle": "What You",
+      "receiveAccent": "Receive",
+      "receiveSubtitle": "Meaningful Ways to Support Social Welfare",
+      "receive": [
+        {
+          "icon": "hearthand",
+          "title": "Information About Available Initiatives",
+          "text": "Explore available social welfare initiatives and understand the causes or community needs they aim to support.",
+          "image": "assets/images/faith/vulnerable-education.jpg",
+          "imageAlt": "Children studying in a classroom"
+        },
+        {
+          "icon": "bookopen",
+          "title": "Clear Purpose and Details",
+          "text": "Review the available information to understand the purpose and requirements of each initiative.",
+          "image": "assets/images/services/religious-awareness.jpg",
+          "imageAlt": "An open book with a mala beside it"
+        },
+        {
+          "icon": "sprout",
+          "title": "Opportunities to Contribute",
+          "text": "Discover available ways to participate or contribute according to the instructions provided for each initiative.",
+          "image": "assets/images/faith/vulnerable-hardship.jpg",
+          "imageAlt": "Coins held in cupped hands"
+        },
+        {
+          "icon": "people",
+          "title": "Guidance for Next Steps",
+          "text": "Access the available enquiry, contact, or donation instructions to understand how to proceed.",
+          "image": "assets/images/services/volunteer.jpg",
+          "imageAlt": "Hands joined together"
+        }
+      ],
+      "whyTitle": "Why Choose Our Donate & Social Welfare Service?",
       "whyAccent": "",
-      "why": [],
-      "whoTitle": "",
-      "whoAccent": "",
-      "whoIntro": "",
-      "whoList": [],
-      "whoClosing": "",
+      "why": [
+        {
+          "icon": "heart",
+          "title": "Explore Meaningful Causes",
+          "text": "Learn about available initiatives and identify causes that align with your interests and values."
+        },
+        {
+          "icon": "info",
+          "title": "Understand Before Contributing",
+          "text": "Review the available information and purpose of an initiative before deciding how to participate."
+        },
+        {
+          "icon": "globe",
+          "title": "Convenient Access to Information",
+          "text": "Explore donation opportunities and social welfare initiatives in one accessible place."
+        },
+        {
+          "icon": "handshake",
+          "title": "Encourage Social Responsibility",
+          "text": "Discover ways to support community welfare and contribute thoughtfully to initiatives that matter to you."
+        }
+      ],
+      "whoTitle": "Who Can Use",
+      "whoAccent": "This Service?",
+      "whoIntro": "The Donate & Social Welfare Service may be suitable for:",
+      "whoList": [
+        {
+          "text": "Individuals who want to explore donation opportunities."
+        },
+        {
+          "text": "Families interested in supporting social welfare initiatives."
+        },
+        {
+          "text": "Devotees looking for available charitable or community-support activities."
+        },
+        {
+          "text": "People who wish to learn more about causes that support communities."
+        },
+        {
+          "text": "Individuals interested in contributing time, resources, or donations where such opportunities are available."
+        }
+      ],
+      "whoClosing": "Every initiative may have different requirements and ways to participate. Review the available information and follow the instructions provided for the initiative you choose.",
       "showPlaces": false,
       "placesTitle": "",
       "placesSubtitle": "",
       "placesIntro": "",
       "places": [],
       "placesNote": "",
-      "faqTitle": "",
-      "faqAccent": "",
-      "faqs": [],
-      "ctaTitle": "",
-      "ctaText": "",
-      "ctaButton": "",
-      "ctaLink": "",
-      "ctaImage": "",
-      "seoTitle": "",
-      "seoDescription": ""
+      "faqTitle": "Frequently Asked Questions",
+      "faqAccent": "(FAQs)",
+      "faqs": [
+        {
+          "q": "What is the Donate & Social Welfare Service?",
+          "a": "It helps visitors explore available donation opportunities and social welfare initiatives and understand how they can participate."
+        },
+        {
+          "q": "What types of initiatives can I explore?",
+          "a": "Available initiatives depend on the activities listed on the website. Review the published details to understand the causes and opportunities offered."
+        },
+        {
+          "q": "How can I contribute to an initiative?",
+          "a": "Review the initiative's information and follow its available donation, contact, or participation instructions."
+        },
+        {
+          "q": "Can I enquire before making a donation?",
+          "a": "Yes. If contact or enquiry options are available for the initiative, you can use them to ask questions before deciding whether to contribute."
+        },
+        {
+          "q": "How can I learn how a donation will be used?",
+          "a": "Review the information published for the initiative and contact its responsible team through the available enquiry channels if you need further clarification."
+        }
+      ],
+      "ctaTitle": "Be a Part of Meaningful Change",
+      "ctaText": "Explore available donation opportunities and social welfare initiatives to discover how you can support causes that matter.",
+      "ctaButton": "Explore Donation Options",
+      "ctaLink": "donate",
+      "ctaImage": "assets/images/faith/heritage-aarti.jpg",
+      "seoTitle": "Donate & Social Welfare | Hindu.International",
+      "seoDescription": "Explore donation opportunities and social welfare initiatives, understand their purpose, and find ways to support causes that matter.",
+      "bannerSlides": [
+        {
+          "label": "",
+          "title": "Donate &\nSocial Welfare",
+          "accent": "Social Welfare",
+          "text": "Support meaningful social welfare initiatives and help make a positive difference in people's lives.",
+          "buttonText": "Explore Donation Options",
+          "buttonLink": "donate"
+        }
+      ]
     },
     {
       "show": true,
