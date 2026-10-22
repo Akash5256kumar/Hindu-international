@@ -54,6 +54,13 @@ DirectoryIndex index.html
 <IfModule mod_rewrite.c>
   RewriteEngine On
 
+  # One address for the whole site: www.hindu.international → hindu.international (same page)
+  RewriteCond %{HTTP_HOST} ^www\.hindu\.international$ [NC]
+  RewriteRule ^ https://hindu.international%{REQUEST_URI} [R=301,L,NE]
+
+  # /sitemap.xml is built from the admin content by sitemap.php
+  RewriteRule ^sitemap\.xml$ sitemap.php [END]
+
   # Preserve the old page name while using the canonical clean URL.
   RewriteRule ^preserve-our-roots(?:\.html)?/?$ /protect-our-faith [R=301,L,NE]
 
