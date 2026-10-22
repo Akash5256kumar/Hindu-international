@@ -862,8 +862,8 @@
     },
     {
       "show": true,
-      "status": "draft",
-      "design": "standard",
+      "status": "published",
+      "design": "v2",
       "slug": "havan-yagya-booking",
       "number": "06",
       "icon": "flame",
@@ -872,48 +872,166 @@
       "image": "assets/images/services/havan-yagya.jpg",
       "imageAlt": "Sacred fire of a havan with an offering being made",
       "link": "booking",
-      "bannerTitle": "Havan & Yagya Booking Service",
-      "bannerAccent": "",
-      "bannerImage": "",
-      "bannerImageAlt": "",
+      "bannerTitle": "Havan & Yagya\nBooking Service",
+      "bannerAccent": "Booking Service",
+      "bannerImage": "assets/images/ritual-aarti.jpg",
+      "bannerImageAlt": "A priest performing a ritual with lamps and offerings",
       "aboutLabel": "",
-      "aboutTitle": "",
-      "aboutText1": "",
-      "aboutText2": "",
-      "aboutImage": "",
-      "aboutImageAlt": "",
+      "aboutTitle": "What Is Havan & Yagya Booking Service?",
+      "aboutText1": "Havan and Yagya are important Hindu religious rituals performed to offer prayers, seek blessings, and mark special occasions. These rituals are commonly arranged for peace, prosperity, family well-being, religious ceremonies, and other spiritual purposes. They hold a special place in Hindu traditions and are performed with specific samagri, mantras, and ritual procedures.",
+      "aboutText2": "Our Havan & Yagya Booking Service helps devotees explore available ritual arrangements according to their requirements. You can select the service you need, share the necessary details, and confirm your booking through a simple process. This makes it easier to arrange sacred rituals even when you have limited time or cannot manage every arrangement yourself.",
+      "aboutImage": "assets/images/services/havan-yagya.jpg",
+      "aboutImageAlt": "Sacred fire of a havan with an offering being made",
       "showShloka": false,
       "shloka": "",
-      "processSubtitle": "",
-      "processSteps": [],
-      "receiveTitle": "",
-      "receiveAccent": "",
-      "receiveSubtitle": "",
-      "receive": [],
-      "whyTitle": "",
+      "processSubtitle": "A simple way to arrange your havan and yagya rituals.",
+      "processSteps": [
+        {
+          "icon": "calendar",
+          "title": "Choose Your Ritual",
+          "text": "Explore the available havan and yagya services and select the ritual according to your occasion and spiritual requirements."
+        },
+        {
+          "icon": "edit",
+          "title": "Share Your Details",
+          "text": "Provide your name, preferred date, occasion, and other required details to help arrange your selected ritual."
+        },
+        {
+          "icon": "check",
+          "title": "Confirm Your Booking",
+          "text": "Review the available arrangements, verify your booking details, and complete the confirmation process."
+        },
+        {
+          "icon": "people",
+          "title": "Ritual Arrangements",
+          "text": "Our team coordinates the arrangements included in your confirmed booking and shares the relevant details with you."
+        }
+      ],
+      "receiveTitle": "What You",
+      "receiveAccent": "Receive",
+      "receiveSubtitle": "Thoughtful Arrangements for Sacred Rituals",
+      "receive": [
+        {
+          "icon": "temple",
+          "title": "Ritual Arrangements as Selected",
+          "text": "Explore available havan and yagya services and choose the ritual arrangements that suit your requirements.",
+          "image": "assets/images/services/samagri-store.jpg",
+          "imageAlt": "Brass kalash, bowls and flowers arranged for a ritual"
+        },
+        {
+          "icon": "bookopen",
+          "title": "Guidance for Required Details",
+          "text": "Receive information about the details needed to arrange your selected ritual.",
+          "image": "assets/images/services/pandit-booking.jpg",
+          "imageAlt": "A pandit reading a sacred text at a wooden desk"
+        },
+        {
+          "icon": "flame",
+          "title": "Coordinated Havan & Yagya Service",
+          "text": "The team coordinates the arrangements included in your confirmed booking according to the selected service.",
+          "image": "assets/images/services/havan-yagya.jpg",
+          "imageAlt": "Sacred fire of a havan with an offering being made"
+        },
+        {
+          "icon": "check",
+          "title": "Booking Confirmation",
+          "text": "Receive confirmation and relevant instructions for your selected havan or yagya service.",
+          "image": "assets/images/services/punya-snan/receive-sankalp.jpg",
+          "imageAlt": "A priest holding a puja thali with a lit diya"
+        }
+      ],
+      "whyTitle": "Why Choose Our Havan & Yagya Service?",
       "whyAccent": "",
-      "why": [],
-      "whoTitle": "",
-      "whoAccent": "",
-      "whoIntro": "",
-      "whoList": [],
-      "whoClosing": "",
+      "why": [
+        {
+          "icon": "handshake",
+          "title": "Convenient Booking Process",
+          "text": "Explore available ritual services and make arrangements through a straightforward booking process."
+        },
+        {
+          "icon": "lotus",
+          "title": "Suitable for Different Occasions",
+          "text": "Arrange havan and yagya rituals for religious ceremonies, family occasions, and other spiritual requirements."
+        },
+        {
+          "icon": "info",
+          "title": "Clear Booking Information",
+          "text": "Understand the available arrangements, share the required details, and confirm your booking with greater clarity."
+        },
+        {
+          "icon": "people",
+          "title": "Support for Your Spiritual Traditions",
+          "text": "Make arrangements for important Hindu rituals while staying connected to your family's religious traditions."
+        }
+      ],
+      "whoTitle": "Who Can Use",
+      "whoAccent": "This Service?",
+      "whoIntro": "The Havan & Yagya Booking Service may be suitable for:",
+      "whoList": [
+        {
+          "text": "Devotees planning havan or yagya for religious purposes."
+        },
+        {
+          "text": "Families arranging rituals for peace, prosperity, or family well-being."
+        },
+        {
+          "text": "Individuals planning pujas, ceremonies, or special religious occasions."
+        },
+        {
+          "text": "People living away from their hometowns who need assistance with ritual arrangements."
+        },
+        {
+          "text": "Families and working professionals who need a convenient way to coordinate religious ceremonies."
+        }
+      ],
+      "whoClosing": "Every family has different spiritual needs and traditions. You can explore the available services and choose the arrangements that suit your occasion and requirements.",
       "showPlaces": false,
       "placesTitle": "",
       "placesSubtitle": "",
       "placesIntro": "",
       "places": [],
       "placesNote": "",
-      "faqTitle": "",
-      "faqAccent": "",
-      "faqs": [],
-      "ctaTitle": "",
-      "ctaText": "",
-      "ctaButton": "",
-      "ctaLink": "",
-      "ctaImage": "",
-      "seoTitle": "",
-      "seoDescription": ""
+      "faqTitle": "Frequently Asked Questions",
+      "faqAccent": "(FAQs)",
+      "faqs": [
+        {
+          "q": "What is a Havan & Yagya Booking Service?",
+          "a": "It helps devotees explore available havan and yagya services and arrange the selected rituals according to their requirements."
+        },
+        {
+          "q": "What occasions can I book a havan or yagya for?",
+          "a": "You can enquire about available rituals for religious ceremonies, family occasions, and other spiritual purposes, depending on the services offered."
+        },
+        {
+          "q": "What details are required to book a havan or yagya?",
+          "a": "You may need to provide your name, preferred date, occasion, and other details requested during the booking process."
+        },
+        {
+          "q": "Can I arrange a havan or yagya if I live outside my hometown?",
+          "a": "You can enquire about the available arrangements and confirm whether the selected service can accommodate your location and requirements."
+        },
+        {
+          "q": "How will I receive my booking confirmation?",
+          "a": "After completing the booking process, follow the confirmation instructions provided for your selected service. The relevant booking details will be shared through the available communication process."
+        }
+      ],
+      "ctaTitle": "Arrange Your Havan & Yagya with Ease",
+      "ctaText": "Explore our available havan and yagya services and make arrangements for the sacred rituals that matter to you.",
+      "ctaButton": "Book Havan & Yagya",
+      "ctaLink": "booking",
+      "ctaImage": "assets/images/flower-offerings.jpg",
+      "seoTitle": "Havan & Yagya Booking Service | Hindu.International",
+      "seoDescription": "Arrange sacred havan and yagya rituals for peace, prosperity, family well-being and special occasions through a simple booking process.",
+      "bannerSlides": [
+        {
+          "label": "",
+          "title": "Havan & Yagya\nBooking Service",
+          "accent": "Booking Service",
+          "text": "Arrange sacred havan and yagya rituals with ease for your spiritual needs and special occasions.",
+          "buttonText": "Book Havan & Yagya",
+          "buttonLink": "booking"
+        }
+      ]
     },
     {
       "show": true,
