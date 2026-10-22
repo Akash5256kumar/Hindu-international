@@ -58,6 +58,7 @@
 
 /* Sliding banner texts: stacked in one spot (the tallest sets the height); the next one rises from below */
 .sd-slides { display: grid; max-width: 580px; }
+.sd-v2 .sd-slides, .sd-v2 .sd-banner__title { max-width: 680px; }
 .sd-slide {
   grid-area: 1 / 1; min-width: 0;
   opacity: 0; visibility: hidden; transform: translateY(40px);
@@ -261,7 +262,22 @@
 .sd-v2 .sd-place__media { aspect-ratio: 4 / 3; }
 .sd-v2 .sd-place__body { padding: 14px 16px 18px; text-align: center; }
 .sd-v2 .sd-place__body h3 { font-family: var(--font-serif); font-weight: 700; font-size: 1.12rem; line-height: 1.3; }
-.sd-v2 .sd-place__loc { display: none; }
+.sd-v2 #sd-places { scroll-margin-top: calc(var(--header-h) + 8px); }
+.sd-v2 .sd-place { display: flex; flex-direction: column; }
+.sd-v2 .sd-place__body { flex: 1; display: flex; flex-direction: column; align-items: center; }
+.sd-v2 .sd-place__loc { display: inline-flex; align-items: center; justify-content: center; text-align: center; gap: 4px; margin: 2px 0 0; font-size: .82rem; color: var(--saffron-deep); }
+.sd-v2 .sd-place__loc .icon { width: 14px; height: 14px; flex: none; }
+.sd-v2 .sd-place__btn {
+  margin-top: auto; align-self: center; display: inline-flex; align-items: center; justify-content: center;
+  min-height: 38px; padding: 0 18px; border-radius: var(--radius-sm);
+  background: var(--saffron); color: var(--white); font-size: .86rem; font-weight: 600; text-decoration: none;
+  transition: background-color .2s;
+}
+.sd-v2 .sd-place__btn:hover { background: var(--saffron-deep); color: var(--white); }
+/* buttons line up at the bottom of every card */
+.sd-v2 .sd-place__btn { margin-top: auto; }
+.sd-v2 .sd-place__loc ~ .sd-place__btn, .sd-v2 .sd-place__text ~ .sd-place__btn { margin-top: auto; }
+.sd-v2 .sd-place__body > :nth-last-child(2) { margin-bottom: 14px; }
 .sd-v2 .sd-place__body .sd-place__text { font-size: .88rem; color: var(--muted); }
 .sd-v2 .sd-places__intro { text-align: center; }
 @media (max-width: 1100px) { .sd-v2 .sd-places__track { grid-auto-columns: calc((100% - 2 * 18px) / 3); } }

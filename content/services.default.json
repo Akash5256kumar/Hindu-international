@@ -2890,6 +2890,289 @@
           "buttonLink": "booking"
         }
       ]
+    },
+    {
+      "show": true,
+      "status": "published",
+      "design": "v2",
+      "slug": "12-jyotirlinga-darshan-puja",
+      "number": "17",
+      "icon": "temple",
+      "title": "12 Jyotirlinga Darshan & Puja Seva",
+      "text": "Explore the twelve Jyotirlingas of Lord Shiva and the darshan, puja and abhishek arrangements available at each.",
+      "image": "assets/images/roots/thanks.jpg",
+      "imageAlt": "A temple on a hill at sunrise",
+      "link": "booking",
+      "bannerTitle": "12 Jyotirlinga\nDarshan & Puja Seva",
+      "bannerAccent": "Darshan & Puja Seva",
+      "bannerImage": "assets/images/roots/thanks.jpg",
+      "bannerImageAlt": "A temple on a hill at sunrise",
+      "aboutLabel": "",
+      "aboutTitle": "Discover the Sacred Twelve Jyotirlingas",
+      "aboutText1": "The twelve Jyotirlingas are among the most sacred shrines dedicated to Lord Shiva in Hindu tradition. Each Jyotirlinga holds deep spiritual significance and attracts devotees who wish to seek the blessings of Lord Shiva through darshan, prayer, and traditional rituals.",
+      "aboutText2": "Through our 12 Jyotirlinga Darshan & Puja Seva service, devotees can explore these sacred temples and learn about available puja and abhishek arrangements. Service details may vary by temple, and booking or live participation options are provided only where arrangements are available.",
+      "aboutImage": "assets/images/services/punya-snan/banner.jpg",
+      "aboutImageAlt": "Temples and boats on the river ghats at sunrise",
+      "showShloka": false,
+      "shloka": "",
+      "processTitle": "How Our Jyotirlinga Seva Works",
+      "processSubtitle": "A simple way to explore and book your Jyotirlinga darshan or puja.",
+      "processSteps": [
+        {
+          "icon": "calendar",
+          "title": "Explore the Jyotirlingas",
+          "text": "Discover the twelve sacred Jyotirlingas and learn about their temples and spiritual significance."
+        },
+        {
+          "icon": "edit",
+          "title": "Choose Your Seva",
+          "text": "Explore available darshan, puja, or abhishek arrangements for the selected Jyotirlinga."
+        },
+        {
+          "icon": "check",
+          "title": "Share Your Details",
+          "text": "Provide the required name and other details for your selected seva, wherever applicable."
+        },
+        {
+          "icon": "people",
+          "title": "Confirm Your Seva",
+          "text": "Review the available arrangements and confirm your request after the details have been verified."
+        }
+      ],
+      "receiveTitle": "What You Receive Through Our Seva",
+      "receiveAccent": "",
+      "receiveSubtitle": "",
+      "receive": [
+        {
+          "icon": "bookopen",
+          "title": "Jyotirlinga Information",
+          "text": "Explore temple details, locations, and spiritual significance to help you learn about each sacred shrine.",
+          "image": "assets/images/services/temple-darshan.jpg",
+          "imageAlt": "Temples with saffron flags"
+        },
+        {
+          "icon": "lotus",
+          "title": "Available Puja Arrangements",
+          "text": "Get information about puja and abhishek options wherever arrangements are confirmed.",
+          "image": "assets/images/services/puja-booking.jpg",
+          "imageAlt": "Brass diyas and bowls of flowers"
+        },
+        {
+          "icon": "video",
+          "title": "Seva Booking Guidance",
+          "text": "Understand the available booking process and the details required for your selected temple seva.",
+          "image": "assets/images/services/punya-snan/receive-video.jpg",
+          "imageAlt": "A camera recording a ritual"
+        },
+        {
+          "icon": "check",
+          "title": "Seva Confirmation Details",
+          "text": "Receive confirmation and relevant ritual details for the seva you have successfully booked, where applicable.",
+          "image": "assets/images/services/punya-snan/receive-sankalp.jpg",
+          "imageAlt": "A priest holding a puja thali with a lit diya"
+        }
+      ],
+      "whyTitle": "Why Choose Our Jyotirlinga Seva",
+      "whyAccent": "",
+      "why": [
+        {
+          "icon": "temple",
+          "title": "Explore All Twelve Shrines",
+          "text": "Discover the twelve sacred Jyotirlingas together in one convenient place."
+        },
+        {
+          "icon": "lotus",
+          "title": "Clear Seva Information",
+          "text": "Understand the available darshan, puja, and abhishek arrangements before proceeding."
+        },
+        {
+          "icon": "info",
+          "title": "Simple Booking Guidance",
+          "text": "Follow a clear process to enquire about and confirm available seva arrangements."
+        },
+        {
+          "icon": "people",
+          "title": "Respect for Sacred Traditions",
+          "text": "Explore temple worship information with respect for traditional practices and individual temple guidelines."
+        }
+      ],
+      "whoTitle": "Who Can Use",
+      "whoAccent": "This Service?",
+      "whoIntro": "This service is suitable for devotees of Lord Shiva, people planning a Jyotirlinga pilgrimage, families wishing to learn about traditional puja arrangements, and devotees who want to explore available temple seva options.",
+      "whoList": [
+        {
+          "text": "Devotees who wish to seek the blessings of Lord Shiva."
+        },
+        {
+          "text": "Families planning a Jyotirlinga yatra."
+        },
+        {
+          "text": "People who cannot immediately visit every temple in person."
+        },
+        {
+          "text": "Individuals looking for information about available puja arrangements."
+        },
+        {
+          "text": "Devotees who want to stay connected with Jyotirlinga shrines."
+        }
+      ],
+      "whoClosing": "It can also help people who cannot immediately visit every temple in person and want to understand the available arrangements before planning their visit.",
+      "showPlaces": true,
+      "placesTitle": "Explore the Twelve Sacred Jyotirlingas",
+      "placesSubtitle": "Discover the sacred abodes of Lord Shiva and explore the darshan and traditional seva arrangements available at each temple.",
+      "placesIntro": "",
+      "places": [
+        {
+          "name": "Somnath Jyotirlinga",
+          "location": "Prabhas Patan, Gujarat",
+          "text": "Visit the sacred Somnath Temple, one of the most revered Jyotirlinga shrines of Lord Shiva, and explore its darshan and available puja arrangements.",
+          "image": "assets/images/roots/thanks.jpg",
+          "imageAlt": "A temple on a hill at sunrise",
+          "buttonText": "Explore Details",
+          "buttonLink": "contact"
+        },
+        {
+          "name": "Mallikarjuna Jyotirlinga",
+          "location": "Srisailam, Andhra Pradesh",
+          "text": "Discover Mallikarjuna Jyotirlinga, a sacred Shiva shrine known for its spiritual importance and traditional worship practices.",
+          "image": "assets/images/services/temple-darshan.jpg",
+          "imageAlt": "Temples with saffron flags",
+          "buttonText": "Explore Details",
+          "buttonLink": "contact"
+        },
+        {
+          "name": "Mahakaleshwar Jyotirlinga",
+          "location": "Ujjain, Madhya Pradesh",
+          "text": "Explore Mahakaleshwar Temple, a revered Jyotirlinga shrine associated with Lord Shiva in his Mahakal form, and learn about available darshan and puja arrangements.",
+          "image": "assets/images/ritual-aarti.jpg",
+          "imageAlt": "A priest performing aarti with lamps",
+          "buttonText": "Explore Details",
+          "buttonLink": "contact"
+        },
+        {
+          "name": "Omkareshwar Jyotirlinga",
+          "location": "Mandhata Island, Madhya Pradesh",
+          "text": "Discover Omkareshwar Jyotirlinga, situated on the sacred Narmada River, and explore traditional worship and available seva options.",
+          "image": "assets/images/offering-hands.jpg",
+          "imageAlt": "Hands offering flowers on a leaf over a river",
+          "buttonText": "Explore Details",
+          "buttonLink": "contact"
+        },
+        {
+          "name": "Kedarnath Jyotirlinga",
+          "location": "Kedarnath, Uttarakhand",
+          "text": "Learn about Kedarnath Temple, the sacred Himalayan shrine dedicated to Lord Shiva, and explore darshan and puja information subject to temple schedules.",
+          "image": "assets/images/faith/hero-family.jpg",
+          "imageAlt": "A family looking at temples lit up at sunset",
+          "buttonText": "Explore Details",
+          "buttonLink": "contact"
+        },
+        {
+          "name": "Bhimashankar Jyotirlinga",
+          "location": "Pune district, Maharashtra",
+          "text": "Explore Bhimashankar Jyotirlinga, a revered Shiva temple surrounded by the natural beauty of the Sahyadri region, and learn about its traditional worship.",
+          "image": "assets/images/roots/donate-hero.jpg",
+          "imageAlt": "Green hills at sunrise",
+          "buttonText": "Explore Details",
+          "buttonLink": "contact"
+        },
+        {
+          "name": "Kashi Vishwanath Jyotirlinga",
+          "location": "Varanasi, Uttar Pradesh",
+          "text": "Discover Kashi Vishwanath Temple, one of the most prominent sacred shrines of Lord Shiva, and explore available darshan and puja information.",
+          "image": "assets/images/faith/respect-prayer.jpg",
+          "imageAlt": "Temples and ghats lit up at sunset on the river",
+          "buttonText": "Explore Details",
+          "buttonLink": "contact"
+        },
+        {
+          "name": "Trimbakeshwar Jyotirlinga",
+          "location": "Trimbak, Nashik district, Maharashtra",
+          "text": "Learn about Trimbakeshwar Jyotirlinga, a sacred Shiva temple near the origin of the Godavari River, and explore its traditional puja arrangements.",
+          "image": "assets/images/services/punya-snan/about.jpg",
+          "imageAlt": "A hand offering flowers on a leaf into the river",
+          "buttonText": "Explore Details",
+          "buttonLink": "contact"
+        },
+        {
+          "name": "Vaidyanath Jyotirlinga",
+          "location": "Deoghar, Jharkhand",
+          "text": "Discover Baba Baidyanath Dham, a revered pilgrimage destination dedicated to Lord Shiva, and explore the available darshan and worship information.",
+          "image": "assets/images/faith/heritage-aarti.jpg",
+          "imageAlt": "Hands holding a puja thali with a lit diya",
+          "buttonText": "Explore Details",
+          "buttonLink": "contact"
+        },
+        {
+          "name": "Nageshwar Jyotirlinga",
+          "location": "Near Dwarka, Gujarat",
+          "text": "Explore Nageshwar Jyotirlinga, a sacred Shiva shrine associated with devotion and protection, and learn about available temple worship arrangements.",
+          "image": "assets/images/services/puja-booking.jpg",
+          "imageAlt": "Brass diyas and bowls of flowers",
+          "buttonText": "Explore Details",
+          "buttonLink": "contact"
+        },
+        {
+          "name": "Rameshwaram Jyotirlinga",
+          "location": "Rameswaram, Tamil Nadu",
+          "text": "Discover Ramanathaswamy Temple, a significant pilgrimage site dedicated to Lord Shiva, known for its sacred traditions and ritual practices.",
+          "image": "assets/images/hero-devotee.jpg",
+          "imageAlt": "A devotee offering water at the river at sunrise",
+          "buttonText": "Explore Details",
+          "buttonLink": "contact"
+        },
+        {
+          "name": "Grishneshwar Jyotirlinga",
+          "location": "Verul, near Ellora, Maharashtra",
+          "text": "Explore Grishneshwar Jyotirlinga, one of the twelve traditionally recognised Jyotirlinga shrines, and learn about its darshan and puja information.",
+          "image": "assets/images/services/samagri-store.jpg",
+          "imageAlt": "Brass kalash, bowls and flowers arranged for a ritual",
+          "buttonText": "Explore Details",
+          "buttonLink": "contact"
+        }
+      ],
+      "placesNote": "",
+      "faqTitle": "Frequently Asked Questions",
+      "faqAccent": "(FAQs)",
+      "faqs": [
+        {
+          "q": "What are the twelve Jyotirlingas?",
+          "a": "The twelve Jyotirlingas are sacred shrines dedicated to Lord Shiva in Hindu tradition. They are located in different parts of India and are important destinations for Shiva devotees."
+        },
+        {
+          "q": "Can I book puja at all twelve Jyotirlingas through this service?",
+          "a": "Availability depends on the individual temple and confirmed arrangements. Puja booking is offered only where the service is available."
+        },
+        {
+          "q": "Can I participate in the puja online?",
+          "a": "Online or live participation depends on the arrangements available for the selected temple. Please check the specific seva details before booking."
+        },
+        {
+          "q": "What details are required for a puja booking?",
+          "a": "The required information may vary by temple and type of puja. You will be informed of the necessary details before confirming your booking."
+        },
+        {
+          "q": "Can I visit the temples in person?",
+          "a": "Yes. You can plan an in-person visit according to the temple's location, opening schedule, travel requirements, and official guidelines."
+        }
+      ],
+      "ctaTitle": "Begin Your Journey Through the Twelve Jyotirlingas",
+      "ctaText": "Explore the sacred temples of Lord Shiva and discover the darshan and puja arrangements available for your chosen Jyotirlinga.",
+      "ctaButton": "Explore Jyotirlingas",
+      "ctaLink": "#sd-places",
+      "ctaImage": "assets/images/faith/hero-family.jpg",
+      "seoTitle": "12 Jyotirlinga Darshan & Puja Seva | Hindu.International",
+      "seoDescription": "Explore the twelve Jyotirlingas of Lord Shiva and the darshan, puja and abhishek arrangements available at each temple.",
+      "bannerSlides": [
+        {
+          "label": "",
+          "title": "12 Jyotirlinga\nDarshan & Puja Seva",
+          "accent": "Darshan & Puja Seva",
+          "text": "Explore the sacred twelve Jyotirlingas of Lord Shiva and discover available darshan, puja, and abhishek arrangements.",
+          "buttonText": "Explore Jyotirlingas",
+          "buttonLink": "#sd-places"
+        }
+      ]
     }
   ]
 }

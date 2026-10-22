@@ -363,7 +363,8 @@
     var head = document.getElementById('sd-process-head');
     if (!head) return;
     head.textContent = '';
-    head.appendChild(heading('h2', str(p.title) || 'Our', p.title || p.titleAccent ? p.titleAccent : 'Process', 'sd-title'));
+    if (str(s.processTitle)) head.appendChild(heading('h2', str(s.processTitle), '', 'sd-title'));   // this service's own heading
+    else head.appendChild(heading('h2', str(p.title) || 'Our', p.title || p.titleAccent ? p.titleAccent : 'Process', 'sd-title'));
     var sub = str(s.processSubtitle) || str(p.subtitle);
     if (sub) head.appendChild(el('p', 'sd-sub', sub.replace(/\{service\}/g, str(s.title))));
 
@@ -490,8 +491,19 @@
       li.appendChild(media);
       var body = el('div', 'sd-place__body');
       body.appendChild(el('h3', null, str(p.name)));
-      if (str(p.location)) body.appendChild(el('p', 'sd-place__loc', str(p.location)));
+      if (str(p.location)) {
+        var loc = el('p', 'sd-place__loc');
+        if (isV2(s)) loc.appendChild(icon('pin'));
+        loc.appendChild(document.createTextNode(str(p.location)));
+        body.appendChild(loc);
+      }
       if (str(p.text)) body.appendChild(el('p', 'sd-place__text', str(p.text)));
+      if (str(p.buttonText)) {
+        var pb = el('a', 'sd-place__btn', str(p.buttonText));
+        pb.href = safeLink(p.buttonLink, 'contact');
+        if (/^https?:/i.test(pb.getAttribute('href'))) { pb.target = '_blank'; pb.rel = 'noopener'; }
+        body.appendChild(pb);
+      }
       li.appendChild(body);
       track.appendChild(li);
     });

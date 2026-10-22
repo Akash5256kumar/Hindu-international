@@ -429,6 +429,7 @@ return [
                     ['key' => 'showShloka', 'label' => 'Show the Sanskrit shloka', 'type' => 'toggle', 'default' => false],
                     ['key' => 'shloka', 'label' => 'Sanskrit shloka', 'type' => 'textarea', 'rows' => 3, 'max' => 600, 'help' => 'Press Enter between the lines.'],
 
+                    ['key' => 'processTitle', 'label' => 'Process — heading (this service only)', 'type' => 'text', 'max' => 80, 'help' => 'Empty = the shared heading (Our Process).'],
                     ['key' => 'processSubtitle', 'label' => 'Process — line under the heading (this service only)', 'type' => 'text', 'max' => 200, 'help' => 'Empty = the shared line set above.'],
                     ['key' => 'processSteps', 'label' => 'Process — steps for this service only', 'type' => 'list', 'min' => 0, 'max' => 4, 'itemLabel' => 'Step', 'titleField' => 'title', 'help' => 'Leave empty to show the shared four steps (edited under “How It Works”).', 'fields' => [
                         $serviceIconField,
@@ -457,7 +458,7 @@ return [
 
                     ['key' => 'whoTitle', 'label' => 'Who Can Use — heading', 'type' => 'text', 'max' => 60],
                     ['key' => 'whoAccent', 'label' => 'Who Can Use — orange part', 'type' => 'text', 'max' => 60, 'help' => $accentHelp],
-                    ['key' => 'whoIntro', 'label' => 'Who Can Use — intro line', 'type' => 'text', 'max' => 200],
+                    ['key' => 'whoIntro', 'label' => 'Who Can Use — intro text', 'type' => 'textarea', 'rows' => 3, 'max' => 500],
                     ['key' => 'whoList', 'label' => 'Who Can Use — list', 'type' => 'list', 'min' => 0, 'max' => 12, 'itemLabel' => 'Point', 'titleField' => 'text', 'fields' => [
                         ['key' => 'text', 'label' => 'Text', 'type' => 'text', 'max' => 200, 'required' => true],
                     ]],
@@ -465,7 +466,7 @@ return [
 
                     ['key' => 'showPlaces', 'label' => 'Show the scrolling cards section (places, festivals, pujas …)', 'type' => 'toggle', 'default' => false],
                     ['key' => 'placesTitle', 'label' => 'Scrolling cards — heading', 'type' => 'text', 'max' => 60, 'help' => 'e.g. Sacred Places or Major Indian Festivals.'],
-                    ['key' => 'placesSubtitle', 'label' => 'Scrolling cards — line under the heading', 'type' => 'text', 'max' => 120],
+                    ['key' => 'placesSubtitle', 'label' => 'Scrolling cards — line under the heading', 'type' => 'text', 'max' => 200],
                     ['key' => 'placesIntro', 'label' => 'Scrolling cards — intro text (optional)', 'type' => 'textarea', 'rows' => 3, 'max' => 500],
                     ['key' => 'places', 'label' => 'Scrolling cards', 'type' => 'list', 'min' => 0, 'max' => 20, 'itemLabel' => 'Card', 'titleField' => 'name', 'fields' => [
                         ['key' => 'name', 'label' => 'Name', 'type' => 'text', 'max' => 80, 'required' => true],
@@ -473,6 +474,8 @@ return [
                         ['key' => 'text', 'label' => 'Short description (optional)', 'type' => 'textarea', 'rows' => 3, 'max' => 300],
                         ['key' => 'image', 'label' => 'Photo', 'type' => 'image', 'help' => 'Landscape photo (about 3 : 2).'],
                         ['key' => 'imageAlt', 'label' => 'Photo description', 'type' => 'text', 'max' => 200],
+                        ['key' => 'buttonText', 'label' => 'Button text (optional)', 'type' => 'text', 'max' => 40, 'help' => 'e.g. Explore Details. Leave empty for no button.'],
+                        $link('buttonLink', 'Button link'),
                     ]],
                     ['key' => 'placesNote', 'label' => 'Scrolling cards — small note under the cards (optional)', 'type' => 'text', 'max' => 160],
 
