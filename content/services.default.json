@@ -2473,6 +2473,250 @@
           "buttonLink": "booking"
         }
       ]
+    },
+    {
+      "show": true,
+      "status": "published",
+      "design": "v2",
+      "slug": "jaap-path-anushthan",
+      "number": "15",
+      "icon": "bookopen",
+      "title": "Jaap & Path Anushthan",
+      "text": "Mahamrityunjay Jaap, Sundarkand Path, Durga Saptashati and more, with your sankalp and live video.",
+      "image": "assets/images/services/religious-awareness.jpg",
+      "imageAlt": "An open scripture with a rudraksha mala beside it",
+      "link": "booking",
+      "bannerTitle": "Jaap & Path\nAnushthan",
+      "bannerAccent": "Anushthan",
+      "bannerImage": "assets/images/ritual-aarti.jpg",
+      "bannerImageAlt": "A priest performing a ritual with lamps and offerings",
+      "aboutLabel": "",
+      "aboutTitle": "What Is Jaap & Path Anushthan?",
+      "aboutText1": "Jaap and Path Anushthan hold an important place in Hindu religious traditions. Devotees perform these practices to offer prayers, seek blessings, and strengthen their spiritual connection. From Mahamrityunjay Jaap and Sundarkand Path to Durga Saptashati and Hanuman Chalisa Path, different anushthans are performed according to religious customs and personal faith.",
+      "aboutText2": "Our Jaap & Path Anushthan service helps you explore and book available jaap and path options according to your requirements. The selected anushthan can be arranged with your name and sankalp details, where applicable. You can also participate through live video when the selected service supports it, allowing you to remain connected with the ritual from your home.",
+      "aboutImage": "assets/images/services/religious-awareness.jpg",
+      "aboutImageAlt": "An open scripture with a rudraksha mala beside it",
+      "showShloka": false,
+      "shloka": "",
+      "processSubtitle": "A simple way to arrange your Jaap or Path Anushthan.",
+      "processSteps": [
+        {
+          "icon": "calendar",
+          "title": "Choose Your Anushthan",
+          "text": "Explore the available jaap and path services and select the anushthan that suits your requirements."
+        },
+        {
+          "icon": "edit",
+          "title": "Share Your Sankalp Details",
+          "text": "Provide your name, gotra, purpose of the anushthan, and other required details to arrange the puja according to your needs."
+        },
+        {
+          "icon": "check",
+          "title": "Confirm Your Booking",
+          "text": "Review the selected anushthan, duration, available arrangements, and booking details before confirmation."
+        },
+        {
+          "icon": "people",
+          "title": "Attend the Anushthan Live",
+          "text": "Join the ritual through the provided live video arrangement, where available, and follow the anushthan according to the confirmed service."
+        }
+      ],
+      "receiveTitle": "What You",
+      "receiveAccent": "Receive",
+      "receiveSubtitle": "Complete Ritual Support for Your Spiritual Journey",
+      "receive": [
+        {
+          "icon": "lotus",
+          "title": "Traditional Jaap and Path",
+          "text": "The selected anushthan is arranged according to its relevant religious traditions and the service details.",
+          "image": "assets/images/services/punya-snan/receive-sankalp.jpg",
+          "imageAlt": "A priest holding a puja thali with a lit diya"
+        },
+        {
+          "icon": "bookopen",
+          "title": "Personal Sankalp Details",
+          "text": "Your name, gotra, and other required details can be included in the sankalp according to the selected ritual.",
+          "image": "assets/images/faith/heritage-aarti.jpg",
+          "imageAlt": "Hands holding a puja thali with a lit diya"
+        },
+        {
+          "icon": "video",
+          "title": "Live Video Participation",
+          "text": "Join the anushthan through the available live video arrangement and remain connected with the ritual remotely.",
+          "image": "assets/images/services/punya-snan/receive-video.jpg",
+          "imageAlt": "A camera recording a ritual"
+        },
+        {
+          "icon": "check",
+          "title": "Anushthan Completion Details",
+          "text": "Receive the completion information and any additional items or details included in your confirmed booking.",
+          "image": "assets/images/services/puja-booking.jpg",
+          "imageAlt": "Brass diyas and bowls of flowers"
+        }
+      ],
+      "whyTitle": "Why Choose Our Jaap & Path Anushthan Service?",
+      "whyAccent": "",
+      "why": [
+        {
+          "icon": "lotus",
+          "title": "A Range of Traditional Anushthans",
+          "text": "Explore different jaap, path, and devotional rituals through one service."
+        },
+        {
+          "icon": "people",
+          "title": "Sankalp According to Your Details",
+          "text": "Share the required personal details so the selected ritual can be arranged according to the applicable sankalp process."
+        },
+        {
+          "icon": "globe",
+          "title": "Convenient Online Participation",
+          "text": "Participate remotely through live video when the selected service offers this option."
+        },
+        {
+          "icon": "calendar",
+          "title": "Flexible Duration Options",
+          "text": "Explore available durations and jaap packages, such as 11-day or 21-day anushthans, where offered."
+        }
+      ],
+      "whoTitle": "Who Can Use",
+      "whoAccent": "This Service?",
+      "whoIntro": "The Jaap & Path Anushthan service may be suitable for:",
+      "whoList": [
+        {
+          "text": "Devotees wishing to arrange traditional jaap or path rituals."
+        },
+        {
+          "text": "Families seeking prayers for peace and well-being."
+        },
+        {
+          "text": "Individuals who want to observe religious practices during important personal or family occasions."
+        },
+        {
+          "text": "People who live away from their hometowns and prefer online participation."
+        },
+        {
+          "text": "Devotees looking for available multi-day jaap or path arrangements."
+        }
+      ],
+      "whoClosing": "Each anushthan has its own traditions and requirements. Explore the available services and select an arrangement that suits your needs and faith.",
+      "showPlaces": true,
+      "placesTitle": "Explore Our Jaap & Path Anushthans",
+      "placesSubtitle": "Discover traditional Hindu jaap and path rituals for different spiritual needs and occasions.",
+      "placesIntro": "",
+      "places": [
+        {
+          "name": "Mahamrityunjay Jaap",
+          "location": "",
+          "text": "Explore the available Mahamrityunjay Jaap arrangements and enquire about the anushthan according to your requirements.",
+          "image": "assets/images/services/havan-yagya.jpg",
+          "imageAlt": "Sacred fire of a havan"
+        },
+        {
+          "name": "Sundarkand Path",
+          "location": "",
+          "text": "Learn about the available Sundarkand Path arrangements and select an option according to your needs.",
+          "image": "assets/images/services/temple-darshan.jpg",
+          "imageAlt": "Temples with saffron flags"
+        },
+        {
+          "name": "Durga Saptashati Path",
+          "location": "",
+          "text": "Explore the available Durga Saptashati Path arrangements performed according to traditional practices.",
+          "image": "assets/images/services/puja-booking.jpg",
+          "imageAlt": "Brass diyas and bowls of flowers"
+        },
+        {
+          "name": "Hanuman Chalisa Path",
+          "location": "",
+          "text": "Discover the available Hanuman Chalisa Path arrangements and enquire about the selected anushthan.",
+          "image": "assets/images/services/religious-awareness.jpg",
+          "imageAlt": "An open scripture with a mala beside it"
+        },
+        {
+          "name": "Rudrabhishek",
+          "location": "",
+          "text": "Explore the available Rudrabhishek arrangements and review the details before booking.",
+          "image": "assets/images/offering-hands.jpg",
+          "imageAlt": "Hands offering flowers on a leaf over the holy river"
+        },
+        {
+          "name": "Vishnu Sahasranama Path",
+          "location": "",
+          "text": "Learn about the available Vishnu Sahasranama Path arrangements and select an option according to your needs.",
+          "image": "assets/images/flower-offerings.jpg",
+          "imageAlt": "A brass puja plate with flowers and offerings"
+        },
+        {
+          "name": "Bhagavad Gita Path",
+          "location": "",
+          "text": "Explore the available Bhagavad Gita Path arrangements and enquire about the anushthan.",
+          "image": "assets/images/services/pandit-booking.jpg",
+          "imageAlt": "A pandit reading a sacred text"
+        },
+        {
+          "name": "Gayatri Mantra Jaap",
+          "location": "",
+          "text": "Discover the available Gayatri Mantra Jaap arrangements performed according to traditional practices.",
+          "image": "assets/images/hero-devotee.jpg",
+          "imageAlt": "A devotee offering water to the rising sun at the river"
+        },
+        {
+          "name": "Navarna Mantra Jaap",
+          "location": "",
+          "text": "Explore the available Navarna Mantra Jaap arrangements and review the details before booking.",
+          "image": "assets/images/services/samagri-store.jpg",
+          "imageAlt": "Brass kalash, bowls and flowers arranged for a ritual"
+        },
+        {
+          "name": "Akhand Ramayan Path",
+          "location": "",
+          "text": "Learn about the available Akhand Ramayan Path arrangements and enquire about the selected anushthan.",
+          "image": "assets/images/services/punya-snan/receive-aarti.jpg",
+          "imageAlt": "A priest performing aarti with lamps"
+        }
+      ],
+      "placesNote": "",
+      "faqTitle": "Frequently Asked Questions",
+      "faqAccent": "(FAQs)",
+      "faqs": [
+        {
+          "q": "Which Jaap and Path Anushthans are available?",
+          "a": "Available options may include Mahamrityunjay Jaap, Sundarkand Path, Durga Saptashati Path, Hanuman Chalisa Path, Rudrabhishek, Vishnu Sahasranama Path, Bhagavad Gita Path, Gayatri Mantra Jaap, Navarna Mantra Jaap and Akhand Ramayan Path, depending on the services offered."
+        },
+        {
+          "q": "Can the anushthan be performed with my name and sankalp?",
+          "a": "Where the selected service supports it, your name, gotra and other required details can be included in the sankalp."
+        },
+        {
+          "q": "Can I watch the anushthan live?",
+          "a": "You can join through live video when the selected service offers this option. Please check the booking details before confirming."
+        },
+        {
+          "q": "Are 11-day and 21-day jaap packages available?",
+          "a": "Multi-day options such as 11-day or 21-day anushthans may be available for selected services. Please check the service details or enquire before booking."
+        },
+        {
+          "q": "Can I book an anushthan for a specific purpose or occasion?",
+          "a": "You can share the purpose or occasion of the anushthan as part of your sankalp details and select an anushthan that suits your requirements."
+        }
+      ],
+      "ctaTitle": "Begin Your Jaap & Path Anushthan",
+      "ctaText": "Explore traditional jaap and path rituals and arrange an anushthan according to your faith, sankalp, and spiritual requirements.",
+      "ctaButton": "Book Jaap & Path",
+      "ctaLink": "booking",
+      "ctaImage": "assets/images/flower-offerings.jpg",
+      "seoTitle": "Jaap & Path Anushthan | Hindu.International",
+      "seoDescription": "Book Mahamrityunjay Jaap, Sundarkand Path, Durga Saptashati, Hanuman Chalisa, Rudrabhishek and other anushthans with your sankalp, with live video where available.",
+      "bannerSlides": [
+        {
+          "label": "",
+          "title": "Jaap & Path\nAnushthan",
+          "accent": "Anushthan",
+          "text": "Mahamrityunjay Jaap, Sundarkand Path, Durga Saptashati, Hanuman Chalisa path, Rudrabhishek, sab aapke sankalp ke saath, live dikhaya jaaye.",
+          "buttonText": "Book Jaap & Path",
+          "buttonLink": "booking"
+        }
+      ]
     }
   ]
 }
