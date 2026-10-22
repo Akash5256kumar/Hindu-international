@@ -1900,8 +1900,8 @@
     },
     {
       "show": true,
-      "status": "draft",
-      "design": "standard",
+      "status": "published",
+      "design": "v2",
       "slug": "volunteer-community-service",
       "number": "12",
       "icon": "people",
@@ -1910,48 +1910,166 @@
       "image": "assets/images/services/volunteer.jpg",
       "imageAlt": "Volunteers joining hands together",
       "link": "contact",
-      "bannerTitle": "Volunteer & Community Service",
-      "bannerAccent": "",
-      "bannerImage": "",
-      "bannerImageAlt": "",
+      "bannerTitle": "Volunteer &\nCommunity Service",
+      "bannerAccent": "Community Service",
+      "bannerImage": "assets/images/faith/hero-family.jpg",
+      "bannerImageAlt": "A family looking at temples lit up at sunset",
       "aboutLabel": "",
-      "aboutTitle": "",
-      "aboutText1": "",
-      "aboutText2": "",
-      "aboutImage": "",
-      "aboutImageAlt": "",
+      "aboutTitle": "What Is Volunteer & Community Service?",
+      "aboutText1": "Volunteer and community service encourage people to work together, support those in need, and contribute to the well-being of their communities. Through volunteering, individuals can share their time, skills, and efforts to support social initiatives, community activities, and causes that matter to them. Even small contributions can help build stronger connections and encourage a spirit of cooperation.",
+      "aboutText2": "Our Volunteer & Community Service aims to help people explore available volunteering opportunities and community initiatives associated with our platform. You can review the available activities, understand their purpose, and follow the provided instructions to enquire about or participate in a suitable opportunity. It offers a convenient way to discover meaningful ways to contribute to the community.",
+      "aboutImage": "assets/images/services/volunteer.jpg",
+      "aboutImageAlt": "Volunteers joining hands together",
       "showShloka": false,
       "shloka": "",
-      "processSubtitle": "",
-      "processSteps": [],
-      "receiveTitle": "",
-      "receiveAccent": "",
-      "receiveSubtitle": "",
-      "receive": [],
-      "whyTitle": "",
+      "processSubtitle": "A simple way to explore volunteer opportunities and community initiatives.",
+      "processSteps": [
+        {
+          "icon": "eye",
+          "title": "Explore Opportunities",
+          "text": "Browse the available volunteering opportunities and community initiatives to understand the activities offered."
+        },
+        {
+          "icon": "check",
+          "title": "Choose an Activity",
+          "text": "Select an available opportunity that matches your interests, skills, and preferred way of contributing."
+        },
+        {
+          "icon": "bookopen",
+          "title": "Review the Details",
+          "text": "Read the available information about the activity, its purpose, participation requirements, and any instructions provided."
+        },
+        {
+          "icon": "people",
+          "title": "Connect and Participate",
+          "text": "Follow the available contact or participation instructions to enquire about the opportunity and understand the next steps."
+        }
+      ],
+      "receiveTitle": "What You",
+      "receiveAccent": "Receive",
+      "receiveSubtitle": "Meaningful Ways to Contribute to Your Community",
+      "receive": [
+        {
+          "icon": "hearthand",
+          "title": "Information About Opportunities",
+          "text": "Explore available volunteering activities and community initiatives to understand how you may be able to participate.",
+          "image": "assets/images/faith/vulnerable-education.jpg",
+          "imageAlt": "Children studying in a classroom"
+        },
+        {
+          "icon": "bookopen",
+          "title": "Clear Participation Details",
+          "text": "Review the available information about activities, requirements, and ways to get involved.",
+          "image": "assets/images/services/religious-awareness.jpg",
+          "imageAlt": "An open book with a mala beside it"
+        },
+        {
+          "icon": "sprout",
+          "title": "Opportunities to Make a Difference",
+          "text": "Discover initiatives where you may be able to contribute your time, skills, or efforts according to the available requirements.",
+          "image": "assets/images/offering-hands.jpg",
+          "imageAlt": "Hands holding flower offerings on a leaf"
+        },
+        {
+          "icon": "people",
+          "title": "Guidance for Next Steps",
+          "text": "Access the available contact and participation instructions to understand how to enquire about an opportunity.",
+          "image": "assets/images/event-gathering.jpg",
+          "imageAlt": "People gathered at a community celebration"
+        }
+      ],
+      "whyTitle": "Why Choose Our Volunteer & Community Service?",
       "whyAccent": "",
-      "why": [],
-      "whoTitle": "",
-      "whoAccent": "",
-      "whoIntro": "",
-      "whoList": [],
-      "whoClosing": "",
+      "why": [
+        {
+          "icon": "heart",
+          "title": "Discover Meaningful Activities",
+          "text": "Explore available opportunities that allow you to support community initiatives and causes that matter to you."
+        },
+        {
+          "icon": "skill",
+          "title": "Contribute According to Your Skills",
+          "text": "Find activities that may suit your interests, abilities, availability, and preferred way of helping."
+        },
+        {
+          "icon": "globe",
+          "title": "Convenient Access to Information",
+          "text": "Explore volunteering opportunities and community initiatives in one accessible place."
+        },
+        {
+          "icon": "people",
+          "title": "Encourage Community Connections",
+          "text": "Learn about opportunities to work with others, support local initiatives, and contribute to a stronger sense of community."
+        }
+      ],
+      "whoTitle": "Who Can Use",
+      "whoAccent": "This Service?",
+      "whoIntro": "The Volunteer & Community Service may be suitable for:",
+      "whoList": [
+        {
+          "text": "Individuals interested in supporting community initiatives."
+        },
+        {
+          "text": "Students looking to explore volunteering opportunities."
+        },
+        {
+          "text": "Working professionals who want to contribute their skills or time."
+        },
+        {
+          "text": "Families interested in participating in suitable community activities."
+        },
+        {
+          "text": "People who want to learn about social initiatives and ways to help others."
+        }
+      ],
+      "whoClosing": "Every activity may have different requirements, schedules, and participation options. Review the available details and choose an opportunity that suits your interests and availability.",
       "showPlaces": false,
       "placesTitle": "",
       "placesSubtitle": "",
       "placesIntro": "",
       "places": [],
       "placesNote": "",
-      "faqTitle": "",
-      "faqAccent": "",
-      "faqs": [],
-      "ctaTitle": "",
-      "ctaText": "",
-      "ctaButton": "",
-      "ctaLink": "",
-      "ctaImage": "",
-      "seoTitle": "",
-      "seoDescription": ""
+      "faqTitle": "Frequently Asked Questions",
+      "faqAccent": "(FAQs)",
+      "faqs": [
+        {
+          "q": "What is the Volunteer & Community Service?",
+          "a": "It helps visitors explore available volunteering opportunities and community initiatives and understand how they can participate."
+        },
+        {
+          "q": "What types of volunteer opportunities can I explore?",
+          "a": "Available opportunities depend on the activities listed on the website. Review the published details to understand what is offered."
+        },
+        {
+          "q": "Do I need previous volunteering experience?",
+          "a": "Requirements vary by activity. Check the details of the opportunity to understand whether previous experience or specific skills are needed."
+        },
+        {
+          "q": "Can students and working professionals participate?",
+          "a": "They can explore available opportunities and check the participation requirements, schedules, and other details before enquiring."
+        },
+        {
+          "q": "How can I join a community activity?",
+          "a": "Review the activity details and follow the contact or participation instructions provided for that opportunity."
+        }
+      ],
+      "ctaTitle": "Be Part of a Positive Change",
+      "ctaText": "Explore volunteer opportunities and community initiatives to discover meaningful ways to contribute your time, skills, and efforts.",
+      "ctaButton": "Explore Opportunities",
+      "ctaLink": "contact",
+      "ctaImage": "assets/images/faith/vulnerable-education.jpg",
+      "seoTitle": "Volunteer & Community Service | Hindu.International",
+      "seoDescription": "Explore volunteer opportunities and community initiatives and discover meaningful ways to contribute your time, skills and efforts.",
+      "bannerSlides": [
+        {
+          "label": "",
+          "title": "Volunteer &\nCommunity Service",
+          "accent": "Community Service",
+          "text": "Make a positive difference by exploring volunteer opportunities and supporting meaningful community initiatives.",
+          "buttonText": "Explore Opportunities",
+          "buttonLink": "contact"
+        }
+      ]
     },
     {
       "show": true,
