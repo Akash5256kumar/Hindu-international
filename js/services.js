@@ -150,14 +150,7 @@
       var card = el('article', 'svc-card');
       var media = el('div', 'svc-card__media');
       var img = image(s.image, s.imageAlt || s.title);
-      if (img) {
-        /* the whole photo is shown (never cropped); a soft blurred copy fills the rest of the box */
-        var blur = el('span', 'svc-card__blur');
-        blur.setAttribute('aria-hidden', 'true');
-        blur.style.backgroundImage = 'url("' + img.getAttribute('src') + '")';
-        media.appendChild(blur);
-        media.appendChild(img);
-      }
+      if (img) media.appendChild(img);
       card.appendChild(media);
 
       var body = el('div', 'svc-card__body');
