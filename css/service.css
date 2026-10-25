@@ -262,7 +262,7 @@
 .sd-v2 .sd-place__media { aspect-ratio: 4 / 3; }
 .sd-v2 .sd-place__body { padding: 14px 16px 18px; text-align: center; }
 .sd-v2 .sd-place__body h3 { font-family: var(--font-serif); font-weight: 700; font-size: 1.12rem; line-height: 1.3; }
-.sd-v2 #sd-places { scroll-margin-top: calc(var(--header-h) + 8px); }
+.sd-v2 #sd-places { scroll-margin-top: calc(var(--blessing-h) + var(--header-h) + 8px); }
 .sd-v2 .sd-place { display: flex; flex-direction: column; }
 .sd-v2 .sd-place__body { flex: 1; display: flex; flex-direction: column; align-items: center; }
 .sd-v2 .sd-place__loc { display: inline-flex; align-items: center; justify-content: center; text-align: center; gap: 4px; margin: 2px 0 0; font-size: .82rem; color: var(--saffron-deep); }

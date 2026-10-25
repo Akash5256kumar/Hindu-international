@@ -117,7 +117,7 @@
 }
 
 /* ---------- Pages of 6 cards: count on the left, Previous / Next on the right ---------- */
-.svc-grid { scroll-margin-top: calc(var(--header-h) + 16px); }
+.svc-grid { scroll-margin-top: calc(var(--blessing-h) + var(--header-h) + 16px); }
 .svc-pager {
   position: relative; z-index: 1;
   display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px;
