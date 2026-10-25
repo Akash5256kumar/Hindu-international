@@ -501,6 +501,7 @@
       if (str(p.buttonText)) {
         var pb = el('a', 'sd-place__btn', str(p.buttonText));
         pb.href = safeLink(p.buttonLink, 'contact');
+        pb.setAttribute('data-place', str(p.name));
         if (/^https?:/i.test(pb.getAttribute('href'))) { pb.target = '_blank'; pb.rel = 'noopener'; }
         body.appendChild(pb);
       }
@@ -651,6 +652,30 @@
       pair('sd-places-faq', placesBlock(s), faqBlock(s));
     }
     renderCta(s);
+    linkJyotirlingaPages();
+  }
+
+  /* A card button that still opens the contact form (the old default) opens the temple's own
+     page instead once that page exists: Admin → 12 Jyotirlinga pages, matched by the card name */
+  function linkJyotirlingaPages() {
+    var buttons = Array.prototype.filter.call(document.querySelectorAll('.sd-place__btn[data-place]'), function (a) {
+      return /^contact(#|$)/.test(a.getAttribute('href') || '');
+    });
+    if (!buttons.length) return;
+    var saved = ((window.SITE_CONTENT || {}).jyotirlingas || {}).items;
+    var get = Array.isArray(saved) ? Promise.resolve({ items: saved })
+      : window.fetch ? fetch('content/jyotirlinga.default.json', { cache: 'no-cache' }).then(function (r) { return r.ok ? r.json() : null; })
+      : Promise.resolve(null);
+    get.then(function (d) {
+      var pages = {};
+      list(d && d.items).forEach(function (j) {
+        if (j.show !== false && /^[a-z0-9-]+$/.test(str(j.slug)) && str(j.name)) pages[str(j.name).toLowerCase()] = str(j.slug);
+      });
+      buttons.forEach(function (a) {
+        var slug = pages[a.getAttribute('data-place').toLowerCase()];
+        if (slug) a.href = 'jyotirlinga?name=' + slug;
+      });
+    }, function () {});
   }
 
   /* Admin → Services → “Page design”: the newer layout, chosen per service */
