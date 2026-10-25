@@ -258,6 +258,32 @@
      renders immediately (no flash); the footer renders once the page is parsed. */
   injectSprite();
 
+  /* ---------- Content protection (public pages only; the admin panel does not load this file) ----------
+     Stops casual copying: right click, text selection, copy / cut, dragging images, the phone
+     long-press menu and the save / print / view-source / developer-tools shortcuts.
+     Form fields stay fully usable (typing, selecting, copy and paste). Search engines read the
+     page source directly, so this has no effect on SEO. */
+  (function protectContent() {
+    function inField(t) {
+      return !!(t && t.closest && t.closest('input, textarea, select, [contenteditable="true"]'));
+    }
+    function stop(e) { if (!inField(e.target)) e.preventDefault(); }
+    ['contextmenu', 'copy', 'cut', 'selectstart', 'dragstart'].forEach(function (type) {
+      document.addEventListener(type, stop);
+    });
+    document.addEventListener('keydown', function (e) {
+      var key = (e.key || '').toLowerCase();
+      var mod = e.ctrlKey || e.metaKey;
+      var block =
+        key === 'f12' ||
+        (mod && (e.shiftKey || e.altKey) && ['i', 'j', 'c', 'k'].indexOf(key) > -1) ||   // developer tools
+        (mod && ['s', 'u', 'p'].indexOf(key) > -1) ||                                    // save, view source, print
+        (mod && ['a', 'c', 'x'].indexOf(key) > -1 && !inField(e.target));               // select all, copy, cut
+      if (block) e.preventDefault();
+    });
+    document.documentElement.classList.add('is-protected');
+  })();
+
   /* Devanagari font for the blessing strip — only the letters it uses, so the file is tiny */
   var deva = document.createElement('link');
   deva.rel = 'stylesheet';
