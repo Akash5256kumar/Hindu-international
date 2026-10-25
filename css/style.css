@@ -34,7 +34,7 @@
   --shadow-lg: 0 18px 48px rgba(90, 48, 12, .14);
 
   --header-h: 92px;
-  --blessing-h: 93px;           /* Shri Ganesh strip above the header (space kept for it before JS draws it) */
+  --blessing-h: 77px;           /* Shri Ganesh strip above the header (space kept for it before JS draws it) */
   --container: 1200px;
   --gutter: 24px;
   --section-y: 96px;
@@ -246,7 +246,7 @@ h3 { font-size: 1.2rem; }
   -webkit-mask-image: linear-gradient(90deg, transparent, #000); mask-image: linear-gradient(90deg, transparent, #000);
 }
 .blessing__row::after { -webkit-mask-image: linear-gradient(90deg, #000, transparent); mask-image: linear-gradient(90deg, #000, transparent); }
-.blessing__ganesh { display: block; flex: none; width: auto; height: 56px; }
+.blessing__ganesh { display: block; flex: none; width: auto; height: 40px; }
 .blessing__mantra {
   margin: 0; display: flex; align-items: center; gap: 10px;
   font-family: 'Noto Serif Devanagari', 'Nirmala UI', 'Mangal', serif; font-size: 15px; font-weight: 600; line-height: 1.3;
