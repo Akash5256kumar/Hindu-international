@@ -19,10 +19,26 @@
       "sevaTitle": "Our Darshan & Puja Seva",
       "sevaText": "We help devotees connect with Somnath Jyotirlinga through trusted darshan and puja services.",
       "seva": [
-        { "icon": "temple", "title": "Darshan Assistance", "text": "Guidance and support for temple darshan." },
-        { "icon": "diya", "title": "Rudrabhishek Puja", "text": "Special puja arrangements as per your requirement." },
-        { "icon": "lotus", "title": "Special Sankalp Puja", "text": "For health, prosperity and family well-being." },
-        { "icon": "people", "title": "Personalized Seva", "text": "Assistance for individual and family puja bookings." }
+        {
+          "icon": "temple",
+          "title": "Darshan Assistance",
+          "text": "Guidance and support for temple darshan."
+        },
+        {
+          "icon": "diya",
+          "title": "Rudrabhishek Puja",
+          "text": "Special puja arrangements as per your requirement."
+        },
+        {
+          "icon": "lotus",
+          "title": "Special Sankalp Puja",
+          "text": "For health, prosperity and family well-being."
+        },
+        {
+          "icon": "people",
+          "title": "Personalized Seva",
+          "text": "Assistance for individual and family puja bookings."
+        }
       ],
       "sevaImage": "assets/images/jyotirlinga/somnath-seva.jpg",
       "sevaImageAlt": "Shivling decorated with flowers and lamps",
@@ -35,12 +51,30 @@
       "visitImageAlt": "Somnath Temple by the sea at sunset",
       "faqTitle": "Frequently Asked Questions",
       "faqs": [
-        { "q": "Where is Somnath Jyotirlinga located?", "a": "Somnath Jyotirlinga is in Prabhas Patan, near Veraval in the Gir Somnath district of Gujarat, on the shore of the Arabian Sea." },
-        { "q": "What is the significance of Somnath Jyotirlinga?", "a": "Somnath is revered as the first of the twelve Jyotirlingas. Devotees believe Lord Shiva appeared here as an endless pillar of light, and a darshan here is considered especially auspicious." },
-        { "q": "What puja services can be arranged?", "a": "We can help with darshan assistance, Rudrabhishek puja, special sankalp puja and personalized seva for individuals and families. The exact options depend on the temple’s rules and availability." },
-        { "q": "How can I plan a visit to Somnath temple?", "a": "The nearest railway station is Veraval and the nearest airport is Diu, and Somnath is well connected by road. Please check the temple timings before you travel, as they are set by the temple authority." },
-        { "q": "Is online puja or sankalp possible if I cannot visit in person?", "a": "Where the temple’s arrangements allow it, a puja or sankalp can be performed in your name. Send us an enquiry and we will tell you what is currently available." },
-        { "q": "How can I enquire about darshan and puja services?", "a": "Click “Enquire About Puja” on this page and send us your details. Our team will get back to you with the available options." }
+        {
+          "q": "Where is Somnath Jyotirlinga located?",
+          "a": "Somnath Jyotirlinga is in Prabhas Patan, near Veraval in the Gir Somnath district of Gujarat, on the shore of the Arabian Sea."
+        },
+        {
+          "q": "What is the significance of Somnath Jyotirlinga?",
+          "a": "Somnath is revered as the first of the twelve Jyotirlingas. Devotees believe Lord Shiva appeared here as an endless pillar of light, and a darshan here is considered especially auspicious."
+        },
+        {
+          "q": "What puja services can be arranged?",
+          "a": "We can help with darshan assistance, Rudrabhishek puja, special sankalp puja and personalized seva for individuals and families. The exact options depend on the temple’s rules and availability."
+        },
+        {
+          "q": "How can I plan a visit to Somnath temple?",
+          "a": "The nearest railway station is Veraval and the nearest airport is Diu, and Somnath is well connected by road. Please check the temple timings before you travel, as they are set by the temple authority."
+        },
+        {
+          "q": "Is online puja or sankalp possible if I cannot visit in person?",
+          "a": "Where the temple’s arrangements allow it, a puja or sankalp can be performed in your name. Send us an enquiry and we will tell you what is currently available."
+        },
+        {
+          "q": "How can I enquire about darshan and puja services?",
+          "a": "Click “Enquire About Puja” on this page and send us your details. Our team will get back to you with the available options."
+        }
       ],
       "ctaTitle": "Experience the Divine Blessings of",
       "ctaAccent": "Somnath Jyotirlinga",
@@ -50,6 +84,941 @@
       "ctaImage": "assets/images/jyotirlinga/somnath-cta.jpg",
       "seoTitle": "Somnath Jyotirlinga Darshan & Puja Seva | Hindu.International",
       "seoDescription": "Somnath Jyotirlinga in Prabhas Patan, Gujarat: about the temple, darshan and puja seva, temple timings, how to reach and FAQs. Enquire about puja with Hindu.International."
+    },
+    {
+      "show": true,
+      "slug": "mallikarjuna",
+      "name": "Mallikarjuna Jyotirlinga",
+      "heroTitle": "Mallikarjuna\nJyotirlinga",
+      "heroSubtitle": "The Sacred Shrine of Lord Mallikarjuna",
+      "heroText": "Discover the divine presence of Lord Mallikarjuna, one of the twelve Jyotirlingas, and explore darshan and puja services at Srisailam.",
+      "heroButton": "Enquire About Puja",
+      "heroLink": "contact",
+      "heroImage": "assets/images/jyotirlinga/mallikarjuna-hero.jpg",
+      "heroImageAlt": "Mallikarjuna Jyotirlinga temple",
+      "aboutTitle": "About Mallikarjuna Jyotirlinga",
+      "aboutText1": "Mallikarjuna Jyotirlinga is a revered shrine dedicated to Lord Shiva, located in Srisailam, Andhra Pradesh. Surrounded by the scenic Nallamala Hills, the temple is an important pilgrimage destination known for its peaceful atmosphere and rich religious traditions.",
+      "aboutText2": "The temple is traditionally associated with Lord Mallikarjuna and Goddess Bhramaramba. Devotees visit this sacred place to offer prayers, seek spiritual guidance and experience the significance of Shiva worship. Its location amid hills and forests adds to the spiritual character of the pilgrimage.",
+      "aboutImage": "assets/images/jyotirlinga/mallikarjuna-about.jpg",
+      "aboutImageAlt": "Mallikarjuna Jyotirlinga temple",
+      "sevaTitle": "Our Darshan & Puja Seva",
+      "sevaText": "We help devotees connect with Mallikarjuna Jyotirlinga through trusted darshan and puja services.",
+      "seva": [
+        {
+          "icon": "temple",
+          "title": "Darshan Assistance",
+          "text": "Guidance and support for temple darshan."
+        },
+        {
+          "icon": "diya",
+          "title": "Rudrabhishek Puja",
+          "text": "Special puja arrangements as per your requirement."
+        },
+        {
+          "icon": "lotus",
+          "title": "Special Sankalp Puja",
+          "text": "For health, prosperity and family well-being."
+        },
+        {
+          "icon": "people",
+          "title": "Personalized Seva",
+          "text": "Assistance for individual and family puja bookings."
+        }
+      ],
+      "sevaImage": "assets/images/jyotirlinga/somnath-seva.jpg",
+      "sevaImageAlt": "Shivling decorated with flowers and lamps",
+      "visitTitle": "Temple Visit Information",
+      "location": "Srisailam, Andhra Pradesh, India",
+      "timings": "6:00 AM - 9:00 PM",
+      "timingsNote": "(Subject to temple authority)",
+      "reach": "Nearest Railway Station: Markapur Road\nNearest Airport: Hyderabad Airport\nWell connected by road.",
+      "visitImage": "assets/images/jyotirlinga/mallikarjuna-visit.jpg",
+      "visitImageAlt": "Mallikarjuna Jyotirlinga temple",
+      "faqTitle": "Frequently Asked Questions",
+      "faqs": [
+        {
+          "q": "Where is Mallikarjuna Jyotirlinga located?",
+          "a": "Mallikarjuna Jyotirlinga is in Srisailam, Andhra Pradesh, India."
+        },
+        {
+          "q": "What is the significance of Mallikarjuna Jyotirlinga?",
+          "a": "The temple is traditionally associated with Lord Mallikarjuna and Goddess Bhramaramba. Devotees visit this sacred place to offer prayers, seek spiritual guidance and experience the significance of Shiva worship. Its location amid hills and forests adds to the spiritual character of the pilgrimage."
+        },
+        {
+          "q": "What puja services can be arranged?",
+          "a": "Yes. You can enquire about Rudrabhishek, sankalp puja and other seva at Mallikarjuna. Availability depends on the temple’s rules. Click “Enquire About Puja” on this page and send us your details. Our team will get back to you with the options currently available."
+        },
+        {
+          "q": "How can I plan a visit to Mallikarjuna temple?",
+          "a": "Nearest Railway Station: Markapur Road. Nearest Airport: Hyderabad Airport. Well connected by road. Please check the temple timings before you travel."
+        },
+        {
+          "q": "Is online puja or sankalp possible if I cannot visit in person?",
+          "a": "Where the temple’s arrangements allow it, a puja or sankalp can be performed in your name. Send us an enquiry and we will tell you what is currently available."
+        },
+        {
+          "q": "How can I enquire about darshan and puja services?",
+          "a": "Yes. You can enquire about Rudrabhishek, sankalp puja and other seva at Mallikarjuna. Availability depends on the temple’s rules. Click “Enquire About Puja” on this page and send us your details. Our team will get back to you with the options currently available."
+        }
+      ],
+      "ctaTitle": "Experience the Divine Presence of",
+      "ctaAccent": "Mallikarjuna Jyotirlinga",
+      "ctaText": "Let us assist you in your darshan and puja seva with complete care and devotion.",
+      "ctaButton": "Enquire About Puja",
+      "ctaLink": "contact",
+      "ctaImage": "assets/images/jyotirlinga/somnath-cta.jpg",
+      "seoTitle": "Mallikarjuna Jyotirlinga Darshan & Puja Seva | Hindu.International",
+      "seoDescription": "Mallikarjuna Jyotirlinga, Srisailam, Andhra Pradesh: about the temple, darshan and puja seva, temple timings, how to reach and FAQs. Enquire about puja with Hindu.International."
+    },
+    {
+      "show": true,
+      "slug": "mahakaleshwar",
+      "name": "Mahakaleshwar Jyotirlinga",
+      "heroTitle": "Mahakaleshwar\nJyotirlinga",
+      "heroSubtitle": "The Great Lord of Time",
+      "heroText": "Discover the divine presence of Mahakaleshwar, the Lord of Time, and explore darshan and puja services at Ujjain.",
+      "heroButton": "Enquire About Puja",
+      "heroLink": "contact",
+      "heroImage": "assets/images/jyotirlinga/mahakaleshwar-hero.jpg",
+      "heroImageAlt": "Mahakaleshwar Jyotirlinga temple",
+      "aboutTitle": "About Mahakaleshwar Jyotirlinga",
+      "aboutText1": "Mahakaleshwar Jyotirlinga is a famous shrine dedicated to Lord Shiva, located in Ujjain, Madhya Pradesh. The temple is one of the most revered Shiva pilgrimage destinations in India and is especially known for its traditional worship practices and distinctive spiritual atmosphere.",
+      "aboutText2": "The name Mahakaleshwar is associated with Lord Shiva as the Lord of Time. Devotees visit the temple to offer prayers and participate in its religious traditions. The temple’s Bhasma Aarti is particularly well known, and visitors should check the official temple website for current booking requirements and participation rules.",
+      "aboutImage": "assets/images/jyotirlinga/mahakaleshwar-about.jpg",
+      "aboutImageAlt": "Mahakaleshwar Jyotirlinga temple",
+      "sevaTitle": "Our Darshan & Puja Seva",
+      "sevaText": "We help devotees connect with Mahakaleshwar Jyotirlinga through trusted darshan and puja services.",
+      "seva": [
+        {
+          "icon": "temple",
+          "title": "Darshan Assistance",
+          "text": "Enquire about darshan information and available temple arrangements."
+        },
+        {
+          "icon": "diya",
+          "title": "Rudrabhishek Puja",
+          "text": "Ask about available Rudrabhishek arrangements and applicable requirements."
+        },
+        {
+          "icon": "lotus",
+          "title": "Special Sankalp Puja",
+          "text": "Enquire about sankalp-based worship options, subject to availability."
+        },
+        {
+          "icon": "people",
+          "title": "Personalized Seva",
+          "text": "Share your requirements to receive guidance about suitable available services."
+        }
+      ],
+      "sevaImage": "assets/images/jyotirlinga/somnath-seva.jpg",
+      "sevaImageAlt": "Shivling decorated with flowers and lamps",
+      "visitTitle": "Temple Visit Information",
+      "location": "Ujjain, Madhya Pradesh, India",
+      "timings": "Check the official temple website for current darshan timings and ritual schedules.",
+      "timingsNote": "",
+      "reach": "Ujjain is connected by rail and road. Visitors can plan onward travel from nearby major transport hubs.",
+      "visitImage": "assets/images/jyotirlinga/mahakaleshwar-visit.jpg",
+      "visitImageAlt": "Mahakaleshwar Jyotirlinga temple",
+      "faqTitle": "Frequently Asked Questions",
+      "faqs": [
+        {
+          "q": "Where is Mahakaleshwar Jyotirlinga located?",
+          "a": "Mahakaleshwar Jyotirlinga is in Ujjain, Madhya Pradesh, India."
+        },
+        {
+          "q": "Why is Mahakaleshwar Temple famous?",
+          "a": "The name Mahakaleshwar is associated with Lord Shiva as the Lord of Time. Devotees visit the temple to offer prayers and participate in its religious traditions. The temple’s Bhasma Aarti is particularly well known, and visitors should check the official temple website for current booking requirements and participation rules."
+        },
+        {
+          "q": "How can I check darshan timings?",
+          "a": "Check the official temple website for current darshan timings and ritual schedules. Timings can change on festivals and special days."
+        },
+        {
+          "q": "Can I enquire about Rudrabhishek Puja?",
+          "a": "Yes. You can enquire about Rudrabhishek, sankalp puja and other seva at Mahakaleshwar. Availability depends on the temple’s rules. Click “Enquire About Puja” on this page and send us your details. Our team will get back to you with the options currently available."
+        },
+        {
+          "q": "Does Bhasma Aarti require booking?",
+          "a": "Yes. Bhasma Aarti places are limited and usually need advance booking through the temple’s official system. Please check the official Mahakaleshwar temple website for the current rules."
+        },
+        {
+          "q": "Can I book puja directly through this website?",
+          "a": "No. This website does not confirm bookings. Submitting an enquiry only tells us what you need; our team then replies with the options that are available. A puja or darshan is arranged only after it is confirmed with you."
+        }
+      ],
+      "ctaTitle": "Experience the Sacred Tradition of",
+      "ctaAccent": "Mahakaleshwar Jyotirlinga",
+      "ctaText": "Explore temple information and enquire about available darshan and puja arrangements.",
+      "ctaButton": "Enquire About Puja",
+      "ctaLink": "contact",
+      "ctaImage": "assets/images/jyotirlinga/somnath-cta.jpg",
+      "seoTitle": "Mahakaleshwar Jyotirlinga Darshan & Puja Seva | Hindu.International",
+      "seoDescription": "Mahakaleshwar Jyotirlinga, Ujjain, Madhya Pradesh: about the temple, darshan and puja seva, temple timings, how to reach and FAQs. Enquire about puja with Hindu.International."
+    },
+    {
+      "show": true,
+      "slug": "omkareshwar",
+      "name": "Omkareshwar Jyotirlinga",
+      "heroTitle": "Omkareshwar\nJyotirlinga",
+      "heroSubtitle": "The Sacred Shrine on the Narmada",
+      "heroText": "Explore the divine presence of Lord Omkareshwar, one of the twelve Jyotirlingas, and enquire about darshan and puja services at this sacred temple.",
+      "heroButton": "Enquire About Puja",
+      "heroLink": "contact",
+      "heroImage": "assets/images/jyotirlinga/omkareshwar-hero.jpg",
+      "heroImageAlt": "Omkareshwar Jyotirlinga temple",
+      "aboutTitle": "About Omkareshwar Jyotirlinga",
+      "aboutText1": "Omkareshwar Jyotirlinga is a sacred shrine dedicated to Lord Shiva, situated on Mandhata Island in the Narmada River in Madhya Pradesh. The temple is an important pilgrimage destination and is known for its distinctive setting surrounded by the river and nearby hills.",
+      "aboutText2": "Omkareshwar holds an important place in Hindu religious tradition. Devotees visit to offer prayers to Lord Shiva and experience the spiritual atmosphere of the Narmada region. The temple and its surroundings are also associated with traditional pilgrimage practices, including visits to nearby sacred sites.",
+      "aboutImage": "assets/images/jyotirlinga/omkareshwar-about.jpg",
+      "aboutImageAlt": "Omkareshwar Jyotirlinga temple",
+      "sevaTitle": "Our Darshan & Puja Seva",
+      "sevaText": "We help devotees connect with Omkareshwar Jyotirlinga through trusted darshan and puja services.",
+      "seva": [
+        {
+          "icon": "temple",
+          "title": "Darshan Assistance",
+          "text": "Get guidance about temple darshan information and available arrangements."
+        },
+        {
+          "icon": "diya",
+          "title": "Rudrabhishek Puja",
+          "text": "Enquire about available Shiva abhishek arrangements."
+        },
+        {
+          "icon": "lotus",
+          "title": "Special Sankalp Puja",
+          "text": "Ask about personalised sankalp options and their requirements."
+        },
+        {
+          "icon": "people",
+          "title": "Personalized Seva",
+          "text": "Share your requirements to learn about suitable available services."
+        }
+      ],
+      "sevaImage": "assets/images/jyotirlinga/somnath-seva.jpg",
+      "sevaImageAlt": "Shivling decorated with flowers and lamps",
+      "visitTitle": "Temple Visit Information",
+      "location": "Mandhata Island, Omkareshwar, Madhya Pradesh, India",
+      "timings": "Check the official temple website for current darshan timings and ritual schedules.",
+      "timingsNote": "",
+      "reach": "Omkareshwar is accessible by road from nearby cities in Madhya Pradesh. Check current transport options before travelling.",
+      "visitImage": "assets/images/jyotirlinga/omkareshwar-visit.jpg",
+      "visitImageAlt": "Omkareshwar Jyotirlinga temple",
+      "faqTitle": "Frequently Asked Questions",
+      "faqs": [
+        {
+          "q": "Where is Omkareshwar Jyotirlinga located?",
+          "a": "Omkareshwar Jyotirlinga is in Mandhata Island, Omkareshwar, Madhya Pradesh, India."
+        },
+        {
+          "q": "Why is Omkareshwar considered sacred?",
+          "a": "Omkareshwar holds an important place in Hindu religious tradition. Devotees visit to offer prayers to Lord Shiva and experience the spiritual atmosphere of the Narmada region. The temple and its surroundings are also associated with traditional pilgrimage practices, including visits to nearby sacred sites."
+        },
+        {
+          "q": "What are the darshan timings?",
+          "a": "Check the official temple website for current darshan timings and ritual schedules. Timings can change on festivals and special days."
+        },
+        {
+          "q": "Can I enquire about Rudrabhishek Puja?",
+          "a": "Yes. You can enquire about Rudrabhishek, sankalp puja and other seva at Omkareshwar. Availability depends on the temple’s rules. Click “Enquire About Puja” on this page and send us your details. Our team will get back to you with the options currently available."
+        },
+        {
+          "q": "How can I reach Omkareshwar?",
+          "a": "Omkareshwar is accessible by road from nearby cities in Madhya Pradesh. Check current transport options before travelling."
+        },
+        {
+          "q": "Are online puja arrangements available?",
+          "a": "Where the temple’s arrangements allow it, a puja or sankalp can be performed in your name. Send us an enquiry and we will tell you what is currently available."
+        }
+      ],
+      "ctaTitle": "Explore the Sacred Abode of",
+      "ctaAccent": "Omkareshwar Jyotirlinga",
+      "ctaText": "Learn about this revered Jyotirlinga and enquire about available darshan and puja arrangements.",
+      "ctaButton": "Enquire About Puja",
+      "ctaLink": "contact",
+      "ctaImage": "assets/images/jyotirlinga/somnath-cta.jpg",
+      "seoTitle": "Omkareshwar Jyotirlinga Darshan & Puja Seva | Hindu.International",
+      "seoDescription": "Omkareshwar Jyotirlinga, Mandhata Island, Omkareshwar, Madhya Pradesh: about the temple, darshan and puja seva, temple timings, how to reach and FAQs. Enquire about puja with Hindu.International."
+    },
+    {
+      "show": true,
+      "slug": "kedarnath",
+      "name": "Kedarnath Jyotirlinga",
+      "heroTitle": "Kedarnath\nJyotirlinga",
+      "heroSubtitle": "The Sacred Himalayan Shrine of Lord Shiva",
+      "heroText": "Seek the divine blessings of Lord Kedarnath, one of the twelve Jyotirlingas, and explore darshan and puja services at this sacred temple.",
+      "heroButton": "Enquire About Puja",
+      "heroLink": "contact",
+      "heroImage": "assets/images/jyotirlinga/kedarnath-hero.jpg",
+      "heroImageAlt": "Kedarnath Jyotirlinga temple",
+      "aboutTitle": "About Kedarnath Jyotirlinga",
+      "aboutText1": "Kedarnath Jyotirlinga is a revered shrine dedicated to Lord Shiva, located in the Himalayan region of Uttarakhand. Surrounded by majestic snow-clad mountains, the temple is one of the most important pilgrimage destinations in India and is a part of the Char Dham Yatra.",
+      "aboutText2": "The temple is associated with deep spiritual significance and is believed to have been established by the Pandavas. Devotees from across the world visit Kedarnath to seek the blessings of Lord Shiva and experience the divine energy of this sacred place, which stands as a symbol of faith, strength and devotion.",
+      "aboutImage": "assets/images/jyotirlinga/kedarnath-about.jpg",
+      "aboutImageAlt": "Kedarnath Jyotirlinga temple",
+      "sevaTitle": "Our Darshan & Puja Seva",
+      "sevaText": "We help devotees connect with Kedarnath Jyotirlinga through trusted darshan and puja services.",
+      "seva": [
+        {
+          "icon": "temple",
+          "title": "Darshan Assistance",
+          "text": "Get guidance about darshan information and available arrangements."
+        },
+        {
+          "icon": "diya",
+          "title": "Shiva Puja Enquiry",
+          "text": "Enquire about available puja and abhishek arrangements."
+        },
+        {
+          "icon": "lotus",
+          "title": "Special Sankalp Puja",
+          "text": "Ask about personalised sankalp options and their requirements."
+        },
+        {
+          "icon": "people",
+          "title": "Personalized Seva",
+          "text": "Share your requirements to receive guidance about suitable available services."
+        }
+      ],
+      "sevaImage": "assets/images/jyotirlinga/somnath-seva.jpg",
+      "sevaImageAlt": "Shivling decorated with flowers and lamps",
+      "visitTitle": "Temple Visit Information",
+      "location": "Kedarnath, Rudraprayag District, Uttarakhand, India",
+      "timings": "The temple operates seasonally. Check the official announcements for current darshan timings.",
+      "timingsNote": "",
+      "reach": "Reach the designated base point by road and continue towards Kedarnath by trekking or authorised transport options.",
+      "visitImage": "assets/images/jyotirlinga/kedarnath-visit.jpg",
+      "visitImageAlt": "Kedarnath Jyotirlinga temple",
+      "faqTitle": "Frequently Asked Questions",
+      "faqs": [
+        {
+          "q": "Where is Kedarnath Jyotirlinga located?",
+          "a": "Kedarnath Jyotirlinga is in Kedarnath, Rudraprayag District, Uttarakhand, India."
+        },
+        {
+          "q": "Is Kedarnath open throughout the year?",
+          "a": "No. Kedarnath Temple opens for a few months each year, usually from around April–May until around October–November, and stays closed in winter. The exact dates are announced every year."
+        },
+        {
+          "q": "How can I check the temple opening date?",
+          "a": "The opening and closing dates are announced each year by the temple committee and the Uttarakhand government. Please check the official announcements before you plan your yatra."
+        },
+        {
+          "q": "Can I enquire about puja arrangements?",
+          "a": "Yes. You can enquire about Rudrabhishek, sankalp puja and other seva at Kedarnath. Availability depends on the temple’s rules. Click “Enquire About Puja” on this page and send us your details. Our team will get back to you with the options currently available."
+        },
+        {
+          "q": "Do I need to register for the Kedarnath Yatra?",
+          "a": "Yes. Pilgrims for the Kedarnath Yatra need to register with the Uttarakhand government before travelling. Please check the official registration website for the current rules."
+        },
+        {
+          "q": "Can I book puja directly through this website?",
+          "a": "No. This website does not confirm bookings. Submitting an enquiry only tells us what you need; our team then replies with the options that are available. A puja or darshan is arranged only after it is confirmed with you."
+        }
+      ],
+      "ctaTitle": "Experience the Divine Blessings of",
+      "ctaAccent": "Kedarnath Jyotirlinga",
+      "ctaText": "Let us assist you in your darshan and puja seva with complete care and devotion.",
+      "ctaButton": "Enquire About Puja",
+      "ctaLink": "contact",
+      "ctaImage": "assets/images/jyotirlinga/somnath-cta.jpg",
+      "seoTitle": "Kedarnath Jyotirlinga Darshan & Puja Seva | Hindu.International",
+      "seoDescription": "Kedarnath Jyotirlinga, Kedarnath, Rudraprayag District, Uttarakhand: about the temple, darshan and puja seva, temple timings, how to reach and FAQs. Enquire about puja with Hindu.International."
+    },
+    {
+      "show": true,
+      "slug": "bhimashankar",
+      "name": "Bhimashankar Jyotirlinga",
+      "heroTitle": "Bhimashankar\nJyotirlinga",
+      "heroSubtitle": "The Forest Shrine of Lord Shiva",
+      "heroText": "Discover the sacred Bhimashankar Jyotirlinga, nestled in the serene Sahyadri hills, and explore darshan and puja services at this divine temple.",
+      "heroButton": "Enquire About Puja",
+      "heroLink": "contact",
+      "heroImage": "assets/images/jyotirlinga/bhimashankar-hero.jpg",
+      "heroImageAlt": "Bhimashankar Jyotirlinga temple",
+      "aboutTitle": "About Bhimashankar Jyotirlinga",
+      "aboutText1": "Bhimashankar Jyotirlinga is a revered shrine dedicated to Lord Shiva, located in the Sahyadri region of Maharashtra. Surrounded by dense forests, hills and natural beauty, the temple is an important pilgrimage destination and is known for its peaceful and spiritual atmosphere.",
+      "aboutText2": "The temple is associated with the divine power of Lord Shiva and holds a significant place in Hindu religious tradition. Devotees visit Bhimashankar to offer prayers, seek blessings and experience the unique spiritual energy of this sacred place.",
+      "aboutImage": "assets/images/jyotirlinga/bhimashankar-about.jpg",
+      "aboutImageAlt": "Bhimashankar Jyotirlinga temple",
+      "sevaTitle": "Our Darshan & Puja Seva",
+      "sevaText": "We help devotees connect with Bhimashankar Jyotirlinga through trusted darshan and puja services.",
+      "seva": [
+        {
+          "icon": "temple",
+          "title": "Darshan Assistance",
+          "text": "Guidance and support for temple darshan and available arrangements."
+        },
+        {
+          "icon": "diya",
+          "title": "Rudrabhishek Puja",
+          "text": "Enquire about Rudrabhishek arrangements and applicable requirements."
+        },
+        {
+          "icon": "lotus",
+          "title": "Special Sankalp Puja",
+          "text": "Ask about personalised sankalp options and their requirements."
+        },
+        {
+          "icon": "people",
+          "title": "Personalized Seva",
+          "text": "Share your requirements to receive guidance about suitable available services."
+        }
+      ],
+      "sevaImage": "assets/images/jyotirlinga/somnath-seva.jpg",
+      "sevaImageAlt": "Shivling decorated with flowers and lamps",
+      "visitTitle": "Temple Visit Information",
+      "location": "Bhimashankar, Pune District, Maharashtra, India",
+      "timings": "Check the official temple website for current darshan timings and ritual schedules.",
+      "timingsNote": "",
+      "reach": "Bhimashankar is accessible by road from Pune and other nearby cities. Check current transport options before travelling.",
+      "visitImage": "assets/images/jyotirlinga/bhimashankar-visit.jpg",
+      "visitImageAlt": "Bhimashankar Jyotirlinga temple",
+      "faqTitle": "Frequently Asked Questions",
+      "faqs": [
+        {
+          "q": "Where is Bhimashankar Jyotirlinga located?",
+          "a": "Bhimashankar Jyotirlinga is in Bhimashankar, Pune District, Maharashtra, India."
+        },
+        {
+          "q": "What is the significance of Bhimashankar?",
+          "a": "The temple is associated with the divine power of Lord Shiva and holds a significant place in Hindu religious tradition. Devotees visit Bhimashankar to offer prayers, seek blessings and experience the unique spiritual energy of this sacred place."
+        },
+        {
+          "q": "How can I check the temple darshan timings?",
+          "a": "Check the official temple website for current darshan timings and ritual schedules. Timings can change on festivals and special days."
+        },
+        {
+          "q": "Can I enquire about Rudrabhishek Puja?",
+          "a": "Yes. You can enquire about Rudrabhishek, sankalp puja and other seva at Bhimashankar. Availability depends on the temple’s rules. Click “Enquire About Puja” on this page and send us your details. Our team will get back to you with the options currently available."
+        },
+        {
+          "q": "Is the temple accessible by road?",
+          "a": "Bhimashankar is accessible by road from Pune and other nearby cities. Check current transport options before travelling."
+        },
+        {
+          "q": "Can I book puja directly through this website?",
+          "a": "No. This website does not confirm bookings. Submitting an enquiry only tells us what you need; our team then replies with the options that are available. A puja or darshan is arranged only after it is confirmed with you."
+        }
+      ],
+      "ctaTitle": "Experience the Divine Presence of",
+      "ctaAccent": "Bhimashankar Jyotirlinga",
+      "ctaText": "Let us assist you in your darshan and puja seva with complete care and devotion.",
+      "ctaButton": "Enquire About Puja",
+      "ctaLink": "contact",
+      "ctaImage": "assets/images/jyotirlinga/somnath-cta.jpg",
+      "seoTitle": "Bhimashankar Jyotirlinga Darshan & Puja Seva | Hindu.International",
+      "seoDescription": "Bhimashankar Jyotirlinga, Bhimashankar, Pune District, Maharashtra: about the temple, darshan and puja seva, temple timings, how to reach and FAQs. Enquire about puja with Hindu.International."
+    },
+    {
+      "show": true,
+      "slug": "kashi-vishwanath",
+      "name": "Kashi Vishwanath Jyotirlinga",
+      "heroTitle": "Kashi Vishwanath\nJyotirlinga",
+      "heroSubtitle": "The Divine Light of Lord Shiva in Kashi",
+      "heroText": "Experience the spiritual essence of Kashi Vishwanath, one of the twelve Jyotirlingas, and enquire about darshan and puja services at this sacred temple.",
+      "heroButton": "Enquire About Puja",
+      "heroLink": "contact",
+      "heroImage": "assets/images/jyotirlinga/kashi-vishwanath-hero.jpg",
+      "heroImageAlt": "Kashi Vishwanath Jyotirlinga temple",
+      "aboutTitle": "About Kashi Vishwanath Jyotirlinga",
+      "aboutText1": "Kashi Vishwanath Temple is one of the most revered shrines dedicated to Lord Shiva, located in Varanasi, Uttar Pradesh, on the banks of the sacred River Ganga. The temple holds a special place in Hindu tradition and attracts devotees from across India and around the world.",
+      "aboutText2": "The name Vishwanath means the Lord of the Universe. Devotees visit this sacred shrine to offer prayers, participate in traditional worship and experience the spiritual atmosphere of Kashi. The ancient heritage of the city and its deep connection with the Ganga make a visit to this temple a truly divine experience.",
+      "aboutImage": "assets/images/jyotirlinga/kashi-vishwanath-about.jpg",
+      "aboutImageAlt": "Kashi Vishwanath Jyotirlinga temple",
+      "sevaTitle": "Our Darshan & Puja Seva",
+      "sevaText": "We help devotees connect with Kashi Vishwanath Jyotirlinga through trusted darshan and puja services.",
+      "seva": [
+        {
+          "icon": "temple",
+          "title": "Darshan Assistance",
+          "text": "Get guidance about darshan information and available arrangements."
+        },
+        {
+          "icon": "diya",
+          "title": "Shiva Puja Enquiry",
+          "text": "Enquire about available puja arrangements and requirements."
+        },
+        {
+          "icon": "lotus",
+          "title": "Special Sankalp Puja",
+          "text": "Ask about personalised sankalp options and their requirements."
+        },
+        {
+          "icon": "people",
+          "title": "Personalized Seva",
+          "text": "Share your requirements to receive guidance about suitable available services."
+        }
+      ],
+      "sevaImage": "assets/images/jyotirlinga/somnath-seva.jpg",
+      "sevaImageAlt": "Shivling decorated with flowers and lamps",
+      "visitTitle": "Temple Visit Information",
+      "location": "Varanasi, Uttar Pradesh, India",
+      "timings": "Check the official temple website for current darshan timings and special booking information.",
+      "timingsNote": "",
+      "reach": "Varanasi is well connected by air, rail and road. Local transport can be used to reach the temple area, subject to current traffic and access rules.",
+      "visitImage": "assets/images/jyotirlinga/kashi-vishwanath-visit.jpg",
+      "visitImageAlt": "Kashi Vishwanath Jyotirlinga temple",
+      "faqTitle": "Frequently Asked Questions",
+      "faqs": [
+        {
+          "q": "Where is Kashi Vishwanath Temple located?",
+          "a": "Kashi Vishwanath Jyotirlinga is in Varanasi, Uttar Pradesh, India."
+        },
+        {
+          "q": "What is the significance of Kashi Vishwanath?",
+          "a": "The name Vishwanath means the Lord of the Universe. Devotees visit this sacred shrine to offer prayers, participate in traditional worship and experience the spiritual atmosphere of Kashi. The ancient heritage of the city and its deep connection with the Ganga make a visit to this temple a truly divine experience."
+        },
+        {
+          "q": "How can I check darshan timings?",
+          "a": "Check the official temple website for current darshan timings and special booking information. Timings can change on festivals and special days."
+        },
+        {
+          "q": "Can I enquire about puja arrangements?",
+          "a": "Yes. You can enquire about Rudrabhishek, sankalp puja and other seva at Kashi Vishwanath. Availability depends on the temple’s rules. Click “Enquire About Puja” on this page and send us your details. Our team will get back to you with the options currently available."
+        },
+        {
+          "q": "Are special darshan or aarti bookings available?",
+          "a": "The temple trust offers some special darshan and aarti options. Please check the official temple website, or send us an enquiry and we will tell you what we can help with."
+        },
+        {
+          "q": "Does submitting an enquiry confirm a booking?",
+          "a": "No. This website does not confirm bookings. Submitting an enquiry only tells us what you need; our team then replies with the options that are available. A puja or darshan is arranged only after it is confirmed with you."
+        }
+      ],
+      "ctaTitle": "Experience the Divine Blessings of",
+      "ctaAccent": "Kashi Vishwanath Jyotirlinga",
+      "ctaText": "Let us assist you in your darshan and puja seva with complete care and devotion.",
+      "ctaButton": "Enquire About Puja",
+      "ctaLink": "contact",
+      "ctaImage": "assets/images/jyotirlinga/somnath-cta.jpg",
+      "seoTitle": "Kashi Vishwanath Jyotirlinga Darshan & Puja Seva | Hindu.International",
+      "seoDescription": "Kashi Vishwanath Jyotirlinga, Varanasi, Uttar Pradesh: about the temple, darshan and puja seva, temple timings, how to reach and FAQs. Enquire about puja with Hindu.International."
+    },
+    {
+      "show": true,
+      "slug": "trimbakeshwar",
+      "name": "Trimbakeshwar Jyotirlinga",
+      "heroTitle": "Trimbakeshwar\nJyotirlinga",
+      "heroSubtitle": "The Sacred Shrine Near the Godavari",
+      "heroText": "Discover the spiritual essence of Trimbakeshwar, one of the twelve Jyotirlingas, and enquire about darshan and puja services at this sacred temple.",
+      "heroButton": "Enquire About Puja",
+      "heroLink": "contact",
+      "heroImage": "assets/images/jyotirlinga/trimbakeshwar-hero.jpg",
+      "heroImageAlt": "Trimbakeshwar Jyotirlinga temple",
+      "aboutTitle": "About Trimbakeshwar Jyotirlinga",
+      "aboutText1": "Trimbakeshwar Jyotirlinga is a revered shrine dedicated to Lord Shiva, located in Trimbak near Nashik, Maharashtra. The temple is situated near the Brahmagiri Hills and holds a special place in Hindu tradition as one of the twelve Jyotirlingas. It is also closely associated with the origin of the sacred Godavari River.",
+      "aboutText2": "The temple is known for its unique Shiva lingam and its deep spiritual significance. Devotees visit Trimbakeshwar to offer prayers, seek divine blessings and experience the peaceful atmosphere of this sacred place. The region is also known for its natural beauty and nearby pilgrimage sites.",
+      "aboutImage": "assets/images/jyotirlinga/trimbakeshwar-about.jpg",
+      "aboutImageAlt": "Trimbakeshwar Jyotirlinga temple",
+      "sevaTitle": "Our Darshan & Puja Seva",
+      "sevaText": "We help devotees connect with Trimbakeshwar Jyotirlinga through trusted darshan and puja services.",
+      "seva": [
+        {
+          "icon": "temple",
+          "title": "Darshan Assistance",
+          "text": "Get guidance about darshan information and available arrangements."
+        },
+        {
+          "icon": "diya",
+          "title": "Shiva Puja Enquiry",
+          "text": "Enquire about available puja and abhishek arrangements."
+        },
+        {
+          "icon": "lotus",
+          "title": "Special Sankalp Puja",
+          "text": "Ask about personalised sankalp options and their requirements."
+        },
+        {
+          "icon": "people",
+          "title": "Personalized Seva",
+          "text": "Share your requirements to receive guidance about suitable available services."
+        }
+      ],
+      "sevaImage": "assets/images/jyotirlinga/somnath-seva.jpg",
+      "sevaImageAlt": "Shivling decorated with flowers and lamps",
+      "visitTitle": "Temple Visit Information",
+      "location": "Trimbak, near Nashik, Maharashtra, India",
+      "timings": "Check the official temple website for current darshan timings and ritual schedules.",
+      "timingsNote": "",
+      "reach": "Trimbakeshwar is accessible by road from Nashik and other nearby cities. Check current transport options before travelling.",
+      "visitImage": "assets/images/jyotirlinga/trimbakeshwar-visit.jpg",
+      "visitImageAlt": "Trimbakeshwar Jyotirlinga temple",
+      "faqTitle": "Frequently Asked Questions",
+      "faqs": [
+        {
+          "q": "Where is Trimbakeshwar Jyotirlinga located?",
+          "a": "Trimbakeshwar Jyotirlinga is in Trimbak, near Nashik, Maharashtra, India."
+        },
+        {
+          "q": "Why is Trimbakeshwar considered sacred?",
+          "a": "The temple is known for its unique Shiva lingam and its deep spiritual significance. Devotees visit Trimbakeshwar to offer prayers, seek divine blessings and experience the peaceful atmosphere of this sacred place. The region is also known for its natural beauty and nearby pilgrimage sites."
+        },
+        {
+          "q": "What are the darshan timings?",
+          "a": "Check the official temple website for current darshan timings and ritual schedules. Timings can change on festivals and special days."
+        },
+        {
+          "q": "Can I enquire about puja arrangements?",
+          "a": "Yes. You can enquire about Rudrabhishek, sankalp puja and other seva at Trimbakeshwar. Availability depends on the temple’s rules. Click “Enquire About Puja” on this page and send us your details. Our team will get back to you with the options currently available."
+        },
+        {
+          "q": "Are special religious rituals available?",
+          "a": "Yes. You can enquire about Rudrabhishek, sankalp puja and other seva at Trimbakeshwar. Availability depends on the temple’s rules. Click “Enquire About Puja” on this page and send us your details. Our team will get back to you with the options currently available."
+        },
+        {
+          "q": "Can this website confirm every puja?",
+          "a": "No. This website does not confirm bookings. Submitting an enquiry only tells us what you need; our team then replies with the options that are available. A puja or darshan is arranged only after it is confirmed with you."
+        }
+      ],
+      "ctaTitle": "Experience the Divine Blessings of",
+      "ctaAccent": "Trimbakeshwar Jyotirlinga",
+      "ctaText": "Let us assist you in your darshan and puja seva with complete care and devotion.",
+      "ctaButton": "Enquire About Puja",
+      "ctaLink": "contact",
+      "ctaImage": "assets/images/jyotirlinga/somnath-cta.jpg",
+      "seoTitle": "Trimbakeshwar Jyotirlinga Darshan & Puja Seva | Hindu.International",
+      "seoDescription": "Trimbakeshwar Jyotirlinga, Trimbak, near Nashik, Maharashtra: about the temple, darshan and puja seva, temple timings, how to reach and FAQs. Enquire about puja with Hindu.International."
+    },
+    {
+      "show": true,
+      "slug": "vaidyanath",
+      "name": "Vaidyanath Jyotirlinga",
+      "heroTitle": "Vaidyanath\nJyotirlinga",
+      "heroSubtitle": "The Divine Healer of Lord Shiva",
+      "heroText": "Seek the blessings of Lord Vaidyanath, one of the twelve Jyotirlingas, and experience divine healing, protection and spiritual well-being at this sacred temple.",
+      "heroButton": "Enquire About Puja",
+      "heroLink": "contact",
+      "heroImage": "assets/images/jyotirlinga/vaidyanath-hero.jpg",
+      "heroImageAlt": "Vaidyanath Jyotirlinga temple",
+      "aboutTitle": "About Vaidyanath Jyotirlinga",
+      "aboutText1": "Vaidyanath Jyotirlinga, also known as Baidyanath Dham, is a revered shrine dedicated to Lord Shiva, located in Deoghar, Jharkhand. It is one of the twelve Jyotirlingas and holds great significance in Hindu tradition. Lord Shiva is worshipped here as the Divine Healer (Vaidya), who removes suffering, cures ailments and blesses devotees with good health and long life.",
+      "aboutText2": "The temple is associated with many ancient legends, including the story of Ravana, who worshipped Lord Shiva here. Devotees from across India visit Vaidyanath Dham to seek blessings for health, well-being and spiritual strength. The sacred atmosphere and deep-rooted traditions make it a major pilgrimage destination.",
+      "aboutImage": "assets/images/jyotirlinga/vaidyanath-about.jpg",
+      "aboutImageAlt": "Vaidyanath Jyotirlinga temple",
+      "sevaTitle": "Our Darshan & Puja Seva",
+      "sevaText": "We help devotees connect with Vaidyanath Jyotirlinga through trusted darshan and puja services.",
+      "seva": [
+        {
+          "icon": "temple",
+          "title": "Darshan Assistance",
+          "text": "Get guidance about darshan information and available arrangements."
+        },
+        {
+          "icon": "diya",
+          "title": "Rudrabhishek Puja",
+          "text": "Enquire about available puja and abhishek arrangements."
+        },
+        {
+          "icon": "lotus",
+          "title": "Special Sankalp Puja",
+          "text": "Ask about personalised sankalp options and their requirements."
+        },
+        {
+          "icon": "people",
+          "title": "Personalized Seva",
+          "text": "Share your requirements to receive guidance about suitable available services."
+        }
+      ],
+      "sevaImage": "assets/images/jyotirlinga/somnath-seva.jpg",
+      "sevaImageAlt": "Shivling decorated with flowers and lamps",
+      "visitTitle": "Temple Visit Information",
+      "location": "Deoghar, Jharkhand, India",
+      "timings": "4:00 AM - 9:00 PM",
+      "timingsNote": "(Subject to temple authority)",
+      "reach": "Nearest Railway Station: Deoghar\nNearest Airport: Deoghar Airport\nWell connected by road.",
+      "visitImage": "assets/images/jyotirlinga/vaidyanath-visit.jpg",
+      "visitImageAlt": "Vaidyanath Jyotirlinga temple",
+      "faqTitle": "Frequently Asked Questions",
+      "faqs": [
+        {
+          "q": "Where is Vaidyanath Jyotirlinga located?",
+          "a": "Vaidyanath Jyotirlinga is in Deoghar, Jharkhand, India."
+        },
+        {
+          "q": "What is the significance of Vaidyanath Jyotirlinga?",
+          "a": "The temple is associated with many ancient legends, including the story of Ravana, who worshipped Lord Shiva here. Devotees from across India visit Vaidyanath Dham to seek blessings for health, well-being and spiritual strength. The sacred atmosphere and deep-rooted traditions make it a major pilgrimage destination."
+        },
+        {
+          "q": "What are the darshan timings?",
+          "a": "The usual timings are 4:00 AM - 9:00 PM (subject to temple authority). Timings can change on festivals and special days, so please confirm before you visit."
+        },
+        {
+          "q": "Can I enquire about puja arrangements?",
+          "a": "Yes. You can enquire about Rudrabhishek, sankalp puja and other seva at Vaidyanath. Availability depends on the temple’s rules. Click “Enquire About Puja” on this page and send us your details. Our team will get back to you with the options currently available."
+        },
+        {
+          "q": "Is online puja booking available?",
+          "a": "Where the temple’s arrangements allow it, a puja or sankalp can be performed in your name. Send us an enquiry and we will tell you what is currently available."
+        },
+        {
+          "q": "How can I reach Vaidyanath Dham?",
+          "a": "Nearest Railway Station: Deoghar. Nearest Airport: Deoghar Airport. Well connected by road. Please check the temple timings before you travel."
+        }
+      ],
+      "ctaTitle": "Experience the Divine Blessings of",
+      "ctaAccent": "Vaidyanath Jyotirlinga",
+      "ctaText": "Let us assist you in your darshan and puja seva with complete care and devotion.",
+      "ctaButton": "Enquire About Puja",
+      "ctaLink": "contact",
+      "ctaImage": "assets/images/jyotirlinga/somnath-cta.jpg",
+      "seoTitle": "Vaidyanath Jyotirlinga Darshan & Puja Seva | Hindu.International",
+      "seoDescription": "Vaidyanath Jyotirlinga, Deoghar, Jharkhand: about the temple, darshan and puja seva, temple timings, how to reach and FAQs. Enquire about puja with Hindu.International."
+    },
+    {
+      "show": true,
+      "slug": "nageshwar",
+      "name": "Nageshwar Jyotirlinga",
+      "heroTitle": "Nageshwar\nJyotirlinga",
+      "heroSubtitle": "The Serpent Lord’s Abode of Lord Shiva",
+      "heroText": "Seek the divine blessings of Lord Nageshwar, one of the twelve Jyotirlingas, and experience protection, peace and spiritual strength at this sacred temple.",
+      "heroButton": "Enquire About Puja",
+      "heroLink": "contact",
+      "heroImage": "assets/images/jyotirlinga/nageshwar-hero.jpg",
+      "heroImageAlt": "Nageshwar Jyotirlinga temple",
+      "aboutTitle": "About Nageshwar Jyotirlinga",
+      "aboutText1": "Nageshwar Jyotirlinga is a revered shrine dedicated to Lord Shiva, located in Dwarka, Gujarat. It is one of the twelve Jyotirlingas and holds great importance in Hindu tradition. The temple is known for its majestic Shiva idol and peaceful surroundings, making it a significant pilgrimage destination for devotees from across India and the world.",
+      "aboutText2": "The name Nageshwar is associated with the serpent (Naga), symbolising protection and the removal of fear. Devotees visit this temple to seek the blessings of Lord Shiva for safety, good health, spiritual growth and freedom from negative energies. The divine atmosphere and ancient legends make Nageshwar Jyotirlinga a must-visit sacred place.",
+      "aboutImage": "assets/images/jyotirlinga/nageshwar-about.jpg",
+      "aboutImageAlt": "Nageshwar Jyotirlinga temple",
+      "sevaTitle": "Our Darshan & Puja Seva",
+      "sevaText": "We help devotees connect with Nageshwar Jyotirlinga through trusted darshan and puja services.",
+      "seva": [
+        {
+          "icon": "temple",
+          "title": "Darshan Assistance",
+          "text": "Get guidance about darshan information and available arrangements."
+        },
+        {
+          "icon": "diya",
+          "title": "Rudrabhishek Puja",
+          "text": "Enquire about available puja and abhishek arrangements."
+        },
+        {
+          "icon": "lotus",
+          "title": "Special Sankalp Puja",
+          "text": "Ask about personalised sankalp options and their requirements."
+        },
+        {
+          "icon": "people",
+          "title": "Personalized Seva",
+          "text": "Share your requirements to receive guidance about suitable available services."
+        }
+      ],
+      "sevaImage": "assets/images/jyotirlinga/somnath-seva.jpg",
+      "sevaImageAlt": "Shivling decorated with flowers and lamps",
+      "visitTitle": "Temple Visit Information",
+      "location": "Dwarka, Gujarat, India",
+      "timings": "6:00 AM - 9:00 PM",
+      "timingsNote": "(Subject to temple authority)",
+      "reach": "Nearest Railway Station: Dwarka\nNearest Airport: Jamnagar Airport\nWell connected by road.",
+      "visitImage": "assets/images/jyotirlinga/nageshwar-visit.jpg",
+      "visitImageAlt": "Nageshwar Jyotirlinga temple",
+      "faqTitle": "Frequently Asked Questions",
+      "faqs": [
+        {
+          "q": "Where is Nageshwar Jyotirlinga located?",
+          "a": "Nageshwar Jyotirlinga is in Dwarka, Gujarat, India."
+        },
+        {
+          "q": "What is the significance of Nageshwar Jyotirlinga?",
+          "a": "The name Nageshwar is associated with the serpent (Naga), symbolising protection and the removal of fear. Devotees visit this temple to seek the blessings of Lord Shiva for safety, good health, spiritual growth and freedom from negative energies. The divine atmosphere and ancient legends make Nageshwar Jyotirlinga a must-visit sacred place."
+        },
+        {
+          "q": "What are the darshan timings?",
+          "a": "The usual timings are 6:00 AM - 9:00 PM (subject to temple authority). Timings can change on festivals and special days, so please confirm before you visit."
+        },
+        {
+          "q": "Can I enquire about puja arrangements?",
+          "a": "Yes. You can enquire about Rudrabhishek, sankalp puja and other seva at Nageshwar. Availability depends on the temple’s rules. Click “Enquire About Puja” on this page and send us your details. Our team will get back to you with the options currently available."
+        },
+        {
+          "q": "Is online puja booking available?",
+          "a": "Where the temple’s arrangements allow it, a puja or sankalp can be performed in your name. Send us an enquiry and we will tell you what is currently available."
+        },
+        {
+          "q": "How can I reach Nageshwar Jyotirlinga?",
+          "a": "Nearest Railway Station: Dwarka. Nearest Airport: Jamnagar Airport. Well connected by road. Please check the temple timings before you travel."
+        }
+      ],
+      "ctaTitle": "Experience the Divine Blessings of",
+      "ctaAccent": "Nageshwar Jyotirlinga",
+      "ctaText": "Let us assist you in your darshan and puja seva with complete care and devotion.",
+      "ctaButton": "Enquire About Puja",
+      "ctaLink": "contact",
+      "ctaImage": "assets/images/jyotirlinga/somnath-cta.jpg",
+      "seoTitle": "Nageshwar Jyotirlinga Darshan & Puja Seva | Hindu.International",
+      "seoDescription": "Nageshwar Jyotirlinga, Dwarka, Gujarat: about the temple, darshan and puja seva, temple timings, how to reach and FAQs. Enquire about puja with Hindu.International."
+    },
+    {
+      "show": true,
+      "slug": "rameshwaram",
+      "name": "Rameshwaram Jyotirlinga",
+      "heroTitle": "Rameshwaram\nJyotirlinga",
+      "heroSubtitle": "The Sacred Abode of Ramanathaswamy",
+      "heroText": "Explore the divine Rameshwaram Jyotirlinga, one of the twelve Jyotirlingas, and experience the spiritual connection of Lord Shiva and Lord Rama at this sacred temple.",
+      "heroButton": "Enquire About Puja",
+      "heroLink": "contact",
+      "heroImage": "assets/images/jyotirlinga/rameshwaram-hero.jpg",
+      "heroImageAlt": "Rameshwaram Jyotirlinga temple",
+      "aboutTitle": "About Rameshwaram Jyotirlinga",
+      "aboutText1": "Rameshwaram Jyotirlinga is a revered shrine dedicated to Lord Shiva, located in Rameshwaram, Tamil Nadu. It is one of the twelve Jyotirlingas and holds great religious significance in Hindu tradition. The temple is associated with Lord Rama, who is believed to have worshipped Lord Shiva here before crossing the sea to Lanka.",
+      "aboutText2": "The Ramanathaswamy Temple is famous for its magnificent Dravidian architecture, longest temple corridor in India and 22 sacred wells (theerthams) within the temple premises. Devotees visit Rameshwaram to seek blessings, perform rituals and experience the deep spiritual energy of this holy place.",
+      "aboutImage": "assets/images/jyotirlinga/rameshwaram-about.jpg",
+      "aboutImageAlt": "Rameshwaram Jyotirlinga temple",
+      "sevaTitle": "Our Darshan & Puja Seva",
+      "sevaText": "We help devotees connect with Rameshwaram Jyotirlinga through trusted darshan and puja services.",
+      "seva": [
+        {
+          "icon": "temple",
+          "title": "Darshan Assistance",
+          "text": "Get guidance about darshan information and available arrangements."
+        },
+        {
+          "icon": "diya",
+          "title": "Rudrabhishek Puja",
+          "text": "Enquire about available puja and abhishek arrangements."
+        },
+        {
+          "icon": "lotus",
+          "title": "Special Sankalp Puja",
+          "text": "Ask about personalised sankalp options and their requirements."
+        },
+        {
+          "icon": "people",
+          "title": "Personalized Seva",
+          "text": "Share your requirements to receive guidance about suitable available services."
+        }
+      ],
+      "sevaImage": "assets/images/jyotirlinga/somnath-seva.jpg",
+      "sevaImageAlt": "Shivling decorated with flowers and lamps",
+      "visitTitle": "Temple Visit Information",
+      "location": "Rameshwaram, Tamil Nadu, India",
+      "timings": "5:00 AM - 1:00 PM\n3:00 PM - 9:00 PM",
+      "timingsNote": "(Subject to temple authority)",
+      "reach": "Nearest Railway Station: Rameshwaram\nNearest Airport: Madurai Airport\nWell connected by road.",
+      "visitImage": "assets/images/jyotirlinga/rameshwaram-visit.jpg",
+      "visitImageAlt": "Rameshwaram Jyotirlinga temple",
+      "faqTitle": "Frequently Asked Questions",
+      "faqs": [
+        {
+          "q": "Where is Rameshwaram Jyotirlinga located?",
+          "a": "Rameshwaram Jyotirlinga is in Rameshwaram, Tamil Nadu, India."
+        },
+        {
+          "q": "What is the significance of Rameshwaram Jyotirlinga?",
+          "a": "The Ramanathaswamy Temple is famous for its magnificent Dravidian architecture, longest temple corridor in India and 22 sacred wells (theerthams) within the temple premises. Devotees visit Rameshwaram to seek blessings, perform rituals and experience the deep spiritual energy of this holy place."
+        },
+        {
+          "q": "What are the darshan timings?",
+          "a": "The usual timings are 5:00 AM - 1:00 PM and 3:00 PM - 9:00 PM (subject to temple authority). Timings can change on festivals and special days, so please confirm before you visit."
+        },
+        {
+          "q": "Can I enquire about puja arrangements?",
+          "a": "Yes. You can enquire about Rudrabhishek, sankalp puja and other seva at Rameshwaram. Availability depends on the temple’s rules. Click “Enquire About Puja” on this page and send us your details. Our team will get back to you with the options currently available."
+        },
+        {
+          "q": "Are special rituals like Rudrabhishek available?",
+          "a": "Yes. You can enquire about Rudrabhishek, sankalp puja and other seva at Rameshwaram. Availability depends on the temple’s rules. Click “Enquire About Puja” on this page and send us your details. Our team will get back to you with the options currently available."
+        },
+        {
+          "q": "How can I reach Rameshwaram?",
+          "a": "Nearest Railway Station: Rameshwaram. Nearest Airport: Madurai Airport. Well connected by road. Please check the temple timings before you travel."
+        }
+      ],
+      "ctaTitle": "Experience the Divine Blessings of",
+      "ctaAccent": "Rameshwaram Jyotirlinga",
+      "ctaText": "Let us assist you in your darshan and puja seva with complete care and devotion.",
+      "ctaButton": "Enquire About Puja",
+      "ctaLink": "contact",
+      "ctaImage": "assets/images/jyotirlinga/somnath-cta.jpg",
+      "seoTitle": "Rameshwaram Jyotirlinga Darshan & Puja Seva | Hindu.International",
+      "seoDescription": "Rameshwaram Jyotirlinga, Rameshwaram, Tamil Nadu: about the temple, darshan and puja seva, temple timings, how to reach and FAQs. Enquire about puja with Hindu.International."
+    },
+    {
+      "show": true,
+      "slug": "grishneshwar",
+      "name": "Grishneshwar Jyotirlinga",
+      "heroTitle": "Grishneshwar\nJyotirlinga",
+      "heroSubtitle": "The Eternal Light of Lord Shiva",
+      "heroText": "Seek the divine blessings of Lord Grishneshwar, one of the twelve Jyotirlingas, and experience spiritual peace, devotion and the eternal presence of Lord Shiva at this sacred temple.",
+      "heroButton": "Enquire About Puja",
+      "heroLink": "contact",
+      "heroImage": "assets/images/jyotirlinga/grishneshwar-hero.jpg",
+      "heroImageAlt": "Grishneshwar Jyotirlinga temple",
+      "aboutTitle": "About Grishneshwar Jyotirlinga",
+      "aboutText1": "Grishneshwar Jyotirlinga is a revered shrine dedicated to Lord Shiva, located in Verul (Ellora), near Aurangabad, Maharashtra. It is one of the twelve Jyotirlingas and holds great significance in Hindu tradition. The temple is situated close to the famous Ellora Caves, a UNESCO World Heritage Site, making it an important spiritual and cultural destination.",
+      "aboutText2": "The name Grishneshwar is associated with the Goddess Grishni, a devoted worshipper of Lord Shiva. Devotees visit this sacred temple to seek blessings for a happy family life, removal of obstacles and spiritual growth. The temple is known for its beautiful architecture, peaceful atmosphere and deep spiritual energy.",
+      "aboutImage": "assets/images/jyotirlinga/grishneshwar-about.jpg",
+      "aboutImageAlt": "Grishneshwar Jyotirlinga temple",
+      "sevaTitle": "Our Darshan & Puja Seva",
+      "sevaText": "We help devotees connect with Grishneshwar Jyotirlinga through trusted darshan and puja services.",
+      "seva": [
+        {
+          "icon": "temple",
+          "title": "Darshan Assistance",
+          "text": "Get guidance about darshan information and available arrangements."
+        },
+        {
+          "icon": "diya",
+          "title": "Rudrabhishek Puja",
+          "text": "Enquire about available puja and abhishek arrangements."
+        },
+        {
+          "icon": "lotus",
+          "title": "Special Sankalp Puja",
+          "text": "Ask about personalised sankalp options and their requirements."
+        },
+        {
+          "icon": "people",
+          "title": "Personalized Seva",
+          "text": "Share your requirements to receive guidance about suitable available services."
+        }
+      ],
+      "sevaImage": "assets/images/jyotirlinga/somnath-seva.jpg",
+      "sevaImageAlt": "Shivling decorated with flowers and lamps",
+      "visitTitle": "Temple Visit Information",
+      "location": "Verul (Ellora), Aurangabad, Maharashtra, India",
+      "timings": "5:30 AM - 9:30 PM",
+      "timingsNote": "(Subject to temple authority)",
+      "reach": "Nearest Railway Station: Aurangabad\nNearest Airport: Aurangabad Airport\nWell connected by road.",
+      "visitImage": "assets/images/jyotirlinga/grishneshwar-visit.jpg",
+      "visitImageAlt": "Grishneshwar Jyotirlinga temple",
+      "faqTitle": "Frequently Asked Questions",
+      "faqs": [
+        {
+          "q": "Where is Grishneshwar Jyotirlinga located?",
+          "a": "Grishneshwar Jyotirlinga is in Verul (Ellora), Aurangabad, Maharashtra, India."
+        },
+        {
+          "q": "What is the significance of Grishneshwar Jyotirlinga?",
+          "a": "The name Grishneshwar is associated with the Goddess Grishni, a devoted worshipper of Lord Shiva. Devotees visit this sacred temple to seek blessings for a happy family life, removal of obstacles and spiritual growth. The temple is known for its beautiful architecture, peaceful atmosphere and deep spiritual energy."
+        },
+        {
+          "q": "What are the darshan timings?",
+          "a": "The usual timings are 5:30 AM - 9:30 PM (subject to temple authority). Timings can change on festivals and special days, so please confirm before you visit."
+        },
+        {
+          "q": "Can I enquire about puja arrangements?",
+          "a": "Yes. You can enquire about Rudrabhishek, sankalp puja and other seva at Grishneshwar. Availability depends on the temple’s rules. Click “Enquire About Puja” on this page and send us your details. Our team will get back to you with the options currently available."
+        },
+        {
+          "q": "Are special rituals like Rudrabhishek available?",
+          "a": "Yes. You can enquire about Rudrabhishek, sankalp puja and other seva at Grishneshwar. Availability depends on the temple’s rules. Click “Enquire About Puja” on this page and send us your details. Our team will get back to you with the options currently available."
+        },
+        {
+          "q": "How can I reach Grishneshwar Jyotirlinga?",
+          "a": "Nearest Railway Station: Aurangabad. Nearest Airport: Aurangabad Airport. Well connected by road. Please check the temple timings before you travel."
+        }
+      ],
+      "ctaTitle": "Experience the Divine Blessings of",
+      "ctaAccent": "Grishneshwar Jyotirlinga",
+      "ctaText": "Let us assist you in your darshan and puja seva with complete care and devotion.",
+      "ctaButton": "Enquire About Puja",
+      "ctaLink": "contact",
+      "ctaImage": "assets/images/jyotirlinga/somnath-cta.jpg",
+      "seoTitle": "Grishneshwar Jyotirlinga Darshan & Puja Seva | Hindu.International",
+      "seoDescription": "Grishneshwar Jyotirlinga, Verul (Ellora), Aurangabad, Maharashtra: about the temple, darshan and puja seva, temple timings, how to reach and FAQs. Enquire about puja with Hindu.International."
     }
   ]
 }
