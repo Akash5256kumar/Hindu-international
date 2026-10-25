@@ -91,7 +91,7 @@
 
 /* ---------- Mobile ---------- */
 @media (max-width: 768px) {
-  :root { --gutter: 16px; --section-y: 60px; --header-h: 72px; --blessing-h: 82px; }
+  :root { --gutter: 16px; --section-y: 60px; --header-h: 72px; --blessing-h: 81px; }
   .blessing__ganesh { height: 46px; }
   .blessing__row { gap: 12px; }
   .blessing__mantra { font-size: 14px; gap: 8px; }

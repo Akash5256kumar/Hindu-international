@@ -34,7 +34,7 @@
   --shadow-lg: 0 18px 48px rgba(90, 48, 12, .14);
 
   --header-h: 92px;
-  --blessing-h: 96px;           /* Shri Ganesh strip above the header */
+  --blessing-h: 93px;           /* Shri Ganesh strip above the header (space kept for it before JS draws it) */
   --container: 1200px;
   --gutter: 24px;
   --section-y: 96px;
@@ -234,9 +234,9 @@ h3 { font-size: 1.2rem; }
 
 /* Shri Ganesh blessing strip: Ganesh ji between double golden lines, "ॐ गणेशाय नमः" with a swastik each side */
 .blessing {
-  height: var(--blessing-h);
-  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px;
-  padding: 0 var(--gutter);
+  position: relative; z-index: 101;      /* keeps the little diamond on top of the header edge */
+  display: flex; flex-direction: column; align-items: center; gap: 2px;
+  padding: 7px var(--gutter) 0;
   background: radial-gradient(34% 100% at 50% 30%, #FFF2E4 0%, #FFFFFF 75%);
 }
 .blessing__row { display: flex; align-items: center; gap: 16px; width: min(560px, 100%); }
@@ -253,6 +253,15 @@ h3 { font-size: 1.2rem; }
   color: #8A1E12;
 }
 .blessing__swastik { display: block; flex: none; width: 15px; height: 15px; color: #C4161C; fill: currentColor; }
+/* thin saffron-to-gold line with a tiny golden diamond, right above the header */
+.blessing__line {
+  position: relative; align-self: stretch; height: 1px; margin: 5px calc(-1 * var(--gutter)) 0;
+  opacity: .75; background: linear-gradient(90deg, transparent 0%, var(--saffron) 18%, #C9971F 50%, var(--saffron) 82%, transparent 100%);
+}
+.blessing__line::after {
+  content: ""; position: absolute; left: 50%; top: 50%; width: 5px; height: 5px;
+  background: #C9971F; transform: translate(-50%, -50%) rotate(45deg); box-shadow: 0 0 0 2px #FFFFFF;
+}
 
 .site-header {
   position: sticky; top: 0; z-index: 100;

@@ -197,6 +197,7 @@
       '<div class="blessing">' +
         '<div class="blessing__row"><img class="blessing__ganesh" src="assets/images/brand/ganesh-blessing.png" width="114" height="120" alt="Shri Ganesh"></div>' +
         '<p class="blessing__mantra" lang="sa">' + swastik + 'ॐ गणेशाय नमः' + swastik + '</p>' +
+        '<div class="blessing__line" aria-hidden="true"></div>' +
       '</div>' +
       '<header class="site-header" id="top">' +
         '<div class="container header__inner">' +
