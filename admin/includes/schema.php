@@ -506,7 +506,7 @@ return [
                 ['key' => 'items', 'label' => 'Jyotirlingas', 'type' => 'list', 'min' => 0, 'max' => 12, 'itemLabel' => 'Jyotirlinga', 'titleField' => 'name', 'fields' => [
                     ['key' => 'show', 'label' => 'Page is live on the website', 'type' => 'toggle', 'default' => true],
                     ['key' => 'slug', 'label' => 'Page address (slug)', 'type' => 'slug', 'max' => 60, 'required' => true, 'help' => 'Small letters and dashes, e.g. somnath. The page opens at /jyotirlinga?name=somnath.'],
-                    ['key' => 'name', 'label' => 'Temple name', 'type' => 'text', 'max' => 80, 'required' => true, 'help' => 'e.g. Somnath Jyotirlinga. Used in the breadcrumb and the enquiry message.'],
+                    ['key' => 'name', 'label' => 'Temple name', 'type' => 'text', 'max' => 80, 'required' => true, 'help' => 'e.g. Somnath Jyotirlinga. Used in the enquiry message and to link the matching card on the 12 Jyotirlinga page.'],
 
                     ['key' => 'heroTitle', 'label' => 'Top banner — heading', 'type' => 'textarea', 'rows' => 2, 'max' => 80, 'help' => 'Press Enter to start a new line. Empty = the temple name.'],
                     ['key' => 'heroSubtitle', 'label' => 'Top banner — line under the heading', 'type' => 'text', 'max' => 100],

@@ -30,12 +30,6 @@
 }
 .svc-banner__text { max-width: 480px; }
 
-.svc-breadcrumb { margin: 0 0 14px; }
-.svc-breadcrumb ol { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; font-size: .92rem; color: var(--ink-2); }
-.svc-breadcrumb li + li::before { content: "›"; margin-right: 10px; color: var(--muted); }
-.svc-breadcrumb a { color: var(--ink-2); }
-.svc-breadcrumb a:hover { color: var(--saffron); }
-
 .svc-banner h1 {
   margin: 0 0 10px;
   font-family: var(--font-serif); font-weight: 700;

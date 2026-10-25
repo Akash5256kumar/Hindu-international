@@ -156,17 +156,6 @@
       box.appendChild(media);
 
       var inner = el('div', 'container jl-hero__inner');
-      var crumbs = el('nav', 'jl-crumbs');
-      crumbs.setAttribute('aria-label', 'Breadcrumb');
-      var ol = el('ol');
-      [['Home', '/'], ['12 Jyotirlinga', LIST_PAGE], [str(j.name)]].forEach(function (c) {
-        var li = el('li');
-        if (c[1]) { var a = el('a', '', c[0]); a.href = c[1]; li.appendChild(a); }
-        else { li.textContent = c[0]; li.setAttribute('aria-current', 'page'); }
-        ol.appendChild(li);
-      });
-      crumbs.appendChild(ol);
-      inner.appendChild(crumbs);
 
       var h1 = lines(el('h1', 'jl-hero__title'), str(j.heroTitle) || str(j.name));
       h1.id = 'page-title';
