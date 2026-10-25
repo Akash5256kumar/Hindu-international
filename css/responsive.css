@@ -4,9 +4,14 @@
    ===================================================================== */
 
 /* ---------- Large desktop: 7 menu items + button ---------- */
+/* Desktop menu: a little more room before the Donate button than between the links */
+@media (min-width: 1241px) {
+  .nav__cta { margin-left: 14px; }
+}
+
 @media (max-width: 1440px) {
   .nav { gap: 26px; }
-  .nav__list { gap: 22px; }
+  .nav__list { gap: 20px; }
   .nav__link { font-size: .87rem; }
 }
 
