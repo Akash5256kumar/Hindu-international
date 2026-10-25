@@ -62,7 +62,9 @@ body.menu-open { overflow: hidden; }
 /* Content protection (set by js/components.js): no text selection, no image dragging and no
    phone long-press menu; form fields stay selectable so visitors can type, copy and paste */
 .is-protected body { -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; }
-.is-protected img { -webkit-user-drag: none; -webkit-touch-callout: none; }
+/* images let clicks and taps pass through to what is behind them (links, cards), so the browser
+   never offers "Save image" / "Copy image" / "Open image in new tab" on them */
+.is-protected img { -webkit-user-drag: none; -webkit-touch-callout: none; pointer-events: none; }
 .is-protected input, .is-protected textarea, .is-protected select, .is-protected [contenteditable="true"] {
   -webkit-user-select: text; user-select: text; -webkit-touch-callout: default;
 }

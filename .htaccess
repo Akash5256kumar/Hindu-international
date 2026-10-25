@@ -54,6 +54,18 @@ DirectoryIndex index.html
 <IfModule mod_rewrite.c>
   RewriteEngine On
 
+  # Image hotlink protection: other websites may not show our photos on their pages.
+  # Allowed: this site, visits with no referrer (direct links, Google/Bing crawlers, WhatsApp and
+  # Facebook link previews) and search engines' image results.
+  RewriteCond %{REQUEST_URI} \.(?:jpe?g|png|gif|webp|avif|svg)$ [NC,OR]
+  RewriteCond %{REQUEST_URI} ^/media\.php$
+  RewriteCond %{HTTP_REFERER} !^$
+  RewriteCond %{HTTP_REFERER} !^https?://(?:www\.)?hindu\.international(?:/|$) [NC]
+  RewriteCond %{HTTP_REFERER} !^https?://(?:[\w-]+\.)*(?:google|bing|yahoo|duckduckgo|yandex|baidu)\.[a-z.]+(?:/|$) [NC]
+  RewriteCond %{HTTP_REFERER} !^https?://(?:[\w-]+\.)*(?:facebook|whatsapp|instagram|twitter|x|linkedin|pinterest)\.(?:com|net)(?:/|$) [NC]
+  RewriteCond %{HTTP_REFERER} !^https?://(?:localhost|127\.0\.0\.1)(?::\d+)?(?:/|$) [NC]
+  RewriteRule ^ - [F]
+
   # One address for the whole site: www.hindu.international → hindu.international (same page)
   RewriteCond %{HTTP_HOST} ^www\.hindu\.international$ [NC]
   RewriteRule ^ https://hindu.international%{REQUEST_URI} [R=301,L,NE]
