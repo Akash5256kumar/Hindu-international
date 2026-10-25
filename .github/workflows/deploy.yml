@@ -35,6 +35,12 @@ jobs:
         run: |
           find . -name '*.php' -not -path './.git/*' -print0 | xargs -0 -n1 php -l > /dev/null
 
+      # Only the copy sent to the server is minified; the files in the repo stay readable.
+      - name: Minify CSS and JavaScript
+        run: |
+          for f in js/*.js; do npx --yes terser@5.31.0 "$f" -c -m --comments false -o "$f"; done
+          for f in css/*.css; do npx --yes csso-cli@4.0.2 "$f" -o "$f"; done
+
       - name: Set up SSH key
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}

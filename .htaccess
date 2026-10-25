@@ -32,10 +32,25 @@ DirectoryIndex index.html
 <IfModule mod_setenvif.c>
   SetEnvIf Request_URI "^/$|^/(?:about|how-it-works|protect-our-faith|donate|event|booking|contact)(?:\.html)?/?$" seo_public_page
   SetEnvIf Request_URI "^/(?:privacy|terms)(?:\.html)?/?$" seo_noindex_page
+  SetEnvIf Request_URI "^/admin(?:/|$)" seo_private_page
 </IfModule>
 <IfModule mod_headers.c>
   Header always set X-Robots-Tag "index, follow" env=seo_public_page
   Header always set X-Robots-Tag "noindex, follow" env=seo_noindex_page
+  Header always set X-Robots-Tag "noindex, nofollow" env=seo_private_page
+</IfModule>
+
+# Security headers: no showing this site inside another website's frame, always HTTPS,
+# no guessing of file types, and only the site's address (not full paths) sent to other sites
+<IfModule mod_headers.c>
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Content-Security-Policy "frame-ancestors 'self'"
+  Header always set Strict-Transport-Security "max-age=31536000"
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=()"
+  Header always unset X-Powered-By
+  Header unset X-Powered-By
 </IfModule>
 
 # The admin rewrites this file in place, so browsers must revalidate it to see new content and image paths.
@@ -64,6 +79,11 @@ DirectoryIndex index.html
   RewriteCond %{HTTP_REFERER} !^https?://(?:[\w-]+\.)*(?:google|bing|yahoo|duckduckgo|yandex|baidu)\.[a-z.]+(?:/|$) [NC]
   RewriteCond %{HTTP_REFERER} !^https?://(?:[\w-]+\.)*(?:facebook|whatsapp|instagram|twitter|x|linkedin|pinterest)\.(?:com|net)(?:/|$) [NC]
   RewriteCond %{HTTP_REFERER} !^https?://(?:localhost|127\.0\.0\.1)(?::\d+)?(?:/|$) [NC]
+  RewriteRule ^ - [F]
+
+  # Website-copying programs may not download the site. Search engines (Googlebot, Bingbot …),
+  # social link previews and normal browsers are not on this list and are not affected.
+  RewriteCond %{HTTP_USER_AGENT} (?:HTTrack|WebCopier|WebZIP|Teleport|SiteSnagger|Offline\sExplorer|WebStripper|WebReaper|SiteSucker|Website\sDownloader|Wget|python-requests|python-urllib|Scrapy|aiohttp|Go-http-client|libwww-perl|Java/|node-fetch|axios/|MJ12bot|DotBot|BLEXBot|PetalBot) [NC]
   RewriteRule ^ - [F]
 
   # One address for the whole site: www.hindu.international → hindu.international (same page)
