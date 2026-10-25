@@ -20,14 +20,14 @@ require __DIR__ . '/admin/includes/content.php';
 /** Public pages: the clean address and the file it is served from. Privacy and Terms are noindex. */
 $pages = [
     ['/', 'index.html', 'home'],
-    ['/about', 'about.html', 'about'],
+    ['/about-us', 'about-us.html', 'about'],
     ['/how-it-works', 'how-it-works.html', 'how'],
     ['/protect-our-faith', 'protect-our-faith.html', 'faith'],
     ['/services', 'services.html', null],
     ['/event', 'event.html', 'event'],
     ['/donate', 'donate.html', 'donate'],
     ['/booking', 'booking.html', 'booking'],
-    ['/contact', 'contact.html', 'contact'],
+    ['/contact-us', 'contact-us.html', 'contact'],
 ];
 
 try {

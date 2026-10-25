@@ -111,6 +111,7 @@
     value = String(value || '').trim();
     if (!LINK_RE.test(value)) return fallback || '#';
     value = value.replace(/\.html(?=#|$)/i, '');
+    value = value.replace(/^(about|contact)(?=$|[#?])/i, '$1-us');   // pages renamed to about-us and contact-us
     if (/^index(?:#|$)/i.test(value)) return '/' + value.slice(5);
     return value || '/';
   }
@@ -124,12 +125,12 @@
      used when the content has no menu yet (or an older menu without links). */
   var NAV_DEFAULT = [
     { label: 'Home',              link: '/' },
-    { label: 'About Us',          link: 'about' },
+    { label: 'About Us',          link: 'about-us' },
     { label: 'How It Works',      link: 'how-it-works' },
     { label: 'Protect Our Faith', link: 'protect-our-faith' },
     { label: 'Event Information', link: 'event' },
     { label: 'Services',          link: 'services' },
-    { label: 'Contact Us',        link: 'contact' }
+    { label: 'Contact Us',        link: 'contact-us' }
   ];
   var NAV = (Array.isArray(SITE.nav) && SITE.nav.length ? SITE.nav : NAV_DEFAULT)
     .map(function (item, i) {

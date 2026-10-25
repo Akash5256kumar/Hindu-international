@@ -84,7 +84,7 @@
   /* The enquiry button opens the Contact form with the temple's name filled in */
   function enquiryLink(link, name) {
     var href = safeLink(link, 'contact');
-    if (/^contact(#|$)/.test(href) && name) href = 'contact?enquiry=' + encodeURIComponent(name) + '#enquiry';
+    if (/^contact-us(#|$)/.test(href) && name) href = 'contact-us?enquiry=' + encodeURIComponent(name) + '#enquiry';
     return href;
   }
   function button(text, link, name) {

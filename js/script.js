@@ -224,7 +224,7 @@ document.addEventListener('DOMContentLoaded', function () {
       ['youtube', S.youtube, 'YouTube'],
     ].forEach(function (i) {
       var url = i[1];
-      if (!url || !/^(https?:\/\/|#$|contact\.html$)/.test(url)) return;
+      if (!url || !/^(https?:\/\/|#$|contact(?:-us)?(?:\.html)?$)/.test(url)) return;
       var li = document.createElement('li');
       var a = document.createElement('a');
       a.className = 'social social--' + i[0];

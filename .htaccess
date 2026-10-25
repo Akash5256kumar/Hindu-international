@@ -30,7 +30,7 @@ DirectoryIndex index.html
 
 # Tell crawlers whether each public page can be indexed. Privacy and Terms remain noindex.
 <IfModule mod_setenvif.c>
-  SetEnvIf Request_URI "^/$|^/(?:about|how-it-works|protect-our-faith|donate|event|booking|contact)(?:\.html)?/?$" seo_public_page
+  SetEnvIf Request_URI "^/$|^/(?:about-us|how-it-works|protect-our-faith|donate|event|booking|contact-us)(?:\.html)?/?$" seo_public_page
   SetEnvIf Request_URI "^/(?:privacy|terms)(?:\.html)?/?$" seo_noindex_page
   SetEnvIf Request_URI "^/admin(?:/|$)" seo_private_page
 </IfModule>
@@ -95,6 +95,10 @@ DirectoryIndex index.html
 
   # Preserve the old page name while using the canonical clean URL.
   RewriteRule ^preserve-our-roots(?:\.html)?/?$ /protect-our-faith [R=301,L,NE]
+
+  # About and Contact moved to /about-us and /contact-us; old links keep working (query kept).
+  RewriteRule ^about(?:\.html)?/?$ /about-us [R=301,L,NE]
+  RewriteRule ^contact(?:\.html)?/?$ /contact-us [R=301,L,NE]
 
   # The home page canonical URL is the site root.
   RewriteRule ^index\.html$ / [R=301,L,NE]

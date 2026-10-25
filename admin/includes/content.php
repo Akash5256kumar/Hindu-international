@@ -191,13 +191,13 @@ final class ContentStore
 
         $files = [
             'home' => 'index.html',
-            'about' => 'about.html',
+            'about' => 'about-us.html',
             'how' => 'how-it-works.html',
             'faith' => 'protect-our-faith.html',
             'donate' => 'donate.html',
             'event' => 'event.html',
             'booking' => 'booking.html',
-            'contact' => 'contact.html',
+            'contact' => 'contact-us.html',
             'privacy' => 'privacy.html',
             'terms' => 'terms.html',
         ];

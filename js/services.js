@@ -659,7 +659,7 @@
      page instead once that page exists: Admin → 12 Jyotirlinga pages, matched by the card name */
   function linkJyotirlingaPages() {
     var buttons = Array.prototype.filter.call(document.querySelectorAll('.sd-place__btn[data-place]'), function (a) {
-      return /^contact(#|$)/.test(a.getAttribute('href') || '');
+      return /^contact-us(#|$)/.test(a.getAttribute('href') || '');
     });
     if (!buttons.length) return;
     var saved = ((window.SITE_CONTENT || {}).jyotirlingas || {}).items;
