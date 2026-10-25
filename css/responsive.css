@@ -98,8 +98,12 @@
   .blessing__swastik { width: 14px; height: 14px; }
 
   body { font-size: 16px; }
-  .logo, .logo--md, .logo--lg, .logo--xl { --logo-mark: 42px; --logo-text: 1.24rem; --logo-img: 58px; gap: 9px; }
-  .logo--xl { --logo-mark: 46px; --logo-text: 1.34rem; --logo-img: 62px; }
+  /* Header logo scales with the phone's width, so the menu button always fits — from 320px phones to big ones */
+  .header__inner { gap: 10px; }
+  .logo, .logo--md, .logo--lg, .logo--xl { --logo-mark: clamp(30px, 10vw, 42px); --logo-img: clamp(40px, 13vw, 58px); gap: clamp(6px, 2vw, 9px); min-width: 0; }
+  .logo .logo__text { font-size: clamp(16px, 5.5vw, 24px); }
+  .logo .logo__tagline { font-size: clamp(7.5px, 2.4vw, 10.5px); }
+  .nav-toggle { flex: none; }
   .section-head { margin-bottom: 32px; }
   .ornament { width: 240px; opacity: .16; }
 
@@ -199,10 +203,22 @@
 
 /* ---------- Small phones ---------- */
 @media (max-width: 480px) {
-  .logo, .logo--md, .logo--lg, .logo--xl { --logo-mark: 38px; --logo-text: 1.12rem; --logo-img: 52px; }
   .values { grid-template-columns: 1fr 1fr; }
   .provide__grid { grid-template-columns: 1fr 1fr; }
   .trust span { font-size: .7rem; }
   .hero__trust { gap: 4px; padding-left: 10px; padding-right: 10px; }
   .modal__close { top: -50px; }
+}
+
+/* ---------- Phones and tablets (touch screens) ---------- */
+/* decorative mandalas reach past the screen edge; keep them from widening the page on touch screens */
+@media (hover: none) {
+  @supports (overflow: clip) { .section { overflow-x: clip; } }
+  @supports not (overflow: clip) { .ornament { display: none; } }
+}
+
+/* ---------- Phones turned sideways (short screens): the Ganesh strip scrolls away, only the header stays ---------- */
+@media (max-height: 500px) and (hover: none) {
+  .blessing { position: relative; }
+  .site-header { top: 0; }
 }
