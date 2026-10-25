@@ -499,6 +499,67 @@ return [
         ],
     ],
     [
+        'id' => 'jyotirlinga', 'title' => '12 Jyotirlinga pages', 'icon' => 'steps',
+        'groups' => [
+            ['path' => 'jyotirlingas', 'title' => 'Jyotirlinga pages', 'help' => 'Each Jyotirlinga has its own page at /jyotirlinga?name=slug (for example /jyotirlinga?name=somnath). To open it from the 12 Jyotirlinga service page, set that temple card’s button link (Services → 12 Jyotirlinga → Scrolling cards) to jyotirlinga?name=slug. Sections you leave empty are not shown. Keep the photo sizes below the same on every page.', 'fields' => [
+                ['key' => 'knownDefaults', 'label' => 'Default pages already seen', 'type' => 'hidden'],
+                ['key' => 'items', 'label' => 'Jyotirlingas', 'type' => 'list', 'min' => 0, 'max' => 12, 'itemLabel' => 'Jyotirlinga', 'titleField' => 'name', 'fields' => [
+                    ['key' => 'show', 'label' => 'Page is live on the website', 'type' => 'toggle', 'default' => true],
+                    ['key' => 'slug', 'label' => 'Page address (slug)', 'type' => 'slug', 'max' => 60, 'required' => true, 'help' => 'Small letters and dashes, e.g. somnath. The page opens at /jyotirlinga?name=somnath.'],
+                    ['key' => 'name', 'label' => 'Temple name', 'type' => 'text', 'max' => 80, 'required' => true, 'help' => 'e.g. Somnath Jyotirlinga. Used in the breadcrumb and the enquiry message.'],
+
+                    ['key' => 'heroTitle', 'label' => 'Top banner — heading', 'type' => 'textarea', 'rows' => 2, 'max' => 80, 'help' => 'Press Enter to start a new line. Empty = the temple name.'],
+                    ['key' => 'heroSubtitle', 'label' => 'Top banner — line under the heading', 'type' => 'text', 'max' => 100],
+                    ['key' => 'heroText', 'label' => 'Top banner — description', 'type' => 'textarea', 'rows' => 2, 'max' => 300],
+                    ['key' => 'heroButton', 'label' => 'Top banner — button text', 'type' => 'text', 'max' => 40, 'help' => 'Leave empty to hide the button.'],
+                    $link('heroLink', 'Top banner — button link (contact = enquiry form with the temple name filled in)'),
+                    ['key' => 'heroImage', 'label' => 'Top banner — photo', 'type' => 'image', 'help' => 'Size 2400 × 1000 px (12 : 5). Temple on the right half; the left side fades into the sky colour behind the text.'],
+                    ['key' => 'heroImageAlt', 'label' => 'Top banner — photo description', 'type' => 'text', 'max' => 200],
+
+                    ['key' => 'aboutTitle', 'label' => 'About — heading', 'type' => 'text', 'max' => 100],
+                    ['key' => 'aboutText1', 'label' => 'About — paragraph 1', 'type' => 'textarea', 'rows' => 4, 'max' => 1200],
+                    ['key' => 'aboutText2', 'label' => 'About — paragraph 2', 'type' => 'textarea', 'rows' => 4, 'max' => 1200],
+                    ['key' => 'aboutImage', 'label' => 'About — photo (right side)', 'type' => 'image', 'help' => 'Size 1400 × 1000 px (7 : 5).'],
+                    ['key' => 'aboutImageAlt', 'label' => 'About — photo description', 'type' => 'text', 'max' => 200],
+
+                    ['key' => 'sevaTitle', 'label' => 'Darshan & Puja Seva — heading', 'type' => 'text', 'max' => 100],
+                    ['key' => 'sevaText', 'label' => 'Darshan & Puja Seva — line under the heading', 'type' => 'textarea', 'rows' => 2, 'max' => 300],
+                    ['key' => 'seva', 'label' => 'Darshan & Puja Seva — cards', 'type' => 'list', 'min' => 0, 'max' => 4, 'itemLabel' => 'Card', 'titleField' => 'title', 'fields' => [
+                        $iconField,
+                        ['key' => 'title', 'label' => 'Title', 'type' => 'text', 'max' => 50, 'required' => true],
+                        ['key' => 'text', 'label' => 'Description', 'type' => 'textarea', 'rows' => 2, 'max' => 120],
+                    ]],
+                    ['key' => 'sevaImage', 'label' => 'Darshan & Puja Seva — photo (right edge)', 'type' => 'image', 'help' => 'Size 1200 × 1100 px (12 : 11). Its left side fades into the page.'],
+                    ['key' => 'sevaImageAlt', 'label' => 'Darshan & Puja Seva — photo description', 'type' => 'text', 'max' => 200],
+
+                    ['key' => 'visitTitle', 'label' => 'Temple Visit — heading', 'type' => 'text', 'max' => 100],
+                    ['key' => 'location', 'label' => 'Temple Visit — location', 'type' => 'text', 'max' => 160],
+                    ['key' => 'timings', 'label' => 'Temple Visit — timings', 'type' => 'text', 'max' => 120],
+                    ['key' => 'timingsNote', 'label' => 'Temple Visit — small note under the timings', 'type' => 'text', 'max' => 120],
+                    ['key' => 'reach', 'label' => 'Temple Visit — how to reach', 'type' => 'textarea', 'rows' => 3, 'max' => 400, 'help' => 'Press Enter to start a new line.'],
+                    ['key' => 'visitImage', 'label' => 'Temple Visit — photo', 'type' => 'image', 'help' => 'Size 1600 × 750 px (32 : 15).'],
+                    ['key' => 'visitImageAlt', 'label' => 'Temple Visit — photo description', 'type' => 'text', 'max' => 200],
+
+                    ['key' => 'faqTitle', 'label' => 'FAQ — heading', 'type' => 'text', 'max' => 80],
+                    ['key' => 'faqs', 'label' => 'FAQ — questions', 'type' => 'list', 'min' => 0, 'max' => 12, 'itemLabel' => 'Question', 'titleField' => 'q', 'fields' => [
+                        ['key' => 'q', 'label' => 'Question', 'type' => 'text', 'max' => 200, 'required' => true],
+                        ['key' => 'a', 'label' => 'Answer', 'type' => 'textarea', 'rows' => 3, 'max' => 1200, 'required' => true],
+                    ]],
+
+                    ['key' => 'ctaTitle', 'label' => 'Bottom banner — heading (white)', 'type' => 'text', 'max' => 100, 'help' => 'Leave this and the gold line empty to hide the bottom banner.'],
+                    ['key' => 'ctaAccent', 'label' => 'Bottom banner — gold line', 'type' => 'text', 'max' => 80],
+                    ['key' => 'ctaText', 'label' => 'Bottom banner — text', 'type' => 'text', 'max' => 200],
+                    ['key' => 'ctaButton', 'label' => 'Bottom banner — button text', 'type' => 'text', 'max' => 40, 'help' => 'Leave empty to hide the button.'],
+                    $link('ctaLink', 'Bottom banner — button link'),
+                    ['key' => 'ctaImage', 'label' => 'Bottom banner — photo (left side)', 'type' => 'image', 'help' => 'Size 1600 × 800 px (2 : 1). Subject on the left; the right side fades into navy.'],
+
+                    ['key' => 'seoTitle', 'label' => 'SEO title (browser tab, Google)', 'type' => 'text', 'max' => 90, 'help' => 'Empty = “temple name | Hindu.International”.'],
+                    ['key' => 'seoDescription', 'label' => 'SEO description', 'type' => 'textarea', 'rows' => 2, 'max' => 300],
+                ]],
+            ]],
+        ],
+    ],
+    [
         'id' => 'booking', 'title' => 'Service / Booking', 'icon' => 'form',
         'groups' => [
             ['path' => 'booking', 'title' => 'Booking page', 'fields' => [

@@ -39,7 +39,8 @@ $seo = $content['seo']['pages'] ?? [];
 
 $contentTime = max(
     (int) @filemtime(CONTENT_DIR . '/content.json'),
-    (int) @filemtime(CONTENT_DIR . '/services.default.json')
+    (int) @filemtime(CONTENT_DIR . '/services.default.json'),
+    (int) @filemtime(CONTENT_DIR . '/jyotirlinga.default.json')
 );
 
 $urls = [];
@@ -61,6 +62,17 @@ foreach ($content['services']['items'] ?? [] as $service) {
         continue;
     }
     $urls[] = [SITEMAP_ORIGIN . '/service?name=' . $slug, $contentTime];
+}
+
+foreach ($content['jyotirlingas']['items'] ?? [] as $temple) {
+    if (!is_array($temple) || ($temple['show'] ?? true) === false) {
+        continue;
+    }
+    $slug = (string) ($temple['slug'] ?? '');
+    if (!preg_match('/^[a-z0-9-]+$/', $slug)) {
+        continue;
+    }
+    $urls[] = [SITEMAP_ORIGIN . '/jyotirlinga?name=' . $slug, $contentTime];
 }
 
 header('Content-Type: application/xml; charset=UTF-8');

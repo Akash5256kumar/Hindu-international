@@ -29,6 +29,8 @@ final class ContentStore
     private const BACKUPS = DATA_DIR . '/backups';
     /** Starting content for the Services pages, used until the admin saves its own */
     private const SERVICES_DEFAULT = CONTENT_DIR . '/services.default.json';
+    /** Starting content for the Jyotirlinga pages, used until the admin saves its own */
+    private const JYOTIRLINGA_DEFAULT = CONTENT_DIR . '/jyotirlinga.default.json';
 
     public static function schema(): array
     {
@@ -49,7 +51,44 @@ final class ContentStore
                     : $services;
             }
         }
+        if (is_file(self::JYOTIRLINGA_DEFAULT)) {
+            $jyotirlingas = json_decode((string) file_get_contents(self::JYOTIRLINGA_DEFAULT), true);
+            if (is_array($jyotirlingas)) {
+                $data['jyotirlingas'] = self::addNewDefaults(
+                    isset($data['jyotirlingas']) && is_array($data['jyotirlingas']) ? $data['jyotirlingas'] : ['items' => []],
+                    $jyotirlingas
+                );
+            }
+        }
         return $data;
+    }
+
+    /**
+     * A Jyotirlinga page that is only in the default file is added at the end, once: knownDefaults
+     * remembers which default pages the admin has seen, so one deleted there stays deleted.
+     * Same rule as fillFromDefaults() in js/jyotirlinga.js.
+     */
+    private static function addNewDefaults(array $saved, array $defaults): array
+    {
+        $savedSlugs = [];
+        foreach ($saved['items'] ?? [] as $s) {
+            if (is_array($s) && !empty($s['slug'])) {
+                $savedSlugs[$s['slug']] = true;
+            }
+        }
+        $known = is_array($saved['knownDefaults'] ?? null) ? $saved['knownDefaults'] : null;
+        $defaultSlugs = [];
+        foreach ($defaults['items'] ?? [] as $d) {
+            if (!is_array($d) || empty($d['slug'])) {
+                continue;
+            }
+            $defaultSlugs[] = $d['slug'];
+            if (!isset($savedSlugs[$d['slug']]) && ($known === null || !in_array($d['slug'], $known, true))) {
+                $saved['items'][] = $d;
+            }
+        }
+        $saved['knownDefaults'] = $defaultSlugs;
+        return $saved;
     }
 
     /** Card fields of a service; everything else belongs to its detail page */
@@ -469,7 +508,7 @@ final class ContentValidator
         if (preg_match('#^https?://#i', $v)) {
             return self::isHttpUrl($v) && !preg_match('/[\s"\'<>]/', $v);
         }
-        return (bool) preg_match('/^(mailto:[^\s"\'<>]+|tel:\+?[\d\s()-]{3,20}|#[\w-]*|\/|[\w-]+(?:\.html)?(#[\w-]*)?)$/i', $v);
+        return (bool) preg_match('/^(mailto:[^\s"\'<>]+|tel:\+?[\d\s()-]{3,20}|#[\w-]*|\/|[\w-]+(?:\.html)?(?:\?name=[\w-]+)?(#[\w-]*)?)$/i', $v);
     }
 
     private static function get(array $data, string $path)

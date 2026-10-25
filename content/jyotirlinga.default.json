@@ -1,0 +1,55 @@
+{
+  "items": [
+    {
+      "show": true,
+      "slug": "somnath",
+      "name": "Somnath Jyotirlinga",
+      "heroTitle": "Somnath\nJyotirlinga",
+      "heroSubtitle": "The Eternal Abode of Lord Shiva",
+      "heroText": "Seek the blessings of Lord Somnath, the first Jyotirlinga and a symbol of faith, resilience and eternal divinity.",
+      "heroButton": "Enquire About Puja",
+      "heroLink": "contact",
+      "heroImage": "assets/images/jyotirlinga/somnath-hero.jpg",
+      "heroImageAlt": "Somnath Temple on the sea shore at sunset",
+      "aboutTitle": "About Somnath Jyotirlinga",
+      "aboutText1": "Somnath Jyotirlinga, located in Prabhas Patan, Gujarat, is the first among the twelve Jyotirlingas and holds a special place in Hindu tradition. It is believed to be the sacred abode where Lord Shiva appeared as an infinite pillar of light, representing the beginning and end of all creation.",
+      "aboutText2": "This ancient temple has witnessed the rise and fall of many kingdoms, yet it continues to stand as a symbol of unwavering faith and devotion. Devotees from across the world visit Somnath to seek the blessings of Lord Shiva for strength, peace and prosperity. The divine energy of this temple is associated with renewal, hope and the power to overcome life’s challenges.",
+      "aboutImage": "assets/images/jyotirlinga/somnath-about.jpg",
+      "aboutImageAlt": "Somnath Temple and its garden path",
+      "sevaTitle": "Our Darshan & Puja Seva",
+      "sevaText": "We help devotees connect with Somnath Jyotirlinga through trusted darshan and puja services.",
+      "seva": [
+        { "icon": "temple", "title": "Darshan Assistance", "text": "Guidance and support for temple darshan." },
+        { "icon": "diya", "title": "Rudrabhishek Puja", "text": "Special puja arrangements as per your requirement." },
+        { "icon": "lotus", "title": "Special Sankalp Puja", "text": "For health, prosperity and family well-being." },
+        { "icon": "people", "title": "Personalized Seva", "text": "Assistance for individual and family puja bookings." }
+      ],
+      "sevaImage": "assets/images/jyotirlinga/somnath-seva.jpg",
+      "sevaImageAlt": "Shivling decorated with flowers and lamps",
+      "visitTitle": "Temple Visit Information",
+      "location": "Prabhas Patan, Somnath, Gujarat, India",
+      "timings": "6:00 AM - 9:30 PM",
+      "timingsNote": "(Subject to temple authority)",
+      "reach": "Nearest Railway Station: Veraval\nNearest Airport: Diu Airport\nWell connected by road.",
+      "visitImage": "assets/images/jyotirlinga/somnath-visit.jpg",
+      "visitImageAlt": "Somnath Temple by the sea at sunset",
+      "faqTitle": "Frequently Asked Questions",
+      "faqs": [
+        { "q": "Where is Somnath Jyotirlinga located?", "a": "Somnath Jyotirlinga is in Prabhas Patan, near Veraval in the Gir Somnath district of Gujarat, on the shore of the Arabian Sea." },
+        { "q": "What is the significance of Somnath Jyotirlinga?", "a": "Somnath is revered as the first of the twelve Jyotirlingas. Devotees believe Lord Shiva appeared here as an endless pillar of light, and a darshan here is considered especially auspicious." },
+        { "q": "What puja services can be arranged?", "a": "We can help with darshan assistance, Rudrabhishek puja, special sankalp puja and personalized seva for individuals and families. The exact options depend on the temple’s rules and availability." },
+        { "q": "How can I plan a visit to Somnath temple?", "a": "The nearest railway station is Veraval and the nearest airport is Diu, and Somnath is well connected by road. Please check the temple timings before you travel, as they are set by the temple authority." },
+        { "q": "Is online puja or sankalp possible if I cannot visit in person?", "a": "Where the temple’s arrangements allow it, a puja or sankalp can be performed in your name. Send us an enquiry and we will tell you what is currently available." },
+        { "q": "How can I enquire about darshan and puja services?", "a": "Click “Enquire About Puja” on this page and send us your details. Our team will get back to you with the available options." }
+      ],
+      "ctaTitle": "Experience the Divine Blessings of",
+      "ctaAccent": "Somnath Jyotirlinga",
+      "ctaText": "Let us assist you in your darshan and puja seva with complete care and devotion.",
+      "ctaButton": "Enquire About Puja",
+      "ctaLink": "contact",
+      "ctaImage": "assets/images/jyotirlinga/somnath-cta.jpg",
+      "seoTitle": "Somnath Jyotirlinga Darshan & Puja Seva | Hindu.International",
+      "seoDescription": "Somnath Jyotirlinga in Prabhas Patan, Gujarat: about the temple, darshan and puja seva, temple timings, how to reach and FAQs. Enquire about puja with Hindu.International."
+    }
+  ]
+}

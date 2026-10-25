@@ -347,6 +347,14 @@ document.addEventListener('DOMContentLoaded', function () {
     if (EVENTS.length === 1) eventSelect.selectedIndex = 1;
   }
 
+  /* ---------- 4b. Contact: "Enquire About Puja" (Jyotirlinga pages) fills in the temple's name ---------- */
+  var contactMessage = $('#c-message');
+  if (contactMessage && !contactMessage.value) {
+    var enquiry = '';
+    try { enquiry = (new URLSearchParams(location.search).get('enquiry') || '').slice(0, 120); } catch (e) {}
+    if (enquiry) contactMessage.value = 'I would like to enquire about darshan and puja seva at ' + enquiry + '.\n\n';
+  }
+
   /* ---------- 5. Photo upload (click or drag & drop, with preview) ---------- */
   var MAX_MB = 5;
   var TYPES = ['image/jpeg', 'image/png'];

@@ -106,7 +106,7 @@
 
   /* Safe link: page on this site (page, page#part, #part), https://, mailto: or tel:
      (the admin panel validates the same rule; anything else falls back) */
-  var LINK_RE = /^(https?:\/\/[^\s"'<>]+|mailto:[^\s"'<>]+|tel:\+?[\d\s()-]{3,20}|#[\w-]*|\/|[\w-]+(?:\.html)?(#[\w-]*)?)$/i;
+  var LINK_RE = /^(https?:\/\/[^\s"'<>]+|mailto:[^\s"'<>]+|tel:\+?[\d\s()-]{3,20}|#[\w-]*|\/|[\w-]+(?:\.html)?(?:\?name=[\w-]+)?(#[\w-]*)?)$/i;
   function safeLink(value, fallback) {
     value = String(value || '').trim();
     if (!LINK_RE.test(value)) return fallback || '#';
