@@ -34,6 +34,7 @@
   --shadow-lg: 0 18px 48px rgba(90, 48, 12, .14);
 
   --header-h: 92px;
+  --blessing-h: 96px;           /* Shri Ganesh strip above the header */
   --container: 1200px;
   --gutter: 24px;
   --section-y: 96px;
@@ -229,7 +230,29 @@ h3 { font-size: 1.2rem; }
 .icon-list .icon { color: var(--saffron); margin-top: 2px; }
 
 /* ---------- 5. Header ---------- */
-#site-header { min-height: var(--header-h); } /* reserves space before JS renders */
+#site-header { min-height: calc(var(--blessing-h) + var(--header-h)); } /* reserves space before JS renders */
+
+/* Shri Ganesh blessing strip: Ganesh ji between double golden lines, "ॐ गणेशाय नमः" with a swastik each side */
+.blessing {
+  height: var(--blessing-h);
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px;
+  padding: 0 var(--gutter);
+  background: radial-gradient(34% 100% at 50% 30%, #FFF2E4 0%, #FFFFFF 75%);
+}
+.blessing__row { display: flex; align-items: center; gap: 16px; width: min(560px, 100%); }
+.blessing__row::before, .blessing__row::after {
+  content: ""; flex: 1; height: 4px;
+  background: linear-gradient(#C9971F, #C9971F) top / 100% 1px no-repeat, linear-gradient(#C9971F, #C9971F) bottom / 100% 1px no-repeat;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000); mask-image: linear-gradient(90deg, transparent, #000);
+}
+.blessing__row::after { -webkit-mask-image: linear-gradient(90deg, #000, transparent); mask-image: linear-gradient(90deg, #000, transparent); }
+.blessing__ganesh { display: block; flex: none; width: auto; height: 56px; }
+.blessing__mantra {
+  margin: 0; display: flex; align-items: center; gap: 10px;
+  font-family: 'Noto Serif Devanagari', 'Nirmala UI', 'Mangal', serif; font-size: 15px; font-weight: 600; line-height: 1.3;
+  color: #8A1E12;
+}
+.blessing__swastik { display: block; flex: none; width: 15px; height: 15px; color: #C4161C; fill: currentColor; }
 
 .site-header {
   position: sticky; top: 0; z-index: 100;

@@ -188,7 +188,16 @@
           esc(ctaText) + icon('arrow', 'icon--arrow') + '</a>'
       : '';
 
+    var swastik = '<svg class="blessing__swastik" viewBox="0 0 24 24" aria-hidden="true">' +
+      '<path d="M12 12V3h8M12 12h9v8M12 12v9H4M12 12H3V4" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square"/>' +
+      '<circle cx="16.5" cy="7.5" r="1.5"/><circle cx="16.5" cy="16.5" r="1.5"/><circle cx="7.5" cy="16.5" r="1.5"/><circle cx="7.5" cy="7.5" r="1.5"/></svg>';
+
+    /* Shri Ganesh blessing strip above the header; it scrolls away, the header stays stuck */
     el.outerHTML =
+      '<div class="blessing">' +
+        '<div class="blessing__row"><img class="blessing__ganesh" src="assets/images/brand/ganesh-blessing.png" width="114" height="120" alt="Shri Ganesh"></div>' +
+        '<p class="blessing__mantra" lang="sa">' + swastik + 'ॐ गणेशाय नमः' + swastik + '</p>' +
+      '</div>' +
       '<header class="site-header" id="top">' +
         '<div class="container header__inner">' +
           '<a class="logo logo--' + logoSize + '" href="/" aria-label="' + esc(logoText) + ' — Home">' + logoMarkup(SITE.logoImage) + '</a>' +
@@ -247,6 +256,13 @@
   /* This script is loaded right after the header placeholder, so the header
      renders immediately (no flash); the footer renders once the page is parsed. */
   injectSprite();
+
+  /* Devanagari font for the blessing strip — only the letters it uses, so the file is tiny */
+  var deva = document.createElement('link');
+  deva.rel = 'stylesheet';
+  deva.href = 'https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari:wght@600&display=swap&text=' + encodeURIComponent('ॐ गणेशाय नमः');
+  document.head.appendChild(deva);
+
   var h = document.getElementById('site-header');
   if (h) renderHeader(h);
 

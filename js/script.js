@@ -248,6 +248,8 @@ document.addEventListener('DOMContentLoaded', function () {
     if (!toggle) return;
     toggle.setAttribute('aria-expanded', String(open));
     toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    /* the menu opens right under the header, which sits lower while the Ganesh strip is in view */
+    if (open) document.documentElement.style.setProperty('--menu-top', Math.max(0, header.getBoundingClientRect().bottom) + 'px');
     header.classList.toggle('is-open', open);
     document.body.classList.toggle('menu-open', open);
   }

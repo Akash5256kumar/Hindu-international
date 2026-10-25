@@ -29,7 +29,7 @@
 @media (max-width: 1240px) {
   .nav-toggle { display: grid; }
   .nav {
-    position: fixed; left: 0; right: 0; top: var(--header-h); bottom: 0;
+    position: fixed; left: 0; right: 0; top: var(--menu-top, var(--header-h)); bottom: 0;
     margin: 0; padding: 20px var(--gutter) 32px;
     flex-direction: column; align-items: stretch; gap: 20px;
     background: #FEFDF8;
@@ -91,7 +91,11 @@
 
 /* ---------- Mobile ---------- */
 @media (max-width: 768px) {
-  :root { --gutter: 16px; --section-y: 60px; --header-h: 72px; }
+  :root { --gutter: 16px; --section-y: 60px; --header-h: 72px; --blessing-h: 82px; }
+  .blessing__ganesh { height: 46px; }
+  .blessing__row { gap: 12px; }
+  .blessing__mantra { font-size: 14px; gap: 8px; }
+  .blessing__swastik { width: 14px; height: 14px; }
 
   body { font-size: 16px; }
   .logo, .logo--md, .logo--lg, .logo--xl { --logo-mark: 42px; --logo-text: 1.24rem; --logo-img: 58px; gap: 9px; }
