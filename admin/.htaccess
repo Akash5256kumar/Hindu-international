@@ -3,3 +3,14 @@ DirectoryIndex index.php
 <IfModule mod_expires.c>
   ExpiresActive Off
 </IfModule>
+
+# Allow larger uploads for the admin panel (hero images can be up to ~10 MB before optimisation).
+# PHP's own upload_max_filesize and post_max_size default to 2 MB; raise both here.
+<IfModule mod_php.c>
+  php_value upload_max_filesize 10M
+  php_value post_max_size       12M
+</IfModule>
+<IfModule mod_php8.c>
+  php_value upload_max_filesize 10M
+  php_value post_max_size       12M
+</IfModule>
