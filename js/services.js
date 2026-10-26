@@ -704,9 +704,9 @@
         img.srcset = [828, 1200].map(function (w) {
           return 'media.php?src=' + encodeURIComponent(info.hero) + '&w=' + w + ' ' + w + 'w';
         }).concat(info.hero + ' 2400w').join(', ');
-        /* show the full image without cropping: media div adapts to the image's natural ratio */
-        img.style.cssText = 'width:100%;height:auto;display:block;object-fit:contain';
-        media.style.cssText = 'aspect-ratio:auto;overflow:visible;background:transparent';
+        /* override position:absolute from CSS so the image flows normally and heading stays visible */
+        img.style.cssText = 'width:100%;height:auto;display:block;position:static;';
+        media.style.cssText = 'aspect-ratio:auto;overflow:hidden;background:#f5f0e8;';
         media.classList.remove('is-empty');
         media.appendChild(img);
       });
