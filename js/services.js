@@ -699,11 +699,14 @@
         img.alt = a.getAttribute('data-place');
         img.loading = 'lazy';
         img.decoding = 'async';
-        img.sizes = '(max-width: 768px) 100vw, 400px';
-        img.srcset = [480, 828].map(function (w) {
+        /* use 828w or original — no 480w — so the card image stays sharp */
+        img.sizes = '(max-width: 768px) 100vw, 828px';
+        img.srcset = [828, 1200].map(function (w) {
           return 'media.php?src=' + encodeURIComponent(info.hero) + '&w=' + w + ' ' + w + 'w';
-        }).concat(info.hero + ' 1200w').join(', ');
-        img.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;object-fit:cover';
+        }).concat(info.hero + ' 2400w').join(', ');
+        /* show the full image without cropping: media div adapts to the image's natural ratio */
+        img.style.cssText = 'width:100%;height:auto;display:block;object-fit:contain';
+        media.style.cssText = 'aspect-ratio:auto;overflow:visible;background:transparent';
         media.classList.remove('is-empty');
         media.appendChild(img);
       });
