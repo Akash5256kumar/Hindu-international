@@ -264,11 +264,18 @@
      long-press menu and the save / print / view-source / developer-tools shortcuts.
      Form fields stay fully usable (typing, selecting, copy and paste). Search engines read the
      page source directly, so this has no effect on SEO. */
+  /* Image protection is switched off for now while new photos are being prepared: images can be
+     right-clicked, opened in a new tab and long-pressed. Set back to true to protect them again. */
+  var PROTECT_IMAGES = false;
   (function protectContent() {
     function inField(t) {
       return !!(t && t.closest && t.closest('input, textarea, select, [contenteditable="true"]'));
     }
-    function stop(e) { if (!inField(e.target)) e.preventDefault(); }
+    function stop(e) {
+      if (inField(e.target)) return;
+      if (!PROTECT_IMAGES && (e.type === 'contextmenu' || e.type === 'dragstart') && e.target && e.target.tagName === 'IMG') return;
+      e.preventDefault();
+    }
     ['contextmenu', 'copy', 'cut', 'selectstart', 'dragstart'].forEach(function (type) {
       document.addEventListener(type, stop);
     });
@@ -283,6 +290,7 @@
       if (block) e.preventDefault();
     });
     document.documentElement.classList.add('is-protected');
+    if (PROTECT_IMAGES) document.documentElement.classList.add('protect-images');
   })();
 
   /* Devanagari font for the blessing strip — only the letters it uses, so the file is tiny */
