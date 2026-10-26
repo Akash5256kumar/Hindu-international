@@ -53,6 +53,13 @@
   function image(path, alt, eager) {
     if (!isMedia(path)) return null;
     var img = el('img');
+    /* phones get a smaller copy made by media.php; wider screens keep the original */
+    if (/\.(jpe?g|png|webp)$/i.test(path)) {
+      img.sizes = '(max-width: 768px) 100vw, 1400px';
+      img.srcset = [480, 828, 1200].map(function (w) {
+        return 'media.php?src=' + encodeURIComponent(path) + '&w=' + w + ' ' + w + 'w';
+      }).concat(path + ' 1600w').join(', ');
+    }
     img.src = path;
     img.alt = str(alt);
     if (!eager) img.loading = 'lazy';
