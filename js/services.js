@@ -676,11 +676,32 @@
     get.then(function (d) {
       var pages = {};
       list(d && d.items).forEach(function (j) {
-        if (j.show !== false && /^[a-z0-9-]+$/.test(str(j.slug)) && str(j.name)) pages[str(j.name).toLowerCase()] = str(j.slug);
+        if (j.show !== false && /^[a-z0-9-]+$/.test(str(j.slug)) && str(j.name))
+          pages[str(j.name).toLowerCase()] = { slug: str(j.slug), hero: str(j.heroImage) };
       });
       buttons.forEach(function (a) {
-        var slug = pages[a.getAttribute('data-place').toLowerCase()];
-        if (slug) a.href = 'jyotirlinga?name=' + slug;
+        var info = pages[a.getAttribute('data-place').toLowerCase()];
+        if (!info) return;
+        /* link the button to the Jyotirlinga page */
+        a.href = 'jyotirlinga?name=' + info.slug;
+        /* if the card has no image yet, use the hero image from the Jyotirlinga page */
+        var card = a.closest('.sd-place');
+        if (!card) return;
+        var media = card.querySelector('.sd-place__media');
+        if (!media || media.querySelector('img')) return;   /* already has an image — keep it */
+        if (!info.hero || !/^(assets|uploads)\/[\w\-./]+$/.test(info.hero)) return;
+        var img = document.createElement('img');
+        img.src = info.hero;
+        img.alt = a.getAttribute('data-place');
+        img.loading = 'lazy';
+        img.decoding = 'async';
+        img.sizes = '(max-width: 768px) 100vw, 400px';
+        img.srcset = [480, 828].map(function (w) {
+          return 'media.php?src=' + encodeURIComponent(info.hero) + '&w=' + w + ' ' + w + 'w';
+        }).concat(info.hero + ' 1200w').join(', ');
+        img.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;object-fit:cover';
+        media.classList.remove('is-empty');
+        media.appendChild(img);
       });
     }, function () {});
   }
