@@ -25,6 +25,9 @@
   background: var(--jl-cream);
 }
 .jl-page main { color: var(--jl-text); }
+/* The page is built after its content file loads: until then keep the footer below the
+   screen, so it does not show first and then jump down */
+.jl-page:not(.is-ready) main { min-height: 100vh; }
 
 /* ---------- Shared: headings, trishul divider, button ---------- */
 .jl-title {

@@ -56,6 +56,13 @@
     var src = isMedia(path) ? path : (isMedia(fallback) ? fallback : '');
     if (!src) return null;
     var img = el('img');
+    /* phones get a smaller copy made by media.php; wider screens keep the original */
+    if (/\.(jpe?g|png|webp)$/i.test(src)) {
+      img.sizes = '(max-width: 768px) 100vw, 1600px';
+      img.srcset = [480, 828].map(function (w) {
+        return 'media.php?src=' + encodeURIComponent(src) + '&w=' + w + ' ' + w + 'w';
+      }).concat(src + ' 1600w').join(', ');
+    }
     img.src = src;
     img.alt = str(alt);
     img.loading = 'lazy';
