@@ -685,11 +685,15 @@
         /* link the button to the Jyotirlinga page */
         a.href = 'jyotirlinga?name=' + info.slug;
         /* if the card has no image yet, use the hero image from the Jyotirlinga page */
+        /* replace the card image with the hero image from the Jyotirlinga page */
+        if (!info.hero || !/^(assets|uploads)\/[\w\-./]+$/.test(info.hero)) return;
         var card = a.closest('.sd-place');
         if (!card) return;
         var media = card.querySelector('.sd-place__media');
-        if (!media || media.querySelector('img')) return;   /* already has an image — keep it */
-        if (!info.hero || !/^(assets|uploads)\/[\w\-./]+$/.test(info.hero)) return;
+        if (!media) return;
+        /* remove any existing image (placeholder set in the service admin) */
+        var old = media.querySelector('img');
+        if (old) old.parentNode.removeChild(old);
         var img = document.createElement('img');
         img.src = info.hero;
         img.alt = a.getAttribute('data-place');
