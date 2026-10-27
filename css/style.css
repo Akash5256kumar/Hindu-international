@@ -34,7 +34,7 @@
   --shadow-lg: 0 18px 48px rgba(90, 48, 12, .14);
 
   --header-h: 92px;
-  --blessing-h: 60px;           /* Shri Ganesh strip above the header (space kept for it before JS draws it) */
+  --blessing-h: 46px;           /* Shri Ganesh strip above the header (space kept for it before JS draws it) */
   --container: 1200px;
   --gutter: 24px;
   --section-y: 96px;
