@@ -1,0 +1,259 @@
+/* =====================================================================
+   CONTACT US PAGE — contact.css
+   All styles specific to contact-us.html.
+   Global tokens from style.css (--saffron, --navy, --cream, etc.) are
+   used here; do not duplicate them.
+   ===================================================================== */
+
+/* ---------- Trishul divider ---------- */
+.cu-divider {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 10px 0 14px;
+  color: var(--saffron);
+}
+.cu-divider--center { justify-content: center; }
+.cu-divider--light  { color: rgba(255,255,255,.65); }
+.cu-trishul { display: block; }
+
+/* ---------- Hero: split left / right ---------- */
+.cu-hero {
+  display: grid;
+  grid-template-columns: 58fr 42fr;
+  min-height: 440px;
+  overflow: hidden;
+}
+
+.cu-hero__left {
+  background: linear-gradient(140deg, #FBF2E4 0%, #F6E4CB 100%);
+  display: flex;
+  align-items: center;
+  padding: 56px 48px 56px
+    max(var(--gutter), calc((100vw - var(--container)) / 2 + var(--gutter)));
+}
+
+.cu-hero__content { max-width: 520px; width: 100%; }
+
+.cu-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: .85rem;
+  color: var(--muted);
+  margin-bottom: 18px;
+}
+.cu-breadcrumb a { color: var(--muted); text-decoration: none; }
+.cu-breadcrumb a:hover { color: var(--saffron); }
+.cu-breadcrumb__sep { color: #bbb; font-size: .9rem; }
+.cu-breadcrumb__current { color: var(--ink-2); font-weight: 500; }
+
+.cu-hero__title {
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  color: var(--ink);
+  margin-bottom: 0;
+  line-height: 1.1;
+}
+
+.cu-hero__sub {
+  font-family: var(--font-serif);
+  font-size: clamp(.95rem, 1.4vw, 1.15rem);
+  font-weight: 600;
+  color: var(--ink);
+  margin: 0 0 12px;
+  line-height: 1.4;
+}
+
+.cu-hero__desc {
+  color: var(--muted);
+  font-size: .97rem;
+  line-height: 1.75;
+  margin: 0;
+}
+
+.cu-hero__right { position: relative; overflow: hidden; }
+.cu-hero__right img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: center center;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,.55) 28%, #000 58%);
+          mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,.55) 28%, #000 58%);
+}
+
+/* ---------- Cards section ---------- */
+.cu-section { background: var(--cream); padding: 64px 0; }
+
+.cu-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.35fr;
+  gap: 28px;
+  align-items: start;
+}
+
+/* ---- Left card ---- */
+.cu-info-card { padding: 32px 28px; }
+
+.cu-info-block {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 28px;
+}
+
+.cu-icon-wrap {
+  flex: none;
+  width: 50px; height: 50px;
+  background: var(--tint);
+  border-radius: 50%;
+  display: grid; place-items: center;
+}
+.cu-icon-wrap .icon { width: 22px; height: 22px; color: var(--saffron); }
+
+.cu-info-heading {
+  font-size: 1.45rem;
+  color: var(--ink);
+  margin-bottom: 2px;
+}
+
+.cu-info-block > .cu-info-body > p {
+  color: var(--muted);
+  font-size: .95rem;
+  margin-bottom: 16px;
+}
+
+.cu-field-label {
+  display: block;
+  font-size: .78rem;
+  font-weight: 700;
+  color: var(--ink);
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  margin-bottom: 4px;
+}
+
+.cu-email-link {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--ink);
+  word-break: break-all;
+  text-decoration: none;
+}
+.cu-email-link:hover { color: var(--saffron); }
+
+.cu-support-block { display: flex; gap: 18px; align-items: flex-start; }
+
+.cu-support-block > .cu-info-body > p {
+  color: var(--muted);
+  font-size: .95rem;
+  margin: 0;
+}
+
+.cu-support-heading {
+  font-size: 1.2rem;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+
+/* ---- Right form card ---- */
+.cu-form-card { padding: 36px; }
+
+.cu-form-heading { font-size: 1.6rem; color: var(--ink); margin-bottom: 6px; }
+
+.cu-form-desc { color: var(--muted); margin-bottom: 24px; font-size: .97rem; }
+
+.cu-privacy {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: .8rem;
+  color: var(--muted);
+  margin-top: 14px;
+  line-height: 1.5;
+}
+.cu-privacy .icon { width: 13px; height: 13px; flex: none; margin-top: 2px; color: var(--muted); }
+
+/* ---------- FAQ section ---------- */
+.cu-faq-section {
+  background: var(--navy);
+  padding: 80px 0;
+  text-align: center;
+}
+
+.cu-faq-heading {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  color: #fff;
+  margin-bottom: 0;
+}
+
+.cu-faq-desc {
+  color: rgba(255,255,255,.68);
+  margin: 0 auto 40px;
+  max-width: 560px;
+  font-size: .97rem;
+}
+
+.cu-faq-list {
+  text-align: left;
+  max-width: 860px;
+  margin: 0 auto;
+}
+.cu-faq-list details {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+.cu-faq-list details + details { margin-top: 12px; }
+.cu-faq-list summary {
+  list-style: none; cursor: pointer;
+  display: flex; align-items: center; gap: 12px;
+  padding: 18px 22px; font-weight: 600; color: var(--ink); font-size: 1rem;
+}
+.cu-faq-list summary::-webkit-details-marker { display: none; }
+.cu-faq-list summary::after {
+  content: '+'; margin-left: auto; flex: none;
+  width: 30px; height: 30px; border-radius: 50%;
+  display: grid; place-items: center;
+  background: var(--tint); color: var(--saffron-deep);
+  font-size: 1.25rem; font-weight: 400; line-height: 1;
+  transition: transform .25s;
+}
+.cu-faq-list details[open] summary::after { transform: rotate(45deg); }
+.cu-faq-list details p {
+  padding: 2px 22px 20px; margin: 0;
+  color: var(--muted); font-size: .95rem; line-height: 1.7;
+}
+
+.cu-faq-num {
+  flex: none;
+  font-weight: 700; color: var(--ink);
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 1024px) {
+  .cu-grid { grid-template-columns: 1fr; }
+  .cu-hero { grid-template-columns: 1fr; }
+  .cu-hero__left {
+    padding: 44px var(--gutter);
+    order: 2;
+  }
+  .cu-hero__right {
+    order: 1;
+    min-height: 240px;
+  }
+  .cu-hero__right img {
+    -webkit-mask-image: linear-gradient(180deg, #000 60%, transparent 100%);
+            mask-image: linear-gradient(180deg, #000 60%, transparent 100%);
+  }
+  .cu-divider { justify-content: center; }
+  .cu-hero__content { max-width: 100%; text-align: center; }
+  .cu-hero__title { text-align: center; }
+}
+
+@media (max-width: 768px) {
+  .cu-hero__right { min-height: 200px; }
+  .cu-info-card { padding: 26px 22px; }
+  .cu-form-card { padding: 26px 22px; }
+  .cu-faq-section { padding: 56px 0; }
+}
