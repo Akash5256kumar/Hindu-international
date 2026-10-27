@@ -8,7 +8,7 @@ const VPS_RECIPIENT = 'itisrupesh@gmail.com';
 
 // Sender address. Must be an address on YOUR domain (create it in
 // Hostinger → Emails), otherwise messages are likely to go to spam.
-const VPS_FROM = 'no-reply@your-domain.com';
+const VPS_FROM = 'no-reply@hindu.international';
 const VPS_FROM_NAME = 'Hindu.International Website';
 
 // Photograph limits (keep in sync with js/script.js).

@@ -65,7 +65,7 @@ jobs:
             --exclude='.gitignore' --exclude='.DS_Store' \
             --exclude='README.md' --exclude='*.pdf' --exclude='*.zip' \
             --exclude='deploy.php' \
-            --exclude='/admin/config.php' --exclude='/forms/config.php' \
+            --exclude='/admin/config.php' \
             --exclude='/content/content.json' --exclude='/content/content.js' \
             ./ "$SSH_USER@$SSH_HOST:$DEPLOY_PATH/"
 

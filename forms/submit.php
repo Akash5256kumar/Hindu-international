@@ -8,18 +8,25 @@
 declare(strict_types=1);
 // JSON endpoint: never print PHP warnings into the response (they are still logged)
 ini_set('display_errors', '0');
-$configPath = '/etc/hindu.international/forms.php';
-if (!is_file($configPath) && in_array(PHP_SAPI, ['cli', 'cli-server'], true)) {
-    $configPath = __DIR__ . '/config.php';
-}
-if (!is_file($configPath)) {
-    throw new RuntimeException('Private forms configuration is unavailable.');
-}
-require $configPath;
-require __DIR__ . '/../admin/includes/polyfills.php';
 
 header('Content-Type: application/json; charset=utf-8');
 header('X-Content-Type-Options: nosniff');
+
+try {
+    $configPath = '/etc/hindu.international/forms.php';
+    if (!is_file($configPath)) {
+        $configPath = __DIR__ . '/config.php';
+    }
+    if (!is_file($configPath)) {
+        throw new RuntimeException('Form configuration missing on server.');
+    }
+    require $configPath;
+    require __DIR__ . '/../admin/includes/polyfills.php';
+} catch (Throwable $e) {
+    http_response_code(500);
+    echo json_encode(['ok' => false, 'message' => 'Form setup is incomplete. Please contact us directly by email.']);
+    exit;
+}
 
 function respond(bool $ok, string $message = '', int $code = 200): void
 {
