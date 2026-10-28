@@ -113,11 +113,6 @@
   to   { background-position: -70% 0, 0 0; }
 }
 
-/* ---------- Desktop: text sits a little lower in the hero ---------- */
-@media (min-width: 769px) {
-  .hero--slider .hero__inner { padding-top: 110px; padding-bottom: 30px; }
-}
-
 /* ---------- Phones ---------- */
 @media (max-width: 768px) {
   .hero--slider .hero__title { font-size: clamp(1.9rem, 8vw, 2.5rem); margin-bottom: 16px; }
