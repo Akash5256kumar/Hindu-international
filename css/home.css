@@ -140,20 +140,69 @@
 
 /* ---------- Our Work Process ---------- */
 .hm-process {
-  background: linear-gradient(180deg, #FCEBD6 0%, #FBE3CB 100%);
+  background: #1A0E06;
+  padding: 80px 0 72px;
+  overflow: hidden;
 }
-.hm-process::before, .hm-process::after {
-  content: ''; position: absolute; top: -40px; width: 300px; height: 300px;
-  background: url('../assets/images/mandala.svg') center / contain no-repeat;
-  opacity: .09; pointer-events: none;
+/* Full-width background photo */
+.hm-process__bg {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: center 35%;
+  z-index: 0;
 }
-.hm-process::before { left: -110px; }
-.hm-process::after { right: -110px; }
+/* Dark overlay replacing the mandala decorations */
+.hm-process::before {
+  content: ''; position: absolute; inset: 0;
+  top: 0; left: 0; right: 0; bottom: 0;
+  width: auto; height: auto;
+  background: linear-gradient(to bottom, rgba(8,4,0,.52) 0%, rgba(12,6,0,.38) 55%, rgba(8,4,0,.55) 100%);
+  z-index: 1; opacity: 1;
+}
+.hm-process::after { display: none; }
+/* Container above overlay */
+.hm-process > .container { position: relative; z-index: 2; }
 
+/* ── Heading area ── */
+.hm-process .hm-head { margin-bottom: 44px; }
+
+.hm-process .hm-label {
+  display: flex; align-items: center; justify-content: center;
+  width: fit-content; max-width: 420px; margin: 0 auto 14px;
+  color: #F2C07A;
+}
+.hm-process .hm-label::before,
+.hm-process .hm-label::after {
+  content: ''; display: block; flex: 1;
+  height: 1px; background: currentColor;
+  opacity: .65; min-width: 20px; max-width: 56px;
+}
+.hm-process .hm-label::before { margin-right: 10px; }
+.hm-process .hm-label::after  { margin-left:  10px; }
+.hm-process .hm-label .icon { color: #F2C07A; }
+
+.hm-process h2 {
+  color: #fff;
+  font-size: clamp(1.9rem, 3.4vw, 2.75rem);
+  text-shadow: 0 2px 14px rgba(0,0,0,.4);
+}
+.hm-process h2 em { font-style: normal; color: #F5A040; }
+
+/* Diamond divider under heading */
+.hm-proc__divider {
+  display: block; margin: 14px auto 0;
+  text-align: center; font-size: .95rem; letter-spacing: .22em;
+  color: rgba(242,192,122,.75); line-height: 1;
+}
+.hm-proc__divider::before { content: '— \25C7 —'; }
+
+/* ── Step grid (base unchanged, overrides below) ── */
 .hm-steps {
   display: grid; grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 0; max-width: 1080px; margin: 0 auto; counter-reset: none;
 }
+
+/* ── Base step (non-process context unchanged) ── */
 .hm-step { position: relative; text-align: center; padding: 0 22px; }
 .hm-step:not(:last-child)::after {
   content: '\203A'; position: absolute; right: -8px; top: 22px;
@@ -176,6 +225,52 @@
 .hm-step__no { display: block; font-size: .8rem; font-weight: 700; letter-spacing: .08em; color: var(--hm-accent); margin-bottom: 4px; }
 .hm-step h3 { font-size: 1.02rem; font-weight: 700; color: var(--saffron-deep); margin-bottom: 8px; }
 .hm-step p { font-size: .9rem; line-height: 1.65; color: var(--hm-text); }
+
+/* ── Process-specific card overrides ── */
+.hm-process .hm-steps {
+  gap: 18px; max-width: none; align-items: stretch;
+}
+.hm-process .hm-step {
+  --step-col: #C64828;
+  text-align: left; padding: 26px 22px 22px;
+  background: rgba(255,248,236,.74);
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  border-radius: 14px;
+  border-left: 6px solid var(--step-col);
+  box-shadow: 0 8px 30px rgba(0,0,0,.22), 0 2px 6px rgba(0,0,0,.14);
+  display: flex; flex-direction: column; gap: 10px;
+  transition: transform .22s ease, box-shadow .22s ease;
+}
+.hm-process .hm-step:hover {
+  transform: translateY(-5px) !important;
+  box-shadow: 0 14px 38px rgba(0,0,0,.28), 0 3px 10px rgba(0,0,0,.16);
+}
+/* Per-card accent colours */
+.hm-process .hm-step:nth-child(1) { --step-col: #C64828; }
+.hm-process .hm-step:nth-child(2) { --step-col: #1E7D67; }
+.hm-process .hm-step:nth-child(3) { --step-col: #BF8E18; }
+.hm-process .hm-step:nth-child(4) { --step-col: #6850A0; }
+
+/* Title: coloured, no number/icon */
+.hm-process .hm-step h3 {
+  font-size: 1.06rem; font-weight: 700;
+  color: var(--step-col); margin-bottom: 0; line-height: 1.28;
+}
+.hm-process .hm-step p {
+  font-size: .875rem; line-height: 1.7;
+  color: #3D2818; flex: 1; margin: 0;
+}
+/* Bottom accent line — overrides connector arrow */
+.hm-process .hm-step::after {
+  content: '' !important;
+  position: static !important; display: block !important;
+  width: 34px !important; height: 3px !important;
+  background: var(--step-col) !important;
+  border-radius: 2px !important; margin-top: 12px !important;
+  font-size: 0 !important; line-height: 0 !important;
+  right: auto !important; top: auto !important;
+  color: transparent !important; font-family: inherit !important;
+}
 
 /* ---------- Reason to Choose Our Service ---------- */
 .hm-reasons { background: linear-gradient(180deg, #FFF5E8 0%, #FDF0DF 100%); }
@@ -275,6 +370,9 @@
   .hm-cards { margin: 0 auto; }
   .hm-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px 0; }
   .hm-step:nth-child(2)::after { display: none; }
+  /* Process section: 2 columns on tablet */
+  .hm-process .hm-steps { gap: 14px; }
+  .hm-process .hm-step:nth-child(2)::after { display: block !important; }
   .hm-reasons__grid { grid-template-columns: 1fr; gap: 34px; }
   .hm-reasons__col--left { padding: 0 0 0 4px; }
   .hm-reasons__col--left::after, .hm-reasons__col--left::before { display: none; }
@@ -299,6 +397,11 @@
   .hm-steps { grid-template-columns: 1fr; gap: 34px; }
   .hm-step { padding: 0 8px; }
   .hm-step::after { display: none !important; }
+  /* Process section: 1 column on mobile, keep bottom line */
+  .hm-process { padding: 56px 0 52px; }
+  .hm-process .hm-steps { gap: 14px; }
+  .hm-process .hm-step { padding: 22px 18px 18px; }
+  .hm-process .hm-step::after { display: block !important; }
   .hm-purpose__grid { grid-template-columns: 1fr; }
   .hm-pur { grid-template-columns: auto minmax(0, 1fr); padding: 18px; }
   .hm-pur__icon { display: none; }
