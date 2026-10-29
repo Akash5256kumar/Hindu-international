@@ -113,6 +113,15 @@
   to   { background-position: -70% 0, 0 0; }
 }
 
+/* ---------- Desktop: lighter cream fade on the left, photo clear after the text ---------- */
+@media (min-width: 1025px) {
+  .hero--slider .hero__media::after {
+    background:
+      linear-gradient(90deg, rgba(255, 248, 237, .9) 0%, rgba(255, 248, 237, .7) 18%, rgba(255, 248, 237, .3) 34%, rgba(255, 248, 237, 0) 46%),
+      linear-gradient(0deg, rgba(255, 248, 237, .4) 0%, rgba(255, 248, 237, 0) 18%);
+  }
+}
+
 /* ---------- Phones ---------- */
 @media (max-width: 768px) {
   .hero--slider .hero__title { font-size: clamp(1.9rem, 8vw, 2.5rem); margin-bottom: 16px; }
