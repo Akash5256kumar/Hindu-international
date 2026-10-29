@@ -31,6 +31,8 @@ final class ContentStore
     private const SERVICES_DEFAULT = CONTENT_DIR . '/services.default.json';
     /** Starting content for the Jyotirlinga pages, used until the admin saves its own */
     private const JYOTIRLINGA_DEFAULT = CONTENT_DIR . '/jyotirlinga.default.json';
+    /** Starting content for the Home page sections, used until the admin saves its own */
+    private const HOME_DEFAULT = CONTENT_DIR . '/home.default.json';
 
     public static function schema(): array
     {
@@ -58,6 +60,18 @@ final class ContentStore
                     isset($data['jyotirlingas']) && is_array($data['jyotirlingas']) ? $data['jyotirlingas'] : ['items' => []],
                     $jyotirlingas
                 );
+            }
+        }
+        if (is_file(self::HOME_DEFAULT)) {
+            $home = json_decode((string) file_get_contents(self::HOME_DEFAULT), true);
+            if (is_array($home)) {
+                $saved = isset($data['home']) && is_array($data['home']) ? $data['home'] : [];
+                foreach ($home as $key => $value) {
+                    if (!array_key_exists($key, $saved)) {
+                        $saved[$key] = $value;   // a section the admin has not saved yet starts with its default content
+                    }
+                }
+                $data['home'] = $saved;
             }
         }
         return $data;

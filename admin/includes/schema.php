@@ -29,6 +29,9 @@ $icons = [
     'coins' => 'Coins (money)', 'school' => 'School', 'alert' => 'Warning sign', 'scale' => 'Scales (legal)',
     'heartpulse' => 'Heart + pulse (health)', 'bookopen' => 'Open book', 'temple' => 'Temple', 'globe' => 'Globe',
     'info' => 'Info', 'calendar' => 'Calendar', 'phone' => 'Phone', 'mail' => 'Email', 'pin' => 'Location pin',
+    'snan' => 'Water + drop (snan)', 'pandit' => 'Pandit', 'namaste' => 'Folded hands', 'flame' => 'Fire (havan)',
+    'doc' => 'Document (details)', 'edit' => 'Pen',
+    'touch' => 'Hand (choose)', 'gear' => 'Gear (arrange)', 'chart' => 'Growth chart',
 ];
 $iconField  = ['key' => 'icon', 'label' => 'Icon', 'type' => 'select', 'options' => $icons];
 $colorField = ['key' => 'color', 'label' => 'Icon colour', 'type' => 'color', 'default' => '#E8590C'];
@@ -56,14 +59,15 @@ $seoPages = [
     'event' => 'Event Information',
     'booking' => 'Service / Booking',
     'contact' => 'Contact Us',
+    'services' => 'Services',
+    'jyotirlinga' => '12 Jyotirlinga',
     'privacy' => 'Privacy Policy',
     'terms' => 'Terms & Conditions',
 ];
 
 /** Icons for the Services pages: the common set plus the extra ones drawn by js/services.js */
 $serviceIcons = $icons + [
-    'snan' => 'Water + drop (snan)', 'cart' => 'Cart (store)', 'flame' => 'Fire (havan)', 'pandit' => 'Pandit',
-    'namaste' => 'Folded hands', 'video' => 'Video', 'camera' => 'Camera', 'edit' => 'Pen (sankalp)',
+    'cart' => 'Cart (store)', 'video' => 'Video', 'camera' => 'Camera', 'edit' => 'Pen (sankalp)',
 ];
 $serviceIconField = ['key' => 'icon', 'label' => 'Icon', 'type' => 'select', 'options' => $serviceIcons];
 $accentHelp = 'Shown in orange straight after the heading. Leave empty for a one-colour heading.';
@@ -80,52 +84,78 @@ return [
     [
         'id' => 'home', 'title' => 'Home page', 'icon' => 'home',
         'groups' => [
-            ['path' => 'home.hero', 'title' => 'Hero (top of the page)', 'fields' => [
-                ['key' => 'eyebrow', 'label' => 'Small line above the heading', 'type' => 'textarea', 'rows' => 2, 'max' => 120, 'help' => 'Press Enter to start a new line.'],
-                ['key' => 'title', 'label' => 'Main heading', 'type' => 'textarea', 'rows' => 2, 'max' => 60, 'required' => true],
-                ['key' => 'text', 'label' => 'Description', 'type' => 'textarea', 'rows' => 3, 'max' => 400],
-                ['key' => 'primaryText', 'label' => 'Orange button text', 'type' => 'text', 'max' => 40, 'help' => 'Leave empty to hide the button.'],
-                $link('primaryLink', 'Orange button link'),
-                ['key' => 'secondaryText', 'label' => 'White button text', 'type' => 'text', 'max' => 40, 'help' => 'Leave empty to hide the button. Opens the video set under “Social & video” when there is one.'],
-                $link('secondaryLink', 'White button link'),
-                ['key' => 'image', 'label' => 'Background photo', 'type' => 'image', 'required' => true, 'help' => 'Wide landscape photo, at least 1920 px wide. The person should be on the right side.'],
-                ['key' => 'imageAlt', 'label' => 'Photo description (for accessibility)', 'type' => 'text', 'max' => 200],
+            ['path' => 'home', 'title' => 'Hero slider (top of the page)', 'help' => 'The slides at the top of the Home page. Each slide has its own photo, heading, text and two buttons. They change every 5 seconds, in this order.', 'fields' => [
+                ['key' => 'heroSlides', 'label' => 'Slides', 'type' => 'list', 'min' => 1, 'max' => 6, 'itemLabel' => 'Slide', 'titleField' => 'title', 'fields' => [
+                    ['key' => 'title', 'label' => 'Heading', 'type' => 'textarea', 'rows' => 2, 'max' => 140, 'required' => true, 'help' => 'Put *stars* around the words that should get the gold shine, e.g. Your Faith, Your *Spiritual Connection.*'],
+                    ['key' => 'text', 'label' => 'Description', 'type' => 'textarea', 'rows' => 3, 'max' => 400],
+                    ['key' => 'primaryText', 'label' => 'Orange button text', 'type' => 'text', 'max' => 40, 'help' => 'Leave empty to hide the button.'],
+                    $link('primaryLink', 'Orange button link'),
+                    ['key' => 'secondaryText', 'label' => 'White button text', 'type' => 'text', 'max' => 40, 'help' => 'Leave empty to hide the button.'],
+                    $link('secondaryLink', 'White button link'),
+                    ['key' => 'image', 'label' => 'Slide photo', 'type' => 'image', 'required' => true, 'help' => 'Wide landscape photo, at least 1800 px wide, about 2 : 1. Keep the person or main subject on the right side; the left side sits behind the text.'],
+                    ['key' => 'imageAlt', 'label' => 'Photo description (for accessibility)', 'type' => 'text', 'max' => 200],
+                ]],
             ]],
             ['path' => 'home', 'title' => 'Trust points under the buttons', 'fields' => [
                 ['key' => 'trust', 'label' => 'Points', 'type' => 'list', 'fixed' => 4, 'itemLabel' => 'Point', 'titleField' => 'label', 'fields' => [
                     ['key' => 'label', 'label' => 'Text', 'type' => 'text', 'max' => 40],
                 ]],
             ]],
-            ['path' => 'home.service', 'title' => '“Our Service” section', 'fields' => [
+            ['path' => 'home.intro', 'title' => 'Introduction (text + four photo cards)', 'fields' => [
                 ['key' => 'label', 'label' => 'Small label', 'type' => 'text', 'max' => 40],
-                ['key' => 'title', 'label' => 'Heading', 'type' => 'textarea', 'rows' => 2, 'max' => 80],
-                ['key' => 'text', 'label' => 'Text', 'type' => 'textarea', 'rows' => 4, 'max' => 600],
-                ['key' => 'buttonText', 'label' => 'Button text', 'type' => 'text', 'max' => 40, 'help' => 'Leave empty to hide the button.'],
-                $link('buttonLink', 'Button link'),
-                ['key' => 'image', 'label' => 'Photo', 'type' => 'image', 'required' => true],
-                ['key' => 'imageAlt', 'label' => 'Photo description', 'type' => 'text', 'max' => 200],
+                ['key' => 'title', 'label' => 'Heading', 'type' => 'textarea', 'rows' => 2, 'max' => 120],
+                ['key' => 'text', 'label' => 'Text', 'type' => 'paragraphs', 'rows' => 7, 'max' => 1800, 'help' => 'Leave an empty line between paragraphs.'],
+                ['key' => 'cards', 'label' => 'Photo cards (right side)', 'type' => 'list', 'min' => 1, 'max' => 6, 'itemLabel' => 'Card', 'titleField' => 'title', 'fields' => [
+                    $showField, $iconField,
+                    ['key' => 'title', 'label' => 'Title', 'type' => 'text', 'max' => 60, 'required' => true],
+                    ['key' => 'image', 'label' => 'Photo', 'type' => 'image', 'help' => 'Landscape photo, about 4 : 3.'],
+                    ['key' => 'imageAlt', 'label' => 'Photo description', 'type' => 'text', 'max' => 200],
+                    $link('link', 'Where the card leads'),
+                ]],
             ]],
-            ['path' => 'home.how', 'title' => '“How It Works” section heading', 'help' => 'The four steps are edited under “How It Works”.', 'fields' => [
+            ['path' => 'home.process', 'title' => 'Our Work Process (steps in a row)', 'fields' => [
                 ['key' => 'label', 'label' => 'Small label', 'type' => 'text', 'max' => 40],
-                ['key' => 'title', 'label' => 'Heading', 'type' => 'text', 'max' => 80],
-                ['key' => 'subtitle', 'label' => 'Subtitle', 'type' => 'text', 'max' => 200],
+                ['key' => 'title', 'label' => 'Heading', 'type' => 'text', 'max' => 100],
+                ['key' => 'steps', 'label' => 'Steps', 'type' => 'list', 'min' => 1, 'max' => 6, 'itemLabel' => 'Step', 'titleField' => 'title', 'fields' => [
+                    $showField, $iconField,
+                    ['key' => 'number', 'label' => 'Number', 'type' => 'text', 'max' => 4, 'help' => 'e.g. 01'],
+                    ['key' => 'title', 'label' => 'Heading', 'type' => 'text', 'max' => 60, 'required' => true],
+                    ['key' => 'text', 'label' => 'Description', 'type' => 'textarea', 'rows' => 4, 'max' => 400],
+                ]],
             ]],
-            ['path' => 'home.event', 'title' => '“Upcoming Event” section heading', 'help' => 'The event itself is edited under “Events”.', 'fields' => [
+            ['path' => 'home.reasons', 'title' => 'Reason to Choose Our Service (two columns)', 'fields' => [
                 ['key' => 'label', 'label' => 'Small label', 'type' => 'text', 'max' => 40],
-                ['key' => 'title', 'label' => 'Heading', 'type' => 'text', 'max' => 80],
-                ['key' => 'subtitle', 'label' => 'Subtitle', 'type' => 'text', 'max' => 200],
-                ['key' => 'buttonText', 'label' => 'Button text', 'type' => 'text', 'max' => 40, 'help' => 'Leave empty to hide the button.'],
-                $link('buttonLink', 'Button link'),
+                ['key' => 'title', 'label' => 'Heading', 'type' => 'text', 'max' => 100],
+                ['key' => 'leftItems', 'label' => 'Left column', 'type' => 'list', 'min' => 0, 'max' => 5, 'itemLabel' => 'Block', 'titleField' => 'title', 'fields' => [
+                    $showField, $iconField,
+                    ['key' => 'title', 'label' => 'Heading', 'type' => 'text', 'max' => 80, 'required' => true],
+                    ['key' => 'text', 'label' => 'Description', 'type' => 'textarea', 'rows' => 4, 'max' => 400],
+                ]],
+                ['key' => 'rightItems', 'label' => 'Right column', 'type' => 'list', 'min' => 0, 'max' => 5, 'itemLabel' => 'Block', 'titleField' => 'title', 'fields' => [
+                    $showField, $iconField,
+                    ['key' => 'title', 'label' => 'Heading', 'type' => 'text', 'max' => 80, 'required' => true],
+                    ['key' => 'text', 'label' => 'Description', 'type' => 'textarea', 'rows' => 4, 'max' => 400],
+                ]],
+                ['key' => 'decorImage', 'label' => 'Faded temple picture — left edge', 'type' => 'image', 'help' => 'Tall picture that fades into the background. Remove to show none.'],
             ]],
-            ['path' => 'home.cta', 'title' => 'Banner above the footer', 'fields' => [
-                ['key' => 'quote', 'label' => 'Quote', 'type' => 'text', 'max' => 100],
-                ['key' => 'text', 'label' => 'Line under the quote', 'type' => 'text', 'max' => 160],
-                ['key' => 'button', 'label' => 'Button text', 'type' => 'text', 'max' => 40, 'help' => 'Leave empty to hide the button.'],
-                $link('buttonLink', 'Button link'),
-                ['key' => 'image', 'label' => 'Background photo', 'type' => 'image', 'required' => true, 'help' => 'Very wide photo; the left side stays visible, the right side sits behind the text.'],
+            ['path' => 'home.purpose', 'title' => 'Our Purpose (2 × 2 blocks)', 'fields' => [
+                ['key' => 'label', 'label' => 'Small label', 'type' => 'text', 'max' => 40],
+                ['key' => 'title', 'label' => 'Heading', 'type' => 'text', 'max' => 100],
+                ['key' => 'items', 'label' => 'Blocks', 'type' => 'list', 'min' => 1, 'max' => 8, 'itemLabel' => 'Block', 'titleField' => 'title', 'fields' => [
+                    $showField, $iconField,
+                    ['key' => 'number', 'label' => 'Number', 'type' => 'text', 'max' => 4, 'help' => 'e.g. 01'],
+                    ['key' => 'title', 'label' => 'Heading', 'type' => 'text', 'max' => 80, 'required' => true],
+                    ['key' => 'text', 'label' => 'Description', 'type' => 'textarea', 'rows' => 4, 'max' => 500],
+                ]],
             ]],
-            ['path' => 'home', 'title' => 'Page layout', 'help' => 'Choose which sections the Home page shows and their order. Use ↑ ↓ to move a section, the switch to hide it.', 'fields' => [
-                $layout(['hero' => 'Hero (top of the page)', 'service' => 'Our Service', 'how' => 'How It Works', 'event' => 'Upcoming Event', 'cta' => 'Banner above the footer']),
+            ['path' => 'home.bottomCta', 'title' => 'Banner above the footer', 'fields' => [
+                ['key' => 'title', 'label' => 'Heading', 'type' => 'textarea', 'rows' => 2, 'max' => 140],
+                ['key' => 'text', 'label' => 'Text', 'type' => 'textarea', 'rows' => 3, 'max' => 500],
+                ['key' => 'primaryText', 'label' => 'Orange button text', 'type' => 'text', 'max' => 40, 'help' => 'Leave empty to hide the button.'],
+                $link('primaryLink', 'Orange button link'),
+                ['key' => 'secondaryText', 'label' => 'Light button text', 'type' => 'text', 'max' => 40, 'help' => 'Leave empty to hide the button.'],
+                $link('secondaryLink', 'Light button link'),
+                ['key' => 'image', 'label' => 'Background photo', 'type' => 'image', 'help' => 'Very wide photo (about 6 : 1). A light wash is laid over it so the text stays readable.'],
             ]],
         ],
     ],
