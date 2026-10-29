@@ -131,8 +131,18 @@
   .hero--slider { --wdur: .9s; --step: 65ms; }
 }
 
+/* ---------- Havan canvas overlay ----------------------------------------- */
+.havan-cv {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  pointer-events: none; z-index: 1;
+  opacity: 0; transition: opacity 1.2s ease;
+}
+.havan-cv.is-active { opacity: 1; }
+
 /* ---------- Reduced motion: still first slide, no zoom, no text animation ---------- */
 @media (prefers-reduced-motion: reduce) {
   .hero--slider .hero__media img.hero__img { transition: none; animation: none !important; }
   .hero__slide, .hero__slide * { animation: none !important; transition: none !important; }
+  .havan-cv { display: none; }
 }
