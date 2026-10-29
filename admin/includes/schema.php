@@ -359,10 +359,13 @@ return [
     [
         'id' => 'about', 'title' => 'About Us', 'icon' => 'info',
         'groups' => [
-            ['path' => 'about.banner', 'title' => 'Banner', 'fields' => [
-                ['key' => 'title', 'label' => 'Heading', 'type' => 'text', 'max' => 80, 'required' => true],
-                ['key' => 'text', 'label' => 'Subtitle', 'type' => 'text', 'max' => 200],
-                ['key' => 'image', 'label' => 'Banner photo', 'type' => 'image', 'required' => true],
+            ['path' => 'about.heroBanner', 'title' => 'Banner (top of the page)', 'fields' => [
+                ['key' => 'title', 'label' => 'Heading', 'type' => 'textarea', 'rows' => 2, 'max' => 120, 'required' => true],
+                ['key' => 'text', 'label' => 'Supporting text', 'type' => 'textarea', 'rows' => 3, 'max' => 250],
+                ['key' => 'buttonText', 'label' => 'Button text', 'type' => 'text', 'max' => 30, 'help' => 'Leave empty to hide the button.'],
+                $link('buttonLink', 'Button link'),
+                ['key' => 'image', 'label' => 'Banner photo', 'type' => 'image', 'required' => true, 'help' => 'Very wide photo (about 4 : 1 shows best). Keep the main subject on the right; the text sits on the left.'],
+                ['key' => 'imageAlt', 'label' => 'Photo description (for accessibility)', 'type' => 'text', 'max' => 200],
             ]],
             ['path' => 'about.purpose', 'title' => '“Our Purpose” section', 'fields' => [
                 ['key' => 'label', 'label' => 'Small label', 'type' => 'text', 'max' => 40],

@@ -33,6 +33,8 @@ final class ContentStore
     private const JYOTIRLINGA_DEFAULT = CONTENT_DIR . '/jyotirlinga.default.json';
     /** Starting content for the Home page sections, used until the admin saves its own */
     private const HOME_DEFAULT = CONTENT_DIR . '/home.default.json';
+    /** Starting content for the About page banner, used until the admin saves its own */
+    private const ABOUT_DEFAULT = CONTENT_DIR . '/about.default.json';
 
     public static function schema(): array
     {
@@ -62,17 +64,21 @@ final class ContentStore
                 );
             }
         }
-        if (is_file(self::HOME_DEFAULT)) {
-            $home = json_decode((string) file_get_contents(self::HOME_DEFAULT), true);
-            if (is_array($home)) {
-                $saved = isset($data['home']) && is_array($data['home']) ? $data['home'] : [];
-                foreach ($home as $key => $value) {
-                    if (!array_key_exists($key, $saved)) {
-                        $saved[$key] = $value;   // a section the admin has not saved yet starts with its default content
-                    }
-                }
-                $data['home'] = $saved;
+        foreach (['home' => self::HOME_DEFAULT, 'about' => self::ABOUT_DEFAULT] as $page => $file) {
+            if (!is_file($file)) {
+                continue;
             }
+            $defaults = json_decode((string) file_get_contents($file), true);
+            if (!is_array($defaults)) {
+                continue;
+            }
+            $saved = isset($data[$page]) && is_array($data[$page]) ? $data[$page] : [];
+            foreach ($defaults as $key => $value) {
+                if (!array_key_exists($key, $saved)) {
+                    $saved[$key] = $value;   // a section the admin has not saved yet starts with its default content
+                }
+            }
+            $data[$page] = $saved;
         }
         return $data;
     }

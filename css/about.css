@@ -1,0 +1,60 @@
+/* =====================================================================
+   ABOUT US PAGE — banner (photo, text on the left, same light motion as
+   the old Home hero: sun glow, water shimmer, rising embers, slow drift).
+   The glow / shimmer / embers classes come from style.css (.hero__fx …).
+   ===================================================================== */
+
+.ab-banner {
+  position: relative; overflow: hidden;
+  min-height: clamp(340px, 27vw, 410px);
+  display: flex; align-items: center;
+  background: #F6D9B4;
+  isolation: isolate;
+}
+.ab-banner__media { position: absolute; inset: 0; z-index: 0; overflow: hidden; }
+.ab-banner__media img {
+  width: 100%; height: 100%; object-fit: cover; object-position: 70% 46%;
+  transform-origin: 78% 50%;
+  animation: hero-drift 16s ease-in-out infinite alternate; will-change: transform;
+}
+.ab-banner__media::after {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(90deg, rgba(255, 238, 212, .9) 0%, rgba(255, 238, 212, .7) 24%, rgba(255, 236, 205, .28) 44%, rgba(255, 236, 205, 0) 60%);
+}
+.ab-banner .hero__fx { z-index: 1; }
+.ab-banner .hero__embers i { animation-name: ab-ember; }
+@keyframes ab-ember {
+  0%   { transform: translate3d(0, 0, 0); opacity: 0; }
+  12%  { opacity: .95; }
+  70%  { opacity: .7; }
+  100% { transform: translate3d(var(--dx), -320px, 0); opacity: 0; }
+}
+
+.ab-banner__inner { position: relative; z-index: 2; width: 100%; padding-top: 44px; padding-bottom: 44px; }
+.ab-banner__content { max-width: 600px; }
+.ab-banner h1 {
+  font-size: clamp(1.7rem, 2.9vw, 2.55rem);
+  line-height: 1.18; letter-spacing: -.01em;
+  color: #2B1A10; margin: 0 0 16px; text-wrap: balance;
+}
+.ab-banner p {
+  font-size: clamp(.95rem, 1.15vw, 1.08rem); line-height: 1.7;
+  color: #3B2616; max-width: 520px; margin: 0 0 24px;
+}
+
+/* ---------- Tablet / phones ---------- */
+@media (max-width: 768px) {
+  .ab-banner { min-height: 0; align-items: flex-start; background: #FAE1C2; }
+  .ab-banner__media { inset: auto 0 0 0; height: 300px; }
+  .ab-banner__media img { object-position: 74% 50%; }
+  .ab-banner__media::after {
+    background: linear-gradient(180deg, rgba(250, 225, 194, 1) 0%, rgba(250, 225, 194, .55) 22%, rgba(250, 225, 194, 0) 48%);
+  }
+  .ab-banner__inner { padding-top: 34px; padding-bottom: 320px; }
+  .ab-banner h1 { font-size: clamp(1.5rem, 6.4vw, 2rem); }
+  .ab-banner .btn { width: 100%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ab-banner__media img { animation: none; transform: none; }
+}

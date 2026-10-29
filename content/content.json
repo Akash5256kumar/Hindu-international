@@ -587,11 +587,6 @@
     }
   },
   "about": {
-    "banner": {
-      "title": "About Us",
-      "text": "Our journey is rooted in faith, service and devotion.",
-      "image": "uploads/2026/09/whatsapp-image-2026-09-29-at-3-23-58-pm--c408e645.jpg"
-    },
     "purpose": {
       "label": "Why We Exist",
       "title": "Our Purpose",
@@ -612,7 +607,15 @@
       {
         "title": "Spreading Divine Blessings"
       }
-    ]
+    ],
+    "heroBanner": {
+      "title": "Faith, Traditions and Spiritual Services – All in One Place",
+      "text": "Explore traditional practices, sacred rituals, temple related services and more, and stay connected with your roots.",
+      "buttonText": "Learn More",
+      "buttonLink": "#about-intro",
+      "image": "assets/images/hero/slide-1-aarti.jpg",
+      "imageAlt": "A priest raising a lit aarti lamp over the holy river at sunset, with temples and boats on the ghats"
+    }
   },
   "how": {
     "intro": {
