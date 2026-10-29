@@ -383,30 +383,84 @@
 .hm-reason p  { font-size: .875rem; line-height: 1.68; color: var(--hm-text); }
 
 /* ---------- Our Purpose ---------- */
-.hm-purpose { background: linear-gradient(180deg, #FDF0DF 0%, #FCE9D2 100%); }
-.hm-purpose::before {
-  content: ''; position: absolute; right: -120px; bottom: -80px; width: 340px; height: 340px;
-  background: url('../assets/images/mandala.svg') center / contain no-repeat;
-  opacity: .08; pointer-events: none;
+.hm-purpose { background: #1A0E06; padding: 80px 0 72px; }
+.hm-purpose__bg {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: center 40%;
+  z-index: 0;
 }
+.hm-purpose::before {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,.07) 0%, rgba(0,0,0,.03) 50%, rgba(0,0,0,.11) 100%);
+  z-index: 1;
+}
+.hm-purpose::after { display: none; }
+.hm-purpose > .container { position: relative; z-index: 2; }
+.hm-purpose .hm-label { color: #C84020; }
+.hm-purpose .hm-label .icon { color: #C84020; }
+.hm-purpose h2 { color: #1C0A00; font-size: clamp(1.9rem, 3.4vw, 2.75rem); text-shadow: 0 1px 6px rgba(255,210,150,.18); }
+.hm-purpose h2 em { font-style: normal; color: #D9521E; }
+/* 2-col card grid + absolutely-centred Om emblem */
+.hm-purpose__body { position: relative; }
 .hm-purpose__grid {
-  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px 22px;
-  max-width: 1060px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 20px 172px;
+  list-style: none; margin: 0; padding: 0;
 }
 .hm-pur {
-  display: grid; grid-template-columns: auto auto minmax(0, 1fr); align-items: start; gap: 16px;
-  padding: 22px 24px;
-  background: rgba(255, 255, 255, .5); border: 1px solid #F0DDC6; border-radius: 12px;
+  --pur-col: #C64828;
+  display: flex; flex-direction: column; gap: 8px;
+  padding: 24px 22px 20px;
+  background: rgba(255,248,236,.46);
+  backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+  border-radius: 14px;
+  box-shadow: 0 8px 30px rgba(0,0,0,.18), 0 2px 6px rgba(0,0,0,.10), inset 0 1px 0 rgba(255,255,255,.25);
+  position: relative;
+  transition: transform .22s ease, box-shadow .22s ease;
 }
-.hm-pur__no {
-  display: grid; place-items: center; width: 46px; height: 46px; border-radius: 50%;
-  border: 1px solid #EBC9A6; background: rgba(255, 255, 255, .6);
-  font-size: .95rem; font-weight: 700; color: var(--hm-accent);
+.hm-pur::before {
+  content: ''; position: absolute; top: 16px; left: 0;
+  width: 7px; height: 44px; background: var(--pur-col); border-radius: 0 3px 3px 0;
 }
-.hm-pur__icon { color: var(--hm-accent); }
-.hm-pur__icon .icon { width: 42px; height: 42px; stroke-width: 1.4; }
-.hm-pur h3 { font-size: 1.02rem; font-weight: 700; margin-bottom: 6px; }
-.hm-pur p { font-size: .9rem; line-height: 1.65; }
+.hm-pur:nth-child(1) { --pur-col: #C64828; }
+.hm-pur:nth-child(2) { --pur-col: #1E7D67; }
+.hm-pur:nth-child(3) { --pur-col: #BF8E18; }
+.hm-pur:nth-child(4) { --pur-col: #6850A0; }
+.hm-pur__no { display: none; }
+.hm-pur__icon { color: var(--pur-col); }
+.hm-pur__icon .icon { width: 34px; height: 34px; stroke-width: 1.5; }
+.hm-pur h3 { font-size: 1.08rem; font-weight: 700; margin-bottom: 4px; line-height: 1.28; color: var(--pur-col); }
+.hm-pur:nth-child(1) h3 { color: #8B1A10; }
+.hm-pur:nth-child(2) h3 { color: #0D4D32; }
+.hm-pur:nth-child(3) h3 { color: #5C3C00; }
+.hm-pur:nth-child(4) h3 { color: #26106A; }
+.hm-pur p { font-size: .875rem; line-height: 1.7; color: #2A1408; margin: 0; flex: 1; }
+.hm-pur::after {
+  content: ''; display: block; width: 34px; height: 3px;
+  background: var(--pur-col); border-radius: 2px; margin-top: 10px;
+}
+/* Om emblem centred in the column gap */
+.hm-purpose__om {
+  position: absolute; left: 50%; top: 50%;
+  transform: translate(-50%, -50%);
+  width: 160px; height: 160px;
+  display: flex; align-items: center; justify-content: center;
+  pointer-events: none; z-index: 3;
+}
+.hm-purpose__om-frame {
+  width: 132px; height: 132px;
+  background: rgba(255,248,236,.55);
+  backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+  border: 2px solid rgba(200,64,32,.38);
+  border-radius: 4px; transform: rotate(45deg);
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 8px 32px rgba(0,0,0,.22), inset 0 1px 0 rgba(255,255,255,.32);
+}
+.hm-purpose__om-symbol {
+  display: block; transform: rotate(-45deg);
+  font-size: 3.4rem; color: #C84020; line-height: 1;
+  font-family: serif; text-shadow: 0 2px 8px rgba(200,64,32,.35);
+}
 
 /* ---------- Banner above the footer ---------- */
 .hm-cta { overflow: hidden; background: #F8DDC0; padding: 66px 0; text-align: center; }
@@ -449,6 +503,9 @@
   .hm-process .hm-step:nth-child(2)::after { display: block !important; }
   .hm-reasons__grid { grid-template-columns: 1fr 1fr; gap: 16px; }
   .hm-reasons__center { display: none; }
+  .hm-purpose__grid { gap: 18px 120px; }
+  .hm-purpose__om-frame { width: 108px; height: 108px; }
+  .hm-purpose__om-symbol { font-size: 2.8rem; }
 }
 
 /* ---------- Phones ---------- */
@@ -473,9 +530,10 @@
   .hm-process .hm-steps { gap: 14px; }
   .hm-process .hm-step { padding: 22px 18px 18px; }
   .hm-process .hm-step::after { display: block !important; }
-  .hm-purpose__grid { grid-template-columns: 1fr; }
-  .hm-pur { grid-template-columns: auto minmax(0, 1fr); padding: 18px; }
-  .hm-pur__icon { display: none; }
+  .hm-purpose { padding: 56px 0 52px; }
+  .hm-purpose__grid { grid-template-columns: 1fr; gap: 14px; }
+  .hm-purpose__om { display: none; }
+  .hm-pur { padding: 20px 18px 16px; }
   .hm-reasons__grid { grid-template-columns: 1fr; }
   .hm-reasons__center { display: none; }
   .hm-reason__icon { width: 52px; height: 52px; }
