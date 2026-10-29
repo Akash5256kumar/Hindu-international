@@ -40,10 +40,10 @@ $linkHelp   = 'A page of this website (e.g. donate or donate#donate-form), a sec
 $link = static fn (string $key, string $label, bool $required = false): array =>
     ['key' => $key, 'label' => $label, 'type' => 'link', 'max' => 300, 'required' => $required, 'help' => $linkHelp];
 $seoFields = [
-    ['key' => 'title', 'label' => 'SEO title', 'type' => 'text', 'max' => 90, 'required' => true, 'help' => 'Shown in browser tabs and search results. Aim for about 50–60 characters.'],
-    ['key' => 'description', 'label' => 'Meta description', 'type' => 'textarea', 'rows' => 3, 'max' => 300, 'required' => true, 'help' => 'Short search-result summary. Aim for about 150–160 characters.'],
+    ['key' => 'title', 'label' => 'SEO title', 'type' => 'text', 'max' => 90, 'help' => 'Shown in browser tabs and search results. Aim for about 50–60 characters.'],
+    ['key' => 'description', 'label' => 'Meta description', 'type' => 'textarea', 'rows' => 3, 'max' => 300, 'help' => 'Short search-result summary. Aim for about 150–160 characters.'],
     ['key' => 'keywords', 'label' => 'Focus keywords (your notes)', 'type' => 'text', 'max' => 250, 'help' => 'Comma-separated phrases to guide page copy. Search engines do not use meta keywords for ranking.'],
-    ['key' => 'canonical', 'label' => 'Canonical URL', 'type' => 'url', 'max' => 500, 'required' => true, 'help' => 'The preferred clean URL for this page. Keep the site URL and avoid .html.'],
+    ['key' => 'canonical', 'label' => 'Canonical URL', 'type' => 'url', 'max' => 500, 'help' => 'The preferred clean URL for this page. Keep the site URL and avoid .html.'],
     ['key' => 'index', 'label' => 'Allow search engines to index this page', 'type' => 'toggle', 'default' => true],
     ['key' => 'follow', 'label' => 'Allow search engines to follow links', 'type' => 'toggle', 'default' => true],
     ['key' => 'ogTitle', 'label' => 'Social sharing title', 'type' => 'text', 'max' => 90, 'help' => 'Optional; leave empty to use the SEO title.'],
@@ -105,6 +105,8 @@ return [
                 ['key' => 'label', 'label' => 'Small label', 'type' => 'text', 'max' => 40],
                 ['key' => 'title', 'label' => 'Heading', 'type' => 'textarea', 'rows' => 2, 'max' => 120],
                 ['key' => 'text', 'label' => 'Text', 'type' => 'paragraphs', 'rows' => 7, 'max' => 1800, 'help' => 'Leave an empty line between paragraphs.'],
+                ['key' => 'image', 'label' => 'Section photo', 'type' => 'image', 'help' => 'The main photo on the right side of the Introduction section. Recommended size: 1564 × 1006 px (roughly 3 : 2).'],
+                ['key' => 'imageAlt', 'label' => 'Photo description (for accessibility)', 'type' => 'text', 'max' => 200],
                 ['key' => 'cards', 'label' => 'Photo cards (right side)', 'type' => 'list', 'min' => 1, 'max' => 6, 'itemLabel' => 'Card', 'titleField' => 'title', 'fields' => [
                     $showField, $iconField,
                     ['key' => 'title', 'label' => 'Title', 'type' => 'text', 'max' => 60, 'required' => true],
@@ -116,6 +118,7 @@ return [
             ['path' => 'home.process', 'title' => 'Our Work Process (steps in a row)', 'fields' => [
                 ['key' => 'label', 'label' => 'Small label', 'type' => 'text', 'max' => 40],
                 ['key' => 'title', 'label' => 'Heading', 'type' => 'text', 'max' => 100],
+                ['key' => 'bgImage', 'label' => 'Background photo', 'type' => 'image', 'help' => 'Wide landscape photo shown behind the process steps. Recommended size: 1821 × 864 px.'],
                 ['key' => 'steps', 'label' => 'Steps', 'type' => 'list', 'min' => 1, 'max' => 6, 'itemLabel' => 'Step', 'titleField' => 'title', 'fields' => [
                     $showField, $iconField,
                     ['key' => 'number', 'label' => 'Number', 'type' => 'text', 'max' => 4, 'help' => 'e.g. 01'],
@@ -138,9 +141,10 @@ return [
                 ]],
                 ['key' => 'decorImage', 'label' => 'Faded temple picture — left edge', 'type' => 'image', 'help' => 'Tall picture that fades into the background. Remove to show none.'],
             ]],
-            ['path' => 'home.purpose', 'title' => 'Our Purpose (2 × 2 blocks)', 'fields' => [
+            ['path' => 'home.purpose', 'title' => 'Our Purpose (cards + Om emblem)', 'fields' => [
                 ['key' => 'label', 'label' => 'Small label', 'type' => 'text', 'max' => 40],
                 ['key' => 'title', 'label' => 'Heading', 'type' => 'text', 'max' => 100],
+                ['key' => 'bgImage', 'label' => 'Background photo', 'type' => 'image', 'help' => 'Wide landscape photo shown behind the purpose cards. Recommended size: 1821 × 864 px.'],
                 ['key' => 'items', 'label' => 'Blocks', 'type' => 'list', 'min' => 1, 'max' => 8, 'itemLabel' => 'Block', 'titleField' => 'title', 'fields' => [
                     $showField, $iconField,
                     ['key' => 'number', 'label' => 'Number', 'type' => 'text', 'max' => 4, 'help' => 'e.g. 01'],

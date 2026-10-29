@@ -237,7 +237,7 @@ final class ContentStore
             $description = trim((string) ($seo['description'] ?? ''));
             $canonical = trim((string) ($seo['canonical'] ?? ''));
             if ($title === '' || $description === '' || $canonical === '') {
-                throw new RuntimeException("SEO title, description and canonical URL are required for $file.");
+                continue; // SEO fields not yet filled — skip this page's meta update
             }
 
             $image = trim((string) ($seo['ogImage'] ?? ''));
