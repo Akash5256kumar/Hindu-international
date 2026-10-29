@@ -45,6 +45,7 @@
   "process": {
     "label": "Our Work Process",
     "title": "A Simple Process to Stay Connected with Your Faith",
+    "bgImage": "assets/images/hero/slide-1-aarti.jpg",
     "steps": [
       { "show": true, "icon": "touch", "number": "01", "title": "Choose Your Service", "text": "Explore our available spiritual services and select the one that suits your needs or your family's religious traditions." },
       { "show": true, "icon": "doc", "number": "02", "title": "Share Your Details", "text": "Once you select a service, share the necessary details with us. You can tell us about your requirements and preferences so our team can understand your needs and guide you." },
@@ -64,11 +65,12 @@
       { "show": true, "icon": "people", "title": "For Those Who Cannot Travel", "text": "Visiting a temple or attending a religious event is not always possible. Our virtual services give people another way to take part in certain religious practices when they cannot be there in person." },
       { "show": true, "icon": "edit", "title": "Clear Service Details", "text": "We explain each service in simple words so people can understand the details before booking and feel comfortable with their decision." }
     ],
-    "decorImage": "assets/images/faith/temple-left.jpg"
+    "centerImage": "assets/images/faith/temple-left.jpg"
   },
   "purpose": {
     "label": "Our Purpose",
     "title": "Building a Platform for Hindu Traditions",
+    "bgImage": "assets/images/hero/slide-1-aarti.jpg",
     "items": [
       { "show": true, "icon": "sprout", "number": "01", "title": "Keeping Traditions Alive", "text": "Our family traditions have been followed for generations. We want to keep them alive for future generations." },
       { "show": true, "icon": "people", "number": "02", "title": "Bringing People Together", "text": "Faith connects people through shared customs, festivals and religious practices. We want Hindu.international to be a place where people can explore and learn more about these traditions." },

@@ -24,8 +24,11 @@ function atomic_write(string $path, string $data): void
 
 final class ContentStore
 {
-    private const JSON = CONTENT_DIR . '/content.json';
-    private const JS   = CONTENT_DIR . '/content.js';
+    /* site.json / site.js are gitignored so git deployments never overwrite admin saves.
+       content.json is the git-tracked legacy file kept only as a migration source. */
+    private const JSON   = CONTENT_DIR . '/site.json';
+    private const JS     = CONTENT_DIR . '/site.js';
+    private const LEGACY = CONTENT_DIR . '/content.json';
     private const BACKUPS = DATA_DIR . '/backups';
     /** Starting content for the Services pages, used until the admin saves its own */
     private const SERVICES_DEFAULT = CONTENT_DIR . '/services.default.json';
@@ -44,6 +47,11 @@ final class ContentStore
 
     public static function load(): array
     {
+        // One-time migration: copy legacy content.json → site.json the first time admin runs.
+        if (!is_file(self::JSON) && is_file(self::LEGACY)) {
+            @copy(self::LEGACY, self::JSON);
+        }
+
         $raw = is_file(self::JSON) ? file_get_contents(self::JSON) : '';
         $data = $raw ? json_decode($raw, true) : null;
         $data = is_array($data) ? $data : [];

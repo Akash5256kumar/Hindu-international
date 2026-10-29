@@ -12,5 +12,10 @@ uploads/*
 !uploads/.htaccess
 !uploads/.gitkeep
 
+# Admin-managed content lives here; never tracked by git so deployments can't overwrite it.
+# On first admin access after deploy, the PHP copies content.json → site.json automatically.
+content/site.json
+content/site.js
+
 # Deployment archives
 *.zip
