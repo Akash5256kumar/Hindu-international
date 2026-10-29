@@ -274,33 +274,26 @@
 
 /* ---------- Reason to Choose Our Service ---------- */
 .hm-reasons {
-  background: linear-gradient(160deg, #FFFDF9 0%, #FFFAF3 50%, #FFF6EB 100%);
+  background: linear-gradient(150deg, #FFF6E9 0%, #F9EFD8 50%, #F5E6CA 100%);
   overflow: hidden;
 }
-/* Green botanical corner leaf-like decoration — top-left */
+/* Subtle mandala pattern in background */
 .hm-reasons::before {
-  content: ''; position: absolute; top: 0; left: 0; z-index: 0;
-  width: 280px; height: 280px; pointer-events: none;
-  background:
-    radial-gradient(ellipse 55px 130px at 38px 38px,  rgba(72,138,58,.26) 0%, transparent 100%),
-    radial-gradient(ellipse 130px 55px at 38px 38px,  rgba(68,130,52,.22) 0%, transparent 100%),
-    radial-gradient(ellipse 50px 110px at 76px 18px,  rgba(78,148,62,.18) 0%, transparent 100%),
-    radial-gradient(ellipse 110px 50px at 18px 76px,  rgba(72,138,58,.16) 0%, transparent 100%),
-    radial-gradient(ellipse 38px 85px at 116px 8px,   rgba(62,125,48,.12) 0%, transparent 100%),
-    radial-gradient(ellipse 85px 38px at 8px 116px,   rgba(65,128,50,.12) 0%, transparent 100%);
+  content: ''; position: absolute; right: 55px; top: 25px; z-index: 0;
+  width: 300px; height: 300px; pointer-events: none;
+  background: url('../assets/images/mandala.svg') center / contain no-repeat;
+  opacity: .065;
 }
-/* Green botanical corner leaf-like decoration — bottom-right */
-.hm-reasons::after {
-  content: ''; position: absolute; bottom: 0; right: 0; z-index: 0;
-  width: 280px; height: 280px; pointer-events: none;
-  background:
-    radial-gradient(ellipse 55px 130px at calc(100% - 38px) calc(100% - 38px),  rgba(72,138,58,.26) 0%, transparent 100%),
-    radial-gradient(ellipse 130px 55px at calc(100% - 38px) calc(100% - 38px),  rgba(68,130,52,.22) 0%, transparent 100%),
-    radial-gradient(ellipse 50px 110px at calc(100% - 76px) calc(100% - 18px),  rgba(78,148,62,.18) 0%, transparent 100%),
-    radial-gradient(ellipse 110px 50px at calc(100% - 18px) calc(100% - 76px),  rgba(72,138,58,.16) 0%, transparent 100%),
-    radial-gradient(ellipse 38px 85px at calc(100% - 116px) calc(100% - 8px),  rgba(62,125,48,.12) 0%, transparent 100%),
-    radial-gradient(ellipse 85px 38px at calc(100% - 8px) calc(100% - 116px),   rgba(65,128,50,.12) 0%, transparent 100%);
+.hm-reasons::after { display: none; }
+
+/* Botanical leaf decorations — SVG spans, top-left and bottom-right */
+.hm-reasons__leaf {
+  position: absolute; z-index: 0; pointer-events: none;
+  width: 250px; height: 250px; display: block;
 }
+.hm-reasons__leaf--tl { top: 0; left: 0; }
+.hm-reasons__leaf--br { bottom: 0; right: 0; transform: rotate(180deg); }
+.hm-reasons__leaf svg { width: 100%; height: 100%; display: block; }
 
 /* Label: bilateral decorative lines */
 .hm-reasons .hm-label {
@@ -349,7 +342,7 @@
 .hm-reason {
   display: flex; align-items: flex-start; gap: 16px;
   padding: 18px 16px; border-radius: 14px;
-  background: #FFF7ED;
+  background: #FFF5EE;
   box-shadow: 0 2px 14px rgba(100,48,8,.08), 0 1px 4px rgba(100,48,8,.04);
   transition: transform .22s ease, box-shadow .22s ease;
 }
@@ -358,17 +351,17 @@
   box-shadow: 0 8px 24px rgba(100,48,8,.13), 0 2px 8px rgba(100,48,8,.07);
 }
 /* Alternating: even cards = light mint-teal */
-.hm-reasons__col .hm-reason:nth-child(even) { background: #EEF8F3; }
+.hm-reasons__col .hm-reason:nth-child(even) { background: #EBF5F0; }
 
 /* Icon circle */
 .hm-reason__icon {
   flex: none; width: 62px; height: 62px; border-radius: 50%;
   display: grid; place-items: center;
-  background: #FEF0E0; color: var(--hm-accent);
+  background: #FEEEDC; color: var(--hm-accent);
   box-shadow: 0 0 0 4px rgba(222,91,37,.09);
 }
 .hm-reasons__col .hm-reason:nth-child(even) .hm-reason__icon {
-  background: #E4F3EC; box-shadow: 0 0 0 4px rgba(30,120,90,.09);
+  background: #E2F2EA; box-shadow: 0 0 0 4px rgba(30,120,90,.09);
 }
 .hm-reason__icon .icon { width: 29px; height: 29px; stroke-width: 1.5; }
 
