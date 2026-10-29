@@ -46,11 +46,7 @@
   background: url('../assets/images/mandala.svg') center / contain no-repeat;
   opacity: .1; pointer-events: none;
 }
-.hm-intro::after {
-  content: ''; position: absolute; right: 0; top: -10px; width: 190px; height: 150px;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 190 150'%3E%3Cg fill='%2386a35f' stroke='%2358743b' stroke-width='1.2'%3E%3Cpath d='M190 10C160 14 132 36 124 70 150 62 178 40 190 10z'/%3E%3Cpath d='M170 0C146 8 126 26 120 52 142 46 162 28 170 0z' fill='%2399b573'/%3E%3Cpath d='M190 62C168 64 148 78 140 100 160 98 180 84 190 62z' fill='%2374914d'/%3E%3C/g%3E%3Cpath d='M190 10C160 30 138 50 124 70M170 0C150 20 132 38 120 52' stroke='%2358743b' stroke-width='1' fill='none'/%3E%3C/svg%3E") right top / contain no-repeat;
-  pointer-events: none; opacity: .9;
-}
+.hm-intro::after { display: none; }
 .hm-intro__inner {
   display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.08fr);
   gap: 60px; align-items: center;
