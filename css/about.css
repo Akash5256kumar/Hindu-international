@@ -1,9 +1,11 @@
 /* =====================================================================
-   ABOUT US PAGE — banner. The whole photo is shown (never cropped): it
-   sits on the right at the banner's height, a blurred copy of the same
-   photo fills the rest, and the photo's left edge fades into it.
-   Same light motion as the old Home hero: sun glow, water shimmer,
-   rising embers (classes from style.css: .hero__fx …) and a slow drift.
+   ABOUT US PAGE — banner. The whole photo is shown: it sits on the right
+   at the banner's height, a blurred copy of the same photo fills the rest
+   and the photo's left edge fades into it. Text colours and fade are the
+   same as the Home hero.
+   Motion (same as the old Home hero): sun glow, water shimmer, rising
+   embers and the water thread flowing down from the hands (.hero__waterfall,
+   styled in style.css), plus a slow zoom in and out on the photo.
    ===================================================================== */
 
 .ab-banner {
@@ -17,20 +19,28 @@
   position: absolute; inset: -6%; width: 112%; height: 112%;
   object-fit: cover; filter: blur(26px) saturate(1.05);
 }
-.ab-banner__photo {
-  position: absolute; top: 0; right: 0; height: 100%; width: auto; max-width: none;
-  transform-origin: 78% 50%;
-  animation: ab-drift 16s ease-in-out infinite alternate; will-change: transform;
+
+/* the photo + the water layer share one box, so the water stays on the thread */
+.ab-banner__stage {
+  position: absolute; top: 0; right: 0; height: 100%; aspect-ratio: 1564 / 1006;
+  transform-origin: 82% 55%;
+  animation: ab-zoom 16s ease-in-out infinite alternate; will-change: transform;
   -webkit-mask-image: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, .55) 5%, #000 13%);
   mask-image: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, .55) 5%, #000 13%);
 }
-@keyframes ab-drift {
-  from { transform: scale(1) translate3d(0, 0, 0); }
-  to   { transform: scale(1.035) translate3d(-.6%, -.4%, 0); }
+.ab-banner__photo { display: block; width: 100%; height: 100%; max-width: none; }
+.ab-banner .ab-fall { left: 73.7%; top: 40%; width: 2.6%; height: 38%; opacity: .55; }
+@keyframes ab-zoom {
+  from { transform: scale(1); }
+  to   { transform: scale(1.13); }
 }
+
+/* same cream fade as the Home hero */
 .ab-banner__media::after {
   content: ''; position: absolute; inset: 0; pointer-events: none;
-  background: linear-gradient(90deg, rgba(92, 42, 10, .34) 0%, rgba(92, 42, 10, .2) 28%, rgba(92, 42, 10, 0) 56%);
+  background:
+    linear-gradient(90deg, rgba(255, 248, 237, .9) 0%, rgba(255, 248, 237, .7) 18%, rgba(255, 248, 237, .3) 34%, rgba(255, 248, 237, 0) 46%),
+    linear-gradient(0deg, rgba(255, 248, 237, .4) 0%, rgba(255, 248, 237, 0) 18%);
 }
 
 .ab-banner .hero__fx { z-index: 1; }
@@ -43,21 +53,20 @@
   100% { transform: translate3d(var(--dx), -320px, 0); opacity: 0; }
 }
 
+/* text: identical to the Home hero (saffron gradient heading, dark paragraph) */
 .ab-banner__inner { position: relative; z-index: 2; width: 100%; padding-top: 36px; padding-bottom: 36px; }
-.ab-banner__content { max-width: 640px; }
+.ab-banner__content { max-width: 600px; }
 .ab-banner h1 {
-  font-size: clamp(2.1rem, 3.7vw, 3.3rem);
-  line-height: 1.14; letter-spacing: -.015em; font-weight: 700;
-  margin: 0 0 20px; text-wrap: balance;
-  background: linear-gradient(180deg, #E4570F 0%, #BD420A 100%);
+  font-size: clamp(2rem, 3vw, 2.6rem);
+  font-weight: 700; line-height: 1.12; letter-spacing: -.015em;
+  margin: 0 0 22px; text-wrap: balance;
+  background: linear-gradient(180deg, #DE520B 0%, #B8400A 100%);
   -webkit-background-clip: text; background-clip: text;
   -webkit-text-fill-color: transparent; color: transparent;
-  filter: drop-shadow(0 0 12px rgba(255, 244, 226, .85)) drop-shadow(0 0 2px rgba(255, 244, 226, .9));
 }
 .ab-banner p {
-  font-size: clamp(1.02rem, 1.4vw, 1.25rem); line-height: 1.7; font-weight: 500;
-  color: #fff; max-width: 540px; margin: 0 0 28px;
-  text-shadow: 0 1px 14px rgba(70, 30, 5, .7), 0 0 3px rgba(70, 30, 5, .45);
+  font-size: 1.12rem; line-height: 1.7; color: var(--ink-2);
+  max-width: 540px; margin: 0 0 32px;
 }
 
 /* ---------- Tablet / phones: text on top, the full photo below it ---------- */
@@ -69,19 +78,18 @@
     aspect-ratio: 1564 / 1006;
   }
   .ab-banner__fill { display: none; }
-  .ab-banner__photo {
+  .ab-banner__stage {
     right: auto; left: 0; width: 100%; height: 100%;
     -webkit-mask-image: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, .7) 8%, #000 18%);
     mask-image: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, .7) 8%, #000 18%);
   }
   .ab-banner__media::after { display: none; }
   .ab-banner .hero__glow { left: 20%; top: 36%; width: 80%; height: 70%; }
-  .ab-banner p { color: #3B2616; text-shadow: none; font-size: 1.02rem; }
-  .ab-banner h1 { filter: none; }
-  .ab-banner h1 { font-size: clamp(1.5rem, 6.4vw, 2rem); }
+  .ab-banner h1 { font-size: clamp(1.7rem, 7vw, 2.2rem); }
+  .ab-banner p { font-size: 1.02rem; }
   .ab-banner .btn { width: 100%; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .ab-banner__photo { animation: none; transform: none; }
+  .ab-banner__stage { animation: none; transform: none; }
 }
