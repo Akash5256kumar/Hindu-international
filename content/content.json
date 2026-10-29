@@ -156,7 +156,7 @@
           "text": "We explain each service in simple words so people can understand the details before booking and feel comfortable with their decision."
         }
       ],
-      "decorImage": "assets/images/faith/temple-left.jpg"
+      "centerImage": "assets/images/faith/temple-left.jpg"
     },
     "purpose": {
       "label": "Our Purpose",

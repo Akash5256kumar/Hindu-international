@@ -139,7 +139,7 @@ return [
                     ['key' => 'title', 'label' => 'Heading', 'type' => 'text', 'max' => 80, 'required' => true],
                     ['key' => 'text', 'label' => 'Description', 'type' => 'textarea', 'rows' => 4, 'max' => 400],
                 ]],
-                ['key' => 'decorImage', 'label' => 'Faded temple picture — left edge', 'type' => 'image', 'help' => 'Tall picture that fades into the background. Remove to show none.'],
+                ['key' => 'centerImage', 'label' => 'Centre photo (between the two card columns)', 'type' => 'image', 'help' => 'Photo shown in the middle of the Reason to Choose section. Recommended size: 1000 × 480 px.'],
             ]],
             ['path' => 'home.purpose', 'title' => 'Our Purpose (cards + Om emblem)', 'fields' => [
                 ['key' => 'label', 'label' => 'Small label', 'type' => 'text', 'max' => 40],
