@@ -151,12 +151,12 @@
   object-fit: cover; object-position: center 35%;
   z-index: 0;
 }
-/* Dark overlay replacing the mandala decorations */
+/* Very light overlay — keeps background vivid like reference */
 .hm-process::before {
   content: ''; position: absolute; inset: 0;
   top: 0; left: 0; right: 0; bottom: 0;
   width: auto; height: auto;
-  background: linear-gradient(to bottom, rgba(8,4,0,.52) 0%, rgba(12,6,0,.38) 55%, rgba(8,4,0,.55) 100%);
+  background: linear-gradient(to bottom, rgba(0,0,0,.06) 0%, rgba(0,0,0,.02) 50%, rgba(0,0,0,.10) 100%);
   z-index: 1; opacity: 1;
 }
 .hm-process::after { display: none; }
@@ -169,7 +169,7 @@
 .hm-process .hm-label {
   display: flex; align-items: center; justify-content: center;
   width: fit-content; max-width: 420px; margin: 0 auto 14px;
-  color: #F2C07A;
+  color: #C84020;
 }
 .hm-process .hm-label::before,
 .hm-process .hm-label::after {
@@ -179,14 +179,14 @@
 }
 .hm-process .hm-label::before { margin-right: 10px; }
 .hm-process .hm-label::after  { margin-left:  10px; }
-.hm-process .hm-label .icon { color: #F2C07A; }
+.hm-process .hm-label .icon { color: #C84020; }
 
 .hm-process h2 {
-  color: #fff;
+  color: #1C0A00;
   font-size: clamp(1.9rem, 3.4vw, 2.75rem);
-  text-shadow: 0 2px 14px rgba(0,0,0,.4);
+  text-shadow: 0 1px 6px rgba(255,210,150,.18);
 }
-.hm-process h2 em { font-style: normal; color: #F5A040; }
+.hm-process h2 em { font-style: normal; color: #D9521E; }
 
 /* Diamond divider under heading */
 .hm-proc__divider {
@@ -233,32 +233,36 @@
 .hm-process .hm-step {
   --step-col: #C64828;
   text-align: left; padding: 26px 22px 22px;
-  background: rgba(255,248,236,.74);
-  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  background: rgba(255,248,236,.62);
+  backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
   border-radius: 14px;
-  border-left: 6px solid var(--step-col);
-  box-shadow: 0 8px 30px rgba(0,0,0,.22), 0 2px 6px rgba(0,0,0,.14);
+  border-left: 7px solid var(--step-col);
+  box-shadow: 0 8px 30px rgba(0,0,0,.18), 0 2px 6px rgba(0,0,0,.10);
   display: flex; flex-direction: column; gap: 10px;
   transition: transform .22s ease, box-shadow .22s ease;
 }
 .hm-process .hm-step:hover {
   transform: translateY(-5px) !important;
-  box-shadow: 0 14px 38px rgba(0,0,0,.28), 0 3px 10px rgba(0,0,0,.16);
+  box-shadow: 0 14px 38px rgba(0,0,0,.24), 0 3px 10px rgba(0,0,0,.13);
 }
-/* Per-card accent colours */
+/* Per-card accent strip colours */
 .hm-process .hm-step:nth-child(1) { --step-col: #C64828; }
 .hm-process .hm-step:nth-child(2) { --step-col: #1E7D67; }
 .hm-process .hm-step:nth-child(3) { --step-col: #BF8E18; }
 .hm-process .hm-step:nth-child(4) { --step-col: #6850A0; }
 
-/* Title: coloured, no number/icon */
+/* Title: dark colour per card (reference uses darker heading than accent strip) */
 .hm-process .hm-step h3 {
-  font-size: 1.06rem; font-weight: 700;
+  font-size: 1.22rem; font-weight: 700;
   color: var(--step-col); margin-bottom: 0; line-height: 1.28;
 }
+.hm-process .hm-step:nth-child(1) h3 { color: #8B1A10; }
+.hm-process .hm-step:nth-child(2) h3 { color: #0D4D32; }
+.hm-process .hm-step:nth-child(3) h3 { color: #5C3C00; }
+.hm-process .hm-step:nth-child(4) h3 { color: #26106A; }
 .hm-process .hm-step p {
   font-size: .875rem; line-height: 1.7;
-  color: #3D2818; flex: 1; margin: 0;
+  color: #2A1408; flex: 1; margin: 0;
 }
 /* Bottom accent line — overrides connector arrow */
 .hm-process .hm-step::after {
