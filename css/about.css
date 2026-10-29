@@ -1,27 +1,40 @@
 /* =====================================================================
-   ABOUT US PAGE — banner (photo, text on the left, same light motion as
-   the old Home hero: sun glow, water shimmer, rising embers, slow drift).
-   The glow / shimmer / embers classes come from style.css (.hero__fx …).
+   ABOUT US PAGE — banner. The whole photo is shown (never cropped): it
+   sits on the right at the banner's height, a blurred copy of the same
+   photo fills the rest, and the photo's left edge fades into it.
+   Same light motion as the old Home hero: sun glow, water shimmer,
+   rising embers (classes from style.css: .hero__fx …) and a slow drift.
    ===================================================================== */
 
 .ab-banner {
-  position: relative; overflow: hidden;
-  min-height: clamp(340px, 27vw, 410px);
+  position: relative; overflow: hidden; isolation: isolate;
+  height: clamp(470px, 39vw, 640px);
   display: flex; align-items: center;
-  background: #F6D9B4;
-  isolation: isolate;
+  background: #F7C48C;
 }
 .ab-banner__media { position: absolute; inset: 0; z-index: 0; overflow: hidden; }
-.ab-banner__media img {
-  width: 100%; height: 100%; object-fit: cover; object-position: 70% 46%;
+.ab-banner__fill {
+  position: absolute; inset: -6%; width: 112%; height: 112%;
+  object-fit: cover; filter: blur(26px) saturate(1.05);
+}
+.ab-banner__photo {
+  position: absolute; top: 0; right: 0; height: 100%; width: auto; max-width: none;
   transform-origin: 78% 50%;
-  animation: hero-drift 16s ease-in-out infinite alternate; will-change: transform;
+  animation: ab-drift 16s ease-in-out infinite alternate; will-change: transform;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, .6) 7%, #000 20%);
+  mask-image: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, .6) 7%, #000 20%);
+}
+@keyframes ab-drift {
+  from { transform: scale(1) translate3d(0, 0, 0); }
+  to   { transform: scale(1.035) translate3d(-.6%, -.4%, 0); }
 }
 .ab-banner__media::after {
-  content: ''; position: absolute; inset: 0;
-  background: linear-gradient(90deg, rgba(255, 238, 212, .9) 0%, rgba(255, 238, 212, .7) 24%, rgba(255, 236, 205, .28) 44%, rgba(255, 236, 205, 0) 60%);
+  content: ''; position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(90deg, rgba(255, 238, 212, .55) 0%, rgba(255, 238, 212, .32) 26%, rgba(255, 238, 212, 0) 50%);
 }
+
 .ab-banner .hero__fx { z-index: 1; }
+.ab-banner .hero__glow { left: 44%; top: -38%; width: 52%; height: 95%; }
 .ab-banner .hero__embers i { animation-name: ab-ember; }
 @keyframes ab-ember {
   0%   { transform: translate3d(0, 0, 0); opacity: 0; }
@@ -30,31 +43,41 @@
   100% { transform: translate3d(var(--dx), -320px, 0); opacity: 0; }
 }
 
-.ab-banner__inner { position: relative; z-index: 2; width: 100%; padding-top: 44px; padding-bottom: 44px; }
-.ab-banner__content { max-width: 600px; }
+.ab-banner__inner { position: relative; z-index: 2; width: 100%; padding-top: 36px; padding-bottom: 36px; }
+.ab-banner__content { max-width: 560px; }
 .ab-banner h1 {
   font-size: clamp(1.7rem, 2.9vw, 2.55rem);
   line-height: 1.18; letter-spacing: -.01em;
   color: #2B1A10; margin: 0 0 16px; text-wrap: balance;
+  text-shadow: 0 0 22px rgba(255, 240, 218, .8);
 }
 .ab-banner p {
   font-size: clamp(.95rem, 1.15vw, 1.08rem); line-height: 1.7;
-  color: #3B2616; max-width: 520px; margin: 0 0 24px;
+  color: #3B2616; max-width: 500px; margin: 0 0 24px;
+  text-shadow: 0 0 16px rgba(255, 240, 218, .85);
 }
 
-/* ---------- Tablet / phones ---------- */
+/* ---------- Tablet / phones: text on top, the full photo below it ---------- */
 @media (max-width: 768px) {
-  .ab-banner { min-height: 0; align-items: flex-start; background: #FAE1C2; }
-  .ab-banner__media { inset: auto 0 0 0; height: 300px; }
-  .ab-banner__media img { object-position: 74% 50%; }
-  .ab-banner__media::after {
-    background: linear-gradient(180deg, rgba(250, 225, 194, 1) 0%, rgba(250, 225, 194, .55) 22%, rgba(250, 225, 194, 0) 48%);
+  .ab-banner { height: auto; display: flex; flex-direction: column; align-items: stretch; background: #FFEBD0; }
+  .ab-banner__inner { order: 1; padding-top: 32px; padding-bottom: 22px; }
+  .ab-banner__media {
+    order: 2; position: relative; inset: auto; width: 100%;
+    aspect-ratio: 1564 / 1006;
   }
-  .ab-banner__inner { padding-top: 34px; padding-bottom: 320px; }
+  .ab-banner__fill { display: none; }
+  .ab-banner__photo {
+    right: auto; left: 0; width: 100%; height: 100%;
+    -webkit-mask-image: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, .7) 8%, #000 18%);
+    mask-image: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, .7) 8%, #000 18%);
+  }
+  .ab-banner__media::after { display: none; }
+  .ab-banner .hero__glow { left: 20%; top: 36%; width: 80%; height: 70%; }
+  .ab-banner h1, .ab-banner p { text-shadow: none; }
   .ab-banner h1 { font-size: clamp(1.5rem, 6.4vw, 2rem); }
   .ab-banner .btn { width: 100%; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .ab-banner__media img { animation: none; transform: none; }
+  .ab-banner__photo { animation: none; transform: none; }
 }
