@@ -401,10 +401,15 @@
 .hm-purpose .hm-label .icon { color: #C84020; }
 .hm-purpose h2 { color: #1C0A00; font-size: clamp(1.9rem, 3.4vw, 2.75rem); text-shadow: 0 1px 6px rgba(255,210,150,.18); }
 .hm-purpose h2 em { font-style: normal; color: #D9521E; }
-/* 2-col card grid + absolutely-centred Om emblem */
-.hm-purpose__body { position: relative; }
+/* 3-col body: [left cards] [Om] [right cards] — Om spans both rows in col 2 */
+.hm-purpose__body {
+  display: grid;
+  grid-template-columns: 1fr 160px 1fr;
+  grid-template-rows: auto auto;
+  column-gap: 24px; row-gap: 20px;
+}
 .hm-purpose__grid {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 20px 172px;
+  display: contents; /* li items participate directly in the body grid */
   list-style: none; margin: 0; padding: 0;
 }
 .hm-pur {
@@ -422,10 +427,11 @@
   content: ''; position: absolute; top: 16px; left: 0;
   width: 7px; height: 44px; background: var(--pur-col); border-radius: 0 3px 3px 0;
 }
-.hm-pur:nth-child(1) { --pur-col: #C64828; }
-.hm-pur:nth-child(2) { --pur-col: #1E7D67; }
-.hm-pur:nth-child(3) { --pur-col: #BF8E18; }
-.hm-pur:nth-child(4) { --pur-col: #6850A0; }
+/* Grid placement: col1=left cards, col3=right cards, col2=Om */
+.hm-pur:nth-child(1) { --pur-col: #C64828; grid-column: 1; grid-row: 1; }
+.hm-pur:nth-child(2) { --pur-col: #1E7D67; grid-column: 3; grid-row: 1; }
+.hm-pur:nth-child(3) { --pur-col: #BF8E18; grid-column: 1; grid-row: 2; }
+.hm-pur:nth-child(4) { --pur-col: #6850A0; grid-column: 3; grid-row: 2; }
 .hm-pur__no { display: none; }
 .hm-pur__icon { color: var(--pur-col); }
 .hm-pur__icon .icon { width: 34px; height: 34px; stroke-width: 1.5; }
@@ -439,13 +445,11 @@
   content: ''; display: block; width: 34px; height: 3px;
   background: var(--pur-col); border-radius: 2px; margin-top: 10px;
 }
-/* Om emblem centred in the column gap */
+/* Om: grid cell spanning both rows in centre column */
 .hm-purpose__om {
-  position: absolute; left: 50%; top: 50%;
-  transform: translate(-50%, -50%);
-  width: 160px; height: 160px;
+  grid-column: 2; grid-row: 1 / 3;
   display: flex; align-items: center; justify-content: center;
-  pointer-events: none; z-index: 3;
+  pointer-events: none;
 }
 .hm-purpose__om-frame {
   width: 132px; height: 132px;
@@ -503,9 +507,9 @@
   .hm-process .hm-step:nth-child(2)::after { display: block !important; }
   .hm-reasons__grid { grid-template-columns: 1fr 1fr; gap: 16px; }
   .hm-reasons__center { display: none; }
-  .hm-purpose__grid { gap: 18px 120px; }
-  .hm-purpose__om-frame { width: 108px; height: 108px; }
-  .hm-purpose__om-symbol { font-size: 2.8rem; }
+  .hm-purpose__body { grid-template-columns: 1fr 120px 1fr; column-gap: 16px; }
+  .hm-purpose__om-frame { width: 102px; height: 102px; }
+  .hm-purpose__om-symbol { font-size: 2.6rem; }
 }
 
 /* ---------- Phones ---------- */
@@ -531,9 +535,9 @@
   .hm-process .hm-step { padding: 22px 18px 18px; }
   .hm-process .hm-step::after { display: block !important; }
   .hm-purpose { padding: 56px 0 52px; }
-  .hm-purpose__grid { grid-template-columns: 1fr; gap: 14px; }
+  .hm-purpose__body { grid-template-columns: 1fr; row-gap: 14px; }
+  .hm-pur { grid-column: 1 !important; grid-row: auto !important; padding: 20px 18px 16px; }
   .hm-purpose__om { display: none; }
-  .hm-pur { padding: 20px 18px 16px; }
   .hm-reasons__grid { grid-template-columns: 1fr; }
   .hm-reasons__center { display: none; }
   .hm-reason__icon { width: 52px; height: 52px; }
