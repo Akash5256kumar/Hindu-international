@@ -55,9 +55,9 @@
 
 /* text: identical to the Home hero (saffron gradient heading, dark paragraph) */
 .ab-banner__inner { position: relative; z-index: 2; width: 100%; padding-top: 36px; padding-bottom: 36px; }
-.ab-banner__content { max-width: 600px; }
+.ab-banner__content { max-width: 700px; }
 .ab-banner h1 {
-  font-size: clamp(2rem, 3vw, 2.6rem);
+  font-size: clamp(2.3rem, 3.8vw, 3.3rem);
   font-weight: 700; line-height: 1.12; letter-spacing: -.015em;
   margin: 0 0 22px; text-wrap: balance;
   background: linear-gradient(180deg, #DE520B 0%, #B8400A 100%);
@@ -65,9 +65,11 @@
   -webkit-text-fill-color: transparent; color: transparent;
 }
 .ab-banner p {
-  font-size: 1.12rem; line-height: 1.7; color: var(--ink-2);
-  max-width: 540px; margin: 0 0 32px;
+  font-size: clamp(1.1rem, 1.5vw, 1.3rem); line-height: 1.7; color: var(--ink-2);
+  max-width: 620px; margin: 0 0 34px;
 }
+
+.ab-banner .btn { min-height: 56px; padding: 0 32px; font-size: 1.05rem; }
 
 /* ---------- Tablet / phones: text on top, the full photo below it ---------- */
 @media (max-width: 768px) {
@@ -85,8 +87,8 @@
   }
   .ab-banner__media::after { display: none; }
   .ab-banner .hero__glow { left: 20%; top: 36%; width: 80%; height: 70%; }
-  .ab-banner h1 { font-size: clamp(1.7rem, 7vw, 2.2rem); }
-  .ab-banner p { font-size: 1.02rem; }
+  .ab-banner h1 { font-size: clamp(1.9rem, 8vw, 2.5rem); }
+  .ab-banner p { font-size: 1.08rem; }
   .ab-banner .btn { width: 100%; }
 }
 
