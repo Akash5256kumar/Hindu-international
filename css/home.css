@@ -431,9 +431,9 @@
 /* 3-col body: [left cards] [Om] [right cards] — Om spans both rows in col 2 */
 .hm-purpose__body {
   display: grid;
-  grid-template-columns: 1fr 160px 1fr;
+  grid-template-columns: 1fr 120px 1fr;
   grid-template-rows: auto auto;
-  column-gap: 24px; row-gap: 20px;
+  column-gap: 20px; row-gap: 22px;
 }
 .hm-purpose__grid {
   display: contents; /* li items participate directly in the body grid */
@@ -442,7 +442,7 @@
 .hm-pur {
   --pur-col: #C64828;
   display: flex; flex-direction: row; align-items: flex-start; gap: 14px;
-  padding: 22px 20px 20px 22px;
+  padding: 26px 22px 22px 24px;
   background: rgba(255,248,236,.46);
   backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
   border-radius: 14px;
@@ -506,31 +506,31 @@
 }
 .hm-purpose__om-frame {
   position: relative;
-  width: 132px; height: 132px;
-  background: rgba(255,248,236,.58);
+  width: 108px; height: 108px;
+  background: rgba(255,246,228,.72);
   backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
-  border: 2px solid rgba(200,64,32,.42);
+  border: 2px solid rgba(200,64,32,.40);
   border-radius: 4px; transform: rotate(45deg);
   display: flex; align-items: center; justify-content: center;
-  box-shadow: 0 8px 32px rgba(0,0,0,.22), 0 0 0 8px rgba(200,64,32,.07), inset 0 1px 0 rgba(255,255,255,.32);
+  box-shadow: 0 6px 28px rgba(0,0,0,.20), 0 0 0 7px rgba(200,64,32,.06), inset 0 1px 0 rgba(255,255,255,.36);
 }
 /* Mandala rings behind ॐ (counter-rotated to stay circular) */
 .hm-purpose__om-frame::before {
   content: '';
   position: absolute;
-  width: 108px; height: 108px;
+  width: 86px; height: 86px;
   border-radius: 50%;
   transform: rotate(-45deg);
   background:
-    radial-gradient(circle at center, transparent 30px, rgba(200,130,30,.13) 30px, rgba(200,130,30,.13) 32px, transparent 32px),
-    radial-gradient(circle at center, transparent 40px, rgba(200,130,30,.09) 40px, rgba(200,130,30,.09) 42px, transparent 42px),
-    radial-gradient(circle at center, rgba(200,130,30,.05) 0%, transparent 50px);
+    radial-gradient(circle at center, transparent 24px, rgba(200,130,30,.14) 24px, rgba(200,130,30,.14) 26px, transparent 26px),
+    radial-gradient(circle at center, transparent 33px, rgba(200,130,30,.09) 33px, rgba(200,130,30,.09) 35px, transparent 35px),
+    radial-gradient(circle at center, rgba(200,130,30,.05) 0%, transparent 42px);
   z-index: 0;
 }
 .hm-purpose__om-symbol {
   position: relative; z-index: 1;
   display: block; transform: rotate(-45deg);
-  font-size: 3.6rem; color: #C84020; line-height: 1;
+  font-size: 3rem; color: #C84020; line-height: 1;
   font-family: serif; text-shadow: 0 2px 10px rgba(200,64,32,.4);
 }
 
@@ -575,11 +575,11 @@
   .hm-process .hm-step:nth-child(2)::after { display: block !important; }
   .hm-reasons__grid { grid-template-columns: 1fr 1fr; gap: 16px; }
   .hm-reasons__center { display: none; }
-  .hm-purpose__body { grid-template-columns: 1fr 120px 1fr; column-gap: 16px; }
-  .hm-purpose__om-frame { width: 102px; height: 102px; }
-  .hm-purpose__om-frame::before { width: 82px; height: 82px; }
-  .hm-purpose__om-symbol { font-size: 2.8rem; }
-  .hm-pur { gap: 12px; padding: 18px 16px 18px 20px; }
+  .hm-purpose__body { grid-template-columns: 1fr 96px 1fr; column-gap: 14px; }
+  .hm-purpose__om-frame { width: 88px; height: 88px; }
+  .hm-purpose__om-frame::before { width: 70px; height: 70px; }
+  .hm-purpose__om-symbol { font-size: 2.4rem; }
+  .hm-pur { gap: 12px; padding: 20px 18px 20px 20px; }
   .hm-pur__icon { width: 44px; height: 44px; }
   .hm-pur__icon .icon { width: 24px; height: 24px; }
 }
