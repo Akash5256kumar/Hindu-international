@@ -558,7 +558,7 @@
   width: 54%; min-height: 560px;
   display: flex; flex-direction: column; justify-content: center;
   padding: 72px clamp(24px, 7vw, 96px) 72px clamp(28px, 8vw, 112px);
-  margin-left: 8vw; /* shift text into cream wall zone, past banana-leaf edge */
+  margin-left: 14vw; /* shift text into cream wall zone, past banana-leaf edge */
 }
 
 /* Label — lotus icon + small uppercase text */
