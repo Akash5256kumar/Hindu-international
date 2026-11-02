@@ -558,6 +558,7 @@
   width: 54%; min-height: 560px;
   display: flex; flex-direction: column; justify-content: center;
   padding: 72px clamp(24px, 7vw, 96px) 72px clamp(28px, 8vw, 112px);
+  margin-left: 3.5vw; /* shift text into cream wall zone, past banana-leaf edge */
 }
 
 /* Label — lotus icon + small uppercase text */
@@ -665,7 +666,7 @@
   .hm-pur__icon .icon { width: 24px; height: 24px; }
   /* CTA: slightly wider content area on tablet */
   .hm-cta { min-height: 480px; }
-  .hm-cta__overlay { width: 62%; min-height: 480px; padding: 56px 32px 56px 40px; }
+  .hm-cta__overlay { width: 62%; min-height: 480px; padding: 56px 32px 56px 40px; margin-left: 0; }
 }
 
 /* ---------- Phones ---------- */
@@ -702,7 +703,7 @@
   .hm-reason__icon .icon { width: 24px; height: 24px; }
   /* CTA mobile: content full-width over the image */
   .hm-cta { min-height: 480px; }
-  .hm-cta__overlay { width: 100%; min-height: 480px; padding: 52px 24px 48px; }
+  .hm-cta__overlay { width: 100%; min-height: 480px; padding: 52px 24px 48px; margin-left: 0; }
 }
 
 @media (prefers-reduced-motion: reduce) {
