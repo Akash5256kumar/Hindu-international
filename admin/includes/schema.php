@@ -166,7 +166,7 @@ return [
                 $link('primaryLink', 'Orange button link'),
                 ['key' => 'secondaryText', 'label' => 'Outline button text', 'type' => 'text', 'max' => 40, 'help' => 'Leave empty to hide the button.'],
                 $link('secondaryLink', 'Outline button link'),
-                ['key' => 'rightImage', 'label' => 'Right side image', 'type' => 'image', 'help' => 'Temple or spiritual scene for the right panel. Tall or square format works best.'],
+                ['key' => 'rightImage', 'label' => 'Section background image', 'type' => 'image', 'help' => 'Full-width background image for this banner. Use a wide landscape with a naturally light/cream area on the left where text will appear. Recommended: 1800 × 700 px or wider.'],
             ]],
         ],
     ],
