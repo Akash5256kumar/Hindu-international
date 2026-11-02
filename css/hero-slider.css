@@ -120,8 +120,7 @@
       linear-gradient(90deg, rgba(255, 248, 237, .9) 0%, rgba(255, 248, 237, .7) 18%, rgba(255, 248, 237, .3) 34%, rgba(255, 248, 237, 0) 46%),
       linear-gradient(0deg, rgba(255, 248, 237, .4) 0%, rgba(255, 248, 237, 0) 18%);
   }
-  /* Push text block past the left banana-leaf decoration into the cream centre area */
-  .hero--slider .hero__content { margin-left: 6%; }
+
 }
 
 /* ---------- Phones ---------- */
