@@ -537,7 +537,7 @@
 /* ---------- Banner above the footer — full-width background image with overlay ---------- */
 .hm-cta {
   position: relative; overflow: hidden;
-  min-height: 560px; padding: 0;
+  min-height: 460px; padding: 0;
   background: #F5EAD4; /* fallback while image loads */
 }
 .hm-cta::before { display: none; }
@@ -555,7 +555,7 @@
 /* Content overlaid on the left ~54 % — where the image is naturally light */
 .hm-cta__overlay {
   position: relative; z-index: 1;
-  width: 54%; min-height: 560px;
+  width: 54%; min-height: 460px;
   display: flex; flex-direction: column; justify-content: center;
   padding: 72px clamp(24px, 7vw, 96px) 72px clamp(28px, 8vw, 112px);
   margin-left: 14vw; /* shift text into cream wall zone, past banana-leaf edge */
