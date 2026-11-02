@@ -102,6 +102,7 @@
   /* Card fields stay as the admin saved them; everything else is the detail page */
   var CARD_KEYS = { show: 1, slug: 1, number: 1, icon: 1, title: 1, text: 1, image: 1, imageAlt: 1, link: 1 };
   function emptyDetail(s) {
+    if (s && s.design === 'jaap') return !str(s.jaapIntroHeading) && !list(s.jaapBenefits).length;
     return !str(s.aboutTitle) && !str(s.aboutText1) && !list(s.processSteps).length && !list(s.receive).length && !list(s.faqs).length;
   }
   /* A service whose detail page the admin has not filled in yet takes it from the default file
