@@ -38,7 +38,7 @@
 }
 
 /* ---------- Text stack: one slide visible at a time ---------- */
-.hero--slider .hero__content { max-width: 600px; margin-left: auto; margin-right: auto; }
+.hero--slider .hero__content { max-width: 600px; }
 .hero__slides { display: grid; }
 .hero__slide {
   grid-area: 1 / 1;
