@@ -442,7 +442,7 @@ return [
                 ['key' => 'items', 'label' => 'Services', 'type' => 'list', 'min' => 0, 'max' => 40, 'itemLabel' => 'Service', 'titleField' => 'title', 'fields' => [
                     $showField,
                     ['key' => 'status', 'label' => 'Detail page status', 'type' => 'select', 'options' => ['draft' => 'Draft (detail page not ready yet)', 'published' => 'Published'], 'help' => 'While a service is a draft, its “View Details” button opens the link below instead of the detail page.'],
-                    ['key' => 'design', 'label' => 'Detail page design', 'type' => 'select', 'options' => ['standard' => 'Standard', 'v2' => 'New (banner text + button, Why Choose in 4 columns, Who Can Use beside FAQs, rounded bottom banner)']],
+                    ['key' => 'design', 'label' => 'Detail page design', 'type' => 'select', 'options' => ['standard' => 'Standard', 'v2' => 'New (banner text + button, Why Choose in 4 columns, Who Can Use beside FAQs, rounded bottom banner)', 'jaap' => 'Jaap & Paath (mantra box, 3-column cards, bullet lists, frosted offerings, numbered booking steps)']],
                     ['key' => 'slug', 'label' => 'Page address (slug)', 'type' => 'slug', 'max' => 80, 'required' => true, 'help' => 'Small letters, numbers and dashes, e.g. virtual-punya-snan. The page opens at /service?name=virtual-punya-snan. Must be different for every service.'],
                     $serviceIconField,
                     ['key' => 'title', 'label' => 'Service name', 'type' => 'text', 'max' => 90, 'required' => true],
@@ -538,6 +538,53 @@ return [
 
                     ['key' => 'seoTitle', 'label' => 'SEO title (browser tab, Google)', 'type' => 'text', 'max' => 90, 'help' => 'Empty = “service name | Hindu.International”.'],
                     ['key' => 'seoDescription', 'label' => 'SEO description', 'type' => 'textarea', 'rows' => 2, 'max' => 300],
+
+                    /* ---- Jaap & Paath fields (shown when design === “jaap”) ---- */
+                    ['key' => 'jaapIntroHeading', 'label' => 'Jaap — intro heading', 'type' => 'text', 'max' => 120],
+                    ['key' => 'jaapIntroText', 'label' => 'Jaap — intro text (2 paragraphs)', 'type' => 'textarea', 'rows' => 5, 'max' => 1800, 'help' => 'Press Enter twice between the two paragraphs.'],
+                    ['key' => 'jaapMantraTitle', 'label' => 'Jaap — mantra box label', 'type' => 'text', 'max' => 80, 'help' => 'e.g. The Sacred Mantra'],
+                    ['key' => 'jaapMantra', 'label' => 'Jaap — mantra (Sanskrit)', 'type' => 'textarea', 'rows' => 4, 'max' => 600, 'help' => 'Press Enter between lines of the mantra.'],
+                    ['key' => 'jaapMeaningTitle', 'label' => 'Jaap — mantra meaning label', 'type' => 'text', 'max' => 60, 'help' => 'e.g. Meaning'],
+                    ['key' => 'jaapMeaning', 'label' => 'Jaap — mantra meaning (English)', 'type' => 'textarea', 'rows' => 3, 'max' => 600],
+
+                    ['key' => 'jaapCol1Title', 'label' => 'Jaap — card 1 title (e.g. Meaning)', 'type' => 'text', 'max' => 80],
+                    ['key' => 'jaapCol1Text', 'label' => 'Jaap — card 1 text', 'type' => 'textarea', 'rows' => 3, 'max' => 600],
+                    ['key' => 'jaapCol2Title', 'label' => 'Jaap — card 2 title (e.g. Why It Is Performed)', 'type' => 'text', 'max' => 80],
+                    ['key' => 'jaapCol2Text', 'label' => 'Jaap — card 2 text', 'type' => 'textarea', 'rows' => 3, 'max' => 600],
+                    ['key' => 'jaapCol3Title', 'label' => 'Jaap — card 3 title (e.g. Religious Significance)', 'type' => 'text', 'max' => 80],
+                    ['key' => 'jaapCol3Text', 'label' => 'Jaap — card 3 text', 'type' => 'textarea', 'rows' => 3, 'max' => 600],
+
+                    ['key' => 'jaapBenefitsTitle', 'label' => 'Jaap — benefits heading', 'type' => 'text', 'max' => 80],
+                    ['key' => 'jaapBenefits', 'label' => 'Jaap — spiritual benefits', 'type' => 'list', 'min' => 0, 'max' => 12, 'itemLabel' => 'Benefit', 'titleField' => 'text', 'fields' => [
+                        ['key' => 'text', 'label' => 'Benefit', 'type' => 'text', 'max' => 200, 'required' => true],
+                    ]],
+
+                    ['key' => 'jaapOccasionsTitle', 'label' => 'Jaap — occasions heading', 'type' => 'text', 'max' => 80, 'help' => 'e.g. When Is It Performed'],
+                    ['key' => 'jaapOccasions', 'label' => 'Jaap — occasions (when it is performed)', 'type' => 'list', 'min' => 0, 'max' => 12, 'itemLabel' => 'Occasion', 'titleField' => 'text', 'fields' => [
+                        ['key' => 'text', 'label' => 'Occasion', 'type' => 'text', 'max' => 200, 'required' => true],
+                    ]],
+
+                    ['key' => 'jaapOfferingsTitle', 'label' => 'Jaap — offerings heading', 'type' => 'text', 'max' => 80, 'help' => 'e.g. Our Jaap Services'],
+                    ['key' => 'jaapOfferingsSubtitle', 'label' => 'Jaap — offerings subtitle', 'type' => 'text', 'max' => 200],
+                    ['key' => 'jaapOfferingsBgImage', 'label' => 'Jaap — offerings background photo', 'type' => 'image', 'help' => 'This photo shows behind the frosted-glass service cards. A dark, atmospheric image works best.'],
+                    ['key' => 'jaapOfferings', 'label' => 'Jaap — offering cards (up to 4)', 'type' => 'list', 'min' => 0, 'max' => 4, 'itemLabel' => 'Card', 'titleField' => 'title', 'fields' => [
+                        $serviceIconField,
+                        ['key' => 'title', 'label' => 'Title', 'type' => 'text', 'max' => 80, 'required' => true],
+                        ['key' => 'text', 'label' => 'Description', 'type' => 'textarea', 'rows' => 2, 'max' => 300],
+                    ]],
+
+                    ['key' => 'jaapBookingTitle', 'label' => 'Jaap — booking process heading', 'type' => 'text', 'max' => 80, 'help' => 'e.g. Booking Process'],
+                    ['key' => 'jaapBookingSubtitle', 'label' => 'Jaap — booking process subtitle', 'type' => 'text', 'max' => 200],
+                    ['key' => 'jaapBookingSteps', 'label' => 'Jaap — booking steps (up to 4)', 'type' => 'list', 'min' => 0, 'max' => 4, 'itemLabel' => 'Step', 'titleField' => 'title', 'fields' => [
+                        ['key' => 'title', 'label' => 'Step title', 'type' => 'text', 'max' => 80, 'required' => true],
+                        ['key' => 'text', 'label' => 'Description', 'type' => 'textarea', 'rows' => 2, 'max' => 300],
+                    ]],
+
+                    ['key' => 'jaapFaqTitle', 'label' => 'Jaap — FAQ heading', 'type' => 'text', 'max' => 80],
+                    ['key' => 'jaapFaqs', 'label' => 'Jaap — FAQ questions', 'type' => 'list', 'min' => 0, 'max' => 20, 'itemLabel' => 'Question', 'titleField' => 'q', 'fields' => [
+                        ['key' => 'q', 'label' => 'Question', 'type' => 'text', 'max' => 200, 'required' => true],
+                        ['key' => 'a', 'label' => 'Answer', 'type' => 'textarea', 'rows' => 3, 'max' => 1200, 'required' => true],
+                    ]],
                 ]],
             ]],
         ],
