@@ -657,6 +657,28 @@
      Start
      ================================================================= */
 
+  /*
+   * Seed default content for any fixed-size list that is missing entirely from saved data.
+   * This prevents "required field" validation errors when the server has new list fields
+   * that the saved site.json does not yet contain (e.g. bottomCta.features).
+   * Each entry maps a content path → array of default items with NON-EMPTY required values.
+   */
+  var LIST_SEEDS = {
+    'home.bottomCta.features': [
+      { show: true, icon: 'lotus',  title: 'Explore Traditions',        text: 'Access spiritual services from anywhere.' },
+      { show: true, icon: 'people', title: 'Stay Connected',             text: 'Be part of a larger spiritual community.' },
+      { show: true, icon: 'temple', title: 'Discover New Possibilities', text: 'Find services that suit your spiritual needs.' }
+    ]
+  };
+
+  function seedMissingLists(content) {
+    Object.keys(LIST_SEEDS).forEach(function (path) {
+      if (!Array.isArray(getPath(content, path))) {
+        setPath(content, path, clone(LIST_SEEDS[path]));
+      }
+    });
+  }
+
   function start() {
     request('api.php?action=load').then(function (res) {
       if (!res.ok) {
@@ -666,6 +688,7 @@
       }
       state.schema = res.schema;
       state.content = clone(res.content || {});
+      seedMissingLists(state.content);
       state.savedSnapshot = JSON.stringify(state.content);
 
       renderSection((location.hash || '').slice(1));
