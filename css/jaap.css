@@ -1,0 +1,283 @@
+/* =====================================================================
+   JAAP & PAATH PAGES (jaap.html?name=<slug>)
+   Individual pages for each Jaap & Paath service.
+   Header and footer styles stay in style.css.
+   ===================================================================== */
+
+.jp-page {
+  background: #FFFBF5;
+}
+/* Keep footer below the fold until content loads */
+.jp-page:not(.is-ready) main { min-height: 100vh; }
+
+/* ---------- Section wrapper ---------- */
+.jp-section {
+  padding: 56px 0;
+  border-top: 1px solid #EDE0CB;
+}
+
+/* ---------- Shared heading ---------- */
+.jp-title {
+  margin: 0 0 10px;
+  font-family: var(--font-serif); font-weight: 700;
+  font-size: clamp(1.6rem, 2.5vw, 2.05rem); line-height: 1.2;
+  color: var(--roots-ink, #1E1208);
+}
+
+/* ---------- Divider ---------- */
+.jp-divider {
+  display: flex; align-items: center; gap: 10px;
+  width: min(360px, 100%); margin: 10px 0 14px;
+  color: var(--saffron, #C97B2B);
+}
+.jp-divider::before, .jp-divider::after { content: ""; flex: 1; height: 1px; background: currentColor; opacity: .6; }
+.jp-divider .icon { flex: none; width: 26px; height: 26px; stroke-width: 1.8; }
+
+/* ---------- Buttons ---------- */
+.jp-btn {
+  display: inline-flex; align-items: center; gap: 10px;
+  min-height: 48px; padding: 0 26px; border-radius: 8px;
+  font-family: var(--font-sans); font-size: 1rem; font-weight: 600; line-height: 1.2;
+  transition: filter .2s, transform .2s;
+  text-decoration: none;
+}
+.jp-btn--primary {
+  color: #FFFFFF;
+  background: linear-gradient(180deg, #C4843A 0%, #B5722B 100%);
+  box-shadow: 0 8px 20px rgba(120, 66, 18, .28);
+}
+.jp-btn--primary:hover { color: #FFFFFF; filter: brightness(1.07); transform: translateY(-1px); }
+.jp-btn--ghost {
+  color: var(--saffron-deep, #C97B2B);
+  background: transparent;
+  border: 2px solid var(--saffron-deep, #C97B2B);
+}
+.jp-btn--ghost:hover { background: rgba(201, 123, 43, .08); }
+.jp-btn:focus-visible { outline: 2px solid var(--roots-ink, #1E1208); outline-offset: 3px; }
+.jp-btn .icon { width: 18px; height: 18px; stroke-width: 2; }
+
+/* =====================================================================
+   1. Hero / Banner
+   ===================================================================== */
+.jp-hero {
+  position: relative; overflow: hidden;
+  min-height: clamp(400px, 30vw, 460px);
+  display: flex; align-items: center;
+  background: linear-gradient(135deg, #F7E8D4 0%, #FDDAAC 40%, #F9C98A 65%, #E8B880 100%);
+}
+.jp-hero__media {
+  position: absolute; top: 0; right: 0; bottom: 0; width: 55%;
+}
+.jp-hero__media img {
+  width: 100%; height: 100%; object-fit: cover; object-position: 60% 40%;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,.5) 16%, #000 36%);
+          mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,.5) 16%, #000 36%);
+}
+.jp-hero__inner {
+  position: relative; z-index: 1;
+  width: 100%; padding-top: 24px; padding-bottom: 32px;
+}
+.jp-hero__inner > * { max-width: 580px; }
+.jp-hero__title {
+  margin: 0;
+  font-family: var(--font-serif); font-weight: 700;
+  font-size: clamp(2.1rem, 3.6vw, 3.1rem); line-height: 1.06;
+  color: #1E1208;
+}
+.jp-hero__sub {
+  margin: 6px 0 0;
+  font-size: clamp(1rem, 1.5vw, 1.22rem); line-height: 1.4;
+  color: #3A2A18;
+}
+.jp-hero__actions {
+  display: flex; flex-wrap: wrap; gap: 14px;
+  margin-top: 20px;
+}
+/* "page not found" variant — no photo */
+.jp-hero--plain {
+  min-height: 0;
+  background: #FAF2E6;
+}
+.jp-hero--plain .jp-hero__inner { padding-top: 64px; padding-bottom: 64px; }
+
+/* =====================================================================
+   2. Intro: two-column text + cream mantra box
+   ===================================================================== */
+#jp-intro { background: #FFFBF5; }
+.jp-intro__wrap { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: 52px; align-items: start; }
+.jp-intro__text .jp-title { margin-bottom: 14px; }
+.jp-intro__para { margin: 0 0 14px; color: var(--ink-2); line-height: 1.7; font-size: 1.02rem; }
+.jp-intro__para:last-child { margin-bottom: 0; }
+.jp-intro__mantra {
+  background: #F5ECD8; border: 1px solid #DFD0B5; border-radius: 14px;
+  padding: 28px 30px; display: grid; gap: 8px;
+}
+.jp-mantra__label {
+  margin: 0; font-size: .78rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase;
+  color: var(--saffron-deep, #B5722B);
+}
+.jp-mantra__text {
+  margin: 0;
+  font-family: 'Noto Serif Devanagari', 'Nirmala UI', 'Mangal', serif; font-weight: 600;
+  font-size: 1.14rem; line-height: 1.85; color: #1E1208;
+}
+.jp-mantra__meaning-label {
+  margin: 10px 0 0; font-size: .78rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase;
+  color: var(--ink-2); border-top: 1px solid #DFD0B5; padding-top: 12px;
+}
+.jp-mantra__meaning { margin: 0; font-size: .9rem; line-height: 1.6; color: var(--ink-2); font-style: italic; }
+
+/* =====================================================================
+   3. Three-column cards (meaning / why / significance)
+   ===================================================================== */
+#jp-3col { background: #FBF3E8; }
+.jp-3col { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
+.jp-3col__card {
+  background: var(--white); border: 1px solid var(--line); border-radius: 14px;
+  padding: 28px 24px; box-shadow: 0 6px 18px rgba(90, 48, 12, .06);
+}
+.jp-3col__icon { display: block; color: var(--saffron); margin-bottom: 12px; }
+.jp-3col__icon .icon { width: 34px; height: 34px; stroke-width: 1.4; }
+.jp-3col__title { margin: 0 0 10px; font-family: var(--font-serif); font-weight: 700; font-size: 1.08rem; color: #1E1208; }
+.jp-3col__text { margin: 0; font-size: .91rem; line-height: 1.65; color: var(--ink-2); }
+
+/* =====================================================================
+   4 + 5. Spiritual benefits & occasions (bullet lists)
+   ===================================================================== */
+#jp-benefits { background: #FFFBF5; }
+#jp-occasions { background: #FBF3E8; }
+.jp-bullets { max-width: 860px; margin-left: auto; margin-right: auto; }
+.jp-bullets__title { margin-bottom: 24px; text-align: center; }
+.jp-bullets__list {
+  list-style: none; margin: 0; padding: 0;
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 32px;
+}
+.jp-bullets__list li {
+  display: grid; grid-template-columns: 22px minmax(0, 1fr); gap: 10px;
+  font-size: .93rem; line-height: 1.5; color: var(--ink-2);
+}
+.jp-bullets__list .icon {
+  width: 20px; height: 20px; margin-top: 1px;
+  color: var(--white); fill: var(--saffron); stroke: var(--white); stroke-width: 2;
+}
+
+/* =====================================================================
+   6. Offerings on a dark photo background (frosted-glass cards)
+   ===================================================================== */
+#jp-offerings {
+  background-size: cover; background-position: center;
+  padding: 0; border-top: 0;
+}
+.jp-offerings__overlay { background: rgba(20, 8, 2, .74); padding: 60px 0; }
+.jp-offerings__head { text-align: center; margin-bottom: 36px; }
+.jp-offerings__title { color: var(--white) !important; }
+.jp-offerings__sub { margin: 8px 0 0; color: rgba(255, 255, 255, .76); font-size: 1.02rem; }
+.jp-offerings__grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }
+.jp-offerings__card {
+  background: rgba(255, 255, 255, .09);
+  border: 1px solid rgba(255, 255, 255, .18);
+  -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
+  border-radius: 14px; padding: 26px 20px; text-align: center;
+}
+.jp-offerings__icon { display: block; margin-bottom: 12px; color: var(--saffron); }
+.jp-offerings__icon .icon { width: 34px; height: 34px; stroke-width: 1.4; }
+.jp-offerings__card h3 { margin: 0 0 8px; font-family: var(--font-serif); font-weight: 700; font-size: 1.05rem; color: var(--white); }
+.jp-offerings__card p { margin: 0; font-size: .88rem; line-height: 1.55; color: rgba(255, 255, 255, .78); }
+
+/* =====================================================================
+   7. Booking process (numbered steps)
+   ===================================================================== */
+#jp-booking { background: var(--white, #fff); }
+.jp-booking { padding: 0; }
+.jp-booking__head { text-align: center; margin-bottom: 36px; }
+.jp-booking__sub { margin: 6px 0 0; font-size: 1.02rem; color: var(--ink-2); }
+.jp-booking__steps {
+  list-style: none; margin: 0; padding: 0;
+  display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0;
+}
+.jp-booking__step { position: relative; padding: 0 24px; text-align: center; }
+.jp-booking__step + .jp-booking__step { border-left: 1px solid var(--line); }
+.jp-booking__num {
+  display: grid; place-items: center;
+  width: 52px; height: 52px; margin: 0 auto 14px; border-radius: 50%;
+  background: var(--saffron, #C97B2B); color: var(--white, #fff);
+  font-family: var(--font-serif); font-size: 1.28rem; font-weight: 700;
+}
+.jp-booking__step h3 { margin: 0 0 8px; font-family: var(--font-serif); font-weight: 700; font-size: 1.02rem; color: #1E1208; }
+.jp-booking__step p { margin: 0; font-size: .9rem; line-height: 1.55; color: var(--muted); }
+
+/* =====================================================================
+   8. FAQ
+   ===================================================================== */
+#jp-faq { background: #FFFBF5; }
+.jp-faq { max-width: 820px; margin-left: auto; margin-right: auto; }
+.jp-faq__title { margin-bottom: 24px; text-align: center; }
+.jp-faq__list { max-width: none; }
+.jp-faq__list details { border-radius: 10px; }
+.jp-faq__list details + details { margin-top: 10px; }
+.jp-faq__list summary { justify-content: flex-start; padding: 14px 16px; font-size: .95rem; }
+.jp-faq__list summary::after { margin-left: auto; width: 26px; height: 26px; font-size: 1.1rem; }
+.jp-faq__list details p { padding: 0 16px 16px 54px; font-size: .92rem; }
+.jp-faq__num { flex: none; min-width: 2.2em; font-weight: 600; color: var(--saffron-deep); }
+.jp-faq__q { flex: 1; }
+
+/* =====================================================================
+   9. Closing CTA banner
+   ===================================================================== */
+.jp-cta {
+  position: relative; overflow: hidden;
+  min-height: 200px; display: flex; align-items: center;
+  margin-top: 8px;
+  background: radial-gradient(60% 120% at 50% 100%, #3A1A06 0%, #1E0E02 55%, #130800 100%);
+  color: #FFFFFF; text-align: center;
+}
+.jp-cta__media { position: absolute; inset: 0; }
+.jp-cta__media img {
+  width: 100%; height: 100%; object-fit: cover; object-position: center;
+  opacity: .28;
+}
+.jp-cta__inner {
+  position: relative; z-index: 1;
+  padding-top: 36px; padding-bottom: 40px; max-width: 640px;
+  margin: 0 auto;
+}
+.jp-cta__title {
+  margin: 0; font-family: var(--font-serif); font-weight: 600;
+  font-size: clamp(1.4rem, 2.3vw, 1.9rem); line-height: 1.25; color: #FFFFFF;
+}
+.jp-cta__accent { display: block; font-size: 1.16em; color: #F5C87A; }
+.jp-cta__text { margin: 10px 0 20px; font-size: 1.02rem; line-height: 1.55; color: rgba(255, 255, 255, .88); }
+
+.jp-noscript { padding: 40px 0; }
+
+/* =====================================================================
+   Responsive
+   ===================================================================== */
+@media (max-width: 1024px) {
+  .jp-hero__media { width: 50%; }
+}
+
+@media (max-width: 768px) {
+  .jp-hero { min-height: 0; }
+  .jp-hero__media { position: relative; width: 100%; height: 220px; }
+  .jp-hero__media img { -webkit-mask-image: none; mask-image: none; }
+  .jp-hero__inner { padding-top: 28px; }
+  .jp-hero__inner > * { max-width: 100%; }
+  .jp-intro__wrap { grid-template-columns: minmax(0, 1fr); gap: 28px; }
+  .jp-3col { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .jp-offerings__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .jp-booking__steps { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 0; }
+  .jp-booking__step + .jp-booking__step { border-left: 0; }
+  .jp-booking__step:nth-child(2) { border-top: 1px solid var(--line); padding-top: 28px; }
+}
+
+@media (max-width: 640px) {
+  .jp-section { padding: 40px 0; }
+  .jp-3col { grid-template-columns: minmax(0, 1fr); }
+  .jp-bullets__list { grid-template-columns: minmax(0, 1fr); }
+  .jp-offerings__grid { grid-template-columns: minmax(0, 1fr); }
+  .jp-booking__steps { grid-template-columns: minmax(0, 1fr); gap: 20px; }
+  .jp-booking__step + .jp-booking__step { border: 0; border-top: 1px solid var(--line); padding-top: 20px; }
+  .jp-booking__step:nth-child(2) { border-top: 1px solid var(--line); padding-top: 20px; }
+  .jp-hero__actions { flex-direction: column; align-items: flex-start; }
+}

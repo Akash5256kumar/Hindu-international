@@ -61,6 +61,7 @@ $seoPages = [
     'contact' => 'Contact Us',
     'services' => 'Services',
     'jyotirlinga' => '12 Jyotirlinga',
+    'jaap' => 'Jaap & Paath',
     'privacy' => 'Privacy Policy',
     'terms' => 'Terms & Conditions',
 ];
@@ -645,6 +646,81 @@ return [
                     ['key' => 'ctaImage', 'label' => 'Bottom banner — photo (left side)', 'type' => 'image', 'help' => 'Size 1600 × 800 px (2 : 1). Subject on the left; the right side fades into navy.'],
 
                     ['key' => 'seoTitle', 'label' => 'SEO title (browser tab, Google)', 'type' => 'text', 'max' => 90, 'help' => 'Empty = “temple name | Hindu.International”.'],
+                    ['key' => 'seoDescription', 'label' => 'SEO description', 'type' => 'textarea', 'rows' => 2, 'max' => 300],
+                ]],
+            ]],
+        ],
+    ],
+    [
+        'id' => 'jaap', 'title' => 'Jaap & Paath pages', 'icon' => 'steps',
+        'groups' => [
+            ['path' => 'jaapServices', 'title' => 'Jaap & Paath pages', 'help' => 'Each Jaap & Paath service has its own page at /jaap?name=slug (for example /jaap?name=mahamrityunjay-jaap). The parent "Jaap & Paath Services" card on the services listing links to each of these. Sections you leave empty are not shown.', 'fields' => [
+                ['key' => 'knownDefaults', 'label' => 'Default pages already seen', 'type' => 'hidden'],
+                ['key' => 'items', 'label' => 'Jaap & Paath services', 'type' => 'list', 'min' => 0, 'max' => 20, 'itemLabel' => 'Service', 'titleField' => 'name', 'fields' => [
+                    ['key' => 'show', 'label' => 'Page is live on the website', 'type' => 'toggle', 'default' => true],
+                    ['key' => 'slug', 'label' => 'Page address (slug)', 'type' => 'slug', 'max' => 60, 'required' => true, 'help' => 'Small letters and dashes, e.g. mahamrityunjay-jaap. The page opens at /jaap?name=mahamrityunjay-jaap.'],
+                    ['key' => 'name', 'label' => 'Service name', 'type' => 'text', 'max' => 100, 'required' => true, 'help' => 'e.g. Mahamrityunjay Jaap. Shown in the admin list.'],
+
+                    ['key' => 'heroTitle', 'label' => 'Top banner — heading', 'type' => 'textarea', 'rows' => 2, 'max' => 100, 'help' => 'Press Enter to start a new line. Empty = the service name.'],
+                    ['key' => 'heroSubtitle', 'label' => 'Top banner — subtitle', 'type' => 'text', 'max' => 160],
+                    ['key' => 'heroButton', 'label' => 'Top banner — button text', 'type' => 'text', 'max' => 40, 'help' => 'e.g. Book This Service'],
+                    $link('heroLink', 'Top banner — button link'),
+                    ['key' => 'heroImage', 'label' => 'Top banner — photo', 'type' => 'image', 'help' => 'The image shows on the right side of the banner.'],
+                    ['key' => 'heroImageAlt', 'label' => 'Top banner — photo description', 'type' => 'text', 'max' => 200],
+
+                    ['key' => 'jaapIntroHeading', 'label' => 'Intro section — heading', 'type' => 'text', 'max' => 120],
+                    ['key' => 'jaapIntroText', 'label' => 'Intro section — text (use blank line to separate paragraphs)', 'type' => 'textarea', 'rows' => 5, 'max' => 1800],
+                    ['key' => 'jaapMantraTitle', 'label' => 'Mantra box — label', 'type' => 'text', 'max' => 80, 'help' => 'e.g. The Sacred Mantra'],
+                    ['key' => 'jaapMantra', 'label' => 'Mantra box — mantra (Sanskrit)', 'type' => 'textarea', 'rows' => 4, 'max' => 600, 'help' => 'Press Enter between lines.'],
+                    ['key' => 'jaapMeaningTitle', 'label' => 'Mantra box — meaning label', 'type' => 'text', 'max' => 60, 'help' => 'e.g. Meaning'],
+                    ['key' => 'jaapMeaning', 'label' => 'Mantra box — meaning (English)', 'type' => 'textarea', 'rows' => 3, 'max' => 600],
+
+                    ['key' => 'jaapCol1Title', 'label' => '3-column card 1 — heading', 'type' => 'text', 'max' => 80, 'help' => 'e.g. Meaning'],
+                    ['key' => 'jaapCol1Text', 'label' => '3-column card 1 — text', 'type' => 'textarea', 'rows' => 3, 'max' => 600],
+                    ['key' => 'jaapCol2Title', 'label' => '3-column card 2 — heading', 'type' => 'text', 'max' => 80, 'help' => 'e.g. Why It Is Performed'],
+                    ['key' => 'jaapCol2Text', 'label' => '3-column card 2 — text', 'type' => 'textarea', 'rows' => 3, 'max' => 600],
+                    ['key' => 'jaapCol3Title', 'label' => '3-column card 3 — heading', 'type' => 'text', 'max' => 80, 'help' => 'e.g. Religious Significance'],
+                    ['key' => 'jaapCol3Text', 'label' => '3-column card 3 — text', 'type' => 'textarea', 'rows' => 3, 'max' => 600],
+
+                    ['key' => 'jaapBenefitsTitle', 'label' => 'Spiritual benefits — heading', 'type' => 'text', 'max' => 80],
+                    ['key' => 'jaapBenefits', 'label' => 'Spiritual benefits (bullet list)', 'type' => 'list', 'min' => 0, 'max' => 12, 'itemLabel' => 'Benefit', 'titleField' => 'text', 'fields' => [
+                        ['key' => 'text', 'label' => 'Benefit', 'type' => 'text', 'max' => 160, 'required' => true],
+                    ]],
+                    ['key' => 'jaapOccasionsTitle', 'label' => 'Occasions — heading', 'type' => 'text', 'max' => 80, 'help' => 'e.g. When Is It Performed'],
+                    ['key' => 'jaapOccasions', 'label' => 'Occasions (bullet list)', 'type' => 'list', 'min' => 0, 'max' => 12, 'itemLabel' => 'Occasion', 'titleField' => 'text', 'fields' => [
+                        ['key' => 'text', 'label' => 'Occasion', 'type' => 'text', 'max' => 160, 'required' => true],
+                    ]],
+
+                    ['key' => 'jaapOfferingsTitle', 'label' => 'Offerings section — heading', 'type' => 'text', 'max' => 80, 'help' => 'e.g. Our Jaap Services'],
+                    ['key' => 'jaapOfferingsSubtitle', 'label' => 'Offerings section — subtitle', 'type' => 'text', 'max' => 200],
+                    ['key' => 'jaapOfferingsBgImage', 'label' => 'Offerings section — background photo', 'type' => 'image', 'help' => 'Dark, atmospheric photo that shows behind frosted-glass cards.'],
+                    ['key' => 'jaapOfferings', 'label' => 'Offerings cards (up to 4)', 'type' => 'list', 'min' => 0, 'max' => 4, 'itemLabel' => 'Card', 'titleField' => 'title', 'fields' => [
+                        ['key' => 'icon', 'label' => 'Icon name', 'type' => 'text', 'max' => 30, 'help' => 'e.g. lotus, temple, bookopen, flame'],
+                        ['key' => 'title', 'label' => 'Card heading', 'type' => 'text', 'max' => 80, 'required' => true],
+                        ['key' => 'text', 'label' => 'Card text', 'type' => 'textarea', 'rows' => 2, 'max' => 300],
+                    ]],
+
+                    ['key' => 'jaapBookingTitle', 'label' => 'Booking process — heading', 'type' => 'text', 'max' => 80, 'help' => 'e.g. Booking Process'],
+                    ['key' => 'jaapBookingSubtitle', 'label' => 'Booking process — subtitle', 'type' => 'text', 'max' => 200],
+                    ['key' => 'jaapBookingSteps', 'label' => 'Booking steps (up to 4)', 'type' => 'list', 'min' => 0, 'max' => 4, 'itemLabel' => 'Step', 'titleField' => 'title', 'fields' => [
+                        ['key' => 'title', 'label' => 'Step heading', 'type' => 'text', 'max' => 80, 'required' => true],
+                        ['key' => 'text', 'label' => 'Step description', 'type' => 'textarea', 'rows' => 2, 'max' => 300],
+                    ]],
+
+                    ['key' => 'jaapFaqTitle', 'label' => 'FAQ — heading', 'type' => 'text', 'max' => 80, 'help' => 'e.g. Frequently Asked Questions'],
+                    ['key' => 'jaapFaqs', 'label' => 'FAQ questions', 'type' => 'list', 'min' => 0, 'max' => 20, 'itemLabel' => 'Question', 'titleField' => 'q', 'fields' => [
+                        ['key' => 'q', 'label' => 'Question', 'type' => 'text', 'max' => 200, 'required' => true],
+                        ['key' => 'a', 'label' => 'Answer', 'type' => 'textarea', 'rows' => 3, 'max' => 1200, 'required' => true],
+                    ]],
+
+                    ['key' => 'ctaTitle', 'label' => 'Bottom banner — heading', 'type' => 'text', 'max' => 100, 'help' => 'Leave this and the accent line empty to hide the bottom banner.'],
+                    ['key' => 'ctaAccent', 'label' => 'Bottom banner — accent line', 'type' => 'text', 'max' => 80],
+                    ['key' => 'ctaText', 'label' => 'Bottom banner — text', 'type' => 'text', 'max' => 200],
+                    ['key' => 'ctaButton', 'label' => 'Bottom banner — button text', 'type' => 'text', 'max' => 40],
+                    $link('ctaLink', 'Bottom banner — button link'),
+                    ['key' => 'ctaImage', 'label' => 'Bottom banner — background photo', 'type' => 'image'],
+
+                    ['key' => 'seoTitle', 'label' => 'SEO title (browser tab, Google)', 'type' => 'text', 'max' => 90, 'help' => 'Empty = "service name | Hindu.International".'],
                     ['key' => 'seoDescription', 'label' => 'SEO description', 'type' => 'textarea', 'rows' => 2, 'max' => 300],
                 ]],
             ]],

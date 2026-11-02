@@ -102,7 +102,6 @@
   /* Card fields stay as the admin saved them; everything else is the detail page */
   var CARD_KEYS = { show: 1, slug: 1, number: 1, icon: 1, title: 1, text: 1, image: 1, imageAlt: 1, link: 1 };
   function emptyDetail(s) {
-    if (s && s.design === 'jaap') return !str(s.jaapIntroHeading) && !list(s.jaapBenefits).length;
     return !str(s.aboutTitle) && !str(s.aboutText1) && !list(s.processSteps).length && !list(s.receive).length && !list(s.faqs).length;
   }
   /* A service whose detail page the admin has not filled in yet takes it from the default file
@@ -640,19 +639,7 @@
 
     applySeo(s);
     document.body.classList.toggle('sd-v2', isV2(s));
-    document.body.classList.toggle('sd-jaap', isJaap(s));
     renderBanner(s, fallbackImage);
-
-    if (isJaap(s)) {
-      if (s.status !== 'published') {
-        renderNotice('Full details are coming soon', str(s.text), safeLink(s.link, 'booking'), 'Enquire about this service');
-        show(document.getElementById('sd-process'), false);
-        return;
-      }
-      renderJaap(s);
-      linkJyotirlingaPages();
-      return;
-    }
 
     renderProcess(s, data);
 
@@ -729,164 +716,6 @@
 
   /* Admin → Services → “Page design”: the newer layout, chosen per service */
   function isV2(s) { return s && s.design === 'v2'; }
-  function isJaap(s) { return s && s.design === 'jaap'; }
-
-  /* =================================================================
-     JAAP & PAATH DESIGN — sections rendered when design === “jaap”
-     ================================================================= */
-  function renderJaapIntro(s) {
-    fill('sd-jaap-intro', function (box) {
-      if (!str(s.jaapIntroText) && !str(s.jaapMantra)) return false;
-      var wrap = el('div', 'container jp-intro');
-      var left = el('div', 'jp-intro__text');
-      if (str(s.jaapIntroHeading)) left.appendChild(el('h2', 'sd-title', str(s.jaapIntroHeading)));
-      if (str(s.jaapIntroText)) left.appendChild(el('p', 'jp-intro__para', str(s.jaapIntroText)));
-      wrap.appendChild(left);
-      if (str(s.jaapMantra)) {
-        var right = el('div', 'jp-intro__mantra');
-        if (str(s.jaapMantraTitle)) right.appendChild(el('p', 'jp-mantra__label', str(s.jaapMantraTitle)));
-        var mt = lines(el('p', 'jp-mantra__text'), s.jaapMantra);
-        mt.lang = 'sa';
-        right.appendChild(mt);
-        if (str(s.jaapMeaningTitle)) {
-          var ml = el('p', 'jp-mantra__meaning-label');
-          ml.textContent = str(s.jaapMeaningTitle);
-          right.appendChild(ml);
-        }
-        if (str(s.jaapMeaning)) right.appendChild(el('p', 'jp-mantra__meaning', str(s.jaapMeaning)));
-        wrap.appendChild(right);
-      }
-      box.appendChild(wrap);
-    });
-  }
-
-  function renderJaap3col(s) {
-    fill('sd-jaap-3col', function (box) {
-      var cols = [
-        { t: s.jaapCol1Title, b: s.jaapCol1Text, ic: 'bookopen' },
-        { t: s.jaapCol2Title, b: s.jaapCol2Text, ic: 'lotus' },
-        { t: s.jaapCol3Title, b: s.jaapCol3Text, ic: 'temple' }
-      ].filter(function (c) { return str(c.t) || str(c.b); });
-      if (!cols.length) return false;
-      var wrap = el('div', 'container');
-      var grid = el('div', 'jp-3col');
-      cols.forEach(function (c) {
-        var card = el('div', 'jp-3col__card');
-        var ic = el('span', 'jp-3col__icon');
-        ic.appendChild(icon(c.ic));
-        card.appendChild(ic);
-        if (str(c.t)) card.appendChild(el('h3', 'jp-3col__title', str(c.t)));
-        if (str(c.b)) card.appendChild(el('p', 'jp-3col__text', str(c.b)));
-        grid.appendChild(card);
-      });
-      wrap.appendChild(grid);
-      box.appendChild(wrap);
-    });
-  }
-
-  function renderJaapBullets(id, title, items) {
-    fill(id, function (box) {
-      var pts = list(items).filter(function (x) { return str(x.text); });
-      if (!pts.length && !str(title)) return false;
-      var wrap = el('div', 'container jp-bullets');
-      if (str(title)) wrap.appendChild(el('h2', 'sd-title jp-bullets__title', str(title)));
-      var ul = el('ul', 'jp-bullets__list');
-      pts.forEach(function (x) {
-        var li = el('li');
-        li.appendChild(icon('check'));
-        li.appendChild(el('span', null, str(x.text)));
-        ul.appendChild(li);
-      });
-      wrap.appendChild(ul);
-      box.appendChild(wrap);
-    });
-  }
-
-  function renderJaapOfferings(s) {
-    fill('sd-jaap-offerings', function (box) {
-      var cards = list(s.jaapOfferings).filter(function (c) { return str(c.title); });
-      if (!cards.length) return false;
-      if (isMedia(s.jaapOfferingsBgImage)) box.style.backgroundImage = 'url(' + s.jaapOfferingsBgImage + ')';
-      var overlay = el('div', 'jp-offerings__overlay');
-      var wrap = el('div', 'container jp-offerings');
-      var head = el('div', 'jp-offerings__head');
-      if (str(s.jaapOfferingsTitle)) head.appendChild(el('h2', 'sd-title jp-offerings__title', str(s.jaapOfferingsTitle)));
-      if (str(s.jaapOfferingsSubtitle)) head.appendChild(el('p', 'jp-offerings__sub', str(s.jaapOfferingsSubtitle)));
-      wrap.appendChild(head);
-      var grid = el('div', 'jp-offerings__grid');
-      cards.forEach(function (c) {
-        var card = el('div', 'jp-offerings__card');
-        var ic = el('span', 'jp-offerings__icon');
-        ic.appendChild(icon(c.icon || 'lotus'));
-        card.appendChild(ic);
-        card.appendChild(el('h3', null, str(c.title)));
-        if (str(c.text)) card.appendChild(el('p', null, str(c.text)));
-        grid.appendChild(card);
-      });
-      wrap.appendChild(grid);
-      overlay.appendChild(wrap);
-      box.appendChild(overlay);
-    });
-  }
-
-  function renderJaapBooking(s) {
-    fill('sd-jaap-booking', function (box) {
-      var steps = list(s.jaapBookingSteps).filter(function (x) { return str(x.title); });
-      if (!steps.length) return false;
-      var wrap = el('div', 'container jp-booking');
-      var head = el('div', 'jp-booking__head');
-      if (str(s.jaapBookingTitle)) head.appendChild(el('h2', 'sd-title', str(s.jaapBookingTitle)));
-      if (str(s.jaapBookingSubtitle)) head.appendChild(el('p', 'sd-sub', str(s.jaapBookingSubtitle)));
-      wrap.appendChild(head);
-      var ol = el('ol', 'jp-booking__steps');
-      steps.forEach(function (x, i) {
-        var li = el('li', 'jp-booking__step');
-        li.appendChild(el('span', 'jp-booking__num', (i < 9 ? '0' : '') + (i + 1)));
-        li.appendChild(el('h3', null, str(x.title)));
-        if (str(x.text)) li.appendChild(el('p', null, str(x.text)));
-        ol.appendChild(li);
-      });
-      wrap.appendChild(ol);
-      box.appendChild(wrap);
-    });
-  }
-
-  function renderJaapFaq(s) {
-    fill('sd-jaap-faq', function (box) {
-      var faqs = list(s.jaapFaqs).filter(function (f) { return str(f.q) && str(f.a); });
-      if (!faqs.length) return false;
-      var wrap = el('div', 'container jp-faq');
-      if (str(s.jaapFaqTitle)) wrap.appendChild(el('h2', 'sd-title jp-faq__title', str(s.jaapFaqTitle)));
-      var accordion = el('div', 'faq jp-faq__list');
-      faqs.forEach(function (f, i) {
-        var d = el('details');
-        var sum = el('summary');
-        sum.appendChild(el('span', 'sd-faq__num', (i < 9 ? '0' : '') + (i + 1)));
-        sum.appendChild(el('span', 'sd-faq__q', str(f.q)));
-        d.appendChild(sum);
-        d.appendChild(lines(el('p'), f.a));
-        accordion.appendChild(d);
-      });
-      wrap.appendChild(accordion);
-      box.appendChild(wrap);
-    });
-  }
-
-  function renderJaap(s) {
-    show(document.getElementById('sd-process'), false);
-    show(document.getElementById('sd-about'), false);
-    show(document.getElementById('sd-receive'), false);
-    show(document.getElementById('sd-why-who'), false);
-    show(document.getElementById('sd-places-faq'), false);
-    renderJaapIntro(s);
-    renderJaap3col(s);
-    renderJaapBullets('sd-jaap-benefits', str(s.jaapBenefitsTitle), s.jaapBenefits);
-    renderJaapBullets('sd-jaap-occasions', str(s.jaapOccasionsTitle), s.jaapOccasions);
-    renderJaapOfferings(s);
-    renderJaapBooking(s);
-    renderJaapFaq(s);
-    renderCta(s);
-  }
 
   function start() {
     var mode = document.body.getAttribute('data-services');
