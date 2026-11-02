@@ -79,12 +79,19 @@
     ]
   },
   "bottomCta": {
-    "title": "Let Your Spiritual Journey Continue, Wherever You Are",
+    "label": "Let Your Spiritual Journey",
+    "titleLine1": "Continue,",
+    "titleLine2": "Wherever You Are",
     "text": "Your connection with faith does not have to depend on where you live or how far you are from a sacred place. Explore the possibilities, discover services that suit your needs and stay connected with the traditions that matter to you.",
+    "features": [
+      { "show": true, "icon": "lotus",  "title": "Explore Traditions",        "text": "Access spiritual services from anywhere." },
+      { "show": true, "icon": "people", "title": "Stay Connected",             "text": "Be part of a larger spiritual community." },
+      { "show": true, "icon": "temple", "title": "Discover New Possibilities", "text": "Find services that suit your spiritual needs." }
+    ],
     "primaryText": "Explore Our Services",
     "primaryLink": "services",
     "secondaryText": "Contact Us",
     "secondaryLink": "contact-us",
-    "image": "assets/images/hero/slide-1-aarti.jpg"
+    "rightImage": "assets/images/hero/slide-3-darshan.jpg"
   }
 }
