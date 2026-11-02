@@ -159,7 +159,7 @@ return [
                 ['key' => 'text', 'label' => 'Description', 'type' => 'textarea', 'rows' => 3, 'max' => 500],
                 ['key' => 'features', 'label' => 'Feature items (3 icons below description)', 'type' => 'list', 'fixed' => 3, 'itemLabel' => 'Feature', 'titleField' => 'title', 'fields' => [
                     $showField, $iconField,
-                    ['key' => 'title', 'label' => 'Title', 'type' => 'text', 'max' => 40, 'required' => true],
+                    ['key' => 'title', 'label' => 'Title', 'type' => 'text', 'max' => 40],
                     ['key' => 'text',  'label' => 'Short description', 'type' => 'text', 'max' => 80],
                 ]],
                 ['key' => 'primaryText', 'label' => 'Orange button text', 'type' => 'text', 'max' => 40, 'help' => 'Leave empty to hide the button.'],
