@@ -81,14 +81,45 @@ final class ContentStore
                 continue;
             }
             $saved = isset($data[$page]) && is_array($data[$page]) ? $data[$page] : [];
-            foreach ($defaults as $key => $value) {
-                if (!array_key_exists($key, $saved)) {
-                    $saved[$key] = $value;   // a section the admin has not saved yet starts with its default content
-                }
-            }
-            $data[$page] = $saved;
+            $data[$page] = self::deepMerge($saved, $defaults);
         }
         return $data;
+    }
+
+    /**
+     * Recursively fill missing keys in $saved from $defaults.
+     *
+     * Rules:
+     *  - A key missing from $saved is copied from $defaults (new field added to schema).
+     *  - A key present in $saved is NEVER overwritten — admin edits are always preserved.
+     *  - If both sides are associative arrays, we recurse so nested objects get the same
+     *    treatment (e.g. home.bottomCta.features is added if bottomCta already exists).
+     *  - If the default value is an indexed list (or $saved's copy is), we leave it alone —
+     *    the admin may have reordered or deleted items deliberately.
+     */
+    private static function deepMerge(array $saved, array $defaults): array
+    {
+        foreach ($defaults as $key => $defaultValue) {
+            if (!array_key_exists($key, $saved)) {
+                // Completely new field — seed from default.
+                $saved[$key] = $defaultValue;
+            } elseif (
+                is_array($defaultValue) &&
+                is_array($saved[$key]) &&
+                !self::isIndexedArray($defaultValue)
+            ) {
+                // Both sides are associative objects — recurse.
+                $saved[$key] = self::deepMerge($saved[$key], $defaultValue);
+            }
+            // Otherwise: keep the saved value as-is.
+        }
+        return $saved;
+    }
+
+    /** Returns true when $arr is a sequential 0-based list, not an associative object. */
+    private static function isIndexedArray(array $arr): bool
+    {
+        return array_values($arr) === $arr;
     }
 
     /**
