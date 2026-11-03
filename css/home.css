@@ -696,7 +696,7 @@
   .hm-pur { grid-column: 1 !important; grid-row: auto !important; padding: 18px 16px 18px 20px; gap: 12px; }
   .hm-pur__icon { width: 44px; height: 44px; }
   .hm-pur__icon .icon { width: 22px; height: 22px; }
-  .hm-purpose__om { display: none; }
+  .hm-purpose__om { display: flex; justify-content: center; grid-column: 1; margin: 8px 0 4px; }
   .hm-reasons__grid { grid-template-columns: 1fr; }
   .hm-reasons__center { min-height: 220px; border-radius: 14px; margin: 6px 0; }
   .hm-reason__icon { width: 52px; height: 52px; }
