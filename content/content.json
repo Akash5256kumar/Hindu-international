@@ -1,4 +1,149 @@
 {
+    "howPage": {
+        "banner": {
+            "label": "HOW IT WORKS",
+            "title": "Your Religious Needs, Made Easier to Explore",
+            "text": "From choosing a puja to finding a suitable jaap, paath or religious service, Hindu.international helps you explore the available options and understand the process before getting started.",
+            "image": "assets/images/how/banner.jpg",
+            "imageAlt": "A temple on a river ghat at sunset with a lit diya, flowers and a book with Om",
+            "bgImage": "",
+            "bgColor": "#FBEBD6",
+            "imagePosition": "right",
+            "textAlign": "left",
+            "height": "medium"
+        },
+        "sections": [
+            {
+                "show": true,
+                "type": "heading",
+                "title": "A Simple Way to Get Started",
+                "number": "",
+                "text": "",
+                "icon": "none",
+                "image": "",
+                "imageAlt": "",
+                "imageSide": "right",
+                "background": "ivory",
+                "align": "left"
+            },
+            {
+                "show": true,
+                "type": "step",
+                "number": "01",
+                "title": "Explore What You Need",
+                "text": "Start by browsing the different services available on Hindu.international. You can explore pujas, jaap, paath, temple-related services and religious ceremonies.\n\nIf you already have something in mind, go directly to the relevant service. If you are still deciding, take your time to explore the available categories.",
+                "image": "assets/images/how/step-1.jpg",
+                "imageAlt": "A laptop showing the Hindu.international services page",
+                "imageSide": "right",
+                "background": "ivory",
+                "align": "left",
+                "icon": "none"
+            },
+            {
+                "show": true,
+                "type": "step",
+                "number": "02",
+                "title": "Find the Right Service",
+                "text": "Every occasion has different requirements. You may be planning a family puja, looking for a particular mantra jaap, arranging a paath or searching for a religious service for a special day.\n\nChoose the service that matches your requirement and visit its dedicated page to learn more.",
+                "image": "assets/images/how/step-2.jpg",
+                "imageAlt": "A brass kalash with a coconut, mango leaves and marigolds",
+                "imageSide": "left",
+                "background": "ivory",
+                "align": "left",
+                "icon": "none"
+            },
+            {
+                "show": true,
+                "type": "step",
+                "number": "03",
+                "title": "Read the Details",
+                "text": "Before making a decision, go through the information provided on the selected service page.\n\nYou can understand its traditional importance, purpose, related practices and other available details. This gives you a better idea of what the service involves before you proceed.",
+                "image": "assets/images/how/step-3.jpg",
+                "imageAlt": "An open religious book with Om printed on the page",
+                "imageSide": "right",
+                "background": "ivory",
+                "align": "left",
+                "icon": "none"
+            },
+            {
+                "show": true,
+                "type": "step",
+                "number": "04",
+                "title": "Share Your Requirements",
+                "text": "Once you have selected a service, use the enquiry or booking option available on the website.\n\nProvide the requested details, such as your name, contact information, preferred date and location, wherever required. You can also share any other information relevant to your request.",
+                "image": "assets/images/how/step-4.jpg",
+                "imageAlt": "Hands typing on a laptop to send an enquiry",
+                "imageSide": "left",
+                "background": "ivory",
+                "align": "left",
+                "icon": "none"
+            },
+            {
+                "show": true,
+                "type": "step",
+                "number": "05",
+                "title": "Discuss the Next Steps",
+                "text": "After submitting your enquiry, the relevant details can be discussed according to your selected service.\n\nSome services may require specific arrangements, while others may have different requirements. You can understand the available options and clarify your questions before moving forward.",
+                "image": "assets/images/how/step-5.jpg",
+                "imageAlt": "Two people discussing details across a table",
+                "imageSide": "right",
+                "background": "ivory",
+                "align": "left",
+                "icon": "none"
+            },
+            {
+                "show": true,
+                "type": "step",
+                "number": "06",
+                "title": "Prepare for Your Service",
+                "text": "Once the details have been discussed, you can prepare for the selected service according to the information provided.\n\nKeep the necessary details and instructions in mind so that you know what to expect and can make the required arrangements beforehand.",
+                "image": "assets/images/how/step-6.jpg",
+                "imageAlt": "A puja thali with a lit diya and marigold flowers",
+                "imageSide": "left",
+                "background": "ivory",
+                "align": "left",
+                "icon": "none"
+            },
+            {
+                "show": true,
+                "type": "wide",
+                "icon": "calendar",
+                "title": "Every Occasion Has Its Own Requirements",
+                "text": "A regular puja, a family ceremony and a festival-related religious service may all involve different arrangements. That is why it is important to understand the details of your selected service before proceeding.\n\nHindu.international gives you a place to explore these options, read the available information and share your requirements according to the occasion.",
+                "image": "assets/images/how/occasion.jpg",
+                "imageAlt": "A brass temple bell and flowers under a carved temple arch",
+                "imageSide": "left",
+                "background": "cream",
+                "align": "left",
+                "number": ""
+            },
+            {
+                "show": true,
+                "type": "help",
+                "icon": "help",
+                "title": "Not Sure Which Service to Choose?",
+                "text": "Sometimes you may know what you want to arrange but may not know which service is suitable for your requirement.\n\nYou can explore the different service pages or contact us if you need help understanding the available options. We encourage visitors to ask questions and get the necessary information before making a decision.",
+                "image": "assets/images/how/help.jpg",
+                "imageAlt": "A small temple by the river at sunrise",
+                "imageSide": "right",
+                "background": "peach",
+                "align": "left",
+                "number": ""
+            }
+        ],
+        "showFaq": false,
+        "cta": {
+            "show": true,
+            "title": "Start with What You Need",
+            "text": "Finding a religious service should begin with understanding your own requirement. Explore the available options, read the details and take the next step when you are ready.",
+            "primaryText": "Explore Our Services",
+            "primaryLink": "services",
+            "secondaryText": "Contact Us",
+            "secondaryLink": "contact-us",
+            "bgColor": "#7A1621",
+            "bgImage": ""
+        }
+    },
     "home":  {
                  "trust":  [
                                {

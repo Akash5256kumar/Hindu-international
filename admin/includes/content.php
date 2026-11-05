@@ -36,8 +36,10 @@ final class ContentStore
     private const JYOTIRLINGA_DEFAULT = CONTENT_DIR . '/jyotirlinga.default.json';
     /** Starting content for the Home page sections, used until the admin saves its own */
     private const HOME_DEFAULT = CONTENT_DIR . '/home.default.json';
-    /** Starting content for the About page banner, used until the admin saves its own */
+    /** Starting content for the About page, used until the admin saves its own */
     private const ABOUT_DEFAULT = CONTENT_DIR . '/about.default.json';
+    /** Starting content for the How It Works page, used until the admin saves its own */
+    private const HOW_DEFAULT = CONTENT_DIR . '/how.default.json';
 
     public static function schema(): array
     {
@@ -72,7 +74,7 @@ final class ContentStore
                 );
             }
         }
-        foreach (['home' => self::HOME_DEFAULT, 'about' => self::ABOUT_DEFAULT] as $page => $file) {
+        foreach (['home' => self::HOME_DEFAULT, 'about' => self::ABOUT_DEFAULT, 'howPage' => self::HOW_DEFAULT] as $page => $file) {
             if (!is_file($file)) {
                 continue;
             }

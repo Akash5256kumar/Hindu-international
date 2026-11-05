@@ -439,25 +439,57 @@ return [
     [
         'id' => 'how', 'title' => 'How It Works', 'icon' => 'steps',
         'groups' => [
-            ['path' => 'how.intro', 'title' => 'Page heading', 'fields' => [
-                ['key' => 'label', 'label' => 'Small label', 'type' => 'text', 'max' => 40],
-                ['key' => 'title', 'label' => 'Heading', 'type' => 'text', 'max' => 80, 'required' => true],
-                ['key' => 'subtitle', 'label' => 'Subtitle', 'type' => 'text', 'max' => 200],
+            ['path' => 'howPage.banner', 'title' => 'Banner (top of the How It Works page)', 'fields' => [
+                ['key' => 'label', 'label' => 'Small heading', 'type' => 'text', 'max' => 40],
+                ['key' => 'title', 'label' => 'Main heading', 'type' => 'textarea', 'rows' => 2, 'max' => 120, 'required' => true],
+                ['key' => 'text', 'label' => 'Introduction paragraph', 'type' => 'textarea', 'rows' => 4, 'max' => 400],
+                ['key' => 'image', 'label' => 'Banner image', 'type' => 'image', 'help' => 'Wide photo (about 1600 × 875 px shows best). It fades into the background on the text side.'],
+                ['key' => 'imageAlt', 'label' => 'Banner image description', 'type' => 'text', 'max' => 200],
+                ['key' => 'imagePosition', 'label' => 'Image position', 'type' => 'select', 'options' => ['right' => 'Image on the right, text on the left', 'left' => 'Image on the left, text on the right']],
+                ['key' => 'textAlign', 'label' => 'Text alignment', 'type' => 'select', 'options' => ['left' => 'Left', 'center' => 'Centre']],
+                ['key' => 'height', 'label' => 'Banner height', 'type' => 'select', 'options' => ['small' => 'Small', 'medium' => 'Medium', 'large' => 'Large']],
+                ['key' => 'bgColor', 'label' => 'Background colour', 'type' => 'color', 'default' => '#FBEBD6'],
+                ['key' => 'bgImage', 'label' => 'Background image (optional)', 'type' => 'image', 'help' => 'Fills the whole banner behind the text and the banner image. Leave empty to use the background colour.'],
             ]],
-            ['path' => '', 'title' => 'The four steps', 'help' => 'Shown on the Home page and the How It Works page.', 'fields' => [
+            ['path' => 'howPage', 'title' => 'Page sections (below the banner)', 'help' => 'Drag a section by its header, or use the arrows, to change the order. Add, delete, or switch off any section.', 'fields' => [
+                ['key' => 'sections', 'label' => 'Sections (top to bottom)', 'type' => 'list', 'min' => 0, 'max' => 30, 'itemLabel' => 'Section', 'titleField' => 'title', 'fields' => [
+                    ['key' => 'show', 'label' => 'Show this section', 'type' => 'toggle', 'default' => true],
+                    ['key' => 'type', 'label' => 'Section design', 'type' => 'select', 'options' => [
+                        'step' => 'Step — number, heading, text and photo',
+                        'heading' => 'Centre heading only (e.g. “A Simple Way to Get Started”)',
+                        'wide' => 'Wide band — photo, icon, heading and text',
+                        'help' => 'Box — icon, heading, text and photo',
+                    ]],
+                    ['key' => 'number', 'label' => 'Step number', 'type' => 'text', 'max' => 6, 'showIf' => ['type', 'step']],
+                    ['key' => 'title', 'label' => 'Heading', 'type' => 'text', 'max' => 120],
+                    ['key' => 'text', 'label' => 'Text', 'type' => 'paragraphs', 'rows' => 7, 'max' => 4000, 'help' => 'Leave an empty line between paragraphs. Not used by “Centre heading only”.'],
+                    ['key' => 'icon', 'label' => 'Icon', 'type' => 'select', 'options' => ['none' => 'No icon', 'calendar' => 'Calendar', 'help' => 'Question mark', 'lotus' => 'Lotus'], 'help' => 'Used by the “Wide band” and “Box” designs.'],
+                    ['key' => 'image', 'label' => 'Photo', 'type' => 'image', 'help' => 'Not used by “Centre heading only”. Leave empty for a text-only section.'],
+                    ['key' => 'imageAlt', 'label' => 'Photo description', 'type' => 'text', 'max' => 200],
+                    ['key' => 'imageSide', 'label' => 'Photo position', 'type' => 'select', 'options' => ['right' => 'Photo on the right', 'left' => 'Photo on the left']],
+                    ['key' => 'background', 'label' => 'Background', 'type' => 'select', 'options' => ['ivory' => 'Ivory', 'cream' => 'Cream', 'peach' => 'Soft saffron', 'white' => 'White']],
+                    ['key' => 'align', 'label' => 'Text alignment', 'type' => 'select', 'options' => ['left' => 'Left', 'center' => 'Centre']],
+                ]],
+                ['key' => 'showFaq', 'label' => 'Show the FAQ section (questions are edited in “FAQ” below)', 'type' => 'toggle', 'default' => false],
+            ]],
+            ['path' => 'howPage.cta', 'title' => 'Closing banner (“Start with What You Need”)', 'fields' => [
+                ['key' => 'show', 'label' => 'Show this banner', 'type' => 'toggle', 'default' => true],
+                ['key' => 'title', 'label' => 'Heading', 'type' => 'text', 'max' => 100],
+                ['key' => 'text', 'label' => 'Paragraph', 'type' => 'textarea', 'rows' => 3, 'max' => 400],
+                ['key' => 'primaryText', 'label' => 'Orange button text', 'type' => 'text', 'max' => 30, 'help' => 'Leave empty to hide the button.'],
+                $link('primaryLink', 'Orange button link'),
+                ['key' => 'secondaryText', 'label' => 'Light button text', 'type' => 'text', 'max' => 30, 'help' => 'Leave empty to hide the button.'],
+                $link('secondaryLink', 'Light button link'),
+                ['key' => 'bgColor', 'label' => 'Background colour', 'type' => 'color', 'default' => '#7A1621'],
+                ['key' => 'bgImage', 'label' => 'Background image (optional)', 'type' => 'image'],
+            ]],
+            ['path' => '', 'title' => 'The four steps', 'help' => 'Shown on the Home page and on every service page (not on How It Works).', 'fields' => [
                 ['key' => 'steps', 'label' => 'Steps', 'type' => 'list', 'fixed' => 4, 'itemLabel' => 'Step', 'titleField' => 'title', 'fields' => [
                     ['key' => 'title', 'label' => 'Title', 'type' => 'text', 'max' => 40],
                     ['key' => 'text', 'label' => 'Description', 'type' => 'textarea', 'rows' => 2, 'max' => 200],
                 ]],
             ]],
-            ['path' => 'how.provide', 'title' => '“What You Need to Provide”', 'fields' => [
-                ['key' => 'title', 'label' => 'Heading', 'type' => 'text', 'max' => 80],
-                ['key' => 'items', 'label' => 'Items', 'type' => 'list', 'fixed' => 4, 'itemLabel' => 'Item', 'titleField' => 'label', 'fields' => [
-                    ['key' => 'label', 'label' => 'Text', 'type' => 'textarea', 'rows' => 2, 'max' => 60],
-                    ['key' => 'note', 'label' => 'Small note (optional)', 'type' => 'text', 'max' => 40],
-                ]],
-            ]],
-            ['path' => 'how.faq', 'title' => 'FAQ', 'fields' => [
+            ['path' => 'how.faq', 'title' => 'FAQ', 'help' => 'Shown on How It Works only when “Show the FAQ section” is on.', 'fields' => [
                 ['key' => 'label', 'label' => 'Small label', 'type' => 'text', 'max' => 40],
                 ['key' => 'title', 'label' => 'Heading', 'type' => 'text', 'max' => 80],
                 ['key' => 'items', 'label' => 'Questions', 'type' => 'list', 'min' => 0, 'max' => 30, 'itemLabel' => 'Question', 'titleField' => 'q', 'fields' => [

@@ -108,8 +108,9 @@
 
   /* How It Works — FAQ */
   if (page === 'how') {
-    var content = window.SITE_CONTENT;
-    var faqItems = content && content.about && content.about.how && content.about.how.faq && content.about.how.faq.items;
+    var content = window.SITE_CONTENT || {};
+    var howPage = content.howPage || {};
+    var faqItems = howPage.showFaq === true && content.how && content.how.faq && content.how.faq.items;
     if (faqItems && faqItems.length) {
       inject({
         '@context': 'https://schema.org',
@@ -123,18 +124,20 @@
         })
       });
     }
-    inject({
-      '@context': 'https://schema.org',
-      '@type': 'HowTo',
-      name: 'How to Request Virtual Punya Snan',
-      description: 'A simple process to connect you with divine blessings through Virtual Punya Snan.',
-      step: [
-        { '@type': 'HowToStep', name: 'Submit Request', text: 'Fill in your details and upload your photograph on the booking page.' },
-        { '@type': 'HowToStep', name: 'We Perform Ritual', text: 'Our team performs the holy Punya Snan ritual at the sacred site using your photograph.' },
-        { '@type': 'HowToStep', name: 'Video Recording', text: 'The complete ritual is recorded from start to finish.' },
-        { '@type': 'HowToStep', name: 'Receive Video', text: 'We share the full video recording with you.' }
-      ]
+    var howSteps = (Array.isArray(howPage.sections) ? howPage.sections : []).filter(function (s) {
+      return s && s.show !== false && s.type === 'step' && s.title;
     });
+    if (howSteps.length) {
+      inject({
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        name: (howPage.banner && howPage.banner.title) || 'How It Works',
+        description: (howPage.banner && howPage.banner.text) || '',
+        step: howSteps.map(function (s, i) {
+          return { '@type': 'HowToStep', position: i + 1, name: s.title, text: String(s.text || '').replace(/\s*\n\s*/g, ' ').trim() };
+        })
+      });
+    }
   }
 
   /* Event */

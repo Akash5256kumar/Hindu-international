@@ -6,5 +6,102 @@
     "buttonLink": "#about-intro",
     "image": "assets/images/about/banner.jpg",
     "imageAlt": "A devotee pouring holy river water at sunrise, with temples and crowds on the ghat behind"
+  },
+  "intro": {
+    "titleStart": "A Platform Rooted in",
+    "titleAccent": "Hindu Traditions",
+    "text": "Hindu.international brings Hindu religious and spiritual services together on one platform. It covers traditional practices, sacred rituals, temple services and other activities related to faith and devotion.\n\nPeople follow their traditions in different ways. Some follow family rituals, celebrate festivals, take part in religious ceremonies and visit temples. We want to bring these services together in one place so people can easily find the services they need.",
+    "image": "assets/images/about/intro.jpg",
+    "imageAlt": "A brass diya, a book with Om, rudraksha beads and marigold flowers before a temple"
+  },
+  "story": {
+    "title": "Our Story",
+    "text": "In India many families follow religious traditions that have been passed down from one generation to another. People celebrate festivals, perform pujas and take part in different religious ceremonies with their families. These small traditions are very important of family life.\n\nSometimes people want to follow a particular ritual or arrange a puja but are not sure where to find the right service. Visiting a temple or arranging a puja can sometimes take extra time and effort.",
+    "boldText": "Hindu.international brings different religious services together in one place.",
+    "endText": "People can visit our website and find services related to their needs.",
+    "listTitle": "Here people can find:",
+    "items": [
+      {
+        "text": "Puja and religious ceremonies"
+      },
+      {
+        "text": "Temple services"
+      },
+      {
+        "text": "Details about holy places"
+      },
+      {
+        "text": "Traditional rituals and customs"
+      },
+      {
+        "text": "Services for festivals and special occasions"
+      },
+      {
+        "text": "Other Hindu religious services"
+      }
+    ],
+    "image": "assets/images/about/story.jpg",
+    "imageAlt": "A brass puja thali with a lit diya, rose, marigolds, a bell and incense before a temple"
+  },
+  "vision": {
+    "title": "Our Vision",
+    "subtitle": "Keeping Hindu Traditions Alive for Future Generations",
+    "text": "Our vision is to create a platform where people can learn about Hindu traditions, religious practices and different aspects of spiritual life. We want to make it easier for people to find useful information and services related to their faith.\n\nWe want Hindu.international to grow and reach more people both in India and across the world. Through this platform we hope to:",
+    "points": [
+      {
+        "text": "Help people learn more about Hindu traditions and customs."
+      },
+      {
+        "text": "Share information about festivals, pujas and religious ceremonies."
+      },
+      {
+        "text": "Bring different temple and religious services together in one place."
+      },
+      {
+        "text": "Help people stay connected with their culture and traditions even when they live far from home."
+      }
+    ],
+    "image": "assets/images/about/vision.jpg",
+    "imageAlt": "A temple beside a lake at sunset"
+  },
+  "mission": {
+    "title": "Our Mission",
+    "subtitle": "Making Religious Services Easier to Find",
+    "text": "Our mission is to bring different Hindu religious services and information together on one platform. We want people to find useful services related to pujas, temples, religious ceremonies and traditional practices without having to search across different websites.\n\nWe understand that every family has its own customs and traditions. Some people find puja services, while others need help with temple visits, religious ceremonies or information about sacred places. We want to cover these different needs through our platform.\n\nAs Hindu.international grows we plan to add more services and useful information.. Our focus is to keep everything in one place and make religious services easier to find.",
+    "image": "assets/images/about/mission.jpg",
+    "imageAlt": "A woman in a red saree praying beside a temple bell"
+  },
+  "coreValues": {
+    "title": "Our Values",
+    "items": [
+      {
+        "title": "Respect for Traditions",
+        "text": "We respect religious customs and family traditions."
+      },
+      {
+        "title": "Care and Responsibility",
+        "text": "Religious services are an important part of many families."
+      },
+      {
+        "title": "Awareness and Understanding",
+        "text": "Our website shares information about Hindu festivals and rituals."
+      },
+      {
+        "title": "Community and Social Welfare",
+        "text": "We want to support initiatives that help communities."
+      }
+    ]
+  },
+  "closing": {
+    "image": "assets/images/about/continue.jpg",
+    "imageAlt": "A carved sandstone temple with domes and steps",
+    "title": "Continuing Our Mission",
+    "text": "Hindu.international will continue to grow with new services, useful information and activities related to Hindu traditions and spiritual life.\n\nOur focus is to help people stay connected with their traditions and pass them on to future generations.",
+    "connectTitle": "Stay Connected with Hindu.international",
+    "connectText": "Explore our platform to learn more about our work, discover available spiritual services and stay connected with your own traditions.",
+    "primaryText": "Explore Our Services",
+    "primaryLink": "services",
+    "secondaryText": "Contact Us",
+    "secondaryLink": "contact-us"
   }
 }
