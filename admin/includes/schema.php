@@ -379,17 +379,60 @@ return [
                 ['key' => 'image', 'label' => 'Banner photo', 'type' => 'image', 'required' => true, 'help' => 'Very wide photo (about 4 : 1 shows best). Keep the main subject on the right; the text sits on the left.'],
                 ['key' => 'imageAlt', 'label' => 'Photo description (for accessibility)', 'type' => 'text', 'max' => 200],
             ]],
-            ['path' => 'about.purpose', 'title' => '“Our Purpose” section', 'fields' => [
-                ['key' => 'label', 'label' => 'Small label', 'type' => 'text', 'max' => 40],
-                ['key' => 'title', 'label' => 'Heading', 'type' => 'text', 'max' => 80],
-                ['key' => 'text', 'label' => 'Text', 'type' => 'paragraphs', 'rows' => 7, 'max' => 4000, 'help' => 'Leave an empty line between paragraphs.'],
-                ['key' => 'image', 'label' => 'Photo', 'type' => 'image', 'required' => true],
+            ['path' => 'about.intro', 'title' => 'Introduction (photo left, text right)', 'fields' => [
+                ['key' => 'titleStart', 'label' => 'Heading (dark part)', 'type' => 'text', 'max' => 80],
+                ['key' => 'titleAccent', 'label' => 'Heading (large orange part)', 'type' => 'text', 'max' => 60],
+                ['key' => 'text', 'label' => 'Text', 'type' => 'paragraphs', 'rows' => 7, 'max' => 3000, 'help' => 'Leave an empty line between paragraphs.'],
+                ['key' => 'image', 'label' => 'Photo', 'type' => 'image'],
                 ['key' => 'imageAlt', 'label' => 'Photo description', 'type' => 'text', 'max' => 200],
             ]],
-            ['path' => 'about', 'title' => 'Value cards', 'fields' => [
-                ['key' => 'values', 'label' => 'Values', 'type' => 'list', 'fixed' => 4, 'itemLabel' => 'Value', 'titleField' => 'title', 'fields' => [
-                    ['key' => 'title', 'label' => 'Title', 'type' => 'text', 'max' => 40],
+            ['path' => 'about.story', 'title' => '“Our Story” section', 'fields' => [
+                ['key' => 'title', 'label' => 'Heading', 'type' => 'text', 'max' => 80],
+                ['key' => 'text', 'label' => 'Text', 'type' => 'paragraphs', 'rows' => 8, 'max' => 4000, 'help' => 'Leave an empty line between paragraphs.'],
+                ['key' => 'boldText', 'label' => 'Closing line — bold part', 'type' => 'text', 'max' => 200],
+                ['key' => 'endText', 'label' => 'Closing line — normal part', 'type' => 'text', 'max' => 300],
+                ['key' => 'listTitle', 'label' => 'Panel heading', 'type' => 'text', 'max' => 60],
+                ['key' => 'items', 'label' => 'Panel points', 'type' => 'list', 'min' => 1, 'max' => 10, 'itemLabel' => 'Point', 'titleField' => 'text', 'fields' => [
+                    ['key' => 'text', 'label' => 'Text', 'type' => 'text', 'max' => 120],
                 ]],
+                ['key' => 'image', 'label' => 'Photo (right side)', 'type' => 'image'],
+                ['key' => 'imageAlt', 'label' => 'Photo description', 'type' => 'text', 'max' => 200],
+            ]],
+            ['path' => 'about.vision', 'title' => '“Our Vision” section', 'fields' => [
+                ['key' => 'title', 'label' => 'Heading', 'type' => 'text', 'max' => 80],
+                ['key' => 'subtitle', 'label' => 'Subtitle', 'type' => 'text', 'max' => 120],
+                ['key' => 'text', 'label' => 'Text', 'type' => 'paragraphs', 'rows' => 7, 'max' => 3000, 'help' => 'Leave an empty line between paragraphs.'],
+                ['key' => 'points', 'label' => 'Points (right side)', 'type' => 'list', 'min' => 1, 'max' => 8, 'itemLabel' => 'Point', 'titleField' => 'text', 'fields' => [
+                    ['key' => 'text', 'label' => 'Text', 'type' => 'text', 'max' => 200],
+                ]],
+                ['key' => 'image', 'label' => 'Photo (left side)', 'type' => 'image'],
+                ['key' => 'imageAlt', 'label' => 'Photo description', 'type' => 'text', 'max' => 200],
+            ]],
+            ['path' => 'about.mission', 'title' => '“Our Mission” section', 'fields' => [
+                ['key' => 'title', 'label' => 'Heading', 'type' => 'text', 'max' => 80],
+                ['key' => 'subtitle', 'label' => 'Subtitle', 'type' => 'text', 'max' => 120],
+                ['key' => 'text', 'label' => 'Text', 'type' => 'paragraphs', 'rows' => 9, 'max' => 4000, 'help' => 'Leave an empty line between paragraphs.'],
+                ['key' => 'image', 'label' => 'Photo (right side)', 'type' => 'image'],
+                ['key' => 'imageAlt', 'label' => 'Photo description', 'type' => 'text', 'max' => 200],
+            ]],
+            ['path' => 'about.coreValues', 'title' => '“Our Values” section', 'fields' => [
+                ['key' => 'title', 'label' => 'Heading', 'type' => 'text', 'max' => 80],
+                ['key' => 'items', 'label' => 'Values', 'type' => 'list', 'fixed' => 4, 'itemLabel' => 'Value', 'titleField' => 'title', 'fields' => [
+                    ['key' => 'title', 'label' => 'Title', 'type' => 'text', 'max' => 60],
+                    ['key' => 'text', 'label' => 'Text', 'type' => 'textarea', 'rows' => 2, 'max' => 200],
+                ]],
+            ]],
+            ['path' => 'about.closing', 'title' => 'Bottom row: Continuing Our Mission + Stay Connected', 'fields' => [
+                ['key' => 'image', 'label' => 'Photo (left)', 'type' => 'image'],
+                ['key' => 'imageAlt', 'label' => 'Photo description', 'type' => 'text', 'max' => 200],
+                ['key' => 'title', 'label' => 'Middle heading', 'type' => 'text', 'max' => 80],
+                ['key' => 'text', 'label' => 'Middle text', 'type' => 'paragraphs', 'rows' => 5, 'max' => 2000, 'help' => 'Leave an empty line between paragraphs.'],
+                ['key' => 'connectTitle', 'label' => 'Right heading', 'type' => 'text', 'max' => 80],
+                ['key' => 'connectText', 'label' => 'Right text', 'type' => 'textarea', 'rows' => 3, 'max' => 400],
+                ['key' => 'primaryText', 'label' => 'Orange button text', 'type' => 'text', 'max' => 30, 'help' => 'Leave empty to hide the button.'],
+                $link('primaryLink', 'Orange button link'),
+                ['key' => 'secondaryText', 'label' => 'Outline button text', 'type' => 'text', 'max' => 30, 'help' => 'Leave empty to hide the button.'],
+                $link('secondaryLink', 'Outline button link'),
             ]],
         ],
     ],
