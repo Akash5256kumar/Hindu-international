@@ -80,8 +80,8 @@
   }
   function load(done) {
     var c = (window.SITE_CONTENT || {}).howPage;
-    if (c && c.banner && Array.isArray(c.sections) && c.cta) {
-      return done({ banner: c.banner, sections: c.sections, showFaq: c.showFaq === true, cta: c.cta });
+    if (c && c.banner && Array.isArray(c.sections) && c.closing) {
+      return done({ banner: c.banner, sections: c.sections, showFaq: c.showFaq === true, closing: c.closing });
     }
     var get = window.fetch
       ? fetch('content/how.default.json', { cache: 'no-cache' }).then(function (r) { return r.ok ? r.json() : null; })
@@ -93,7 +93,7 @@
         banner: merge(c.banner, d.banner),
         sections: Array.isArray(c.sections) ? c.sections : d.sections,
         showFaq: c.showFaq === true,
-        cta: merge(c.cta, d.cta)
+        closing: merge(c.closing, d.closing)
       });
     }, function () { done(c || {}); });
   }
@@ -247,22 +247,60 @@
     return wrap;
   }
 
+  /* Closing banner: sunset scene, brass decorations at the sides, frosted-glass panel in the middle */
+  function decor(path, cls) {
+    if (!isMedia(path)) return null;
+    var img = el('img', cls);
+    img.src = path;
+    img.alt = '';
+    img.loading = 'lazy';
+    img.decoding = 'async';
+    img.setAttribute('aria-hidden', 'true');
+    return img;
+  }
   function ctaSection(cta) {
     if (!cta || cta.show === false || (!str(cta.title) && !str(cta.text))) return null;
-    var wrap = el('section', 'hw-cta-wrap');
-    var c = el('div', 'container');
-    var card = el('div', 'hw-cta');
-    if (isHex(cta.bgColor)) card.style.setProperty('--hw-cta-bg', cta.bgColor);
-    if (isMedia(cta.bgImage)) card.style.backgroundImage = 'url("' + cta.bgImage + '")';
-    var lotus = el('img', 'hw-cta__lotus');
-    lotus.src = 'assets/images/how/lotus-gold.png';
-    lotus.alt = '';
-    lotus.setAttribute('aria-hidden', 'true');
-    card.appendChild(lotus);
-    var body = el('div', 'hw-cta__body');
-    if (str(cta.title)) body.appendChild(el('h2', 'hw-cta__title', str(cta.title)));
-    if (str(cta.text)) body.appendChild(el('p', 'hw-cta__text', str(cta.text)));
-    card.appendChild(body);
+    if (cta.showDesktop === false && cta.showMobile === false) return null;
+    var wrap = el('section', 'hw-cta');
+    if (cta.showDesktop === false) wrap.classList.add('hw-hide-desktop');
+    if (cta.showMobile === false) wrap.classList.add('hw-hide-mobile');
+    var st = wrap.style;
+    if (isHex(cta.bgColor)) st.setProperty('--cta-bg', cta.bgColor);
+    if (isMedia(cta.bgImage)) st.backgroundImage = 'url("' + cta.bgImage + '")';
+    st.backgroundPosition = pick(cta.bgPosition, ['center', 'top', 'bottom'], 'center');
+    st.backgroundSize = { cover: 'cover', contain: 'contain', stretch: '100% 100%' }[pick(cta.bgSize, ['cover', 'contain', 'stretch'], 'cover')];
+    st.setProperty('--glass-op', String(pick(str(cta.glassOpacity), ['30', '40', '50', '60', '70', '80'], '50') / 100));
+    st.setProperty('--glass-blur', pick(str(cta.glassBlur), ['4', '8', '12', '16', '24'], '12') + 'px');
+    st.setProperty('--glass-w', pick(str(cta.panelWidth), ['45', '50', '55', '60', '65', '70'], '55') + '%');
+    st.setProperty('--glass-h', pick(str(cta.panelHeight), ['auto', '220', '260', '300', '340'], 'auto') === 'auto' ? '0px' : cta.panelHeight + 'px');
+    st.setProperty('--glass-r', pick(str(cta.panelRadius), ['12', '20', '28', '36'], '28') + 'px');
+    var bc = isHex(cta.borderColor) ? cta.borderColor : '#FFFFFF';
+    var bo = pick(str(cta.borderOpacity), ['0', '30', '50', '70', '90'], '70') / 100;
+    var n = parseInt(bc.length === 4 ? bc.replace(/^#(.)(.)(.)$/, '$1$1$2$2$3$3') : bc.slice(1), 16);
+    st.setProperty('--glass-border', 'rgba(' + (n >> 16 & 255) + ',' + (n >> 8 & 255) + ',' + (n & 255) + ',' + bo + ')');
+    st.setProperty('--glass-shadow', { none: 'none', soft: '0 10px 30px rgba(90, 40, 60, .12)', medium: '0 16px 40px rgba(90, 40, 60, .2)', strong: '0 22px 54px rgba(90, 40, 60, .3)' }[pick(cta.shadow, ['none', 'soft', 'medium', 'strong'], 'soft')]);
+
+    if (cta.showSideImages !== false) {
+      var left = decor(cta.leftImage, 'hw-cta__side hw-cta__side--l');
+      var right = decor(cta.rightImage, 'hw-cta__side hw-cta__side--r');
+      if (left) wrap.appendChild(left);
+      if (right) wrap.appendChild(right);
+    }
+    var panel = el('div', 'hw-cta__glass');
+    if (cta.showLotus !== false) {
+      var orn = el('div', 'hw-cta__orn');
+      orn.setAttribute('aria-hidden', 'true');
+      orn.appendChild(el('span', 'hw-cta__orn-line'));
+      var lotus = decor(str(cta.lotusImage) || 'assets/images/how/cta-lotus.png', 'hw-cta__lotus');
+      if (lotus) { lotus.loading = 'eager'; orn.appendChild(lotus); }
+      orn.appendChild(el('span', 'hw-cta__orn-line hw-cta__orn-line--r'));
+      panel.appendChild(orn);
+    }
+    if (str(cta.title)) panel.appendChild(el('h2', 'hw-cta__title', str(cta.title)));
+    if (str(cta.text)) panel.appendChild(el('p', 'hw-cta__text', str(cta.text)));
+    var rule = el('span', 'hw-cta__rule');
+    rule.setAttribute('aria-hidden', 'true');
+    panel.appendChild(rule);
     var actions = el('div', 'hw-cta__actions');
     if (str(cta.primaryText)) {
       var a = el('a', 'hw-btn hw-btn--fill', str(cta.primaryText) + ' →');
@@ -270,13 +308,12 @@
       actions.appendChild(a);
     }
     if (str(cta.secondaryText)) {
-      var b = el('a', 'hw-btn hw-btn--light', str(cta.secondaryText));
+      var b = el('a', 'hw-btn hw-btn--line', str(cta.secondaryText));
       b.href = safeLink(cta.secondaryLink, 'contact-us');
       actions.appendChild(b);
     }
-    if (actions.children.length) card.appendChild(actions);
-    c.appendChild(card);
-    wrap.appendChild(c);
+    if (actions.children.length) panel.appendChild(actions);
+    wrap.appendChild(panel);
     return wrap;
   }
 
@@ -297,7 +334,7 @@
       var faq = faqSection();
       if (faq) body.appendChild(faq);
     }
-    var cta = ctaSection(data.cta);
+    var cta = ctaSection(data.closing);
     if (cta) body.appendChild(cta);
     if (location.hash) {
       var target = document.getElementById(location.hash.slice(1));

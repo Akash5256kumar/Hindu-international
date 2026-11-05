@@ -131,15 +131,32 @@
     }
   ],
   "showFaq": false,
-  "cta": {
+  "closing": {
     "show": true,
+    "showDesktop": true,
+    "showMobile": true,
     "title": "Start with What You Need",
     "text": "Finding a religious service should begin with understanding your own requirement. Explore the available options, read the details and take the next step when you are ready.",
     "primaryText": "Explore Our Services",
     "primaryLink": "services",
     "secondaryText": "Contact Us",
     "secondaryLink": "contact-us",
-    "bgColor": "#7A1621",
-    "bgImage": ""
+    "bgImage": "assets/images/how/cta-bg.jpg",
+    "bgColor": "#EBD3DC",
+    "bgPosition": "center",
+    "bgSize": "cover",
+    "leftImage": "assets/images/how/cta-left.jpg",
+    "rightImage": "assets/images/how/cta-right.jpg",
+    "lotusImage": "assets/images/how/cta-lotus.png",
+    "showSideImages": true,
+    "showLotus": true,
+    "glassOpacity": "50",
+    "glassBlur": "12",
+    "panelWidth": "55",
+    "panelHeight": "auto",
+    "panelRadius": "28",
+    "borderColor": "#FFFFFF",
+    "borderOpacity": "70",
+    "shadow": "soft"
   }
 }
