@@ -38,9 +38,11 @@ try {
 $seo = $content['seo']['pages'] ?? [];
 
 $contentTime = max(
+    (int) @filemtime(CONTENT_DIR . '/site.json'),
     (int) @filemtime(CONTENT_DIR . '/content.json'),
     (int) @filemtime(CONTENT_DIR . '/services.default.json'),
-    (int) @filemtime(CONTENT_DIR . '/jyotirlinga.default.json')
+    (int) @filemtime(CONTENT_DIR . '/jyotirlinga.default.json'),
+    (int) @filemtime(CONTENT_DIR . '/jaap.default.json')
 );
 
 $urls = [];
@@ -73,6 +75,17 @@ foreach ($content['jyotirlingas']['items'] ?? [] as $temple) {
         continue;
     }
     $urls[] = [SITEMAP_ORIGIN . '/jyotirlinga?name=' . $slug, $contentTime];
+}
+
+foreach ($content['jaapServices']['items'] ?? [] as $jaap) {
+    if (!is_array($jaap) || ($jaap['show'] ?? true) === false) {
+        continue;
+    }
+    $slug = (string) ($jaap['slug'] ?? '');
+    if (!preg_match('/^[a-z0-9-]+$/', $slug)) {
+        continue;
+    }
+    $urls[] = [SITEMAP_ORIGIN . '/jaap?name=' . $slug, $contentTime];
 }
 
 header('Content-Type: application/xml; charset=UTF-8');

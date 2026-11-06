@@ -1,0 +1,365 @@
+{
+  "pages": {
+    "home": {
+      "title": "Online Puja, Jaap & Pandit Booking | Hindu.International",
+      "description": "Book online puja, Mahamrityunjay jaap, Rudrabhishek, pind daan and 12 Jyotirlinga puja seva performed by experienced priests, for devotees in India and abroad.",
+      "keywords": "online puja booking, book pandit online, online puja for NRI, e-puja services, Mahamrityunjay jaap online, Rudrabhishek online, pind daan online, Hindu religious services",
+      "canonical": "https://hindu.international/",
+      "ogTitle": "Pujas, Jaap & Hindu Religious Services in One Place | Hindu.International",
+      "ogDescription": "Explore and book pujas, jaap, paath, pind daan, temple darshan and Jyotirlinga puja seva from anywhere in the world.",
+      "ogImage": "assets/images/hero/slide-1-aarti.jpg"
+    },
+    "about": {
+      "title": "About Hindu.International – Our Story, Vision & Mission",
+      "description": "Hindu.international brings pujas, jaap, paath, temple services and Hindu traditions together on one platform for families in India and across the world.",
+      "keywords": "about Hindu.International, Hindu religious services platform, Hindu traditions online, online puja platform",
+      "canonical": "https://hindu.international/about-us",
+      "ogTitle": "About Hindu.International – A Platform Rooted in Hindu Traditions",
+      "ogDescription": "Our story, vision, mission and values: bringing Hindu religious services and traditions together in one place.",
+      "ogImage": "assets/images/about/intro.jpg"
+    },
+    "how": {
+      "title": "How to Book a Puja or Jaap Online | Hindu.International",
+      "description": "Book a puja, jaap or paath online in six simple steps: explore services, choose the right one, read the details, share your requirements and prepare.",
+      "keywords": "how to book puja online, online puja booking process, book jaap online, book pandit for puja",
+      "canonical": "https://hindu.international/how-it-works",
+      "ogTitle": "How It Works – Your Religious Needs, Made Easier to Explore",
+      "ogDescription": "From choosing a puja to finding a suitable jaap, paath or religious service: the simple way to get started.",
+      "ogImage": "assets/images/how/banner.jpg"
+    },
+    "services": {
+      "title": "Online Puja & Hindu Religious Services | Hindu.International",
+      "description": "Explore Hindu religious services: virtual puja, pandit booking, havan, pind daan, Graha Shanti, Jaap & Paath, temple darshan and 12 Jyotirlinga puja seva.",
+      "keywords": "online puja services, virtual puja booking, pandit booking online, havan booking, Graha Shanti puja, pind daan online, Jaap and Paath",
+      "canonical": "https://hindu.international/services",
+      "ogTitle": "Our Services – Online Puja, Jaap, Havan & More | Hindu.International",
+      "ogDescription": "All Hindu religious services in one place: puja, jaap, paath, havan, pind daan, temple darshan and Jyotirlinga puja seva.",
+      "ogImage": "assets/images/services/puja-booking.jpg"
+    },
+    "jyotirlinga": {
+      "title": "12 Jyotirlinga Darshan & Puja Seva | Hindu.International",
+      "description": "Darshan, puja and Rudrabhishek at the 12 Jyotirlingas of Lord Shiva, from Somnath to Kedarnath. Know each temple's history, timings and how to reach.",
+      "keywords": "12 Jyotirlinga puja online, Jyotirlinga Rudrabhishek booking, Jyotirlinga darshan, Somnath, Kedarnath, Kashi Vishwanath",
+      "canonical": "",
+      "ogTitle": "",
+      "ogDescription": "",
+      "ogImage": "assets/images/jyotirlinga/somnath-hero.jpg"
+    },
+    "faith": {
+      "title": "Protect Hindu Faith & Heritage | Hindu.International",
+      "description": "Hinduism is our heritage. Learn about anti-conversion, vulnerability and how to support freedom of faith through awareness, compassion and lawful action.",
+      "keywords": "protect Hindu faith, Hindu heritage, freedom of faith, anti-conversion awareness, Hindu community support",
+      "canonical": "https://hindu.international/protect-our-faith",
+      "ogTitle": "Protect Our Faith – Hinduism Is Our Heritage",
+      "ogDescription": "Hinduism Is Our Heritage. Our Faith Deserves Protection.",
+      "ogImage": "assets/images/faith/hero-family.jpg"
+    },
+    "donate": {
+      "title": "Donate to Support Hindu Communities | Hindu.International",
+      "description": "Support education, healthcare, food, livelihoods and community development for vulnerable Hindu communities in rural and underserved areas.",
+      "keywords": "donate to Hindu charity, support Hindu communities, Hindu social welfare donation, community development",
+      "canonical": "https://hindu.international/donate",
+      "ogTitle": "Donate – Be a Part of the Change | Hindu.International",
+      "ogDescription": "Support our mission to preserve Hindu heritage and help vulnerable communities.",
+      "ogImage": "assets/images/faith/donation-bowl.jpg"
+    },
+    "event": {
+      "title": "Sacred Event & Virtual Punya Snan | Hindu.International",
+      "description": "Learn about the sacred event, its spiritual significance, dates and location, and request Virtual Punya Snan to participate from anywhere.",
+      "keywords": "Hindu sacred event, holy dip event dates, Virtual Punya Snan, Punya Snan online",
+      "canonical": "https://hindu.international/event",
+      "ogTitle": "Sacred Event Information | Hindu.International",
+      "ogDescription": "Know more about the sacred event, its significance, dates and location.",
+      "ogImage": "assets/images/event-banner.jpg"
+    },
+    "booking": {
+      "title": "Book Virtual Punya Snan Online | Hindu.International",
+      "description": "Submit your details and photograph to request Virtual Punya Snan. Our team performs the ritual at the sacred event and shares the recorded video.",
+      "keywords": "book Virtual Punya Snan, Punya Snan online, holy dip on your behalf, sacred ritual booking",
+      "canonical": "https://hindu.international/booking",
+      "ogTitle": "Request Virtual Punya Snan | Hindu.International",
+      "ogDescription": "Fill in your details to request Virtual Punya Snan in your name.",
+      "ogImage": "assets/images/hero-devotee.jpg"
+    },
+    "contact": {
+      "title": "Contact Us – Puja & Service Enquiries | Hindu.International",
+      "description": "Questions about a puja, jaap, pind daan or any religious service? Contact Hindu.international by phone, WhatsApp or email and our team will help you.",
+      "keywords": "contact Hindu.International, puja enquiry, book puja help, Hindu religious service support",
+      "canonical": "https://hindu.international/contact-us",
+      "ogTitle": "Contact Us | Hindu.International",
+      "ogDescription": "We are here to help you. Get in touch for any queries or assistance.",
+      "ogImage": "assets/images/contact-banner.jpg"
+    },
+    "privacy": {
+      "title": "Privacy Policy | Hindu.International",
+      "description": "Read how Hindu.International collects, uses and protects your personal details and photograph when you use our services.",
+      "keywords": "Hindu.International privacy policy",
+      "canonical": "https://hindu.international/privacy",
+      "ogTitle": "Privacy Policy | Hindu.International",
+      "ogDescription": "How Hindu.International collects and uses your details and photograph.",
+      "ogImage": "assets/images/brand/logo.png"
+    },
+    "terms": {
+      "title": "Terms & Conditions | Hindu.International",
+      "description": "Read the terms and conditions for using Hindu.International and its religious services.",
+      "keywords": "Hindu.International terms and conditions",
+      "canonical": "https://hindu.international/terms",
+      "ogTitle": "Terms & Conditions | Hindu.International",
+      "ogDescription": "Terms and conditions for using Hindu.International services.",
+      "ogImage": "assets/images/brand/logo.png"
+    }
+  },
+  "legacy": {
+    "home": {
+      "title": [
+        "Virtual Punya Snan | Hindu.International"
+      ],
+      "description": [
+        "Cannot attend the sacred event? Hindu.International performs the holy ritual on your behalf using your photograph and shares the recorded video with you.",
+        "Cannot attend the sacred event? Hindu.International performs the holy Punya Snan ritual on your behalf using your photograph and shares the recorded video with you Ã¢â‚¬â€ from anywhere in the world."
+      ],
+      "keywords": [
+        "Virtual Punya Snan, sacred ritual, Hindu pilgrimage, holy dip, online puja",
+        "Virtual Punya Snan, Punya Snan online, Hindu pilgrimage ritual, sacred holy dip, online puja service, Hindu ritual on your behalf, devotional service"
+      ],
+      "ogTitle": [
+        "Virtual Punya Snan by Hindu.International",
+        "Virtual Punya Snan by Hindu.International: Your Devotion Still Reaches"
+      ],
+      "ogDescription": [
+        "Your devotion can reach the sacred event from anywhere. We perform the holy ritual on your behalf and share the recorded video.",
+        "We perform the holy ritual on your behalf using your photograph and share the recorded video with you Ã¢â‚¬â€ from anywhere in the world."
+      ],
+      "ogImage": [
+        "assets/images/hero-devotee.jpg"
+      ]
+    },
+    "about": {
+      "title": [
+        "About Us | Hindu.International",
+        "About Hindu.International | Our Mission & Vision"
+      ],
+      "description": [
+        "Learn about Hindu.International and our Virtual Punya Snan service for devotees who cannot personally attend the sacred event.",
+        "Hindu.International helps devotees participate in sacred rituals from anywhere in the world. Learn about our mission, values and how our Virtual Punya Snan service works."
+      ],
+      "keywords": [
+        "about Hindu.International, Virtual Punya Snan, Hindu devotional service",
+        "about Hindu.International, Hindu devotional service organisation, Virtual Punya Snan mission, Hindu faith service, sacred ritual India"
+      ],
+      "ogTitle": [
+        "About Hindu.International"
+      ],
+      "ogDescription": [
+        "Our journey is rooted in faith, service and devotion.",
+        "Our journey is rooted in faith, service and devotion Ã¢â‚¬â€ helping every devotee stay connected with their sacred traditions."
+      ],
+      "ogImage": [
+        "assets/images/about-banner.jpg"
+      ]
+    },
+    "how": {
+      "title": [
+        "How It Works | Hindu.International",
+        "How It Works Ã¢â‚¬â€ Virtual Punya Snan | Hindu.International"
+      ],
+      "description": [
+        "See how to request Virtual Punya Snan: submit your details and photograph, our team performs and records the sacred ritual, then shares your video.",
+        "Four simple steps: submit your request and photograph, our team performs the holy ritual at the sacred site, the ritual is fully recorded, and we share the video with you."
+      ],
+      "keywords": [
+        "how Virtual Punya Snan works, sacred ritual video, online Hindu service",
+        "how Virtual Punya Snan works, sacred ritual process, Hindu ritual on behalf, Punya Snan steps, ritual video recorded"
+      ],
+      "ogTitle": [
+        "How Virtual Punya Snan Works",
+        "How Virtual Punya Snan Works | Hindu.International"
+      ],
+      "ogDescription": [
+        "A simple process to connect you with divine blessings.",
+        "A simple four-step process to connect you with divine blessings Ã¢â‚¬â€ even when you cannot be at the sacred event."
+      ],
+      "ogImage": [
+        "assets/images/hero-devotee.jpg"
+      ]
+    },
+    "services": {
+      "title": [
+        "Hindu Spiritual Services | Hindu.International"
+      ],
+      "description": [
+        "Explore Hindu.International spiritual services Ã¢â‚¬â€ Virtual Punya Snan, puja seva, Jyotirlinga darshan and more Ã¢â‚¬â€ to stay connected with your faith and traditions from anywhere in the world."
+      ],
+      "keywords": [
+        "Hindu spiritual services, Virtual Punya Snan, online puja service, Jyotirlinga darshan, Hindu ritual service, puja on behalf"
+      ],
+      "ogTitle": [
+        "Hindu Spiritual Services | Hindu.International"
+      ],
+      "ogDescription": [
+        "Stay connected with your faith from anywhere Ã¢â‚¬â€ Virtual Punya Snan, puja, Jyotirlinga darshan and more."
+      ],
+      "ogImage": [
+        "assets/images/hero-devotee.jpg"
+      ]
+    },
+    "jyotirlinga": {
+      "description": [
+        "Seek divine blessings from all twelve Jyotirlingas of Lord Shiva. Hindu.International arranges darshan and puja seva at sacred Jyotirlinga temples Ã¢â‚¬â€ Somnath, Kashi Vishwanath, Mahakaleshwar and more."
+      ],
+      "keywords": [
+        "12 Jyotirlinga, Jyotirlinga darshan online, Lord Shiva Jyotirlinga puja, Somnath temple, Kashi Vishwanath, Mahakaleshwar, Jyotirlinga seva, Hindu temple darshan"
+      ],
+      "ogTitle": [
+        "12 Jyotirlinga Darshan & Puja | Hindu.International"
+      ],
+      "ogDescription": [
+        "Seek blessings from all twelve sacred Jyotirlingas of Lord Shiva Ã¢â‚¬â€ darshan and puja seva arranged by Hindu.International."
+      ]
+    },
+    "faith": {
+      "title": [
+        "Protect Our Faith | Hindu.International",
+        "Protect Our Faith Ã¢â‚¬â€ Hindu Heritage & Anti-Conversion | Hindu.International"
+      ],
+      "description": [
+        "Hinduism is our heritage. Learn about anti-conversion awareness, how to protect vulnerable Hindus, and how to support freedom of faith through awareness, compassion and lawful action."
+      ],
+      "keywords": [
+        "protect Hindu faith, Hindu heritage, freedom of faith, anti-conversion awareness",
+        "protect Hindu faith, Hindu heritage preservation, anti-conversion awareness, freedom of religion, Sanatan Dharma, Hindu culture protection"
+      ],
+      "ogTitle": [
+        "Protect Our Faith | Hindu.International"
+      ],
+      "ogDescription": [
+        "Hinduism Is Our Heritage. Our Faith Deserves Protection. Learn about anti-conversion and how to help."
+      ]
+    },
+    "donate": {
+      "title": [
+        "Donate Us | Support Our Mission | Hindu.International",
+        "Donate | Support Hindu Communities | Hindu.International"
+      ],
+      "description": [
+        "Support education, healthcare, food assistance, livelihoods and community development for vulnerable Hindu communities in rural and underserved areas. Every contribution matters."
+      ],
+      "keywords": [
+        "donate Hindu charity, support Hindu communities, Hindu heritage, community development",
+        "donate Hindu community, support Hindu families, Hindu charity India, preserve Hindu heritage, community development donation, help vulnerable Hindus"
+      ],
+      "ogTitle": [
+        "Donate Us | Be a Part of the Change | Hindu.International",
+        "Donate | Be a Part of the Change | Hindu.International"
+      ],
+      "ogDescription": [
+        "Support our mission to preserve Hindu heritage and help vulnerable communities. Give any amount Ã¢â‚¬â€ every contribution counts."
+      ]
+    },
+    "event": {
+      "title": [
+        "Event Information | Hindu.International",
+        "Sacred Event Information Ã¢â‚¬â€ Punya Snan | Hindu.International"
+      ],
+      "description": [
+        "Learn about the upcoming sacred Hindu bathing event Ã¢â‚¬â€ its spiritual significance, dates, location and how to request Virtual Punya Snan to participate from anywhere."
+      ],
+      "keywords": [
+        "Hindu sacred event, event information, Virtual Punya Snan dates",
+        "Hindu sacred bathing event, Punya Snan dates, sacred river bathing, Hindu pilgrimage event, Kumbh Mela darshan, Ardh Kumbh, Prayagraj"
+      ],
+      "ogTitle": [
+        "Event Information | Hindu.International"
+      ],
+      "ogDescription": [
+        "Know more about the sacred event, its spiritual significance, dates and location Ã¢â‚¬â€ and request Virtual Punya Snan."
+      ]
+    },
+    "booking": {
+      "title": [
+        "Request Virtual Punya Snan | Hindu.International"
+      ],
+      "description": [
+        "Submit your name, details and photograph to request Virtual Punya Snan. Our team performs the holy ritual at the sacred event and shares the complete recorded video with you."
+      ],
+      "keywords": [
+        "request Virtual Punya Snan, book Hindu ritual, sacred ritual booking",
+        "request Virtual Punya Snan, book sacred Hindu ritual, online Hindu puja booking, Punya Snan request form, virtual ritual service"
+      ],
+      "ogTitle": [
+        "Request Virtual Punya Snan"
+      ],
+      "ogDescription": [
+        "Fill in the details below to submit your service request.",
+        "Submit your photograph and details Ã¢â‚¬â€ our team performs the sacred ritual on your behalf and shares the video with you."
+      ]
+    },
+    "contact": {
+      "title": [
+        "Contact Us | Hindu.International",
+        "Contact Hindu.International | Get Help & Support"
+      ],
+      "description": [
+        "Contact Hindu.International by phone, WhatsApp or email for questions or help with your Virtual Punya Snan service request.",
+        "Contact Hindu.International for questions about Virtual Punya Snan, service requests or general enquiries. Send us a message and we will get back to you."
+      ],
+      "keywords": [
+        "contact Hindu.International, Virtual Punya Snan help, Hindu service support",
+        "contact Hindu.International, Virtual Punya Snan help, Hindu service support, enquiry, service@hindu.international"
+      ],
+      "ogTitle": [
+        "Contact Hindu.International | We Are Here to Help"
+      ],
+      "ogDescription": [
+        "Reach out for questions, support or information about our services. We will be glad to assist you."
+      ]
+    },
+    "privacy": {
+      "description": [
+        "Read how Hindu.International collects, uses and protects your personal details and photograph when you use our Virtual Punya Snan service."
+      ],
+      "keywords": [
+        "Hindu.International privacy policy, personal data, photo privacy",
+        "Hindu.International privacy policy, personal data protection, photo privacy"
+      ],
+      "ogImage": [
+        "assets/images/brand/favicon-192.png"
+      ]
+    },
+    "terms": {
+      "description": [
+        "Read the terms and conditions for using the Hindu.International Virtual Punya Snan service."
+      ],
+      "keywords": [
+        "Hindu.International terms and conditions, Virtual Punya Snan terms",
+        "Hindu.International terms and conditions, Virtual Punya Snan terms of service"
+      ],
+      "ogDescription": [
+        "Terms and conditions for the Virtual Punya Snan service.",
+        "Terms and conditions for using the Hindu.International Virtual Punya Snan service."
+      ],
+      "ogImage": [
+        "assets/images/brand/favicon-192.png"
+      ]
+    }
+  },
+  "serviceTitles": {
+    "pandit-booking": "Book a Pandit Online for Puja & Havan | Hindu.International",
+    "12-jyotirlinga-darshan-puja": "12 Jyotirlinga Darshan & Puja Seva Online | Hindu.International",
+    "graha-shanti-dosh-nivaran": "Graha Shanti & Dosh Nivaran Puja Online | Hindu.International",
+    "virtual-puja-booking": "Virtual Puja Booking Online | Hindu.International",
+    "jaap-path-anushthan": "Jaap & Path Anushthan Online Booking | Hindu.International",
+    "havan-yagya-booking": "Havan & Yagya Booking Online | Hindu.International",
+    "deep-daan-ganga-aarti": "Deep Daan & Ganga Aarti Sankalp Online | Hindu.International",
+    "virtual-festival-darshan": "Virtual Festival Darshan Online | Hindu.International",
+    "temple-darshan-offerings": "Temple Darshan & Offerings Online | Hindu.International",
+    "virtual-punya-snan": "Virtual Punya Snan – Holy Dip in Your Name | Hindu.International",
+    "online-priest-consultation": "Online Priest Consultation for Rituals | Hindu.International",
+    "religious-ceremony-booking": "Hindu Religious Ceremony Booking | Hindu.International",
+    "puja-samagri-store": "Puja Samagri Online – Ritual Essentials | Hindu.International",
+    "donate-social-welfare": "Donate for Hindu Social Welfare | Hindu.International",
+    "volunteer-community-service": "Volunteer & Community Service | Hindu.International",
+    "religious-awareness": "Hindu Religious Awareness & Traditions | Hindu.International",
+    "pind-daan-shraddh": "Pind Daan & Shraddh Online in Gaya | Hindu.International"
+  }
+}

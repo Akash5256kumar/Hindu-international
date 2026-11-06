@@ -92,25 +92,27 @@
     }, function () { done(c && Array.isArray(c.items) ? c : { items: [] }); });
   }
 
-  /* ---------- SEO ---------- */
-  function setMeta(selector, attr, value) {
-    var node = document.head.querySelector(selector);
-    if (!node && value && selector.indexOf('link') === 0) {
-      node = document.createElement('link');
-      node.rel = 'canonical';
-      document.head.appendChild(node);
-    }
-    if (node && value) node.setAttribute(attr, value);
-  }
+  /* ---------- SEO (js/page-seo.js) ---------- */
   function applySeo(j) {
-    var title = str(j.seoTitle) || (str(j.name) + ' | ' + SITE);
+    if (!window.vpsPageSeo) return;
+    var origin = window.vpsSeoOrigin;
+    var title = str(j.seoTitle) || (str(j.name) + ' Online Booking | ' + SITE);
     var desc = str(j.seoDescription) || str(j.heroSubtitle) || str(j.jaapIntroText);
-    var url = location.origin + location.pathname.replace(/\.html$/, '') + '?name=' + encodeURIComponent(str(j.slug));
-    document.title = title;
-    setMeta('meta[name="description"]', 'content', desc);
-    setMeta('meta[property="og:title"]', 'content', title);
-    setMeta('meta[property="og:description"]', 'content', desc);
-    setMeta('link[rel="canonical"]', 'href', url);
+    var url = origin + '/jaap?name=' + encodeURIComponent(str(j.slug));
+    window.vpsPageSeo({
+      title: title,
+      description: desc,
+      url: url,
+      image: j.heroImage,
+      breadcrumb: [
+        ['Home', origin + '/'],
+        ['Services', origin + '/services'],
+        ['Jaap & Path Anushthan', origin + '/service?name=jaap-path-anushthan'],
+        [str(j.name), url]
+      ],
+      entity: { '@type': 'Service', name: str(j.name), serviceType: 'Hindu Jaap and Paath', areaServed: 'Worldwide' },
+      faqs: list(j.jaapFaqs)
+    });
   }
 
   /* =================================================================
@@ -305,6 +307,7 @@
 
   function renderNotFound() {
     document.title = 'Jaap & Paath page not found | ' + SITE;
+    if (window.vpsPageNoindex) window.vpsPageNoindex();
     fill('jp-hero', function (box) {
       var inner = el('div', 'container jp-hero__inner');
       var h1 = el('h1', 'jp-hero__title', 'This page could not be found');

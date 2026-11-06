@@ -9,12 +9,10 @@
     : null;
   if (!seo) return;
 
+  /* An empty admin field keeps the page's own tag (page scripts such as jyotirlinga.js fill it) */
   function setMeta(attribute, name, value) {
+    if (!value) return;
     var node = document.querySelector('meta[' + attribute + '="' + name + '"]');
-    if (!value) {
-      if (node) node.remove();
-      return;
-    }
     if (!node) {
       node = document.createElement('meta');
       node.setAttribute(attribute, name);
@@ -59,7 +57,7 @@
   setMeta('property', 'og:description', socialDescription);
   setMeta('property', 'og:url', canonical);
   setMeta('property', 'og:image', socialImage);
-  setMeta('name', 'twitter:card', socialImage ? 'summary_large_image' : 'summary');
+  if (socialImage) setMeta('name', 'twitter:card', 'summary_large_image');
   setMeta('name', 'twitter:title', socialTitle);
   setMeta('name', 'twitter:description', socialDescription);
   setMeta('name', 'twitter:image', socialImage);

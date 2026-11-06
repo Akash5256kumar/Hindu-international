@@ -131,25 +131,29 @@
     }, function () { done(c && Array.isArray(c.items) ? c : { items: [] }); });
   }
 
-  /* ---------- SEO for the chosen temple ---------- */
-  function setMeta(selector, attr, value) {
-    var node = document.head.querySelector(selector);
-    if (!node && value && selector.indexOf('link') === 0) {
-      node = document.createElement('link');
-      node.rel = 'canonical';
-      document.head.appendChild(node);
-    }
-    if (node && value) node.setAttribute(attr, value);
-  }
+  /* ---------- SEO for the chosen temple (js/page-seo.js) ---------- */
   function applySeo(j) {
-    var title = str(j.seoTitle) || (str(j.name) + ' | ' + SITE);
+    if (!window.vpsPageSeo) return;
+    var origin = window.vpsSeoOrigin;
+    var title = str(j.seoTitle) || (str(j.name) + ' Darshan & Puja Seva | ' + SITE);
     var desc = str(j.seoDescription) || str(j.heroText) || str(j.aboutText1);
-    var url = location.origin + location.pathname.replace(/\.html$/, '') + '?name=' + encodeURIComponent(str(j.slug));
-    document.title = title;
-    setMeta('meta[name="description"]', 'content', desc);
-    setMeta('meta[property="og:title"]', 'content', title);
-    setMeta('meta[property="og:description"]', 'content', desc);
-    setMeta('link[rel="canonical"]', 'href', url);
+    var url = origin + '/jyotirlinga?name=' + encodeURIComponent(str(j.slug));
+    var temple = { '@type': 'HinduTemple', name: str(j.name) };
+    if (str(j.location)) temple.address = str(j.location);
+    window.vpsPageSeo({
+      title: title,
+      description: desc,
+      url: url,
+      image: j.heroImage,
+      breadcrumb: [
+        ['Home', origin + '/'],
+        ['Services', origin + '/services'],
+        ['12 Jyotirlinga Darshan & Puja Seva', origin + '/service?name=12-jyotirlinga-darshan-puja'],
+        [str(j.name), url]
+      ],
+      entity: temple,
+      faqs: list(j.faqs)
+    });
   }
 
   /* =================================================================
@@ -300,6 +304,7 @@
 
   function renderNotFound() {
     document.title = 'Jyotirlinga page not found | ' + SITE;
+    if (window.vpsPageNoindex) window.vpsPageNoindex();
     fill('jl-hero', function (box) {
       var inner = el('div', 'container jl-hero__inner');
       var h1 = el('h1', 'jl-hero__title', 'This page could not be found');

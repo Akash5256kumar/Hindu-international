@@ -149,7 +149,7 @@
     /* The card number is the service's position in the admin list, so hidden services leave a gap
        instead of shifting the numbers of the services after them */
     var items = list(data.items).map(function (s, i) { return { s: s, n: i + 1 }; })
-      .filter(function (x) { return x.s.show !== false && str(x.s.title); });
+      .filter(function (x) { return x.s.show !== false && str(x.s.title) && x.s.design !== 'jaap'; });
     if (!items.length) return;
 
     var cards = items.map(function (x) {
@@ -251,21 +251,22 @@
     return box;
   }
 
-  function setMeta(selector, attr, value) {
-    var node = document.head.querySelector(selector);
-    if (node && value) node.setAttribute(attr, value);
-  }
+  /* SEO for the chosen service (js/page-seo.js) */
   function applySeo(s) {
-    var title = str(s.seoTitle) || (str(s.title) + ' | ' + SITE);
-    var desc = str(s.seoDescription) || str(s.text) || str(s.aboutText1);
-    var url = location.origin + location.pathname.replace(/\.html$/, '') + '?name=' + encodeURIComponent(str(s.slug));
-    document.title = title;
-    setMeta('meta[name="description"]', 'content', desc);
-    setMeta('meta[property="og:title"]', 'content', title);
-    setMeta('meta[property="og:description"]', 'content', desc);
-    setMeta('meta[property="og:url"]', 'content', url);
-    if (isMedia(s.bannerImage || s.image)) setMeta('meta[property="og:image"]', 'content', location.origin + '/' + (s.bannerImage || s.image));
-    setMeta('link[rel="canonical"]', 'href', url);
+    if (!window.vpsPageSeo) return;
+    var origin = window.vpsSeoOrigin;
+    var url = origin + '/service?name=' + encodeURIComponent(str(s.slug));
+    window.vpsPageSeo({
+      title: str(s.seoTitle) || (str(s.title) + ' | ' + SITE),
+      description: str(s.seoDescription) || str(s.text) || str(s.aboutText1),
+      url: url,
+      image: s.bannerImage || s.image,
+      breadcrumb: [['Home', origin + '/'], ['Services', origin + '/services'], [str(s.title), url]],
+      entity: { '@type': 'Service', name: str(s.title), serviceType: 'Hindu religious service', areaServed: 'Worldwide' },
+      faqs: s.status === 'published' ? list(s.faqs) : []
+    });
+    /* "Full details coming soon" pages stay out of search results until they are published */
+    if (s.status !== 'published' && window.vpsPageNoindex) window.vpsPageNoindex();
   }
 
   function renderBanner(s, fallbackImage) {
@@ -629,8 +630,15 @@
     var s = items.filter(function (x) { return str(x.slug) === slug && x.show !== false; })[0];
     var fallbackImage = data && data.banner ? data.banner.image : '';
 
+    /* Jaap & Paath items have their own pages (jaap.html); old links go there */
+    if (s && s.design === 'jaap') {
+      location.replace('jaap?name=' + encodeURIComponent(str(s.slug)));
+      return;
+    }
+
     if (!s) {
       document.title = 'Service not found | ' + SITE;
+      if (window.vpsPageNoindex) window.vpsPageNoindex();
       renderBanner({ title: 'Our Services' }, fallbackImage);
       renderNotice('This service page could not be found', 'Please choose a service from the list of our services.', 'services', 'View all services');
       show(document.getElementById('sd-process'), false);

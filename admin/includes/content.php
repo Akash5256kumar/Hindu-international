@@ -34,12 +34,16 @@ final class ContentStore
     private const SERVICES_DEFAULT = CONTENT_DIR . '/services.default.json';
     /** Starting content for the Jyotirlinga pages, used until the admin saves its own */
     private const JYOTIRLINGA_DEFAULT = CONTENT_DIR . '/jyotirlinga.default.json';
+    /** Starting content for the Jaap & Paath pages, used until the admin saves its own */
+    private const JAAP_DEFAULT = CONTENT_DIR . '/jaap.default.json';
     /** Starting content for the Home page sections, used until the admin saves its own */
     private const HOME_DEFAULT = CONTENT_DIR . '/home.default.json';
     /** Starting content for the About page, used until the admin saves its own */
     private const ABOUT_DEFAULT = CONTENT_DIR . '/about.default.json';
     /** Starting content for the How It Works page, used until the admin saves its own */
     private const HOW_DEFAULT = CONTENT_DIR . '/how.default.json';
+    /** Recommended page titles/descriptions; replace only empty or known old values */
+    private const SEO_DEFAULT = CONTENT_DIR . '/seo.default.json';
 
     public static function schema(): array
     {
@@ -65,12 +69,29 @@ final class ContentStore
                     : $services;
             }
         }
+        // Jaap & Paath items now live on their own pages (jaapServices); copies left in the
+        // services list would show as extra cards and clash with those pages' addresses.
+        if (isset($data['services']['items']) && is_array($data['services']['items'])) {
+            $data['services']['items'] = array_values(array_filter(
+                $data['services']['items'],
+                static fn ($s): bool => !is_array($s) || ($s['design'] ?? '') !== 'jaap'
+            ));
+        }
         if (is_file(self::JYOTIRLINGA_DEFAULT)) {
             $jyotirlingas = json_decode((string) file_get_contents(self::JYOTIRLINGA_DEFAULT), true);
             if (is_array($jyotirlingas)) {
                 $data['jyotirlingas'] = self::addNewDefaults(
                     isset($data['jyotirlingas']) && is_array($data['jyotirlingas']) ? $data['jyotirlingas'] : ['items' => []],
                     $jyotirlingas
+                );
+            }
+        }
+        if (is_file(self::JAAP_DEFAULT)) {
+            $jaap = json_decode((string) file_get_contents(self::JAAP_DEFAULT), true);
+            if (is_array($jaap)) {
+                $data['jaapServices'] = self::addNewDefaults(
+                    isset($data['jaapServices']) && is_array($data['jaapServices']) ? $data['jaapServices'] : ['items' => []],
+                    $jaap
                 );
             }
         }
@@ -84,6 +105,60 @@ final class ContentStore
             }
             $saved = isset($data[$page]) && is_array($data[$page]) ? $data[$page] : [];
             $data[$page] = self::deepMerge($saved, $defaults);
+        }
+        return self::applySeoDefaults($data);
+    }
+
+    /**
+     * Page SEO: a field that is empty, still holds a value listed under "legacy" in
+     * seo.default.json, or contains broken characters takes the recommended value.
+     * Anything the admin has written themselves is kept. Service pages whose SEO title
+     * is still the automatic "Name | Hindu.International" get the recommended title.
+     */
+    private static function applySeoDefaults(array $data): array
+    {
+        $defaults = is_file(self::SEO_DEFAULT) ? json_decode((string) file_get_contents(self::SEO_DEFAULT), true) : null;
+        if (!is_array($defaults)) {
+            return $data;
+        }
+        $legacy = is_array($defaults['legacy'] ?? null) ? $defaults['legacy'] : [];
+        if (!isset($data['seo']) || !is_array($data['seo'])) {
+            $data['seo'] = [];
+        }
+        if (!isset($data['seo']['pages']) || !is_array($data['seo']['pages'])) {
+            $data['seo']['pages'] = [];
+        }
+        foreach ($defaults['pages'] ?? [] as $key => $fields) {
+            if (!is_array($fields)) {
+                continue;
+            }
+            $page = $data['seo']['pages'][$key] ?? null;
+            if (!is_array($page)) {
+                $page = ['index' => !in_array($key, ['privacy', 'terms'], true), 'follow' => true];
+            }
+            foreach ($fields as $field => $value) {
+                $old = $page[$field] ?? null;
+                $replace = !is_string($old)
+                    || trim($old) === ''
+                    || in_array($old, $legacy[$key][$field] ?? [], true)
+                    || strpos($old, "\u{00C3}") !== false;
+                if ($replace) {
+                    $page[$field] = $value;
+                }
+            }
+            $data['seo']['pages'][$key] = $page;
+        }
+
+        $titles = is_array($defaults['serviceTitles'] ?? null) ? $defaults['serviceTitles'] : [];
+        foreach ($data['services']['items'] ?? [] as $i => $item) {
+            $slug = is_array($item) ? (string) ($item['slug'] ?? '') : '';
+            if (!isset($titles[$slug])) {
+                continue;
+            }
+            $current = trim((string) ($item['seoTitle'] ?? ''));
+            if ($current === '' || $current === trim((string) ($item['title'] ?? '')) . ' | Hindu.International') {
+                $data['services']['items'][$i]['seoTitle'] = $titles[$slug];
+            }
         }
         return $data;
     }
@@ -254,6 +329,7 @@ final class ContentStore
             'home' => 'index.html',
             'about' => 'about-us.html',
             'how' => 'how-it-works.html',
+            'services' => 'services.html',
             'faith' => 'protect-our-faith.html',
             'donate' => 'donate.html',
             'event' => 'event.html',

@@ -20,12 +20,40 @@
     name: 'Hindu.International',
     url: BASE,
     logo: { '@type': 'ImageObject', url: LOGO },
-    description: 'Hindu.International performs sacred Hindu rituals on behalf of devotees who cannot attend in person, and shares the recorded video.',
+    description: 'Hindu.International brings Hindu religious and spiritual services together on one platform: online puja, jaap and paath, pandit booking, havan, pind daan, temple darshan and 12 Jyotirlinga puja seva.',
     contactPoint: { '@type': 'ContactPoint', email: EMAIL, contactType: 'customer service' },
-    sameAs: []
+    sameAs: sameAs()
   });
 
+  /* Social profiles from Admin → Social links (only real https addresses) */
+  function sameAs() {
+    var social = (window.SITE_CONTENT || {}).social;
+    var out = [];
+    (function walk(v) {
+      if (typeof v === 'string') { if (/^https:\/\/[^\s"<>]+$/i.test(v.trim()) && out.indexOf(v.trim()) === -1) out.push(v.trim()); }
+      else if (v && typeof v === 'object') Object.keys(v).forEach(function (k) { walk(v[k]); });
+    })(social);
+    return out;
+  }
+
   var page = (document.querySelector('meta[name="seo-page"]') || {}).content || '';
+
+  /* Breadcrumb trail for the fixed pages (data only — nothing is shown on the page) */
+  var CRUMBS = {
+    about: 'About Us', how: 'How It Works', services: 'Services', faith: 'Protect Our Faith',
+    donate: 'Donate', event: 'Event Information', booking: 'Book Virtual Punya Snan', contact: 'Contact Us'
+  };
+  if (CRUMBS[page]) {
+    var canonical = (document.querySelector('link[rel="canonical"]') || {}).href || location.href;
+    inject({
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: BASE + '/' },
+        { '@type': 'ListItem', position: 2, name: CRUMBS[page], item: canonical }
+      ]
+    });
+  }
 
   /* Home */
   if (page === 'home') {
@@ -33,17 +61,8 @@
       '@context': 'https://schema.org',
       '@type': 'WebSite',
       name: 'Hindu.International',
-      url: BASE
-    });
-    inject({
-      '@context': 'https://schema.org',
-      '@type': 'Service',
-      name: 'Virtual Punya Snan',
-      serviceType: 'Religious Ritual Service',
-      description: 'We perform the holy Punya Snan ritual on your behalf using your photograph and share the complete recorded video with you.',
-      provider: { '@type': 'Organization', name: 'Hindu.International', url: BASE },
-      areaServed: { '@type': 'Country', name: 'Worldwide' },
-      offers: { '@type': 'Offer', availability: 'https://schema.org/InStock', url: BASE + '/booking' }
+      url: BASE + '/',
+      inLanguage: 'en'
     });
   }
 
@@ -63,13 +82,24 @@
 
   /* Services listing */
   if (page === 'services') {
-    inject({
+    var svc = ((window.SITE_CONTENT || {}).services || {}).items;
+    var shown = (Array.isArray(svc) ? svc : []).filter(function (s) {
+      return s && s.show !== false && s.status === 'published' && s.design !== 'jaap' && /^[a-z0-9-]+$/.test(s.slug || '') && s.title;
+    });
+    var list = {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
       name: 'Hindu.International Services',
-      description: 'Spiritual services offered by Hindu.International — Virtual Punya Snan, puja seva, Jyotirlinga darshan and more.',
+      description: 'Hindu religious services: online puja, pandit booking, havan, pind daan, Graha Shanti, Jaap and Paath, temple darshan and 12 Jyotirlinga puja seva.',
       url: BASE + '/services'
-    });
+    };
+    if (shown.length) {
+      list.numberOfItems = shown.length;
+      list.itemListElement = shown.map(function (s, i) {
+        return { '@type': 'ListItem', position: i + 1, name: s.title, url: BASE + '/service?name=' + s.slug };
+      });
+    }
+    inject(list);
   }
 
   /* Jyotirlinga */
@@ -91,7 +121,7 @@
       '@type': 'ContactPage',
       name: 'Contact Hindu.International',
       url: BASE + '/contact-us',
-      description: 'Contact Hindu.International for questions about Virtual Punya Snan or general enquiries.'
+      description: 'Contact Hindu.International for questions about pujas, jaap, paath, pind daan and other religious services.'
     });
   }
 
@@ -178,7 +208,7 @@
       '@type': 'AboutPage',
       name: 'About Hindu.International',
       url: BASE + '/about-us',
-      description: 'Hindu.International helps devotees participate in sacred rituals from anywhere in the world.'
+      description: 'Hindu.international brings pujas, jaap, paath, temple services and Hindu traditions together on one platform.'
     });
   }
 
