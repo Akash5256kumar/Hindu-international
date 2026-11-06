@@ -8,6 +8,17 @@ header('Pragma: no-cache');
 header('Expires: 0');
 
 $dir  = __DIR__;
+
+/* After a deploy with new default content, save once on the server (see admin/includes/auto-publish.php) */
+if (!is_file($dir . '/.auto-publish-seo-20261106.json') && is_file($dir . '/site.json')) {
+    try {
+        require_once dirname($dir) . '/admin/includes/auto-publish.php';
+        vps_auto_publish('seo-20261106');
+    } catch (Throwable $e) {
+        // never break the site; the admin's Save button does the same job
+    }
+}
+
 $live = $dir . '/site.js';
 $fallback = $dir . '/content.js';
 

@@ -19,3 +19,6 @@ content/site.js
 
 # Deployment archives
 *.zip
+
+# One-time automatic saves on the server (content/serve.php)
+content/.auto-publish-*.json

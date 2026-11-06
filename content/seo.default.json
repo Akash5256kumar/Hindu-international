@@ -91,7 +91,7 @@
       "ogImage": "assets/images/contact-banner.jpg"
     },
     "privacy": {
-      "title": "Privacy Policy | Hindu.International",
+      "title": "Privacy Policy & Data Protection | Hindu.International",
       "description": "Read how Hindu.International collects, uses and protects your personal details and photograph when you use our services.",
       "keywords": "Hindu.International privacy policy",
       "canonical": "https://hindu.international/privacy",
@@ -100,8 +100,8 @@
       "ogImage": "assets/images/brand/logo.png"
     },
     "terms": {
-      "title": "Terms & Conditions | Hindu.International",
-      "description": "Read the terms and conditions for using Hindu.International and its religious services.",
+      "title": "Terms & Conditions of Service | Hindu.International",
+      "description": "Read the terms and conditions that apply when you use the Hindu.International website, submit a service request or enquiry, or use our religious services.",
       "keywords": "Hindu.International terms and conditions",
       "canonical": "https://hindu.international/terms",
       "ogTitle": "Terms & Conditions | Hindu.International",
@@ -115,20 +115,16 @@
         "Virtual Punya Snan | Hindu.International"
       ],
       "description": [
-        "Cannot attend the sacred event? Hindu.International performs the holy ritual on your behalf using your photograph and shares the recorded video with you.",
-        "Cannot attend the sacred event? Hindu.International performs the holy Punya Snan ritual on your behalf using your photograph and shares the recorded video with you Ã¢â‚¬â€ from anywhere in the world."
+        "Cannot attend the sacred event? Hindu.International performs the holy ritual on your behalf using your photograph and shares the recorded video with you."
       ],
       "keywords": [
-        "Virtual Punya Snan, sacred ritual, Hindu pilgrimage, holy dip, online puja",
-        "Virtual Punya Snan, Punya Snan online, Hindu pilgrimage ritual, sacred holy dip, online puja service, Hindu ritual on your behalf, devotional service"
+        "Virtual Punya Snan, sacred ritual, Hindu pilgrimage, holy dip, online puja"
       ],
       "ogTitle": [
-        "Virtual Punya Snan by Hindu.International",
-        "Virtual Punya Snan by Hindu.International: Your Devotion Still Reaches"
+        "Virtual Punya Snan by Hindu.International"
       ],
       "ogDescription": [
-        "Your devotion can reach the sacred event from anywhere. We perform the holy ritual on your behalf and share the recorded video.",
-        "We perform the holy ritual on your behalf using your photograph and share the recorded video with you Ã¢â‚¬â€ from anywhere in the world."
+        "Your devotion can reach the sacred event from anywhere. We perform the holy ritual on your behalf and share the recorded video."
       ],
       "ogImage": [
         "assets/images/hero-devotee.jpg"
@@ -136,23 +132,19 @@
     },
     "about": {
       "title": [
-        "About Us | Hindu.International",
-        "About Hindu.International | Our Mission & Vision"
+        "About Us | Hindu.International"
       ],
       "description": [
-        "Learn about Hindu.International and our Virtual Punya Snan service for devotees who cannot personally attend the sacred event.",
-        "Hindu.International helps devotees participate in sacred rituals from anywhere in the world. Learn about our mission, values and how our Virtual Punya Snan service works."
+        "Learn about Hindu.International and our Virtual Punya Snan service for devotees who cannot personally attend the sacred event."
       ],
       "keywords": [
-        "about Hindu.International, Virtual Punya Snan, Hindu devotional service",
-        "about Hindu.International, Hindu devotional service organisation, Virtual Punya Snan mission, Hindu faith service, sacred ritual India"
+        "about Hindu.International, Virtual Punya Snan, Hindu devotional service"
       ],
       "ogTitle": [
         "About Hindu.International"
       ],
       "ogDescription": [
-        "Our journey is rooted in faith, service and devotion.",
-        "Our journey is rooted in faith, service and devotion Ã¢â‚¬â€ helping every devotee stay connected with their sacred traditions."
+        "Our journey is rooted in faith, service and devotion."
       ],
       "ogImage": [
         "assets/images/about-banner.jpg"
@@ -160,206 +152,199 @@
     },
     "how": {
       "title": [
-        "How It Works | Hindu.International",
-        "How It Works Ã¢â‚¬â€ Virtual Punya Snan | Hindu.International"
+        "How It Works | Hindu.International"
       ],
       "description": [
-        "See how to request Virtual Punya Snan: submit your details and photograph, our team performs and records the sacred ritual, then shares your video.",
-        "Four simple steps: submit your request and photograph, our team performs the holy ritual at the sacred site, the ritual is fully recorded, and we share the video with you."
+        "See how to request Virtual Punya Snan: submit your details and photograph, our team performs and records the sacred ritual, then shares your video."
       ],
       "keywords": [
-        "how Virtual Punya Snan works, sacred ritual video, online Hindu service",
-        "how Virtual Punya Snan works, sacred ritual process, Hindu ritual on behalf, Punya Snan steps, ritual video recorded"
+        "how Virtual Punya Snan works, sacred ritual video, online Hindu service"
       ],
       "ogTitle": [
-        "How Virtual Punya Snan Works",
-        "How Virtual Punya Snan Works | Hindu.International"
+        "How Virtual Punya Snan Works"
       ],
       "ogDescription": [
-        "A simple process to connect you with divine blessings.",
-        "A simple four-step process to connect you with divine blessings Ã¢â‚¬â€ even when you cannot be at the sacred event."
+        "A simple process to connect you with divine blessings."
       ],
       "ogImage": [
         "assets/images/hero-devotee.jpg"
       ]
     },
-    "services": {
-      "title": [
-        "Hindu Spiritual Services | Hindu.International"
-      ],
-      "description": [
-        "Explore Hindu.International spiritual services Ã¢â‚¬â€ Virtual Punya Snan, puja seva, Jyotirlinga darshan and more Ã¢â‚¬â€ to stay connected with your faith and traditions from anywhere in the world."
-      ],
-      "keywords": [
-        "Hindu spiritual services, Virtual Punya Snan, online puja service, Jyotirlinga darshan, Hindu ritual service, puja on behalf"
-      ],
-      "ogTitle": [
-        "Hindu Spiritual Services | Hindu.International"
-      ],
-      "ogDescription": [
-        "Stay connected with your faith from anywhere Ã¢â‚¬â€ Virtual Punya Snan, puja, Jyotirlinga darshan and more."
-      ],
-      "ogImage": [
-        "assets/images/hero-devotee.jpg"
-      ]
-    },
-    "jyotirlinga": {
-      "description": [
-        "Seek divine blessings from all twelve Jyotirlingas of Lord Shiva. Hindu.International arranges darshan and puja seva at sacred Jyotirlinga temples Ã¢â‚¬â€ Somnath, Kashi Vishwanath, Mahakaleshwar and more."
-      ],
-      "keywords": [
-        "12 Jyotirlinga, Jyotirlinga darshan online, Lord Shiva Jyotirlinga puja, Somnath temple, Kashi Vishwanath, Mahakaleshwar, Jyotirlinga seva, Hindu temple darshan"
-      ],
-      "ogTitle": [
-        "12 Jyotirlinga Darshan & Puja | Hindu.International"
-      ],
-      "ogDescription": [
-        "Seek blessings from all twelve sacred Jyotirlingas of Lord Shiva Ã¢â‚¬â€ darshan and puja seva arranged by Hindu.International."
-      ]
-    },
+    "services": {},
+    "jyotirlinga": {},
     "faith": {
       "title": [
-        "Protect Our Faith | Hindu.International",
-        "Protect Our Faith Ã¢â‚¬â€ Hindu Heritage & Anti-Conversion | Hindu.International"
-      ],
-      "description": [
-        "Hinduism is our heritage. Learn about anti-conversion awareness, how to protect vulnerable Hindus, and how to support freedom of faith through awareness, compassion and lawful action."
+        "Protect Our Faith | Hindu.International"
       ],
       "keywords": [
-        "protect Hindu faith, Hindu heritage, freedom of faith, anti-conversion awareness",
-        "protect Hindu faith, Hindu heritage preservation, anti-conversion awareness, freedom of religion, Sanatan Dharma, Hindu culture protection"
+        "protect Hindu faith, Hindu heritage, freedom of faith, anti-conversion awareness"
       ],
       "ogTitle": [
         "Protect Our Faith | Hindu.International"
-      ],
-      "ogDescription": [
-        "Hinduism Is Our Heritage. Our Faith Deserves Protection. Learn about anti-conversion and how to help."
       ]
     },
     "donate": {
       "title": [
-        "Donate Us | Support Our Mission | Hindu.International",
-        "Donate | Support Hindu Communities | Hindu.International"
-      ],
-      "description": [
-        "Support education, healthcare, food assistance, livelihoods and community development for vulnerable Hindu communities in rural and underserved areas. Every contribution matters."
+        "Donate Us | Support Our Mission | Hindu.International"
       ],
       "keywords": [
-        "donate Hindu charity, support Hindu communities, Hindu heritage, community development",
-        "donate Hindu community, support Hindu families, Hindu charity India, preserve Hindu heritage, community development donation, help vulnerable Hindus"
+        "donate Hindu charity, support Hindu communities, Hindu heritage, community development"
       ],
       "ogTitle": [
-        "Donate Us | Be a Part of the Change | Hindu.International",
-        "Donate | Be a Part of the Change | Hindu.International"
-      ],
-      "ogDescription": [
-        "Support our mission to preserve Hindu heritage and help vulnerable communities. Give any amount Ã¢â‚¬â€ every contribution counts."
+        "Donate Us | Be a Part of the Change | Hindu.International"
       ]
     },
     "event": {
       "title": [
-        "Event Information | Hindu.International",
-        "Sacred Event Information Ã¢â‚¬â€ Punya Snan | Hindu.International"
-      ],
-      "description": [
-        "Learn about the upcoming sacred Hindu bathing event Ã¢â‚¬â€ its spiritual significance, dates, location and how to request Virtual Punya Snan to participate from anywhere."
+        "Event Information | Hindu.International"
       ],
       "keywords": [
-        "Hindu sacred event, event information, Virtual Punya Snan dates",
-        "Hindu sacred bathing event, Punya Snan dates, sacred river bathing, Hindu pilgrimage event, Kumbh Mela darshan, Ardh Kumbh, Prayagraj"
+        "Hindu sacred event, event information, Virtual Punya Snan dates"
       ],
       "ogTitle": [
         "Event Information | Hindu.International"
-      ],
-      "ogDescription": [
-        "Know more about the sacred event, its spiritual significance, dates and location Ã¢â‚¬â€ and request Virtual Punya Snan."
       ]
     },
     "booking": {
       "title": [
         "Request Virtual Punya Snan | Hindu.International"
       ],
-      "description": [
-        "Submit your name, details and photograph to request Virtual Punya Snan. Our team performs the holy ritual at the sacred event and shares the complete recorded video with you."
-      ],
       "keywords": [
-        "request Virtual Punya Snan, book Hindu ritual, sacred ritual booking",
-        "request Virtual Punya Snan, book sacred Hindu ritual, online Hindu puja booking, Punya Snan request form, virtual ritual service"
+        "request Virtual Punya Snan, book Hindu ritual, sacred ritual booking"
       ],
       "ogTitle": [
         "Request Virtual Punya Snan"
       ],
       "ogDescription": [
-        "Fill in the details below to submit your service request.",
-        "Submit your photograph and details Ã¢â‚¬â€ our team performs the sacred ritual on your behalf and shares the video with you."
+        "Fill in the details below to submit your service request."
       ]
     },
     "contact": {
       "title": [
-        "Contact Us | Hindu.International",
-        "Contact Hindu.International | Get Help & Support"
+        "Contact Us | Hindu.International"
       ],
       "description": [
-        "Contact Hindu.International by phone, WhatsApp or email for questions or help with your Virtual Punya Snan service request.",
-        "Contact Hindu.International for questions about Virtual Punya Snan, service requests or general enquiries. Send us a message and we will get back to you."
+        "Contact Hindu.International by phone, WhatsApp or email for questions or help with your Virtual Punya Snan service request."
       ],
       "keywords": [
-        "contact Hindu.International, Virtual Punya Snan help, Hindu service support",
-        "contact Hindu.International, Virtual Punya Snan help, Hindu service support, enquiry, service@hindu.international"
-      ],
-      "ogTitle": [
-        "Contact Hindu.International | We Are Here to Help"
-      ],
-      "ogDescription": [
-        "Reach out for questions, support or information about our services. We will be glad to assist you."
+        "contact Hindu.International, Virtual Punya Snan help, Hindu service support"
       ]
     },
     "privacy": {
-      "description": [
-        "Read how Hindu.International collects, uses and protects your personal details and photograph when you use our Virtual Punya Snan service."
+      "title": [
+        "Privacy Policy | Hindu.International"
       ],
       "keywords": [
-        "Hindu.International privacy policy, personal data, photo privacy",
-        "Hindu.International privacy policy, personal data protection, photo privacy"
-      ],
-      "ogImage": [
-        "assets/images/brand/favicon-192.png"
+        "Hindu.International privacy policy, personal data, photo privacy"
       ]
     },
     "terms": {
+      "title": [
+        "Terms & Conditions | Hindu.International"
+      ],
       "description": [
-        "Read the terms and conditions for using the Hindu.International Virtual Punya Snan service."
+        "Read the terms and conditions for using the Hindu.International Virtual Punya Snan service.",
+        "Read the terms and conditions for using Hindu.International and its religious services."
       ],
       "keywords": [
-        "Hindu.International terms and conditions, Virtual Punya Snan terms",
-        "Hindu.International terms and conditions, Virtual Punya Snan terms of service"
+        "Hindu.International terms and conditions, Virtual Punya Snan terms"
       ],
       "ogDescription": [
-        "Terms and conditions for the Virtual Punya Snan service.",
-        "Terms and conditions for using the Hindu.International Virtual Punya Snan service."
-      ],
-      "ogImage": [
-        "assets/images/brand/favicon-192.png"
+        "Terms and conditions for the Virtual Punya Snan service."
       ]
     }
   },
   "serviceTitles": {
     "pandit-booking": "Book a Pandit Online for Puja & Havan | Hindu.International",
-    "12-jyotirlinga-darshan-puja": "12 Jyotirlinga Darshan & Puja Seva Online | Hindu.International",
-    "graha-shanti-dosh-nivaran": "Graha Shanti & Dosh Nivaran Puja Online | Hindu.International",
-    "virtual-puja-booking": "Virtual Puja Booking Online | Hindu.International",
+    "12-jyotirlinga-darshan-puja": "12 Jyotirlinga Puja & Darshan Online | Hindu.International",
+    "graha-shanti-dosh-nivaran": "Graha Shanti & Dosh Nivaran Puja | Hindu.International",
+    "virtual-puja-booking": "Online Virtual Puja Booking Service | Hindu.International",
     "jaap-path-anushthan": "Jaap & Path Anushthan Online Booking | Hindu.International",
     "havan-yagya-booking": "Havan & Yagya Booking Online | Hindu.International",
     "deep-daan-ganga-aarti": "Deep Daan & Ganga Aarti Sankalp Online | Hindu.International",
     "virtual-festival-darshan": "Virtual Festival Darshan Online | Hindu.International",
     "temple-darshan-offerings": "Temple Darshan & Offerings Online | Hindu.International",
-    "virtual-punya-snan": "Virtual Punya Snan – Holy Dip in Your Name | Hindu.International",
+    "virtual-punya-snan": "Virtual Punya Snan – Holy Dip Online | Hindu.International",
     "online-priest-consultation": "Online Priest Consultation for Rituals | Hindu.International",
     "religious-ceremony-booking": "Hindu Religious Ceremony Booking | Hindu.International",
-    "puja-samagri-store": "Puja Samagri Online – Ritual Essentials | Hindu.International",
+    "puja-samagri-store": "Puja Samagri & Ritual Items Online | Hindu.International",
     "donate-social-welfare": "Donate for Hindu Social Welfare | Hindu.International",
     "volunteer-community-service": "Volunteer & Community Service | Hindu.International",
     "religious-awareness": "Hindu Religious Awareness & Traditions | Hindu.International",
     "pind-daan-shraddh": "Pind Daan & Shraddh Online in Gaya | Hindu.International"
+  },
+  "jyotirlingas": {
+    "somnath": {
+      "seoTitle": "Somnath Jyotirlinga Puja & Darshan | Hindu.International",
+      "seoDescription": "Somnath Jyotirlinga, Somnath, Gujarat: temple history, darshan timings and how to reach. Book puja or Rudrabhishek in your name with Hindu.International.",
+      "oldTitle": "Somnath Jyotirlinga Darshan & Puja Seva | Hindu.International",
+      "oldDescription": "Somnath Jyotirlinga in Prabhas Patan, Gujarat: about the temple, darshan and puja seva, temple timings, how to reach and FAQs. Enquire about puja with Hindu.International."
+    },
+    "mallikarjuna": {
+      "seoTitle": "Mallikarjuna Jyotirlinga Puja Online | Hindu.International",
+      "seoDescription": "Mallikarjuna Jyotirlinga, Srisailam, Andhra Pradesh: history, darshan timings and how to reach. Book puja or Rudrabhishek in your name.",
+      "oldTitle": "Mallikarjuna Jyotirlinga Darshan & Puja Seva | Hindu.International",
+      "oldDescription": "Mallikarjuna Jyotirlinga, Srisailam, Andhra Pradesh: about the temple, darshan and puja seva, temple timings, how to reach and FAQs. Enquire about puja with Hindu.International."
+    },
+    "mahakaleshwar": {
+      "seoTitle": "Mahakaleshwar Jyotirlinga Puja Online | Hindu.International",
+      "seoDescription": "Mahakaleshwar Jyotirlinga, Ujjain, Madhya Pradesh: history, darshan timings and how to reach. Book puja or Rudrabhishek in your name.",
+      "oldTitle": "Mahakaleshwar Jyotirlinga Darshan & Puja Seva | Hindu.International",
+      "oldDescription": "Mahakaleshwar Jyotirlinga, Ujjain, Madhya Pradesh: about the temple, darshan and puja seva, temple timings, how to reach and FAQs. Enquire about puja with Hindu.International."
+    },
+    "omkareshwar": {
+      "seoTitle": "Omkareshwar Jyotirlinga Puja & Darshan | Hindu.International",
+      "seoDescription": "Omkareshwar Jyotirlinga, Omkareshwar, Madhya Pradesh: history, darshan timings and how to reach. Book puja or Rudrabhishek in your name.",
+      "oldTitle": "Omkareshwar Jyotirlinga Darshan & Puja Seva | Hindu.International",
+      "oldDescription": "Omkareshwar Jyotirlinga, Mandhata Island, Omkareshwar, Madhya Pradesh: about the temple, darshan and puja seva, temple timings, how to reach and FAQs. Enquire about puja with Hindu.International."
+    },
+    "kedarnath": {
+      "seoTitle": "Kedarnath Jyotirlinga Puja & Darshan | Hindu.International",
+      "seoDescription": "Kedarnath Jyotirlinga, Kedarnath, Uttarakhand: history, darshan timings and how to reach. Book puja or Rudrabhishek in your name.",
+      "oldTitle": "Kedarnath Jyotirlinga Darshan & Puja Seva | Hindu.International",
+      "oldDescription": "Kedarnath Jyotirlinga, Kedarnath, Rudraprayag District, Uttarakhand: about the temple, darshan and puja seva, temple timings, how to reach and FAQs. Enquire about puja with Hindu.International."
+    },
+    "bhimashankar": {
+      "seoTitle": "Bhimashankar Jyotirlinga Puja Online | Hindu.International",
+      "seoDescription": "Bhimashankar Jyotirlinga, Bhimashankar, Maharashtra: history, darshan timings and how to reach. Book puja or Rudrabhishek in your name.",
+      "oldTitle": "Bhimashankar Jyotirlinga Darshan & Puja Seva | Hindu.International",
+      "oldDescription": "Bhimashankar Jyotirlinga, Bhimashankar, Pune District, Maharashtra: about the temple, darshan and puja seva, temple timings, how to reach and FAQs. Enquire about puja with Hindu.International."
+    },
+    "kashi-vishwanath": {
+      "seoTitle": "Kashi Vishwanath Jyotirlinga Puja | Hindu.International",
+      "seoDescription": "Kashi Vishwanath Jyotirlinga, Varanasi, Uttar Pradesh: history, darshan timings and how to reach. Book puja or Rudrabhishek in your name.",
+      "oldTitle": "Kashi Vishwanath Jyotirlinga Darshan & Puja Seva | Hindu.International",
+      "oldDescription": "Kashi Vishwanath Jyotirlinga, Varanasi, Uttar Pradesh: about the temple, darshan and puja seva, temple timings, how to reach and FAQs. Enquire about puja with Hindu.International."
+    },
+    "trimbakeshwar": {
+      "seoTitle": "Trimbakeshwar Jyotirlinga Puja Online | Hindu.International",
+      "seoDescription": "Trimbakeshwar Jyotirlinga, Trimbak, Nashik: temple history, darshan timings and how to reach. Book puja or Rudrabhishek in your name with Hindu.International.",
+      "oldTitle": "Trimbakeshwar Jyotirlinga Darshan & Puja Seva | Hindu.International",
+      "oldDescription": "Trimbakeshwar Jyotirlinga, Trimbak, near Nashik, Maharashtra: about the temple, darshan and puja seva, temple timings, how to reach and FAQs. Enquire about puja with Hindu.International."
+    },
+    "vaidyanath": {
+      "seoTitle": "Vaidyanath Jyotirlinga Puja & Darshan | Hindu.International",
+      "seoDescription": "Vaidyanath Jyotirlinga, Deoghar, Jharkhand: temple history, darshan timings and how to reach. Book puja or Rudrabhishek in your name with Hindu.International.",
+      "oldTitle": "Vaidyanath Jyotirlinga Darshan & Puja Seva | Hindu.International",
+      "oldDescription": "Vaidyanath Jyotirlinga, Deoghar, Jharkhand: about the temple, darshan and puja seva, temple timings, how to reach and FAQs. Enquire about puja with Hindu.International."
+    },
+    "nageshwar": {
+      "seoTitle": "Nageshwar Jyotirlinga Puja & Darshan | Hindu.International",
+      "seoDescription": "Nageshwar Jyotirlinga, Dwarka, Gujarat: temple history, darshan timings and how to reach. Book puja or Rudrabhishek in your name with Hindu.International.",
+      "oldTitle": "Nageshwar Jyotirlinga Darshan & Puja Seva | Hindu.International",
+      "oldDescription": "Nageshwar Jyotirlinga, Dwarka, Gujarat: about the temple, darshan and puja seva, temple timings, how to reach and FAQs. Enquire about puja with Hindu.International."
+    },
+    "rameshwaram": {
+      "seoTitle": "Rameshwaram Jyotirlinga Puja & Darshan | Hindu.International",
+      "seoDescription": "Rameshwaram Jyotirlinga, Rameshwaram, Tamil Nadu: history, darshan timings and how to reach. Book puja or Rudrabhishek in your name.",
+      "oldTitle": "Rameshwaram Jyotirlinga Darshan & Puja Seva | Hindu.International",
+      "oldDescription": "Rameshwaram Jyotirlinga, Rameshwaram, Tamil Nadu: about the temple, darshan and puja seva, temple timings, how to reach and FAQs. Enquire about puja with Hindu.International."
+    },
+    "grishneshwar": {
+      "seoTitle": "Grishneshwar Jyotirlinga Puja Online | Hindu.International",
+      "seoDescription": "Grishneshwar Jyotirlinga, Ellora, Maharashtra: history, darshan timings and how to reach. Book puja or Rudrabhishek in your name.",
+      "oldTitle": "Grishneshwar Jyotirlinga Darshan & Puja Seva | Hindu.International",
+      "oldDescription": "Grishneshwar Jyotirlinga, Verul (Ellora), Aurangabad, Maharashtra: about the temple, darshan and puja seva, temple timings, how to reach and FAQs. Enquire about puja with Hindu.International."
+    }
   }
 }

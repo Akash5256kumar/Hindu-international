@@ -1205,7 +1205,7 @@
                 "ogImage": "assets/images/jyotirlinga/somnath-hero.jpg"
             },
             "privacy": {
-                "title": "Privacy Policy | Hindu.International",
+                "title": "Privacy Policy & Data Protection | Hindu.International",
                 "description": "Read how Hindu.International collects, uses and protects your personal details and photograph when you use our services.",
                 "keywords": "Hindu.International privacy policy",
                 "canonical": "https://hindu.international/privacy",
@@ -1216,8 +1216,8 @@
                 "ogImage": "assets/images/brand/logo.png"
             },
             "terms": {
-                "title": "Terms & Conditions | Hindu.International",
-                "description": "Read the terms and conditions for using Hindu.International and its religious services.",
+                "title": "Terms & Conditions of Service | Hindu.International",
+                "description": "Read the terms and conditions that apply when you use the Hindu.International website, submit a service request or enquiry, or use our religious services.",
                 "keywords": "Hindu.International terms and conditions",
                 "canonical": "https://hindu.international/terms",
                 "index": true,

@@ -160,6 +160,21 @@ final class ContentStore
                 $data['services']['items'][$i]['seoTitle'] = $titles[$slug];
             }
         }
+
+        $temples = is_array($defaults['jyotirlingas'] ?? null) ? $defaults['jyotirlingas'] : [];
+        foreach ($data['jyotirlingas']['items'] ?? [] as $i => $item) {
+            $slug = is_array($item) ? (string) ($item['slug'] ?? '') : '';
+            $new = $temples[$slug] ?? null;
+            if (!is_array($new)) {
+                continue;
+            }
+            foreach (['seoTitle' => 'oldTitle', 'seoDescription' => 'oldDescription'] as $field => $oldKey) {
+                $current = trim((string) ($item[$field] ?? ''));
+                if ($current === '' || $current === trim((string) ($new[$oldKey] ?? ''))) {
+                    $data['jyotirlingas']['items'][$i][$field] = $new[$field];
+                }
+            }
+        }
         return $data;
     }
 
