@@ -36,9 +36,9 @@
     "title": "Staying Connected to Faith, Wherever You Are",
     "text": "Faith is more than a tradition. It is a connection to our roots, our families and the values passed down through generations. Hindu.international focuses on making that connection easier to maintain by helping people access spiritual services and religious practices according to their situation.\n\nSome people want to follow their religious traditions whether they live near a sacred place or thousands of miles away. Hindu.international provides different puja, ritual and spiritual services so people can choose the services that suit their needs and stay connected to their traditions.",
     "cards": [
-      { "show": true, "icon": "snan", "title": "Snan, Jaap with Havan", "image": "assets/images/services/havan-yagya.jpg", "imageAlt": "A havan fire being offered flowers and ghee", "link": "service?name=havan-yagya-booking" },
-      { "show": true, "icon": "pandit", "title": "Pandit with Puja", "image": "assets/images/services/pandit-booking.jpg", "imageAlt": "A pandit reading from a holy book before a puja", "link": "service?name=pandit-booking" },
-      { "show": true, "icon": "temple", "title": "Religious Place", "image": "assets/images/jyotirlinga/somnath-hero.jpg", "imageAlt": "A sacred temple glowing in the evening light", "link": "service?name=temple-darshan-offerings" },
+      { "show": true, "icon": "snan", "title": "Snan, Jaap with Havan", "image": "assets/images/services/havan-yagya.jpg", "imageAlt": "A havan fire being offered flowers and ghee", "link": "havan-yagya-booking-service" },
+      { "show": true, "icon": "pandit", "title": "Pandit with Puja", "image": "assets/images/services/pandit-booking.jpg", "imageAlt": "A pandit reading from a holy book before a puja", "link": "pandit-booking-service" },
+      { "show": true, "icon": "temple", "title": "Religious Place", "image": "assets/images/jyotirlinga/somnath-hero.jpg", "imageAlt": "A sacred temple glowing in the evening light", "link": "temple-darshan-offerings-service" },
       { "show": true, "icon": "lotus", "title": "Other Spiritual Services", "image": "assets/images/services/puja-booking.jpg", "imageAlt": "A puja thali with lamps, flowers and offerings", "link": "services" }
     ]
   },

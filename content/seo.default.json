@@ -255,92 +255,92 @@
     }
   },
   "serviceTitles": {
-    "pandit-booking": "Book a Pandit Online for Puja & Havan | Hindu.International",
-    "12-jyotirlinga-darshan-puja": "12 Jyotirlinga Puja & Darshan Online | Hindu.International",
-    "graha-shanti-dosh-nivaran": "Graha Shanti & Dosh Nivaran Puja | Hindu.International",
-    "virtual-puja-booking": "Online Virtual Puja Booking Service | Hindu.International",
+    "pandit-booking-service": "Book a Pandit Online for Puja & Havan | Hindu.International",
+    "12-jyotirlinga-darshan-puja-seva": "12 Jyotirlinga Puja & Darshan Online | Hindu.International",
+    "graha-shanti-dosh-nivaran-puja": "Graha Shanti & Dosh Nivaran Puja | Hindu.International",
+    "virtual-puja-booking-service": "Online Virtual Puja Booking Service | Hindu.International",
     "jaap-path-anushthan": "Jaap & Path Anushthan Online Booking | Hindu.International",
-    "havan-yagya-booking": "Havan & Yagya Booking Online | Hindu.International",
-    "deep-daan-ganga-aarti": "Deep Daan & Ganga Aarti Sankalp Online | Hindu.International",
-    "virtual-festival-darshan": "Virtual Festival Darshan Online | Hindu.International",
-    "temple-darshan-offerings": "Temple Darshan & Offerings Online | Hindu.International",
-    "virtual-punya-snan": "Virtual Punya Snan – Holy Dip Online | Hindu.International",
-    "online-priest-consultation": "Online Priest Consultation for Rituals | Hindu.International",
-    "religious-ceremony-booking": "Hindu Religious Ceremony Booking | Hindu.International",
-    "puja-samagri-store": "Puja Samagri & Ritual Items Online | Hindu.International",
+    "havan-yagya-booking-service": "Havan & Yagya Booking Online | Hindu.International",
+    "deep-daan-ganga-aarti-sankalp": "Deep Daan & Ganga Aarti Sankalp Online | Hindu.International",
+    "virtual-festival-darshan-service": "Virtual Festival Darshan Online | Hindu.International",
+    "temple-darshan-offerings-service": "Temple Darshan & Offerings Online | Hindu.International",
+    "virtual-punya-snan-service": "Virtual Punya Snan – Holy Dip Online | Hindu.International",
+    "online-priest-consultation-ritual-guidance": "Online Priest Consultation for Rituals | Hindu.International",
+    "religious-ceremony-booking-service": "Hindu Religious Ceremony Booking | Hindu.International",
+    "puja-samagri-ritual-essentials-store": "Puja Samagri & Ritual Items Online | Hindu.International",
     "donate-social-welfare": "Donate for Hindu Social Welfare | Hindu.International",
     "volunteer-community-service": "Volunteer & Community Service | Hindu.International",
-    "religious-awareness": "Hindu Religious Awareness & Traditions | Hindu.International",
-    "pind-daan-shraddh": "Pind Daan & Shraddh Online in Gaya | Hindu.International"
+    "religious-awareness-service": "Hindu Religious Awareness & Traditions | Hindu.International",
+    "pind-daan-shraddh-service": "Pind Daan & Shraddh Online in Gaya | Hindu.International"
   },
   "jyotirlingas": {
-    "somnath": {
+    "somnath-jyotirlinga": {
       "seoTitle": "Somnath Jyotirlinga Puja & Darshan | Hindu.International",
       "seoDescription": "Somnath Jyotirlinga, Somnath, Gujarat: temple history, darshan timings and how to reach. Book puja or Rudrabhishek in your name with Hindu.International.",
       "oldTitle": "Somnath Jyotirlinga Darshan & Puja Seva | Hindu.International",
       "oldDescription": "Somnath Jyotirlinga in Prabhas Patan, Gujarat: about the temple, darshan and puja seva, temple timings, how to reach and FAQs. Enquire about puja with Hindu.International."
     },
-    "mallikarjuna": {
+    "mallikarjuna-jyotirlinga": {
       "seoTitle": "Mallikarjuna Jyotirlinga Puja Online | Hindu.International",
       "seoDescription": "Mallikarjuna Jyotirlinga, Srisailam, Andhra Pradesh: history, darshan timings and how to reach. Book puja or Rudrabhishek in your name.",
       "oldTitle": "Mallikarjuna Jyotirlinga Darshan & Puja Seva | Hindu.International",
       "oldDescription": "Mallikarjuna Jyotirlinga, Srisailam, Andhra Pradesh: about the temple, darshan and puja seva, temple timings, how to reach and FAQs. Enquire about puja with Hindu.International."
     },
-    "mahakaleshwar": {
+    "mahakaleshwar-jyotirlinga": {
       "seoTitle": "Mahakaleshwar Jyotirlinga Puja Online | Hindu.International",
       "seoDescription": "Mahakaleshwar Jyotirlinga, Ujjain, Madhya Pradesh: history, darshan timings and how to reach. Book puja or Rudrabhishek in your name.",
       "oldTitle": "Mahakaleshwar Jyotirlinga Darshan & Puja Seva | Hindu.International",
       "oldDescription": "Mahakaleshwar Jyotirlinga, Ujjain, Madhya Pradesh: about the temple, darshan and puja seva, temple timings, how to reach and FAQs. Enquire about puja with Hindu.International."
     },
-    "omkareshwar": {
+    "omkareshwar-jyotirlinga": {
       "seoTitle": "Omkareshwar Jyotirlinga Puja & Darshan | Hindu.International",
       "seoDescription": "Omkareshwar Jyotirlinga, Omkareshwar, Madhya Pradesh: history, darshan timings and how to reach. Book puja or Rudrabhishek in your name.",
       "oldTitle": "Omkareshwar Jyotirlinga Darshan & Puja Seva | Hindu.International",
       "oldDescription": "Omkareshwar Jyotirlinga, Mandhata Island, Omkareshwar, Madhya Pradesh: about the temple, darshan and puja seva, temple timings, how to reach and FAQs. Enquire about puja with Hindu.International."
     },
-    "kedarnath": {
+    "kedarnath-jyotirlinga": {
       "seoTitle": "Kedarnath Jyotirlinga Puja & Darshan | Hindu.International",
       "seoDescription": "Kedarnath Jyotirlinga, Kedarnath, Uttarakhand: history, darshan timings and how to reach. Book puja or Rudrabhishek in your name.",
       "oldTitle": "Kedarnath Jyotirlinga Darshan & Puja Seva | Hindu.International",
       "oldDescription": "Kedarnath Jyotirlinga, Kedarnath, Rudraprayag District, Uttarakhand: about the temple, darshan and puja seva, temple timings, how to reach and FAQs. Enquire about puja with Hindu.International."
     },
-    "bhimashankar": {
+    "bhimashankar-jyotirlinga": {
       "seoTitle": "Bhimashankar Jyotirlinga Puja Online | Hindu.International",
       "seoDescription": "Bhimashankar Jyotirlinga, Bhimashankar, Maharashtra: history, darshan timings and how to reach. Book puja or Rudrabhishek in your name.",
       "oldTitle": "Bhimashankar Jyotirlinga Darshan & Puja Seva | Hindu.International",
       "oldDescription": "Bhimashankar Jyotirlinga, Bhimashankar, Pune District, Maharashtra: about the temple, darshan and puja seva, temple timings, how to reach and FAQs. Enquire about puja with Hindu.International."
     },
-    "kashi-vishwanath": {
+    "kashi-vishwanath-jyotirlinga": {
       "seoTitle": "Kashi Vishwanath Jyotirlinga Puja | Hindu.International",
       "seoDescription": "Kashi Vishwanath Jyotirlinga, Varanasi, Uttar Pradesh: history, darshan timings and how to reach. Book puja or Rudrabhishek in your name.",
       "oldTitle": "Kashi Vishwanath Jyotirlinga Darshan & Puja Seva | Hindu.International",
       "oldDescription": "Kashi Vishwanath Jyotirlinga, Varanasi, Uttar Pradesh: about the temple, darshan and puja seva, temple timings, how to reach and FAQs. Enquire about puja with Hindu.International."
     },
-    "trimbakeshwar": {
+    "trimbakeshwar-jyotirlinga": {
       "seoTitle": "Trimbakeshwar Jyotirlinga Puja Online | Hindu.International",
       "seoDescription": "Trimbakeshwar Jyotirlinga, Trimbak, Nashik: temple history, darshan timings and how to reach. Book puja or Rudrabhishek in your name with Hindu.International.",
       "oldTitle": "Trimbakeshwar Jyotirlinga Darshan & Puja Seva | Hindu.International",
       "oldDescription": "Trimbakeshwar Jyotirlinga, Trimbak, near Nashik, Maharashtra: about the temple, darshan and puja seva, temple timings, how to reach and FAQs. Enquire about puja with Hindu.International."
     },
-    "vaidyanath": {
+    "vaidyanath-jyotirlinga": {
       "seoTitle": "Vaidyanath Jyotirlinga Puja & Darshan | Hindu.International",
       "seoDescription": "Vaidyanath Jyotirlinga, Deoghar, Jharkhand: temple history, darshan timings and how to reach. Book puja or Rudrabhishek in your name with Hindu.International.",
       "oldTitle": "Vaidyanath Jyotirlinga Darshan & Puja Seva | Hindu.International",
       "oldDescription": "Vaidyanath Jyotirlinga, Deoghar, Jharkhand: about the temple, darshan and puja seva, temple timings, how to reach and FAQs. Enquire about puja with Hindu.International."
     },
-    "nageshwar": {
+    "nageshwar-jyotirlinga": {
       "seoTitle": "Nageshwar Jyotirlinga Puja & Darshan | Hindu.International",
       "seoDescription": "Nageshwar Jyotirlinga, Dwarka, Gujarat: temple history, darshan timings and how to reach. Book puja or Rudrabhishek in your name with Hindu.International.",
       "oldTitle": "Nageshwar Jyotirlinga Darshan & Puja Seva | Hindu.International",
       "oldDescription": "Nageshwar Jyotirlinga, Dwarka, Gujarat: about the temple, darshan and puja seva, temple timings, how to reach and FAQs. Enquire about puja with Hindu.International."
     },
-    "rameshwaram": {
+    "rameshwaram-jyotirlinga": {
       "seoTitle": "Rameshwaram Jyotirlinga Puja & Darshan | Hindu.International",
       "seoDescription": "Rameshwaram Jyotirlinga, Rameshwaram, Tamil Nadu: history, darshan timings and how to reach. Book puja or Rudrabhishek in your name.",
       "oldTitle": "Rameshwaram Jyotirlinga Darshan & Puja Seva | Hindu.International",
       "oldDescription": "Rameshwaram Jyotirlinga, Rameshwaram, Tamil Nadu: about the temple, darshan and puja seva, temple timings, how to reach and FAQs. Enquire about puja with Hindu.International."
     },
-    "grishneshwar": {
+    "grishneshwar-jyotirlinga": {
       "seoTitle": "Grishneshwar Jyotirlinga Puja Online | Hindu.International",
       "seoDescription": "Grishneshwar Jyotirlinga, Ellora, Maharashtra: history, darshan timings and how to reach. Book puja or Rudrabhishek in your name.",
       "oldTitle": "Grishneshwar Jyotirlinga Darshan & Puja Seva | Hindu.International",

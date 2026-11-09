@@ -1,6 +1,6 @@
 /* =====================================================================
    JYOTIRLINGA PAGES — one template for every Jyotirlinga:
-     jyotirlinga.html?name=<slug>   (e.g. jyotirlinga?name=somnath)
+     /<slug>   (e.g. /somnath-jyotirlinga; jyotirlinga.html?name=<slug> still works)
    Content: content/content.json → "jyotirlingas" (Admin → 12 Jyotirlinga pages).
    Until the admin has saved it, content/jyotirlinga.default.json is used instead.
    Sections left empty in the admin are not shown.
@@ -28,7 +28,17 @@
 
   var safeLink = window.vpsSafeLink || function (v, f) { return f || '#'; };
   var SITE = 'Hindu.International';
-  var LIST_PAGE = 'service?name=12-jyotirlinga-darshan-puja';
+  var LIST_PAGE = '12-jyotirlinga-darshan-puja-seva';
+  /* Page addresses: /somnath-jyotirlinga, /mahamrityunjay-jaap (old ?name= links are converted) */
+  var itemSlug = window.vpsItemSlug || function (t, x) { return String(x || '').toLowerCase(); };
+  function currentSlug(type) {
+    var q = '';
+    try { q = new URLSearchParams(location.search).get('name') || ''; } catch (e) {}
+    if (q) return itemSlug(type, q);
+    var p = location.pathname.replace(/^\/+|\/+$/g, '').replace(/\.html$/i, '').toLowerCase();
+    return /^[a-z0-9-]+$/.test(p) && p !== type ? p : '';
+  }
+
 
   /* ---------- Small DOM helpers (all text is inserted as text, never as HTML) ---------- */
   function el(tag, cls, text) {
@@ -113,7 +123,7 @@
   function fillFromDefaults(c, d) {
     var known = Array.isArray(c.knownDefaults) ? c.knownDefaults : null;
     var saved = {};
-    list(c.items).forEach(function (j) { saved[str(j.slug)] = true; });
+    list(c.items).forEach(function (j) { saved[itemSlug('jyotirlinga', j.slug)] = true; });
     list(d && d.items).forEach(function (x) {
       var slug = str(x.slug);
       if (slug && !saved[slug] && (!known || known.indexOf(slug) < 0)) c.items.push(x);
@@ -137,7 +147,7 @@
     var origin = window.vpsSeoOrigin;
     var title = str(j.seoTitle) || (str(j.name) + ' Darshan & Puja Seva | ' + SITE);
     var desc = str(j.seoDescription) || str(j.heroText) || str(j.aboutText1);
-    var url = origin + '/jyotirlinga?name=' + encodeURIComponent(str(j.slug));
+    var url = origin + '/' + itemSlug('jyotirlinga', j.slug);
     var temple = { '@type': 'HinduTemple', name: str(j.name) };
     if (str(j.location)) temple.address = str(j.location);
     window.vpsPageSeo({
@@ -148,7 +158,7 @@
       breadcrumb: [
         ['Home', origin + '/'],
         ['Services', origin + '/services'],
-        ['12 Jyotirlinga Darshan & Puja Seva', origin + '/service?name=12-jyotirlinga-darshan-puja'],
+        ['12 Jyotirlinga Darshan & Puja Seva', origin + '/' + LIST_PAGE],
         [str(j.name), url]
       ],
       entity: temple,
@@ -323,8 +333,8 @@
 
   function render(data) {
     var slug = '';
-    try { slug = (new URLSearchParams(location.search).get('name') || '').toLowerCase(); } catch (e) {}
-    var j = list(data.items).filter(function (x) { return str(x.slug) === slug && x.show !== false; })[0];
+    slug = currentSlug('jyotirlinga');
+    var j = list(data.items).filter(function (x) { return slug && itemSlug('jyotirlinga', x.slug) === slug && x.show !== false; })[0];
     if (!j) return renderNotFound();
     applySeo(j);
     renderHero(j);

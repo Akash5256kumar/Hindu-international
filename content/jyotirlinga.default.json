@@ -2,7 +2,7 @@
   "items": [
     {
       "show": true,
-      "slug": "somnath",
+      "slug": "somnath-jyotirlinga",
       "name": "Somnath Jyotirlinga",
       "heroTitle": "Somnath\nJyotirlinga",
       "heroSubtitle": "The Eternal Abode of Lord Shiva",
@@ -87,7 +87,7 @@
     },
     {
       "show": true,
-      "slug": "mallikarjuna",
+      "slug": "mallikarjuna-jyotirlinga",
       "name": "Mallikarjuna Jyotirlinga",
       "heroTitle": "Mallikarjuna\nJyotirlinga",
       "heroSubtitle": "The Sacred Shrine of Lord Mallikarjuna",
@@ -172,7 +172,7 @@
     },
     {
       "show": true,
-      "slug": "mahakaleshwar",
+      "slug": "mahakaleshwar-jyotirlinga",
       "name": "Mahakaleshwar Jyotirlinga",
       "heroTitle": "Mahakaleshwar\nJyotirlinga",
       "heroSubtitle": "The Great Lord of Time",
@@ -257,7 +257,7 @@
     },
     {
       "show": true,
-      "slug": "omkareshwar",
+      "slug": "omkareshwar-jyotirlinga",
       "name": "Omkareshwar Jyotirlinga",
       "heroTitle": "Omkareshwar\nJyotirlinga",
       "heroSubtitle": "The Sacred Shrine on the Narmada",
@@ -342,7 +342,7 @@
     },
     {
       "show": true,
-      "slug": "kedarnath",
+      "slug": "kedarnath-jyotirlinga",
       "name": "Kedarnath Jyotirlinga",
       "heroTitle": "Kedarnath\nJyotirlinga",
       "heroSubtitle": "The Sacred Himalayan Shrine of Lord Shiva",
@@ -427,7 +427,7 @@
     },
     {
       "show": true,
-      "slug": "bhimashankar",
+      "slug": "bhimashankar-jyotirlinga",
       "name": "Bhimashankar Jyotirlinga",
       "heroTitle": "Bhimashankar\nJyotirlinga",
       "heroSubtitle": "The Forest Shrine of Lord Shiva",
@@ -512,7 +512,7 @@
     },
     {
       "show": true,
-      "slug": "kashi-vishwanath",
+      "slug": "kashi-vishwanath-jyotirlinga",
       "name": "Kashi Vishwanath Jyotirlinga",
       "heroTitle": "Kashi Vishwanath\nJyotirlinga",
       "heroSubtitle": "The Divine Light of Lord Shiva in Kashi",
@@ -597,7 +597,7 @@
     },
     {
       "show": true,
-      "slug": "trimbakeshwar",
+      "slug": "trimbakeshwar-jyotirlinga",
       "name": "Trimbakeshwar Jyotirlinga",
       "heroTitle": "Trimbakeshwar\nJyotirlinga",
       "heroSubtitle": "The Sacred Shrine Near the Godavari",
@@ -682,7 +682,7 @@
     },
     {
       "show": true,
-      "slug": "vaidyanath",
+      "slug": "vaidyanath-jyotirlinga",
       "name": "Vaidyanath Jyotirlinga",
       "heroTitle": "Vaidyanath\nJyotirlinga",
       "heroSubtitle": "The Divine Healer of Lord Shiva",
@@ -767,7 +767,7 @@
     },
     {
       "show": true,
-      "slug": "nageshwar",
+      "slug": "nageshwar-jyotirlinga",
       "name": "Nageshwar Jyotirlinga",
       "heroTitle": "Nageshwar\nJyotirlinga",
       "heroSubtitle": "The Serpent Lord’s Abode of Lord Shiva",
@@ -852,7 +852,7 @@
     },
     {
       "show": true,
-      "slug": "rameshwaram",
+      "slug": "rameshwaram-jyotirlinga",
       "name": "Rameshwaram Jyotirlinga",
       "heroTitle": "Rameshwaram\nJyotirlinga",
       "heroSubtitle": "The Sacred Abode of Ramanathaswamy",
@@ -937,7 +937,7 @@
     },
     {
       "show": true,
-      "slug": "grishneshwar",
+      "slug": "grishneshwar-jyotirlinga",
       "name": "Grishneshwar Jyotirlinga",
       "heroTitle": "Grishneshwar\nJyotirlinga",
       "heroSubtitle": "The Eternal Light of Lord Shiva",

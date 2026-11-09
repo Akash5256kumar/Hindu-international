@@ -42,6 +42,8 @@ final class ContentStore
     private const ABOUT_DEFAULT = CONTENT_DIR . '/about.default.json';
     /** Starting content for the How It Works page, used until the admin saves its own */
     private const HOW_DEFAULT = CONTENT_DIR . '/how.default.json';
+    /** Old service / Jyotirlinga addresses and the clean addresses they moved to */
+    private const REDIRECTS = CONTENT_DIR . '/redirects.json';
     /** Recommended page titles/descriptions; replace only empty or known old values */
     private const SEO_DEFAULT = CONTENT_DIR . '/seo.default.json';
 
@@ -61,6 +63,7 @@ final class ContentStore
         $raw = is_file(self::JSON) ? file_get_contents(self::JSON) : '';
         $data = $raw ? json_decode($raw, true) : null;
         $data = is_array($data) ? $data : [];
+        $data = self::moveItemAddresses($data);
         if (is_file(self::SERVICES_DEFAULT)) {
             $services = json_decode((string) file_get_contents(self::SERVICES_DEFAULT), true);
             if (is_array($services)) {
@@ -172,6 +175,41 @@ final class ContentStore
                 $current = trim((string) ($item[$field] ?? ''));
                 if ($current === '' || $current === trim((string) ($new[$oldKey] ?? ''))) {
                     $data['jyotirlingas']['items'][$i][$field] = $new[$field];
+                }
+            }
+        }
+        return $data;
+    }
+
+    /**
+     * Services and Jyotirlingas moved to clean addresses (e.g. pandit-booking → pandit-booking-service);
+     * content/redirects.json lists old → new. The slug is the page address, so a saved item still on
+     * its old slug takes the new one, unless another item already uses it.
+     */
+    private static function moveItemAddresses(array $data): array
+    {
+        $map = is_file(self::REDIRECTS) ? json_decode((string) file_get_contents(self::REDIRECTS), true) : null;
+        if (!is_array($map)) {
+            return $data;
+        }
+        foreach (['services' => 'service', 'jyotirlingas' => 'jyotirlinga'] as $key => $type) {
+            $items = $data[$key]['items'] ?? null;
+            $moves = is_array($map[$type] ?? null) ? $map[$type] : [];
+            if (!is_array($items) || !$moves) {
+                continue;
+            }
+            $used = [];
+            foreach ($items as $item) {
+                if (is_array($item) && isset($item['slug'])) {
+                    $used[(string) $item['slug']] = true;
+                }
+            }
+            foreach ($items as $i => $item) {
+                $slug = is_array($item) ? (string) ($item['slug'] ?? '') : '';
+                $new = $moves[$slug] ?? null;
+                if (is_string($new) && !isset($used[$new])) {
+                    $data[$key]['items'][$i]['slug'] = $new;
+                    $used[$new] = true;
                 }
             }
         }

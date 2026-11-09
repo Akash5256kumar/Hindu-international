@@ -1,0 +1,33 @@
+{
+  "_note": "Old item addresses (service?name=old) and the new clean address they moved to.",
+  "service": {
+    "pandit-booking": "pandit-booking-service",
+    "12-jyotirlinga-darshan-puja": "12-jyotirlinga-darshan-puja-seva",
+    "graha-shanti-dosh-nivaran": "graha-shanti-dosh-nivaran-puja",
+    "virtual-puja-booking": "virtual-puja-booking-service",
+    "havan-yagya-booking": "havan-yagya-booking-service",
+    "deep-daan-ganga-aarti": "deep-daan-ganga-aarti-sankalp",
+    "virtual-festival-darshan": "virtual-festival-darshan-service",
+    "temple-darshan-offerings": "temple-darshan-offerings-service",
+    "virtual-punya-snan": "virtual-punya-snan-service",
+    "online-priest-consultation": "online-priest-consultation-ritual-guidance",
+    "religious-ceremony-booking": "religious-ceremony-booking-service",
+    "puja-samagri-store": "puja-samagri-ritual-essentials-store",
+    "religious-awareness": "religious-awareness-service",
+    "pind-daan-shraddh": "pind-daan-shraddh-service"
+  },
+  "jyotirlinga": {
+    "somnath": "somnath-jyotirlinga",
+    "mallikarjuna": "mallikarjuna-jyotirlinga",
+    "mahakaleshwar": "mahakaleshwar-jyotirlinga",
+    "omkareshwar": "omkareshwar-jyotirlinga",
+    "kedarnath": "kedarnath-jyotirlinga",
+    "bhimashankar": "bhimashankar-jyotirlinga",
+    "kashi-vishwanath": "kashi-vishwanath-jyotirlinga",
+    "trimbakeshwar": "trimbakeshwar-jyotirlinga",
+    "vaidyanath": "vaidyanath-jyotirlinga",
+    "nageshwar": "nageshwar-jyotirlinga",
+    "rameshwaram": "rameshwaram-jyotirlinga",
+    "grishneshwar": "grishneshwar-jyotirlinga"
+  }
+}

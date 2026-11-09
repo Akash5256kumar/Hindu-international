@@ -1,6 +1,6 @@
 /* =====================================================================
    JAAP & PAATH PAGES — one template for every service:
-     jaap.html?name=<slug>   (e.g. jaap?name=mahamrityunjay-jaap)
+     /<slug>   (e.g. /mahamrityunjay-jaap; jaap.html?name=<slug> still works)
    Content: content/content.json → "jaapServices" (Admin → Jaap & Paath pages).
    Until the admin has saved it, content/jaap.default.json is used instead.
    Sections left empty in the admin are not shown.
@@ -12,7 +12,17 @@
 
   var safeLink = window.vpsSafeLink || function (v, f) { return f || '#'; };
   var SITE = 'Hindu.International';
-  var LIST_PAGE = 'service?name=jaap-paath-services';
+  var LIST_PAGE = 'jaap-path-anushthan';
+  /* Page addresses: /somnath-jyotirlinga, /mahamrityunjay-jaap (old ?name= links are converted) */
+  var itemSlug = window.vpsItemSlug || function (t, x) { return String(x || '').toLowerCase(); };
+  function currentSlug(type) {
+    var q = '';
+    try { q = new URLSearchParams(location.search).get('name') || ''; } catch (e) {}
+    if (q) return itemSlug(type, q);
+    var p = location.pathname.replace(/^\/+|\/+$/g, '').replace(/\.html$/i, '').toLowerCase();
+    return /^[a-z0-9-]+$/.test(p) && p !== type ? p : '';
+  }
+
 
   /* ---------- Small DOM helpers ---------- */
   function el(tag, cls, text) {
@@ -98,7 +108,7 @@
     var origin = window.vpsSeoOrigin;
     var title = str(j.seoTitle) || (str(j.name) + ' Online Booking | ' + SITE);
     var desc = str(j.seoDescription) || str(j.heroSubtitle) || str(j.jaapIntroText);
-    var url = origin + '/jaap?name=' + encodeURIComponent(str(j.slug));
+    var url = origin + '/' + itemSlug('jaap', j.slug);
     window.vpsPageSeo({
       title: title,
       description: desc,
@@ -107,7 +117,7 @@
       breadcrumb: [
         ['Home', origin + '/'],
         ['Services', origin + '/services'],
-        ['Jaap & Path Anushthan', origin + '/service?name=jaap-path-anushthan'],
+        ['Jaap & Path Anushthan', origin + '/' + LIST_PAGE],
         [str(j.name), url]
       ],
       entity: { '@type': 'Service', name: str(j.name), serviceType: 'Hindu Jaap and Paath', areaServed: 'Worldwide' },
@@ -326,8 +336,8 @@
 
   function render(data) {
     var slug = '';
-    try { slug = (new URLSearchParams(location.search).get('name') || '').toLowerCase(); } catch (e) {}
-    var j = list(data.items).filter(function (x) { return str(x.slug) === slug && x.show !== false; })[0];
+    slug = currentSlug('jaap');
+    var j = list(data.items).filter(function (x) { return slug && itemSlug('jaap', x.slug) === slug && x.show !== false; })[0];
     if (!j) return renderNotFound();
     applySeo(j);
     renderHero(j);

@@ -93,6 +93,10 @@ DirectoryIndex index.html
   # /sitemap.xml is built from the admin content by sitemap.php
   RewriteRule ^sitemap\.xml$ sitemap.php [END]
 
+  # Old service / Jyotirlinga / Jaap links (service?name=…) → their clean address (301, route.php)
+  RewriteCond %{QUERY_STRING} (?:^|&)name=[A-Za-z0-9-]+
+  RewriteRule ^(?:service|jyotirlinga|jaap)(?:\.html)?/?$ route.php [END]
+
   # Preserve the old page name while using the canonical clean URL.
   RewriteRule ^preserve-our-roots(?:\.html)?/?$ /protect-our-faith [R=301,L,NE]
 
@@ -112,4 +116,9 @@ DirectoryIndex index.html
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteCond %{DOCUMENT_ROOT}/$1.html -f
   RewriteRule ^([A-Za-z0-9-]+)/?$ $1.html [END]
+
+  # Clean addresses of services, Jyotirlingas and Jaap pages (/pandit-booking-service …) — route.php
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^([A-Za-z0-9-]+)/?$ route.php [END]
 </IfModule>

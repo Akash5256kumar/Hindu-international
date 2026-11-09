@@ -63,7 +63,7 @@ foreach ($content['services']['items'] ?? [] as $service) {
     if (!preg_match('/^[a-z0-9-]+$/', $slug)) {
         continue;
     }
-    $urls[] = [SITEMAP_ORIGIN . '/service?name=' . $slug, $contentTime];
+    $urls[] = [SITEMAP_ORIGIN . '/' . $slug, $contentTime];
 }
 
 foreach ($content['jyotirlingas']['items'] ?? [] as $temple) {
@@ -74,7 +74,7 @@ foreach ($content['jyotirlingas']['items'] ?? [] as $temple) {
     if (!preg_match('/^[a-z0-9-]+$/', $slug)) {
         continue;
     }
-    $urls[] = [SITEMAP_ORIGIN . '/jyotirlinga?name=' . $slug, $contentTime];
+    $urls[] = [SITEMAP_ORIGIN . '/' . $slug, $contentTime];
 }
 
 foreach ($content['jaapServices']['items'] ?? [] as $jaap) {
@@ -85,7 +85,7 @@ foreach ($content['jaapServices']['items'] ?? [] as $jaap) {
     if (!preg_match('/^[a-z0-9-]+$/', $slug)) {
         continue;
     }
-    $urls[] = [SITEMAP_ORIGIN . '/jaap?name=' . $slug, $contentTime];
+    $urls[] = [SITEMAP_ORIGIN . '/' . $slug, $contentTime];
 }
 
 header('Content-Type: application/xml; charset=UTF-8');

@@ -3,7 +3,7 @@
    Content: content/content.json → "services" (Admin → Services). Until the
    admin has saved it, content/services.default.json is used instead.
      services.html                  <body data-services="list">
-     service.html?name=<slug>       <body data-services="detail">
+     /<slug> e.g. /pandit-booking-service  <body data-services="detail">
    Load after js/components.js and before js/script.js.
    ===================================================================== */
 
@@ -92,9 +92,18 @@
     return d;
   }
   function list(items) { return Array.isArray(items) ? items.filter(function (x) { return x && typeof x === 'object'; }) : []; }
+  /* Page addresses: /pandit-booking-service (old service?name=… links are converted) */
+  var itemSlug = window.vpsItemSlug || function (t, x) { return String(x || '').toLowerCase(); };
+  function currentSlug(type) {
+    var q = '';
+    try { q = new URLSearchParams(location.search).get('name') || ''; } catch (e) {}
+    if (q) return itemSlug(type, q);
+    var p = location.pathname.replace(/^\/+|\/+$/g, '').replace(/\.html$/i, '').toLowerCase();
+    return /^[a-z0-9-]+$/.test(p) && p !== type ? p : '';
+  }
   function detailHref(item) {
     return item.status === 'published' && str(item.slug)
-      ? 'service?name=' + encodeURIComponent(str(item.slug))
+      ? itemSlug('service', item.slug)
       : safeLink(item.link, 'booking');
   }
 
@@ -111,8 +120,8 @@
     var known = Array.isArray(c.knownDefaults) ? c.knownDefaults : null;
     list(d && d.items).forEach(function (x) { if (str(x.slug) && !emptyDetail(x)) defaults[str(x.slug)] = x; });
     list(c.items).forEach(function (s) {
-      saved[str(s.slug)] = true;
-      var def = defaults[str(s.slug)];
+      saved[itemSlug('service', s.slug)] = true;
+      var def = defaults[itemSlug('service', s.slug)];
       if (!def || !emptyDetail(s)) return;
       Object.keys(def).forEach(function (k) { if (!CARD_KEYS[k]) s[k] = def[k]; });
     });
@@ -255,7 +264,7 @@
   function applySeo(s) {
     if (!window.vpsPageSeo) return;
     var origin = window.vpsSeoOrigin;
-    var url = origin + '/service?name=' + encodeURIComponent(str(s.slug));
+    var url = origin + '/' + itemSlug('service', s.slug);
     window.vpsPageSeo({
       title: str(s.seoTitle) || (str(s.title) + ' | ' + SITE),
       description: str(s.seoDescription) || str(s.text) || str(s.aboutText1),
@@ -624,15 +633,14 @@
   }
 
   function renderDetail(data) {
-    var slug = '';
-    try { slug = (new URLSearchParams(location.search).get('name') || '').toLowerCase(); } catch (e) {}
+    var slug = currentSlug('service');
     var items = data ? list(data.items) : [];
-    var s = items.filter(function (x) { return str(x.slug) === slug && x.show !== false; })[0];
+    var s = items.filter(function (x) { return slug && itemSlug('service', x.slug) === slug && x.show !== false; })[0];
     var fallbackImage = data && data.banner ? data.banner.image : '';
 
     /* Jaap & Paath items have their own pages (jaap.html); old links go there */
     if (s && s.design === 'jaap') {
-      location.replace('jaap?name=' + encodeURIComponent(str(s.slug)));
+      location.replace(itemSlug('jaap', s.slug));
       return;
     }
 
@@ -669,10 +677,42 @@
     }
     renderCta(s);
     linkJyotirlingaPages();
+    linkJaapPages();
   }
 
   /* A card button that still opens the contact form (the old default) opens the temple's own
      page instead once that page exists: Admin → 12 Jyotirlinga pages, matched by the card name */
+  /* Cards named like a Jaap & Paath page (Admin → Jaap & Paath pages) link to that page: the card
+     title becomes the link (same look), and a button still on its default link points there too */
+  function linkJaapPages() {
+    var cards = document.querySelectorAll('.sd-place');
+    if (!cards.length) return;
+    var key = function (name) { return str(name).toLowerCase().replace(/[^a-z]/g, '').replace(/a/g, ''); };
+    var saved = ((window.SITE_CONTENT || {}).jaapServices || {}).items;
+    var get = Array.isArray(saved) && saved.length ? Promise.resolve({ items: saved })
+      : window.fetch ? fetch('content/jaap.default.json', { cache: 'no-cache' }).then(function (r) { return r.ok ? r.json() : null; })
+      : Promise.resolve(null);
+    get.then(function (d) {
+      var pages = {};
+      list(d && d.items).forEach(function (j) {
+        if (j.show !== false && /^[a-z0-9-]+$/.test(str(j.slug)) && str(j.name)) pages[key(j.name)] = itemSlug('jaap', j.slug);
+      });
+      Array.prototype.forEach.call(cards, function (card) {
+        var h = card.querySelector('h3');
+        var slug = h && pages[key(h.textContent)];
+        if (!slug) return;
+        if (!h.querySelector('a')) {
+          var a = el('a', 'sd-place__title-link', h.textContent);
+          a.href = slug;
+          h.textContent = '';
+          h.appendChild(a);
+        }
+        var btn = card.querySelector('.sd-place__btn');
+        if (btn && /^(contact(-us)?|booking)(#|$)/.test(btn.getAttribute('href') || '')) btn.href = slug;
+      });
+    }, function () {});
+  }
+
   function linkJyotirlingaPages() {
     var buttons = Array.prototype.filter.call(document.querySelectorAll('.sd-place__btn[data-place]'), function (a) {
       return /^contact-us(#|$)/.test(a.getAttribute('href') || '');
@@ -692,7 +732,7 @@
         var info = pages[a.getAttribute('data-place').toLowerCase()];
         if (!info) return;
         /* link the button to the Jyotirlinga page */
-        a.href = 'jyotirlinga?name=' + info.slug;
+        a.href = itemSlug('jyotirlinga', info.slug);
         /* if the card has no image yet, use the hero image from the Jyotirlinga page */
         /* replace the card image with the hero image from the Jyotirlinga page */
         if (!info.hero || !/^(assets|uploads)\/[\w\-./]+$/.test(info.hero)) return;

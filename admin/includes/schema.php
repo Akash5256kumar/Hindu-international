@@ -536,7 +536,7 @@ return [
                     $showField,
                     ['key' => 'status', 'label' => 'Detail page status', 'type' => 'select', 'options' => ['draft' => 'Draft (detail page not ready yet)', 'published' => 'Published'], 'help' => 'While a service is a draft, its “View Details” button opens the link below instead of the detail page.'],
                     ['key' => 'design', 'label' => 'Detail page design', 'type' => 'select', 'options' => ['standard' => 'Standard', 'v2' => 'New (banner text + button, Why Choose in 4 columns, Who Can Use beside FAQs, rounded bottom banner)']],
-                    ['key' => 'slug', 'label' => 'Page address (slug)', 'type' => 'slug', 'max' => 80, 'required' => true, 'help' => 'Small letters, numbers and dashes, e.g. virtual-punya-snan. The page opens at /service?name=virtual-punya-snan. Must be different for every service.'],
+                    ['key' => 'slug', 'label' => 'Page address (slug)', 'type' => 'slug', 'max' => 80, 'required' => true, 'help' => 'Small letters, numbers and dashes, e.g. pandit-booking-service. This is the page’s web address: hindu.international/pandit-booking-service. Must be different for every page. Changing it changes the address, so old links stop working; keep it once Google has found the page.'],
                     $serviceIconField,
                     ['key' => 'title', 'label' => 'Service name', 'type' => 'text', 'max' => 90, 'required' => true],
                     ['key' => 'text', 'label' => 'Short description (card)', 'type' => 'textarea', 'rows' => 2, 'max' => 200],
@@ -685,11 +685,11 @@ return [
     [
         'id' => 'jyotirlinga', 'title' => '12 Jyotirlinga pages', 'icon' => 'steps',
         'groups' => [
-            ['path' => 'jyotirlingas', 'title' => 'Jyotirlinga pages', 'help' => 'Each Jyotirlinga has its own page at /jyotirlinga?name=slug (for example /jyotirlinga?name=somnath). To open it from the 12 Jyotirlinga service page, set that temple card’s button link (Services → 12 Jyotirlinga → Scrolling cards) to jyotirlinga?name=slug. Sections you leave empty are not shown. Keep the photo sizes below the same on every page.', 'fields' => [
+            ['path' => 'jyotirlingas', 'title' => 'Jyotirlinga pages', 'help' => 'Each Jyotirlinga has its own page at hindu.international/slug (for example hindu.international/somnath-jyotirlinga). The temple cards on the 12 Jyotirlinga service page open these pages by themselves (matched by name). Sections you leave empty are not shown. Keep the photo sizes below the same on every page.', 'fields' => [
                 ['key' => 'knownDefaults', 'label' => 'Default pages already seen', 'type' => 'hidden'],
                 ['key' => 'items', 'label' => 'Jyotirlingas', 'type' => 'list', 'min' => 0, 'max' => 12, 'itemLabel' => 'Jyotirlinga', 'titleField' => 'name', 'fields' => [
                     ['key' => 'show', 'label' => 'Page is live on the website', 'type' => 'toggle', 'default' => true],
-                    ['key' => 'slug', 'label' => 'Page address (slug)', 'type' => 'slug', 'max' => 60, 'required' => true, 'help' => 'Small letters and dashes, e.g. somnath. The page opens at /jyotirlinga?name=somnath.'],
+                    ['key' => 'slug', 'label' => 'Page address (slug)', 'type' => 'slug', 'max' => 60, 'required' => true, 'help' => 'Small letters and dashes, e.g. somnath-jyotirlinga. This is the page’s web address: hindu.international/somnath-jyotirlinga. Must be different for every page.'],
                     ['key' => 'name', 'label' => 'Temple name', 'type' => 'text', 'max' => 80, 'required' => true, 'help' => 'e.g. Somnath Jyotirlinga. Used in the enquiry message and to link the matching card on the 12 Jyotirlinga page.'],
 
                     ['key' => 'heroTitle', 'label' => 'Top banner — heading', 'type' => 'textarea', 'rows' => 2, 'max' => 80, 'help' => 'Press Enter to start a new line. Empty = the temple name.'],
@@ -746,11 +746,11 @@ return [
     [
         'id' => 'jaap', 'title' => 'Jaap & Paath pages', 'icon' => 'steps',
         'groups' => [
-            ['path' => 'jaapServices', 'title' => 'Jaap & Paath pages', 'help' => 'Each Jaap & Paath service has its own page at /jaap?name=slug (for example /jaap?name=mahamrityunjay-jaap). The parent "Jaap & Paath Services" card on the services listing links to each of these. Sections you leave empty are not shown.', 'fields' => [
+            ['path' => 'jaapServices', 'title' => 'Jaap & Paath pages', 'help' => 'Each Jaap & Paath service has its own page at hindu.international/slug (for example hindu.international/mahamrityunjay-jaap). The parent "Jaap & Paath Services" card on the services listing links to each of these. Sections you leave empty are not shown.', 'fields' => [
                 ['key' => 'knownDefaults', 'label' => 'Default pages already seen', 'type' => 'hidden'],
                 ['key' => 'items', 'label' => 'Jaap & Paath services', 'type' => 'list', 'min' => 0, 'max' => 20, 'itemLabel' => 'Service', 'titleField' => 'name', 'fields' => [
                     ['key' => 'show', 'label' => 'Page is live on the website', 'type' => 'toggle', 'default' => true],
-                    ['key' => 'slug', 'label' => 'Page address (slug)', 'type' => 'slug', 'max' => 60, 'required' => true, 'help' => 'Small letters and dashes, e.g. mahamrityunjay-jaap. The page opens at /jaap?name=mahamrityunjay-jaap.'],
+                    ['key' => 'slug', 'label' => 'Page address (slug)', 'type' => 'slug', 'max' => 60, 'required' => true, 'help' => 'Small letters and dashes, e.g. mahamrityunjay-jaap. This is the page’s web address: hindu.international/mahamrityunjay-jaap. Must be different for every page.'],
                     ['key' => 'name', 'label' => 'Service name', 'type' => 'text', 'max' => 100, 'required' => true, 'help' => 'e.g. Mahamrityunjay Jaap. Shown in the admin list.'],
 
                     ['key' => 'heroTitle', 'label' => 'Top banner — heading', 'type' => 'textarea', 'rows' => 2, 'max' => 100, 'help' => 'Press Enter to start a new line. Empty = the service name.'],

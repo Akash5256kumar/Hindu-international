@@ -114,9 +114,33 @@
   /* Safe link: page on this site (page, page#part, #part), https://, mailto: or tel:
      (the admin panel validates the same rule; anything else falls back) */
   var LINK_RE = /^(https?:\/\/[^\s"'<>]+|mailto:[^\s"'<>]+|tel:\+?[\d\s()-]{3,20}|#[\w-]*|\/|[\w-]+(?:\.html)?(?:\?name=[\w-]+)?(#[\w-]*)?)$/i;
+  /* Services and Jyotirlingas moved to clean addresses (same list as content/redirects.json);
+     Jaap pages kept their slugs. service?name=x / jyotirlinga?name=x / jaap?name=x → x's address. */
+  var MOVED = {
+    service: {
+      'pandit-booking': 'pandit-booking-service', '12-jyotirlinga-darshan-puja': '12-jyotirlinga-darshan-puja-seva',
+      'graha-shanti-dosh-nivaran': 'graha-shanti-dosh-nivaran-puja', 'virtual-puja-booking': 'virtual-puja-booking-service',
+      'havan-yagya-booking': 'havan-yagya-booking-service', 'deep-daan-ganga-aarti': 'deep-daan-ganga-aarti-sankalp',
+      'virtual-festival-darshan': 'virtual-festival-darshan-service', 'temple-darshan-offerings': 'temple-darshan-offerings-service',
+      'virtual-punya-snan': 'virtual-punya-snan-service', 'online-priest-consultation': 'online-priest-consultation-ritual-guidance',
+      'religious-ceremony-booking': 'religious-ceremony-booking-service', 'puja-samagri-store': 'puja-samagri-ritual-essentials-store',
+      'religious-awareness': 'religious-awareness-service', 'pind-daan-shraddh': 'pind-daan-shraddh-service'
+    },
+    jyotirlinga: {}
+  };
+  ['somnath', 'mallikarjuna', 'mahakaleshwar', 'omkareshwar', 'kedarnath', 'bhimashankar', 'kashi-vishwanath',
+    'trimbakeshwar', 'vaidyanath', 'nageshwar', 'rameshwaram', 'grishneshwar'].forEach(function (s) { MOVED.jyotirlinga[s] = s + '-jyotirlinga'; });
+  function itemSlug(type, slug) {
+    slug = String(slug || '').toLowerCase();
+    return (MOVED[type] && MOVED[type][slug]) || slug;
+  }
+  window.vpsItemSlug = itemSlug;
+
   function safeLink(value, fallback) {
     value = String(value || '').trim();
     if (!LINK_RE.test(value)) return fallback || '#';
+    var item = value.match(/^(service|jyotirlinga|jaap)(?:\.html)?\?name=([\w-]+)(#[\w-]*)?$/i);
+    if (item) return itemSlug(item[1].toLowerCase(), item[2]) + (item[3] || '');
     value = value.replace(/\.html(?=#|$)/i, '');
     value = value.replace(/^(about|contact)(?=$|[#?])/i, '$1-us');   // pages renamed to about-us and contact-us
     if (/^index(?:#|$)/i.test(value)) return '/' + value.slice(5);

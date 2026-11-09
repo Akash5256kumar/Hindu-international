@@ -96,7 +96,7 @@
     if (shown.length) {
       list.numberOfItems = shown.length;
       list.itemListElement = shown.map(function (s, i) {
-        return { '@type': 'ListItem', position: i + 1, name: s.title, url: BASE + '/service?name=' + s.slug };
+        return { '@type': 'ListItem', position: i + 1, name: s.title, url: BASE + '/' + (window.vpsItemSlug ? window.vpsItemSlug('service', s.slug) : s.slug) };
       });
     }
     inject(list);

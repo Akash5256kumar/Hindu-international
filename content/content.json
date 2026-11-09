@@ -219,7 +219,7 @@
                                                  "title":  "Snan, Jaap with Havan",
                                                  "image":  "assets/images/services/havan-yagya.jpg",
                                                  "imageAlt":  "A havan fire being offered flowers and ghee",
-                                                 "link":  "service?name=havan-yagya-booking"
+                                                 "link":  "havan-yagya-booking-service"
                                              },
                                              {
                                                  "show":  true,
@@ -227,7 +227,7 @@
                                                  "title":  "Pandit with Puja",
                                                  "image":  "assets/images/services/pandit-booking.jpg",
                                                  "imageAlt":  "A pandit reading from a holy book before a puja",
-                                                 "link":  "service?name=pandit-booking"
+                                                 "link":  "pandit-booking-service"
                                              },
                                              {
                                                  "show":  true,
@@ -235,7 +235,7 @@
                                                  "title":  "Religious Place",
                                                  "image":  "assets/images/jyotirlinga/somnath-hero.jpg",
                                                  "imageAlt":  "A sacred temple glowing in the evening light",
-                                                 "link":  "service?name=temple-darshan-offerings"
+                                                 "link":  "temple-darshan-offerings-service"
                                              },
                                              {
                                                  "show":  true,
