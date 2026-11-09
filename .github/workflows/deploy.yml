@@ -69,6 +69,13 @@ jobs:
             --exclude='/content/content.json' --exclude='/content/content.js' \
             ./ "$SSH_USER@$SSH_HOST:$DEPLOY_PATH/"
 
+      # The page files just copied carry git's SEO tags; put back the SEO saved in the admin.
+      # Never fails the deploy: if it cannot run, saving any section in the admin does the same.
+      - name: Re-apply the admin's saved SEO to the page files
+        run: |
+          $RSH "$SSH_USER@$SSH_HOST" "cd '$DEPLOY_PATH' && php admin/includes/republish-seo.php" \
+            || echo "::warning::Admin SEO was not re-applied; save any section in the admin to re-apply it."
+
       - name: Upload content (only if missing on the server)
         if: ${{ !inputs.overwrite_content }}
         run: |

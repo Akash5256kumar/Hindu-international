@@ -355,6 +355,19 @@ final class ContentStore
         return ['ok' => true, 'content' => $clean];
     }
 
+    /**
+     * Write the saved SEO (site.json, exactly as last saved in the admin) back into the page files.
+     * Used by deploy.php after git pull; changes nothing else.
+     */
+    public static function republishSeo(): void
+    {
+        $raw = is_file(self::JSON) ? (string) file_get_contents(self::JSON) : '';
+        $data = $raw !== '' ? json_decode($raw, true) : null;
+        if (is_array($data)) {
+            self::publishSeo($data);
+        }
+    }
+
     /** Rebuild content.js from content.json (used on first install) */
     public static function publish(): void
     {
