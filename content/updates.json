@@ -1,0 +1,50 @@
+{
+  "_note": "One-time content updates: a value is replaced only while it still equals \"from\" (an admin edit is never overwritten).",
+  "updates": [
+    {
+      "path": "home.heroSlides.0.title",
+      "from": "Your Faith, Your Traditions, Your *Spiritual Connection.*",
+      "to": "Online Puja & Pandit Booking, Your *Spiritual Connection.*"
+    },
+    {
+      "path": "seo.pages.home.description",
+      "from": "Book online puja services, Mahamrityunjay Jaap, Rudrabhishek, Pind Daan and Jyotirlinga Puja with experienced priests.",
+      "to": "Book online puja services, Mahamrityunjay Jaap, Rudrabhishek, Pind Daan and Jyotirlinga Puja with experienced priests, for devotees in India and abroad."
+    },
+    {
+      "path": "services.items[slug=jaap-path-anushthan].seoDescription",
+      "from": "Book Mahamrityunjay Jaap, Sundarkand Path, Durga Saptashati, Hanuman Chalisa, Rudrabhishek and other anushthans with your sankalp, with live video where available.",
+      "to": "Book Mahamrityunjay Jaap, Sundarkand Path, Durga Saptashati, Hanuman Chalisa, Rudrabhishek and more anushthans with your sankalp, live video where available."
+    },
+    {
+      "path": "services.items[slug=religious-awareness-service].seoDescription",
+      "from": "Learn about Hindu traditions, religious practices, rituals and spiritual values in a simple and accessible way.",
+      "to": "Learn about Hindu traditions, religious practices, rituals and spiritual values in a simple and accessible way, explained clearly for every family."
+    },
+    {
+      "path": "services.items[slug=12-jyotirlinga-darshan-puja-seva].seoDescription",
+      "from": "Explore the twelve Jyotirlingas of Lord Shiva and the darshan, puja and abhishek arrangements available at each temple.",
+      "to": "Explore the twelve Jyotirlingas of Lord Shiva, from Somnath to Kedarnath, and the darshan, puja and abhishek arrangements available at each temple."
+    },
+    {
+      "path": "jaapServices.items[slug=mahamrityunjay-jaap].seoDescription",
+      "from": "Arrange Mahamrityunjay Mantra Jaap by experienced priests with sankalp in your name. Receive recorded video and prasad.",
+      "to": "Arrange Mahamrityunjay Mantra Jaap by experienced priests with sankalp in your name and gotra. Receive the recorded video and prasad after the jaap."
+    },
+    {
+      "path": "jaapServices.items[slug=sundarkand-path].seoDescription",
+      "from": "Arrange Sundarkand Path recitation by experienced priests with sankalp in your name. Receive recorded video and prasad.",
+      "to": "Arrange Sundarkand Path recitation by experienced priests with sankalp in your name and gotra. Receive the recorded video and prasad after the path."
+    },
+    {
+      "path": "jaapServices.items[slug=hanuman-chalisa-path].seoDescription",
+      "from": "Arrange Hanuman Chalisa recitation by experienced priests â€” 108, 1008 or more times â€” with sankalp in your name.",
+      "to": "Arrange Hanuman Chalisa recitation by experienced priests – 108, 1008 or more times – with sankalp in your name and gotra, as you choose."
+    },
+    {
+      "path": "jaapServices.items[slug=akhand-ramayana-path].seoDescription",
+      "from": "Arrange a 24-hour uninterrupted Akhand Ramayana Path by a team of experienced priests with sankalp in your name.",
+      "to": "Arrange a 24-hour uninterrupted Akhand Ramayana Path by a team of experienced priests with sankalp in your name and gotra, for your whole family."
+    }
+  ]
+}

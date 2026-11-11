@@ -42,6 +42,8 @@ final class ContentStore
     private const ABOUT_DEFAULT = CONTENT_DIR . '/about.default.json';
     /** Starting content for the How It Works page, used until the admin saves its own */
     private const HOW_DEFAULT = CONTENT_DIR . '/how.default.json';
+    /** One-time text updates (applied only while the saved text is unchanged) */
+    private const UPDATES = CONTENT_DIR . '/updates.json';
     /** Old service / Jyotirlinga addresses and the clean addresses they moved to */
     private const REDIRECTS = CONTENT_DIR . '/redirects.json';
     /** Recommended page titles/descriptions; replace only empty or known old values */
@@ -109,7 +111,50 @@ final class ContentStore
             $saved = isset($data[$page]) && is_array($data[$page]) ? $data[$page] : [];
             $data[$page] = self::deepMerge($saved, $defaults);
         }
-        return self::applySeoDefaults($data);
+        return self::applyContentUpdates(self::applySeoDefaults($data));
+    }
+
+    /**
+     * content/updates.json: one-time text updates as {path, from, to}. A value is replaced only while it
+     * still equals "from", so anything edited in the admin is never overwritten.
+     * Path segments: object keys, list positions ("heroSlides.0") and items by slug ("items[slug=x]").
+     */
+    private static function applyContentUpdates(array $data): array
+    {
+        $file = is_file(self::UPDATES) ? json_decode((string) file_get_contents(self::UPDATES), true) : null;
+        foreach (is_array($file['updates'] ?? null) ? $file['updates'] : [] as $u) {
+            if (!is_array($u) || !is_string($u['path'] ?? null) || !is_string($u['from'] ?? null) || !is_string($u['to'] ?? null)) {
+                continue;
+            }
+            $node = &$data;
+            $found = true;
+            foreach (explode('.', $u['path']) as $part) {
+                if (preg_match('/^(\w+)\[slug=([a-z0-9-]+)\]$/', $part, $m)) {
+                    $index = null;
+                    foreach (is_array($node[$m[1]] ?? null) ? $node[$m[1]] : [] as $i => $item) {
+                        if (is_array($item) && ($item['slug'] ?? null) === $m[2]) {
+                            $index = $i;
+                            break;
+                        }
+                    }
+                    if ($index === null) {
+                        $found = false;
+                        break;
+                    }
+                    $node = &$node[$m[1]][$index];
+                } elseif (is_array($node) && array_key_exists($part, $node)) {
+                    $node = &$node[$part];
+                } else {
+                    $found = false;
+                    break;
+                }
+            }
+            if ($found && $node === $u['from']) {
+                $node = $u['to'];
+            }
+            unset($node);
+        }
+        return $data;
     }
 
     /**
