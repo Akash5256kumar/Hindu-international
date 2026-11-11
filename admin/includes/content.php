@@ -98,6 +98,7 @@ final class ContentStore
                     isset($data['jaapServices']) && is_array($data['jaapServices']) ? $data['jaapServices'] : ['items' => []],
                     $jaap
                 );
+                $data['jaapServices']['items'] = self::upgradeJaapPages($data['jaapServices']['items'] ?? [], $jaap);
             }
         }
         foreach (['home' => self::HOME_DEFAULT, 'about' => self::ABOUT_DEFAULT, 'howPage' => self::HOW_DEFAULT] as $page => $file) {
@@ -302,6 +303,35 @@ final class ContentStore
      * remembers which default pages the admin has seen, so one deleted there stays deleted.
      * Same rule as fillFromDefaults() in js/jyotirlinga.js.
      */
+    /**
+     * Jaap & Paath pages saved before the current page design (they have no "heroText" field)
+     * take their content from content/jaap.default.json; the on/off switch, address, name and
+     * SEO texts stay as saved. Pages saved after that are never touched.
+     */
+    private static function upgradeJaapPages($items, array $defaults): array
+    {
+        $bySlug = [];
+        foreach ($defaults['items'] ?? [] as $d) {
+            if (is_array($d) && !empty($d['slug'])) {
+                $bySlug[$d['slug']] = $d;
+            }
+        }
+        $out = [];
+        foreach (is_array($items) ? $items : [] as $item) {
+            if (is_array($item) && !array_key_exists('heroText', $item) && isset($bySlug[$item['slug'] ?? ''])) {
+                $new = $bySlug[$item['slug']];
+                foreach (['show', 'slug', 'name', 'seoTitle', 'seoDescription'] as $k) {
+                    if (isset($item[$k]) && $item[$k] !== '') {
+                        $new[$k] = $item[$k];
+                    }
+                }
+                $item = $new;
+            }
+            $out[] = $item;
+        }
+        return $out;
+    }
+
     private static function addNewDefaults(array $saved, array $defaults): array
     {
         $savedSlugs = [];

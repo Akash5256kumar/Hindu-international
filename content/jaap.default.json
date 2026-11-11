@@ -4,140 +4,125 @@
       "show": true,
       "slug": "mahamrityunjay-jaap",
       "name": "Mahamrityunjay Jaap",
-      "heroTitle": "Mahamrityunjay Jaap Service",
-      "heroSubtitle": "Arrange Mahamrityunjay Mantra Jaap performed by experienced priests on your behalf.",
-      "heroImage": "assets/images/services/puja-booking.jpg",
-      "heroImageAlt": "Sacred lamps and flowers arranged for a puja",
-      "heroButton": "Book This Service",
+      "heroTitle": "Mahamrityunjay\nJaap",
+      "heroSubtitle": "A Divine Chant for Health, Protection and Inner Strength",
+      "heroText": "Mahamrityunjay Jaap is a sacred Vedic chant dedicated to Lord Shiva. It is believed to bring protection from negative energies, promote good health, remove fear and bestow peace and longevity in life.",
+      "heroButton": "Book Mahamrityunjay Jaap",
       "heroLink": "booking",
+      "heroImage": "assets/images/jaap/mahamrityunjay-jaap.jpg",
+      "heroImageAlt": "Shiva Linga with Tripundra, white flowers and lit diyas",
       "jaapIntroHeading": "About Mahamrityunjay Jaap",
-      "jaapIntroText": "Mahamrityunjay Jaap is the sacred chanting of the Mahamrityunjay Mantra from the Rigveda, dedicated to Lord Shiva in his form as the conqueror of death. Performed in sets of 108, 1,008, or 1,25,000 repetitions, this jaap is believed to invoke Lord Shiva's grace for health, long life, protection, and liberation from the cycle of birth and death.\n\nOur experienced priests perform the jaap on your behalf with a proper sankalp in your name and gotra, following Vedic procedures. You receive a recorded video and prasad.",
-      "jaapMantraTitle": "The Sacred Mantra",
-      "jaapMantra": "à¥ à¤¤à¥à¤°à¥à¤¯à¤®à¥à¤¬à¤•à¤‚ à¤¯à¤œà¤¾à¤®à¤¹à¥‡\nà¤¸à¥à¤—à¤¨à¥à¤§à¤¿à¤‚ à¤ªà¥à¤·à¥à¤Ÿà¤¿à¤µà¤°à¥à¤§à¤¨à¤®à¥à¥¤\nà¤‰à¤°à¥à¤µà¤¾à¤°à¥à¤•à¤®à¤¿à¤µ à¤¬à¤¨à¥à¤§à¤¨à¤¾à¤¨à¥\nà¤®à¥ƒà¤¤à¥à¤¯à¥‹à¤°à¥à¤®à¥à¤•à¥à¤·à¥€à¤¯ à¤®à¤¾à¤½à¤®à¥ƒà¤¤à¤¾à¤¤à¥à¥¥",
-      "jaapMeaningTitle": "Meaning",
-      "jaapMeaning": "We worship the three-eyed Lord Shiva, who is fragrant and nourishes all beings. May He free us from the bondage of death, just as a ripened cucumber is freed from its vine, and grant us liberation.",
-      "jaapCol1Title": "Mantra Meaning",
-      "jaapCol1Text": "The Mahamrityunjay Mantra addresses Lord Shiva as the three-eyed one who perceives past, present and future. Chanting it with devotion is believed to create a protective shield around the devotee.",
-      "jaapCol2Title": "Why It Is Performed",
-      "jaapCol2Text": "This jaap is performed for the recovery of serious illness, protection from untimely death, relief from grief and fear, and to seek Lord Shiva's blessings for a long and healthy life.",
-      "jaapCol3Title": "Religious Significance",
-      "jaapCol3Text": "The Mahamrityunjay Mantra appears in the Rigveda (7.59.12) and is one of the most powerful Vedic mantras. It is chanted in temples, hospitals, and homes to invoke divine protection and spiritual healing.",
-      "jaapBenefitsTitle": "Spiritual Benefits",
+      "jaapIntroText": "Mahamrityunjay Jaap is one of the most revered mantras in the Vedic tradition, found in the Rigveda. It is dedicated to Lord Shiva, the destroyer of ignorance and the bestower of life, strength and wellbeing. This powerful mantra is chanted to seek divine protection, good health and spiritual upliftment. It is believed to remove fear, reduce the impact of negative energies and bring peace and stability in life.",
+      "jaapMantra": "ॐ त्र्यम्बकं यजामहे\nसुगन्धिं पुष्टिवर्धनम् ।\nउर्वारुकमिव बन्धनान्मृत्योर्मुक्षीय\nमामृतात् ॥",
+      "jaapBenefitsTitle": "Spiritual Significance & Benefits",
+      "jaapBenefitsIntro": "Mahamrityunjay Jaap holds deep spiritual significance in Hinduism. Devotees perform this jaap for:",
       "jaapBenefits": [
         {
-          "text": "Believed to promote health, recovery, and physical well-being"
+          "icon": "shield",
+          "text": "Protection from negative energies"
         },
         {
-          "text": "Invokes Lord Shiva's protection against untimely death and illness"
+          "icon": "heart",
+          "text": "Good health and well-being"
         },
-        {
-          "text": "Helps remove fear, anxiety, and grief from the devotee's mind"
-        },
-        {
-          "text": "Brings peace and positive energy to the household"
-        },
-        {
-          "text": "Considered auspicious for the long life of family members"
-        },
-        {
-          "text": "Deepens the devotee's connection with Lord Shiva"
-        }
-      ],
-      "jaapOccasionsTitle": "When Is It Performed",
-      "jaapOccasions": [
-        {
-          "text": "During serious illness or for recovery of a family member"
-        },
-        {
-          "text": "On Shivratri and other auspicious days dedicated to Lord Shiva"
-        },
-        {
-          "text": "To seek protection during difficult times or health crises"
-        },
-        {
-          "text": "For the long life and well-being of elderly parents or family members"
-        },
-        {
-          "text": "During Shravan month as a regular devotional practice"
-        },
-        {
-          "text": "As part of puja arrangements for important family ceremonies"
-        }
-      ],
-      "jaapOfferingsTitle": "Our Jaap Services",
-      "jaapOfferingsSubtitle": "Choose the jaap arrangement that suits your devotional need",
-      "jaapOfferingsBgImage": "assets/images/ritual-aarti.jpg",
-      "jaapOfferings": [
         {
           "icon": "lotus",
-          "title": "108 Jaap",
-          "text": "Single mala of 108 mantras with sankalp and aarti. Suitable for personal devotion and regular practice."
+          "text": "Mental peace and emotional balance"
         },
         {
-          "icon": "temple",
-          "title": "1,008 Jaap",
-          "text": "Ten malas for deeper benefit, performed with full ritual procedure including sankalp and flower offerings."
+          "icon": "sprout",
+          "text": "Overcoming fear and obstacles"
         },
         {
-          "icon": "flame",
-          "title": "11,000 Jaap",
-          "text": "Extended jaap performed over multiple sessions with Vedic procedures, suitable for serious occasions."
+          "icon": "sun",
+          "text": "Spiritual growth and positivity"
         },
         {
-          "icon": "namaste",
-          "title": "1,25,000 Jaap",
-          "text": "The complete Purashcharan, the highest level of jaap, performed over several days with full Vedic tradition."
+          "icon": "infinity",
+          "text": "Divine blessings for a longer and more fulfilling life"
+        }
+      ],
+      "jaapOfferingsTitle": "Our Mahamrityunjay Jaap Services",
+      "jaapOfferingsSubtitle": "We offer Mahamrityunjay Jaap with proper Vedic vidhi and sankalp, performed by experienced priests.",
+      "jaapOfferings": [
+        {
+          "icon": "user",
+          "title": "Individual Sankalp",
+          "text": "Jaap performed for you with your name and gotra."
+        },
+        {
+          "icon": "family",
+          "title": "Family Sankalp",
+          "text": "Include your family members in the sankalp."
+        },
+        {
+          "icon": "monitor",
+          "title": "Online Participation",
+          "text": "Attend the jaap virtually from anywhere in the world."
+        },
+        {
+          "icon": "calendar",
+          "title": "Booking Assistance",
+          "text": "Our team will help you with date, sankalp details and complete guidance."
         }
       ],
       "jaapBookingTitle": "Booking Process",
-      "jaapBookingSubtitle": "Simple steps to arrange your Mahamrityunjay Jaap",
+      "jaapBookingSubtitle": "Follow these simple steps to book Mahamrityunjay Jaap.",
       "jaapBookingSteps": [
         {
-          "title": "Choose Your Package",
-          "text": "Select the jaap count â€” 108, 1008, 11,000 or 1,25,000 â€” based on your occasion and devotional requirement."
+          "icon": "form",
+          "title": "Enquire",
+          "text": "Fill in the enquiry form or contact us with your requirements."
         },
         {
-          "title": "Share Your Details",
-          "text": "Provide your name, gotra, occasion, and the name of the person for whom the jaap is being performed."
+          "icon": "chat",
+          "title": "Share Details",
+          "text": "Provide your name, gotra, sankalp details and preferred date."
         },
         {
-          "title": "We Perform the Jaap",
-          "text": "Our priests perform the Mahamrityunjay Jaap on your behalf with a proper sankalp, following Vedic procedures."
+          "icon": "calendar",
+          "title": "Confirmation",
+          "text": "Our team will confirm the availability and share the details."
         },
         {
-          "title": "Receive the Recording",
-          "text": "You receive the recorded video of the complete jaap and prasad is dispatched to your address."
+          "icon": "check",
+          "title": "Jaap Performed",
+          "text": "The jaap will be performed as per Vedic traditions and your sankalp."
         }
       ],
       "jaapFaqTitle": "Frequently Asked Questions",
+      "jaapFaqIntro": "Find quick answers to common questions about Mahamrityunjay Jaap.",
       "jaapFaqs": [
         {
-          "q": "What is Mahamrityunjay Jaap?",
-          "a": "Mahamrityunjay Jaap is the sacred repetition of the Mahamrityunjay Mantra from the Rigveda, dedicated to Lord Shiva. It is performed for health, protection, and to seek Lord Shiva's blessings."
+          "q": "How long does it take to complete the jaap?",
+          "a": "The time depends on the number of recitations and the vidhi chosen for your sankalp. Our team will tell you the exact duration and date when confirming your booking."
         },
         {
-          "q": "How many times is the mantra chanted?",
-          "a": "The jaap is offered in counts of 108, 1,008, 11,000 or 1,25,000 repetitions. The count is chosen based on your occasion and requirement."
+          "q": "Can I include my family members in the sankalp?",
+          "a": "Yes. Share the names and gotra of the family members you wish to include, and the priests will take the sankalp for all of them."
         },
         {
-          "q": "Can the jaap be performed on behalf of someone else?",
-          "a": "Yes. The jaap is performed with a sankalp that includes the name and gotra of the person for whom the blessings are sought."
+          "q": "Is online participation available?",
+          "a": "Yes. Where available, you can attend the jaap virtually through a live video link from anywhere in the world. Our team will share the details with your confirmation."
         },
         {
-          "q": "Will I receive a video of the jaap?",
-          "a": "Yes. You receive a recorded video of the complete jaap so you can watch it with your family."
+          "q": "What details are needed for the booking?",
+          "a": "Your name, gotra, the names of any family members to be included, the purpose of your sankalp and your preferred date."
         },
         {
-          "q": "Can devotees outside India book this service?",
-          "a": "Yes. Devotees living outside India can book the jaap by sharing their details. Prasad can be dispatched based on available shipping arrangements."
+          "q": "Will I receive any confirmation?",
+          "a": "Yes. Our team will confirm the availability, date and all details with you before the jaap is performed."
+        },
+        {
+          "q": "Can I book the jaap for someone else?",
+          "a": "Yes. You can book it on behalf of a family member or loved one. Please share their name and gotra in the sankalp details."
         }
       ],
-      "ctaTitle": "Seek Lord Shiva's Blessings Through Sacred Chanting",
-      "ctaAccent": null,
-      "ctaText": "Arrange Mahamrityunjay Jaap performed by experienced priests on your behalf, from wherever you are.",
-      "ctaButton": "Book Mahamrityunjay Jaap",
+      "ctaTitle": "Seek the Blessings of Lord Shiva",
+      "ctaText": "Book Mahamrityunjay Jaap and invite divine protection, health and positivity into your life.",
+      "ctaButton": "Enquire About Mahamrityunjay Jaap",
       "ctaLink": "booking",
-      "ctaImage": "assets/images/faith/heritage-aarti.jpg",
+      "ctaImage": "assets/images/jaap/mahamrityunjay-jaap-cta.jpg",
       "seoTitle": "Mahamrityunjay Jaap Online Booking | Hindu.International",
       "seoDescription": "Arrange Mahamrityunjay Mantra Jaap by experienced priests with sankalp in your name and gotra. Receive the recorded video and prasad after the jaap."
     },
@@ -145,140 +130,125 @@
       "show": true,
       "slug": "sundarkand-path",
       "name": "Sundarkand Path",
-      "heroTitle": "Sundarkand Path Service",
-      "heroSubtitle": "Arrange Sundarkand Path from the Ramcharitmanas, performed by experienced priests.",
-      "heroImage": "assets/images/services/religious-awareness.jpg",
-      "heroImageAlt": "An open scripture with flowers beside it",
-      "heroButton": "Book This Service",
+      "heroTitle": "Sundarkand\nPath",
+      "heroSubtitle": "A Sacred Recitation for Strength, Devotion and Success",
+      "heroText": "Sundarkand Path is a devotional recitation of the fifth chapter of the Shri Ramcharitmanas, which describes the glory of Lord Hanuman. It is believed to remove obstacles, bring courage and confidence, and invite peace and success in life.",
+      "heroButton": "Book Sundarkand Path",
       "heroLink": "booking",
+      "heroImage": "assets/images/jaap/sundarkand-path.jpg",
+      "heroImageAlt": "Lord Hanuman idol with folded hands, garlands and lit diyas",
       "jaapIntroHeading": "About Sundarkand Path",
-      "jaapIntroText": "Sundarkand is the fifth chapter of the Ramcharitmanas composed by Goswami Tulsidas and also of the Valmiki Ramayana. It narrates the journey of Lord Hanuman to Lanka to find Mata Sita, and is considered the most sacred and powerful chapter of the Ramayana. Its recitation is believed to bring courage, peace, success, and relief from difficulties.\n\nOur priests recite the complete Sundarkand Path on your behalf with a sankalp in your name, following traditional procedures.",
-      "jaapMantraTitle": "Opening Doha",
-      "jaapMantra": "à¤œà¤¯ à¤¹à¤¨à¥à¤®à¤¾à¤¨ à¤œà¥à¤žà¤¾à¤¨ à¤—à¥à¤¨ à¤¸à¤¾à¤—à¤°à¥¤\nà¤œà¤¯ à¤•à¤ªà¥€à¤¸ à¤¤à¤¿à¤¹à¥à¤ à¤²à¥‹à¤• à¤‰à¤œà¤¾à¤—à¤°à¥¥",
-      "jaapMeaningTitle": "Meaning",
-      "jaapMeaning": "Victory to Hanuman, the ocean of wisdom and virtue. Victory to the Lord of monkeys, who illuminates the three worlds.",
-      "jaapCol1Title": "What Is Sundarkand",
-      "jaapCol1Text": "Sundarkand describes Lord Hanuman's flight to Lanka, his search for Mata Sita, his encounter with Ravana, and his return with news that brings hope to Lord Rama. It is the chapter of courage and devotion.",
-      "jaapCol2Title": "Why It Is Recited",
-      "jaapCol2Text": "The path is performed for the removal of obstacles, courage in difficult times, success in important endeavours, peace in the home, and to invoke Lord Hanuman's protection over the family.",
-      "jaapCol3Title": "Religious Significance",
-      "jaapCol3Text": "Sundarkand is considered so auspicious that its regular recitation is believed to ward off evil, remove fear, and bring the blessings of both Lord Rama and Lord Hanuman to the devotee's household.",
-      "jaapBenefitsTitle": "Spiritual Benefits",
+      "jaapIntroText": "Sundarkand is the fifth chapter of the Shri Ramcharitmanas, written by Goswami Tulsidas. It narrates Lord Hanuman’s journey to Lanka in search of Mata Sita, and celebrates his devotion, courage and wisdom. Sundarkand Path is considered highly auspicious and is performed by devotees to seek the blessings of Lord Hanuman and Lord Rama, remove difficulties and bring peace, strength and positivity in life.",
+      "jaapMantra": "अतुलितबलधामं हेमशैलाभदेहं\nदनुजवनकृशानुं ज्ञानिनामग्रगण्यम् ।\nसकलगुणनिधानं वानराणामधीशं\nरघुपतिप्रियभक्तं वातजातं नमामि ॥",
+      "jaapBenefitsTitle": "Spiritual Significance & Benefits",
+      "jaapBenefitsIntro": "Sundarkand Path holds deep spiritual significance in Hinduism. Devotees perform this path for:",
       "jaapBenefits": [
         {
-          "text": "Brings courage and strength to face difficult situations"
+          "icon": "shield",
+          "text": "Protection from negative energies"
         },
         {
-          "text": "Believed to remove obstacles from important endeavours"
-        },
-        {
-          "text": "Invokes Lord Hanuman's protection and blessings"
-        },
-        {
-          "text": "Brings peace and harmony to the household"
-        },
-        {
-          "text": "Considered especially effective for relief from fear and anxiety"
-        },
-        {
-          "text": "Deepens devotion to Lord Rama and the Ramayana tradition"
-        }
-      ],
-      "jaapOccasionsTitle": "When Is It Performed",
-      "jaapOccasions": [
-        {
-          "text": "On Hanuman Jayanti and Tuesdays and Saturdays dedicated to Lord Hanuman"
-        },
-        {
-          "text": "Before important decisions, examinations, or new beginnings"
-        },
-        {
-          "text": "During times of personal difficulty or family distress"
-        },
-        {
-          "text": "As a monthly or weekly devotional practice"
-        },
-        {
-          "text": "For the well-being and protection of children and family members"
-        },
-        {
-          "text": "During the Ramayana month and special religious observances"
-        }
-      ],
-      "jaapOfferingsTitle": "Our Path Services",
-      "jaapOfferingsSubtitle": "Choose the recitation arrangement that fits your needs",
-      "jaapOfferingsBgImage": "assets/images/ritual-aarti.jpg",
-      "jaapOfferings": [
-        {
-          "icon": "bookopen",
-          "title": "Single Path",
-          "text": "One complete recitation of Sundarkand with sankalp, performed by a pandit on your behalf."
+          "icon": "heart",
+          "text": "Strength and courage"
         },
         {
           "icon": "lotus",
-          "title": "3-Day Path",
-          "text": "Three consecutive recitations over three days for deeper benefit, with daily aarti and offerings."
+          "text": "Mental peace and confidence"
         },
         {
-          "icon": "people",
-          "title": "Samuhik Path",
-          "text": "Group recitation by multiple pandits, completing the path in a shorter time with greater collective devotion."
+          "icon": "sprout",
+          "text": "Removal of obstacles"
         },
         {
-          "icon": "namaste",
-          "title": "Monthly Path",
-          "text": "Regular monthly recitation arranged on your behalf, keeping Lord Hanuman's blessings continuous throughout the year."
+          "icon": "sun",
+          "text": "Success in new beginnings"
+        },
+        {
+          "icon": "infinity",
+          "text": "Divine blessings for a happy family life"
+        }
+      ],
+      "jaapOfferingsTitle": "Our Sundarkand Path Services",
+      "jaapOfferingsSubtitle": "We offer Sundarkand Path with proper Vedic vidhi and sankalp, performed by experienced priests.",
+      "jaapOfferings": [
+        {
+          "icon": "user",
+          "title": "Individual Sankalp",
+          "text": "Path performed for you with your name and gotra."
+        },
+        {
+          "icon": "family",
+          "title": "Family Sankalp",
+          "text": "Include your family members in the sankalp."
+        },
+        {
+          "icon": "monitor",
+          "title": "Online Participation",
+          "text": "Attend the path virtually from anywhere in the world."
+        },
+        {
+          "icon": "calendar",
+          "title": "Booking Assistance",
+          "text": "Our team will help you with date, sankalp details and complete guidance."
         }
       ],
       "jaapBookingTitle": "Booking Process",
-      "jaapBookingSubtitle": "Simple steps to arrange your Sundarkand Path",
+      "jaapBookingSubtitle": "Follow these simple steps to book Sundarkand Path.",
       "jaapBookingSteps": [
         {
-          "title": "Choose Your Service",
-          "text": "Select from single path, multi-day recitation, samuhik path, or monthly arrangements based on your requirement."
+          "icon": "form",
+          "title": "Enquire",
+          "text": "Fill in the enquiry form or contact us with your requirements."
         },
         {
-          "title": "Share Your Details",
-          "text": "Provide your name, gotra, occasion, and the purpose for which the path is being performed."
+          "icon": "chat",
+          "title": "Share Details",
+          "text": "Provide your name, gotra, sankalp details and preferred date."
         },
         {
-          "title": "We Recite the Path",
-          "text": "Our priests recite the complete Sundarkand with sankalp in your name, following traditional procedures."
+          "icon": "calendar",
+          "title": "Confirmation",
+          "text": "Our team will confirm the availability and share the details."
         },
         {
-          "title": "Receive the Recording",
-          "text": "You receive a recorded video of the path. Prasad is dispatched to your address as per arrangement."
+          "icon": "check",
+          "title": "Path Performed",
+          "text": "The Sundarkand Path will be performed as per Vedic traditions and your sankalp."
         }
       ],
       "jaapFaqTitle": "Frequently Asked Questions",
+      "jaapFaqIntro": "Find quick answers to common questions about Sundarkand Path.",
       "jaapFaqs": [
         {
-          "q": "What is Sundarkand Path?",
-          "a": "Sundarkand Path is the recitation of the fifth chapter of the Ramcharitmanas or Valmiki Ramayana, describing Lord Hanuman's journey to Lanka. It is considered highly auspicious and is believed to bring courage, peace, and relief from difficulties."
+          "q": "How long does it take to complete the path?",
+          "a": "The time depends on the number of recitations and the vidhi chosen for your sankalp. Our team will tell you the exact duration and date when confirming your booking."
         },
         {
-          "q": "How long does the recitation take?",
-          "a": "A single complete recitation of the Sundarkand generally takes two to four hours depending on the pace. Group recitations may be completed more quickly."
+          "q": "Can I include my family members in the sankalp?",
+          "a": "Yes. Share the names and gotra of the family members you wish to include, and the priests will take the sankalp for all of them."
         },
         {
-          "q": "Can the path be performed for a specific family member?",
-          "a": "Yes. The sankalp at the beginning of the path includes the name and gotra of the person for whom the blessings are sought."
+          "q": "Is online participation available?",
+          "a": "Yes. Where available, you can attend the path virtually through a live video link from anywhere in the world. Our team will share the details with your confirmation."
         },
         {
-          "q": "Will I receive a recording?",
-          "a": "Yes. A recorded video of the complete path is shared with you after the recitation."
+          "q": "What details are needed for the booking?",
+          "a": "Your name, gotra, the names of any family members to be included, the purpose of your sankalp and your preferred date."
         },
         {
-          "q": "Can I book this from outside India?",
-          "a": "Yes. Devotees living outside India can book the path by sharing their details. Prasad dispatch depends on available shipping arrangements."
+          "q": "Will I receive any confirmation?",
+          "a": "Yes. Our team will confirm the availability, date and all details with you before the path is performed."
+        },
+        {
+          "q": "Can I book the path for someone else?",
+          "a": "Yes. You can book it on behalf of a family member or loved one. Please share their name and gotra in the sankalp details."
         }
       ],
-      "ctaTitle": "Invite Lord Hanuman's Blessings Into Your Home",
-      "ctaAccent": null,
-      "ctaText": "Arrange Sundarkand Path performed by experienced priests on your behalf with full Vedic tradition.",
-      "ctaButton": "Book Sundarkand Path",
+      "ctaTitle": "Seek the Blessings of Lord Hanuman",
+      "ctaText": "Book Sundarkand Path and invite strength, success and positivity into your life.",
+      "ctaButton": "Enquire About Sundarkand Path",
       "ctaLink": "booking",
-      "ctaImage": "assets/images/faith/respect-prayer.jpg",
+      "ctaImage": "assets/images/jaap/sundarkand-path-cta.jpg",
       "seoTitle": "Sundarkand Path Online Booking | Hindu.International",
       "seoDescription": "Arrange Sundarkand Path recitation by experienced priests with sankalp in your name and gotra. Receive the recorded video and prasad after the path."
     },
@@ -286,140 +256,125 @@
       "show": true,
       "slug": "durga-saptashati-path",
       "name": "Durga Saptashati Path",
-      "heroTitle": "Durga Saptashati Path Service",
-      "heroSubtitle": "Arrange Durga Saptashati recitation performed by priests on your behalf with full tradition.",
-      "heroImage": "assets/images/services/puja-booking.jpg",
-      "heroImageAlt": "Lamps and offerings arranged for a Devi puja",
-      "heroButton": "Book This Service",
+      "heroTitle": "Durga Saptashati\nPath",
+      "heroSubtitle": "A Sacred Recitation for Divine Protection, Strength and Positive Transformation",
+      "heroText": "Durga Saptashati Path, also known as Devi Mahatmya, is a powerful recitation dedicated to Goddess Durga. It is performed to seek divine protection, remove obstacles, overcome negative energies and invite courage, prosperity and spiritual strength in life.",
+      "heroButton": "Book Durga Saptashati Path",
       "heroLink": "booking",
+      "heroImage": "assets/images/jaap/durga-saptashati-path.jpg",
+      "heroImageAlt": "Goddess Durga idol seated on a lion, adorned with flowers and lit diyas",
       "jaapIntroHeading": "About Durga Saptashati Path",
-      "jaapIntroText": "Durga Saptashati, also known as Devi Mahatmyam or Chandi Path, is a sacred text of 700 verses from the Markandeya Purana that describes the victory of Goddess Durga over the demon forces. It is one of the most important texts of Shakti worship and is recited during Navratri and other occasions dedicated to the Divine Mother.\n\nOur priests recite the complete Durga Saptashati with a sankalp in your name, following traditional procedures with all thirteen chapters.",
-      "jaapMantraTitle": "Sacred Verse",
-      "jaapMantra": "à¤¯à¤¾ à¤¦à¥‡à¤µà¥€ à¤¸à¤°à¥à¤µà¤­à¥‚à¤¤à¥‡à¤·à¥ à¤¶à¤•à¥à¤¤à¤¿à¤°à¥‚à¤ªà¥‡à¤£ à¤¸à¤‚à¤¸à¥à¤¥à¤¿à¤¤à¤¾à¥¤\nà¤¨à¤®à¤¸à¥à¤¤à¤¸à¥à¤¯à¥ˆ à¤¨à¤®à¤¸à¥à¤¤à¤¸à¥à¤¯à¥ˆ à¤¨à¤®à¤¸à¥à¤¤à¤¸à¥à¤¯à¥ˆ à¤¨à¤®à¥‹ à¤¨à¤®à¤ƒà¥¥",
-      "jaapMeaningTitle": "Meaning",
-      "jaapMeaning": "Salutations to the Goddess who resides in all beings in the form of Shakti (divine power). We bow to Her, again and again.",
-      "jaapCol1Title": "What Is Durga Saptashati",
-      "jaapCol1Text": "The Durga Saptashati consists of 700 shlokas in 13 chapters describing three episodes of Goddess Durga's victory over demonic forces â€” Madhu-Kaitabh, Mahishasura, and Shumbha-Nishumbha.",
-      "jaapCol2Title": "Why It Is Recited",
-      "jaapCol2Text": "It is performed to seek Goddess Durga's blessings for protection, strength, removal of obstacles, success, and victory over adversity. It is especially recited for the well-being of the family during difficult times.",
-      "jaapCol3Title": "Religious Significance",
-      "jaapCol3Text": "The Durga Saptashati is one of the most sacred texts in the Shakta tradition. Its recitation during Navratri is considered especially powerful. Every verse is believed to carry the energy of the Divine Mother.",
-      "jaapBenefitsTitle": "Spiritual Benefits",
+      "jaapIntroText": "Durga Saptashati Path is a significant scripture from the Markandeya Purana, consisting of 700 verses that describe the glory, power and divine deeds of Goddess Durga. It highlights the victory of good over evil and the protection of devotees. This path is performed to seek the blessings of Maa Durga for strength, courage, removal of fear and overall well-being.",
+      "jaapMantra": "या देवी सर्वभूतेषु\nशक्तिरूपेण संस्थिता ।\nनमस्तस्यै नमस्तस्यै\nनमस्तस्यै नमो नमः ॥",
+      "jaapBenefitsTitle": "Spiritual Significance & Benefits",
+      "jaapBenefitsIntro": "Durga Saptashati Path holds deep spiritual significance in Hinduism. Devotees perform this path for:",
       "jaapBenefits": [
         {
-          "text": "Invokes Goddess Durga's protection and blessings"
-        },
-        {
-          "text": "Believed to remove obstacles and negative influences"
-        },
-        {
-          "text": "Brings strength and courage during difficult times"
-        },
-        {
-          "text": "Considered auspicious for success in important endeavours"
-        },
-        {
-          "text": "Brings peace and positive energy to the home"
-        },
-        {
-          "text": "Especially beneficial during Navratri and other Devi observances"
-        }
-      ],
-      "jaapOccasionsTitle": "When Is It Performed",
-      "jaapOccasions": [
-        {
-          "text": "During Chaitra and Sharad Navratri"
-        },
-        {
-          "text": "On Fridays dedicated to Goddess Durga"
-        },
-        {
-          "text": "During times of personal difficulty or family health issues"
-        },
-        {
-          "text": "For protection and the well-being of the family"
-        },
-        {
-          "text": "On special occasions such as grihapravesh or marriage ceremonies"
-        },
-        {
-          "text": "As part of Chandi Havan and Devi puja arrangements"
-        }
-      ],
-      "jaapOfferingsTitle": "Our Path Services",
-      "jaapOfferingsSubtitle": "Arrange the recitation that fits your devotional need",
-      "jaapOfferingsBgImage": "assets/images/ritual-aarti.jpg",
-      "jaapOfferings": [
-        {
-          "icon": "bookopen",
-          "title": "Single Path",
-          "text": "Complete recitation of all 13 chapters with sankalp, performed by an experienced priest on your behalf."
-        },
-        {
-          "icon": "flame",
-          "title": "Navratri Path",
-          "text": "Nine-day recitation spread across the nine days of Navratri with daily aarti and offerings to Goddess Durga."
-        },
-        {
-          "icon": "people",
-          "title": "Samuhik Path",
-          "text": "Group recitation by multiple priests for a more complete and powerful effect, ideal for family occasions."
+          "icon": "shield",
+          "text": "Protection from negative energies"
         },
         {
           "icon": "lotus",
-          "title": "With Chandi Havan",
-          "text": "Complete path followed by a Chandi Havan, the fire ritual dedicated to Goddess Durga, for a full ritual experience."
+          "text": "Strength and courage"
+        },
+        {
+          "icon": "lotus",
+          "text": "Removal of obstacles and difficulties"
+        },
+        {
+          "icon": "sprout",
+          "text": "Mental peace and stability"
+        },
+        {
+          "icon": "sun",
+          "text": "Positive energy and growth"
+        },
+        {
+          "icon": "infinity",
+          "text": "Divine blessings for a more fulfilling life"
+        }
+      ],
+      "jaapOfferingsTitle": "Our Durga Saptashati Path Services",
+      "jaapOfferingsSubtitle": "We offer Durga Saptashati Path with proper Vedic vidhi and sankalp, performed by experienced priests.",
+      "jaapOfferings": [
+        {
+          "icon": "user",
+          "title": "Individual Sankalp",
+          "text": "Path performed for you with your name and gotra."
+        },
+        {
+          "icon": "family",
+          "title": "Family Sankalp",
+          "text": "Include your family members in the sankalp."
+        },
+        {
+          "icon": "monitor",
+          "title": "Online Participation",
+          "text": "Attend the path virtually from anywhere in the world."
+        },
+        {
+          "icon": "calendar",
+          "title": "Booking Assistance",
+          "text": "Our team will help you with date, sankalp details and complete guidance."
         }
       ],
       "jaapBookingTitle": "Booking Process",
-      "jaapBookingSubtitle": "Simple steps to arrange your Durga Saptashati Path",
+      "jaapBookingSubtitle": "Follow these simple steps to book Durga Saptashati Path.",
       "jaapBookingSteps": [
         {
-          "title": "Choose Your Service",
-          "text": "Select from single path, Navratri path, samuhik path, or path with Chandi Havan based on your requirement."
+          "icon": "form",
+          "title": "Enquire",
+          "text": "Fill in the enquiry form or contact us with your requirements."
         },
         {
-          "title": "Share Your Details",
-          "text": "Provide your name, gotra, occasion, and the specific blessings you are seeking from the Divine Mother."
+          "icon": "chat",
+          "title": "Share Details",
+          "text": "Provide your name, gotra, sankalp details and preferred date."
         },
         {
-          "title": "We Recite the Path",
-          "text": "Our priests recite all 13 chapters of the Durga Saptashati with sankalp in your name, with full devotion."
+          "icon": "calendar",
+          "title": "Confirmation",
+          "text": "Our team will confirm the availability and share the details."
         },
         {
-          "title": "Receive the Recording",
-          "text": "You receive a recorded video of the complete path. Prasad is dispatched to your address."
+          "icon": "check",
+          "title": "Path Performed",
+          "text": "The Durga Saptashati Path will be performed as per Vedic traditions and your sankalp."
         }
       ],
       "jaapFaqTitle": "Frequently Asked Questions",
+      "jaapFaqIntro": "Find quick answers to common questions about Durga Saptashati Path.",
       "jaapFaqs": [
         {
-          "q": "What is Durga Saptashati?",
-          "a": "Durga Saptashati is a sacred Hindu text of 700 verses from the Markandeya Purana, describing the victories of Goddess Durga. Its recitation is one of the most powerful forms of Devi worship."
+          "q": "How long does it take to complete the path?",
+          "a": "The time depends on the number of recitations and the vidhi chosen for your sankalp. Our team will tell you the exact duration and date when confirming your booking."
         },
         {
-          "q": "How many chapters are recited?",
-          "a": "The complete Durga Saptashati has 13 chapters. A full path includes all 13 chapters, recited in their traditional sequence."
+          "q": "Can I include my family members in the sankalp?",
+          "a": "Yes. Share the names and gotra of the family members you wish to include, and the priests will take the sankalp for all of them."
         },
         {
-          "q": "Can the path be performed during Navratri?",
-          "a": "Yes. Navratri is one of the most auspicious times for the Durga Saptashati path. We offer special Navratri path arrangements over nine days."
+          "q": "Is online participation available?",
+          "a": "Yes. Where available, you can attend the path virtually through a live video link from anywhere in the world. Our team will share the details with your confirmation."
         },
         {
-          "q": "Will I receive a video of the recitation?",
-          "a": "Yes. A recorded video of the complete path is shared with you. Prasad is also dispatched as per the selected service arrangement."
+          "q": "What details are needed for the booking?",
+          "a": "Your name, gotra, the names of any family members to be included, the purpose of your sankalp and your preferred date."
         },
         {
-          "q": "Can I book this from outside India?",
-          "a": "Yes. Devotees anywhere in the world can book this service by sharing their details. Prasad dispatch is subject to available shipping arrangements."
+          "q": "Will I receive any confirmation?",
+          "a": "Yes. Our team will confirm the availability, date and all details with you before the path is performed."
+        },
+        {
+          "q": "Can I book the path for someone else?",
+          "a": "Yes. You can book it on behalf of a family member or loved one. Please share their name and gotra in the sankalp details."
         }
       ],
-      "ctaTitle": "Seek the Divine Mother's Blessings for Your Family",
-      "ctaAccent": null,
-      "ctaText": "Arrange Durga Saptashati Path by experienced priests with full tradition and a sankalp in your name.",
-      "ctaButton": "Book Durga Saptashati Path",
+      "ctaTitle": "Seek the Blessings of Maa Durga",
+      "ctaText": "Book Durga Saptashati Path and invite divine protection, strength and positivity into your life.",
+      "ctaButton": "Enquire About Durga Saptashati Path",
       "ctaLink": "booking",
-      "ctaImage": "assets/images/flower-offerings.jpg",
+      "ctaImage": "assets/images/jaap/durga-saptashati-path-cta.jpg",
       "seoTitle": "Durga Saptashati Path Online Booking | Hindu.International",
       "seoDescription": "Arrange Durga Saptashati recitation by experienced priests with sankalp in your name for protection, strength and divine blessings."
     },
@@ -427,140 +382,125 @@
       "show": true,
       "slug": "hanuman-chalisa-path",
       "name": "Hanuman Chalisa Path",
-      "heroTitle": "Hanuman Chalisa Path Service",
-      "heroSubtitle": "Arrange Hanuman Chalisa recitation performed by experienced priests on your behalf.",
-      "heroImage": "assets/images/services/religious-ceremony.jpg",
-      "heroImageAlt": "Flowers and a diya arranged for a puja",
-      "heroButton": "Book This Service",
+      "heroTitle": "Hanuman Chalisa\nPath",
+      "heroSubtitle": "A Sacred Recitation for Strength, Courage and Protection",
+      "heroText": "Hanuman Chalisa Path is a beautiful devotional recitation dedicated to Lord Hanuman. It is believed to bring strength, protection from negative energies and peace of mind, and helps devotees overcome fear, difficulties and obstacles in life.",
+      "heroButton": "Book Hanuman Chalisa Path",
       "heroLink": "booking",
+      "heroImage": "assets/images/jaap/hanuman-chalisa-path.jpg",
+      "heroImageAlt": "Lord Hanuman idol with folded hands, garlands and lit diyas",
       "jaapIntroHeading": "About Hanuman Chalisa Path",
-      "jaapIntroText": "The Hanuman Chalisa is a devotional hymn of forty verses composed by Goswami Tulsidas in praise of Lord Hanuman. It is one of the most widely recited prayers in the Hindu tradition and is believed to invoke Lord Hanuman's protection, courage, and blessings. Its daily or special recitation is a part of millions of Hindu households.\n\nOur priests recite the Hanuman Chalisa on your behalf in multiples of 108, 1,008, or more, with a sankalp in your name and full devotion.",
-      "jaapMantraTitle": "Opening Doha",
-      "jaapMantra": "à¤¶à¥à¤°à¥€à¤—à¥à¤°à¥ à¤šà¤°à¤¨ à¤¸à¤°à¥‹à¤œ à¤°à¤œ, à¤¨à¤¿à¤œ à¤®à¤¨à¥ à¤®à¥à¤•à¥à¤°à¥ à¤¸à¥à¤§à¤¾à¤°à¤¿à¥¤\nà¤¬à¤°à¤¨à¤‰à¤ à¤°à¤˜à¥à¤¬à¤° à¤¬à¤¿à¤®à¤² à¤œà¤¸à¥, à¤œà¥‹ à¤¦à¤¾à¤¯à¤•à¥ à¤«à¤² à¤šà¤¾à¤°à¤¿à¥¥",
-      "jaapMeaningTitle": "Meaning",
-      "jaapMeaning": "Having cleansed the mirror of my mind with the dust of the Guru's lotus feet, I recite the pure glory of Shri Raghuvira, which bestows the four fruits of life.",
-      "jaapCol1Title": "What Is Hanuman Chalisa",
-      "jaapCol1Text": "The Hanuman Chalisa is a forty-verse prayer composed by Tulsidas in the 16th century. It describes Lord Hanuman's divine qualities, his devotion to Lord Rama, and his role as a protector and remover of fear.",
-      "jaapCol2Title": "Why It Is Recited",
-      "jaapCol2Text": "It is recited for courage, protection from negative forces, relief from fear and anxiety, success in difficult tasks, and to seek Lord Hanuman's blessings for the family's well-being.",
-      "jaapCol3Title": "Religious Significance",
-      "jaapCol3Text": "The Hanuman Chalisa is believed to be especially powerful when recited on Tuesdays and Saturdays. Continuous recitation â€” 108 times or more â€” is considered an act of deep devotion to Lord Hanuman.",
-      "jaapBenefitsTitle": "Spiritual Benefits",
+      "jaapIntroText": "Hanuman Chalisa Path is a revered devotional hymn composed by Goswami Tulsidas. It consists of 40 verses that describe the glory, strength, devotion and virtues of Lord Hanuman. Regular recitation of Hanuman Chalisa is believed to bring courage, remove fear, protect from negative influences and inspire positivity in life. It is widely performed by devotees seeking divine support and guidance.",
+      "jaapMantra": "श्री हनुमते नमः\nबुद्धिर्बलं यशो धैर्यं\nनिर्भयत्वमरोगता ।\nअजाड्यं वाक्पटुत्वं च\nहनुमत्स्मरणाद्भवेत् ॥",
+      "jaapBenefitsTitle": "Spiritual Significance & Benefits",
+      "jaapBenefitsIntro": "Hanuman Chalisa Path holds deep spiritual significance in Hinduism. Devotees perform this path for:",
       "jaapBenefits": [
         {
-          "text": "Invokes Lord Hanuman's protection and blessings"
+          "icon": "shield",
+          "text": "Protection from negative energies"
         },
         {
-          "text": "Believed to remove fear, anxiety, and negative influences"
-        },
-        {
-          "text": "Brings courage and mental strength to face challenges"
-        },
-        {
-          "text": "Considered especially effective for children's protection"
-        },
-        {
-          "text": "Brings peace and positive energy to the household"
-        },
-        {
-          "text": "Strengthens devotion to Lord Rama through Hanuman's example"
-        }
-      ],
-      "jaapOccasionsTitle": "When Is It Performed",
-      "jaapOccasions": [
-        {
-          "text": "On Tuesdays and Saturdays, the days dedicated to Lord Hanuman"
-        },
-        {
-          "text": "On Hanuman Jayanti and other special occasions"
-        },
-        {
-          "text": "For protection and courage during difficult periods"
-        },
-        {
-          "text": "As a regular daily or weekly devotional practice"
-        },
-        {
-          "text": "Before important events, examinations, or new beginnings"
-        },
-        {
-          "text": "For the well-being and protection of children and the family"
-        }
-      ],
-      "jaapOfferingsTitle": "Our Path Services",
-      "jaapOfferingsSubtitle": "Choose the recitation count that suits your devotion",
-      "jaapOfferingsBgImage": "assets/images/ritual-aarti.jpg",
-      "jaapOfferings": [
-        {
-          "icon": "namaste",
-          "title": "108 Times",
-          "text": "108 recitations of the Hanuman Chalisa with sankalp, performed by a priest on your behalf."
+          "icon": "heart",
+          "text": "Strength and courage"
         },
         {
           "icon": "lotus",
-          "title": "1,008 Times",
-          "text": "1,008 recitations for a more complete and intensive act of devotion, with aarti and flower offerings."
+          "text": "Mental peace and positivity"
         },
         {
-          "icon": "people",
-          "title": "Samuhik Path",
-          "text": "Group recitation by multiple priests completing 1,008 or more recitations together on an auspicious day."
+          "icon": "sprout",
+          "text": "Overcoming fear and obstacles"
         },
         {
-          "icon": "bookopen",
-          "title": "Weekly Path",
-          "text": "Regular weekly recitation arranged on your behalf every Tuesday or Saturday throughout the month."
+          "icon": "sun",
+          "text": "Confidence and self-belief"
+        },
+        {
+          "icon": "infinity",
+          "text": "Divine guidance in life’s challenges"
+        }
+      ],
+      "jaapOfferingsTitle": "Our Hanuman Chalisa Path Services",
+      "jaapOfferingsSubtitle": "We offer Hanuman Chalisa Path with proper Vedic vidhi and sankalp, performed by experienced priests.",
+      "jaapOfferings": [
+        {
+          "icon": "user",
+          "title": "Individual Sankalp",
+          "text": "Path performed for you with your name and gotra."
+        },
+        {
+          "icon": "family",
+          "title": "Family Sankalp",
+          "text": "Include your family members in the sankalp."
+        },
+        {
+          "icon": "monitor",
+          "title": "Online Participation",
+          "text": "Attend the path virtually from anywhere in the world."
+        },
+        {
+          "icon": "calendar",
+          "title": "Booking Assistance",
+          "text": "Our team will help you with date, sankalp details and complete guidance."
         }
       ],
       "jaapBookingTitle": "Booking Process",
-      "jaapBookingSubtitle": "Simple steps to arrange your Hanuman Chalisa Path",
+      "jaapBookingSubtitle": "Follow these simple steps to book Hanuman Chalisa Path.",
       "jaapBookingSteps": [
         {
-          "title": "Choose Your Service",
-          "text": "Select from 108 times, 1,008 times, samuhik path, or weekly arrangement based on your need."
+          "icon": "form",
+          "title": "Enquire",
+          "text": "Fill in the enquiry form or contact us with your requirements."
         },
         {
-          "title": "Share Your Details",
-          "text": "Provide your name, gotra, and the purpose for which the path is being performed."
+          "icon": "chat",
+          "title": "Share Details",
+          "text": "Provide your name, gotra, sankalp details and preferred date."
         },
         {
-          "title": "We Recite the Path",
-          "text": "Our priests recite the Hanuman Chalisa on your behalf with full devotion and a sankalp in your name."
+          "icon": "calendar",
+          "title": "Confirmation",
+          "text": "Our team will confirm the availability and share the details."
         },
         {
-          "title": "Receive the Recording",
-          "text": "You receive a recorded video of the recitation. Prasad is dispatched to your address."
+          "icon": "check",
+          "title": "Path Performed",
+          "text": "The Hanuman Chalisa Path will be performed as per Vedic traditions and your sankalp."
         }
       ],
       "jaapFaqTitle": "Frequently Asked Questions",
+      "jaapFaqIntro": "Find quick answers to common questions about Hanuman Chalisa Path.",
       "jaapFaqs": [
         {
-          "q": "What is the Hanuman Chalisa?",
-          "a": "The Hanuman Chalisa is a devotional hymn of 40 verses composed by Goswami Tulsidas in praise of Lord Hanuman. It is one of the most widely recited prayers in Hindu tradition."
+          "q": "How long does it take to complete the path?",
+          "a": "The time depends on the number of recitations and the vidhi chosen for your sankalp. Our team will tell you the exact duration and date when confirming your booking."
         },
         {
-          "q": "How many times will it be recited?",
-          "a": "We offer recitations in multiples of 108 or 1,008. The count is selected based on your chosen service."
+          "q": "Can I include my family members in the sankalp?",
+          "a": "Yes. Share the names and gotra of the family members you wish to include, and the priests will take the sankalp for all of them."
         },
         {
-          "q": "Can the path be performed on a specific day?",
-          "a": "Yes. Tuesdays and Saturdays are traditionally dedicated to Lord Hanuman and are considered especially auspicious for the Hanuman Chalisa path."
+          "q": "Is online participation available?",
+          "a": "Yes. Where available, you can attend the path virtually through a live video link from anywhere in the world. Our team will share the details with your confirmation."
         },
         {
-          "q": "Will I receive a recording?",
-          "a": "Yes. A recorded video of the recitation is shared with you after the path is completed."
+          "q": "What details are needed for the booking?",
+          "a": "Your name, gotra, the names of any family members to be included, the purpose of your sankalp and your preferred date."
         },
         {
-          "q": "Can I book this from outside India?",
-          "a": "Yes. Devotees anywhere in the world can book this service by sharing their details online."
+          "q": "Will I receive any confirmation?",
+          "a": "Yes. Our team will confirm the availability, date and all details with you before the path is performed."
+        },
+        {
+          "q": "Can I book the path for someone else?",
+          "a": "Yes. You can book it on behalf of a family member or loved one. Please share their name and gotra in the sankalp details."
         }
       ],
-      "ctaTitle": "Invite Lord Hanuman's Protection Into Your Life",
-      "ctaAccent": null,
-      "ctaText": "Arrange Hanuman Chalisa Path by experienced priests on your behalf, with a sankalp in your name.",
-      "ctaButton": "Book Hanuman Chalisa Path",
+      "ctaTitle": "Invoke Strength and Divine Protection",
+      "ctaText": "Book Hanuman Chalisa Path and invite courage, positivity and peace into your life.",
+      "ctaButton": "Enquire About Hanuman Chalisa Path",
       "ctaLink": "booking",
-      "ctaImage": "assets/images/faith/respect-prayer.jpg",
+      "ctaImage": "assets/images/jaap/hanuman-chalisa-path-cta.jpg",
       "seoTitle": "Hanuman Chalisa Path Online Booking | Hindu.International",
       "seoDescription": "Arrange Hanuman Chalisa recitation by experienced priests – 108, 1008 or more times – with sankalp in your name and gotra, as you choose."
     },
@@ -568,140 +508,125 @@
       "show": true,
       "slug": "rudrabhishek",
       "name": "Rudrabhishek",
-      "heroTitle": "Rudrabhishek Service",
-      "heroSubtitle": "Arrange Rudrabhishek â€” the sacred abhishek of Lord Shiva â€” performed by experienced priests.",
-      "heroImage": "assets/images/services/havan-yagya.jpg",
-      "heroImageAlt": "Sacred ritual lamps and offerings before a Shiva temple",
-      "heroButton": "Book This Service",
+      "heroTitle": "Rudrabhishek",
+      "heroSubtitle": "A Sacred Ritual for Peace, Protection and Prosperity",
+      "heroText": "Rudrabhishek is a powerful Vedic ritual dedicated to Lord Shiva. It is performed to seek divine blessings for peace, protection, good health, removal of obstacles and overall well-being in life.",
+      "heroButton": "Book Rudrabhishek",
       "heroLink": "booking",
+      "heroImage": "assets/images/jaap/rudrabhishek.jpg",
+      "heroImageAlt": "Abhishek of a Shiva Linga decorated with white flowers, with lit brass lamps",
       "jaapIntroHeading": "About Rudrabhishek",
-      "jaapIntroText": "Rudrabhishek is the sacred ritual of bathing the Shivalinga with panchamrit â€” milk, curd, honey, ghee, and sugar â€” while chanting the Rudrashtadhyayi or the Laghu Rudra from the Krishna Yajurveda. It is one of the most important forms of Lord Shiva's worship and is believed to bring immense divine grace, health, and prosperity.\n\nOur priests perform Rudrabhishek on your behalf with a proper sankalp in your name, using pure and auspicious ingredients according to Vedic tradition.",
-      "jaapMantraTitle": "Sacred Verse from the Rudri",
-      "jaapMantra": "à¤¨à¤®à¤ƒ à¤¶à¤®à¥à¤­à¤µà¤¾à¤¯ à¤š à¤®à¤¯à¥‹à¤­à¤µà¤¾à¤¯ à¤š\nà¤¨à¤®à¤ƒ à¤¶à¤™à¥à¤•à¤°à¤¾à¤¯ à¤š à¤®à¤¯à¤¸à¥à¤•à¤°à¤¾à¤¯ à¤š\nà¤¨à¤®à¤ƒ à¤¶à¤¿à¤µà¤¾à¤¯ à¤š à¤¶à¤¿à¤µà¤¤à¤°à¤¾à¤¯ à¤šà¥¥",
-      "jaapMeaningTitle": "Meaning",
-      "jaapMeaning": "Salutations to Lord Shiva who is the source of joy, the giver of bliss, the auspicious one, the bestower of happiness, the Shiva and the supremely auspicious.",
-      "jaapCol1Title": "What Is Rudrabhishek",
-      "jaapCol1Text": "Rudrabhishek is the ritual bathing of the Shivalinga with sacred substances â€” milk, curd, honey, ghee, sugar, water from holy rivers â€” while reciting the Rudrashtadhyayi, invoking Lord Shiva in his Rudra form.",
-      "jaapCol2Title": "Why It Is Performed",
-      "jaapCol2Text": "Rudrabhishek is performed for health, long life, protection of the family, removal of planetary afflictions, success in business and education, and to seek Lord Shiva's blessings in all areas of life.",
-      "jaapCol3Title": "Religious Significance",
-      "jaapCol3Text": "The Rudri recited during Rudrabhishek comes from the Krishna Yajurveda and is considered one of the most powerful Vedic texts. Each recitation of the Rudrashtadhyayi is equivalent to Laghu Rudra, and eleven such recitations constitute the Maharudra.",
-      "jaapBenefitsTitle": "Spiritual Benefits",
+      "jaapIntroText": "Rudrabhishek is a significant Vedic ritual performed in the honour of Lord Shiva. It involves the ritual bathing (abhishek) of the Shiva Linga with sacred ingredients while chanting Vedic mantras such as the Rudra Mantra and Mahamrityunjay Mantra. This ritual is believed to bring peace, protection, good health, prosperity and spiritual upliftment.",
+      "jaapMantra": "ॐ नमः शिवाय\nत्र्यम्बकं यजामहे सुगन्धिं\nपुष्टिवर्धनम् ।\nउर्वारुकमिव बन्धनान् मृत्योर्मुक्षीय\nमामृतात् ॥",
+      "jaapBenefitsTitle": "Spiritual Significance & Benefits",
+      "jaapBenefitsIntro": "Rudrabhishek holds deep spiritual significance in Hinduism. Devotees perform this ritual for:",
       "jaapBenefits": [
         {
-          "text": "Invokes Lord Shiva's direct blessings and divine grace"
+          "icon": "shield",
+          "text": "Protection from negative energies"
         },
         {
-          "text": "Believed to remove doshas and planetary afflictions"
-        },
-        {
-          "text": "Brings health, long life, and protection to the family"
-        },
-        {
-          "text": "Considered highly effective for removing obstacles in life"
-        },
-        {
-          "text": "Brings peace, prosperity, and spiritual progress"
-        },
-        {
-          "text": "Especially powerful during Shravan month and Shivratri"
-        }
-      ],
-      "jaapOccasionsTitle": "When Is It Performed",
-      "jaapOccasions": [
-        {
-          "text": "On Shivratri â€” the most auspicious night of the year for Lord Shiva"
-        },
-        {
-          "text": "During the holy month of Shravan"
-        },
-        {
-          "text": "On Mondays and Pradosh Kaal, dedicated to Lord Shiva"
-        },
-        {
-          "text": "For serious illness or health recovery of a family member"
-        },
-        {
-          "text": "To remove obstacles in marriage, career, or business"
-        },
-        {
-          "text": "On birthdays, anniversaries, and important family occasions"
-        }
-      ],
-      "jaapOfferingsTitle": "Our Rudrabhishek Services",
-      "jaapOfferingsSubtitle": "Choose the abhishek arrangement that suits your occasion",
-      "jaapOfferingsBgImage": "assets/images/ritual-aarti.jpg",
-      "jaapOfferings": [
-        {
-          "icon": "temple",
-          "title": "Laghu Rudrabhishek",
-          "text": "One complete recitation of the Rudrashtadhyayi with full panchamrit abhishek of the Shivalinga."
+          "icon": "heart",
+          "text": "Good health and well-being"
         },
         {
           "icon": "lotus",
-          "title": "Rudrabhishek with Rudri",
-          "text": "Complete Rudrabhishek with eleven recitations of the Rudrashtadhyayi â€” Laghu Rudra â€” performed by priests."
+          "text": "Mental peace and clarity"
         },
         {
-          "icon": "flame",
-          "title": "Maharudra Abhishek",
-          "text": "One hundred and twenty-one recitations of the Rudrashtadhyayi â€” the most complete form of Rudrabhishek."
+          "icon": "sprout",
+          "text": "Removal of obstacles"
         },
         {
-          "icon": "namaste",
-          "title": "With Shiva Puja & Aarti",
-          "text": "Rudrabhishek combined with complete Shiva puja, 108-name archana, and evening aarti for a full ritual experience."
+          "icon": "sun",
+          "text": "Spiritual growth and positivity"
+        },
+        {
+          "icon": "infinity",
+          "text": "Divine blessings for prosperity and happiness"
+        }
+      ],
+      "jaapOfferingsTitle": "Our Rudrabhishek Services",
+      "jaapOfferingsSubtitle": "We offer Rudrabhishek with proper Vedic vidhi and sankalp, performed by experienced priests.",
+      "jaapOfferings": [
+        {
+          "icon": "user",
+          "title": "Individual Sankalp",
+          "text": "Rudrabhishek performed for you with your name and gotra."
+        },
+        {
+          "icon": "family",
+          "title": "Family Sankalp",
+          "text": "Include your family members in the sankalp."
+        },
+        {
+          "icon": "monitor",
+          "title": "Online Participation",
+          "text": "Attend the ritual virtually from anywhere in the world."
+        },
+        {
+          "icon": "calendar",
+          "title": "Booking Assistance",
+          "text": "Our team will help you with date, sankalp details and complete guidance."
         }
       ],
       "jaapBookingTitle": "Booking Process",
-      "jaapBookingSubtitle": "Simple steps to arrange your Rudrabhishek",
+      "jaapBookingSubtitle": "Follow these simple steps to book Rudrabhishek.",
       "jaapBookingSteps": [
         {
-          "title": "Choose Your Service",
-          "text": "Select from Laghu Rudrabhishek, Laghu Rudra, Maharudra, or the full puja arrangement based on your occasion."
+          "icon": "form",
+          "title": "Enquire",
+          "text": "Fill in the enquiry form or contact us with your requirements."
         },
         {
-          "title": "Share Your Details",
-          "text": "Provide your name, gotra, occasion, and any specific prayers you wish the priest to include in the sankalp."
+          "icon": "chat",
+          "title": "Share Details",
+          "text": "Provide your name, gotra, sankalp details and preferred date."
         },
         {
-          "title": "We Perform the Abhishek",
-          "text": "Our priests perform the Rudrabhishek on your behalf with proper sankalp, mantras, and sacred ingredients."
+          "icon": "calendar",
+          "title": "Confirmation",
+          "text": "Our team will confirm the availability and share the details."
         },
         {
-          "title": "Receive the Recording",
-          "text": "You receive a recorded video of the complete abhishek and puja. Prasad is dispatched as per arrangement."
+          "icon": "check",
+          "title": "Ritual Performed",
+          "text": "The Rudrabhishek will be performed as per Vedic traditions and your sankalp."
         }
       ],
       "jaapFaqTitle": "Frequently Asked Questions",
+      "jaapFaqIntro": "Find quick answers to common questions about Rudrabhishek.",
       "jaapFaqs": [
         {
-          "q": "What is Rudrabhishek?",
-          "a": "Rudrabhishek is the ritual bathing of the Shivalinga with panchamrit while reciting the Rudrashtadhyayi from the Yajurveda. It is one of the most powerful forms of Lord Shiva's worship."
+          "q": "How long does it take to complete the ritual?",
+          "a": "The time depends on the number of recitations and the vidhi chosen for your sankalp. Our team will tell you the exact duration and date when confirming your booking."
         },
         {
-          "q": "What materials are used in the abhishek?",
-          "a": "The traditional panchamrit â€” milk, curd, honey, ghee, and sugar â€” along with Gangajal and sacred flowers are used in the abhishek, depending on the selected service."
+          "q": "Can I include my family members in the sankalp?",
+          "a": "Yes. Share the names and gotra of the family members you wish to include, and the priests will take the sankalp for all of them."
         },
         {
-          "q": "What is the difference between Laghu Rudra and Maharudra?",
-          "a": "Laghu Rudra consists of eleven recitations of the Rudrashtadhyayi. Maharudra consists of one hundred and twenty-one recitations, performed over several days and considered the most complete form."
+          "q": "Is online participation available?",
+          "a": "Yes. Where available, you can attend the ritual virtually through a live video link from anywhere in the world. Our team will share the details with your confirmation."
         },
         {
-          "q": "Will I receive a recording of the abhishek?",
-          "a": "Yes. A recorded video of the complete Rudrabhishek and puja is shared with you."
+          "q": "What details are needed for the booking?",
+          "a": "Your name, gotra, the names of any family members to be included, the purpose of your sankalp and your preferred date."
         },
         {
-          "q": "Can I book this from outside India?",
-          "a": "Yes. The Rudrabhishek can be arranged on your behalf from anywhere in the world by sharing your details."
+          "q": "Will I receive any confirmation?",
+          "a": "Yes. Our team will confirm the availability, date and all details with you before the ritual is performed."
+        },
+        {
+          "q": "Can I book the ritual for someone else?",
+          "a": "Yes. You can book it on behalf of a family member or loved one. Please share their name and gotra in the sankalp details."
         }
       ],
-      "ctaTitle": "Receive Lord Shiva's Blessings Through Sacred Abhishek",
-      "ctaAccent": null,
-      "ctaText": "Arrange Rudrabhishek performed by experienced Vedic priests at an auspicious temple, with a sankalp in your name.",
-      "ctaButton": "Book Rudrabhishek",
+      "ctaTitle": "Seek Lord Shiva’s Blessings",
+      "ctaText": "Book Rudrabhishek and invite peace, protection, prosperity and positivity into your life.",
+      "ctaButton": "Enquire About Rudrabhishek",
       "ctaLink": "booking",
-      "ctaImage": "assets/images/faith/heritage-aarti.jpg",
+      "ctaImage": "assets/images/jaap/rudrabhishek-cta.jpg",
       "seoTitle": "Rudrabhishek Puja Online Booking | Hindu.International",
       "seoDescription": "Arrange Rudrabhishek performed by experienced Vedic priests with sankalp in your name for health, protection and Lord Shiva's blessings."
     },
@@ -709,140 +634,125 @@
       "show": true,
       "slug": "vishnu-sahasranama-path",
       "name": "Vishnu Sahasranama Path",
-      "heroTitle": "Vishnu Sahasranama Path Service",
-      "heroSubtitle": "Arrange Vishnu Sahasranama recitation â€” the thousand names of Lord Vishnu â€” on your behalf.",
-      "heroImage": "assets/images/services/religious-awareness.jpg",
-      "heroImageAlt": "An open scripture with a lotus and diya",
-      "heroButton": "Book This Service",
+      "heroTitle": "Vishnu\nSahasranama Path",
+      "heroSubtitle": "A Sacred Recitation for Peace, Prosperity and Protection",
+      "heroText": "Vishnu Sahasranama Path is a revered recitation of 1,000 names of Lord Vishnu. It is performed to seek peace, prosperity, protection, good health and spiritual upliftment in life.",
+      "heroButton": "Book Vishnu Sahasranama Path",
       "heroLink": "booking",
+      "heroImage": "assets/images/jaap/vishnu-sahasranama-path.jpg",
+      "heroImageAlt": "Lord Vishnu idol with an open scripture, flowers and lit brass lamps",
       "jaapIntroHeading": "About Vishnu Sahasranama Path",
-      "jaapIntroText": "Vishnu Sahasranama is the sacred hymn of one thousand names of Lord Vishnu, found in the Anushasana Parva of the Mahabharata. Bhishma Pitamah recited these names to Yudhishthira on the banks of the Ganga before his departure. It is one of the most important daily prayers in the Vaishnava tradition and is widely recited across all Hindu communities.\n\nOur priests recite the complete Vishnu Sahasranama on your behalf with a sankalp in your name, following the traditional puja procedure.",
-      "jaapMantraTitle": "Opening Shloka",
-      "jaapMantra": "à¤µà¤¿à¤¶à¥à¤µà¤‚ à¤µà¤¿à¤·à¥à¤£à¥à¤°à¥à¤µà¤·à¤Ÿà¥à¤•à¤¾à¤°à¥‹ à¤­à¥‚à¤¤à¤­à¤µà¥à¤¯à¤­à¤µà¤¤à¥à¤ªà¥à¤°à¤­à¥à¤ƒà¥¤\nà¤­à¥‚à¤¤à¤•à¥ƒà¤¦à¥à¤­à¥‚à¤¤à¤­à¥ƒà¤¦à¥à¤­à¤¾à¤µà¥‹ à¤­à¥‚à¤¤à¤¾à¤¤à¥à¤®à¤¾ à¤­à¥‚à¤¤à¤­à¤¾à¤µà¤¨à¤ƒà¥¥",
-      "jaapMeaningTitle": "Meaning",
-      "jaapMeaning": "Lord Vishnu is the universe itself, the controller of the past, present and future, the creator and sustainer of all beings, the soul within all creatures, and the cause of all existence.",
-      "jaapCol1Title": "What Is Vishnu Sahasranama",
-      "jaapCol1Text": "The Vishnu Sahasranama contains one thousand names of Lord Vishnu, each describing a divine attribute. The text is drawn from the Mahabharata and is recited daily by millions of devotees.",
-      "jaapCol2Title": "Why It Is Recited",
-      "jaapCol2Text": "It is recited for peace of mind, removal of obstacles, success in life, protection of the family, spiritual progress, and to seek Lord Vishnu's continuous blessings and grace.",
-      "jaapCol3Title": "Religious Significance",
-      "jaapCol3Text": "Reciting the Vishnu Sahasranama is believed to be equivalent to the merit of all other forms of worship. Bhishma declared it the supreme dharma and recommended its daily recitation for all who seek liberation.",
-      "jaapBenefitsTitle": "Spiritual Benefits",
+      "jaapIntroText": "Vishnu Sahasranama Path is a sacred hymn from the Mahabharata, consisting of 1,000 names of Lord Vishnu. It highlights the infinite qualities, compassion and greatness of Lord Vishnu. The recitation is considered highly auspicious and is performed by devotees to seek peace, protection, prosperity and spiritual growth.",
+      "jaapMantra": "ॐ नमो भगवते वासुदेवाय ।\nश्रीराम राम रामेति रमे रामे मनोरमे ।\nसहस्रनाम तत्तुल्यं\nरामनाम वरानने ॥",
+      "jaapBenefitsTitle": "Spiritual Significance & Benefits",
+      "jaapBenefitsIntro": "Vishnu Sahasranama Path holds deep spiritual significance in Hinduism. Devotees perform this path for:",
       "jaapBenefits": [
         {
-          "text": "Brings peace of mind and clarity of thought"
+          "icon": "shield",
+          "text": "Inner peace and mental clarity"
         },
         {
-          "text": "Invokes Lord Vishnu's protection and continuous grace"
+          "icon": "heart",
+          "text": "Protection from negative energies"
         },
-        {
-          "text": "Believed to remove obstacles and bring success in life"
-        },
-        {
-          "text": "Promotes family harmony and positive relationships"
-        },
-        {
-          "text": "Supports spiritual progress and devotional growth"
-        },
-        {
-          "text": "Considered equivalent to all forms of worship by Bhishma Pitamah"
-        }
-      ],
-      "jaapOccasionsTitle": "When Is It Performed",
-      "jaapOccasions": [
-        {
-          "text": "On Ekadashi, the sacred day dedicated to Lord Vishnu"
-        },
-        {
-          "text": "On special occasions such as grihapravesh, marriage, or naming ceremonies"
-        },
-        {
-          "text": "During Kartik month and on Vaikuntha Ekadashi"
-        },
-        {
-          "text": "As a regular daily or weekly devotional practice"
-        },
-        {
-          "text": "For the recovery of health or during family difficulties"
-        },
-        {
-          "text": "On birthdays and anniversaries for long life and success"
-        }
-      ],
-      "jaapOfferingsTitle": "Our Path Services",
-      "jaapOfferingsSubtitle": "Choose the arrangement that suits your devotional need",
-      "jaapOfferingsBgImage": "assets/images/ritual-aarti.jpg",
-      "jaapOfferings": [
         {
           "icon": "lotus",
-          "title": "Single Path",
-          "text": "One complete recitation of the Vishnu Sahasranama with sankalp and puja performed by a priest on your behalf."
+          "text": "Prosperity and abundance"
         },
         {
-          "icon": "bookopen",
-          "title": "Weekly Path",
-          "text": "Regular weekly recitation on Ekadashi or another auspicious day, arranged on your behalf throughout the month."
+          "icon": "sprout",
+          "text": "Good health and well-being"
         },
         {
-          "icon": "people",
-          "title": "Samuhik Path",
-          "text": "Group recitation by multiple priests completing the Sahasranama multiple times in a single session."
+          "icon": "sun",
+          "text": "Spiritual growth and devotion"
         },
         {
-          "icon": "temple",
-          "title": "With Vishnu Puja",
-          "text": "Complete Sahasranama recitation followed by full Vishnu puja with 108-name archana and aarti."
+          "icon": "infinity",
+          "text": "Divine blessings for a harmonious life"
+        }
+      ],
+      "jaapOfferingsTitle": "Our Vishnu Sahasranama Path Services",
+      "jaapOfferingsSubtitle": "We offer Vishnu Sahasranama Path with proper Vedic vidhi and sankalp, performed by experienced priests.",
+      "jaapOfferings": [
+        {
+          "icon": "user",
+          "title": "Individual Sankalp",
+          "text": "Path performed for you with your name and gotra."
+        },
+        {
+          "icon": "family",
+          "title": "Family Sankalp",
+          "text": "Include your family members in the sankalp."
+        },
+        {
+          "icon": "monitor",
+          "title": "Online Participation",
+          "text": "Attend the path virtually from anywhere in the world."
+        },
+        {
+          "icon": "calendar",
+          "title": "Booking Assistance",
+          "text": "Our team will help you with date, sankalp details and complete guidance."
         }
       ],
       "jaapBookingTitle": "Booking Process",
-      "jaapBookingSubtitle": "Simple steps to arrange your Vishnu Sahasranama Path",
+      "jaapBookingSubtitle": "Follow these simple steps to book Vishnu Sahasranama Path.",
       "jaapBookingSteps": [
         {
-          "title": "Choose Your Service",
-          "text": "Select from single path, weekly recitation, samuhik path, or the path with Vishnu puja based on your occasion."
+          "icon": "form",
+          "title": "Enquire",
+          "text": "Fill in the enquiry form or contact us with your requirements."
         },
         {
-          "title": "Share Your Details",
-          "text": "Provide your name, gotra, and the purpose for which the path is being performed."
+          "icon": "chat",
+          "title": "Share Details",
+          "text": "Provide your name, gotra, sankalp details and preferred date."
         },
         {
-          "title": "We Recite the Path",
-          "text": "Our priests recite the complete Vishnu Sahasranama with sankalp in your name, with devotion and proper procedures."
+          "icon": "calendar",
+          "title": "Confirmation",
+          "text": "Our team will confirm the availability and share the details."
         },
         {
-          "title": "Receive the Recording",
-          "text": "You receive a recorded video of the path. Prasad is dispatched to your address as per arrangement."
+          "icon": "check",
+          "title": "Path Performed",
+          "text": "The Vishnu Sahasranama Path will be performed as per Vedic traditions and your sankalp."
         }
       ],
       "jaapFaqTitle": "Frequently Asked Questions",
+      "jaapFaqIntro": "Find quick answers to common questions about Vishnu Sahasranama Path.",
       "jaapFaqs": [
         {
-          "q": "What is the Vishnu Sahasranama?",
-          "a": "The Vishnu Sahasranama is a hymn of one thousand names of Lord Vishnu from the Mahabharata. Bhishma Pitamah recited these names as the supreme dharma for devotees seeking peace, success, and liberation."
+          "q": "How long does it take to complete the path?",
+          "a": "The time depends on the number of recitations and the vidhi chosen for your sankalp. Our team will tell you the exact duration and date when confirming your booking."
         },
         {
-          "q": "How long does the recitation take?",
-          "a": "A single recitation of the Vishnu Sahasranama takes approximately 30 to 45 minutes when performed in the traditional manner with slokas."
+          "q": "Can I include my family members in the sankalp?",
+          "a": "Yes. Share the names and gotra of the family members you wish to include, and the priests will take the sankalp for all of them."
         },
         {
-          "q": "Can the path be performed on Ekadashi?",
-          "a": "Yes. Ekadashi, the eleventh day of the lunar fortnight, is considered the most auspicious day for Lord Vishnu. We arrange recitations on Ekadashi upon request."
+          "q": "Is online participation available?",
+          "a": "Yes. Where available, you can attend the path virtually through a live video link from anywhere in the world. Our team will share the details with your confirmation."
         },
         {
-          "q": "Will I receive a recording?",
-          "a": "Yes. A recorded video of the complete recitation is shared with you after the path is completed."
+          "q": "What details are needed for the booking?",
+          "a": "Your name, gotra, the names of any family members to be included, the purpose of your sankalp and your preferred date."
         },
         {
-          "q": "Can I book this from outside India?",
-          "a": "Yes. Devotees from anywhere in the world can book this service by sharing their details."
+          "q": "Will I receive any confirmation?",
+          "a": "Yes. Our team will confirm the availability, date and all details with you before the path is performed."
+        },
+        {
+          "q": "Can I book the path for someone else?",
+          "a": "Yes. You can book it on behalf of a family member or loved one. Please share their name and gotra in the sankalp details."
         }
       ],
-      "ctaTitle": "Seek Lord Vishnu's Blessings Through His Thousand Names",
-      "ctaAccent": null,
-      "ctaText": "Arrange Vishnu Sahasranama recitation by experienced priests with a sankalp in your name.",
-      "ctaButton": "Book Vishnu Sahasranama Path",
+      "ctaTitle": "Invite Peace and Prosperity into Your Life",
+      "ctaText": "Book Vishnu Sahasranama Path and seek the divine blessings of Lord Vishnu for a happier and more fulfilling life.",
+      "ctaButton": "Enquire About Vishnu Sahasranama Path",
       "ctaLink": "booking",
-      "ctaImage": "assets/images/flower-offerings.jpg",
+      "ctaImage": "assets/images/jaap/vishnu-sahasranama-path-cta.jpg",
       "seoTitle": "Vishnu Sahasranama Path Online Booking | Hindu.International",
       "seoDescription": "Arrange Vishnu Sahasranama recitation by experienced priests with sankalp in your name for peace, protection and Lord Vishnu's blessings."
     },
@@ -850,140 +760,125 @@
       "show": true,
       "slug": "bhagavad-gita-path",
       "name": "Bhagavad Gita Path",
-      "heroTitle": "Bhagavad Gita Path Service",
-      "heroSubtitle": "Arrange Bhagavad Gita recitation â€” the divine song of Lord Krishna â€” performed by priests on your behalf.",
-      "heroImage": "assets/images/services/religious-awareness.jpg",
-      "heroImageAlt": "An open scripture with a lotus and diya beside it",
-      "heroButton": "Book This Service",
+      "heroTitle": "Bhagavad Gita\nPath",
+      "heroSubtitle": "A Sacred Recitation for Wisdom, Clarity and a Better Life",
+      "heroText": "Bhagavad Gita Path is a sacred recitation of the 18 chapters of the Bhagavad Gita. It is performed to seek divine guidance, mental peace, clarity in life and strength to face challenges with a positive mind.",
+      "heroButton": "Book Bhagavad Gita Path",
       "heroLink": "booking",
+      "heroImage": "assets/images/jaap/bhagavad-gita-path.jpg",
+      "heroImageAlt": "Bhagavad Gita book with a lit diya, peacock feather and flowers",
       "jaapIntroHeading": "About Bhagavad Gita Path",
-      "jaapIntroText": "The Bhagavad Gita is the sacred conversation between Lord Krishna and Arjuna on the battlefield of Kurukshetra. It contains 700 shlokas across 18 chapters covering the path of duty, devotion, knowledge, and liberation. The Gita is considered the essence of all Vedic wisdom and is one of the most widely read scriptures in the world.\n\nOur priests recite the complete Bhagavad Gita on your behalf with a sankalp in your name, following the traditional procedure with reverence and devotion.",
-      "jaapMantraTitle": "Sacred Verse",
-      "jaapMantra": "à¤¯à¤¦à¤¾ à¤¯à¤¦à¤¾ à¤¹à¤¿ à¤§à¤°à¥à¤®à¤¸à¥à¤¯ à¤—à¥à¤²à¤¾à¤¨à¤¿à¤°à¥à¤­à¤µà¤¤à¤¿ à¤­à¤¾à¤°à¤¤à¥¤\nà¤…à¤­à¥à¤¯à¥à¤¤à¥à¤¥à¤¾à¤¨à¤®à¤§à¤°à¥à¤®à¤¸à¥à¤¯ à¤¤à¤¦à¤¾à¤¤à¥à¤®à¤¾à¤¨à¤‚ à¤¸à¥ƒà¤œà¤¾à¤®à¥à¤¯à¤¹à¤®à¥à¥¥",
-      "jaapMeaningTitle": "Meaning",
-      "jaapMeaning": "Whenever righteousness declines and unrighteousness rises, O Bharata, I manifest Myself. To protect the good, to destroy the wicked, and to re-establish dharma, I take birth in every age.",
-      "jaapCol1Title": "What Is the Bhagavad Gita",
-      "jaapCol1Text": "The Bhagavad Gita contains the teachings of Lord Krishna to Arjuna, covering the nature of the self, the paths of knowledge, devotion, and action, and the ultimate goal of human life â€” liberation.",
-      "jaapCol2Title": "Why It Is Recited",
-      "jaapCol2Text": "The Gita path is performed to gain wisdom and clarity, for the peace of departed souls, to bring positivity and divine guidance to the household, and as a mark of devotion to Lord Krishna.",
-      "jaapCol3Title": "Religious Significance",
-      "jaapCol3Text": "The Bhagavad Gita is considered a living scripture â€” the direct words of Lord Krishna himself. Its recitation is considered a form of direct seva (service) to the Lord and brings immense spiritual merit.",
-      "jaapBenefitsTitle": "Spiritual Benefits",
+      "jaapIntroText": "Bhagavad Gita Path is a revered scripture from the Mahabharata, consisting of 18 chapters and 700 verses. It teaches the values of duty, devotion, self-discipline and righteous living. The recitation of Bhagavad Gita is considered highly auspicious and is performed by devotees to seek wisdom, inner peace, clarity in life and divine guidance.",
+      "jaapMantra": "कर्मण्येवाधिकारस्ते\nमा फलेषु कदाचन ।\nमा कर्मफलहेतुर्भूः\nमा ते सङ्गोऽस्त्वकर्मणि ॥",
+      "jaapBenefitsTitle": "Spiritual Significance & Benefits",
+      "jaapBenefitsIntro": "Bhagavad Gita Path holds deep spiritual significance in Hinduism. Devotees perform this path for:",
       "jaapBenefits": [
         {
-          "text": "Brings wisdom, clarity, and right direction in life"
+          "icon": "lotus",
+          "text": "Mental peace and clarity"
         },
         {
-          "text": "Invokes Lord Krishna's guidance and blessings"
+          "icon": "shield",
+          "text": "Guidance in difficult situations"
         },
         {
-          "text": "Considered auspicious for the peace of departed souls"
+          "icon": "sprout",
+          "text": "Strength and positive thinking"
         },
         {
-          "text": "Brings positive energy and spiritual strength to the home"
+          "icon": "sun",
+          "text": "Self-discipline and righteous living"
         },
         {
-          "text": "Helps the devotee understand the path of dharma"
+          "icon": "family",
+          "text": "Spiritual growth and devotion"
         },
         {
-          "text": "Supports mental peace and reduction of anxiety"
+          "icon": "infinity",
+          "text": "Divine blessings for a better life"
         }
       ],
-      "jaapOccasionsTitle": "When Is It Performed",
-      "jaapOccasions": [
-        {
-          "text": "On Gita Jayanti â€” the birth anniversary of the Bhagavad Gita"
-        },
-        {
-          "text": "For the peace of departed souls â€” Shraddh and memorial ceremonies"
-        },
-        {
-          "text": "During Kartik month and on Ekadashi"
-        },
-        {
-          "text": "As a regular weekly or monthly devotional practice"
-        },
-        {
-          "text": "On important family occasions and new beginnings"
-        },
-        {
-          "text": "For personal guidance during times of difficulty or confusion"
-        }
-      ],
-      "jaapOfferingsTitle": "Our Path Services",
-      "jaapOfferingsSubtitle": "Choose the Gita recitation that fits your occasion",
-      "jaapOfferingsBgImage": "assets/images/ritual-aarti.jpg",
+      "jaapOfferingsTitle": "Our Bhagavad Gita Path Services",
+      "jaapOfferingsSubtitle": "We offer Bhagavad Gita Path with proper Vedic vidhi and sankalp, performed by experienced priests.",
       "jaapOfferings": [
         {
-          "icon": "bookopen",
-          "title": "Complete Gita Path",
-          "text": "All 18 chapters of the Bhagavad Gita recited with sankalp, performed by an experienced priest on your behalf."
+          "icon": "user",
+          "title": "Individual Sankalp",
+          "text": "Path performed for you with your name and gotra."
         },
         {
-          "icon": "lotus",
-          "title": "Selected Chapters",
-          "text": "Recitation of specific chapters â€” such as Chapter 15 (Purushottam Yoga) or Chapter 12 (Bhakti Yoga) â€” as per your need."
+          "icon": "family",
+          "title": "Family Sankalp",
+          "text": "Include your family members in the sankalp."
         },
         {
-          "icon": "people",
-          "title": "Samuhik Path",
-          "text": "Group recitation by multiple priests completing the Gita together, ideal for memorial ceremonies and family occasions."
+          "icon": "monitor",
+          "title": "Online Participation",
+          "text": "Attend the path virtually from anywhere in the world."
         },
         {
-          "icon": "temple",
-          "title": "With Krishna Puja",
-          "text": "Complete Gita path combined with a full Krishna puja and aarti for a deeper devotional experience."
+          "icon": "calendar",
+          "title": "Booking Assistance",
+          "text": "Our team will help you with date, sankalp details and complete guidance."
         }
       ],
       "jaapBookingTitle": "Booking Process",
-      "jaapBookingSubtitle": "Simple steps to arrange your Bhagavad Gita Path",
+      "jaapBookingSubtitle": "Follow these simple steps to book Bhagavad Gita Path.",
       "jaapBookingSteps": [
         {
-          "title": "Choose Your Service",
-          "text": "Select from complete path, selected chapters, samuhik path, or path with Krishna puja based on your requirement."
+          "icon": "form",
+          "title": "Enquire",
+          "text": "Fill in the enquiry form or contact us with your requirements."
         },
         {
-          "title": "Share Your Details",
-          "text": "Provide your name, gotra, occasion, and the chapter or purpose for which the path is being performed."
+          "icon": "chat",
+          "title": "Share Details",
+          "text": "Provide your name, gotra, sankalp details and preferred date."
         },
         {
-          "title": "We Recite the Path",
-          "text": "Our priests recite the Bhagavad Gita with sankalp in your name, with full devotion and traditional procedures."
+          "icon": "calendar",
+          "title": "Confirmation",
+          "text": "Our team will confirm the availability and share the details."
         },
         {
-          "title": "Receive the Recording",
-          "text": "You receive a recorded video of the path. Prasad is dispatched to your address as per arrangement."
+          "icon": "check",
+          "title": "Path Performed",
+          "text": "The Bhagavad Gita Path will be performed as per Vedic traditions and your sankalp."
         }
       ],
       "jaapFaqTitle": "Frequently Asked Questions",
+      "jaapFaqIntro": "Find quick answers to common questions about Bhagavad Gita Path.",
       "jaapFaqs": [
         {
-          "q": "What is the Bhagavad Gita Path?",
-          "a": "The Bhagavad Gita Path is the recitation of Lord Krishna's teachings to Arjuna â€” all 700 shlokas across 18 chapters. It is considered one of the most sacred acts of devotion to Lord Krishna."
+          "q": "How long does it take to complete the path?",
+          "a": "The time depends on the number of recitations and the vidhi chosen for your sankalp. Our team will tell you the exact duration and date when confirming your booking."
         },
         {
-          "q": "How long does the complete recitation take?",
-          "a": "A complete recitation of the Bhagavad Gita takes approximately three to four hours when performed in the traditional manner."
+          "q": "Can I include my family members in the sankalp?",
+          "a": "Yes. Share the names and gotra of the family members you wish to include, and the priests will take the sankalp for all of them."
         },
         {
-          "q": "Can I request specific chapters to be recited?",
-          "a": "Yes. We can arrange for specific chapters â€” such as Chapter 15 for health and protection, or Chapter 12 on bhakti â€” based on your requirement."
+          "q": "Is online participation available?",
+          "a": "Yes. Where available, you can attend the path virtually through a live video link from anywhere in the world. Our team will share the details with your confirmation."
         },
         {
-          "q": "Is the Gita path appropriate for memorial ceremonies?",
-          "a": "Yes. The Bhagavad Gita path is considered very auspicious for the peace of departed souls and is commonly performed during Shraddh and memorial ceremonies."
+          "q": "What details are needed for the booking?",
+          "a": "Your name, gotra, the names of any family members to be included, the purpose of your sankalp and your preferred date."
         },
         {
-          "q": "Can I book this from outside India?",
-          "a": "Yes. Devotees from anywhere in the world can book this service by sharing their details."
+          "q": "Will I receive any confirmation?",
+          "a": "Yes. Our team will confirm the availability, date and all details with you before the path is performed."
+        },
+        {
+          "q": "Can I book the path for someone else?",
+          "a": "Yes. You can book it on behalf of a family member or loved one. Please share their name and gotra in the sankalp details."
         }
       ],
-      "ctaTitle": "Bring Lord Krishna's Wisdom Into Your Home",
-      "ctaAccent": null,
-      "ctaText": "Arrange Bhagavad Gita Path by experienced priests with a sankalp in your name and devotion to Lord Krishna.",
-      "ctaButton": "Book Bhagavad Gita Path",
+      "ctaTitle": "Let the Wisdom of Bhagavad Gita Guide Your Life",
+      "ctaText": "Book Bhagavad Gita Path and invite peace, clarity and positive energy into your life.",
+      "ctaButton": "Enquire About Bhagavad Gita Path",
       "ctaLink": "booking",
-      "ctaImage": "assets/images/faith/respect-prayer.jpg",
+      "ctaImage": "assets/images/jaap/bhagavad-gita-path-cta.jpg",
       "seoTitle": "Bhagavad Gita Path Online Booking | Hindu.International",
       "seoDescription": "Arrange Bhagavad Gita recitation by experienced priests with sankalp in your name for wisdom, peace, and Lord Krishna's blessings."
     },
@@ -991,140 +886,125 @@
       "show": true,
       "slug": "gayatri-mantra-jaap",
       "name": "Gayatri Mantra Jaap",
-      "heroTitle": "Gayatri Mantra Jaap Service",
-      "heroSubtitle": "Arrange Gayatri Mantra Jaap â€” the mother of the Vedas â€” performed by Vedic priests on your behalf.",
-      "heroImage": "assets/images/services/puja-booking.jpg",
-      "heroImageAlt": "Sacred fire and lamps arranged for a ritual",
-      "heroButton": "Book This Service",
+      "heroTitle": "Gayatri Mantra\nJaap",
+      "heroSubtitle": "A Sacred Chant for Positive Energy, Mental Peace and Spiritual Growth",
+      "heroText": "Gayatri Mantra Jaap is a powerful Vedic chant dedicated to Goddess Gayatri. It is believed to remove negative energies, improve concentration, bring mental peace and illuminate the path of wisdom in life.",
+      "heroButton": "Book Gayatri Mantra Jaap",
       "heroLink": "booking",
+      "heroImage": "assets/images/jaap/gayatri-mantra-jaap.jpg",
+      "heroImageAlt": "Gayatri Mantra book with lit diyas and marigolds beside a river at sunset",
       "jaapIntroHeading": "About Gayatri Mantra Jaap",
-      "jaapIntroText": "The Gayatri Mantra is the most sacred mantra of the Vedic tradition, appearing in the Rigveda (3.62.10). Known as the mother of the Vedas, it is addressed to Savitar â€” the divine sun â€” and invokes divine intelligence to illuminate the mind. The mantra is considered the essence of all Vedic wisdom and has been chanted by seekers for thousands of years.\n\nOur Vedic priests perform the Gayatri Mantra Jaap on your behalf in complete sandhya puja procedure, with the sankalp in your name.",
-      "jaapMantraTitle": "The Sacred Mantra",
-      "jaapMantra": "à¥ à¤­à¥‚à¤°à¥à¤­à¥à¤µà¤ƒ à¤¸à¥à¤µà¤ƒ\nà¤¤à¤¤à¥à¤¸à¤µà¤¿à¤¤à¥à¤°à¥à¤µà¤°à¥‡à¤£à¥à¤¯à¤‚\nà¤­à¤°à¥à¤—à¥‹ à¤¦à¥‡à¤µà¤¸à¥à¤¯ à¤§à¥€à¤®à¤¹à¤¿\nà¤§à¤¿à¤¯à¥‹ à¤¯à¥‹ à¤¨à¤ƒ à¤ªà¥à¤°à¤šà¥‹à¤¦à¤¯à¤¾à¤¤à¥à¥¥",
-      "jaapMeaningTitle": "Meaning",
-      "jaapMeaning": "We meditate on the glorious effulgence of the divine Savitar (Sun God), who pervades the three worlds â€” earth, atmosphere, and heaven. May He illuminate and guide our intellect.",
-      "jaapCol1Title": "What Is the Gayatri Mantra",
-      "jaapCol1Text": "The Gayatri Mantra is a 24-syllable Vedic mantra from the Rigveda, dedicated to the solar deity Savitar. It is traditionally recited at dawn, noon, and dusk in the Sandhya Vandanam ritual.",
-      "jaapCol2Title": "Why It Is Recited",
-      "jaapCol2Text": "Gayatri Mantra Jaap is performed for mental clarity, intelligence, academic success, spiritual progress, and to invite divine light into one's mind and life. It is especially recommended for students and seekers.",
-      "jaapCol3Title": "Religious Significance",
-      "jaapCol3Text": "The Gayatri Mantra is considered the most powerful of all Vedic mantras. Adi Shankaracharya and many sages have described its daily recitation as the highest duty of a Hindu devotee. It is the mantra of all mantras.",
-      "jaapBenefitsTitle": "Spiritual Benefits",
+      "jaapIntroText": "Gayatri Mantra Jaap is a revered Vedic chant from the Rigveda. It is dedicated to Goddess Gayatri, the symbol of wisdom and divine light. Regular recitation of the Gayatri Mantra is believed to purify the mind, enhance concentration, bring peace, positivity and spiritual growth, and remove obstacles from life.",
+      "jaapMantra": "ॐ भूर्भुवः स्वः\nतत्सवितुर्वरेण्यं\nभर्गो देवस्य धीमहि ।\nधियो यो नः प्रचोदयात् ॥",
+      "jaapBenefitsTitle": "Spiritual Significance & Benefits",
+      "jaapBenefitsIntro": "Gayatri Mantra Jaap holds deep spiritual significance in Hinduism. Devotees perform this jaap for:",
       "jaapBenefits": [
         {
-          "text": "Invokes divine light and intelligence into the mind"
+          "icon": "lotus",
+          "text": "Mental peace and clarity"
         },
         {
-          "text": "Considered beneficial for academic success and mental clarity"
+          "icon": "shield",
+          "text": "Removal of negative energies"
         },
         {
-          "text": "Brings spiritual progress and purification of the mind"
+          "icon": "sprout",
+          "text": "Improved concentration"
         },
         {
-          "text": "Removes negative thoughts and promotes positive thinking"
+          "icon": "sun",
+          "text": "Spiritual growth and wisdom"
         },
         {
-          "text": "Invokes the blessings of the divine sun for health and vitality"
+          "icon": "family",
+          "text": "Positive energy and well-being"
         },
         {
-          "text": "Considered the supreme mantra for all-round well-being"
+          "icon": "infinity",
+          "text": "Divine guidance in life’s journey"
         }
       ],
-      "jaapOccasionsTitle": "When Is It Performed",
-      "jaapOccasions": [
-        {
-          "text": "At sunrise, noon, and sunset â€” the traditional Sandhya times"
-        },
-        {
-          "text": "For students before examinations and important academic events"
-        },
-        {
-          "text": "During Gayatri Jayanti â€” the birth anniversary of the Gayatri Mantra"
-        },
-        {
-          "text": "As part of regular daily or weekly devotional practice"
-        },
-        {
-          "text": "For new beginnings â€” new home, new business, or important decisions"
-        },
-        {
-          "text": "During the sacred thread ceremony (Upanayana) and related rituals"
-        }
-      ],
-      "jaapOfferingsTitle": "Our Jaap Services",
-      "jaapOfferingsSubtitle": "Choose the jaap count that suits your devotional need",
-      "jaapOfferingsBgImage": "assets/images/ritual-aarti.jpg",
+      "jaapOfferingsTitle": "Our Gayatri Mantra Jaap Services",
+      "jaapOfferingsSubtitle": "We offer Gayatri Mantra Jaap with proper Vedic vidhi and sankalp, performed by experienced priests.",
       "jaapOfferings": [
         {
-          "icon": "flame",
-          "title": "1,008 Jaap",
-          "text": "1,008 repetitions of the Gayatri Mantra with sankalp and proper Sandhya procedure, at sunrise."
+          "icon": "user",
+          "title": "Individual Sankalp",
+          "text": "Jaap performed for you with your name and gotra."
         },
         {
-          "icon": "lotus",
-          "title": "10,000 Jaap",
-          "text": "10,000 repetitions over multiple sessions, considered a deeper act of devotion to the divine Gayatri."
+          "icon": "family",
+          "title": "Family Sankalp",
+          "text": "Include your family members in the sankalp."
         },
         {
-          "icon": "temple",
-          "title": "1,25,000 Jaap",
-          "text": "The complete Purashcharan of the Gayatri Mantra, the highest level of jaap in the Vedic tradition."
+          "icon": "monitor",
+          "title": "Online Participation",
+          "text": "Attend the jaap virtually from anywhere in the world."
         },
         {
-          "icon": "namaste",
-          "title": "With Gayatri Havan",
-          "text": "Jaap combined with a Gayatri Havan â€” the sacred fire ritual â€” for a complete and highly auspicious ceremony."
+          "icon": "calendar",
+          "title": "Booking Assistance",
+          "text": "Our team will help you with date, sankalp details and complete guidance."
         }
       ],
       "jaapBookingTitle": "Booking Process",
-      "jaapBookingSubtitle": "Simple steps to arrange your Gayatri Mantra Jaap",
+      "jaapBookingSubtitle": "Follow these simple steps to book Gayatri Mantra Jaap.",
       "jaapBookingSteps": [
         {
-          "title": "Choose Your Package",
-          "text": "Select from 1,008, 10,000, or 1,25,000 repetitions, with or without the Gayatri Havan."
+          "icon": "form",
+          "title": "Enquire",
+          "text": "Fill in the enquiry form or contact us with your requirements."
         },
         {
-          "title": "Share Your Details",
-          "text": "Provide your name, gotra, and the purpose for which the jaap is being performed."
+          "icon": "chat",
+          "title": "Share Details",
+          "text": "Provide your name, gotra, sankalp details and preferred date."
         },
         {
-          "title": "We Perform the Jaap",
-          "text": "Our Vedic priests recite the Gayatri Mantra on your behalf with sankalp, at the traditional Sandhya time."
+          "icon": "calendar",
+          "title": "Confirmation",
+          "text": "Our team will confirm the availability and share the details."
         },
         {
-          "title": "Receive the Recording",
-          "text": "You receive a recorded video of the complete jaap. Prasad is dispatched as per arrangement."
+          "icon": "check",
+          "title": "Jaap Performed",
+          "text": "The Gayatri Mantra Jaap will be performed as per Vedic traditions and your sankalp."
         }
       ],
       "jaapFaqTitle": "Frequently Asked Questions",
+      "jaapFaqIntro": "Find quick answers to common questions about Gayatri Mantra Jaap.",
       "jaapFaqs": [
         {
-          "q": "What is the Gayatri Mantra?",
-          "a": "The Gayatri Mantra is a 24-syllable Vedic mantra from the Rigveda, dedicated to the divine solar deity Savitar. It is considered the mother of the Vedas and the most powerful of all Vedic mantras."
+          "q": "How long does it take to complete the jaap?",
+          "a": "The time depends on the number of recitations and the vidhi chosen for your sankalp. Our team will tell you the exact duration and date when confirming your booking."
         },
         {
-          "q": "How many times will the mantra be chanted?",
-          "a": "We offer jaap in counts of 1,008, 10,000, and 1,25,000 repetitions. The complete Purashcharan is 1,25,000 repetitions."
+          "q": "Can I include my family members in the sankalp?",
+          "a": "Yes. Share the names and gotra of the family members you wish to include, and the priests will take the sankalp for all of them."
         },
         {
-          "q": "At what time is the jaap performed?",
-          "a": "The Gayatri Mantra is traditionally recited at sunrise, noon, and sunset. We perform the jaap at sunrise (Pratah Sandhya) for maximum benefit."
+          "q": "Is online participation available?",
+          "a": "Yes. Where available, you can attend the jaap virtually through a live video link from anywhere in the world. Our team will share the details with your confirmation."
         },
         {
-          "q": "Will I receive a recording?",
-          "a": "Yes. A recorded video of the complete jaap is shared with you after completion."
+          "q": "What details are needed for the booking?",
+          "a": "Your name, gotra, the names of any family members to be included, the purpose of your sankalp and your preferred date."
         },
         {
-          "q": "Can I book this from outside India?",
-          "a": "Yes. Devotees anywhere in the world can book this service. Prasad dispatch is subject to available shipping arrangements."
+          "q": "Will I receive any confirmation?",
+          "a": "Yes. Our team will confirm the availability, date and all details with you before the jaap is performed."
+        },
+        {
+          "q": "Can I book the jaap for someone else?",
+          "a": "Yes. You can book it on behalf of a family member or loved one. Please share their name and gotra in the sankalp details."
         }
       ],
-      "ctaTitle": "Invite Divine Light Into Your Mind and Life",
-      "ctaAccent": null,
-      "ctaText": "Arrange Gayatri Mantra Jaap by experienced Vedic priests with a sankalp in your name.",
-      "ctaButton": "Book Gayatri Mantra Jaap",
+      "ctaTitle": "Invoke Divine Light and Positive Energy",
+      "ctaText": "Book Gayatri Mantra Jaap and invite peace, wisdom and positivity into your life.",
+      "ctaButton": "Enquire About Gayatri Mantra Jaap",
       "ctaLink": "booking",
-      "ctaImage": "assets/images/faith/heritage-aarti.jpg",
+      "ctaImage": "assets/images/jaap/gayatri-mantra-jaap-cta.jpg",
       "seoTitle": "Gayatri Mantra Jaap Online Booking | Hindu.International",
       "seoDescription": "Arrange Gayatri Mantra Jaap by experienced Vedic priests with sankalp in your name for mental clarity, spiritual progress and divine blessings."
     },
@@ -1132,140 +1012,125 @@
       "show": true,
       "slug": "navarna-mantra-jaap",
       "name": "Navarna Mantra Jaap",
-      "heroTitle": "Navarna Mantra Jaap Service",
-      "heroSubtitle": "Arrange Navarna Mantra Jaap â€” the nine-syllable mantra of Goddess Durga â€” performed by priests.",
-      "heroImage": "assets/images/services/puja-booking.jpg",
-      "heroImageAlt": "Devi puja offerings â€” flowers and a sacred lamp",
-      "heroButton": "Book This Service",
+      "heroTitle": "Navarna\nMantra Jaap",
+      "heroSubtitle": "A Powerful Chant for Divine Protection, Strength and Well-being",
+      "heroText": "Navarna Mantra Jaap is a sacred Vedic chant dedicated to Goddess Durga. It is believed to remove negative energies, provide protection, enhance inner strength and bring peace, health and prosperity in life.",
+      "heroButton": "Book Navarna Mantra Jaap",
       "heroLink": "booking",
+      "heroImage": "assets/images/jaap/navarna-mantra-jaap.jpg",
+      "heroImageAlt": "Goddess Durga idol with red flowers and lit brass diyas",
       "jaapIntroHeading": "About Navarna Mantra Jaap",
-      "jaapIntroText": "The Navarna Mantra â€” à¥ à¤à¤‚ à¤¹à¥à¤°à¥€à¤‚ à¤•à¥à¤²à¥€à¤‚ à¤šà¤¾à¤®à¥à¤£à¥à¤¡à¤¾à¤¯à¥ˆ à¤µà¤¿à¤šà¥à¤šà¥‡ â€” is the nine-syllable (nava-akshara) mantra of Goddess Chamunda Durga. It is the seed mantra (beej mantra) of the Durga Saptashati and is considered the most potent mantra of Goddess Durga worship. Its regular repetition is believed to awaken the divine Shakti within the devotee.\n\nOur priests perform the Navarna Mantra Jaap on your behalf in prescribed counts, with a sankalp in your name and a traditional Devi puja.",
-      "jaapMantraTitle": "The Sacred Navarna Mantra",
-      "jaapMantra": "à¥ à¤à¤‚ à¤¹à¥à¤°à¥€à¤‚ à¤•à¥à¤²à¥€à¤‚\nà¤šà¤¾à¤®à¥à¤£à¥à¤¡à¤¾à¤¯à¥ˆ à¤µà¤¿à¤šà¥à¤šà¥‡",
-      "jaapMeaningTitle": "Meaning",
-      "jaapMeaning": "We invoke the Supreme Goddess Chamunda â€” the combined form of Chanda and Munda â€” through the seed syllables Aim (Saraswati), Hrim (Lakshmi), and Klim (Kali). May She bestow her grace upon us.",
-      "jaapCol1Title": "What Is the Navarna Mantra",
-      "jaapCol1Text": "The Navarna Mantra consists of nine syllables and three beej (seed) mantras â€” Aim, Hrim, and Klim â€” representing Goddess Saraswati, Lakshmi, and Kali in their combined form as Chamunda Durga.",
-      "jaapCol2Title": "Why It Is Recited",
-      "jaapCol2Text": "It is performed for divine protection, removal of fear and negativity, invoking Goddess Durga's fierce grace, and for success, courage, and the destruction of obstacles in the devotee's life.",
-      "jaapCol3Title": "Religious Significance",
-      "jaapCol3Text": "The Navarna Mantra is the heart of the Durga Saptashati and is recited at the beginning and end of the path. It combines the energies of the three primary goddesses â€” knowledge, wealth, and power â€” into a single mantra.",
-      "jaapBenefitsTitle": "Spiritual Benefits",
+      "jaapIntroText": "Navarna Mantra Jaap is a highly revered chant from the Markandeya Purana. It is dedicated to Goddess Durga and consists of nine powerful seed syllables. Regular recitation of the Navarna Mantra is believed to remove fears, destroy negative energies, provide protection and bring strength, confidence and positivity in life.",
+      "jaapMantra": "ॐ ऐं ह्रीं क्लीं\nचामुण्डायै विच्चे ॥",
+      "jaapBenefitsTitle": "Spiritual Significance & Benefits",
+      "jaapBenefitsIntro": "Navarna Mantra Jaap holds deep spiritual significance in Hinduism. Devotees perform this jaap for:",
       "jaapBenefits": [
         {
-          "text": "Invokes Goddess Durga's fierce protection and divine grace"
+          "icon": "shield",
+          "text": "Protection from negative energies"
         },
         {
-          "text": "Believed to remove deep-rooted obstacles and negative influences"
-        },
-        {
-          "text": "Awakens the inner divine Shakti in the devotee"
-        },
-        {
-          "text": "Brings courage, fearlessness, and mental strength"
-        },
-        {
-          "text": "Considered especially powerful during Navratri"
-        },
-        {
-          "text": "Combines the blessings of Saraswati, Lakshmi, and Kali simultaneously"
-        }
-      ],
-      "jaapOccasionsTitle": "When Is It Performed",
-      "jaapOccasions": [
-        {
-          "text": "During Navratri â€” both Chaitra and Sharad Navratri"
-        },
-        {
-          "text": "On Fridays and Ashtami dedicated to Goddess Durga"
-        },
-        {
-          "text": "For protection during serious illness or difficult times"
-        },
-        {
-          "text": "Before or alongside the Durga Saptashati path"
-        },
-        {
-          "text": "As part of Chandi Havan and Devi puja arrangements"
-        },
-        {
-          "text": "For removal of obstacles in marriage, business, or career"
-        }
-      ],
-      "jaapOfferingsTitle": "Our Jaap Services",
-      "jaapOfferingsSubtitle": "Choose the jaap count that suits your devotional need",
-      "jaapOfferingsBgImage": "assets/images/ritual-aarti.jpg",
-      "jaapOfferings": [
-        {
-          "icon": "flame",
-          "title": "1,008 Jaap",
-          "text": "1,008 repetitions of the Navarna Mantra with sankalp and Devi puja performed on your behalf."
+          "icon": "heart",
+          "text": "Strength and courage"
         },
         {
           "icon": "lotus",
-          "title": "11,000 Jaap",
-          "text": "11,000 repetitions over multiple sessions, considered highly powerful for the removal of obstacles."
+          "text": "Mental peace and positive mindset"
         },
         {
-          "icon": "temple",
-          "title": "1,25,000 Jaap",
-          "text": "The complete Purashcharan of the Navarna Mantra â€” the highest level of Devi mantra sadhana."
+          "icon": "sprout",
+          "text": "Removal of obstacles"
         },
         {
-          "icon": "namaste",
-          "title": "With Chandi Havan",
-          "text": "Navarna Jaap combined with a Chandi Havan for the most complete form of Goddess Durga worship."
+          "icon": "sun",
+          "text": "Spiritual growth and devotion"
+        },
+        {
+          "icon": "infinity",
+          "text": "Divine blessings for a happy and prosperous life"
+        }
+      ],
+      "jaapOfferingsTitle": "Our Navarna Mantra Jaap Services",
+      "jaapOfferingsSubtitle": "We offer Navarna Mantra Jaap with proper Vedic vidhi and sankalp, performed by experienced priests.",
+      "jaapOfferings": [
+        {
+          "icon": "user",
+          "title": "Individual Sankalp",
+          "text": "Jaap performed for you with your name and gotra."
+        },
+        {
+          "icon": "family",
+          "title": "Family Sankalp",
+          "text": "Include your family members in the sankalp."
+        },
+        {
+          "icon": "monitor",
+          "title": "Online Participation",
+          "text": "Attend the jaap virtually from anywhere in the world."
+        },
+        {
+          "icon": "calendar",
+          "title": "Booking Assistance",
+          "text": "Our team will help you with date, sankalp details and complete guidance."
         }
       ],
       "jaapBookingTitle": "Booking Process",
-      "jaapBookingSubtitle": "Simple steps to arrange your Navarna Mantra Jaap",
+      "jaapBookingSubtitle": "Follow these simple steps to book Navarna Mantra Jaap.",
       "jaapBookingSteps": [
         {
-          "title": "Choose Your Package",
-          "text": "Select from 1,008, 11,000, or 1,25,000 repetitions, with or without the Chandi Havan."
+          "icon": "form",
+          "title": "Enquire",
+          "text": "Fill in the enquiry form or contact us with your requirements."
         },
         {
-          "title": "Share Your Details",
-          "text": "Provide your name, gotra, occasion, and the specific blessings you are seeking from the Divine Mother."
+          "icon": "chat",
+          "title": "Share Details",
+          "text": "Provide your name, gotra, sankalp details and preferred date."
         },
         {
-          "title": "We Perform the Jaap",
-          "text": "Our priests perform the Navarna Mantra Jaap on your behalf with sankalp, devotion, and proper Devi puja procedures."
+          "icon": "calendar",
+          "title": "Confirmation",
+          "text": "Our team will confirm the availability and share the details."
         },
         {
-          "title": "Receive the Recording",
-          "text": "You receive a recorded video of the complete jaap. Prasad is dispatched as per arrangement."
+          "icon": "check",
+          "title": "Jaap Performed",
+          "text": "The Navarna Mantra Jaap will be performed as per Vedic traditions and your sankalp."
         }
       ],
       "jaapFaqTitle": "Frequently Asked Questions",
+      "jaapFaqIntro": "Find quick answers to common questions about Navarna Mantra Jaap.",
       "jaapFaqs": [
         {
-          "q": "What is the Navarna Mantra?",
-          "a": "The Navarna Mantra is the nine-syllable beej mantra of Goddess Chamunda Durga, consisting of the seed syllables Aim, Hrim, and Klim. It is the heart mantra of the Durga Saptashati."
+          "q": "How long does it take to complete the jaap?",
+          "a": "The time depends on the number of recitations and the vidhi chosen for your sankalp. Our team will tell you the exact duration and date when confirming your booking."
         },
         {
-          "q": "How is it different from the Durga Saptashati path?",
-          "a": "While the Durga Saptashati is a complete textual recitation of 700 verses, the Navarna Mantra Jaap is the concentrated repetition of the core seed mantra â€” the essence of the Saptashati â€” in a prescribed count."
+          "q": "Can I include my family members in the sankalp?",
+          "a": "Yes. Share the names and gotra of the family members you wish to include, and the priests will take the sankalp for all of them."
         },
         {
-          "q": "How many times will the mantra be chanted?",
-          "a": "We offer jaap in counts of 1,008, 11,000, and 1,25,000 repetitions. The complete Purashcharan is 1,25,000 repetitions."
+          "q": "Is online participation available?",
+          "a": "Yes. Where available, you can attend the jaap virtually through a live video link from anywhere in the world. Our team will share the details with your confirmation."
         },
         {
-          "q": "Will I receive a recording?",
-          "a": "Yes. A recorded video of the complete jaap is shared with you after completion."
+          "q": "What details are needed for the booking?",
+          "a": "Your name, gotra, the names of any family members to be included, the purpose of your sankalp and your preferred date."
         },
         {
-          "q": "Can I book this from outside India?",
-          "a": "Yes. Devotees anywhere in the world can book this service by sharing their details."
+          "q": "Will I receive any confirmation?",
+          "a": "Yes. Our team will confirm the availability, date and all details with you before the jaap is performed."
+        },
+        {
+          "q": "Can I book the jaap for someone else?",
+          "a": "Yes. You can book it on behalf of a family member or loved one. Please share their name and gotra in the sankalp details."
         }
       ],
-      "ctaTitle": "Invoke the Divine Mother's Grace Through Sacred Chanting",
-      "ctaAccent": null,
-      "ctaText": "Arrange Navarna Mantra Jaap by experienced priests with a sankalp in your name and devotion to Goddess Durga.",
-      "ctaButton": "Book Navarna Mantra Jaap",
+      "ctaTitle": "Invoke the Divine Protection of Goddess Durga",
+      "ctaText": "Book Navarna Mantra Jaap and invite strength, protection and positivity into your life.",
+      "ctaButton": "Enquire About Navarna Mantra Jaap",
       "ctaLink": "booking",
-      "ctaImage": "assets/images/flower-offerings.jpg",
+      "ctaImage": "assets/images/jaap/navarna-mantra-jaap-cta.jpg",
       "seoTitle": "Navarna Mantra Jaap Online Booking | Hindu.International",
       "seoDescription": "Arrange Navarna Mantra Jaap by experienced priests with sankalp in your name to invoke Goddess Durga's protection and divine blessings."
     },
@@ -1273,140 +1138,125 @@
       "show": true,
       "slug": "akhand-ramayana-path",
       "name": "Akhand Ramayana Path",
-      "heroTitle": "Akhand Ramayana Path Service",
-      "heroSubtitle": "Arrange an uninterrupted recitation of the complete Ramcharitmanas on your behalf.",
-      "heroImage": "assets/images/services/religious-awareness.jpg",
-      "heroImageAlt": "An open scripture with a diya and flowers",
-      "heroButton": "Book This Service",
+      "heroTitle": "Akhand\nRamayana Path",
+      "heroSubtitle": "A Continuous Recitation for Devotion, Strength and a Blessed Life",
+      "heroText": "Akhand Ramayana Path is a continuous recitation of the Shri Ramcharitmanas, performed without interruption. It is believed to remove obstacles, bring peace, prosperity and divine blessings, and create a positive and harmonious environment in life.",
+      "heroButton": "Book Akhand Ramayana Path",
       "heroLink": "booking",
+      "heroImage": "assets/images/jaap/akhand-ramayana-path.jpg",
+      "heroImageAlt": "Idols of Lord Rama, Mata Sita and Lakshman with the Ramcharitmanas and lit diyas",
       "jaapIntroHeading": "About Akhand Ramayana Path",
-      "jaapIntroText": "Akhand Ramayana Path is the continuous, uninterrupted recitation of the complete Ramcharitmanas composed by Goswami Tulsidas. The word 'Akhand' means unbroken â€” the recitation continues without pause, day and night, until all seven Kandas (chapters) are complete, typically taking 24 hours. It is considered one of the highest acts of devotion to Lord Rama.\n\nOur team of priests performs the Akhand Ramayana Path in shifts to maintain continuous recitation, with a sankalp in your name.",
-      "jaapMantraTitle": "Mangalacharan",
-      "jaapMantra": "à¤µà¤°à¥à¤£à¤¾à¤¨à¤¾à¤®à¤°à¥à¤¥à¤¸à¤‚à¤˜à¤¾à¤¨à¤¾à¤‚ à¤°à¤¸à¤¾à¤¨à¤¾à¤‚ à¤›à¤¨à¥à¤¦à¤¸à¤¾à¤®à¤ªà¤¿à¥¤\nà¤®à¤™à¥à¤—à¤²à¤¾à¤¨à¤¾à¤‚ à¤š à¤•à¤°à¥à¤¤à¤¾à¤°à¥Œ à¤µà¤¨à¥à¤¦à¥‡ à¤µà¤¾à¤£à¥€à¤µà¤¿à¤¨à¤¾à¤¯à¤•à¥Œà¥¥",
-      "jaapMeaningTitle": "Meaning",
-      "jaapMeaning": "I bow to the divine pair â€” Goddess Saraswati and Lord Ganesha â€” who are the creators of letters, meanings, poetic sentiments, metres, and all that is auspicious.",
-      "jaapCol1Title": "What Is Akhand Ramayana Path",
-      "jaapCol1Text": "The Akhand Ramayana Path is the continuous reading of all seven Kandas of the Ramcharitmanas â€” from Bal Kand to Uttar Kand â€” without any interruption, typically completed in 24 hours by a team of pandits.",
-      "jaapCol2Title": "Why It Is Performed",
-      "jaapCol2Text": "It is performed for the peace and prosperity of the entire household, for the well-being of family members, on the occasion of grihapravesh, marriage, or other important events, and for relief from difficulties.",
-      "jaapCol3Title": "Religious Significance",
-      "jaapCol3Text": "An Akhand Ramayana Path is believed to bring the blessings of Lord Rama and the entire Ramayana tradition into the home. The home where the path is performed is considered sacred for years after the event.",
-      "jaapBenefitsTitle": "Spiritual Benefits",
+      "jaapIntroText": "Akhand Ramayana Path is a revered recitation of the Shri Ramcharitmanas, written by Goswami Tulsidas. It is performed continuously, usually over 24 hours or as per tradition, without any interruption. The path is considered highly auspicious and is performed by devotees to seek the blessings of Lord Rama, remove difficulties, bring peace, prosperity and harmony in family and surroundings.",
+      "jaapMantra": "श्रीरामचरितमानस\nमंगल भवन अमंगल हारी ।\nद्रवउ सो दसरथ अजिर बिहारी ॥",
+      "jaapBenefitsTitle": "Spiritual Significance & Benefits",
+      "jaapBenefitsIntro": "Akhand Ramayana Path holds deep spiritual significance in Hinduism. Devotees perform this path for:",
       "jaapBenefits": [
         {
-          "text": "Brings Lord Rama's blessings and protection to the household"
+          "icon": "lotus",
+          "text": "Removal of obstacles"
         },
         {
-          "text": "Considered one of the most auspicious religious events for the family"
+          "icon": "heart",
+          "text": "Peace and mental strength"
         },
         {
-          "text": "Believed to bring peace, prosperity, and harmony to the home"
-        },
-        {
-          "text": "Removes negative energy and fills the space with divine vibrations"
-        },
-        {
-          "text": "Deeply connects the family with the Ramayana tradition"
-        },
-        {
-          "text": "Brings merit equivalent to great pilgrimage, according to tradition"
-        }
-      ],
-      "jaapOccasionsTitle": "When Is It Performed",
-      "jaapOccasions": [
-        {
-          "text": "On Ram Navami â€” the birth anniversary of Lord Rama"
-        },
-        {
-          "text": "On grihapravesh (house-warming) and marriage ceremonies"
-        },
-        {
-          "text": "During Shravan month and other auspicious religious seasons"
-        },
-        {
-          "text": "For the fulfilment of a vow or as an act of gratitude to Lord Rama"
-        },
-        {
-          "text": "On the passing of a family elder â€” for the peace of the departed soul"
-        },
-        {
-          "text": "On birthdays and important family milestones"
-        }
-      ],
-      "jaapOfferingsTitle": "Our Path Services",
-      "jaapOfferingsSubtitle": "Choose the arrangement that suits your family and occasion",
-      "jaapOfferingsBgImage": "assets/images/ritual-aarti.jpg",
-      "jaapOfferings": [
-        {
-          "icon": "bookopen",
-          "title": "24-Hour Akhand Path",
-          "text": "Complete uninterrupted recitation of all 7 Kandas in 24 hours by a team of pandits, with aarti at completion."
-        },
-        {
-          "icon": "people",
-          "title": "Samuhik Path",
-          "text": "Group recitation of the Ramcharitmanas in sequence by multiple priests, completed in a shorter time with collective devotion."
+          "icon": "family",
+          "text": "Harmony in family and relationships"
         },
         {
           "icon": "lotus",
-          "title": "9-Day Path",
-          "text": "The Ramcharitmanas recited over nine auspicious days, one Kanda per day, with daily aarti and prasad."
+          "text": "Prosperity and good fortune"
         },
         {
-          "icon": "namaste",
-          "title": "Sundarkand + Full Ramayana",
-          "text": "Beginning with a special Sundarkand path followed by the complete Akhand Ramayana for the most complete experience."
+          "icon": "sun",
+          "text": "Spiritual growth and devotion"
+        },
+        {
+          "icon": "infinity",
+          "text": "Divine blessings for a better life"
+        }
+      ],
+      "jaapOfferingsTitle": "Our Akhand Ramayana Path Services",
+      "jaapOfferingsSubtitle": "We offer Akhand Ramayana Path with proper Vedic vidhi and sankalp, performed by experienced priests.",
+      "jaapOfferings": [
+        {
+          "icon": "user",
+          "title": "Individual Sankalp",
+          "text": "Path performed for you with your name and gotra."
+        },
+        {
+          "icon": "family",
+          "title": "Family Sankalp",
+          "text": "Include your family members in the sankalp."
+        },
+        {
+          "icon": "monitor",
+          "title": "Online Participation",
+          "text": "Attend the path virtually from anywhere in the world."
+        },
+        {
+          "icon": "calendar",
+          "title": "Booking Assistance",
+          "text": "Our team will help you with date, sankalp details and complete guidance."
         }
       ],
       "jaapBookingTitle": "Booking Process",
-      "jaapBookingSubtitle": "Simple steps to arrange your Akhand Ramayana Path",
+      "jaapBookingSubtitle": "Follow these simple steps to book Akhand Ramayana Path.",
       "jaapBookingSteps": [
         {
-          "title": "Choose Your Service",
-          "text": "Select from 24-hour Akhand Path, samuhik path, 9-day path, or the Sundarkand + full Ramayana combination."
+          "icon": "form",
+          "title": "Enquire",
+          "text": "Fill in the enquiry form or contact us with your requirements."
         },
         {
-          "title": "Share Your Details",
-          "text": "Provide your name, gotra, occasion, and any special prayers to be included in the sankalp."
+          "icon": "chat",
+          "title": "Share Details",
+          "text": "Provide your name, gotra, sankalp details and preferred date."
         },
         {
-          "title": "We Perform the Path",
-          "text": "Our team of priests recites the complete Ramcharitmanas without interruption, with sankalp in your name."
+          "icon": "calendar",
+          "title": "Confirmation",
+          "text": "Our team will confirm the availability and share the details."
         },
         {
-          "title": "Receive the Recording",
-          "text": "You receive a recorded video of the path and the concluding aarti. Prasad is dispatched to your address."
+          "icon": "check",
+          "title": "Path Performed",
+          "text": "The Akhand Ramayana Path will be performed as per Vedic traditions and your sankalp."
         }
       ],
       "jaapFaqTitle": "Frequently Asked Questions",
+      "jaapFaqIntro": "Find quick answers to common questions about Akhand Ramayana Path.",
       "jaapFaqs": [
         {
-          "q": "What is Akhand Ramayana Path?",
-          "a": "Akhand Ramayana Path is the continuous, uninterrupted recitation of the complete Ramcharitmanas by Tulsidas. It is completed in approximately 24 hours by a team of pandits taking turns, without breaking the chant."
+          "q": "How long does it take to complete the path?",
+          "a": "The time depends on the number of recitations and the vidhi chosen for your sankalp. Our team will tell you the exact duration and date when confirming your booking."
         },
         {
-          "q": "How many pandits are needed for the path?",
-          "a": "An Akhand Path typically requires a team of four to eight pandits working in shifts to maintain the continuous recitation over 24 hours."
+          "q": "Can I include my family members in the sankalp?",
+          "a": "Yes. Share the names and gotra of the family members you wish to include, and the priests will take the sankalp for all of them."
         },
         {
-          "q": "Can this be arranged for a house-warming ceremony?",
-          "a": "Yes. Akhand Ramayana Path is one of the most auspicious events for a grihapravesh (house-warming). It is believed to fill the new home with divine blessings from the moment of entry."
+          "q": "Is online participation available?",
+          "a": "Yes. Where available, you can attend the path virtually through a live video link from anywhere in the world. Our team will share the details with your confirmation."
         },
         {
-          "q": "Will I receive a video of the recitation?",
-          "a": "Yes. Key portions of the path â€” including the mangalacharan, Sundarkand, and the concluding aarti â€” are recorded and shared with you."
+          "q": "What details are needed for the booking?",
+          "a": "Your name, gotra, the names of any family members to be included, the purpose of your sankalp and your preferred date."
         },
         {
-          "q": "Can I book this from outside India?",
-          "a": "Yes. Devotees outside India can book the Akhand Ramayana Path on their behalf by sharing their details. The path is performed at our associated temple or puja venue."
+          "q": "Will I receive any confirmation?",
+          "a": "Yes. Our team will confirm the availability, date and all details with you before the path is performed."
+        },
+        {
+          "q": "Can I book the path for someone else?",
+          "a": "Yes. You can book it on behalf of a family member or loved one. Please share their name and gotra in the sankalp details."
         }
       ],
-      "ctaTitle": "Fill Your Home With Lord Rama's Divine Blessings",
-      "ctaAccent": null,
-      "ctaText": "Arrange an Akhand Ramayana Path by a team of experienced priests, performed with full devotion and a sankalp in your name.",
-      "ctaButton": "Book Akhand Ramayana Path",
+      "ctaTitle": "Invite the Blessings of Lord Rama into Your Life",
+      "ctaText": "Book Akhand Ramayana Path and seek peace, prosperity, harmony and divine blessings for you and your family.",
+      "ctaButton": "Enquire About Akhand Ramayana Path",
       "ctaLink": "booking",
-      "ctaImage": "assets/images/faith/hero-family.jpg",
+      "ctaImage": "assets/images/jaap/akhand-ramayana-path-cta.jpg",
       "seoTitle": "Akhand Ramayana Path Online Booking | Hindu.International",
       "seoDescription": "Arrange a 24-hour uninterrupted Akhand Ramayana Path by a team of experienced priests with sankalp in your name and gotra, for your whole family."
     }

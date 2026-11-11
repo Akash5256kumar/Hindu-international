@@ -159,7 +159,7 @@ if ($slug !== '') {
         if (($j['slug'] ?? '') === $slug) {
             route_page('jaap.html', 200, [
                 'title' => route_text($j['seoTitle'] ?? '') ?: route_text($j['name'] ?? '') . ' Online Booking | ' . ROUTE_SITE,
-                'description' => route_text($j['seoDescription'] ?? '') ?: (($j['heroSubtitle'] ?? '') ?: ($j['jaapIntroText'] ?? '')),
+                'description' => route_text($j['seoDescription'] ?? '') ?: (($j['heroText'] ?? '') ?: ($j['heroSubtitle'] ?? '')),
                 'url' => $url,
                 'image' => $j['heroImage'] ?? '',
             ]);
