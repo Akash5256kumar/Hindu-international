@@ -131,41 +131,41 @@
       "slug": "sundarkand-path",
       "name": "Sundarkand Path",
       "heroTitle": "Sundarkand\nPath",
-      "heroSubtitle": "A Sacred Recitation for Strength, Devotion and Success",
-      "heroText": "Sundarkand Path is a devotional recitation of the fifth chapter of the Shri Ramcharitmanas, which describes the glory of Lord Hanuman. It is believed to remove obstacles, bring courage and confidence, and invite peace and success in life.",
+      "heroSubtitle": "A Sacred Recitation for Courage, Strength and Divine Guidance",
+      "heroText": "Sundarkand Path is a revered part of the Ramayana that describes the courage, devotion and wisdom of Lord Hanuman. It is performed to seek strength, remove obstacles and receive divine guidance in life.",
       "heroButton": "Book Sundarkand Path",
       "heroLink": "booking",
-      "heroImage": "assets/images/jaap/sundarkand-path.jpg",
-      "heroImageAlt": "Lord Hanuman idol with folded hands, garlands and lit diyas",
+      "heroImage": "assets/images/jaap/sundarkand.jpg",
+      "heroImageAlt": "Lord Hanuman idol adorned with marigold garlands, with lit brass lamps",
       "jaapIntroHeading": "About Sundarkand Path",
-      "jaapIntroText": "Sundarkand is the fifth chapter of the Shri Ramcharitmanas, written by Goswami Tulsidas. It narrates Lord Hanuman’s journey to Lanka in search of Mata Sita, and celebrates his devotion, courage and wisdom. Sundarkand Path is considered highly auspicious and is performed by devotees to seek the blessings of Lord Hanuman and Lord Rama, remove difficulties and bring peace, strength and positivity in life.",
-      "jaapMantra": "अतुलितबलधामं हेमशैलाभदेहं\nदनुजवनकृशानुं ज्ञानिनामग्रगण्यम् ।\nसकलगुणनिधानं वानराणामधीशं\nरघुपतिप्रियभक्तं वातजातं नमामि ॥",
+      "jaapIntroText": "Sundarkand Path is a significant section of the Ramayana, written by Sage Valmiki. It highlights the strength, devotion and intelligence of Lord Hanuman. The recitation of Sundarkand is believed to inspire courage, remove fear and bring positivity into life. It is widely performed by devotees seeking divine support and guidance.",
+      "jaapMantra": "श्री गुरु चरन सरोज रज\nनिज मनु मुकुरु सुधारि ।\nबरनउँ रघुबर बिमल जसु\nजो दायकु फल चारि ॥",
       "jaapBenefitsTitle": "Spiritual Significance & Benefits",
       "jaapBenefitsIntro": "Sundarkand Path holds deep spiritual significance in Hinduism. Devotees perform this path for:",
       "jaapBenefits": [
         {
           "icon": "shield",
-          "text": "Protection from negative energies"
-        },
-        {
-          "icon": "heart",
           "text": "Strength and courage"
         },
         {
+          "icon": "heart",
+          "text": "Removal of fear and negativity"
+        },
+        {
           "icon": "lotus",
-          "text": "Mental peace and confidence"
+          "text": "Mental peace and focus"
         },
         {
           "icon": "sprout",
-          "text": "Removal of obstacles"
+          "text": "Overcoming obstacles"
         },
         {
           "icon": "sun",
-          "text": "Success in new beginnings"
+          "text": "Positive energy and confidence"
         },
         {
           "icon": "infinity",
-          "text": "Divine blessings for a happy family life"
+          "text": "Divine guidance in difficult times"
         }
       ],
       "jaapOfferingsTitle": "Our Sundarkand Path Services",
@@ -244,11 +244,11 @@
           "a": "Yes. You can book it on behalf of a family member or loved one. Please share their name and gotra in the sankalp details."
         }
       ],
-      "ctaTitle": "Seek the Blessings of Lord Hanuman",
-      "ctaText": "Book Sundarkand Path and invite strength, success and positivity into your life.",
+      "ctaTitle": "Experience the Blessings of Sundarkand Path",
+      "ctaText": "Book Sundarkand Path and invite divine strength, protection and positivity into your life.",
       "ctaButton": "Enquire About Sundarkand Path",
       "ctaLink": "booking",
-      "ctaImage": "assets/images/jaap/sundarkand-path-cta.jpg",
+      "ctaImage": "assets/images/jaap/sundarkand-cta.jpg",
       "seoTitle": "Sundarkand Path Online Booking | Hindu.International",
       "seoDescription": "Arrange Sundarkand Path recitation by experienced priests with sankalp in your name and gotra. Receive the recorded video and prasad after the path."
     },

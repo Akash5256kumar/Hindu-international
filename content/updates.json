@@ -45,6 +45,106 @@
       "path": "jaapServices.items[slug=akhand-ramayana-path].seoDescription",
       "from": "Arrange a 24-hour uninterrupted Akhand Ramayana Path by a team of experienced priests with sankalp in your name.",
       "to": "Arrange a 24-hour uninterrupted Akhand Ramayana Path by a team of experienced priests with sankalp in your name and gotra, for your whole family."
+    },
+    {
+      "path": "jaapServices.items[slug=sundarkand-path].heroSubtitle",
+      "from": "A Sacred Recitation for Strength, Devotion and Success",
+      "to": "A Sacred Recitation for Courage, Strength and Divine Guidance"
+    },
+    {
+      "path": "jaapServices.items[slug=sundarkand-path].heroText",
+      "from": "Sundarkand Path is a devotional recitation of the fifth chapter of the Shri Ramcharitmanas, which describes the glory of Lord Hanuman. It is believed to remove obstacles, bring courage and confidence, and invite peace and success in life.",
+      "to": "Sundarkand Path is a revered part of the Ramayana that describes the courage, devotion and wisdom of Lord Hanuman. It is performed to seek strength, remove obstacles and receive divine guidance in life."
+    },
+    {
+      "path": "jaapServices.items[slug=sundarkand-path].jaapIntroText",
+      "from": "Sundarkand is the fifth chapter of the Shri Ramcharitmanas, written by Goswami Tulsidas. It narrates Lord Hanuman’s journey to Lanka in search of Mata Sita, and celebrates his devotion, courage and wisdom. Sundarkand Path is considered highly auspicious and is performed by devotees to seek the blessings of Lord Hanuman and Lord Rama, remove difficulties and bring peace, strength and positivity in life.",
+      "to": "Sundarkand Path is a significant section of the Ramayana, written by Sage Valmiki. It highlights the strength, devotion and intelligence of Lord Hanuman. The recitation of Sundarkand is believed to inspire courage, remove fear and bring positivity into life. It is widely performed by devotees seeking divine support and guidance."
+    },
+    {
+      "path": "jaapServices.items[slug=sundarkand-path].jaapMantra",
+      "from": "अतुलितबलधामं हेमशैलाभदेहं\nदनुजवनकृशानुं ज्ञानिनामग्रगण्यम् ।\nसकलगुणनिधानं वानराणामधीशं\nरघुपतिप्रियभक्तं वातजातं नमामि ॥",
+      "to": "श्री गुरु चरन सरोज रज\nनिज मनु मुकुरु सुधारि ।\nबरनउँ रघुबर बिमल जसु\nजो दायकु फल चारि ॥"
+    },
+    {
+      "path": "jaapServices.items[slug=sundarkand-path].jaapBenefits",
+      "from": [
+        {
+          "icon": "shield",
+          "text": "Protection from negative energies"
+        },
+        {
+          "icon": "heart",
+          "text": "Strength and courage"
+        },
+        {
+          "icon": "lotus",
+          "text": "Mental peace and confidence"
+        },
+        {
+          "icon": "sprout",
+          "text": "Removal of obstacles"
+        },
+        {
+          "icon": "sun",
+          "text": "Success in new beginnings"
+        },
+        {
+          "icon": "infinity",
+          "text": "Divine blessings for a happy family life"
+        }
+      ],
+      "to": [
+        {
+          "icon": "shield",
+          "text": "Strength and courage"
+        },
+        {
+          "icon": "heart",
+          "text": "Removal of fear and negativity"
+        },
+        {
+          "icon": "lotus",
+          "text": "Mental peace and focus"
+        },
+        {
+          "icon": "sprout",
+          "text": "Overcoming obstacles"
+        },
+        {
+          "icon": "sun",
+          "text": "Positive energy and confidence"
+        },
+        {
+          "icon": "infinity",
+          "text": "Divine guidance in difficult times"
+        }
+      ]
+    },
+    {
+      "path": "jaapServices.items[slug=sundarkand-path].heroImageAlt",
+      "from": "Lord Hanuman idol with folded hands, garlands and lit diyas",
+      "to": "Lord Hanuman idol adorned with marigold garlands, with lit brass lamps"
+    },
+    {
+      "path": "jaapServices.items[slug=sundarkand-path].ctaTitle",
+      "from": "Seek the Blessings of Lord Hanuman",
+      "to": "Experience the Blessings of Sundarkand Path"
+    },
+    {
+      "path": "jaapServices.items[slug=sundarkand-path].ctaText",
+      "from": "Book Sundarkand Path and invite strength, success and positivity into your life.",
+      "to": "Book Sundarkand Path and invite divine strength, protection and positivity into your life."
+    },
+    {
+      "path": "jaapServices.items[slug=sundarkand-path].heroImage",
+      "from": "assets/images/jaap/sundarkand-path.jpg",
+      "to": "assets/images/jaap/sundarkand.jpg"
+    },
+    {
+      "path": "jaapServices.items[slug=sundarkand-path].ctaImage",
+      "from": "assets/images/jaap/sundarkand-path-cta.jpg",
+      "to": "assets/images/jaap/sundarkand-cta.jpg"
     }
   ]
 }

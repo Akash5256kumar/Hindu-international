@@ -10,10 +10,10 @@ header('Expires: 0');
 $dir  = __DIR__;
 
 /* After a deploy with new default content, save once on the server (see admin/includes/auto-publish.php) */
-if (!is_file($dir . '/.auto-publish-jaapv2-20261111.json') && is_file($dir . '/site.json')) {
+if (!is_file($dir . '/.auto-publish-sundarkand-20261112.json') && is_file($dir . '/site.json')) {
     try {
         require_once dirname($dir) . '/admin/includes/auto-publish.php';
-        vps_auto_publish('jaapv2-20261111');
+        vps_auto_publish('sundarkand-20261112');
     } catch (Throwable $e) {
         // never break the site; the admin's Save button does the same job
     }

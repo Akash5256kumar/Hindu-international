@@ -116,7 +116,7 @@ final class ContentStore
     }
 
     /**
-     * content/updates.json: one-time text updates as {path, from, to}. A value is replaced only while it
+     * content/updates.json: one-time updates as {path, from, to} (text or a list such as benefit cards). A value is replaced only while it
      * still equals "from", so anything edited in the admin is never overwritten.
      * Path segments: object keys, list positions ("heroSlides.0") and items by slug ("items[slug=x]").
      */
@@ -124,7 +124,8 @@ final class ContentStore
     {
         $file = is_file(self::UPDATES) ? json_decode((string) file_get_contents(self::UPDATES), true) : null;
         foreach (is_array($file['updates'] ?? null) ? $file['updates'] : [] as $u) {
-            if (!is_array($u) || !is_string($u['path'] ?? null) || !is_string($u['from'] ?? null) || !is_string($u['to'] ?? null)) {
+            if (!is_array($u) || !is_string($u['path'] ?? null) || !array_key_exists('from', $u) || !array_key_exists('to', $u)
+                || !(is_string($u['from']) || is_array($u['from'])) || !(is_string($u['to']) || is_array($u['to']))) {
                 continue;
             }
             $node = &$data;
