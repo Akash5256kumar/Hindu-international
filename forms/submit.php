@@ -1,8 +1,9 @@
 <?php
 /* =====================================================================
    VIRTUAL PUNYA SNAN — form handler (service request + contact)
-   Sends the submission by email (photo attached). Nothing is stored on
-   the server. Responds with JSON: { ok: bool, message?: string }
+   Sends the submission by email (photo attached) and keeps a copy in the
+   admin's private data folder (Admin → Inquiries, admin/includes/inquiries.php).
+   Responds with JSON: { ok: bool, message?: string }
    ===================================================================== */
 
 declare(strict_types=1);
@@ -190,8 +191,32 @@ if ($attachment) {
     $headers[] = 'Content-Transfer-Encoding: 8bit';
 }
 
+/* Keep a copy for the admin panel (Admin → Inquiries) before emailing, so nothing is lost
+   if the email does not arrive. A failure here never stops the form. */
+$inquiryId = null;
+try {
+    require_once __DIR__ . '/../admin/includes/inquiries.php';
+    $referer = (string) parse_url((string) ($_SERVER['HTTP_REFERER'] ?? ''), PHP_URL_PATH);
+    $inquiryId = Inquiries::save([
+        'type'    => $type,
+        'name'    => $name,
+        'email'   => $email,
+        'phone'   => $phone,
+        'event'   => $event,
+        'message' => $message,
+        'amount'  => $type === 'donation' ? $amountText : '',
+        'method'  => $type === 'donation' ? ($methodLabels[$method] ?? '') : '',
+        'page'    => mb_substr(preg_replace('/[^\w\-\/.]/', '', $referer) ?? '', 0, 120),
+    ], $attachment ? ['ext' => VPS_ALLOWED_TYPES[$attachment['mime']], 'data' => $attachment['data']] : null);
+} catch (Throwable $e) {
+    error_log('[forms] inquiry not saved: ' . $e->getMessage());
+}
+
 $encodedSubject = '=?UTF-8?B?' . base64_encode($subject) . '?=';
 $sent = mail(VPS_RECIPIENT, $encodedSubject, $body, implode("\r\n", $headers), '-f' . VPS_FROM);
+if ($inquiryId !== null) {
+    Inquiries::update($inquiryId, ['mailed' => $sent]);
+}
 
 if (!$sent) {
     respond(false, 'Sorry, we could not send this right now. Please try again, or contact us by phone / WhatsApp.', 500);

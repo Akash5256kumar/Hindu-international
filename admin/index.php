@@ -1,8 +1,10 @@
 <?php
 declare(strict_types=1);
 require __DIR__ . '/includes/bootstrap.php';
+require __DIR__ . '/includes/inquiries.php';
 
 Auth::requirePage();
+$newInquiries = Inquiries::unreadCount();
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +14,7 @@ Auth::requirePage();
   <meta name="csrf-token" content="<?= e(csrf_token()) ?>">
   <title>Content editor · Hindu.International Admin</title>
   <link rel="icon" href="../assets/images/brand/logo-mark.png" type="image/png">
-  <link rel="stylesheet" href="assets/admin.css?v=list-order-20261021">
+  <link rel="stylesheet" href="assets/admin.css?v=inquiries-20261117">
 </head>
 <body class="app">
   <header class="topbar">
@@ -22,6 +24,7 @@ Auth::requirePage();
     </a>
     <div class="topbar__actions">
       <span class="save-status" id="save-status" role="status" aria-live="polite"></span>
+      <a class="btn btn--ghost" href="inquiries.php">Inquiries<?php if ($newInquiries): ?> <span class="topbar__count"><?= (int) $newInquiries ?> new</span><?php endif; ?></a>
       <a class="btn btn--ghost" href="../index.html" target="_blank" rel="noopener">View website ↗</a>
       <button class="btn btn--primary" id="save-btn" type="button" disabled>Save changes</button>
       <details class="menu">

@@ -22,3 +22,6 @@ content/site.js
 
 # One-time automatic saves on the server (content/serve.php)
 content/.auto-publish-*.json
+
+# Website inquiries saved for the admin (local testing; on the server they live outside the site)
+admin/data/inquiries/

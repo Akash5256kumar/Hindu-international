@@ -234,3 +234,42 @@ select.input { cursor: pointer; }
   .topbar__brand img { width: min(145px, 34vw); }
   .topbar__actions .btn--ghost[href] { display: none; }
 }
+
+/* ---------- Inquiries (admin/inquiries.php) ---------- */
+.topbar__count { display: inline-block; margin-left: 4px; padding: 1px 8px; border-radius: 999px; background: var(--brand); color: #fff; font-size: 12px; font-weight: 700; }
+.inq { max-width: 960px; margin: 0 auto; padding: 28px 20px 60px; }
+.inq__head { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; flex-wrap: wrap; }
+.inq__head h1 { font-size: 26px; }
+.inq__sub { margin: 6px 0 0; color: var(--muted); }
+.inq__tabs { display: flex; flex-wrap: wrap; gap: 8px; margin: 20px 0 18px; }
+.inq__tab { display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px; border: 1px solid var(--line-2); border-radius: 999px; background: var(--panel); color: var(--ink-2); text-decoration: none; font-size: 14px; }
+.inq__tab span { color: var(--muted); font-size: 12px; }
+.inq__tab:hover { border-color: var(--brand); color: var(--brand); }
+.inq__tab.is-active { background: var(--brand); border-color: var(--brand); color: #fff; }
+.inq__tab.is-active span { color: #fff; }
+.inq__empty { padding: 40px 20px; text-align: center; color: var(--muted); background: var(--panel); border: 1px dashed var(--line-2); border-radius: var(--radius); }
+.inq-card { margin-bottom: 14px; padding: 18px 20px; background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); }
+.inq-card.is-new { border-left: 4px solid var(--brand); }
+.inq-card__top { display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap; }
+.inq-card__who { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.inq-card__who strong { font-size: 17px; }
+.inq-card__top time { color: var(--muted); font-size: 13px; }
+.inq-badge { padding: 2px 9px; border-radius: 999px; font-size: 12px; font-weight: 600; background: #EEE9E2; color: var(--ink-2); }
+.inq-badge--new { background: var(--brand); color: #fff; }
+.inq-badge--request { background: var(--brand-tint); color: var(--brand); }
+.inq-badge--donation { background: var(--ok-bg); color: var(--ok); }
+.inq-card__facts { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 8px 20px; margin: 14px 0 0; }
+.inq-card__facts dt { font-size: 12px; color: var(--muted); }
+.inq-card__facts dd { margin: 0; word-break: break-word; }
+.inq-ok { color: var(--ok); font-weight: 600; }
+.inq-fail { color: var(--danger); font-weight: 600; }
+.inq-card__msg { margin: 14px 0 0; padding: 12px 14px; background: var(--bg); border-radius: 8px; white-space: normal; }
+.inq-card__photo { display: inline-block; margin-top: 14px; }
+.inq-card__photo img { display: block; max-width: 220px; max-height: 220px; border-radius: 8px; border: 1px solid var(--line); }
+.inq-card__actions { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-top: 16px; }
+.inq-card__actions form { margin: 0; }
+.inq-card__delete summary { list-style: none; display: inline-flex; align-items: center; cursor: pointer; }
+.inq-card__delete summary::-webkit-details-marker { display: none; }
+.inq-card__delete[open] form { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-top: 8px; font-size: 14px; }
+.inq-danger { background: var(--danger); color: #fff; }
+@media (max-width: 640px) { .topbar__actions .btn--ghost[href="../index.html"] { display: none; } }
