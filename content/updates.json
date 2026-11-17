@@ -62,11 +62,6 @@
       "to": "Sundarkand Path is a significant section of the Ramayana, written by Sage Valmiki. It highlights the strength, devotion and intelligence of Lord Hanuman. The recitation of Sundarkand is believed to inspire courage, remove fear and bring positivity into life. It is widely performed by devotees seeking divine support and guidance."
     },
     {
-      "path": "jaapServices.items[slug=sundarkand-path].jaapMantra",
-      "from": "अतुलितबलधामं हेमशैलाभदेहं\nदनुजवनकृशानुं ज्ञानिनामग्रगण्यम् ।\nसकलगुणनिधानं वानराणामधीशं\nरघुपतिप्रियभक्तं वातजातं नमामि ॥",
-      "to": "श्री गुरु चरन सरोज रज\nनिज मनु मुकुरु सुधारि ।\nबरनउँ रघुबर बिमल जसु\nजो दायकु फल चारि ॥"
-    },
-    {
       "path": "jaapServices.items[slug=sundarkand-path].jaapBenefits",
       "from": [
         {
@@ -145,6 +140,41 @@
       "path": "jaapServices.items[slug=sundarkand-path].ctaImage",
       "from": "assets/images/jaap/sundarkand-path-cta.jpg",
       "to": "assets/images/jaap/sundarkand-cta.jpg"
+    },
+    {
+      "path": "jaapServices.items[slug=mahamrityunjay-jaap].jaapMantra",
+      "from": "ॐ त्र्यम्बकं यजामहे\nसुगन्धिं पुष्टिवर्धनम् ।\nउर्वारुकमिव बन्धनान्मृत्योर्मुक्षीय\nमामृतात् ॥",
+      "to": "ॐ त्र्यम्बकं यजामहे\nसुगन्धिं पुष्टिवर्धनम् ।\nउर्वारुकमिव बन्धनान्\nमृत्योर्मुक्षीय माऽमृतात् ॥"
+    },
+    {
+      "path": "jaapServices.items[slug=sundarkand-path].jaapMantra",
+      "from": "श्री गुरु चरन सरोज रज\nनिज मनु मुकुरु सुधारि ।\nबरनउँ रघुबर बिमल जसु\nजो दायकु फल चारि ॥",
+      "to": "अतुलितबलधामं हेमशैलाभदेहं\nदनुजवनकृशानुं ज्ञानिनामग्रगण्यम् ।\nसकलगुणनिधानं वानराणामधीशं\nरघुपतिप्रियभक्तं वातजातं नमामि ॥"
+    },
+    {
+      "path": "jaapServices.items[slug=hanuman-chalisa-path].jaapMantra",
+      "from": "श्री हनुमते नमः\nबुद्धिर्बलं यशो धैर्यं\nनिर्भयत्वमरोगता ।\nअजाड्यं वाक्पटुत्वं च\nहनुमत्स्मरणाद्भवेत् ॥",
+      "to": "श्रीगुरु चरन सरोज रज\nनिज मनु मुकुरु सुधारि ।\nबरनउँ रघुबर बिमल जसु\nजो दायकु फल चारि ॥"
+    },
+    {
+      "path": "jaapServices.items[slug=rudrabhishek].jaapMantra",
+      "from": "ॐ नमः शिवाय\nत्र्यम्बकं यजामहे सुगन्धिं\nपुष्टिवर्धनम् ।\nउर्वारुकमिव बन्धनान् मृत्योर्मुक्षीय\nमामृतात् ॥",
+      "to": "ॐ नमस्ते रुद्र मन्यव\nउतो त इषवे नमः ।\nबाहुभ्यामुत ते नमः ॥"
+    },
+    {
+      "path": "jaapServices.items[slug=vishnu-sahasranama-path].jaapMantra",
+      "from": "ॐ नमो भगवते वासुदेवाय ।\nश्रीराम राम रामेति रमे रामे मनोरमे ।\nसहस्रनाम तत्तुल्यं\nरामनाम वरानने ॥",
+      "to": "शान्ताकारं भुजगशयनं पद्मनाभं सुरेशं\nविश्वाधारं गगनसदृशं मेघवर्णं शुभाङ्गम् ।\nलक्ष्मीकान्तं कमलनयनं योगिभिर्ध्यानगम्यं\nवन्दे विष्णुं भवभयहरं सर्वलोकैकनाथम् ॥"
+    },
+    {
+      "path": "jaapServices.items[slug=bhagavad-gita-path].jaapMantra",
+      "from": "कर्मण्येवाधिकारस्ते\nमा फलेषु कदाचन ।\nमा कर्मफलहेतुर्भूः\nमा ते सङ्गोऽस्त्वकर्मणि ॥",
+      "to": "कर्मण्येवाधिकारस्ते\nमा फलेषु कदाचन ।\nमा कर्मफलहेतुर्भूर्\nमा ते सङ्गोऽस्त्वकर्मणि ॥"
+    },
+    {
+      "path": "jaapServices.items[slug=akhand-ramayana-path].jaapMantra",
+      "from": "श्रीरामचरितमानस\nमंगल भवन अमंगल हारी ।\nद्रवउ सो दसरथ अजिर बिहारी ॥",
+      "to": "मंगल भवन अमंगल हारी ।\nद्रवउ सो दसरथ अजिर बिहारी ॥"
     }
   ]
 }
