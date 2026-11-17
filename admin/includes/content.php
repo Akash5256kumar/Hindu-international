@@ -52,7 +52,52 @@ final class ContentStore
     public static function schema(): array
     {
         static $schema = null;
-        return $schema ??= require __DIR__ . '/schema.php';
+        return $schema ??= self::withImageSizes(require __DIR__ . '/schema.php');
+    }
+
+    /**
+     * Adds the upload size (image-sizes.php) to every image field, shown under its upload box,
+     * and drops older size hints from the field's help text so only one size is shown.
+     */
+    private static function withImageSizes(array $schema): array
+    {
+        $sizes = is_file(__DIR__ . '/image-sizes.php') ? require __DIR__ . '/image-sizes.php' : [];
+        $find = static function (string $path) use ($sizes): ?array {
+            foreach ($sizes as $pattern => $size) {
+                $re = '/^' . str_replace('\*', '[^.]+', preg_quote($pattern, '/')) . '$/';
+                if (preg_match($re, $path)) {
+                    return $size;
+                }
+            }
+            return null;
+        };
+        $walk = static function (array $fields, string $prefix) use (&$walk, $find): array {
+            foreach ($fields as $i => $f) {
+                $path = ltrim($prefix . '.' . $f['key'], '.');
+                if (($f['type'] ?? '') === 'list' && is_array($f['fields'] ?? null)) {
+                    $fields[$i]['fields'] = $walk($f['fields'], $path . '.*');
+                } elseif (($f['type'] ?? '') === 'image' && ($size = $find($path))) {
+                    [$fields[$i]['size'], $fields[$i]['ratio'], $fields[$i]['sizeNote']] = $size + ['', '', ''];
+                    if (!empty($f['help'])) {
+                        $keep = array_filter(
+                            preg_split('/(?<=\.)\s+/', (string) $f['help']) ?: [],
+                            static fn (string $s): bool => !preg_match('/\d\s*px|\d\s*:\s*\d|\d\s*×\s*\d/u', $s)
+                        );
+                        $fields[$i]['help'] = implode(' ', $keep);
+                        if ($fields[$i]['help'] === '') {
+                            unset($fields[$i]['help']);
+                        }
+                    }
+                }
+            }
+            return $fields;
+        };
+        foreach ($schema as $s => $section) {
+            foreach ($section['groups'] as $g => $group) {
+                $schema[$s]['groups'][$g]['fields'] = $walk($group['fields'], (string) $group['path']);
+            }
+        }
+        return $schema;
     }
 
     public static function load(): array

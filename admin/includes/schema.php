@@ -260,7 +260,7 @@ return [
                     $showField,
                     ['key' => 'text', 'label' => 'Text', 'type' => 'text', 'max' => 160, 'required' => true],
                 ]],
-                ['key' => 'image', 'label' => 'Photo', 'type' => 'image', 'help' => 'Roughly square photo. Remove to hide it.'],
+                ['key' => 'image', 'label' => 'Photo', 'type' => 'image', 'help' => 'Tall photo beside the text. Remove to hide it.'],
                 ['key' => 'imageAlt', 'label' => 'Photo description', 'type' => 'text', 'max' => 200],
             ]],
             ['path' => 'faith.respect', 'title' => '“Protect Our Faith. Respect Every Person.”', 'fields' => [

@@ -14,7 +14,7 @@ $newInquiries = Inquiries::unreadCount();
   <meta name="csrf-token" content="<?= e(csrf_token()) ?>">
   <title>Content editor · Hindu.International Admin</title>
   <link rel="icon" href="../assets/images/brand/logo-mark.png" type="image/png">
-  <link rel="stylesheet" href="assets/admin.css?v=inquiries2-20261117">
+  <link rel="stylesheet" href="assets/admin.css?v=imgsizes-20261117">
 </head>
 <body class="app">
   <header class="topbar">
@@ -66,6 +66,6 @@ $newInquiries = Inquiries::unreadCount();
 
   <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
 
-  <script src="assets/admin.js?v=inquiries2-20261117"></script>
+  <script src="assets/admin.js?v=imgsizes-20261117"></script>
 </body>
 </html>

@@ -275,3 +275,11 @@ select.input { cursor: pointer; }
 @media (max-width: 640px) { .topbar__actions .btn--ghost[href="../index.html"] { display: none; } }
 .sidebar__link--inquiries { font-weight: 600; color: var(--brand); border: 1px solid var(--brand-tint); margin-bottom: 8px; }
 .sidebar__new { padding: 0 7px; border-radius: 10px; background: var(--brand); color: #fff; font-size: 12px; font-weight: 700; }
+
+/* ---------- Upload size under each image box (admin/includes/image-sizes.php) ---------- */
+.media__size { margin-top: 8px; padding: 8px 12px; border-radius: 8px; background: var(--brand-tint); border: 1px solid #F6D7B6; font-size: 13px; line-height: 1.5; color: var(--ink-2); }
+.media__size p { margin: 0; }
+.media__size-main strong { color: var(--brand); }
+.media__size-note { margin-top: 2px !important; color: var(--muted); }
+.media__actual { display: block; color: var(--muted); font-size: 12px; }
+.media__actual:empty { display: none; }

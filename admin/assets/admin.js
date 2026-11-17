@@ -395,12 +395,13 @@
       preview.textContent = '';
       if (value) {
         preview.appendChild(kind === 'image'
-          ? h('img', { src: mediaUrl(value), alt: '' })
+          ? h('img', { src: mediaUrl(value), alt: '', onload: function () { showActual(this.naturalWidth, this.naturalHeight); } })
           : h('video', { src: mediaUrl(value), muted: true, controls: true, preload: 'metadata' }));
       } else {
         preview.appendChild(h('span', { class: 'media__empty', text: kind === 'image' ? 'No image' : 'No video' }));
       }
       name.textContent = value ? value.split('/').pop() : '';
+      if (!value) showActual(0, 0);
       if (removeBtn) removeBtn.hidden = !value;
     }
 
@@ -430,6 +431,23 @@
       });
     });
 
+    /* Upload size for this box (admin/includes/image-sizes.php) and the size of the current image */
+    var actual = h('span', { class: 'media__actual' });
+    function showActual(w, ht) {
+      actual.textContent = w ? 'Current image: ' + w + ' × ' + ht + ' px' : '';
+    }
+    var sizeBox = null;
+    if (kind === 'image' && (field.size || field.sizeNote)) {
+      sizeBox = h('div', { class: 'media__size' }, [
+        field.size ? h('p', { class: 'media__size-main' }, [
+          h('strong', { text: 'Size: ' + field.size }),
+          field.ratio ? h('span', { text: '  ·  Ratio ' + field.ratio }) : null
+        ]) : null,
+        field.sizeNote ? h('p', { class: 'media__size-note', text: field.sizeNote }) : null,
+        actual
+      ]);
+    }
+
     draw();
     box.appendChild(preview);
     box.appendChild(h('div', { class: 'media__side' }, [
@@ -439,7 +457,8 @@
       h('p', { class: 'field__help', text: kind === 'image' ? 'JPG, PNG, WebP or SVG' : 'MP4 or WebM' }),
       fileInput
     ]));
-    return box;
+    if (!sizeBox) return box;
+    return h('div', { class: 'media-wrap' }, [box, sizeBox]);
   }
 
   function renderList(field, path) {
