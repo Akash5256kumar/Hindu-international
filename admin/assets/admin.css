@@ -232,7 +232,7 @@ select.input { cursor: pointer; }
   .media { flex-direction: column; }
   .media__preview { width: 100%; }
   .topbar__brand img { width: min(145px, 34vw); }
-  .topbar__actions .btn--ghost[href] { display: none; }
+  .topbar__actions .btn--ghost[href]:not(.topbar__inquiries) { display: none; }
 }
 
 /* ---------- Inquiries (admin/inquiries.php) ---------- */
@@ -273,3 +273,5 @@ select.input { cursor: pointer; }
 .inq-card__delete[open] form { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-top: 8px; font-size: 14px; }
 .inq-danger { background: var(--danger); color: #fff; }
 @media (max-width: 640px) { .topbar__actions .btn--ghost[href="../index.html"] { display: none; } }
+.sidebar__link--inquiries { font-weight: 600; color: var(--brand); border: 1px solid var(--brand-tint); margin-bottom: 8px; }
+.sidebar__new { padding: 0 7px; border-radius: 10px; background: var(--brand); color: #fff; font-size: 12px; font-weight: 700; }

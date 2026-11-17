@@ -203,6 +203,12 @@
   function renderSidebar() {
     sidebar.textContent = '';
     var list = h('ul', { class: 'sidebar__list' });
+    /* Website inquiries (admin/inquiries.php), always first */
+    var newInq = parseInt(sidebar.getAttribute('data-inquiries') || '0', 10) || 0;
+    list.appendChild(h('li', {}, [
+      h('a', { class: 'sidebar__link sidebar__link--inquiries', href: 'inquiries.php' },
+        ['Inquiries', newInq ? h('span', { class: 'sidebar__new', text: newInq + ' new' }) : null])
+    ]));
     state.schema.forEach(function (section) {
       var count = errorCount(section.id);
       list.appendChild(h('li', {}, [

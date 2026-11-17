@@ -14,7 +14,7 @@ $newInquiries = Inquiries::unreadCount();
   <meta name="csrf-token" content="<?= e(csrf_token()) ?>">
   <title>Content editor · Hindu.International Admin</title>
   <link rel="icon" href="../assets/images/brand/logo-mark.png" type="image/png">
-  <link rel="stylesheet" href="assets/admin.css?v=inquiries-20261117">
+  <link rel="stylesheet" href="assets/admin.css?v=inquiries2-20261117">
 </head>
 <body class="app">
   <header class="topbar">
@@ -24,7 +24,7 @@ $newInquiries = Inquiries::unreadCount();
     </a>
     <div class="topbar__actions">
       <span class="save-status" id="save-status" role="status" aria-live="polite"></span>
-      <a class="btn btn--ghost" href="inquiries.php">Inquiries<?php if ($newInquiries): ?> <span class="topbar__count"><?= (int) $newInquiries ?> new</span><?php endif; ?></a>
+      <a class="btn btn--ghost topbar__inquiries" href="inquiries.php">Inquiries<?php if ($newInquiries): ?> <span class="topbar__count"><?= (int) $newInquiries ?> new</span><?php endif; ?></a>
       <a class="btn btn--ghost" href="../index.html" target="_blank" rel="noopener">View website ↗</a>
       <button class="btn btn--primary" id="save-btn" type="button" disabled>Save changes</button>
       <details class="menu">
@@ -41,7 +41,7 @@ $newInquiries = Inquiries::unreadCount();
   </header>
 
   <div class="layout">
-    <nav class="sidebar" id="sidebar" aria-label="Sections"></nav>
+    <nav class="sidebar" id="sidebar" aria-label="Sections" data-inquiries="<?= (int) $newInquiries ?>"></nav>
     <main class="editor" id="editor" tabindex="-1">
       <p class="editor__loading">Loading content…</p>
     </main>
@@ -66,6 +66,6 @@ $newInquiries = Inquiries::unreadCount();
 
   <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
 
-  <script src="assets/admin.js?v=seed-lists-20261102"></script>
+  <script src="assets/admin.js?v=inquiries2-20261117"></script>
 </body>
 </html>
