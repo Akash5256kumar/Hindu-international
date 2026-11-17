@@ -175,6 +175,83 @@
       "path": "jaapServices.items[slug=akhand-ramayana-path].jaapMantra",
       "from": "श्रीरामचरितमानस\nमंगल भवन अमंगल हारी ।\nद्रवउ सो दसरथ अजिर बिहारी ॥",
       "to": "मंगल भवन अमंगल हारी ।\nद्रवउ सो दसरथ अजिर बिहारी ॥"
+    },
+    {
+      "path": "site.nav",
+      "from": [
+        {
+          "show": true,
+          "label": "Home",
+          "link": "index.html"
+        },
+        {
+          "show": true,
+          "label": "About Us",
+          "link": "about.html"
+        },
+        {
+          "show": true,
+          "label": "How It Works",
+          "link": "how-it-works.html"
+        },
+        {
+          "show": true,
+          "label": "Protect Our Faith",
+          "link": "protect-our-faith.html"
+        },
+        {
+          "show": true,
+          "label": "Event Information",
+          "link": "event.html"
+        },
+        {
+          "show": true,
+          "label": "Services",
+          "link": "services.html"
+        },
+        {
+          "show": true,
+          "label": "Contact Us",
+          "link": "contact.html"
+        }
+      ],
+      "to": [
+        {
+          "show": true,
+          "label": "Home",
+          "link": "index.html"
+        },
+        {
+          "show": true,
+          "label": "About Us",
+          "link": "about.html"
+        },
+        {
+          "show": true,
+          "label": "How It Works",
+          "link": "how-it-works.html"
+        },
+        {
+          "show": true,
+          "label": "Protect Our Faith",
+          "link": "protect-our-faith.html"
+        },
+        {
+          "show": false,
+          "label": "Event Information",
+          "link": "event.html"
+        },
+        {
+          "show": true,
+          "label": "Services",
+          "link": "services.html"
+        },
+        {
+          "show": true,
+          "label": "Contact Us",
+          "link": "contact.html"
+        }
+      ]
     }
   ]
 }

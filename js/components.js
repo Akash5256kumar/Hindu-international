@@ -210,7 +210,8 @@
   function renderHeader(el) {
     var fallback = (el.getAttribute('data-nav') || '').toLowerCase();
     var anyCurrent = NAV.some(function (n) { return isCurrent(n.href); });
-    var links = NAV.map(function (n) {
+    /* Menu items switched off in the admin ("show") are left out */
+    var links = NAV.filter(function (n) { return n.show && n.label; }).map(function (n) {
       var current = isCurrent(n.href, anyCurrent ? '' : fallback) ? ' aria-current="page"' : '';
       return '<li><a class="nav__link" ' + linkAttrs(n.href) + current + '>' + esc(n.label) + '</a></li>';
     }).join('');
