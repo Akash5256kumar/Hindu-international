@@ -64,7 +64,7 @@
 /* The photo fills the left half at 4:3 — a 1200 x 900 photo shows whole, with nothing cut off —
    and the card is as tall as the photo */
 .svc-card__media { position: relative; aspect-ratio: 4 / 3; overflow: hidden; background: var(--beige); }
-.svc-card__media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.svc-card__media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 60% 50%; } /* same focus as the service banner */
 
 .svc-card__body { display: flex; flex-direction: column; justify-content: center; min-width: 0; padding: 14px 18px; }
 .svc-card__head { display: flex; align-items: center; gap: 12px; margin-bottom: 6px; }

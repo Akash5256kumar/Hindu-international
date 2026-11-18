@@ -165,7 +165,9 @@
       var s = x.s;
       var card = el('article', 'svc-card');
       var media = el('div', 'svc-card__media');
-      var img = image(s.image, s.imageAlt || s.title);
+      /* The card shows the service page's banner photo (one photo per service); the separate
+         card photo is used only while the banner photo is empty */
+      var img = image(s.bannerImage || s.image, s.imageAlt || s.title);
       if (img) media.appendChild(img);
       card.appendChild(media);
 

@@ -542,7 +542,7 @@ return [
                     $serviceIconField,
                     ['key' => 'title', 'label' => 'Service name', 'type' => 'text', 'max' => 90, 'required' => true],
                     ['key' => 'text', 'label' => 'Short description (card)', 'type' => 'textarea', 'rows' => 2, 'max' => 200],
-                    ['key' => 'image', 'label' => 'Card photo', 'type' => 'image'],
+                    ['key' => 'image', 'label' => 'Card photo (only if no Banner photo)', 'type' => 'image'],
                     ['key' => 'imageAlt', 'label' => 'Card photo description', 'type' => 'text', 'max' => 200],
                     $link('link', '“View Details” link while the page is a draft'),
 
@@ -556,7 +556,7 @@ return [
                         ['key' => 'buttonText', 'label' => 'Button text (optional)', 'type' => 'text', 'max' => 40, 'help' => 'Leave empty for no button.'],
                         $link('buttonLink', 'Button link'),
                     ]],
-                    ['key' => 'bannerImage', 'label' => 'Banner photo', 'type' => 'image', 'help' => 'Best size 2400 × 900 px. Keep the main subject on the right half; the left side fades behind the text.'],
+                    ['key' => 'bannerImage', 'label' => 'Banner photo (also the Services page card)', 'type' => 'image', 'help' => 'Best size 2400 × 900 px. Keep the main subject on the right half; the left side fades behind the text.'],
                     ['key' => 'bannerImageAlt', 'label' => 'Banner photo description', 'type' => 'text', 'max' => 200],
 
                     ['key' => 'aboutLabel', 'label' => 'About — small orange label', 'type' => 'text', 'max' => 60],

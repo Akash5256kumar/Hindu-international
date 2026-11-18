@@ -337,8 +337,8 @@
   /* photo below the heading, fading in from the top */
   .sd-banner__media { width: 100%; top: auto; height: 200px; }
   .sd-banner__media img {
-    -webkit-mask-image: linear-gradient(180deg, transparent 0%, #000 50%);
-            mask-image: linear-gradient(180deg, transparent 0%, #000 50%);
+    -webkit-mask-image: linear-gradient(180deg, transparent 0%, #000 30%);
+            mask-image: linear-gradient(180deg, transparent 0%, #000 30%);
   }
   .sd-banner__inner { min-height: 0; padding-top: 28px; padding-bottom: 190px; }
   .sd-receive, .sd-why__grid { grid-template-columns: minmax(0, 1fr); }

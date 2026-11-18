@@ -60,8 +60,8 @@ return [
 
     // Services
     'services.banner.image'         => ['1920 × 405 px', '≈ 4.7 : 1', 'Phones show a taller crop from the middle.'],
-    'services.items.*.image'        => ['800 × 600 px', '4 : 3', 'Card photo on the Services page.'],
-    'services.items.*.bannerImage'  => ['1800 × 600 px', '3 : 1', 'Phones show a crop from the middle (≈ 2 : 1).'],
+    'services.items.*.image'        => ['', '', 'Used only while the Banner photo is empty — the Services page card shows the Banner photo.'],
+    'services.items.*.bannerImage'  => ['1536 × 1024 px (or larger)', '3 : 2', 'Also shown on this service’s card on the Services page. Keep the main subject between 38% and 92% from the left and 32% to 80% from the top; keep the left third plain (the heading sits there).'],
     'services.items.*.aboutImage'   => ['1120 × 700 px', '16 : 10', ''],
     'services.items.*.receive.*.image' => ['600 × 300 px', '2 : 1', 'Standard-design pages show it a little thinner (≈ 2.4 : 1).'],
     'services.items.*.places.*.image'  => ['600 × 250 px', '12 : 5', 'Standard-design pages (e.g. Virtual Punya Snan): 600 × 400 px (3 : 2).'],
