@@ -41,13 +41,31 @@
 /* ---------- 1. Banner (heading only) ---------- */
 .sd-banner { position: relative; overflow: hidden; background: #FBF3E8; }
 .sd-banner::before { left: -150px; top: -60px; }
-.sd-banner__media { position: absolute; inset: 0 0 0 auto; width: 70%; }
-.sd-banner__media img {
-  width: 100%; height: 100%; object-fit: cover; object-position: 60% 60%;
-  -webkit-mask-image: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, .7) 18%, #000 34%);
-          mask-image: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, .7) 18%, #000 34%);
+/* Banner photo: a 3 : 2 box on the right half, so a 3 : 2 photo (1536 × 1024) shows whole —
+   nothing is cut. Only its left edge blends into the page. The banner is at least as tall as the photo. */
+.sd-banner__media {
+  position: absolute; top: 50%; right: 0; width: min(50%, 1000px); aspect-ratio: 3 / 2;
+  transform: translateY(-50%);
 }
-.sd-banner__inner { position: relative; z-index: 1; min-height: 460px; display: flex; flex-direction: column; justify-content: center; padding-top: 40px; padding-bottom: 40px; }
+.sd-banner__media img {
+  display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 50%;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 14%);
+          mask-image: linear-gradient(90deg, transparent 0%, #000 14%);
+}
+.sd-banner__inner { position: relative; z-index: 1; min-height: min(33.334vw, 667px); display: flex; flex-direction: column; justify-content: center; padding-top: 40px; padding-bottom: 40px; }
+/* the heading and texts stop where the photo starts */
+.sd-banner .sd-banner__inner .sd-slides, .sd-banner .sd-banner__inner .sd-banner__title { max-width: min(680px, calc(50vw - max(24px, (100vw - 1200px) / 2) - 40px)); }
+/* Tablets and phones: heading first, then the whole photo full width (3 : 2) */
+@media (max-width: 960px) {
+  .sd-banner { display: flex; flex-direction: column; }
+  .sd-banner__inner { order: 1; min-height: 0; padding-bottom: 24px; }
+  .sd-banner__media { order: 2; position: relative; top: auto; right: auto; width: 100%; transform: none; }
+  .sd-banner__media img {
+    -webkit-mask-image: linear-gradient(180deg, transparent 0%, #000 12%);
+            mask-image: linear-gradient(180deg, transparent 0%, #000 12%);
+  }
+  .sd-banner .sd-banner__inner .sd-slides, .sd-banner .sd-banner__inner .sd-banner__title { max-width: 680px; }
+}
 .sd-banner__title {
   margin: 0; max-width: 560px;
   font-family: var(--font-serif); font-weight: 700;
@@ -334,13 +352,7 @@
 
 @media (max-width: 640px) {
   .sd-section { padding: 40px 0; }
-  /* photo below the heading, fading in from the top */
-  .sd-banner__media { width: 100%; top: auto; height: 200px; }
-  .sd-banner__media img {
-    -webkit-mask-image: linear-gradient(180deg, transparent 0%, #000 30%);
-            mask-image: linear-gradient(180deg, transparent 0%, #000 30%);
-  }
-  .sd-banner__inner { min-height: 0; padding-top: 28px; padding-bottom: 190px; }
+  .sd-banner__inner { padding-top: 28px; }
   .sd-receive, .sd-why__grid { grid-template-columns: minmax(0, 1fr); }
   .sd-places__track { grid-auto-columns: 82%; }
   .sd-cta__media { width: 100%; top: auto; height: 150px; }
