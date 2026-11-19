@@ -41,10 +41,10 @@
 /* ---------- 1. Banner (heading only) ---------- */
 .sd-banner { position: relative; overflow: hidden; background: #FBF3E8; }
 .sd-banner::before { left: -150px; top: -60px; }
-/* Banner photo: a 3 : 2 box on the right half, so a 3 : 2 photo (1536 × 1024) shows whole —
+/* Banner photo: a 3 : 2 box on the right half (at most 810 × 540 on large screens), so a 3 : 2 photo (1536 × 1024) shows whole —
    nothing is cut. Only its left edge blends into the page. The banner is at least as tall as the photo. */
 .sd-banner__media {
-  position: absolute; top: 50%; right: 0; width: min(50%, 1000px); aspect-ratio: 3 / 2;
+  position: absolute; top: 50%; right: 0; width: min(50%, 810px); aspect-ratio: 3 / 2;
   transform: translateY(-50%);
 }
 .sd-banner__media img {
@@ -52,7 +52,7 @@
   -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 14%);
           mask-image: linear-gradient(90deg, transparent 0%, #000 14%);
 }
-.sd-banner__inner { position: relative; z-index: 1; min-height: min(33.334vw, 667px); display: flex; flex-direction: column; justify-content: center; padding-top: 40px; padding-bottom: 40px; }
+.sd-banner__inner { position: relative; z-index: 1; min-height: min(33.334vw, 540px); display: flex; flex-direction: column; justify-content: center; padding-top: 40px; padding-bottom: 40px; }
 /* the heading and texts stop where the photo starts */
 .sd-banner .sd-banner__inner .sd-slides, .sd-banner .sd-banner__inner .sd-banner__title { max-width: min(680px, calc(50vw - max(24px, (100vw - 1200px) / 2) - 40px)); }
 /* Tablets and phones: heading first, then the whole photo full width (3 : 2) */
