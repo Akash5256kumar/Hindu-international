@@ -252,6 +252,86 @@
           "link": "contact.html"
         }
       ]
+    },
+    {
+      "path": "services.items[slug=12-jyotirlinga-darshan-puja-seva].bannerImage",
+      "from": "assets/images/roots/thanks.jpg",
+      "to": "assets/images/services/banners/12-jyotirlinga-darshan-puja-seva.jpg"
+    },
+    {
+      "path": "services.items[slug=deep-daan-ganga-aarti-sankalp].bannerImage",
+      "from": "assets/images/faith/respect-prayer.jpg",
+      "to": "assets/images/services/banners/deep-daan-ganga-aarti-sankalp.jpg"
+    },
+    {
+      "path": "services.items[slug=donate-social-welfare].bannerImage",
+      "from": "assets/images/roots/donate-hero.jpg",
+      "to": "assets/images/services/banners/donate-social-welfare.jpg"
+    },
+    {
+      "path": "services.items[slug=graha-shanti-dosh-nivaran-puja].bannerImage",
+      "from": "assets/images/ritual-aarti.jpg",
+      "to": "assets/images/services/banners/graha-shanti-dosh-nivaran-puja.jpg"
+    },
+    {
+      "path": "services.items[slug=havan-yagya-booking-service].bannerImage",
+      "from": "assets/images/ritual-aarti.jpg",
+      "to": "assets/images/services/banners/havan-yagya-booking-service.jpg"
+    },
+    {
+      "path": "services.items[slug=jaap-path-anushthan].bannerImage",
+      "from": "assets/images/ritual-aarti.jpg",
+      "to": "assets/images/services/banners/jaap-path-anushthan.jpg"
+    },
+    {
+      "path": "services.items[slug=online-priest-consultation-ritual-guidance].bannerImage",
+      "from": "assets/images/ritual-aarti.jpg",
+      "to": "assets/images/services/banners/online-priest-consultation-ritual-guidance.jpg"
+    },
+    {
+      "path": "services.items[slug=pandit-booking-service].bannerImage",
+      "from": "assets/images/ritual-aarti.jpg",
+      "to": "assets/images/services/banners/pandit-booking-service.jpg"
+    },
+    {
+      "path": "services.items[slug=pind-daan-shraddh-service].bannerImage",
+      "from": "assets/images/offering-hands.jpg",
+      "to": "assets/images/services/banners/pind-daan-shraddh-service.jpg"
+    },
+    {
+      "path": "services.items[slug=puja-samagri-ritual-essentials-store].bannerImage",
+      "from": "assets/images/flower-offerings.jpg",
+      "to": "assets/images/services/banners/puja-samagri-ritual-essentials-store.jpg"
+    },
+    {
+      "path": "services.items[slug=religious-ceremony-booking-service].bannerImage",
+      "from": "assets/images/ritual-aarti.jpg",
+      "to": "assets/images/services/banners/religious-ceremony-booking-service.jpg"
+    },
+    {
+      "path": "services.items[slug=temple-darshan-offerings-service].bannerImage",
+      "from": "assets/images/faith/hero-family.jpg",
+      "to": "assets/images/services/banners/temple-darshan-offerings-service.jpg"
+    },
+    {
+      "path": "services.items[slug=virtual-festival-darshan-service].bannerImage",
+      "from": "assets/images/faith/respect-prayer.jpg",
+      "to": "assets/images/services/banners/virtual-festival-darshan-service.jpg"
+    },
+    {
+      "path": "services.items[slug=virtual-puja-booking-service].bannerImage",
+      "from": "assets/images/faith/heritage-aarti.jpg",
+      "to": "assets/images/services/banners/virtual-puja-booking-service.jpg"
+    },
+    {
+      "path": "services.items[slug=virtual-punya-snan-service].bannerImage",
+      "from": "assets/images/services/punya-snan/banner.jpg",
+      "to": "assets/images/services/banners/virtual-punya-snan-service.jpg"
+    },
+    {
+      "path": "services.items[slug=volunteer-community-service].bannerImage",
+      "from": "assets/images/faith/hero-family.jpg",
+      "to": "assets/images/services/banners/volunteer-community-service.jpg"
     }
   ]
 }
