@@ -156,6 +156,9 @@ if ($type === 'donation') {
     $lines[] = 'Amount:  ' . $amountText;
     $lines[] = 'Method:  ' . $methodLabels[$method];
 }
+if ($type === 'contact' && $event !== '') {
+    $lines[] = 'Service: ' . $event;
+}
 if ($type === 'request') {
     $lines[] = 'Phone / WhatsApp: ' . $phone;
     $lines[] = 'Event:   ' . ($event !== '' ? $event : '(not selected)');

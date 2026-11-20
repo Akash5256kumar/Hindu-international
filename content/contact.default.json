@@ -1,0 +1,36 @@
+{
+  "banner": {
+    "title": "Contact Us",
+    "text": "We are here to help you with puja services, religious ceremonies, information and other Hindu cultural needs.",
+    "image": "assets/images/contact-banner.jpg"
+  },
+  "touchTitle": "Get in Touch With Us",
+  "touchText": "Have a question, need support or want to book a service?\nReach out to us, we will be happy to assist you.",
+  "cards": [
+    { "show": true, "icon": "calendar", "title": "Service & Booking Support", "text": "For puja, rituals, ceremonies and event booking" },
+    { "show": true, "icon": "hearthand", "title": "Donation & Welfare", "text": "For contribution, seva and social welfare initiatives" },
+    { "show": true, "icon": "people", "title": "General Inquiries", "text": "For information, partnership or community support" }
+  ],
+  "emailTitle": "Email Us",
+  "hoursTitle": "Support Hours",
+  "hoursDays": "Monday to Sunday",
+  "hoursTime": "24 Hours",
+  "formTitle": "Send Us a Message",
+  "serviceOptions": [
+    { "text": "Puja & Ritual Booking" },
+    { "text": "Religious Ceremony" },
+    { "text": "Jaap & Path" },
+    { "text": "Jyotirlinga Darshan & Puja" },
+    { "text": "Pind Daan & Shraddh" },
+    { "text": "Donation & Welfare" },
+    { "text": "General Inquiry" }
+  ],
+  "faqTitle": "Frequently Asked Questions",
+  "faqText": "Find quick answers to common questions about our services, bookings and support.",
+  "faqs": [
+    { "show": true, "q": "How can I book a puja or religious ceremony?", "a": "Open the service you need on our Services page and use its booking button, or send us a message with the form above. Our team will confirm the details, date and sankalp with you." },
+    { "show": true, "q": "Can I book services for a specific date and time?", "a": "Yes. Mention your preferred date and time when you book or write to us. We will confirm availability, or suggest the nearest auspicious muhurat if needed." },
+    { "show": true, "q": "Do you provide services outside India?", "a": "Yes. Devotees living anywhere in the world can book with us. Pujas are performed in India in your name and gotra, and many services can be joined through a live video call." },
+    { "show": true, "q": "How can I contribute to your social welfare initiatives?", "a": "Visit our Donate page to contribute, or choose “Donation & Welfare” in the form above and tell us how you would like to help, including seva and volunteering." }
+  ]
+}

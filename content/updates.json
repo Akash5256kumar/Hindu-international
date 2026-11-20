@@ -1337,6 +1337,16 @@
           "buttonLink": "booking"
         }
       ]
+    },
+    {
+      "path": "contactPage.banner.text",
+      "from": "We are here to help you. Get in touch for any queries or assistance.",
+      "to": "We are here to help you with puja services, religious ceremonies, information and other Hindu cultural needs."
+    },
+    {
+      "path": "seo.pages.contact.description",
+      "from": "Questions about a puja, jaap, pind daan or any religious service? Contact Hindu.international by phone, WhatsApp or email and our team will help you.",
+      "to": "Questions about a puja, jaap, pind daan or any religious service? Send us a message or email Hindu.international and our team will be happy to help you."
     }
   ]
 }

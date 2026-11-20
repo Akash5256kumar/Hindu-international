@@ -836,16 +836,34 @@ return [
                 ['key' => 'hours', 'label' => 'Working days', 'type' => 'text', 'max' => 60],
                 ['key' => 'hoursTime', 'label' => 'Working hours', 'type' => 'text', 'max' => 60],
             ]],
-            ['path' => 'contactPage.banner', 'title' => 'Contact page banner', 'fields' => [
+            ['path' => 'contactPage.banner', 'title' => 'Contact page — banner', 'fields' => [
                 ['key' => 'title', 'label' => 'Heading', 'type' => 'text', 'max' => 80, 'required' => true],
-                ['key' => 'text', 'label' => 'Subtitle', 'type' => 'text', 'max' => 200],
-                ['key' => 'image', 'label' => 'Banner photo', 'type' => 'image', 'required' => true],
+                ['key' => 'text', 'label' => 'Text under the heading', 'type' => 'textarea', 'rows' => 2, 'max' => 220],
+                ['key' => 'image', 'label' => 'Banner photo (temple / river scene)', 'type' => 'image', 'required' => true, 'help' => 'The heading sits on the left, so keep the left part of the photo calm.'],
             ]],
-            ['path' => 'contactPage', 'title' => 'Contact page text', 'fields' => [
-                ['key' => 'infoTitle', 'label' => 'Contact box heading', 'type' => 'text', 'max' => 60],
-                ['key' => 'infoText', 'label' => 'Contact box text', 'type' => 'text', 'max' => 200],
-                ['key' => 'formTitle', 'label' => 'Form heading', 'type' => 'text', 'max' => 60],
-                ['key' => 'formText', 'label' => 'Form text', 'type' => 'text', 'max' => 200],
+            ['path' => 'contactPage', 'title' => 'Contact page — sections', 'help' => 'The email address shown on this page is the one in “Contact details” above.', 'fields' => [
+                ['key' => 'touchTitle', 'label' => '“Get in touch” — heading', 'type' => 'text', 'max' => 80],
+                ['key' => 'touchText', 'label' => '“Get in touch” — text', 'type' => 'textarea', 'rows' => 2, 'max' => 260, 'help' => 'Press Enter to start a new line.'],
+                ['key' => 'cards', 'label' => 'Help cards (3 fit in one row)', 'type' => 'list', 'min' => 0, 'max' => 3, 'itemLabel' => 'Card', 'titleField' => 'title', 'fields' => [
+                    $showField, $iconField,
+                    ['key' => 'title', 'label' => 'Card heading', 'type' => 'text', 'max' => 60, 'required' => true],
+                    ['key' => 'text', 'label' => 'Card text', 'type' => 'text', 'max' => 120],
+                ]],
+                ['key' => 'emailTitle', 'label' => 'Email — heading', 'type' => 'text', 'max' => 40],
+                ['key' => 'hoursTitle', 'label' => 'Support hours — heading', 'type' => 'text', 'max' => 40],
+                ['key' => 'hoursDays', 'label' => 'Support hours — days', 'type' => 'text', 'max' => 60],
+                ['key' => 'hoursTime', 'label' => 'Support hours — time', 'type' => 'text', 'max' => 40],
+                ['key' => 'formTitle', 'label' => 'Form — heading', 'type' => 'text', 'max' => 60],
+                ['key' => 'serviceOptions', 'label' => 'Form — “Select Service” choices', 'type' => 'list', 'min' => 1, 'max' => 20, 'itemLabel' => 'Choice', 'titleField' => 'text', 'fields' => [
+                    ['key' => 'text', 'label' => 'Choice', 'type' => 'text', 'max' => 80, 'required' => true],
+                ]],
+                ['key' => 'faqTitle', 'label' => 'FAQ — heading', 'type' => 'text', 'max' => 80],
+                ['key' => 'faqText', 'label' => 'FAQ — text under the heading', 'type' => 'text', 'max' => 200],
+                ['key' => 'faqs', 'label' => 'FAQ questions', 'type' => 'list', 'min' => 0, 'max' => 20, 'itemLabel' => 'Question', 'titleField' => 'q', 'fields' => [
+                    $showField,
+                    ['key' => 'q', 'label' => 'Question', 'type' => 'text', 'max' => 200, 'required' => true],
+                    ['key' => 'a', 'label' => 'Answer', 'type' => 'textarea', 'rows' => 3, 'max' => 1200, 'required' => true],
+                ]],
             ]],
         ],
     ],

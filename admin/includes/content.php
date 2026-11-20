@@ -42,6 +42,7 @@ final class ContentStore
     private const ABOUT_DEFAULT = CONTENT_DIR . '/about.default.json';
     /** Starting content for the How It Works page, used until the admin saves its own */
     private const HOW_DEFAULT = CONTENT_DIR . '/how.default.json';
+    private const CONTACT_DEFAULT = CONTENT_DIR . '/contact.default.json';
     /** One-time text updates (applied only while the saved text is unchanged) */
     private const UPDATES = CONTENT_DIR . '/updates.json';
     /** Old service / Jyotirlinga addresses and the clean addresses they moved to */
@@ -146,7 +147,7 @@ final class ContentStore
                 $data['jaapServices']['items'] = self::upgradeJaapPages($data['jaapServices']['items'] ?? [], $jaap);
             }
         }
-        foreach (['home' => self::HOME_DEFAULT, 'about' => self::ABOUT_DEFAULT, 'howPage' => self::HOW_DEFAULT] as $page => $file) {
+        foreach (['home' => self::HOME_DEFAULT, 'about' => self::ABOUT_DEFAULT, 'howPage' => self::HOW_DEFAULT, 'contactPage' => self::CONTACT_DEFAULT] as $page => $file) {
             if (!is_file($file)) {
                 continue;
             }
