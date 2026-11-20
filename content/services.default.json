@@ -174,7 +174,33 @@
       "ctaLink": "booking",
       "ctaImage": "assets/images/services/punya-snan/cta.jpg",
       "seoTitle": "Virtual Punya Snan Service | Hindu.International",
-      "seoDescription": "Our priests take the sacred dip at holy rivers on your behalf with your name, gotra and photograph, and share the recorded video with you."
+      "seoDescription": "Our priests take the sacred dip at holy rivers on your behalf with your name, gotra and photograph, and share the recorded video with you.",
+      "bannerSlides": [
+        {
+          "label": "",
+          "title": "Virtual\nPunya Snan Service",
+          "accent": "Punya Snan",
+          "text": "",
+          "buttonText": "",
+          "buttonLink": ""
+        },
+        {
+          "label": "",
+          "title": "Holy Dip at\nSacred Rivers",
+          "accent": "Sacred Rivers",
+          "text": "Punya snan in your name at the Ganga, Sangam and other holy rivers, by a priest on your behalf.",
+          "buttonText": "Book Punya Snan",
+          "buttonLink": "booking"
+        },
+        {
+          "label": "",
+          "title": "Snan on Auspicious\nDays & Festivals",
+          "accent": "Days & Festivals",
+          "text": "Purnima, Amavasya, Makar Sankranti and Kumbh snan, with sankalp in your name and gotra.",
+          "buttonText": "Book Now",
+          "buttonLink": "booking"
+        }
+      ]
     },
     {
       "show": true,
@@ -359,7 +385,33 @@
       "ctaLink": "booking",
       "ctaImage": "assets/images/faith/hero-family.jpg",
       "seoTitle": "Virtual Festival Darshan Service | Hindu.International",
-      "seoDescription": "Experience the live darshan of major Hindu festivals remotely when you cannot attend in person, from your home or wherever you are."
+      "seoDescription": "Experience the live darshan of major Hindu festivals remotely when you cannot attend in person, from your home or wherever you are.",
+      "bannerSlides": [
+        {
+          "label": "",
+          "title": "Virtual Festival\nDarshan Service",
+          "accent": "Festival",
+          "text": "",
+          "buttonText": "",
+          "buttonLink": ""
+        },
+        {
+          "label": "",
+          "title": "Celebrate Every\nFestival, Live",
+          "accent": "Festival, Live",
+          "text": "Rath Yatra, Durga Puja, Ganesh Utsav and more, through live video from the celebrations.",
+          "buttonText": "Book Festival Darshan",
+          "buttonLink": "booking"
+        },
+        {
+          "label": "",
+          "title": "Holy Melas,\nWherever You Are",
+          "accent": "Wherever You Are",
+          "text": "Experience the Kumbh and other sacred melas with live darshan arranged for you.",
+          "buttonText": "Explore Festivals",
+          "buttonLink": "booking"
+        }
+      ]
     },
     {
       "show": true,
@@ -522,7 +574,33 @@
       "ctaLink": "booking",
       "ctaImage": "assets/images/roots/thanks.jpg",
       "seoTitle": "Virtual Puja Booking Service | Hindu.International",
-      "seoDescription": "Explore and book available puja arrangements remotely: choose your puja, share your details and receive confirmation of the arrangements."
+      "seoDescription": "Explore and book available puja arrangements remotely: choose your puja, share your details and receive confirmation of the arrangements.",
+      "bannerSlides": [
+        {
+          "label": "",
+          "title": "Virtual Puja\nBooking Service",
+          "accent": "Puja",
+          "text": "",
+          "buttonText": "",
+          "buttonLink": ""
+        },
+        {
+          "label": "",
+          "title": "Book Your Puja\nfrom Anywhere",
+          "accent": "from Anywhere",
+          "text": "Join pujas performed by experienced priests through a live video call, wherever you are.",
+          "buttonText": "Book a Virtual Puja",
+          "buttonLink": "booking"
+        },
+        {
+          "label": "",
+          "title": "Sankalp in Your Name,\nLive on Video",
+          "accent": "Live on Video",
+          "text": "Your name and gotra are taken in the sankalp while your family watches the puja live.",
+          "buttonText": "Book Now",
+          "buttonLink": "booking"
+        }
+      ]
     },
     {
       "show": true,
@@ -685,7 +763,33 @@
       "ctaLink": "booking",
       "ctaImage": "assets/images/about-banner.jpg",
       "seoTitle": "Pind Daan & Shraddh Service | Hindu.International",
-      "seoDescription": "Explore and arrange available Pind Daan and Shraddh ritual services remotely, in remembrance of your ancestors and according to your family customs."
+      "seoDescription": "Explore and arrange available Pind Daan and Shraddh ritual services remotely, in remembrance of your ancestors and according to your family customs.",
+      "bannerSlides": [
+        {
+          "label": "",
+          "title": "Pind Daan &\nShraddh Service",
+          "accent": "Shraddh",
+          "text": "",
+          "buttonText": "",
+          "buttonLink": ""
+        },
+        {
+          "label": "",
+          "title": "Pind Daan\nat Holy Gaya",
+          "accent": "at Holy Gaya",
+          "text": "Pind daan and tarpan for your ancestors, performed by experienced priests with proper vidhi.",
+          "buttonText": "Book Pind Daan",
+          "buttonLink": "booking"
+        },
+        {
+          "label": "",
+          "title": "Shraddh for Peace\nof Your Ancestors",
+          "accent": "of Your Ancestors",
+          "text": "Shraddh rituals at Gaya, Varanasi and Haridwar, with sankalp in your name and gotra.",
+          "buttonText": "Book Shraddh",
+          "buttonLink": "booking"
+        }
+      ]
     },
     {
       "show": true,
@@ -856,6 +960,22 @@
           "accent": "Ritual Essentials Store",
           "text": "Get authentic puja samagri and ritual essentials for your spiritual needs.",
           "buttonText": "Shop Puja Samagri",
+          "buttonLink": "booking"
+        },
+        {
+          "label": "",
+          "title": "Complete Puja Kits\nfor Every Ritual",
+          "accent": "for Every Ritual",
+          "text": "Kalash, diyas, havan samagri and more, put together for the puja you are planning.",
+          "buttonText": "Shop Puja Kits",
+          "buttonLink": "booking"
+        },
+        {
+          "label": "",
+          "title": "Authentic Items,\nCarefully Chosen",
+          "accent": "Carefully Chosen",
+          "text": "Pure samagri and ritual essentials, chosen as per tradition for your puja.",
+          "buttonText": "Shop Samagri",
           "buttonLink": "booking"
         }
       ]
@@ -1030,6 +1150,22 @@
           "text": "Arrange sacred havan and yagya rituals with ease for your spiritual needs and special occasions.",
           "buttonText": "Book Havan & Yagya",
           "buttonLink": "booking"
+        },
+        {
+          "label": "",
+          "title": "Sacred Fire for\nEvery Occasion",
+          "accent": "Every Occasion",
+          "text": "Griha Pravesh, Navgraha, Ganesh and Sudarshan havan, performed as per Vedic tradition.",
+          "buttonText": "Book a Havan",
+          "buttonLink": "booking"
+        },
+        {
+          "label": "",
+          "title": "Yagya with\nProper Vedic Vidhi",
+          "accent": "Proper Vedic Vidhi",
+          "text": "Experienced priests arrange the samagri, mantras and ahutis for your yagya.",
+          "buttonText": "Book a Yagya",
+          "buttonLink": "booking"
         }
       ]
     },
@@ -1201,6 +1337,22 @@
           "title": "Temple Darshan &\nOfferings Service",
           "accent": "Offerings Service",
           "text": "Experience sacred temple darshan and arrange religious offerings with ease, wherever you are.",
+          "buttonText": "Book Temple Darshan",
+          "buttonLink": "booking"
+        },
+        {
+          "label": "",
+          "title": "Offerings at\nSacred Temples",
+          "accent": "Sacred Temples",
+          "text": "Flowers, prasad and chadhava offered in your name at temples across India.",
+          "buttonText": "Make an Offering",
+          "buttonLink": "booking"
+        },
+        {
+          "label": "",
+          "title": "Darshan Without\nthe Long Journey",
+          "accent": "the Long Journey",
+          "text": "Temple visits and offerings arranged for you, with photos or live video where available.",
           "buttonText": "Book Temple Darshan",
           "buttonLink": "booking"
         }
@@ -1376,6 +1528,22 @@
           "text": "Find the right pandit for your religious occasion and make your arrangements with ease.",
           "buttonText": "Book a Pandit",
           "buttonLink": "booking"
+        },
+        {
+          "label": "",
+          "title": "Experienced Pandits\nfor Every Ritual",
+          "accent": "for Every Ritual",
+          "text": "Griha Pravesh, Satyanarayan Katha, Mundan, Vivah and more, performed with proper Vedic vidhi.",
+          "buttonText": "Book a Pandit",
+          "buttonLink": "booking"
+        },
+        {
+          "label": "",
+          "title": "Your Puja,\nYour Language",
+          "accent": "Your Language",
+          "text": "Pandits who explain each step in Hindi, English and regional languages, at home or online.",
+          "buttonText": "Find a Pandit",
+          "buttonLink": "booking"
         }
       ]
     },
@@ -1549,6 +1717,22 @@
           "text": "Arrange Hindu religious ceremonies with ease for your spiritual and family needs.",
           "buttonText": "Book a Ceremony",
           "buttonLink": "booking"
+        },
+        {
+          "label": "",
+          "title": "Vivah, Mundan and\nNamkaran Sanskar",
+          "accent": "Namkaran Sanskar",
+          "text": "Sacred ceremonies for every stage of life, performed with proper Vedic rituals.",
+          "buttonText": "Book a Ceremony",
+          "buttonLink": "booking"
+        },
+        {
+          "label": "",
+          "title": "Griha Pravesh and\nFamily Ceremonies",
+          "accent": "Family Ceremonies",
+          "text": "Priests, samagri and arrangements for your family occasion, at home or at a temple.",
+          "buttonText": "Plan Your Ceremony",
+          "buttonLink": "booking"
         }
       ]
     },
@@ -1720,6 +1904,22 @@
           "title": "Religious Awareness\nService",
           "accent": "Service",
           "text": "Learn about Hindu traditions, religious practices, and spiritual values in a simple and accessible way.",
+          "buttonText": "Explore Religious Awareness",
+          "buttonLink": "protect-our-faith"
+        },
+        {
+          "label": "",
+          "title": "Understand the Meaning\nBehind Every Ritual",
+          "accent": "Behind Every Ritual",
+          "text": "Simple explanations of pujas, festivals, symbols and sacred texts for every family.",
+          "buttonText": "Start Learning",
+          "buttonLink": "protect-our-faith"
+        },
+        {
+          "label": "",
+          "title": "Pass Our Traditions\nto the Next Generation",
+          "accent": "to the Next Generation",
+          "text": "Talks and guidance that help children and families stay connected to their roots.",
           "buttonText": "Explore Religious Awareness",
           "buttonLink": "protect-our-faith"
         }
@@ -1895,6 +2095,22 @@
           "text": "Support meaningful social welfare initiatives and help make a positive difference in people's lives.",
           "buttonText": "Explore Donation Options",
           "buttonLink": "donate"
+        },
+        {
+          "label": "",
+          "title": "Food and Warmth\nfor Those in Need",
+          "accent": "for Those in Need",
+          "text": "Your donation brings meals, blankets and essentials to elderly people and families in need.",
+          "buttonText": "Donate Now",
+          "buttonLink": "donate"
+        },
+        {
+          "label": "",
+          "title": "Seva Is the\nHighest Puja",
+          "accent": "Highest Puja",
+          "text": "Support education, food and care for children and the elderly through meaningful seva.",
+          "buttonText": "Support a Cause",
+          "buttonLink": "donate"
         }
       ]
     },
@@ -2068,6 +2284,22 @@
           "text": "Make a positive difference by exploring volunteer opportunities and supporting meaningful community initiatives.",
           "buttonText": "Explore Opportunities",
           "buttonLink": "contact"
+        },
+        {
+          "label": "",
+          "title": "Serve Your\nCommunity",
+          "accent": "Community",
+          "text": "Join food drives, temple seva and community programmes near you.",
+          "buttonText": "Become a Volunteer",
+          "buttonLink": "contact"
+        },
+        {
+          "label": "",
+          "title": "Your Time Can\nChange Lives",
+          "accent": "Change Lives",
+          "text": "Help with festivals, awareness programmes and welfare drives, in person or online.",
+          "buttonText": "Join Us",
+          "buttonLink": "contact"
         }
       ]
     },
@@ -2240,6 +2472,22 @@
           "accent": "Consultation & Ritual Guidance",
           "text": "Get guidance on Hindu rituals, religious customs, and puja arrangements from the comfort of your home.",
           "buttonText": "Consult a Priest",
+          "buttonLink": "contact"
+        },
+        {
+          "label": "",
+          "title": "Ask a Priest,\nfrom Home",
+          "accent": "from Home",
+          "text": "Talk to experienced priests about pujas, muhurat and rituals over a video call.",
+          "buttonText": "Consult a Priest",
+          "buttonLink": "contact"
+        },
+        {
+          "label": "",
+          "title": "Right Guidance for\nEvery Ritual",
+          "accent": "Every Ritual",
+          "text": "Understand the vidhi, samagri and meaning of each ritual before you begin.",
+          "buttonText": "Get Guidance",
           "buttonLink": "contact"
         }
       ]
@@ -2470,6 +2718,22 @@
           "accent": "Dosh Nivaran Puja",
           "text": "Kaal Sarp, Mangal Dosh, Pitru Dosh, Navgraha Shanti jaisi pujayen, aapke naam aur gotra se, live video ke saath.",
           "buttonText": "Book Graha Shanti Puja",
+          "buttonLink": "booking"
+        },
+        {
+          "label": "",
+          "title": "Navgraha Shanti\nfor a Peaceful Life",
+          "accent": "for a Peaceful Life",
+          "text": "Puja for the nine planets, performed by experienced priests as per Vedic tradition.",
+          "buttonText": "Book Navgraha Puja",
+          "buttonLink": "booking"
+        },
+        {
+          "label": "",
+          "title": "Relief from Kaal Sarp\nand Mangal Dosh",
+          "accent": "and Mangal Dosh",
+          "text": "Dosh nivaran pujas with sankalp in your name and gotra, with live video where available.",
+          "buttonText": "Book Dosh Nivaran",
           "buttonLink": "booking"
         }
       ]
@@ -2715,6 +2979,22 @@
           "text": "Mahamrityunjay Jaap, Sundarkand Path, Durga Saptashati, Hanuman Chalisa path, Rudrabhishek, sab aapke sankalp ke saath, live dikhaya jaaye.",
           "buttonText": "Book Jaap & Path",
           "buttonLink": "booking"
+        },
+        {
+          "label": "",
+          "title": "Mahamrityunjay Jaap\nfor Health & Protection",
+          "accent": "for Health & Protection",
+          "text": "Chanting of the sacred mantra by experienced priests, with sankalp in your name.",
+          "buttonText": "Book Mahamrityunjay Jaap",
+          "buttonLink": "mahamrityunjay-jaap"
+        },
+        {
+          "label": "",
+          "title": "Sundarkand & Hanuman\nChalisa Path",
+          "accent": "Chalisa Path",
+          "text": "Recitations for strength, courage and removal of obstacles, performed with proper vidhi.",
+          "buttonText": "Book a Path",
+          "buttonLink": "booking"
         }
       ]
     },
@@ -2887,6 +3167,22 @@
           "accent": "Ganga Aarti Sankalp",
           "text": "Offer a sacred deep daan and participate in Ganga Aarti through a sankalp in your name, with live video access where available.",
           "buttonText": "Book Deep Daan",
+          "buttonLink": "booking"
+        },
+        {
+          "label": "",
+          "title": "A Diya Offered\nin Your Name",
+          "accent": "in Your Name",
+          "text": "Deep daan on the holy Ganga at Varanasi and Haridwar, with sankalp for you and your family.",
+          "buttonText": "Offer Deep Daan",
+          "buttonLink": "booking"
+        },
+        {
+          "label": "",
+          "title": "Be Part of the\nEvening Ganga Aarti",
+          "accent": "Evening Ganga Aarti",
+          "text": "Join the sacred aarti on the ghats through a live video call, from anywhere in the world.",
+          "buttonText": "Join Ganga Aarti",
           "buttonLink": "booking"
         }
       ]
@@ -3171,6 +3467,22 @@
           "text": "Explore the sacred twelve Jyotirlingas of Lord Shiva and discover available darshan, puja, and abhishek arrangements.",
           "buttonText": "Explore Jyotirlingas",
           "buttonLink": "#sd-places"
+        },
+        {
+          "label": "",
+          "title": "From Somnath\nto Kedarnath",
+          "accent": "to Kedarnath",
+          "text": "Puja and abhishek at all twelve Jyotirlingas of Lord Shiva, with sankalp in your name.",
+          "buttonText": "View All Jyotirlingas",
+          "buttonLink": "#sd-places"
+        },
+        {
+          "label": "",
+          "title": "Rudrabhishek at\nthe Holy Jyotirlingas",
+          "accent": "the Holy Jyotirlingas",
+          "text": "Arrange abhishek and puja at the temple of your choice, with live video where available.",
+          "buttonText": "Book Puja Seva",
+          "buttonLink": "booking"
         }
       ]
     }
