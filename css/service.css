@@ -49,8 +49,8 @@
 }
 .sd-banner__media img {
   display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 50%;
-  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 14%);
-          mask-image: linear-gradient(90deg, transparent 0%, #000 14%);
+  border-radius: 22px 0 0 22px; /* the photo exactly as uploaded: no fade, soft rounded edge */
+  box-shadow: -14px 0 40px rgba(120, 60, 15, .18);
 }
 .sd-banner__inner { position: relative; z-index: 1; min-height: min(33.334vw, 540px); display: flex; flex-direction: column; justify-content: center; padding-top: 40px; padding-bottom: 40px; }
 /* the heading and texts stop where the photo starts */
@@ -60,10 +60,7 @@
   .sd-banner { display: flex; flex-direction: column; }
   .sd-banner__inner { order: 1; min-height: 0; padding-bottom: 24px; }
   .sd-banner__media { order: 2; position: relative; top: auto; right: auto; width: 100%; transform: none; }
-  .sd-banner__media img {
-    -webkit-mask-image: linear-gradient(180deg, transparent 0%, #000 12%);
-            mask-image: linear-gradient(180deg, transparent 0%, #000 12%);
-  }
+  .sd-banner__media img { border-radius: 0; box-shadow: none; }
   .sd-banner .sd-banner__inner .sd-slides, .sd-banner .sd-banner__inner .sd-banner__title { max-width: 680px; }
 }
 .sd-banner__title {
