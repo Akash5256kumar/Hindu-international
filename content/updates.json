@@ -332,6 +332,76 @@
       "path": "services.items[slug=volunteer-community-service].bannerImage",
       "from": "assets/images/faith/hero-family.jpg",
       "to": "assets/images/services/banners/volunteer-community-service.jpg"
+    },
+    {
+      "path": "services.items[slug=12-jyotirlinga-darshan-puja-seva].bannerImage",
+      "from": "assets/images/services/banners/12-jyotirlinga-darshan-puja-seva.jpg",
+      "to": "assets/images/services/banners/12-jyotirlinga-darshan-puja-seva-v2.jpg"
+    },
+    {
+      "path": "services.items[slug=deep-daan-ganga-aarti-sankalp].bannerImage",
+      "from": "assets/images/services/banners/deep-daan-ganga-aarti-sankalp.jpg",
+      "to": "assets/images/services/banners/deep-daan-ganga-aarti-sankalp-v2.jpg"
+    },
+    {
+      "path": "services.items[slug=donate-social-welfare].bannerImage",
+      "from": "assets/images/services/banners/donate-social-welfare.jpg",
+      "to": "assets/images/services/banners/donate-social-welfare-v2.jpg"
+    },
+    {
+      "path": "services.items[slug=graha-shanti-dosh-nivaran-puja].bannerImage",
+      "from": "assets/images/services/banners/graha-shanti-dosh-nivaran-puja.jpg",
+      "to": "assets/images/services/banners/graha-shanti-dosh-nivaran-puja-v2.jpg"
+    },
+    {
+      "path": "services.items[slug=havan-yagya-booking-service].bannerImage",
+      "from": "assets/images/services/banners/havan-yagya-booking-service.jpg",
+      "to": "assets/images/services/banners/havan-yagya-booking-service-v2.jpg"
+    },
+    {
+      "path": "services.items[slug=jaap-path-anushthan].bannerImage",
+      "from": "assets/images/services/banners/jaap-path-anushthan.jpg",
+      "to": "assets/images/services/banners/jaap-path-anushthan-v2.jpg"
+    },
+    {
+      "path": "services.items[slug=online-priest-consultation-ritual-guidance].bannerImage",
+      "from": "assets/images/services/banners/online-priest-consultation-ritual-guidance.jpg",
+      "to": "assets/images/services/banners/online-priest-consultation-ritual-guidance-v2.jpg"
+    },
+    {
+      "path": "services.items[slug=pandit-booking-service].bannerImage",
+      "from": "assets/images/services/banners/pandit-booking-service.jpg",
+      "to": "assets/images/services/banners/pandit-booking-service-v2.jpg"
+    },
+    {
+      "path": "services.items[slug=religious-awareness-service].bannerImage",
+      "from": "assets/images/roots/thanks.jpg",
+      "to": "assets/images/services/banners/religious-awareness-service-v2.jpg"
+    },
+    {
+      "path": "services.items[slug=religious-ceremony-booking-service].bannerImage",
+      "from": "assets/images/services/banners/religious-ceremony-booking-service.jpg",
+      "to": "assets/images/services/banners/religious-ceremony-booking-service-v2.jpg"
+    },
+    {
+      "path": "services.items[slug=temple-darshan-offerings-service].bannerImage",
+      "from": "assets/images/services/banners/temple-darshan-offerings-service.jpg",
+      "to": "assets/images/services/banners/temple-darshan-offerings-service-v2.jpg"
+    },
+    {
+      "path": "services.items[slug=virtual-festival-darshan-service].bannerImage",
+      "from": "assets/images/services/banners/virtual-festival-darshan-service.jpg",
+      "to": "assets/images/services/banners/virtual-festival-darshan-service-v2.jpg"
+    },
+    {
+      "path": "services.items[slug=virtual-puja-booking-service].bannerImage",
+      "from": "assets/images/services/banners/virtual-puja-booking-service.jpg",
+      "to": "assets/images/services/banners/virtual-puja-booking-service-v2.jpg"
+    },
+    {
+      "path": "services.items[slug=virtual-punya-snan-service].bannerImage",
+      "from": "assets/images/services/banners/virtual-punya-snan-service.jpg",
+      "to": "assets/images/services/banners/virtual-punya-snan-service-v2.jpg"
     }
   ]
 }
