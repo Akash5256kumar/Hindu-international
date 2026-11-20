@@ -56,27 +56,24 @@
   .sd-banner__media { order: 2; }
 }
 @media (min-width: 961px) {
-  .sd-banner {
-    height: min(650px, 48vw);
-    background: linear-gradient(90deg, rgb(var(--edge2, 251, 236, 216)) 0%, rgb(var(--edge, 251, 243, 232)) 100%);
-  }
-  .sd-banner__media { position: absolute; top: 0; right: 0; height: 100%; width: auto; max-width: 78%; }
-  .sd-banner__media img {
-    -webkit-mask-image: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, .55) 12%, #000 26%);
-            mask-image: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, .55) 12%, #000 26%);
-  }
+  /* the photo fills the whole banner: no colour band, no fade */
+  .sd-banner { position: relative; height: min(48vw, 860px); }
+  .sd-banner__media { position: absolute; inset: 0; width: 100%; height: 100%; aspect-ratio: auto; }
+  .sd-banner__media img { object-fit: cover; object-position: 50% 50%; }
   .sd-banner__inner.container {
     position: absolute; z-index: 1; top: 50%; left: max(24px, calc(50% - 600px)); transform: translateY(-50%);
-    width: min(700px, 52%); max-width: none; margin: 0; padding: 0;
+    width: min(760px, 56%); max-width: none; margin: 0; padding: 0;
     display: flex; flex-direction: column; justify-content: center;
   }
-  .sd-banner__inner .sd-banner__title { font-size: clamp(2.2rem, 3.9vw, 3.6rem); }
-  .sd-banner__inner .sd-slide__text { font-size: 1.12rem; max-width: 54ch; }
-  .sd-banner--light .sd-banner__title { color: var(--roots-ink); }
-  .sd-banner--light .sd-slide__text { color: #231F1B; }
-  .sd-banner--deep .sd-banner__title { color: #FFF7EC; text-shadow: 0 2px 18px rgba(0, 0, 0, .35); }
+  .sd-banner__inner .sd-banner__title { font-size: clamp(2.8rem, 4.9vw, 4.6rem); line-height: 1.06; }
+  .sd-banner__inner .sd-slide__label { font-size: .95rem; }
+  .sd-banner__inner .sd-slide__text { margin-top: 18px; font-size: clamp(1.2rem, 1.55vw, 1.45rem); line-height: 1.5; max-width: 40ch; }
+  .sd-banner__inner .sd-slide__btn { margin-top: 28px; min-height: 58px; padding: 0 32px; font-size: 1.12rem; }
+  .sd-banner--light .sd-banner__title { color: var(--roots-ink); text-shadow: 0 1px 2px rgba(255, 255, 255, .6), 0 0 24px rgba(255, 255, 255, .75); }
+  .sd-banner--light .sd-slide__text { color: #1E1A16; font-weight: 500; text-shadow: 0 0 14px rgba(255, 255, 255, .9), 0 0 4px rgba(255, 255, 255, .8); }
+  .sd-banner--deep .sd-banner__title { color: #FFF8EE; text-shadow: 0 2px 4px rgba(0, 0, 0, .45), 0 4px 28px rgba(0, 0, 0, .55); }
   .sd-banner--deep .sd-banner__title .sd-accent { color: #FFD27A; }
-  .sd-banner--deep .sd-slide__text, .sd-banner--deep .sd-slide__label { color: rgba(255, 247, 236, .96); text-shadow: 0 1px 10px rgba(0, 0, 0, .4); }
+  .sd-banner--deep .sd-slide__text, .sd-banner--deep .sd-slide__label { color: #FFF8EE; font-weight: 500; text-shadow: 0 1px 3px rgba(0, 0, 0, .6), 0 2px 18px rgba(0, 0, 0, .6); }
   .sd-banner--deep .sd-lotus { color: #FFD27A; }
 }
 .sd-banner__title {

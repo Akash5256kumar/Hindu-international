@@ -340,7 +340,7 @@
         return [r / n, gr / n, b / n];
       };
       /* the photo's left edge (where it melts into the band) and a richer shade for the far left */
-      var e = avg(0, 5);
+      var e = avg(0, 27);
       var lum = (0.299 * e[0] + 0.587 * e[1] + 0.114 * e[2]) / 255;
       var light = lum > 0.62;
       var deep = e.map(function (v) { return Math.round(v * (light ? 0.93 : 0.72)); });
