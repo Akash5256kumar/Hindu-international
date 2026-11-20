@@ -41,51 +41,46 @@
 /* ---------- 1. Banner (heading only) ---------- */
 .sd-banner { position: relative; overflow: hidden; background: #FBF3E8; }
 .sd-banner::before { left: -150px; top: -60px; }
-/* Banner photo fills the full width and keeps its own shape (js/services.js sets --ar from the
-   photo itself), so any photo shows whole: nothing cut, nothing stretched, no empty space.
-   Laptops/desktops: the heading sits on the photo in a glossy glass card. Phones: heading above the photo. */
+/* Service banner. The photo is never cut or stretched: it keeps its own shape (js/services.js sets
+   --ar from the photo). Laptops/desktops: a shorter banner, the whole photo on the right, its left edge
+   melting into a band of the photo's own colours (--edge / --edge2, measured from the photo) where the
+   heading sits; the heading colours follow that band. Tablets/phones: heading first, then the whole photo. */
 .sd-banner { background: #FBF3E8; }
 .sd-banner::before { display: none; }
 .sd-banner__media { position: relative; width: 100%; aspect-ratio: var(--ar, 3 / 2); }
 .sd-banner__media img { display: block; width: 100%; height: 100%; object-fit: cover; }
-.sd-banner__inner.container {
-  position: absolute; z-index: 1; top: 50%; left: max(24px, calc(50% - 600px)); transform: translateY(-50%);
-  width: min(600px, 48%); max-width: none; margin: 0; padding: 0;
-  display: flex; flex-direction: column; justify-content: center;
-}
-/* a see-through wash of the photo's own colour behind the heading (js/services.js → bannerTone) */
-.sd-banner__media::after {
-  content: ""; position: absolute; inset: 0; pointer-events: none;
-  background: linear-gradient(90deg, rgba(var(--tone, 255, 246, 234), .78) 0%, rgba(var(--tone, 255, 246, 234), .55) 30%, rgba(var(--tone, 255, 246, 234), 0) 60%);
-}
-.sd-banner--light .sd-banner__title { color: var(--roots-ink); text-shadow: 0 1px 18px rgba(255, 255, 255, .7); }
-.sd-banner--light .sd-slide__text { color: #231F1B; text-shadow: 0 1px 12px rgba(255, 255, 255, .8); }
-.sd-banner--deep .sd-banner__title { color: #FFF7EC; text-shadow: 0 2px 20px rgba(0, 0, 0, .45); }
-.sd-banner--deep .sd-banner__title .sd-accent { color: #FFC867; }
-.sd-banner--deep .sd-slide__text, .sd-banner--deep .sd-slide__label { color: rgba(255, 247, 236, .95); text-shadow: 0 1px 12px rgba(0, 0, 0, .5); }
-.sd-banner--deep .sd-lotus { color: #FFC867; }
 .sd-banner .sd-banner__inner .sd-slides, .sd-banner .sd-banner__inner .sd-banner__title { max-width: 100%; }
-.sd-banner__inner .sd-banner__title { font-size: clamp(1.9rem, 3.6vw, 3.2rem); }
 @media (max-width: 960px) {
   .sd-banner { display: flex; flex-direction: column; }
-  .sd-banner__inner.container { position: relative; top: auto; left: auto; transform: none; width: 100%; max-width: calc(680px + 48px); margin: 0; order: 1; padding: 28px 24px 24px; }
-  .sd-banner__media::after { display: none; }
-  .sd-banner--deep .sd-banner__title, .sd-banner--deep .sd-slide__text { text-shadow: none; } .sd-banner--deep .sd-banner__title { color: var(--roots-ink); } .sd-banner--deep .sd-banner__title .sd-accent { color: var(--saffron); }
-  .sd-banner--deep .sd-slide__text { color: var(--ink-2); } .sd-banner--deep .sd-lotus { color: inherit; }
+  .sd-banner__inner.container { order: 1; width: 100%; max-width: calc(680px + 48px); margin: 0; padding: 28px 24px 24px; }
   .sd-banner__media { order: 2; }
-  .sd-banner .sd-banner__inner .sd-slides, .sd-banner .sd-banner__inner .sd-banner__title { max-width: 680px; }
 }
-.sd-banner__title { max-width: min(680px, calc(50vw - max(24px, (100vw - 1200px) / 2) - 40px)); }
-/* Tablets and phones: heading first, then the whole photo full width (3 : 2) */
-@media (max-width: 960px) {
-  .sd-banner { display: flex; flex-direction: column; }
-  .sd-banner__inner { order: 1; min-height: 0; padding-bottom: 24px; }
-  .sd-banner__media { order: 2; position: relative; top: auto; right: auto; width: 100%; transform: none; }
-  .sd-banner__media img { border-radius: 0; box-shadow: none; }
-  .sd-banner .sd-banner__inner .sd-slides, .sd-banner .sd-banner__inner .sd-banner__title { max-width: 680px; }
+@media (min-width: 961px) {
+  .sd-banner {
+    height: min(650px, 48vw);
+    background: linear-gradient(90deg, rgb(var(--edge2, 251, 236, 216)) 0%, rgb(var(--edge, 251, 243, 232)) 100%);
+  }
+  .sd-banner__media { position: absolute; top: 0; right: 0; height: 100%; width: auto; max-width: 78%; }
+  .sd-banner__media img {
+    -webkit-mask-image: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, .55) 12%, #000 26%);
+            mask-image: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, .55) 12%, #000 26%);
+  }
+  .sd-banner__inner.container {
+    position: absolute; z-index: 1; top: 50%; left: max(24px, calc(50% - 600px)); transform: translateY(-50%);
+    width: min(700px, 52%); max-width: none; margin: 0; padding: 0;
+    display: flex; flex-direction: column; justify-content: center;
+  }
+  .sd-banner__inner .sd-banner__title { font-size: clamp(2.2rem, 3.9vw, 3.6rem); }
+  .sd-banner__inner .sd-slide__text { font-size: 1.12rem; max-width: 54ch; }
+  .sd-banner--light .sd-banner__title { color: var(--roots-ink); }
+  .sd-banner--light .sd-slide__text { color: #231F1B; }
+  .sd-banner--deep .sd-banner__title { color: #FFF7EC; text-shadow: 0 2px 18px rgba(0, 0, 0, .35); }
+  .sd-banner--deep .sd-banner__title .sd-accent { color: #FFD27A; }
+  .sd-banner--deep .sd-slide__text, .sd-banner--deep .sd-slide__label { color: rgba(255, 247, 236, .96); text-shadow: 0 1px 10px rgba(0, 0, 0, .4); }
+  .sd-banner--deep .sd-lotus { color: #FFD27A; }
 }
 .sd-banner__title {
-  margin: 0; max-width: 560px;
+  margin: 0;
   font-family: var(--font-serif); font-weight: 700;
   font-size: clamp(2.3rem, 4.6vw, 3.5rem); line-height: 1.08;
   color: var(--roots-ink);

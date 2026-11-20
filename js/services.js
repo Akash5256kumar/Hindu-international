@@ -334,16 +334,21 @@
     try {
       var c = document.createElement('canvas'); c.width = 60; c.height = 40;
       var g = c.getContext('2d'); g.drawImage(img, 0, 0, 60, 40);
-      var d = g.getImageData(0, 6, 28, 28).data, r = 0, gr = 0, b = 0, n = d.length / 4;
-      for (var i = 0; i < d.length; i += 4) { r += d[i]; gr += d[i + 1]; b += d[i + 2]; }
-      r /= n; gr /= n; b /= n;
-      var light = (0.299 * r + 0.587 * gr + 0.114 * b) / 255 > 0.6;
-      var mix = function (v, to, k) { return Math.round(v + (to - v) * k); };
-      var t = light ? [mix(r, 255, .5), mix(gr, 250, .5), mix(b, 240, .5)] : [mix(r, 40, .45), mix(gr, 14, .45), mix(b, 4, .45)];
-      box.style.setProperty('--tone', t.join(', '));
+      var avg = function (x, w) {
+        var d = g.getImageData(x, 0, w, 40).data, r = 0, gr = 0, b = 0, n = d.length / 4;
+        for (var i = 0; i < d.length; i += 4) { r += d[i]; gr += d[i + 1]; b += d[i + 2]; }
+        return [r / n, gr / n, b / n];
+      };
+      /* the photo's left edge (where it melts into the band) and a richer shade for the far left */
+      var e = avg(0, 5);
+      var lum = (0.299 * e[0] + 0.587 * e[1] + 0.114 * e[2]) / 255;
+      var light = lum > 0.62;
+      var deep = e.map(function (v) { return Math.round(v * (light ? 0.93 : 0.72)); });
+      box.style.setProperty('--edge', e.map(Math.round).join(', '));
+      box.style.setProperty('--edge2', deep.join(', '));
       box.classList.toggle('sd-banner--light', light);
       box.classList.toggle('sd-banner--deep', !light);
-    } catch (e) { box.classList.add('sd-banner--deep'); }
+    } catch (err) { box.classList.add('sd-banner--light'); }
   }
 
   /* Heading text with the orange words; Enter in the admin starts a new line */
