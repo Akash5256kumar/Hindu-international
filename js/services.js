@@ -287,7 +287,11 @@
       var img = image(s.bannerImage, '', s.image || fallbackImage);
       if (img) { img.loading = 'eager'; img.setAttribute('fetchpriority', 'high');
         /* the banner takes the photo's own shape, so the whole photo shows on every screen */
-        var setShape = function () { if (img.naturalWidth) box.style.setProperty('--ar', img.naturalWidth + ' / ' + img.naturalHeight); };
+        var setShape = function () {
+          if (!img.naturalWidth) return;
+          box.style.setProperty('--ar', img.naturalWidth + ' / ' + img.naturalHeight);
+          bannerTone(img, box);
+        };
         img.addEventListener('load', setShape); if (img.complete) setShape();
         media.appendChild(img); }
       box.appendChild(media);
@@ -321,6 +325,25 @@
       box.appendChild(inner);
       if (slides.length > 1) rotateSlides(stack);
     });
+  }
+
+  /* Text colours follow the photo: the colour behind the heading (left part of the photo) is
+     measured; a light photo gets dark text, a deep one white and gold text, with a soft see-through
+     wash of that same colour behind the words so they stay readable. */
+  function bannerTone(img, box) {
+    try {
+      var c = document.createElement('canvas'); c.width = 60; c.height = 40;
+      var g = c.getContext('2d'); g.drawImage(img, 0, 0, 60, 40);
+      var d = g.getImageData(0, 6, 28, 28).data, r = 0, gr = 0, b = 0, n = d.length / 4;
+      for (var i = 0; i < d.length; i += 4) { r += d[i]; gr += d[i + 1]; b += d[i + 2]; }
+      r /= n; gr /= n; b /= n;
+      var light = (0.299 * r + 0.587 * gr + 0.114 * b) / 255 > 0.6;
+      var mix = function (v, to, k) { return Math.round(v + (to - v) * k); };
+      var t = light ? [mix(r, 255, .5), mix(gr, 250, .5), mix(b, 240, .5)] : [mix(r, 40, .45), mix(gr, 14, .45), mix(b, 4, .45)];
+      box.style.setProperty('--tone', t.join(', '));
+      box.classList.toggle('sd-banner--light', light);
+      box.classList.toggle('sd-banner--deep', !light);
+    } catch (e) { box.classList.add('sd-banner--deep'); }
   }
 
   /* Heading text with the orange words; Enter in the admin starts a new line */
