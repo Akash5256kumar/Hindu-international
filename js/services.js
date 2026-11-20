@@ -285,7 +285,11 @@
       var media = el('div', 'sd-banner__media');
       media.setAttribute('aria-hidden', 'true');
       var img = image(s.bannerImage, '', s.image || fallbackImage);
-      if (img) { img.loading = 'eager'; img.setAttribute('fetchpriority', 'high'); media.appendChild(img); }
+      if (img) { img.loading = 'eager'; img.setAttribute('fetchpriority', 'high');
+        /* the banner takes the photo's own shape, so the whole photo shows on every screen */
+        var setShape = function () { if (img.naturalWidth) box.style.setProperty('--ar', img.naturalWidth + ' / ' + img.naturalHeight); };
+        img.addEventListener('load', setShape); if (img.complete) setShape();
+        media.appendChild(img); }
       box.appendChild(media);
       var inner = el('div', 'container sd-banner__inner');
 
