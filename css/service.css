@@ -90,6 +90,8 @@
   .sd-banner__media::after { background: linear-gradient(90deg, rgba(7, 24, 39, .8) 0%, rgba(7, 24, 39, .62) 60%, rgba(7, 24, 39, .4) 100%); }
   .sd-banner__inner.container { padding-top: 40px; padding-bottom: 40px; }
 }
+/* very wide screens crop more from the top and bottom: keep faces and temple tops in view */
+@media (min-width: 1700px) { .sd-banner__media img { object-position: 50% 28%; } }
 @media (prefers-reduced-motion: reduce) {
   .sd-slide { transition: none; transform: none; }
 }
