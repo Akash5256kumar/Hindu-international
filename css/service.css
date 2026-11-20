@@ -38,72 +38,60 @@
   opacity: .22;
 }
 
-/* ---------- 1. Banner (heading only) ---------- */
-.sd-banner { position: relative; overflow: hidden; background: #FBF3E8; }
-.sd-banner::before { left: -150px; top: -60px; }
-/* Service banner. The photo is never cut or stretched: it keeps its own shape (js/services.js sets
-   --ar from the photo). Laptops/desktops: a shorter banner, the whole photo on the right, its left edge
-   melting into a band of the photo's own colours (--edge / --edge2, measured from the photo) where the
-   heading sits; the heading colours follow that band. Tablets/phones: heading first, then the whole photo. */
-.sd-banner { background: #FBF3E8; }
+/* ---------- 1. Banner: photo behind, 3 rotating text slides on the left ----------
+   The photo fills the banner (a dark gradient from the left keeps the white text readable).
+   Slides are stacked in one grid cell, so the height never jumps; js/services.js switches
+   "is-on" every 3 seconds (not when the visitor asked for reduced motion). */
+.sd-banner { position: relative; overflow: hidden; background: #0B1E2E; display: flex; align-items: center; height: min(48vw, 860px); min-height: 520px; }
 .sd-banner::before { display: none; }
-.sd-banner__media { position: relative; width: 100%; aspect-ratio: var(--ar, 3 / 2); }
-.sd-banner__media img { display: block; width: 100%; height: 100%; object-fit: cover; }
-.sd-banner .sd-banner__inner .sd-slides, .sd-banner .sd-banner__inner .sd-banner__title { max-width: 100%; }
-@media (max-width: 960px) {
-  .sd-banner { display: flex; flex-direction: column; }
-  .sd-banner__inner.container { order: 1; width: 100%; max-width: calc(680px + 48px); margin: 0; padding: 28px 24px 24px; }
-  .sd-banner__media { order: 2; }
+.sd-banner__media { position: absolute; inset: 0; }
+.sd-banner__media img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 50%; }
+.sd-banner__media::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(90deg, rgba(7, 24, 39, .78) 0%, rgba(7, 24, 39, .5) 45%, rgba(7, 24, 39, .12) 80%, rgba(7, 24, 39, .05) 100%);
 }
-@media (min-width: 961px) {
-  /* the photo fills the whole banner: no colour band, no fade */
-  .sd-banner { position: relative; height: min(48vw, 860px); }
-  .sd-banner__media { position: absolute; inset: 0; width: 100%; height: 100%; aspect-ratio: auto; }
-  .sd-banner__media img { object-fit: cover; object-position: 50% 50%; }
-  .sd-banner__inner.container {
-    position: absolute; z-index: 1; top: 50%; left: max(24px, calc(50% - 600px)); transform: translateY(-50%);
-    width: min(760px, 56%); max-width: none; margin: 0; padding: 0;
-    display: flex; flex-direction: column; justify-content: center;
-  }
-  .sd-banner__inner .sd-banner__title { font-size: clamp(2.8rem, 4.9vw, 4.6rem); line-height: 1.06; }
-  .sd-banner__inner .sd-slide__label { font-size: .95rem; }
-  .sd-banner__inner .sd-slide__text { margin-top: 18px; font-size: clamp(1.2rem, 1.55vw, 1.45rem); line-height: 1.5; max-width: 40ch; }
-  .sd-banner__inner .sd-slide__btn { margin-top: 28px; min-height: 58px; padding: 0 32px; font-size: 1.12rem; }
-  .sd-banner--light .sd-banner__title { color: var(--roots-ink); text-shadow: 0 1px 2px rgba(255, 255, 255, .6), 0 0 24px rgba(255, 255, 255, .75); }
-  .sd-banner--light .sd-slide__text { color: #1E1A16; font-weight: 500; text-shadow: 0 0 14px rgba(255, 255, 255, .9), 0 0 4px rgba(255, 255, 255, .8); }
-  .sd-banner--deep .sd-banner__title { color: #FFF8EE; text-shadow: 0 2px 4px rgba(0, 0, 0, .45), 0 4px 28px rgba(0, 0, 0, .55); }
-  .sd-banner--deep .sd-banner__title .sd-accent { color: #FFD27A; }
-  .sd-banner--deep .sd-slide__text, .sd-banner--deep .sd-slide__label { color: #FFF8EE; font-weight: 500; text-shadow: 0 1px 3px rgba(0, 0, 0, .6), 0 2px 18px rgba(0, 0, 0, .6); }
-  .sd-banner--deep .sd-lotus { color: #FFD27A; }
+.sd-banner__inner.container { position: relative; z-index: 1; width: 100%; padding-top: 48px; padding-bottom: 48px; }
+.sd-banner .sd-lotus { display: none; }
+
+.sd-slides { display: grid; max-width: 660px; }
+.sd-slide {
+  grid-area: 1 / 1; min-width: 0;
+  opacity: 0; visibility: hidden; transform: translateY(14px); pointer-events: none;
+  transition: opacity .7s ease, transform .7s ease, visibility .7s;
+}
+.sd-slide.is-on { opacity: 1; visibility: visible; transform: none; pointer-events: auto; }
+
+.sd-slide__label {
+  margin: 0 0 14px;
+  font-family: Arial, Helvetica, sans-serif; font-size: 15px; font-weight: 700;
+  letter-spacing: .16em; text-transform: uppercase;
+  color: #EEF2F5; text-shadow: 0 1px 10px rgba(0, 0, 0, .4);
 }
 .sd-banner__title {
   margin: 0;
-  font-family: var(--font-serif); font-weight: 700;
-  font-size: clamp(2.3rem, 4.6vw, 3.5rem); line-height: 1.08;
-  color: var(--roots-ink);
+  font-family: Georgia, 'Times New Roman', serif; font-weight: 700;
+  font-size: clamp(30px, 3.6vw, 48px); line-height: 1.15; letter-spacing: .005em;
+  color: #FFFFFF; text-shadow: 0 2px 18px rgba(0, 0, 0, .45);
 }
-.sd-banner .sd-lotus { margin-bottom: 0; }
-
-/* Sliding banner texts: stacked in one spot (the tallest sets the height); the next one rises from below */
-.sd-slides { display: grid; max-width: 580px; }
-.sd-v2 .sd-slides, .sd-v2 .sd-banner__title { max-width: 680px; }
-.sd-slide {
-  grid-area: 1 / 1; min-width: 0;
-  opacity: 0; visibility: hidden; transform: translateY(40px);
-  transition: opacity .7s ease, transform .7s var(--ease), visibility .7s;
+.sd-banner__title em { font-style: normal; color: #DFA953; }
+.sd-banner__title::after { content: ""; display: block; width: 56px; height: 2px; margin-top: 18px; border-radius: 2px; background: #DFA953; }
+.sd-slide__text {
+  margin: 16px 0 0; max-width: 60ch;
+  font-family: Arial, Helvetica, sans-serif; font-weight: 400;
+  font-size: clamp(15px, 1.3vw, 17px); line-height: 1.7;
+  color: #EEF2F5; text-shadow: 0 1px 10px rgba(0, 0, 0, .4);
 }
-.sd-slide.is-on { opacity: 1; visibility: visible; transform: none; }
-.sd-slide.is-out { transform: translateY(-30px); }
-.sd-slide__label {
-  margin: 0 0 12px;
-  font-size: .8rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
-  color: var(--saffron-deep);
-}
-.sd-slide__text { margin: 14px 0 0; max-width: 46ch; font-size: 1.06rem; line-height: 1.55; color: var(--ink-2); }
-.sd-slide__btn { margin-top: 22px; min-height: 48px; padding: 0 24px; }
+.sd-slide__btn { margin-top: 24px; min-height: 48px; padding: 0 24px; }
 .sd-slide__btn .icon { width: 18px; height: 18px; }
+
+/* Tablets and phones: text over the photo, the banner grows with the text */
+@media (max-width: 960px) {
+  .sd-banner { height: auto; min-height: 460px; }
+  .sd-banner__media::after { background: linear-gradient(90deg, rgba(7, 24, 39, .8) 0%, rgba(7, 24, 39, .62) 60%, rgba(7, 24, 39, .4) 100%); }
+  .sd-banner__inner.container { padding-top: 40px; padding-bottom: 40px; }
+}
 @media (prefers-reduced-motion: reduce) {
-  .sd-slide, .sd-slide.is-out { transform: none; transition: opacity .3s, visibility .3s; }
+  .sd-slide { transition: none; transform: none; }
 }
 
 /* ---------- 2. About this service ---------- */

@@ -304,9 +304,9 @@
       var stack = el('div', 'sd-slides');
       slides.forEach(function (x, i) {
         var slide = el('div', 'sd-slide' + (i === 0 ? ' is-on' : ''));
-        if (i) slide.setAttribute('aria-hidden', 'true');
+        slide.setAttribute('aria-hidden', i ? 'true' : 'false');
         if (str(x.label)) slide.appendChild(el('p', 'sd-slide__label', str(x.label)));
-        var h = el(i === 0 ? 'h1' : 'p', 'sd-banner__title');
+        var h = el(i === 0 ? 'h1' : 'h2', 'sd-banner__title');
         if (i === 0) h.id = 'page-title';
         titleLines(h, str(x.title), str(x.accent));
         slide.appendChild(h);
@@ -358,25 +358,25 @@
       var at = accent ? line.indexOf(accent) : -1;
       if (at < 0) { h.appendChild(document.createTextNode(line)); return; }
       h.appendChild(document.createTextNode(line.slice(0, at)));
-      h.appendChild(el('span', 'sd-accent', accent));
+      h.appendChild(el('em', 'sd-accent', accent));
       h.appendChild(document.createTextNode(line.slice(at + accent.length)));
     });
   }
 
-  /* Every 4 seconds the next banner text rises in; after the last it starts again */
-  var SLIDE_DELAY = 4000;
+  /* Every 3 seconds the next banner text fades in rising into place; after the last it starts again */
+  var SLIDE_DELAY = 3000;
   function rotateSlides(stack) {
     var slides = stack.children, idx = 0;
+    /* visitors who asked for reduced motion see only the first slide */
+    if (slides.length < 2 || (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) return;
     setInterval(function () {
       if (document.hidden) return;
       var old = slides[idx];
       idx = (idx + 1) % slides.length;
-      Array.prototype.forEach.call(slides, function (sl) { sl.classList.remove('is-out'); });
       old.classList.remove('is-on');
-      old.classList.add('is-out');
       old.setAttribute('aria-hidden', 'true');
       slides[idx].classList.add('is-on');
-      slides[idx].removeAttribute('aria-hidden');
+      slides[idx].setAttribute('aria-hidden', 'false');
     }, SLIDE_DELAY);
   }
 
