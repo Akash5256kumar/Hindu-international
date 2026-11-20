@@ -81,7 +81,7 @@ return [
 
     // Booking, Contact
     'booking.image'                 => ['880 × 660 px', '4 : 3', ''],
-    'contactPage.banner.image'      => ['2400 × 750 px', '16 : 5', 'Wide strip: temple or river on the right half, calm sky on the left where the heading sits. Phones show the middle part.'],
+    'contactPage.banner.image'      => ['2048 × 600 px', '≈ 3.4 : 1', 'Wide strip: temple and puja items on the right, calm sky on the top left where the heading sits.'],
 
     // Site
     'site.logoImage'                => ['300 × 300 px', '1 : 1 (square)', 'PNG with a transparent background.'],

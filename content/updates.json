@@ -1347,6 +1347,11 @@
       "path": "seo.pages.contact.description",
       "from": "Questions about a puja, jaap, pind daan or any religious service? Contact Hindu.international by phone, WhatsApp or email and our team will help you.",
       "to": "Questions about a puja, jaap, pind daan or any religious service? Send us a message or email Hindu.international and our team will be happy to help you."
+    },
+    {
+      "path": "contactPage.banner.image",
+      "from": "uploads/2026/10/whatsapp-image-2026-10-08-at-3-00-24-pm-a0a93b54.jpg",
+      "to": "assets/images/contact/banner.jpg"
     }
   ]
 }
