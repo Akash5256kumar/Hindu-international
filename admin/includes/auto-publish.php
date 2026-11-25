@@ -64,6 +64,39 @@ if (!function_exists('utf8_substr')) {
     }
 }
 
+/**
+ * One-time changes that go with an auto-save id. They run once (the flag file), so whatever
+ * the admin changes afterwards is never undone.
+ */
+function vps_auto_publish_patch(string $id): ?callable
+{
+    if ($id === 'eventoff-20261125') {
+        /* No event yet: the placeholder event is hidden from the booking form, the Event page
+           is kept out of Google and the footer link is switched off. Admin can turn all back on. */
+        return static function (array $d): array {
+            $placeholder = false;
+            foreach ($d['events'] ?? [] as $i => $ev) {
+                if (is_array($ev) && strpos((string) ($ev['name'] ?? ''), '[') === 0) {
+                    $d['events'][$i]['show'] = false;
+                    $placeholder = true;
+                }
+            }
+            if ($placeholder) {
+                if (isset($d['seo']['pages']['event']) && is_array($d['seo']['pages']['event'])) {
+                    $d['seo']['pages']['event']['index'] = false;
+                }
+                foreach ($d['site']['footerLinks'] ?? [] as $i => $l) {
+                    if (is_array($l) && preg_match('~^/?event(.html)?(?|#|$)~', (string) ($l['link'] ?? ''))) {
+                        $d['site']['footerLinks'][$i]['show'] = false;
+                    }
+                }
+            }
+            return $d;
+        };
+    }
+    return null;
+}
+
 function vps_auto_publish(string $id): void
 {
     $flag = CONTENT_DIR . '/.auto-publish-' . $id . '.json';
@@ -80,7 +113,12 @@ function vps_auto_publish(string $id): void
         require_once __DIR__ . '/content.php';
         require_once __DIR__ . '/upload.php';
         require_once __DIR__ . '/svg-sanitizer.php';
-        $saved = ContentStore::save(ContentStore::load());
+        $data = ContentStore::load();
+        $patch = vps_auto_publish_patch($id);
+        if ($patch) {
+            $data = $patch($data);
+        }
+        $saved = ContentStore::save($data);
         $result['ok'] = $saved['ok'];
         if (!$saved['ok']) {
             $result['errors'] = $saved['errors'];

@@ -30,7 +30,7 @@ DirectoryIndex index.html
 
 # Tell crawlers whether each public page can be indexed. Privacy and Terms remain noindex.
 <IfModule mod_setenvif.c>
-  SetEnvIf Request_URI "^/$|^/(?:about-us|how-it-works|protect-our-faith|donate|event|booking|contact-us)(?:\.html)?/?$" seo_public_page
+  SetEnvIf Request_URI "^/$|^/(?:about-us|how-it-works|protect-our-faith|donate|booking|contact-us)(?:\.html)?/?$" seo_public_page
   SetEnvIf Request_URI "^/(?:privacy|terms)(?:\.html)?/?$" seo_noindex_page
   SetEnvIf Request_URI "^/admin(?:/|$)" seo_private_page
 </IfModule>

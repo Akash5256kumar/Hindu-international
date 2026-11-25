@@ -222,7 +222,7 @@ if ($inquiryId !== null) {
 }
 
 if (!$sent) {
-    respond(false, 'Sorry, we could not send this right now. Please try again, or contact us by phone / WhatsApp.', 500);
+    respond(false, 'Sorry, we could not send this right now. Please try again in a few minutes, or email us.', 500);
 }
 
 $_SESSION['vps_last'] = $now;

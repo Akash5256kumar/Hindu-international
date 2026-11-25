@@ -337,14 +337,20 @@ document.addEventListener('DOMContentLoaded', function () {
 
   /* ---------- 4. Booking: event dropdown from config ---------- */
   var eventSelect = $('#event');
-  if (eventSelect && EVENTS.length) {
-    EVENTS.forEach(function (ev) {
+  /* events switched off in the admin are left out; with none, the field is hidden */
+  var shownEvents = EVENTS.filter(function (ev) { return ev && ev.show !== false && ev.name; });
+  if (eventSelect && !shownEvents.length) {
+    var eventField = eventSelect.closest('.field');
+    if (eventField) eventField.hidden = true;
+  }
+  if (eventSelect && shownEvents.length) {
+    shownEvents.forEach(function (ev) {
       var opt = document.createElement('option');
       opt.value = ev.name;
       opt.textContent = ev.name + (ev.dates ? ' — ' + ev.dates : '');
       eventSelect.appendChild(opt);
     });
-    if (EVENTS.length === 1) eventSelect.selectedIndex = 1;
+    if (shownEvents.length === 1) eventSelect.selectedIndex = 1;
   }
 
   /* ---------- 4b. Contact: "Enquire About Puja" (Jyotirlinga pages) fills in the temple's name ---------- */
@@ -480,7 +486,7 @@ document.addEventListener('DOMContentLoaded', function () {
           // Network errors (TypeError) get the generic message; server validation messages are shown as-is
           var msg = err && !(err instanceof TypeError) && err.message && err.message !== 'failed'
             ? err.message
-            : 'Sorry, we could not send this right now. Please try again, or contact us by phone / WhatsApp.';
+            : 'Sorry, we could not send this right now. Please try again in a few minutes' + (CONTACT.email ? ', or email us at ' + CONTACT.email + '.' : '.');
           setStatus('error', msg);
         })
         .then(function () {

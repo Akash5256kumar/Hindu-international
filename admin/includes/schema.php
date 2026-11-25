@@ -350,6 +350,7 @@ return [
         'groups' => [
             ['path' => '', 'title' => 'Sacred events', 'help' => 'The first event is shown on the Home and Event Information pages. All events appear in the booking form.', 'fields' => [
                 ['key' => 'events', 'label' => 'Events', 'type' => 'list', 'min' => 1, 'max' => 10, 'itemLabel' => 'Event', 'titleField' => 'name', 'fields' => [
+                    ['key' => 'show', 'label' => 'Show in the booking form', 'type' => 'toggle', 'default' => true, 'help' => 'Switch off while there is no event. To show the Event page in Google again, also switch on Admin → SEO → Event page → index.'],
                     ['key' => 'name', 'label' => 'Event name', 'type' => 'text', 'max' => 120, 'required' => true],
                     ['key' => 'location', 'label' => 'Location', 'type' => 'text', 'max' => 160],
                     ['key' => 'dates', 'label' => 'Dates', 'type' => 'text', 'max' => 120],
